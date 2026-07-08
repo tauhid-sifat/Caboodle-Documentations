@@ -1,0 +1,1096 @@
+﻿Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project lead id,Project description,Priority,Resolution,Assignee,Assignee Id,Reporter,Reporter Id,Creator,Creator Id,Created,Updated,Last Viewed,Resolved,Due date,Votes,Labels,Labels,Description,Environment,Watchers,Watchers,Watchers Id,Watchers Id,Original estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Inward issue link (Blocks),Outward issue link (Blocks),Inward issue link (Duplicate),Outward issue link (Duplicate),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Outward issue link (Relates),Attachment,Attachment,Attachment,Attachment,Attachment,Attachment,Attachment,Attachment,Attachment,Attachment,Custom field (Actual end),Custom field (Actual start),Custom field (Approvals),Custom field (Category),Custom field (Change reason),Custom field (Change risk),Custom field (Change type),Custom field (Department),Custom field (Department),Custom field (Development),Custom field (Epic Color),Custom field (Epic Name),Custom field (Epic Status),Custom field (Focus Areas),Custom field (Goals),Custom field (Impact),Custom field (Issue color),Custom field (Locked forms),Custom field (Open forms),Custom field (Project overview key),Custom field (Project overview status),Custom field (Rank),Custom field (Request Type),Custom field (Sentiment),Sprint,Sprint,Sprint,Custom field (Start date),Custom field (Story Points),Custom field (Story point estimate),Custom field (Submitted forms),Custom field (Target end),Custom field (Target start),Custom field (Team),Custom field (Total forms),Custom field (Vulnerability),Custom field (Work item created forms),Custom field ([CHART] Date of First Response),Custom field ([CHART] Time in Status),Comment,Comment,Comment,Comment,Comment,Parent,Parent key,Parent summary,Status Category,Status Category Changed
+TSS | EDLP Promotional Reporting only Populating the Month of January ,CS-1436,16938,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Highest,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,08/Jul/26 12:53 AM,08/Jul/26 3:25 AM,,,,0,,,"EDLP is showing up in the Promotional Calendar only in the month of January even though the dates of the EDLP are Jan 1-Dec. 31, 2026. The total of planned cases for an EDLP should be split across all months of the year. 
+
+It's working correctly in Broker Promotional Management. It might be because it's still pulling from the TSS not Approved?  Same is happening in the Monthly Report. 
+
+It’s causing issues for Bubbies who is looking to review their financial records and 338,502 Planned cases are only showing up in January just for 1 account.
+
+!image-20260707-212436.png|width=1134,alt=""image-20260707-212436.png""!
+
+
+
+
+
+*Bubbies Promotional Calendar:* 
+
+* See Adams Hometown Market EDLP only listed in January. Here are the dates of the EDLP 
+
+!image-20260707-185046.png|width=669,alt=""image-20260707-185046.png""!
+
+*See EDLP only in January months in Brand Bubbies Promotional Calendar* 
+
+!image-20260707-183956.png|width=669,alt=""image-20260707-183956.png""!
+
+See EDLP across all months in the Promotional Management Calendar in the Broker Dashboard 
+
+!image-20260707-184127.png|width=669,alt=""image-20260707-184127.png""!
+
+See EDLP for *ADAMS HOMETOWN MARKET* only in January in the *Monthly Report*. Screenshot below shows the TSS where the EDLP was set up with the dates Jan 1 2026-Dec 31 2026. The 616 planned cases should be spread across all months. 
+
+!image-20260707-184503.png|width=669,alt=""image-20260707-184503.png""!
+
+Here is Adams Hometown Market EDLP in the TSS 
+
+!image-20260707-184424.png|width=669,alt=""image-20260707-184424.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,08/Jul/26 12:53 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260707-183956.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16108,08/Jul/26 12:53 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260707-184127.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16107,08/Jul/26 12:53 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260707-184424.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16105,08/Jul/26 12:53 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260707-184503.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16104,08/Jul/26 12:53 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260707-185046.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16106,08/Jul/26 3:25 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260707-212436.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16109,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02yez:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,08/Jul/26 12:53 AM
+Data Mapping | Pulling in KeHE POD Current Year QTY 0 (It Should Not) ,CS-1435,16937,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,07/Jul/26 11:39 PM,07/Jul/26 11:39 PM,,,,0,,,"Data Mapping Should not be pulling in data from KeHE FOB report with 0 Current Year QTY. It’s creating issues in the Distributor report and unnecessary time spent on mapping. 
+
+See Ticket [https://caboodleservices.atlassian.net/browse/CS-1433|https://caboodleservices.atlassian.net/browse/CS-1433|smart-link] for more information ",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02yer:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,07/Jul/26 11:39 PM
+Distributor Report | Pulling in Prior Year Sales | It should only pull in Current Year Sales ,CS-1433,16935,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,07/Jul/26 11:34 PM,08/Jul/26 1:14 AM,,,,0,,,"When the KeHE POD report is pulled into the system, it should pull in only Current Yrar QTY. Currently, it’s pulling in Prior Year QTY. When Prior Year QTY is pulled in, it create errors in the reporting. 
+
+Here is an example:
+
+Broker Noble Sales>Brand Ener-Life> Report > KeHE > Product > ELECTROLYTE BX LMN LIME
+
+* Report KEHE: Reporting 0 sales & 0 cases but it’s showing store counts which is confusing to the user 
+* When I exported the data from the KEHE Report, I discovered that it’s pulling in Prior Year QTY Data, which is not required on the template, which Current Year QTY is required. 
+
+NOTE: This is also doing the same thing in the Distributor Report. > It could be a Data Mapping Issue in which we should not be pulling in data with 0 Current Year QTY.  
+
+No Dollar Sales or Cases 
+
+!image-20260707-172558.png|width=669,alt=""image-20260707-172558.png""!
+
+Showing stores 
+
+!image-20260707-172632.png|width=669,alt=""image-20260707-172632.png""!
+
+The exported data showing Previous Year QTY
+
+!image-20260707-172803.png|width=669,alt=""image-20260707-172803.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,07/Jul/26 11:33 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;KeHE_Export_20260707_171910.csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16100,07/Jul/26 11:34 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260707-172558.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16103,07/Jul/26 11:34 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260707-172632.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16102,07/Jul/26 11:34 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260707-172803.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16101,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02yeb:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,07/Jul/26 11:34 PM
+Monthly Report | Import Actuals > Failed Records Reason seem invalid ,CS-1431,16869,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Highest,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,07/Jul/26 1:28 AM,07/Jul/26 11:03 AM,,,,0,,,"I’m trying to import Actuals in the Monthly Report 
+
+Experience: Staging>Bubbies> Monthly Report. 
+
+I downloaded the template and entered values for Whole Foods (monthly report actual import (14) 
+
+Updated the values: [^monthly-report-actual-import-template updated.csv] 
+
+[^monthly-report-actual-import-template (14).csv]
+
+!image-20260706-192147.png|width=530,alt=""image-20260706-192147.png""!
+
+Attempted to upload and got the attached error logs: Monthly Report Actuals Import Errors 
+
+!image-20260706-192756.png|width=669,alt=""image-20260706-192756.png""!
+
+!image-20260706-192818.png|width=669,alt=""image-20260706-192818.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,07/Jul/26 1:19 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;MonthlyReportActual_Import_Errors_20260706_191612.csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16059,07/Jul/26 1:28 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260706-192147.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16066,07/Jul/26 1:28 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260706-192756.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16065,07/Jul/26 1:28 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260706-192818.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16064,07/Jul/26 1:28 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;monthly-report-actual-import-template (14) (a66ae0b6-e906-4aa0-9a3e-0cee1eb11d49).csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16063,07/Jul/26 1:22 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;monthly-report-actual-import-template (14).csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16061,07/Jul/26 1:20 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;monthly-report-actual-import-template (15).csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16060,07/Jul/26 1:28 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;monthly-report-actual-import-template updated.csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16062,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02ydv:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,07/Jul/26 1:28 AM
+Distributor Report | POD Calculation is incorrect ,CS-1426,16764,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Highest,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,30/Jun/26 8:07 PM,01/Jul/26 9:55 AM,,,,0,,,,"See Screenshot below 
+
+* Broker: Fresh Origins 
+* Brand: Carlino’s 
+* Distributor Report 
+* Report: Sales by Chain 
+* Total Points of Distribution = 0 which is incorrect 
+
+!image-20260630-140545.png|width=669,alt=""image-20260630-140545.png""!",Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,30/Jun/26 8:07 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260630-140545.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/16023,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02ycr:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,30/Jun/26 8:07 PM
+CRM>Pipeline > Change Plan to Project > Hide/Archive Option > See Details ,CS-1425,16731,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,27/Jun/26 2:07 AM,27/Jun/26 2:07 AM,,,,0,,,"The Pipeline can get cluttered Quickly. Users want to clear out project. They should be able to Hide or Archive so they can access if they want to 
+
+Add the word Projects on the top left under the search bar move the Select All under that  
+
+*PROJECTS*   
+
+* *SELECT ALL* 
+
+!image-20260626-200533.png|width=669,alt=""image-20260626-200533.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,27/Jun/26 2:07 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260626-200533.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15990,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02ycj:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,27/Jun/26 2:07 AM
+Data Mapping | Broker Dashboard APL | Need Data Sync for Broker Distributor APL ,CS-1424,16698,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Highest,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,23/Jun/26 6:38 PM,23/Jun/26 6:38 PM,,,,0,,,"Similar Data Sync as the Data for the Distributor Report > We need the same implementation for the Distributor APL on the Broker Dashboard. 
+
+*Reports Needed* 
+
+*KeHE* 
+
+* Brand Item Location 
+
+*UNFI* 
+
+* Inventory Details ",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02ycb:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,23/Jun/26 6:38 PM
+Admin CRM Data Upload Stores | Remove Duplicates & Resolve Multi-Mapping ,CS-1419,16565,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,05/Jun/26 4:36 AM,05/Jun/26 4:38 AM,,,,0,,,"*Description:* In the Admin Panel > CRM Data Upload > Stores module, the current store list contains duplicates due to naming inconsistencies. Additionally, several stores are improperly mapped to multiple banners and/or retailers. We need to run a cleanup script to deduplicate the database and enforce a 1:1 mapping rule where applicable, without losing any historical data tied to these stores.
+
+An export of the current module state is attached for reference.
+
+*Acceptance Criteria:*
+
+* *Identify Duplicates:* Create a script to flag duplicate store entries based matching addresses or geo long/lat.
+* *Merge & Reassign:* Merge duplicates. All historical data, banners, and retailer mappings tied to the duplicate must be safely reassigned to the surviving record.
+* *Resolve Multi-Mappings:* Determine how to resolve stores mapped to more than one banner/retailer & apply logic to resolve conflicts
+* *Soft Deletion:* Determine if duplicate records should be soft-deleted (flagged as inactive) rather than permanently dropped from the database to ensure we can roll back if needed.
+* *Data Integrity Check:* Ensure that resolving these mappings does not orphan any existing sales data or break existing reports in the UI.
+
+!image-20260604-223810.png|width=1345,alt=""image-20260604-223810.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,05/Jun/26 4:35 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;StoreList_Export_20260604_222427.xlsx;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15877,05/Jun/26 4:38 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260604-223810.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15878,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02yb7:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,05/Jun/26 4:36 AM
+Data Mapping/CRM Data Upload | Stores Add A Store Field list is missing State ,CS-1418,16564,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,05/Jun/26 4:18 AM,05/Jun/26 4:19 AM,,,,0,,,"!image-20260604-221806.png|width=669,alt=""image-20260604-221806.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,05/Jun/26 4:18 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260604-221806.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15875,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02yaz:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,05/Jun/26 4:18 AM
+Broker Dashboard | Category Review Filter & Upload Issues ,CS-1417,16531,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Highest,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,30/May/26 6:43 PM,04/Jun/26 11:44 PM,,,,0,,,"I uploaded the REVISED FINAL CATEGORY REVIEW UPLOAD Sheet into 2 broker environments. Here are issues that need to be resolved 
+
+* *Duplicate Listings:* Some items appear more than once in the *Regions & Retailers* filters. The top entry is often blank, while the bottom one typically contains the data.
+* *Open Reviews:* It’s not listing the *open reviews* for some reason. I’ve attached the entire list which contains “Open” in column D (Review Month) 
+* *Empty Retailers:* Certain retailers appear in the filter despite having no associated data. the filter is functioning correctly, but there is simply no information to retrieve for these entries.
+* All of this is very confusing to the user 
+* *Uploading Error* after Uploading the attached document FRESH ORIGINS REVISED FINAL CATEGORY REVIEW UPLAOD….doc only approx 400 of the 7000+ rows uploaded. I exported the data and attached it here. FO Category Review csv. Additionally, when I try to upload additional records, I get a success message but the data doesn’t appear so I can’t enter any more records 
+* *Remove All*: We need a remove all function so we can remove and replace all data. ",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,30/May/26 6:33 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;FO Export Category Review (17).csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15840,30/May/26 6:30 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;FRESH ORIGINS REVISED FINAL CATEGORY REVIEW UPLOAD Cleaned_Category_Review_2026 5-29-26.csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15839,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02yar:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,30/May/26 6:43 PM
+TSS Promo Fee | Needs a Edit Option ,CS-1414,16432,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,23/May/26 3:54 AM,27/Jun/26 2:38 AM,,,,0,,,"Currently a user can only delete and start all over. We need an edit option 
+
+!image-20260522-215332.png|width=1319,alt=""image-20260522-215332.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,23/May/26 3:54 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260522-215332.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15625,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02ya3:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,23/May/26 3:54 AM
+TSS | Promotion Fee Filter Issue> Value Column show 0 Value if not Filtered ,CS-1413,16431,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,23/May/26 3:51 AM,27/Jun/26 2:37 AM,,,,0,,,"If a Promotion is Filtered in the Select Promo Options the Promo Values of the other Promotions display 0 values and the item the is filtered (June B.) is not displayed at all. In this example, you can see in the Event Summary that June B. is the only Event listed because that is the one that is filtered, which is expected. The User would expect the same thing in the Promo Fee. In this case there are 2 other Promotion Fees (JAN B & March A). Expected Result is to display only the event that was selected in the Filter. If the value is 0 enter $0. Again if you look at the event summary above, you can see it says Prime Allowance $0. Essentially only display the events in Promo Fees that are selected in the filter. 
+
+Brand Bubies TSS WFM 2026 MD Revised CW/MD
+
+!image-20260522-215047.png|width=1268,alt=""image-20260522-215047.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,23/May/26 3:51 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260522-215047.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15624,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y9v:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,23/May/26 3:51 AM
+Data Mapping | Add export and filter related some new feature,CS-1412,16398,Story,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,21/May/26 5:03 PM,25/May/26 9:36 AM,,,,0,,,,,Taslima Akbar Keya,,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,,,,,,,,,,,,,,CS-1409,CS-1410,CS-1411,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y9n:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,21/May/26 5:03 PM
+[FE] Data Mapping | Filter : Refresh page removes the filter,CS-1411,16397,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,21/May/26 4:51 PM,21/May/26 5:04 PM,,,,0,,,,,Taslima Akbar Keya,,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,,,,,,,,,,,,,,,,,,,,,,,,CS-1412,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y9f:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,21/May/26 4:51 PM
+"[FE] Data Mapping | Unmapped Filter: Ordered the hierarchy of the filters based on the entity, mapping status",CS-1410,16396,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,21/May/26 4:26 PM,21/May/26 5:04 PM,,,,0,,,,,Taslima Akbar Keya,,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,,,,,,,,,,,,,,,,,,,,,,,,CS-1412,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y97:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,21/May/26 4:26 PM
+[BE] Data Mapping | Allow user to cancel the exportation of Unmapped Records,CS-1409,16395,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,21/May/26 3:56 PM,28/Jun/26 12:41 PM,,,,0,,,,,Bijoy Chandra Nath,Taslima Akbar Keya,63b1b2f4741248746bf7244c,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,,,,,,,,,,,,,,,,,,,,,,,CS-1412,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y8z:,,,,,,,,,,,,,,,,2026-06-28 06:41:46.469,,28/Jun/26 12:41 PM;63b1b2f4741248746bf7244c;[~accountid:712020:5bd14667-380b-4b30-a695-4df7fcdaab1a] Could you please review this ticket and add a few more details?,,,,,,,,To Do,21/May/26 3:56 PM
+Broker Dashboard > APL Report > Filter showing multiple DC listings for same item > Check other Filter Items ,CS-1408,16362,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,20/May/26 7:17 PM,27/Jun/26 12:38 AM,,,,0,,,"Example When user selects the top option in the filter that lists KEHE DIST BLOOMINGTON (16), the report is populated. If the user selects the next option down on the filter list with the same title, the report shows no data 
+
+!image-20260520-131617.png|width=361,alt=""image-20260520-131617.png""!
+
+!image-20260520-131639.png|width=669,alt=""image-20260520-131639.png""!
+
+!image-20260520-131708.png|width=669,alt=""image-20260520-131708.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,20/May/26 7:17 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260520-131617.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15513,20/May/26 7:17 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260520-131639.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15515,20/May/26 7:17 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260520-131708.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15514,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y8r:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,20/May/26 7:17 PM
+Distributor Report | Update DC Cases Sold Report CSV File Name,CS-1407,16361,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,20/May/26 5:56 PM,20/May/26 5:57 PM,,,,0,,,"Currently, when downloading the *DC Cases Sold Report*, the CSV file is downloaded with the incorrect file name:
+
+{{distributor-dc-report}}
+
+Please update the exported CSV file name to:
+
+{{distributor-dc-cases-sold-report}}
+
+*Expected Result:*
+Downloaded CSV file name should be:
+
+{{distributor-dc-cases-sold-report.csv}}
+
+*Current Result:*
+Downloaded CSV file name is:
+
+{{distributor-dc-report.csv}}",,Taslima Akbar Keya,,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y8j:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,20/May/26 5:56 PM
+Switching from Broker Dashboard to Brand Dashboard Sometimes Does Not Work,CS-1406,16328,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,18/May/26 4:54 PM,28/Jun/26 6:11 PM,,,,0,,,Users are sometimes unable to switch from the *Broker Dashboard* to the *Brand Dashboard*. The dashboard switch action becomes unresponsive or does not complete properly.,,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y8b:,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,18/May/26 4:54 PM
+[BE] Monthly Report | Add Month to Filter,CS-1405,16295,Sub-task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,14/May/26 11:49 AM,14/May/26 11:49 AM,,,,0,,,,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y83:,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,16147,CS-1388,Monthly Report | Add Month to Filter ,To Do,14/May/26 11:49 AM
+Broker Dashboard | APL Upload Adjust for UNFI UPC Codes ,CS-1403,16260,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,13/May/26 5:29 PM,13/May/26 5:34 PM,,,,0,,,"Broker Dashboard> APL Upload: This is a similar requirement as the distributor upload. When pulling UPC codes from the UNFI portal, they remove the last digit from the Product (Unit) UPC code. When we try to upload the data in the in the APL module it rejects the upload because it doesn’t recognize the UPC code. We made a systemic adjustment for this same issue for the Distributor report. That same implementation needs to be applied here. 
+
+I attached the failed records report for reference ",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y7n:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,13/May/26 5:29 PM
+Product Specs | Updating Spec UPC Code causing Error ,CS-1400,16223,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,13/May/26 2:02 AM,13/May/26 2:02 AM,,,,0,,,"Brand Pickerfresh See image below 
+
+!image-20260512-195834.png|width=669,alt=""image-20260512-195834.png""!
+
+!image-20260512-200107.png|width=669,alt=""image-20260512-200107.png""!
+
+!image-20260512-200144.png|width=669,alt=""image-20260512-200144.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,13/May/26 2:02 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260512-195834.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15327,13/May/26 2:02 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260512-200107.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15328,13/May/26 2:02 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260512-200144.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15326,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y6z:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,13/May/26 2:02 AM
+User Managemnet | No Role Removal Option Available in “Assign Role” Modal for Already Assigned Users,CS-1398,16189,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,12/May/26 5:01 PM,12/May/26 5:02 PM,,,,0,,,"In User Management → Users → Action → Assign Role, admins can assign roles to users. However, if a user already has an assigned role, the system shows an error message indicating that the existing role must be removed first before assigning a new one.
+
+Currently, there is no option within the same modal to remove the existing role, unlike the brand assignment flow where remove functionality is available.
+
+*Steps to Reproduce:*
+
+# Go to User Management → Users
+# Click Action → Assign Role for a user with an existing role
+# Try assigning a new role
+
+*Actual Result:*
+
+* System shows an error stating the existing role must be removed first
+* No remove role option is available in the modal
+
+*Expected Result:*
+Either:
+
+* Add a remove role option within the same modal so admins can directly remove and reassign roles
+*OR*
+* Disable the Assign Role option for already assigned users with a proper tooltip/message explaining the restriction
+
+*Impact:*
+The current flow is incomplete and confusing, requiring additional/manual steps without providing users a clear way to proceed.
+
+!image-20260512-110208.png|width=828,alt=""image-20260512-110208.png""!",,Taslima Akbar Keya,,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,,,,,,,,,,,,,,,,,,,,,,,,CS-1392,12/May/26 5:02 PM;d707abf3-7183-4786-a5bc-38cbe646a2cc;image-20260512-110208.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15290,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y6j:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,12/May/26 5:01 PM
+User Managemnet | Brand Assignment Modal Flow is Confusing for Reassigning Brands,CS-1397,16188,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,12/May/26 4:55 PM,12/May/26 4:57 PM,,,,0,,,"In the brand assignment modal, users must first remove the existing assigned brand before assigning a new one. However, the current UI/UX does not guide users clearly through this flow.
+
+Currently, the assigned brand section appears first and the delete/remove option is placed below it, which may confuse users about the required steps.
+
+*Current Flow:*
+
+* Assigned brand is displayed first
+* Delete/remove option appears below
+* User may not immediately understand that removing the existing brand is mandatory before assigning a new one
+
+*Expected Improvement:*
+
+* Show the delete/remove action more prominently at the beginning
+* Disable the new brand assignment option while a brand is already assigned
+* Once the existing brand is removed, enable the assign brand option automatically
+
+*Expected Result:*
+The modal should clearly guide users through the required sequence:
+
+# Remove existing brand
+# Assign new brand
+
+*Impact:*
+The current flow may cause confusion and reduce usability during brand reassignment operations.
+
+!image-20260512-105638.png|width=601,alt=""image-20260512-105638.png""!",,Taslima Akbar Keya,,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,,,,,,,,,,,,,,,,,,,,,,,,CS-1392,12/May/26 4:56 PM;d707abf3-7183-4786-a5bc-38cbe646a2cc;image-20260512-105638.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15289,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y6b:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,12/May/26 4:55 PM
+User Managemnet | “View Brand Info” Label is Misleading as Users Can Also Add Brands,CS-1396,16187,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,12/May/26 4:46 PM,12/May/26 4:48 PM,,,,0,,,"In User Management → Users section → Action button → “View Brand Info”, users are able to both view existing brand information and add new brands. Since the functionality includes more than just viewing, the current label is misleading and not appropriate.
+
+*Steps to Reproduce:*
+
+# Go to User Management → Users
+# Click on the Action button for any user
+# Select “View Brand Info”
+# Observe that new brands can also be added from this section
+
+*Actual Result:*
+The option is labeled as “View Brand Info” although users can also add/manage brands.
+
+*Expected Result:*
+The menu/action name should be updated to a more appropriate label such as:
+
+* “Manage Brands”
+* “Brand Information”
+* “View & Manage Brands”
+
+*Impact:*
+The current naming may confuse users about the actual functionality available in this section.
+
+!image-20260512-104742.png|width=828,alt=""image-20260512-104742.png""!",,Taslima Akbar Keya,,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,,,,,,,,,,,,,,,,,,,,,,,,CS-1392,12/May/26 4:47 PM;d707abf3-7183-4786-a5bc-38cbe646a2cc;image-20260512-104742.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15288,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y63:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,12/May/26 4:46 PM
+User Managemnet | Phone Number Field Accepts Invalid Input Without Validation,CS-1395,16186,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,12/May/26 4:43 PM,12/May/26 4:46 PM,,,,0,,,"Users can add/update a phone number in their profile, but the phone number field currently has no validation. As a result, invalid or incorrectly formatted phone numbers can be saved successfully.
+
+*Steps to Reproduce:*
+
+# Login to the application
+# Go to Profile Settings/Edit Profile
+# Enter an invalid phone number (e.g., alphabets, special characters, incorrect length, etc.)
+# Save the profile
+
+*Actual Result:*
+Invalid phone numbers are accepted and saved successfully.
+
+*Expected Result:*
+The system should validate the phone number format and prevent invalid inputs from being saved. Proper validation/error messages should be shown to the user.
+
+*Impact:*
+Invalid contact information can be stored in the system, leading to data inconsistency and communication issues.
+
+!image-20260512-104359.png|width=828,alt=""image-20260512-104359.png""!",,Taslima Akbar Keya,,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,,,,,,,,,,,,,,,,,,,,,,,,CS-1392,12/May/26 4:44 PM;d707abf3-7183-4786-a5bc-38cbe646a2cc;image-20260512-104359.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15287,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y5v:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,12/May/26 4:43 PM
+User Management | User Enrollment,CS-1392,16183,Story,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,12/May/26 2:21 PM,12/May/26 5:02 PM,,,,0,,,"s an Admin, I want to invite users, resend invitations, accept user requests, and manage enrolled users so that I can efficiently control user onboarding and access management.
+
+h1. Features
+
+* Invite new users via email
+* Resend pending invitations
+* Accept invitation and complete account setup
+* Activate/Deactivate/Suspend/Delete users
+* Manage user roles and permissions
+* Search and filter users
+* Handle expired invitations
+
+h1. Definition of Done
+
+* Feature implemented
+* APIs tested
+* Email flow verified
+* QA completed
+* No critical bugs remaining",,Taslima Akbar Keya,,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,,,,,,,,,,CS-1394,,,,CS-1376,CS-1378,CS-1379,CS-1377,CS-1370,CS-1393,CS-1395,CS-1396,CS-1397,CS-1398,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y57:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,12/May/26 2:21 PM
+Data Mapping | Banner Sku Upload ,CS-1391,16150,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,12/May/26 4:20 AM,12/May/26 4:20 AM,,,,0,,,Discussion on how to implement Banner Sku Update via a Distributor Upload w/ Data Mapping ,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y4z:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,12/May/26 4:20 AM
+Admin | Data Mapping | New Bot Implementation for Broker Brands ,CS-1390,16149,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,12/May/26 4:10 AM,12/May/26 4:10 AM,,,,0,,,"Per conversation on May 11th, we need to implement a new Bot to pull in data from UNFI & KEHE for brands that are associated with Brokers who have a single login for multiple Brands ",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y4r:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,12/May/26 4:10 AM
+Data Mapping | Remove old Brand Data ,CS-1389,16148,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,12/May/26 3:38 AM,12/May/26 3:38 AM,,,,0,,,"Remove old Brand Data see attached list 
+
+!image-20260511-213814.png|width=669,alt=""image-20260511-213814.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,12/May/26 3:37 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;Remove OLD Banner SKUS May 2026 USE THIS ONE.xlsx;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15249,12/May/26 3:38 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260511-213814.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15250,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y4j:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,12/May/26 3:38 AM
+Monthly Report | Add Month to Filter ,CS-1388,16147,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,12/May/26 3:19 AM,28/Jun/26 6:11 PM,,,,0,,,"Allow user to filter by Month to eliminate the noise of future months with no data 
+
+!image-20260511-211718.png|width=426,alt=""image-20260511-211718.png""!
+
+
+
+User may only want to focus on certain months like Q1 or Q2 by filtering for those months, it makes it easier to see the data more clearly. 
+
+!image-20260511-211925.png|width=669,alt=""image-20260511-211925.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,12/May/26 3:19 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260511-211718.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15247,12/May/26 3:19 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260511-211925.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15246,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y4b:,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,12/May/26 3:19 AM
+Admin | Data Sync Not working > Not Populating Distributor Report ,CS-1387,16146,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,12/May/26 2:12 AM,12/May/26 5:38 PM,,,,0,,,"In the Admin Data Mapping In the Bubbies live environment I tried to run a Data Sync for the criteria below and it failed. Error message Sequence contains no elements 
+
+* Bubbies
+* KEHE
+* 2026
+* February 
+
+!image-20260511-214904.png|width=1167,alt=""image-20260511-214904.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,12/May/26 3:49 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260511-214904.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15251,12/May/26 5:38 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260512-113654.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15292,12/May/26 5:38 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260512-113805.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15293,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y43:,,,,,,,,,,,,,,,,,,"12/May/26 5:38 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;[~accountid:63b1b2f4741248746bf7244c] Hi, I set up the credentials in the Credential Manager but getting the error in this screenshot. Scraping operation failed, please try again. 
+
+
+
+!image-20260512-113805.png|width=1369,alt=""image-20260512-113805.png""!
+
+
+
+
+
+!image-20260512-113654.png|width=813,alt=""image-20260512-113654.png""!",,,,,,,,To Do,12/May/26 2:12 AM
+Product Specs | Reorganize Tabs to this order: Categories > Products > Pricing ,CS-1386,16113,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,11/May/26 8:01 PM,11/May/26 8:01 PM,,,,0,,,"Put Tabs in this order: Categories > Products > Pricing 
+
+This is current order 
+
+!image-20260511-140039.png|width=669,alt=""image-20260511-140039.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,11/May/26 8:01 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260511-140039.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15209,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y3v:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,11/May/26 8:01 PM
+Admin Banner Sku Upload Failed Records | Please Review errors: The provided banner name doesn't match any existing Caboodle System banners,CS-1384,16111,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,11/May/26 7:51 PM,12/May/26 3:34 AM,,,,0,,,,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,11/May/26 7:49 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;Banner SKUs Failed Records (21).xlsx;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15202,11/May/26 7:49 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;Banner SKUs Failed Records (22).csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15205,11/May/26 7:49 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;Banner SKUs Failed Records (23).xlsx;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15204,11/May/26 7:48 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;Banner SKUs Failed Records (24).xlsx;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15206,11/May/26 7:49 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;Banner SKUs Failed Records (25).xlsx;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15207,11/May/26 7:49 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;Banner SKUs Failed Records (26).csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15203,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y3f:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,11/May/26 7:51 PM
+TSS → Promotion Fees →  Products from Other Banners Are Displayed in “Add Promotion Fee” Modal,CS-1382,16109,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,11/May/26 2:55 PM,28/Jun/26 6:11 PM,,,,0,,,"h3. Steps to Reproduce:
+
+# Navigate to TSS Promotion
+# Open *Add Promotion Fee (lump sum)*
+# Select a specific banner from the *Banners* dropdown
+# Open the *Products* dropdown
+# Observe the listed products
+
+----
+
+h3. Actual Result:
+
+* Products associated with other banners are visible in the dropdown
+* User can potentially select mismatched products
+
+----
+
+h3. Expected Result:
+
+* Products dropdown should display only products associated with the selected banner
+* Cross-banner product visibility should not occur",,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y2z:,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,11/May/26 2:55 PM
+TSS: Stores Field Accepts Negative Values in Add SKU Modal,CS-1381,16108,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,11/May/26 2:54 PM,28/Jun/26 6:11 PM,,,,0,,,"h3. Steps to Reproduce:
+
+# Navigate to TSS Promo
+# Open *Add SKU* modal
+# Enter valid data in required fields
+# In the *Stores* field, enter a negative value (e.g., {{-7}})
+# Click *Submit*
+
+----
+
+h3. Actual Result:
+
+* System accepts negative store values
+* No validation message is shown
+
+----
+
+h3. Expected Result:
+
+* Stores field should not accept negative numbers
+
+!image-20260511-085351.png|width=671,alt=""image-20260511-085351.png""!",,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,11/May/26 2:54 PM;5b363a5d-f395-4a55-a944-677a1e7ec521;image-20260511-085351.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15191,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y2r:,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,11/May/26 2:54 PM
+User Managemnet | Invitation Registration Link Redirects Logged-In Users to Login Page Instead of Signup Page,CS-1379,16074,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,10/May/26 4:48 PM,12/May/26 2:22 PM,,,,0,,,"If a user is already signed in to the system and then clicks on a new invitation/registration email link, the system redirects the user to the login page instead of taking them to the signup/registration flow associated with the invitation.
+
+This breaks the expected invitation onboarding flow and creates confusion for users who are already authenticated.
+
+h3. Steps to Reproduce
+
+# Log in to the system with any existing account
+# Receive a new invitation/registration email
+# Click the invitation registration link while still logged in
+
+h3. Actual Behavior
+
+The invitation link redirects the user to the login page.
+
+h3. Expected Behavior
+
+The invitation link should:
+
+* Open the intended signup/registration page
+* Validate the invitation token properly
+* Allow the user to continue the invitation flow
+
+Possible expected handling:
+
+* If the logged-in user matches the invited email → continue registration flow
+* If the logged-in user is different from the invited email → show a proper warning/message and request account switch/logout if necessary
+
+Example message:
+
+{quote}“You are currently logged in with a different account. Please log out and continue with the invited email account.”{quote}
+
+!20260510-1052-47.5499102.mp4|width=1122,alt=""20260510-1052-47.5499102.mp4""!",,Taslima Akbar Keya,,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,,,,,,,,,,,,,,,,,,,,,,,,CS-1392,10/May/26 4:53 PM;d707abf3-7183-4786-a5bc-38cbe646a2cc;20260510-1052-47.5499102.mp4;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15157,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y2b:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,10/May/26 4:48 PM
+User Managemnet | Show Proper Error Message for Cancelled Invitation Signup Attempt,CS-1376,16071,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,10/May/26 4:08 PM,12/May/26 2:22 PM,,,,0,,,"A user was invited to the platform and later the invitation was cancelled by the admin.
+
+Currently, if the invited user accesses the old registration link and attempts to sign up, the system shows the following generic error message:
+
+{quote}*Error*
+Something went wrong.{quote}
+
+This creates confusion for the user because the message does not explain the actual reason.
+
+*Expected Behavior:*
+When a user tries to register using a cancelled/invalid invitation link, the system should display a proper informative message such as:
+
+{quote}“This invitation link has been cancelled or is no longer valid.”{quote}
+
+or
+
+{quote}“Your invitation is no longer active. Please contact the administrator for a new invitation.”{quote}
+
+!image-20260510-100914.png|width=1122,alt=""image-20260510-100914.png""!",,Taslima Akbar Keya,,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,,,,,,,,,,,,,,,,,,,,,,,,CS-1392,10/May/26 4:09 PM;d707abf3-7183-4786-a5bc-38cbe646a2cc;image-20260510-100914.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15155,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y1n:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,10/May/26 4:08 PM
+[BE] Trade Spend Roll Up Report | Add Column for Total Trade Spend that Adds the TPR Spend w/ Ad/TPR Fees,CS-1375,16038,Sub-task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Highest,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,05/May/26 12:06 PM,28/Jun/26 12:44 PM,,,,0,,,,,Bijoy Chandra Nath,Md Mashiul Azam Chowdhury Efti,63b1b2f4741248746bf7244c,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y1f:,,,Sprint April 7th,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,2026-06-28 06:44:58.18,,28/Jun/26 12:44 PM;63b1b2f4741248746bf7244c;[~accountid:5d89a90316bcf20dd1c6251a] Could you please review this ticket and add a few more details?,,,,,14137,CS-1190,Trade Spend Roll Up Report | Add Column for Total Trade Spend that Adds the TPR Spend w/ Ad/TPR Fees ,To Do,05/May/26 12:06 PM
+TSS - Everyday Allowance Field Displays 0 Despite Having Value,CS-1372,16003,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,04/May/26 3:02 PM,28/Jun/26 6:11 PM,,,,0,,,"h3. *Steps to Reproduce:*
+
+# Navigate to *TSS Promo → View/Edit Promo*
+# Go to *Event Details / Promotion Fees section*
+# Locate a record where *Everyday Allowance* is already configured
+# Observe the displayed value
+
+----
+
+h3. *Actual Result:*
+
+* Everyday Allowance field shows *0*
+* But backend / previous input contains a *non-zero value*
+
+----
+
+h3. *Expected Result:*
+
+* Everyday Allowance field should display the *actual stored value*
+
+!everyday allowance.mp4|width=671,alt=""everyday allowance.mp4""!",,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,04/May/26 3:02 PM;5b363a5d-f395-4a55-a944-677a1e7ec521;everyday allowance.mp4;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15047,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0r:,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,04/May/26 3:02 PM
+User Management | First Name Column Overlaps with Role Column on Window Resize (≥80%) in User Management,CS-1370,15969,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,03/May/26 5:38 PM,12/May/26 2:26 PM,,,,0,,,"In *Admin Panel > User Management > Users*, when the browser window is resized to *80% or more*, the *First Name* column values overlap with the *Role* column values. This affects readability and breaks the UI layout.
+
+*Steps to Reproduce:*
+
+# Navigate to Admin Panel > User Management > Users
+# Resize the browser window to ~80% or adjust zoom accordingly
+# Observe the First Name and Role columns
+
+*Expected Result:*
+Column values should remain properly aligned without overlapping, maintaining a responsive layout.
+
+*Actual Result:*
+First Name column values overlap with Role column values, causing UI distortion.
+
+!image-20260503-113816.png|width=315,alt=""image-20260503-113816.png""!",,Taslima Akbar Keya,,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,,,,,,,,,,,,,,,,,,,,,,,,CS-1392,03/May/26 5:38 PM;d707abf3-7183-4786-a5bc-38cbe646a2cc;image-20260503-113816.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15007,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0b:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,03/May/26 5:38 PM
+CRM Contacts | Include title with the name ,CS-1369,15936,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,02/May/26 6:51 PM,02/May/26 6:52 PM,,,,0,,,"Here is what is shown when user access the Contact Page from the CRM 
+
+!image-20260502-124555.png|width=669,alt=""image-20260502-124555.png""!
+
+Add the Title next to the name if it’s included in the contact sheet 
+
+*Mark Noble, Founder* 
+
+!image-20260502-125037.png|width=431,alt=""image-20260502-125037.png""!
+
+
+
+!image-20260502-125001.png|width=669,alt=""image-20260502-125001.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,02/May/26 6:51 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260502-124555.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14971,02/May/26 6:51 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260502-125001.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14970,02/May/26 6:51 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260502-125037.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14972,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y03:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,02/May/26 6:51 PM
+Admin | Caboodle Admin needs to access all Environments w/o the need for their login credentials ,CS-1368,15935,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,02/May/26 6:43 PM,02/May/26 6:43 PM,,,,0,,,Currently for Caboodle Admin users we have no way to access broker environments without asking for their credentials. We need master password or automated access in some way ,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xzv:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,02/May/26 6:43 PM
+Broker Dashboard Promo Management | Export Data Does not Match Filter Data (Export Does not Work at All) ,CS-1367,15934,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,02/May/26 6:40 PM,26/Jun/26 10:21 PM,,,,0,,,"When user exports all data from the Promotional Management Page, it includes data that’s not available in the Filter. In this example, the exported data shows Banner: A Matter Of Health, but that Banner is not listed in the filer 
+
+Screenshot from the export 
+
+!image-20260502-123946.png|width=616,alt=""image-20260502-123946.png""!
+
+Screenshot from the filter 
+
+!image-20260502-124006.png|width=284,alt=""image-20260502-124006.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,02/May/26 6:40 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260502-123946.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14969,02/May/26 6:40 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260502-124006.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14968,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xzn:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,02/May/26 6:40 PM
+Data Mapping | Mapping Status Not Immediately Updated Across Pagination in Unmapped Records,CS-1366,15901,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,30/Apr/26 3:27 PM,30/Apr/26 3:29 PM,,,,0,,,"In *Unmapped Data > Unmapped Records*, when a user updates the mapping status, the change is reflected instantly on the first page without requiring a refresh. However, when navigating to the next page, the same record initially appears as *Unmapped*, and only after some delay does the status update correctly.
+
+*Steps to Reproduce:*
+
+# Navigate to Data Mapping > Unmapped Data > Unmapped Records
+# Update the mapping status of any record
+# Observe the updated status on the first page
+# Navigate to the next page
+
+*Expected Result:*
+The updated mapping status should be consistent and immediately reflected across all pages without delay.
+
+*Actual Result:*
+On navigating to another page, the record temporarily shows the old status (Unmapped) and updates after a delay.
+
+!20260430-0605-25.7746773.mp4|width=1122,alt=""20260430-0605-25.7746773.mp4""!",,Taslima Akbar Keya,,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,,,,,,,,,,,,,,,,,,,,,,,,,30/Apr/26 3:28 PM;d707abf3-7183-4786-a5bc-38cbe646a2cc;20260430-0605-25.7746773.mp4;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14925,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xzf:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,30/Apr/26 3:27 PM
+CRM Data Upload | Regions List UI Not Properly Formatted in Retailers Section,CS-1365,15900,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,,,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,30/Apr/26 3:22 PM,30/Apr/26 3:23 PM,,,,0,,,"In *Admin > CRM Data Upload > Retailers*, when multiple regions are added, the regions list is not displayed in a structured or readable format in the UI. Regions should be displayed in a clear, well-formatted manner.
+
+!image-20260430-092354.png|width=1137,alt=""image-20260430-092354.png""!",,Taslima Akbar Keya,,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,,,,,,,,,,,,,,,,,,,,,,,,,30/Apr/26 3:23 PM;d707abf3-7183-4786-a5bc-38cbe646a2cc;image-20260430-092354.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14924,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xz7:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,30/Apr/26 3:22 PM
+CRM Data Upload | Error Occurs When Updating Store from Stores Section,CS-1364,15899,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,Taslima Akbar Keya,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,30/Apr/26 3:19 PM,30/Apr/26 3:23 PM,,,,0,,,"In *Admin > CRM Data Upload > Stores*, when a user attempts to edit a store and clicks on the *“Update Store”* button, the system returns an error instead of successfully updating the store details.
+
+*Steps to Reproduce:*
+
+# Navigate to Admin > CRM Data Upload > Stores
+# Select any store and click on Edit
+# Make changes to the store তথ্য
+# Click on *Update Store*
+
+*Expected Result:*
+Store details should be updated successfully without any errors.
+
+*Actual Result:*
+An error is displayed and the store is not updated.
+
+!image-20260430-091936.png|width=828,alt=""image-20260430-091936.png""!",,Taslima Akbar Keya,,712020:5bd14667-380b-4b30-a695-4df7fcdaab1a,,,,,,,,,,,,,,,,,,,,,,,,,30/Apr/26 3:19 PM;d707abf3-7183-4786-a5bc-38cbe646a2cc;image-20260430-091936.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14923,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xyz:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,30/Apr/26 3:19 PM
+Broker Dashboard | APL Add Distributor & Product to the Filter > Make Product Dependent on Brand ,CS-1363,15866,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,29/Apr/26 7:39 PM,27/Jun/26 12:35 AM,,,,0,,,"Please add Distributor at the top of the filter 
+
+!image-20260429-133908.png|width=492,alt=""image-20260429-133908.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,29/Apr/26 7:39 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260429-133908.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14885,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xyr:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,29/Apr/26 7:39 PM
+Broker Dashboard | Ask Caboodle ,CS-1362,15865,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,29/Apr/26 7:22 PM,29/Apr/26 7:22 PM,,,,0,,,Add the Ask Caboodle bar to Dashboard ,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xyj:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,29/Apr/26 7:22 PM
+Broker Dashboard | New Category Review Functionality ,CS-1361,15864,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,29/Apr/26 7:21 PM,17/Jun/26 11:51 AM,,,,0,,,"See l[ink for Loveable that’s been shared |https://lovable.dev/projects/932320d2-ce2b-4b52-ad38-ba5a2a214dc1]
+
+!image-20260429-131853.png|width=669,alt=""image-20260429-131853.png""!
+
+Questions: 
+
+When sending emails do they show up in users sent files? No User should copy themselves on the email if they want it. 
+
+Compose email: Add text editor, CC & BCC options 
+
+!image-20260429-132034.png|width=504,alt=""image-20260429-132034.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,29/Apr/26 7:21 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260429-131853.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14884,29/Apr/26 7:21 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260429-132034.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14883,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xyb:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,29/Apr/26 7:21 PM
+TSS | Discussion for providing Actual Lift (Placeholder Ticket),CS-1354,15760,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,24/Apr/26 8:15 PM,24/Apr/26 8:15 PM,,,,0,,,,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xwr:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,24/Apr/26 8:15 PM
+Monthly Report | YOY Report Needs Date Selection Option ,CS-1352,15758,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,24/Apr/26 6:39 PM,28/Jun/26 6:11 PM,,,,0,,,YOY Report needs date selection options. Example: As of today (April 23 2026) it’s comparing 12 months of 2025 with only Jan-April 23 of 2026. The filter needs to option to select Jan-April 2025 to Jan-April 2026 to ensure it’s comparing the same months YOY ,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xwb:,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,24/Apr/26 6:39 PM
+TSS | Can Brands or Admin Adjust the Budget Threshold that turns the graph red if a Trade Spend % is Above 15% ,CS-1351,15725,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,22/Apr/26 10:50 PM,22/Apr/26 10:50 PM,,,,0,,,"Currently the system is set to turn the graphs in the Trade Spend Results Page Red when it reached 15.1% or above. Is there a way for Admin, Brand or otherwise a way control at what % rate it turns red? 
+
+For example, a brand may have a budget of 20% and would prefer that the graph doesn’t turn red until the value is 20.1% or grater 
+
+!image-20260422-164827.png|width=669,alt=""image-20260422-164827.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,22/Apr/26 10:50 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260422-164827.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14746,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xw3:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,22/Apr/26 10:50 PM
+AWS | User Email Change Declined ,CS-1350,15724,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,22/Apr/26 10:32 PM,22/Apr/26 10:32 PM,,,,0,,,See attached Email. Looking for a way to resolve this issue ,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,22/Apr/26 10:32 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;AWS Email Change Declined Feb 2026.pdf;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14745,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xvv:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,22/Apr/26 10:32 PM
+CRM Pipeline | Enhance Editing Widget ,CS-1349,15691,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,21/Apr/26 6:20 PM,21/Apr/26 6:20 PM,,,,0,,,"Looking for a more clean and modern widget: Similar to this one in Jira 
+
+When the user hoovers their mouse over the icon it tells them what it is. When the user clicks the icon a list of options appear. If the user clicks the option that option is executed. First icon is a plus sign. When the user hoover the mouse it says ""Insert and object"". when the use clicks the icon a pop out menu is displayed.
+
+!image-20260421-121912.png|width=669,alt=""image-20260421-121912.png""!
+
+!image-20260421-121922.png|width=602,alt=""image-20260421-121922.png""!
+
+!image-20260421-121933.png|width=415,alt=""image-20260421-121933.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,21/Apr/26 6:20 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260421-121912.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14707,21/Apr/26 6:20 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260421-121922.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14706,21/Apr/26 6:20 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260421-121933.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14705,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xvn:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,21/Apr/26 6:20 PM
+CRM | Pipeline - Formatting Issue - Items cut off ,CS-1348,15690,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,21/Apr/26 5:57 PM,21/Apr/26 5:57 PM,,,,0,,,"To replicate: I copied text from an email thread so I could keep track of the information in the Caboodle CRM Pipeline Notes Section. When I pasted the content, it cut off part of the text. See image 
+
+!image-20260421-115556.png|width=669,alt=""image-20260421-115556.png""!
+
+This was the original formatting that was copied 
+
+!image-20260421-115652.png|width=669,alt=""image-20260421-115652.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,21/Apr/26 5:57 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260421-115556.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14704,21/Apr/26 5:57 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260421-115652.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14703,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xvf:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,21/Apr/26 5:57 PM
+Margin Calculator | POP Out Calculator ,CS-1341,15555,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,09/Apr/26 6:48 PM,28/Jun/26 6:11 PM,,,,0,,,"Calculating Retailer Margin and Retail Sales Price Using a POP Out Calculator 
+
+See attached formula and Mock up ",,Bijoy Chandra Nath,Constance Wolfe,63b1b2f4741248746bf7244c,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,09/Apr/26 6:46 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;Margin Calculator.pptx;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14516,09/Apr/26 6:47 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;POP OUT Margin Calculator Formulas .xlsx;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14515,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:zzzzz,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,2026-04-23 06:51:44.962,,"23/Apr/26 12:51 PM;63b1b2f4741248746bf7244c;Hi [~accountid:712020:bb01de93-d391-4258-af77-200e90d99ec2] , can you please provide a bit more context about this ticket? Like, where this should be implemented and a bit of user journey.",,,,,,,,To Do,09/Apr/26 6:48 PM
+"Improve Monthly Report Layout, Filtering and Navigation",CS-1336,15518,Story,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Highest,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,07/Apr/26 1:26 PM,28/Jun/26 6:11 PM,,,,0,,,"h2. Overview
+
+As a user, I need the Monthly Report to have better navigation, column hierarchy, and filtering so I can read and interact with large datasets efficiently.
+
+*Modules Covered:* Monthly Report
+
+h2. Acceptance Criteria
+
+* Scrolling replaces pagination for easier data navigation
+* Column hierarchy is established and item-level totals are removed to reduce noise
+* Category filter is added with a product dependency (selecting category filters product list)
+* Forecast export endpoint is functional and returns correct data
+
+h2. Linked Tickets
+
+* CS-1284 — Needs Scrolling vs Pages
+* CS-1282 — Remove Totals per Item, establish Column Hierarchy
+* CS-1285 — Need Category in Filter with Dependency for Products
+* CS-1239 — [BE] Forecast related endpoint implementation (Export)",,Constance Wolfe,Md Mashiul Azam Chowdhury Efti,712020:bb01de93-d391-4258-af77-200e90d99ec2,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,CS-1284,CS-1282,CS-1285,CS-1239,,,,,,,,20/Apr/26 5:05 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260420-110252.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14666,20/Apr/26 5:05 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260420-110535.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14667,12/May/26 3:08 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260511-210816.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15245,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:zzzzy,,,Sprint April 7th,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,2026-04-13 12:47:34.157,,13/Apr/26 6:47 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;[~accountid:5d89a90316bcf20dd1c6251a] [~accountid:63b1b2f4741248746bf7244c] Please make sure the category filter is applied to the Planned Monthly Cases by Item and the YOY reports.  ,"20/Apr/26 5:05 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;[~accountid:5d89a90316bcf20dd1c6251a] [~accountid:63b1b2f4741248746bf7244c] [~accountid:712020:5bd14667-380b-4b30-a695-4df7fcdaab1a] [~accountid:624a86b47a3f9e006ab4a185] Hi Team, not sure which ticket to attach this to but the sorting option doesn’t seem to work correctly. For example in Staging>Bubbies>I select Banner, Case>Planned Case Total, then sort by Grand Total, this is the result. The total Cases are not sorted by highest case total 
+
+!image-20260420-110252.png|width=440,alt=""image-20260420-110252.png""!
+
+Additionally, when I select Banner and Case and leave the  Planned & Actual filter blank, it reports revenue 
+
+!image-20260420-110535.png|width=440,alt=""image-20260420-110535.png""!","20/Apr/26 5:23 PM;5d89a90316bcf20dd1c6251a;Hi[~accountid:712020:bb01de93-d391-4258-af77-200e90d99ec2] 
+
+[~accountid:63b1b2f4741248746bf7244c] was working on [https://caboodleservices.atlassian.net/browse/CS-1285|https://caboodleservices.atlassian.net/browse/CS-1285|smart-link] but had to pause for the work of Trade Spend Promotional Fee feature. He will continue to work on the Category filters once that task is done.","20/Apr/26 5:29 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;[~accountid:5d89a90316bcf20dd1c6251a] [~accountid:63b1b2f4741248746bf7244c] Sounds great, Efti, thank you for that update! ","12/May/26 3:08 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;[~accountid:63b1b2f4741248746bf7244c] [~accountid:5d89a90316bcf20dd1c6251a] Hi Guys, Monthly Report still not sorting properly See image below from staging 
+
+!image-20260511-210816.png|width=1386,alt=""image-20260511-210816.png""!",,,,To Do,07/Apr/26 1:26 PM
+"Improve Distributor Report Filtering, Naming and Export",CS-1334,15516,Story,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,07/Apr/26 1:25 PM,28/Jun/26 6:11 PM,,,,0,,,"h2. Overview
+
+As a user, I need Distributor Report filters and exports to be well-organized and functional so I can generate accurate, targeted reports without exporting irrelevant data.
+
+*Modules Covered:* Distributor Report
+
+h2. Acceptance Criteria
+
+* Report names are updated per the provided list
+* Individual reports export only their specific scoped data, not all distributor data
+* Filters are reorganized in a logical order
+* New filter fields are added in this order: DCs, Retailers, Banners, Stores, States, Categories, Products, From Date, To Date
+
+h2. Linked Tickets
+
+* CS-1274 — Minor Report name updates
+* CS-1277 — Individual Reports exporting all data instead of report-specific data (Bug)
+* CS-1286 — Reorganize Filter
+* CS-1256 — New Filter for Distributor Report",,Constance Wolfe,Md Mashiul Azam Chowdhury Efti,712020:bb01de93-d391-4258-af77-200e90d99ec2,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,CS-1274,CS-1277,CS-1286,CS-1256,,,,,,,,30/Apr/26 6:11 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260430-121041.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14932,30/Apr/26 6:11 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260430-121100.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14929,30/Apr/26 6:11 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260430-121109.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14930,30/Apr/26 6:11 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260430-121114.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14933,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:z,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,2026-04-27 13:35:28.507,,27/Apr/26 7:35 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;[~accountid:5d89a90316bcf20dd1c6251a] Can we add new logo to this icon? [Distributor Icon|https://static.vecteezy.com/system/resources/thumbnails/004/581/260/small/truck-delivery-icon-transportation-automotive-shipping-moving-and-freight-illustration-design-free-vector.jpg],"30/Apr/26 6:10 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;[~accountid:5d89a90316bcf20dd1c6251a] [~accountid:63b1b2f4741248746bf7244c] I’ve noticed the velocities are low in the new Distributor Report. I chalked this up to staging data but I’ll put this on the agenda for Monday as well just to double check. Bubbies Haggen UNFI Report VS Distributor Sales Report
+
++*SCREENSHOTS OF UNFI REPORT VS DISTRIBUTOR SALES REPORT FOR HAGGEN*+
+
+It seems store count may be the issue?
+
+!image-20260430-121041.png|width=400,alt=""image-20260430-121041.png""!
+
+!image-20260430-121100.png|width=699,alt=""image-20260430-121100.png""!
+
+!image-20260430-121109.png|width=498,alt=""image-20260430-121109.png""!
+
+!image-20260430-121114.png|width=699,alt=""image-20260430-121114.png""!",,,,,,,To Do,07/Apr/26 1:25 PM
+Fix Distributor Report Calculations and Data Consistency,CS-1333,15515,Story,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Highest,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,07/Apr/26 1:25 PM,28/Jun/26 6:11 PM,,,,0,,,"h2. Overview
+
+As a user, I need Distributor Report data to be calculated correctly and consistently across all distributors so I can make accurate business decisions based on reliable revenue figures.
+
+*Modules Covered:* Distributor Report
+
+h2. Acceptance Criteria
+
+* UNFI Sales Dollars use MOD pricing, excluding retailer markup
+* KeHE data is converted from Eaches to Cases to be consistent with UNFI reporting
+* UNFI crawler service is tested and handles website changes reliably without breaking data ingestion
+
+h2. Linked Tickets
+
+* CS-1312 — Adjust UNFI Sales Dollars to match Distributor MOD pricing
+* CS-1265 — Convert KeHE from Eaches to Cases for consistency with UNFI
+* CS-1275 — Continue testing UNFI crawler service to handle website changes",,Constance Wolfe,Md Mashiul Azam Chowdhury Efti,712020:bb01de93-d391-4258-af77-200e90d99ec2,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,CS-1312,CS-1265,CS-1275,,,,,,,,,16/May/26 2:47 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;KeHE Full POD Vendor(31).csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15402,16/May/26 2:47 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;KeHE Full POD Vendor(32).csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15400,16/May/26 2:47 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;KeHE Full POD Vendor(33).csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15404,16/May/26 2:47 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;KeHE Full POD Vendor(34).csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15401,16/May/26 2:47 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;KeHE Full POD Vendor(35).csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15403,15/May/26 10:12 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260515-161059.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15396,15/May/26 10:12 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260515-161123.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15395,15/May/26 10:12 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260515-161157.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15397,16/May/26 2:46 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260515-204610.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15398,16/May/26 2:58 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260515-205821.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15405,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:zv,,,Sprint April 7th,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,2026-05-15 16:12:48.817,,"15/May/26 10:12 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;[~accountid:63b1b2f4741248746bf7244c] [~accountid:5d89a90316bcf20dd1c6251a] Hi Bijoy, The Distributor report lets me upload the UNFI data but it doesn’t show up in the report. This is live for broker Sarahnoble Noble Sales 
+
+!image-20260515-161059.png|width=1386,alt=""image-20260515-161059.png""!
+
+!image-20260515-161123.png|width=1386,alt=""image-20260515-161123.png""!
+
+No Data 
+
+!image-20260515-161157.png|width=1369,alt=""image-20260515-161157.png""!","16/May/26 2:46 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;[~accountid:5d89a90316bcf20dd1c6251a] [~accountid:63b1b2f4741248746bf7244c] Bijoy, Something is off for KeHE as well. is it possible to have dollars but no cases? See image for Brand Global Healing, Broker Sarah Noble. This happens when I select the product 
+
+!image-20260515-205821.png|width=1358,alt=""image-20260515-205821.png""!
+
+
+
+Here is image from Same Broker for Brand Viori Beauty. I attached the upload sheets [^KeHE Full POD Vendor(35).csv] [^KeHE Full POD Vendor(34).csv] [^KeHE Full POD Vendor(33).csv] [^KeHE Full POD Vendor(32).csv] [^KeHE Full POD Vendor(31).csv] 
+
+!image-20260515-204610.png|width=1369,alt=""image-20260515-204610.png""!",,,,,,,To Do,07/Apr/26 1:25 PM
+Enhance Data Mapping Module Usability and Filtering,CS-1331,15513,Story,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Highest,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,07/Apr/26 1:25 PM,28/Jun/26 6:11 PM,,,,0,,,"h2. Overview
+
+As a user, I need the Data Mapping module to be more interactive and user-friendly so I can efficiently manage, filter, and resolve mapping issues without page disruptions.
+
+*Modules Covered:* Data Mapping
+
+h2. Acceptance Criteria
+
+* Source rows are clickable and display full import sync details
+* Users can change the status on any unmapped data item regardless of current state
+* Dashboard date format shows MM/DD/YY (not DD/MM/YY) for Created On
+* Auto resolve success message reflects the correct number of resolved items (not 0)
+* Mapping status updates refresh the page in-place without a full reload
+* Unmapped filter includes options for all available data properties
+* Users can export unmapped records to a file
+
+h2. Linked Tickets
+
+* CS-1267 — Make Source Row Clickable to see full import sync details
+* CS-1268 — Allow user to change status on any unmapped data
+* CS-1287 — Change Created On Date format to MM/DD/YY
+* CS-1270 — Fix auto resolve success message showing 0
+* CS-1269 — Page reload issue when updating mapping status
+* CS-1266 — Unmapped Filter Needs Options for all Properties
+* CS-1314 — Allow user to export Unmapped Records",,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,CS-1267,CS-1268,CS-1287,CS-1270,CS-1269,CS-1266,CS-1314,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:y,,,Sprint April 7th,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,To Do,07/Apr/26 1:25 PM
+"Improve Category Review UX, Navigation and Export",CS-1330,15512,Story,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,07/Apr/26 1:25 PM,28/Jun/26 6:11 PM,,,,0,,,"h2. Overview
+
+As a user, I need the Category Review module to have a modern UI, infinite scrolling, and a fully functional export so I can review large datasets efficiently without losing data.
+
+*Modules Covered:* Category Review Report
+
+h2. Acceptance Criteria
+
+* Export All exports the complete dataset, not just the current page
+* Infinite or virtual scrolling replaces pagination for easier navigation
+* UI is refreshed to a more modern look and feel per provided design sample
+
+h2. Linked Tickets
+
+* CS-1315 — Export All only exports current page (Bug)
+* CS-1316 — Implement Scrolling vs Pages
+* CS-1317 — Consider more modern UI/UX look and feel",,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,CS-1315,CS-1316,CS-1317,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:x,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,07/Apr/26 1:25 PM
+Fix Category Review Data Isolation and Upload Issues,CS-1329,15511,Story,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,07/Apr/26 1:24 PM,28/Jun/26 6:11 PM,,,,0,,,"h2. Overview
+
+As a Brand user, I need Category Review uploads and data pushes to be scoped correctly to my brand environment so that data doesn't bleed across brands and entries are validated correctly.
+
+*Modules Covered:* Category Review Report
+
+h2. Acceptance Criteria
+
+* Uploads and data pushes only affect the target brand, not all brands
+* Upload errors are resolved and data flows correctly through the pipeline
+* Add Log month validation works correctly — no false ""Invalid Month"" errors are shown for valid months
+
+h2. Linked Tickets
+
+* CS-1149 — Uploads & Data Pushes Issues (Bug)
+* CS-1291 — Reviews uploaded in Brand Environment pushing to all Brands
+* CS-1320 — Add Log Error Invalid Month Even though month is Valid (Bug)",,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,CS-1149,CS-1291,CS-1320,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:zzzzr,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,07/Apr/26 1:24 PM
+Improve Broker Promotional Management Export and Approval Flow,CS-1328,15510,Story,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,07/Apr/26 1:24 PM,28/Jun/26 6:11 PM,,,,0,,,"h2. Overview
+
+As a Broker, I need the Promotional Management module to export correctly, have clear labeling, and only surface brand-approved promotions so I can manage promotions with confidence.
+
+*Modules Covered:* Broker Promotional Management
+
+h2. Acceptance Criteria
+
+* Export button correctly exports promotions with a clear and accurate label
+* Export respects any active filters applied by the user (not all promotions exported blindly)
+* Only Brand Approved promotions are pushed to Promo Management
+
+h2. Linked Tickets
+
+* CS-1289 — Export Button Doesn't export & label is confusing
+* CS-1324 — Only push Brand Approved Promotions to Promo Management",,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,CS-1289,CS-1324,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:v,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,07/Apr/26 1:24 PM
+Fix Broker Dashboard Navigation and UI Issues,CS-1327,15509,Story,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,07/Apr/26 1:24 PM,28/Jun/26 6:11 PM,,,,0,,,"h2. Overview
+
+As a Broker user, I need the dashboard UI to work without errors and provide correct navigation so I can use the platform without interruptions.
+
+*Modules Covered:* Broker Dashboard, Broker Dashboard Category Review, Broker Dashboard Users
+
+h2. Acceptance Criteria
+
+* Clicking the icon in the dashboard does not throw a 404 error
+* Category Review Calendar Rollup displays correctly and without errors
+
+h2. Linked Tickets
+
+* CS-1321 — Users Clicking icon throws 404 error (Bug)
+* CS-1296 — Category Review Calendar Rollup",,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,CS-1321,CS-1296,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:zzzzi,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,07/Apr/26 1:24 PM
+Enhance Broker Dashboard Market Overview Functionality,CS-1326,15508,Story,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,07/Apr/26 1:24 PM,28/Jun/26 6:11 PM,,,,0,,,"h2. Overview
+
+As a Broker, I need the Market Overview section to be reliable, filterable, and non-redundant so I can efficiently track market data without confusion or broken UI.
+
+*Modules Covered:* Broker Dashboard, Broker Dashboard Market Overview
+
+h2. Acceptance Criteria
+
+* Store list populates correctly in Market Overview
+* Filter field options are expanded beyond the current limited list
+* Redundant ""Market Overview Report"" tab is hidden
+* Add Log supports simplified entry — selecting a Banner auto-resolves Region and Retailer
+* APL + Add Log integration works correctly
+
+h2. Linked Tickets
+
+* CS-1299 — Broker Dashboard Updates > APL + Add Log Market Overview
+* CS-1318 — Market Overview Filter Needs more Field Options
+* CS-1310 — Store List Not populating (Bug)
+* CS-1323 — Hide redundant Market Overview Report",,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,CS-1299,CS-1318,CS-1310,CS-1323,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:r,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,07/Apr/26 1:24 PM
+Improve Broker Invitation and Brand Environment Setup,CS-1325,15507,Story,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,07/Apr/26 1:24 PM,28/Jun/26 6:11 PM,,,,0,,,"h2. Overview
+
+As an Admin, I need to correctly invite brokers and allow them to set up brand environments without requiring brand logins, so that broker onboarding is smooth and accurate.
+
+*Modules Covered:* Admin Broker Users, Broker Brands
+
+h2. Acceptance Criteria
+
+* Broker invitation email correctly identifies the user as ""Broker"" not ""Sub Broker""
+* Admins can create brand environments for brokers without requiring a brand owner email
+* Brand environments can be linked to broker accounts by Admin
+
+h2. Linked Tickets
+
+* CS-1290 — ADMIN | Invite Broker email says ""Sub Broker"" instead of ""Broker""
+* CS-1313 — Allow Brokers to Set Up Brand Environments w/o Brand Login",,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,CS-1290,CS-1313,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:zzzz,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,07/Apr/26 1:24 PM
+Broker Dashboard | Promotional Management Only push Brand Approved Promotions to Promo Management ,CS-1324,15474,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,03/Apr/26 10:20 PM,28/Jun/26 6:11 PM,,,,0,,,,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,CS-1328,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:zzzy,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,03/Apr/26 10:20 PM
+Broker Dashboard Market Overview > Simplify Entry on Add Log DUPLICATE DON'T DO SEE CS-1299,CS-1322,15472,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,03/Apr/26 9:17 PM,03/Apr/26 11:56 PM,,,,0,,,"Remove the requirement for the User to enter Region>Retailer>Banner in that order before they can enter any information. If they select the Banner, it’s ready linked to the Region & Retailer 
+
+!image-20260403-151758.png|width=790,alt=""image-20260403-151758.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,03/Apr/26 9:18 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260403-151758.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14444,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xpf:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,03/Apr/26 9:17 PM
+Category Review | Adding Retailers with multiple Reviews Produces Duplicates of the Retailer in the Filter (Also see CS-1320),CS-1319,15437,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,03/Apr/26 3:08 AM,03/Apr/26 3:19 AM,,,,0,,,"!image-20260402-210549.png|width=396,alt=""image-20260402-210549.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,03/Apr/26 3:06 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;category-review-Sample (3).csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14406,03/Apr/26 3:08 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260402-210549.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14407,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xor:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,03/Apr/26 3:08 AM
+Broker Dashboard | Market Overview Filter Needs more Field Options List Too Limited ,CS-1318,15436,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,02/Apr/26 11:50 PM,28/Jun/26 6:11 PM,,,,0,,,"!image-20260402-174915.png|width=1211,alt=""image-20260402-174915.png""!
+
+User should be able to Filter by Region, Retailer, Banner, Store, Brand Sku, Status, DC, Created by Date in addition to what’s already in the filter ",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,CS-1326,02/Apr/26 11:50 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260402-174915.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14402,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:zzzx,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,02/Apr/26 11:50 PM
+Category Review | UI/UX Consider more modern look/feel See sample ,CS-1317,15435,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,02/Apr/26 11:26 PM,28/Jun/26 6:11 PM,,,,0,,,"!image-20260402-172617.png|width=671,alt=""image-20260402-172617.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,CS-1330,02/Apr/26 11:26 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260402-172617.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14401,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:i,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,02/Apr/26 11:26 PM
+Category Review | Implement Scrolling vs pages ,CS-1316,15434,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,02/Apr/26 11:23 PM,28/Jun/26 6:11 PM,,,,0,,,,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,CS-1330,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,02/Apr/26 11:23 PM
+Broker Brands | Allow Brokers to Set Up Brand Environments w/o Brand Login ,CS-1313,15431,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,02/Apr/26 10:53 PM,28/Jun/26 6:11 PM,,,,0,,,"Some brokers want to set up their brands but not give the brands access. 
+
+Currently to create a brand environment there needs to be a brand owner which requires an email address 
+
+Can Admin create brand environments for Brokers and add them to Broker Accounts? ",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,CS-1325,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:zzzr,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,02/Apr/26 10:53 PM
+Broker Dashboard Market Overview > Store List Not populating ,CS-1310,15364,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 10:10 PM,28/Jun/26 6:11 PM,,,,0,,,See image below ,"!image-20260331-161014.png|width=671,alt=""image-20260331-161014.png""!",Constance Wolfe,Md Mashiul Azam Chowdhury Efti,712020:bb01de93-d391-4258-af77-200e90d99ec2,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,CS-1326,31/Mar/26 10:10 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260331-161014.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14290,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:zzy,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,2026-04-29 10:29:13.549,,"29/Apr/26 4:29 PM;5d89a90316bcf20dd1c6251a;[~accountid:63b1b2f4741248746bf7244c] 
+{{/api/v1/stores}} api not found",,,,,,,,To Do,31/Mar/26 10:10 PM
+Admin CRM Data Upload>Stores > Can we add Delete Button ,CS-1309,15363,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 10:01 PM,31/Mar/26 10:01 PM,,,,0,,,,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xmj:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 10:01 PM
+Admin >CRM Data Upload > Stores > Edit Store Name failure ,CS-1308,15362,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Highest,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 9:59 PM,31/Mar/26 9:59 PM,,,,0,,,,"!image-20260331-155919.png|width=671,alt=""image-20260331-155919.png""!",Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,31/Mar/26 9:59 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260331-155919.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14289,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xmb:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 9:59 PM
+Home Page Banner Report > Add Scroll option ,CS-1307,15329,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 4:55 AM,31/Mar/26 4:55 AM,,,,0,,,"!image-20260330-225507.png|width=671,alt=""image-20260330-225507.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,31/Mar/26 4:55 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260330-225507.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14256,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xm3:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 4:55 AM
+Report | Sales Tracking for Prospects ,CS-1306,15328,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 4:53 AM,23/Jun/26 2:59 AM,,,,0,,,"[From Q 2025 2026 Report |https://docs.google.com/spreadsheets/d/1k4XOJuAZMbV1P57YToVplx2F-gqcDAFf/edit?gid=2098007093#gid=2098007093]
+
+Retailer Item Matrix w/ Status > Attached Retailers 1-6-26 Attached Retailer’s tab 
+Target List Tracking > CW will show example > Attached Retailers 1-6-26 Target list tab 
+
+CW will provide report samples 
+
+[See Prototype in loveable link |https://lovable.dev/preview/BnoAKmyF2k3CFUkSWsTQb5hih2eV1eCJ]",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xlv:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 4:53 AM
+Broker Dashboard Update UI to match the rest of the platform ,CS-1305,15327,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 4:46 AM,31/Mar/26 4:46 AM,,,,0,,,,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xln:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 4:46 AM
+Broker Dashboard Updates > APL + Add Log Market Overview ,CS-1299,15321,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 4:39 AM,28/Jun/26 6:11 PM,,,,0,,,"Match UI for rest of system  Auto Sync APL Updates > See new UI  
+
+
+
+!image-20260330-223716.png|width=671,alt=""image-20260330-223716.png""!
+
+Update Process for Market Overview > User shouldn’t have to enter Region>Retailer & Banner. If they enter the Banner the rest should already be mapped and populated. Why make them enter all these steps? 
+
+!image-20260330-223923.png|width=671,alt=""image-20260330-223923.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,CS-1326,31/Mar/26 4:39 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260330-223716.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14255,31/Mar/26 4:39 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260330-223923.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14254,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0p:,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 4:39 AM
+New Report | Retail Portal Data Upload ,CS-1297,15319,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 4:34 AM,27/Jun/26 3:01 AM,,,,0,,,Can we create a generic Retail Report where users can import data from various retail portals? ,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xjv:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 4:34 AM
+Broker Dashboard | Category Review Calendar Rollup ,CS-1296,15318,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 4:34 AM,28/Jun/26 6:11 PM,,,,0,,,"As A Broker, one of the most important functions is ensure that my brands have the opportunity to present their products to the retailers. Retailers only review product categories once a year, so if a brand misses the deadline to present, they have to wait for another year. It can be difficult and tedious for a broker to keep track of this process for every brand. 
+
+Currently in the Caboodle Brand Environment there is a Category Review Calendar. Brands have the option to add Retailer Submission details to that Calendar. It would be useful for the broker if the Calendars from the brand environment rolled up to a central calendar on the Broker Dashboard. This would be similar to how the Promotional Calendars for each brand rolls up to the Promotional Management Module on the Broker Dashboard. That way the Broker doesn’t have to go into each individual environment to check submissions. 
+
+Here is the Calendar Review Module in brand Zucchini. There are 2 tabs
+
+!image-20260528-112345.png|width=1425,alt=""image-20260528-112345.png""!
+
+This is the calendar we want pushed from each brand to the Broker dashboard 
+
+
+
+!image-20260528-112616.png|width=1425,alt=""image-20260528-112616.png""!
+
+Here is an example of the Promotional Management Module in which every Promo Calendar rolls up to a similar Module. For the Category Review Calendar we would need the same columns and rows for 
+
+Brand Name, Banner Name, Distributor Name, Category Name and Months across the top 
+
+!image-20260528-112959.png|width=1425,alt=""image-20260528-112959.png""!
+
+
+
+ ",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,CS-1327,28/May/26 5:30 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260528-112345.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15769,28/May/26 5:30 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260528-112616.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15771,28/May/26 5:30 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260528-112959.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15770,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:zzv,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 4:34 AM
+New Report | Banner to DC Reporting ,CS-1295,15317,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 4:32 AM,23/Jun/26 2:55 AM,,,,0,,,"On [Q4 2025 & Q1 2026 and Expo Prep List |https://docs.google.com/spreadsheets/d/1k4XOJuAZMbV1P57YToVplx2F-gqcDAFf/edit?gid=2098007093#gid=2098007093]
+
+|Banner-to-DC Mapping/Target List:|
+|We will provide pre-loaded lists of which stores (Banners) pull from which Distributor DCs. This turns a ""Distributor Report"" into a ""Target List"" instantly.|
+|Solution: Automated Target Lists based on warehouse data—if your item is in the warehouse, it should be in the other stores that warehouse sells to.|
+|See Conventional Key Account Profiles & Natural Key Account Profiles Attached|
+|What Items are Active at What Warehouse (DC)|
+
+[See Protype in Loveable |https://lovable.dev/preview/BnoAKmyF2k3CFUkSWsTQb5hih2eV1eCJ]",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xjf:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 4:32 AM
+Report SPINS Updates ,CS-1294,15316,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 4:29 AM,31/Mar/26 4:29 AM,,,,0,,,"Flag > New stores (like Distributor ticket) > Void Report already flag issues
+
+Void Report> Show 8 Weeks > Allow to filter for longer BE = 3-4 hours 
+
+Market Insights > Ask Caboodle? vs canned reporting: Needs Discussion 
+
+Store insights> Ask Caboodle capabilities: Needs Discussion ",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xj7:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 4:29 AM
+Reports | SPINS SPINS > Prep system to accept all measures ,CS-1293,15315,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 4:18 AM,31/Mar/26 4:18 AM,,,,0,,,,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xiz:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 4:18 AM
+Data Uploads | Implement Dynamic Data Uploads to support formats that don't match templates (Import Wizard) ,CS-1292,15314,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 4:15 AM,31/Mar/26 4:17 AM,,,,0,,,* Upload Wizards to add mapping functionality to CSV upload process so users can map columns during uploa,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xir:,,,,,,,,,,,,,,,,,,31/Mar/26 4:16 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;Upload Wizards to add mapping functionality to CSV upload process so users can map columns during upload ,,,,,,,,To Do,31/Mar/26 4:15 AM
+Reports | Category Review when Reviews are uploaded in Brand Environment It's pushing to all Brands ,CS-1291,15313,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 4:13 AM,28/Jun/26 6:11 PM,,,,0,,,"When a user uploads or adds a category review from the brand environment, it should not push to all brands, currently it does.  Only when they are added from the Broker should it push to all brands. ",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,CS-1329,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:zzr,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 4:13 AM
+ADMIN | Invite Broker > The Email Said it was inviting user as Sub Broker instead of Broker ,CS-1290,15312,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 4:10 AM,28/Jun/26 6:11 PM,05/Jul/26 6:18 PM,,,0,,,"Invite from Admin for a Broker - Not the sub broker > Would also like to change the wording in the subject line from: “Invitation from Admin to join as a Broker Sub User” to: *Invitation to join Caboodle.  T*hey won’t know anything about users and sub users or broker or brand invitations. 
+
+!image-20260331-225607.png|width=1214,alt=""image-20260331-225607.png""!
+
+
+
+!image-20260331-225321.png|width=1103,alt=""image-20260331-225321.png""!
+
+!image-20260331-225242.png|width=890,alt=""image-20260331-225242.png""!
+
+Please have Fariha test the invites for brokers and sub brokers ",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,CS-1325,01/Apr/26 4:56 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260331-225242.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14323,01/Apr/26 4:56 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260331-225321.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14325,01/Apr/26 4:56 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260331-225607.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14324,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:zzi,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 4:10 AM
+Ask Caboodle | Coordinate with ML/AI engineer > Implement Character Requirements for Billing ,CS-1288,15310,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 3:58 AM,31/Mar/26 3:58 AM,,,,0,,," Design and plan the Ask Caboodle system architecture and requirements.
+
+Character Requirements > Billing ",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xhv:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 3:58 AM
+Distributor Report | Auto Flags for New and Disco Items/Retailers ,CS-1281,15303,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 3:11 AM,28/Jun/26 6:11 PM,,,,0,,,"Discuss how to implement Auto Flag New Retailers: If a SKU shows at a specific retailer for the first time, it flags it as New. (6 month look back)
+Discuss: Auto Flag Review or Discontinued Skus/Retailers: If a SKU shows 0 sales for 4 weeks at a specific retailer, Caboodle automatically flags the status to ""Review/Discontinued."" (adding retailers to the current void report)
+",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xgb:,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 3:11 AM
+Distributor Report Discussion | Auto Update Retailer CRM Item Status (From NA/Pending) to Active ,CS-1279,15301,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 3:06 AM,28/Jun/26 6:11 PM,,,,0,,,,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xfv:,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 3:06 AM
+Current UNFI & KeHE Reports > Determine if we should use them generically ,CS-1276,15298,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 2:56 AM,31/Mar/26 2:56 AM,,,,0,,,,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xf7:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 2:56 AM
+Distributor Report | UNFI Continue testing the crawler service to ensure it can handle website changes ,CS-1275,15297,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,31/Mar/26 2:55 AM,28/Jun/26 6:11 PM,,,,0,,,,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,CS-1333,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:zx,,,Sprint April 7th,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,To Do,31/Mar/26 2:55 AM
+TSS> View & Edit Promo Events Details > If product status changes in Retail CRM > Should the date in the Event Details Reflect the date. See decription ,CS-1273,15231,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,26/Mar/26 10:07 PM,23/Apr/26 5:54 PM,,,,0,,,"Brand Zucchini > Retailer/Banner Bristol Farms> User updated status of Cherry Bomb Pop from Active to Discontinued (March 23, 2026). In the Event Details, Should Cherry Bomb Pop show up as Active for the January Promotion, and Discontinued for the July Promotion, since it was Active in January but Discontinued by the July Promotion.  
+
+!image-20260326-160702.png|width=671,alt=""image-20260326-160702.png""!",,Bijoy Chandra Nath,Constance Wolfe,63b1b2f4741248746bf7244c,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,26/Mar/26 10:07 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260326-160702.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/14179,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02xej:,,,,,,,,,,,,,,,,2026-04-23 09:32:12.36,,"23/Apr/26 3:32 PM;63b1b2f4741248746bf7244c;[~accountid:712020:bb01de93-d391-4258-af77-200e90d99ec2] , Right now we don't save the previous pricing information of a BannerSKU item. To achieve this I think we need to save the history of BannerSKU. Please let us know your thoughts about this.","23/Apr/26 5:54 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;[~accountid:63b1b2f4741248746bf7244c] Thanks Bijoy, let me think about this. ",,,,,,,To Do,26/Mar/26 10:07 PM
+Reports>Trade Spend Roll Up > Updates on Headers (Net to Gross) + other Minor Changes  ,CS-1230,14452,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,17/Nov/25 9:11 PM,17/Nov/25 9:36 PM,,,,0,,,"Please make these 7 text updates
+
+# Change Net Dollars to Gross Dollars on the Top Header 
+# Change Ad/Fee to Ad/TPR Fees on Top Header so it matched the 2nd Header 
+# Change Total Trade Spend to Total Trade Spend % on Top Header so it matches 2nd Header  & 5 Change Net to Gross on Legion and Pie Chart 
+# Change Net Dollars to Gross Dollars on Pie Chart legion 
+# Change Net Dollars to Gross Dollars on Pie Chart 
+# Change to Planned Net Dollar to Planned Gross Dollar (s) on 2nd Header 
+# Change Plan net dollars to Plan+ned+ Gross Dollars ( Change Plan to Planned & capitalize Gross and Dollars)
+
+NOTES: 
+
+* Please make sure to do this on both Sandbox and Approved. 
+* I circled Total Trade Spend % on 2nd Header to point out it should Match the Top Header 
+
+!image-20251117-152552.png|width=1214,alt=""image-20251117-152552.png""!
+
+Change to Planned Gross Dollars (not Plan) Capitalize Gross and Dollars 
+
+
+
+!image-20251117-153140.png|width=1214,alt=""image-20251117-153140.png""!
+
+*Make Sure to do on both Sandbox & Approved* 
+
+!image-20251117-153152.png|width=827,alt=""image-20251117-153152.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,17/Nov/25 9:35 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20251117-152552.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/13424,17/Nov/25 9:35 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20251117-153140.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/13423,17/Nov/25 9:35 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20251117-153152.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/13425,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x6r:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,17/Nov/25 9:11 PM
+"Conduct year-end QA, finalize documentation, and prepare release packages.",CS-1224,14382,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,06/Nov/25 10:21 AM,06/Nov/25 10:37 AM,,,,0,,,,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x5f:,,,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,,To Do,06/Nov/25 10:21 AM
+"Remove legacy SPINS data — keep only filtered, relevant datasets.",CS-1223,14381,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,06/Nov/25 10:21 AM,06/Nov/25 10:37 AM,,,,0,,,,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x57:,,,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,,To Do,06/Nov/25 10:21 AM
+Conduct end-to-end QA with real-world data samples.,CS-1220,14378,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,06/Nov/25 10:16 AM,13/Apr/26 5:47 PM,,,,0,,,,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0g:,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,,,,To Do,06/Nov/25 10:16 AM
+Resolve all email service reliability issues,CS-1213,14371,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,06/Nov/25 10:05 AM,28/Jun/26 6:11 PM,,,,0,,,"* Resolve all *email service reliability issues* (timeouts, duplicate sends, retries).
+* Improve logging, monitoring, and error handling for email processes.",,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02y0q:zzzzzv,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,06/Nov/25 10:05 AM
+Reports>Broker Market Activity Report throws Error ,CS-1203,14274,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Highest,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,28/Oct/25 6:35 PM,10/Nov/25 7:46 PM,,,,0,,,"[~accountid:5d89a90316bcf20dd1c6251a] [~accountid:63b1b2f4741248746bf7244c] 
+
+Hi, Hoping this is a quick fix.  I would like to demonstrate this feature to a client on Thursday. ","!image-20251028-123358.png|width=671,alt=""image-20251028-123358.png""!",Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,28/Oct/25 6:35 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20251028-123358.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/13314,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0f:,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,,,,To Do,28/Oct/25 6:35 PM
+"Promotional Calendar: If Event stretches across more than 1 month, show it on all months that are included ",CS-1202,14273,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,27/Oct/25 7:34 PM,27/Oct/25 7:34 PM,,,,0,,,"!image-20251027-133353.png|width=671,alt=""image-20251027-133353.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,27/Oct/25 7:34 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20251027-133353.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/13313,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0j:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,27/Oct/25 7:34 PM
+"Fix filter so User only see the Retailers they manage, the TSS & BAP Promotions they create and the Promotions on the Calendar ",CS-1201,14272,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,27/Oct/25 4:31 PM,10/Nov/25 7:46 PM,,,,0,,,Similar to the Trade Spend roll up report. Users want to only see the retailers & promotions they create. They would like this to stick so they don't have to go to the filter every time they go to that page ,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0b:,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,,,,To Do,27/Oct/25 4:31 PM
+CRM> Retailers>Promo $Rules> Upload option doesn't work> Other Notes in Description ,CS-1199,14270,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,23/Oct/25 7:34 PM,27/Jun/26 1:51 AM,,,,0,,,"# The Upload function does not work. Once uploaded there is no success message and there is no update. Or if there is an Error Message, it doesn’t tell the User what the Error is. 
+# Uploads can only happen in the Banner. If that’s the case, the upload template would not need Retailer, Banner or Region. 
+## Is there a place where a brand or admin can upload for every Banner at once? As it is, user would need to go into each banner separately to upload this data. 
+# See attempted Upload Template Attached 
+
+!image-20251023-133109.png|width=671,alt=""image-20251023-133109.png""!
+
+B*rand >Zucchini Beanie> Retailer >ABSCO Banner> Denver* 
+
+!image-20260626-194818.png|width=1345,alt=""image-20260626-194818.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,27/Jun/26 1:45 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;PromoRules Template Sample (7).csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15988,23/Oct/25 7:34 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20251023-133109.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/13312,27/Jun/26 1:51 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20260626-194818.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/15989,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzzzzzx,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,,,,To Do,23/Oct/25 7:34 PM
+TSS>Step 4> Multiple Edit Divide Ad Fees by Product for Each Event Separately ,CS-1193,14204,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,20/Oct/25 7:16 PM,20/Oct/25 7:16 PM,,,,0,,,"If all events are selected the Add Fee should be applied to all products per event. For example if All 3 events are selected and $400 is entered in Unit Scan Allowance, $100 will be applied to all 4 items per event. The result would be a total of $1200 for all 3 events (which contain 4 items each) 
+
+!image-20251020-131123.png|width=663,alt=""image-20251020-131123.png""!
+
+!image-20251020-131325.png|width=615,alt=""image-20251020-131325.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,20/Oct/25 7:16 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20251020-131123.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/13217,20/Oct/25 7:16 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20251020-131325.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/13218,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02wyj:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,20/Oct/25 7:16 PM
+Trade Spend Sandbox /BAP Make Scroll Bar Thicker,CS-1188,14072,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,04/Oct/25 1:55 AM,04/Oct/25 2:40 AM,,,,0,,,"View & Edit Promo Event Details: Please make the scroll bar thicker, it’s difficult to grab 
+
+!image-20251003-195502.png|width=100%,alt=""image-20251003-195502.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,04/Oct/25 1:55 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20251003-195502.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/13111,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02wxf:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,04/Oct/25 1:55 AM
+Files | Downloads still have errors see details ,CS-1179,13939,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Highest,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,26/Sep/25 4:40 AM,10/Nov/25 7:46 PM,,,,0,,," 
+
+ 
+
+!image-20250925-223917.png|width=100%,alt=""image-20250925-223917.png""!
+
+!image-20250925-223927.png|width=100%,alt=""image-20250925-223927.png""!
+
+
+
+
+
+!image-20250925-223936.png|width=91.66666666666666%,alt=""image-20250925-223936.png""!
+
+ ",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,26/Sep/25 4:39 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20250925-223910.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/12979,26/Sep/25 4:40 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20250925-223917.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/12982,26/Sep/25 4:40 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20250925-223927.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/12981,26/Sep/25 4:40 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20250925-223936.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/12980,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzzzzz,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,,,,To Do,26/Sep/25 4:40 AM
+"EDLP events look the same as other events; there should be a different color, tag, or indicator to easily identify EDLP events.",CS-1178,13908,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,22/Sep/25 4:11 PM,20/Oct/25 10:36 AM,,,,0,,,,,Fariha Jabin,,624a86b47a3f9e006ab4a185,,3600,3600,,0%,3600,3600,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02wv7:,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,,,,To Do,22/Sep/25 4:11 PM
+Trade Spend | Sandbox and Approved Have back button from results page take user to same year ,CS-1174,13840,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,20/Sep/25 4:23 AM,25/Sep/25 5:38 PM,,,,0,,,"Example today’s date is 9-29-25. If a user is working in a 2026 Promotion and clicks the back button, they are taken to current year 2025. Can they go back to 2026 which is the year they are working in?
+
+Clicking back from here takes user to the 2025 page. IF they come from the 2026 list, it seems like the back button should take user back to the 2026 list, not the 2025 list 
+
+!image-20250919-222214.png|width=91.66666666666666%,alt=""image-20250919-222214.png""!
+
+!image-20250919-222309.png|width=91.66666666666666%,alt=""image-20250919-222309.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,10800,10800,,0%,10800,10800,,,,,,,,,,,,,,,,,,20/Sep/25 4:23 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20250919-222214.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/12945,20/Sep/25 4:23 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20250919-222309.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/12946,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02wub:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,20/Sep/25 4:23 AM
+[BE] Check email delivery status for new Sign up,CS-1166,13680,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,10/Sep/25 4:27 PM,06/Nov/25 10:35 AM,,,,0,,,,,Bijoy Chandra Nath,Md Mashiul Azam Chowdhury Efti,63b1b2f4741248746bf7244c,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zr,,,Miscellaneous,,,,,,,,,,,,,2025-09-25 11:56:01.384,,25/Sep/25 5:56 PM;63b1b2f4741248746bf7244c;I’m not sure about the scope of this ticket. [~accountid:5d89a90316bcf20dd1c6251a] can you please add some description so that I can add estimation.,"25/Sep/25 5:59 PM;5d89a90316bcf20dd1c6251a;[~accountid:63b1b2f4741248746bf7244c] during the demo, some user were not receiving confirmation email after sign up. We need to check the email delivery status or auto retry to send the mail if fails.",,,,,,,To Do,10/Sep/25 4:27 PM
+[FE] 30 MB max size message for import,CS-1164,13678,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,10/Sep/25 4:26 PM,06/Nov/25 10:35 AM,,,,0,,,,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,1800,1800,,0%,1800,1800,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zi,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,,,,To Do,10/Sep/25 4:26 PM
+CRM | Pipeline - Need Undo option in task edit ,CS-1150,13478,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,29/Aug/25 6:25 PM,25/Sep/25 5:43 PM,,,,0,,,,,Constance Wolfe,Md Mashiul Azam Chowdhury Efti,712020:bb01de93-d391-4258-af77-200e90d99ec2,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02wp7:,,,,,,,,,,,,,,,,2025-09-25 11:43:17.427,,25/Sep/25 5:43 PM;5d89a90316bcf20dd1c6251a;Need to do some RnD before giving estimation.,,,,,,,,To Do,29/Aug/25 6:25 PM
+Reports | Category Review Uploads & Data Pushes ,CS-1149,13477,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,29/Aug/25 6:21 PM,28/Jun/26 6:11 PM,,,,0,,,"Category Uploads are not accepting Open Reviews. When we add a Category Review within a brand, it’s pushing to all brands.  They are only supposed to push to all brands from the Broker Dashboard ",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,CS-1329,29/Aug/25 6:20 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;Screenshot 2025-08-25 at 4.15.06 PM.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/12650,29/Aug/25 6:21 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;Sprouts2026_category-review-Sample_take2.csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/12651,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzzzzv,,,Sprint May 5th,Sprint 5 Jan 1-15,,,,,,,,,,,,,,,,,,,,,,To Do,29/Aug/25 6:21 PM
+"When clicking the Add New Event button, the modal shows a visual glitch.",CS-1132,13280,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,25/Aug/25 4:02 PM,20/Oct/25 10:36 AM,,,,0,,,"!Caboodle - Google Chrome 2025-08-25 16-01-40.mp4|width=1920,height=1032,alt=""Caboodle - Google Chrome 2025-08-25 16-01-40.mp4""!",,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,CS-1095,,,,,,,,,,,,25/Aug/25 4:02 PM;5b363a5d-f395-4a55-a944-677a1e7ec521;Caboodle - Google Chrome 2025-08-25 16-01-40.mp4;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/12484,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02waa:r,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,,,,To Do,25/Aug/25 4:02 PM
+CRM>Pipeline>Back Button Issue ,CS-1118,13115,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,19/Aug/25 2:50 AM,27/Jun/26 1:55 AM,,,,0,,,"If user selects a plan, then goes to or creates a new task, then uses the back button, they are taken to the top plan in the list vs. remaining in the same plan.  
+
+User goes to Nor Cal Region Plan, then goes to Mollie Stones|Check Off Shelf Freezer 
+
+!image-20250818-204624.png|width=83.33333333333333%,alt=""image-20250818-204624.png""!
+
+
+
+!image-20250818-204749.png|width=91.66666666666666%,alt=""image-20250818-204749.png""!
+
+User is taken back to a different Plan (Brand Internal Notes) when they should have stayed in the Nor Cal Region Plan 
+
+!image-20250818-204900.png|width=83.33333333333333%,alt=""image-20250818-204900.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,19/Aug/25 2:50 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20250818-204624.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/12286,19/Aug/25 2:50 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20250818-204749.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/12285,19/Aug/25 2:50 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20250818-204900.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/12287,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzzzzr,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,,,,To Do,19/Aug/25 2:50 AM
+[FE] Slight Glitch after editing a promo event,CS-1095,12916,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,08/Aug/25 12:23 AM,20/Oct/25 10:36 AM,,,,0,Front_end,,"After editing a promo event, there’s a loading glitch — the page doesn't refresh smoothly.",,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,CS-1132,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02wa7:,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,,,,To Do,08/Aug/25 12:23 AM
+Editing and Pushing from Trade spend sandbox will update corresponding Promo Planning,CS-1090,12884,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,06/Aug/25 4:21 PM,06/Aug/25 4:21 PM,,,,0,Backend,Front_end,,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02wb7:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,06/Aug/25 4:21 PM
+Invite User - role - brand - “Select All” checkbox behaves incorrectly,CS-1078,12752,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,,,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,22/Jul/25 4:13 PM,10/Nov/25 7:46 PM,,,,0,,,"*Steps to Reproduce:*
+
+# Go to User Management > Invite User.
+# Select a role (e.g., Broker).
+# Select only one brand from the list.
+# Observe the state of the “Select All” checkbox.
+
+!image-20250722-101444.png|width=1912,height=989,alt=""image-20250722-101444.png""!",,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,22/Jul/25 4:14 PM;5b363a5d-f395-4a55-a944-677a1e7ec521;image-20250722-101444.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/11924,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzzzzi,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,12391,CS-1035,Admin bug tickets,To Do,22/Jul/25 4:13 PM
+Product Specs Add/Edit Product > Change Order & Names of Fields for Dimensions ,CS-1077,12719,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,22/Jul/25 1:24 AM,27/Jun/26 1:30 AM,,,,0,,,"Hi, when adding a product can you please make the following changes: 
+
+# In the second row, please match the order as the row above it 
+## So Height, Width, Depth 
+# 2nd row Please remove the word Individual in front of the word Case in all 3 fields 
+# 1st row last field change Length to Depth 
+
+!image-20250721-192403.png|width=100%,alt=""image-20250721-192403.png""!",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,22/Jul/25 1:24 AM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20250721-192403.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/11889,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02w8b:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,22/Jul/25 1:24 AM
+[BE] Broker Dashboard> Update landing page to match Brand environments. Replace dashboard with Broker Logo,CS-1072,12686,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,15/Jul/25 6:20 PM,06/Nov/25 10:35 AM,,,,0,,,,,Bijoy Chandra Nath,Constance Wolfe,63b1b2f4741248746bf7244c,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:r,,,Miscellaneous,,,,,,,,,,,,,2025-09-25 12:18:27.513,,"25/Sep/25 6:18 PM;63b1b2f4741248746bf7244c;[~accountid:712020:bb01de93-d391-4258-af77-200e90d99ec2] Could you please provide a detailed description for this ticket, including the scope of work, objectives, and expected deliverables? This will help clarify the requirements and ensure proper planning and estimation.",,,,,,,,To Do,15/Jul/25 6:20 PM
+"if sub brand ID is deactivated by admin, logged-in user can still access system",CS-1065,12560,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,,,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,09/Jul/25 3:57 PM,10/Nov/25 7:46 PM,,,,0,,,,,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzzzz,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,12391,CS-1035,Admin bug tickets,To Do,09/Jul/25 3:57 PM
+"login: if password is less than 6 characters, sign-up fails with no error message",CS-1064,12558,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,,,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,09/Jul/25 3:57 PM,10/Nov/25 7:46 PM,,,,0,,,"!image-20250709-100203.png|width=1887,height=901,alt=""image-20250709-100203.png""!
+
+* *steps to reproduce*:
+*# try to register a new account with a password less than 6 characters
+*# click sign up
+* *expected result*:
+proper message like “password must be at least 6 characters”
+* *actual result*:
+sign-up fails but no error message shown",,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,09/Jul/25 4:02 PM;5b363a5d-f395-4a55-a944-677a1e7ec521;image-20250709-100203.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/11758,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzzzy,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,12391,CS-1035,Admin bug tickets,To Do,09/Jul/25 3:57 PM
+banner profile page: change password is not working,CS-1063,12556,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,,,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,09/Jul/25 3:56 PM,10/Nov/25 7:46 PM,,,,0,,,,,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzzzx,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,12391,CS-1035,Admin bug tickets,To Do,09/Jul/25 3:56 PM
+"banner profile page: if name field empty, try to save, can’t save, no error message shown",CS-1062,12554,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,,,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,09/Jul/25 3:56 PM,10/Nov/25 7:46 PM,,,,0,,,,,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzzzv,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,12391,CS-1035,Admin bug tickets,To Do,09/Jul/25 3:56 PM
+crm module – delete option missing in all modules except banner,CS-1059,12488,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,07/Jul/25 9:52 AM,07/Jul/25 9:52 AM,,,,0,,,"* *steps to reproduce*:
+*# go to the *CRM module*
+*# open each sub-module (distributors, retailers, contacts, pipeline)
+*# check for delete functionality
+* *expected result*:
+all CRM sub-modules should have a *delete* option for entries
+* *actual result*:
+only the *banner* module has a delete option; others are missing it",,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02w3f:,,,,,,,,,,,,,,,,,,,,,,,12391,CS-1035,Admin bug tickets,To Do,07/Jul/25 9:52 AM
+brand – export is not working,CS-1050,12419,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,,,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,02/Jul/25 4:38 PM,10/Nov/25 7:46 PM,,,,0,,,"* *steps to reproduce*:
+*# go to *admin panel > brand*
+*# click on the *export* button
+* *expected result*:
+a file (e.g., Excel or CSV) should be downloaded with the brand data
+* *actual result*:
+no file is downloaded and no error occurs during the export action",,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzzzr,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,12391,CS-1035,Admin bug tickets,To Do,02/Jul/25 4:38 PM
+brand owner – email search filter not working,CS-1049,12417,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,,,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,02/Jul/25 4:35 PM,10/Nov/25 7:46 PM,,,,0,,,"* *steps to reproduce*:
+*# go to admin panel > brand owner
+*# use the email filter to search
+* *expected result*:
+results should be filtered by matching email addresses
+* *actual result*:
+filter doesn’t work or returns incorrect data",,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzzzi,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,12391,CS-1035,Admin bug tickets,To Do,02/Jul/25 4:35 PM
+brand upload template includes extra column,CS-1048,12415,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,,,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,02/Jul/25 4:35 PM,10/Nov/25 7:46 PM,,,,0,,,,,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzzz,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,12391,CS-1035,Admin bug tickets,To Do,02/Jul/25 4:35 PM
+blank file upload shows unclear error,CS-1047,12413,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,,,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,02/Jul/25 4:35 PM,10/Nov/25 7:46 PM,,,,0,,,"* *expected result*:
+system should show a specific message like “file is empty” or “no valid data found”
+* *actual result*:
+system shows a generic or unclear error message",,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzzy,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,12391,CS-1035,Admin bug tickets,To Do,02/Jul/25 4:35 PM
+brand description not  fully visible if too long,CS-1046,12411,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,,,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,02/Jul/25 4:35 PM,10/Nov/25 7:46 PM,,,,0,,,"* *steps to reproduce*:
+*# add a long description text when creating or editing a brand
+*# view the brand list
+* *expected result*:
+long descriptions should be viewable with wrapping or tooltip
+* *actual result*:
+large text gets cut off or doesn’t display",,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzzx,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,12391,CS-1035,Admin bug tickets,To Do,02/Jul/25 4:35 PM
+brand name should be unique,CS-1045,12409,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,,,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,02/Jul/25 4:35 PM,10/Nov/25 7:46 PM,,,,0,,,"* *steps to reproduce*:
+*# go to admin panel > brand
+*# try to create a brand with an existing name
+* *expected result*:
+system should prevent duplicate brand names and show a proper error
+* *actual result*:
+duplicate names are allowed without any warning",,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzzv,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,12391,CS-1035,Admin bug tickets,To Do,02/Jul/25 4:35 PM
+ui issue – button corners broken,CS-1040,12401,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,01/Jul/25 9:49 AM,10/Nov/25 7:46 PM,,,,0,,,"* all buttons need updated styling; broken corners in design
+* *expected result*:
+consistent, rounded, and polished button design across the UI
+* *actual result*:
+button corners appear broken or inconsistent in shape
+
+!image-20250701-035251.png|width=1577,height=900,alt=""image-20250701-035251.png""!",,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,01/Jul/25 9:52 AM;5b363a5d-f395-4a55-a944-677a1e7ec521;image-20250701-035251.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/11634,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzz,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,12391,CS-1035,Admin bug tickets,To Do,01/Jul/25 9:49 AM
+[BE] Field mismatch between manual form and upload template,CS-1039,12399,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,01/Jul/25 9:49 AM,10/Nov/25 7:46 PM,,,,0,,,"* *modules affected*: distributor delivery method, distribution center
+* *expected result*:
+both manual and upload forms should use consistent field sets
+* *actual result*:
+fields in upload template differ from those in the manual entry form",,Fariha Jabin,,624a86b47a3f9e006ab4a185,,600,600,,0%,600,600,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzy,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,12391,CS-1035,Admin bug tickets,To Do,01/Jul/25 9:49 AM
+[BE] Template files don’t show required/mandatory fields,CS-1038,12397,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,01/Jul/25 9:49 AM,10/Nov/25 7:46 PM,,,,0,,,"* *expected result*:
+template files should include a note or column header to mark required fields
+* *actual result*:
+users can’t identify which fields are mandatory when filling the file",,Bijoy Chandra Nath,Fariha Jabin,63b1b2f4741248746bf7244c,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzx,,,Miscellaneous,,,,,,,,,,,,,2025-09-25 12:25:31.814,,"25/Sep/25 6:25 PM;63b1b2f4741248746bf7244c;[~accountid:624a86b47a3f9e006ab4a185] Could you please specify which module(s) have template files that don’t display the required fields? Or should I review every upload template to check? Depending on the answer, I can provide an accurate time estimation for this work.",,,,,12391,CS-1035,Admin bug tickets,To Do,01/Jul/25 9:49 AM
+[BE] No error message when uploading a blank file,CS-1037,12395,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,01/Jul/25 9:49 AM,10/Nov/25 7:46 PM,,,,0,,,"* *modules affected*: distributor, distributor delivery method, distribution center
+* *expected result*:
+system should display a clear error message for blank uploads
+* *actual result*:
+file appears to upload but no feedback is provided",,Fariha Jabin,,624a86b47a3f9e006ab4a185,,1800,1800,,0%,1800,1800,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zzv,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,12391,CS-1035,Admin bug tickets,To Do,01/Jul/25 9:49 AM
+Admin bug tickets,CS-1035,12391,Epic,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,,,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,01/Jul/25 9:48 AM,14/Jul/25 5:32 PM,,,,0,,,,,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,2400,2400,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},ghx-label-6,,To Do,,,,green,,,,,0|i02vy3:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,01/Jul/25 9:48 AM
+Regression Test,CS-973,11992,Story,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,,,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,26/May/25 3:27 PM,29/May/25 12:58 PM,,,,0,,,,,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02vkb:,,,,,,,,,,,,,,,,,,,,,,,11695,CS-894,Issues from QA audit,To Do,26/May/25 3:27 PM
+UX Audit,CS-955,11901,Epic,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Abdullah Al Mahmud,712020:06966f86-49e2-4e65-abd6-bd7daef07c41,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,15/May/25 10:33 AM,06/Nov/25 10:30 AM,,,,0,Front_end,,,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},ghx-label-11,,To Do,,,,teal,,,,,0|i02msh:i,,,Sprint - May 13th,Sprint - June 16th,On Hold,,,,,,,,,,,,,,,,,,,,,To Do,15/May/25 10:33 AM
+Issues from QA audit,CS-894,11695,Epic,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,,,Fariha Jabin,624a86b47a3f9e006ab4a185,Fariha Jabin,624a86b47a3f9e006ab4a185,05/May/25 3:07 PM,06/Nov/25 10:30 AM,,,,0,,,,,Fariha Jabin,,624a86b47a3f9e006ab4a185,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},ghx-label-10,Issues from QA audit,To Do,,,,blue,,,,,0|i02mse:y,,,Sprint - May 13th,Sprint - June 16th,On Hold,,,,,,,,,,,,,,,,,,,,,To Do,05/May/25 3:07 PM
+Trade Spend Promotion Module,CS-725,11101,Story,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Highest,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,12/Mar/25 10:36 AM,12/Mar/25 10:36 AM,,,,0,,,,,Bijoy Chandra Nath,,63b1b2f4741248746bf7244c,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02u8r:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,12/Mar/25 10:36 AM
+Share link of pages like in google and restrict it to view only,CS-701,10840,Story,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,17/Feb/25 8:02 PM,06/Nov/25 10:30 AM,,,,0,,,,,Constance Wolfe,Md Mashiul Azam Chowdhury Efti,712020:bb01de93-d391-4258-af77-200e90d99ec2,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02mse:x,,,On Hold,,,,,,,,,,,,,2025-02-17 14:08:44.13,,17/Feb/25 8:03 PM;5d89a90316bcf20dd1c6251a;[~accountid:712020:bb01de93-d391-4258-af77-200e90d99ec2] Can you please specify the requirements for this feature?,"17/Feb/25 8:08 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;[~accountid:5d89a90316bcf20dd1c6251a] Hi, yes we would like to be able to share a link to a Caboodle page (for example the Promotional Calendar) so a person can view the Calendar without logging into the system. Much like a user can do in Google where they share a link to the person can view only).  The Use Case: IF a brand wants to share their promotional calendar with someone that is not a part of Caboodle.  The brand doesn’t want the view to log in but they want them to see the page.  Without this, the brand copies the calendar and puts it on Google Sheets where it has to be updated outside of Caboodle.  Please let me know if this makes sense?  ",,,,10839,CS-700,System Update,To Do,17/Feb/25 8:02 PM
+System Update,CS-700,10839,Epic,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,17/Feb/25 8:01 PM,06/Nov/25 10:30 AM,,,,0,Backend,Front_end,,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},ghx-label-2,System Update,To Do,,,,dark_yellow,,,,,0|i02mse:v,,,On Hold,,,,,,,,,,,,,,,,,,,,,,,To Do,17/Feb/25 8:01 PM
+Files | Files Tree Display issues See image of overlapping folders ,CS-658,10708,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,06/Dec/24 11:35 PM,27/Apr/25 11:48 AM,,,,0,,,,"If there are too many folders the display image overlaps.
+
+!image-20241206-173510.png|width=83.33333333333334%,alt=""image-20241206-173510.png""!",Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,06/Dec/24 11:35 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;image-20241206-173510.png;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/10555,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02rwi:x8zzzy,,,On Hold,,,,,,,,,,,,,,,,,,,,,,,To Do,06/Dec/24 11:35 PM
+Trade Spend | Promo Event Details | Is it possible to add a sku without going thru the stepper again?,CS-532,10582,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,,,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,28/May/24 4:40 PM,28/May/24 4:40 PM,,,,0,,,If a user wants to add a new sku to an existing promo or multiplier promos they have to click the button and go thru the entire stepper.  Is it possible to add a new sku to an existing promotion without going thru stepper?  ,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02t43:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,28/May/24 4:40 PM
+Automatically Remove Deleted Records After Certain Period Of Time,CS-518,10568,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,07/May/24 6:40 PM,25/Sep/25 7:00 PM,,,,0,Backend,,"# We may clean up deleted entities every 3 or 6 months. If both Riz and Constance provide their consent.
+# Removed email logs from 3 months ago.",,Bijoy Chandra Nath,,63b1b2f4741248746bf7244c,,28800,28800,,0%,28800,28800,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02t0z:,,,Performance Enhancement,,,,,,,,,,,,,,,,,,,,,,,To Do,07/May/24 6:40 PM
+Optimize the tables to ensure that the site remains unaffected even with a large amount of data.,CS-514,10564,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,07/May/24 4:03 PM,07/May/24 4:03 PM,,,,0,Front_end,,,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02t03:,,,Performance Enhancement,,,,,,,,,,,,,,,,,,,,,,,To Do,07/May/24 4:03 PM
+Check if we can further utilize caching from any other areas,CS-512,10562,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,07/May/24 4:00 PM,07/May/24 4:00 PM,,,,0,,,,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02szn:,,,Performance Enhancement,,,,,,,,,,,,,,,,,,,,,,,To Do,07/May/24 4:00 PM
+Banner Upload Error Messaging ,CS-496,10546,Bug,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,High,,,,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,02/May/24 11:28 PM,10/Nov/25 7:46 PM,,,,0,,,,,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,02/May/24 11:28 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;Banner upload issues multiple skus similar .xlsx;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/10265,02/May/24 11:28 PM;712020:bb01de93-d391-4258-af77-200e90d99ec2;Bannerskus-Sample LIFESOURCE APL.csv;https://caboodleservices.atlassian.net/rest/api/3/attachment/content/10264,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02x0a:zz,,,Miscellaneous,,,,,,,,,,,,,,,,,,,,,,,To Do,02/May/24 11:28 PM
+[BE] Saving Banner SKU Failed Records and automatically adding them back into the system once we've matched up the unrecognized banners from the Data Mapping section,CS-487,10537,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,29/Apr/24 1:05 PM,25/Sep/25 7:06 PM,,,,0,Backend,,,,Bijoy Chandra Nath,,63b1b2f4741248746bf7244c,,28800,28800,,0%,28800,28800,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02st7:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,29/Apr/24 1:05 PM
+Monitoring Service,CS-405,10407,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,29/Feb/24 11:51 AM,25/Sep/25 7:08 PM,,,,0,,,,,Bijoy Chandra Nath,,63b1b2f4741248746bf7244c,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02s2j:,,,,,,,,,,,,,,,,,,25/Sep/25 7:08 PM;63b1b2f4741248746bf7244c;This is actually a DevOps task. I’ll talk with our DevOps guy Rahat and will give here an update.,,,,,,,,To Do,29/Feb/24 11:51 AM
+Product Specs - Add Chck Box for Manufacturer Discontinued ,CS-376,10378,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,Constance Wolfe,712020:bb01de93-d391-4258-af77-200e90d99ec2,10/Feb/24 12:18 AM,27/Apr/25 11:40 AM,,,,0,,,"status icon (status could be active or Mfr disco?). That way if we change a status within the specs page, it could push to all other pages within the CRM to update the sku's status to Mfr disco? This is a long-term thought, not urgent of course :)",,Constance Wolfe,,712020:bb01de93-d391-4258-af77-200e90d99ec2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02rwi:x8zi,,,On Hold,,,,,,,,,,,,,,,,,,,,,,,To Do,10/Feb/24 12:18 AM
+[BE] Product Specs Add a text box for Shelf Life and another for Attributes.  Doesn't need to be in the file upload ,CS-280,10282,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,01/Jan/24 12:33 PM,01/Jan/24 12:34 PM,,,,0,,,[https://drive.google.com/file/d/11e5W49ExsswE06z0D99VZvswnGYnu3HP/view?usp=sharing|https://drive.google.com/file/d/11e5W49ExsswE06z0D99VZvswnGYnu3HP/view?usp=sharing|smart-link] ,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,CS-281,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02r8j:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,01/Jan/24 12:33 PM
+[BE] Admin - Upload Effeciency,CS-247,10249,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,21/Dec/23 11:11 AM,21/Dec/23 11:11 AM,,,,0,Backend,,,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02r17:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,21/Dec/23 11:11 AM
+[FE] Admin - Activity Log,CS-246,10248,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,21/Dec/23 11:06 AM,27/Apr/25 11:32 AM,,,,0,Admin_App,,,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02rwi:x8v,,,On Hold,,,,,,,,,,,,,,,,,,,,,,,To Do,21/Dec/23 11:06 AM
+[BE] Admin - Activity Log,CS-245,10247,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,21/Dec/23 11:06 AM,21/Dec/23 11:07 AM,,,,0,Backend,,,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02r0r:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,21/Dec/23 11:06 AM
+[BE] Promotional Management - Push date submission to brand side,CS-234,10236,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,21/Dec/23 10:50 AM,21/Dec/23 10:50 AM,,,,0,Backend,,,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02qyb:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,21/Dec/23 10:50 AM
+[BE] Promotional Management - Published distributor pricing for Promo Submissions,CS-232,10234,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Low,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,21/Dec/23 10:48 AM,21/Dec/23 10:48 AM,,,,0,Backend,,,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02qxv:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,21/Dec/23 10:48 AM
+Caboodle Phase 2 Requirements,CS-190,10192,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,09/Dec/23 11:03 PM,05/Feb/24 8:02 PM,,,,0,,,[https://docs.google.com/document/d/18oL-5U_UWIcy5tuDDRGQQ80vAXoMN-QcLSplnm1nVl4/edit|https://docs.google.com/document/d/18oL-5U_UWIcy5tuDDRGQQ80vAXoMN-QcLSplnm1nVl4/edit|smart-link] ,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},ghx-label-8,,,,,,dark_purple,,,,,0|i02qoj:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,09/Dec/23 11:03 PM
+[FE] Module on off,CS-147,10146,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,03/Dec/23 3:06 PM,27/Apr/25 11:49 AM,,,,0,Admin_App,Front_end,Admin will be able to turn off specific module for specific brand or broker,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02rwi:x8zzzzx,,,On Hold,,,,,,,,,,,,,,,,,,,,,,,To Do,03/Dec/23 3:06 PM
+[BE] Module on off,CS-146,10145,Task,Backlog,CS,Caboodle Services,software,Hasnaeen Rizvi Rahman,557058:308a1a24-cce8-4864-899e-6cf3591da576,,Medium,,Bijoy Chandra Nath,63b1b2f4741248746bf7244c,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,Md Mashiul Azam Chowdhury Efti,5d89a90316bcf20dd1c6251a,03/Dec/23 3:05 PM,03/Dec/23 3:05 PM,,,,0,Backend,,Admin will be able to turn off specific module for specific brand or broker,,Md Mashiul Azam Chowdhury Efti,,5d89a90316bcf20dd1c6251a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ApprovalsCFValue{approvals=[]},,,,,,,{},,,,,,,,,,,,0|i02qer:,,,,,,,,,,,,,,,,,,,,,,,,,,To Do,03/Dec/23 3:05 PM
