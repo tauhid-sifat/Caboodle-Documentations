@@ -1,0 +1,4816 @@
+00:00 Okay. I I'll let you know once I
+00:02 
+
+00:02 implement the properation.
+00:04 
+
+00:04 >> Okay, great.
+00:05 
+
+00:05 >> Wow. Can you do is that a quick fix?
+00:11 
+
+00:11 >> Um, yeah, it's it's kind of a quick fix.
+00:14 
+
+00:14 >> How quickly can you do that?
+00:17 
+
+00:17 >> Um,
+00:18 
+
+00:18 I can do this by tomorrow morning. Like
+00:21 
+
+00:21 it will take um two hours maybe max.
+00:24 
+
+00:24 >> Okay. I need you to do that. Um because
+00:27 
+
+00:27 that has to be done no matter what
+00:28 
+
+00:28 anyway. Correct. Yeah, because you want
+00:30 
+
+00:30 to taste your theory and then
+00:33 
+
+00:33 >> but you would need to do it anyway. I
+00:34 
+
+00:34 mean it needs to it needs to be
+00:36 
+
+00:36 reflecting. Yeah. Okay. So, can you make
+00:38 
+
+00:38 that your first number one priority for
+00:41 
+
+00:41 tomorrow morning?
+00:43 
+
+00:43 >> Yeah. Okay. I already made that.
+00:45 
+
+00:45 >> Great. Okay. And then your category
+00:48 
+
+00:48 review uh or I mean yeah the category
+00:50 
+
+00:50 review reports what what do you have?
+00:52 
+
+00:52 What are your questions on that one?
+00:54 
+
+00:54 >> Yeah. Right. So um
+00:56 
+
+00:56 can I share my screen?
+00:58 
+
+00:58 >> Yeah. because I I I have a document. So,
+01:11 
+
+01:11 >> so you can see my screen right this
+01:13 
+
+01:13 section.
+01:14 
+
+01:14 >> Yes. Yep. I sure can.
+01:16 
+
+01:16 >> Okay. So, uh these are my questions
+01:18 
+
+01:18 actually. So
+01:20 
+
+01:20 >> if broker uploads today and a new brand
+01:24 
+
+01:24 is linked tomorrow, should the old
+01:26 
+
+01:26 broker list auto backfield to that? Old
+01:31 
+
+01:31 you mean current broker, not old broker.
+01:33 
+
+01:33 The current
+01:34 
+
+01:34 >> I mean yeah current broker, right?
+01:35 
+
+01:35 >> Okay. So if old broker uploads today and
+01:38 
+
+01:38 a new brand is linked tomorrow. Yes,
+01:40 
+
+01:40 correct.
+01:41 
+
+01:41 >> Okay. And the second one is
+01:44 
+
+01:44 >> uh are broker propagated records in
+01:46 
+
+01:46 brand view editable by brand users or
+01:49 
+
+01:49 read only? They should be able to edit
+01:52 
+
+01:52 it. Um
+01:54 
+
+01:54 yeah.
+01:58 
+
+01:58 >> So it should be edited word.
+01:60 
+
+01:60 >> Yeah.
+02:05 
+
+02:05 >> So on this one the third one
+02:07 
+
+02:07 >> if propagated item is edited. Can you
+02:10 
+
+02:10 move your cursor? Oh, that's me. If
+02:11 
+
+02:11 propagated item is edited at the brand
+02:16 
+
+02:16 level, does it locally or update shared
+02:18 
+
+02:18 local? Say have it local.
+02:23 
+
+02:23 >> It would be you're asking does it fork
+02:26 
+
+02:26 locally or update shared linage? I'm not
+02:30 
+
+02:30 sure what that means, but I think
+02:32 
+
+02:32 >> if they've edited locally, then it
+02:34 
+
+02:34 shouldn't edit anywhere else is
+02:37 
+
+02:37 >> what I think you're asking.
+02:39 
+
+02:39 So the thing is
+02:42 
+
+02:42 if there is a row on the brand side and
+02:46 
+
+02:46 we push that into the calendars that row
+02:50 
+
+02:50 should also be in the broker calendar
+02:52 
+
+02:52 right if I'm not wrong
+02:55 
+
+02:55 in there in here in the calendar section
+02:57 
+
+02:57 >> can you repeat that
+02:59 
+
+02:59 >> okay so in in the brand side so uh add
+03:03 
+
+03:03 category review row in the category
+03:07 
+
+03:07 review calendar, right? If you add those
+03:10 
+
+03:10 in the calendar, those two row in the
+03:11 
+
+03:11 calendar, right?
+03:12 
+
+03:12 >> Yeah. Okay. Yep.
+03:13 
+
+03:13 >> And these two rows should also be in the
+03:17 
+
+03:17 broker calendar, right?
+03:19 
+
+03:19 >> Correct.
+03:20 
+
+03:20 >> Yeah. Whatever they whatever they push.
+03:22 
+
+03:22 Correct.
+03:22 
+
+03:22 >> Exactly. Exactly. And then if we do any
+03:26 
+
+03:26 kind of changes in the brand and run
+03:31 
+
+03:31 in these two row
+03:33 
+
+03:33 and the calendar's data will also be
+03:36 
+
+03:36 changed.
+03:37 
+
+03:37 because I have updated the information.
+03:41 
+
+03:41 So this change should also be propagated
+03:44 
+
+03:44 into the broker.
+03:50 
+
+03:50 >> I mean um if you don't understand
+03:54 
+
+03:54 >> because the first question was if they
+03:56 
+
+03:56 make any changes here it's not going to
+03:57 
+
+03:57 push to the broker but you're saying if
+03:59 
+
+03:59 they if they make a change and they push
+04:01 
+
+04:01 it to the calendar
+04:03 
+
+04:03 >> calendar. Right.
+04:05 
+
+04:05 >> Right.
+04:07 
+
+04:07 So let's say this row I have already
+04:09 
+
+04:09 pushed it into the calendar. So if I
+04:10 
+
+04:10 push it into the calendar so it's not
+04:14 
+
+04:14 >> what happens when you push it to the
+04:15 
+
+04:15 calendar. Does it just does it disappear
+04:17 
+
+04:17 from the current list?
+04:19 
+
+04:19 >> Is just it just disappear from the
+04:20 
+
+04:20 current list and it's to
+04:23 
+
+04:23 >> is that what happens is that
+04:25 
+
+04:25 >> right right so let's say if I push this
+04:28 
+
+04:28 this row
+04:31 
+
+04:31 will disappear from this list. Yeah, it
+04:33 
+
+04:33 disappeared from this list and it's been
+04:35 
+
+04:35 added. Just
+04:36 
+
+04:36 >> I don't know if you want it to disappear
+04:38 
+
+04:38 from that list, honestly. I don't think
+04:40 
+
+04:40 you do.
+04:42 
+
+04:42 >> Okay, we should not disappear from the
+04:44 
+
+04:44 list.
+04:46 
+
+04:46 >> Yeah, I don't think you want it to
+04:47 
+
+04:47 disappear from the list.
+04:49 
+
+04:49 >> This
+04:52 
+
+04:52 moment
+05:03 
+
+05:03 So,
+05:06 
+
+05:06 so let's say this row again I have
+05:09 
+
+05:09 pushed that push this row into the
+05:11 
+
+05:11 calendar and then later on I have
+05:15 
+
+05:15 changed let's say for the review month
+05:17 
+
+05:17 so this change should also be propagated
+05:19 
+
+05:19 through here right
+05:23 
+
+05:23 >> so here's one thing I want to say Um,
+05:27 
+
+05:27 when it can you when it goes to the
+05:30 
+
+05:30 broker because I think this will help
+05:31 
+
+05:31 answer this. When it goes to the broker,
+05:33 
+
+05:33 can it show source?
+05:36 
+
+05:36 >> Yeah, of course it can show source.
+05:38 
+
+05:38 Yeah,
+05:38 
+
+05:38 >> if it shows source, then it's okay
+05:40 
+
+05:40 because so here's what I want like this
+05:42 
+
+05:42 would be good for Tahi to understand
+05:44 
+
+05:44 too. So the business logic here's the
+05:46 
+
+05:46 business logic. The business logic is
+05:49 
+
+05:49 that um the broker
+05:54 
+
+05:54 um is providing
+05:56 
+
+05:56 this list to their brands as a service
+05:58 
+
+05:58 so that they because again they get one
+06:01 
+
+06:01 chance a year to present their items to
+06:03 
+
+06:03 these retailers. So this this this
+06:05 
+
+06:05 information is really important. So if
+06:08 
+
+06:08 the brand what the broker is concerned
+06:11 
+
+06:11 that the brand may be getting bad
+06:13 
+
+06:13 information like the broker can vouch
+06:15 
+
+06:15 for the information that they're
+06:17 
+
+06:17 providing and the brand has every right
+06:19 
+
+06:19 to do their own investigation and and
+06:23 
+
+06:23 manage this calendar on their own. But
+06:26 
+
+06:26 if they make the change and it pushes to
+06:28 
+
+06:28 the broker and the broker misses the
+06:30 
+
+06:30 date
+06:32 
+
+06:32 >> then that's a problem. Like the broker
+06:34 
+
+06:34 would be responsible.
+06:36 
+
+06:36 So to to handle that, I think as long as
+06:41 
+
+06:41 there's a source
+06:43 
+
+06:43 that says
+06:45 
+
+06:45 um edited by or something like that,
+06:48 
+
+06:48 then that would flag it and then they
+06:49 
+
+06:49 could talk to that brand and be like,
+06:51 
+
+06:51 are you sure this is the right date
+06:52 
+
+06:52 because our records say this, right? So,
+06:56 
+
+06:56 um, if the change is going to push to
+06:59 
+
+06:59 here, I think we need a source row or an
+07:02 
+
+07:02 edited by row or created by
+07:05 
+
+07:05 indication so that it can at least kind
+07:07 
+
+07:07 of flag that broker that, hey, this has
+07:10 
+
+07:10 been edited.
+07:13 
+
+07:13 >> Okay.
+07:14 
+
+07:14 >> And we've always talked about that.
+07:15 
+
+07:15 We've always talked about here having a
+07:17 
+
+07:17 created by or something like that.
+07:20 
+
+07:20 Um, is there any chance that you maybe
+07:24 
+
+07:24 need the
+07:26 
+
+07:26 history of edit?
+07:30 
+
+07:30 >> So, we're not looking at the calendar.
+07:31 
+
+07:31 We're looking at the list. So, there's
+07:33 
+
+07:33 two different things we're talking
+07:34 
+
+07:34 about. I'm not seeing a broker calendar
+07:36 
+
+07:36 yet.
+07:38 
+
+07:38 >> Yeah. I mean, it will be same like this
+07:40 
+
+07:40 one,
+07:42 
+
+07:42 >> right? But I guess what I'm saying is
+07:45 
+
+07:45 that the broker list will never change.
+07:48 
+
+07:48 the broker calendar could change because
+07:52 
+
+07:52 you're saying that if the brand
+07:56 
+
+07:56 changes the c edits the category review
+07:58 
+
+07:58 and then pushes it to their calendar,
+08:01 
+
+08:01 >> right?
+08:02 
+
+08:02 >> Then that changed version is going to
+08:04 
+
+08:04 report to the broker calendar.
+08:06 
+
+08:06 >> Broker calendar, right?
+08:07 
+
+08:07 >> Not the broker list.
+08:10 
+
+08:10 >> Not the broker list. Yes.
+08:12 
+
+08:12 >> Because that broker Okay.
+08:15 
+
+08:15 >> What if that true comes from broker
+08:17 
+
+08:17 itself?
+08:18 
+
+08:18 Because in the point two you mentioned
+08:20 
+
+08:20 that the broker propagated record
+08:22 
+
+08:22 trackers in brand view is editable.
+08:26 
+
+08:26 So that means if a row for for example
+08:28 
+
+08:28 this row comes in this Baby's brand from
+08:32 
+
+08:32 broker and from the brand environment
+08:36 
+
+08:36 brand owner changes the let's say
+08:39 
+
+08:39 February month. So this change should
+08:42 
+
+08:42 also be propagated to the broker.
+08:45 
+
+08:45 >> No. Oh
+08:48 
+
+08:48 >> no
+08:48 
+
+08:48 >> no.
+08:52 
+
+08:52 >> Didn't we say no on that one? Number
+08:54 
+
+08:54 two.
+08:55 
+
+08:55 >> All broker propagated record advance
+08:57 
+
+08:57 should be editable by brands.
+08:60 
+
+09:00 If it's edited by brands, does it fork
+09:02 
+
+09:02 locally? And so I think it was that
+09:04 
+
+09:04 third one that we said, yeah, it should
+09:06 
+
+09:06 only stay local
+09:08 
+
+09:08 if they make the change.
+09:11 
+
+09:11 >> Oh, okay. That makes sense.
+09:15 
+
+09:15 But let's think about that. So if they
+09:16 
+
+09:16 change it and it stays locally
+09:20 
+
+09:20 um then they push that change to the
+09:22 
+
+09:22 calendar to their calendar then that
+09:24 
+
+09:24 calendar it would push the change to the
+09:27 
+
+09:27 to the broker calendar but it wouldn't
+09:29 
+
+09:29 change the the the broker list
+09:32 
+
+09:32 >> list. Right. Right.
+09:53 
+
+09:53 I have my answer. And the fourth one is
+09:57 
+
+09:57 uh yeah this one
+09:59 
+
+09:59 >> deletion semantics deleting at broker
+10:03 
+
+10:03 should remove soft delete all propagated
+10:07 
+
+10:07 uh
+10:09 
+
+10:09 >> yeah so that's a good one because so so
+10:12 
+
+10:12 this list is a you know it's um it's
+10:17 
+
+10:17 current and it will always need to be
+10:19 
+
+10:19 updated right because
+10:22 
+
+10:22 >> um so let's think about that. So, if a
+10:25 
+
+10:25 broker wants to just clear the old like
+10:28 
+
+10:28 see those submission dates from August
+10:30 
+
+10:30 2025 or you know what's the um and the
+10:34 
+
+10:34 reset dates he's already passed like
+10:36 
+
+10:36 some of this stuff is already passed so
+10:37 
+
+10:37 they might want to clear those things
+10:40 
+
+10:40 out. So, what is the best way for them
+10:44 
+
+10:44 to refresh this list? I guess that would
+10:46 
+
+10:46 be a good question to discuss. right now
+10:49 
+
+10:49 there's not a clear all like it would be
+10:51 
+
+10:51 in my mind like I know that there's some
+10:54 
+
+10:54 mistakes like I I wish that we could
+10:56 
+
+10:56 just delete everything and re-upload a
+10:58 
+
+10:58 new a new file right now that's not
+11:02 
+
+11:02 possible
+11:04 
+
+11:04 um so we
+11:06 
+
+11:06 >> possible
+11:07 
+
+11:07 >> okay so we do want that and so I guess
+11:10 
+
+11:10 whatever happens at the broker level
+11:14 
+
+11:14 um should push to all of the brands
+11:18 
+
+11:18 Except for if the brands put something
+11:20 
+
+11:20 in there locally on their own.
+11:24 
+
+11:24 So if if you're in Bubbies and you add
+11:29 
+
+11:29 your own category reviews, the broker
+11:33 
+
+11:33 shouldn't be able to delete
+11:35 
+
+11:35 >> delete that, right?
+11:36 
+
+11:36 >> Yeah, exactly.
+11:40 
+
+11:40 Okay, that means the answer is yes.
+11:47 
+
+11:47 And yes right and that's another thing.
+11:50 
+
+11:50 So um
+11:54 
+
+11:54 right now we don't have any column
+11:58 
+
+11:58 to detect any uh to detect any row like
+12:02 
+
+12:02 identically for example for example for
+12:05 
+
+12:05 example in the product specs we have UBC
+12:09 
+
+12:09 number by which we can say okay this
+12:12 
+
+12:12 product is unique because this UBC
+12:14 
+
+12:14 number couldn't be two or more products.
+12:17 
+
+12:17 So there's an unique column to identify
+12:20 
+
+12:20 the product um you know individually but
+12:24 
+
+12:24 in the category view report we are not
+12:26 
+
+12:26 sure exactly which columns to use to
+12:29 
+
+12:29 identify any rows as in unique row. So
+12:34 
+
+12:34 we kind of need that because there could
+12:36 
+
+12:36 be a situation where the data duplicate.
+12:40 
+
+12:40 So
+12:40 
+
+12:40 >> mhm
+12:41 
+
+12:41 >> to uh mention or to identify any rows as
+12:45 
+
+12:45 duplicate rows we need some columns or
+12:48 
+
+12:48 need some you know
+12:51 
+
+12:51 some things just to use uh so that we
+12:54 
+
+12:54 can identify duplicates. So that's
+12:56 
+
+12:56 that's what about this point like um if
+12:60 
+
+12:60 u a brand already has some category or
+13:02 
+
+13:02 date combination datas then um should we
+13:06 
+
+13:06 let it enter the duplicates data or
+13:09 
+
+13:09 should we just skip the duplicates. So
+13:12 
+
+13:12 first thing is we need to ensure which
+13:15 
+
+13:15 columns we are going to use u to
+13:19 
+
+13:19 maintain the duplication or something
+13:20 
+
+13:20 like that.
+13:22 
+
+13:22 I mean, I don't know what a brand would
+13:26 
+
+13:26 be able to provide for a unique
+13:28 
+
+13:28 identifier like a UPC because this is a
+13:31 
+
+13:31 generic list.
+13:32 
+
+13:32 >> Exactly.
+13:33 
+
+13:33 >> You know, I understand what you're
+13:34 
+
+13:34 saying is that you need to keep it from
+13:37 
+
+13:37 ident for duplicating that might be
+13:39 
+
+13:39 where you have to install, you know, a
+13:40 
+
+13:40 unique identifier on the back end. I I
+13:43 
+
+13:43 don't know. Um, but there's there's not
+13:46 
+
+13:46 any other information here
+13:49 
+
+13:49 um that I can think of that would from a
+13:54 
+
+13:54 brand perspective or a broker
+13:55 
+
+13:55 perspective that would make it unique
+13:57 
+
+13:57 unless you just put a number number one
+13:59 
+
+13:59 two three you know you could put
+14:02 
+
+14:02 >> um okay so in that case I think we will
+14:04 
+
+14:04 use all the columns
+14:06 
+
+14:06 >> yeah you definitely need all of the
+14:08 
+
+14:08 columns yeah
+14:09 
+
+14:09 >> like if we have another row with exactly
+14:12 
+
+14:12 these informations
+14:14 
+
+14:14 then we can identify them as duplicates.
+14:17 
+
+14:17 >> So we'll do that.
+14:20 
+
+14:20 >> Okay, I see.
+14:26 
+
+14:26 >> Okay, so I I have the answer for all all
+14:28 
+
+14:28 of my questions.
+14:30 
+
+14:30 >> Okay,
+14:31 
+
+14:31 >> thank you.
+14:32 
+
+14:32 >> Excellent. Um
+14:35 
+
+14:35 >> Okay,
+14:37 
+
+14:37 >> I was just going to show you one thing
+14:39 
+
+14:39 really quick. Um,
+14:42 
+
+14:42 let me see if I can duplicate it.
+14:46 
+
+14:46 Um
+14:54 
+
+14:54 just
+15:01 
+
+15:01 >> and one thing about the case constants
+15:03 
+
+15:03 like if you change the case back of the
+15:05 
+
+15:05 product that change should also be
+15:08 
+
+15:08 propagated in the sandbox right and the
+15:10 
+
+15:10 promotions
+15:12 
+
+15:12 because we use the calcul
+15:16 
+
+15:16 If we change the case spec in the
+15:19 
+
+15:19 product specifications
+15:21 
+
+15:21 then that change should also be
+15:23 
+
+15:23 propagated to the promotional planning
+15:26 
+
+15:26 module because in the promotion we use
+15:30 
+
+15:30 the case back uh to do our calculations.
+15:36 
+
+15:36 Case pack should um
+15:42 
+
+15:42 case pack should propagate to which one?
+15:43 
+
+15:43 I'm sorry. I'm I'm I'm trying to open a
+15:46 
+
+15:46 file and listen to you at the same time.
+15:47 
+
+15:47 And now I'm not trying to open a file.
+15:49 
+
+15:49 I'm sorry. Say that one more time.
+15:51 
+
+15:51 >> In the promotional management while
+15:53 
+
+15:53 calculating the revenue, the total cases
+15:57 
+
+15:57 and some other stuff, we use the case
+15:59 
+
+15:59 back in different equations. So if you
+16:02 
+
+16:02 change the case back of a product,
+16:05 
+
+16:05 uh so that change should also propagate
+16:08 
+
+16:08 to the promotional calculation. Right.
+16:10 
+
+16:10 >> Correct. Correct.
+16:11 
+
+16:11 >> Okay. I'm just make making sure. Yeah,
+16:14 
+
+16:14 >> I already know that. But anyways,
+16:16 
+
+16:16 >> yeah.
+16:17 
+
+16:17 >> Yeah, I'm following. Um, okay. So,
+16:21 
+
+16:21 there's two things while I have you and
+16:22 
+
+16:22 then we'll jump into our normally
+16:24 
+
+16:24 scheduled call. Um,
+16:29 
+
+16:29 I'm back to this case pack situation.
+16:32 
+
+16:32 Um,
+16:34 
+
+16:34 let me see something.
+16:42 
+
+16:42 Yeah, this is so
+16:46 
+
+16:46 um you can you can see here the issue
+16:49 
+
+16:49 there.
+16:49 
+
+16:49 >> Yeah, I already kind of know why this
+16:51 
+
+16:51 happened.
+16:52 
+
+16:52 >> But what I but what I was noticing
+16:55 
+
+16:55 yesterday and I don't see it right now
+16:56 
+
+16:56 is that there were duplicate
+16:59 
+
+16:59 products
+17:01 
+
+17:01 in the filter. So, I was going to tell
+17:03 
+
+17:03 you to check that while you were at it,
+17:05 
+
+17:05 but I don't see that happening right
+17:07 
+
+17:07 now. I can um
+17:10 
+
+17:10 >> Oh, I I saw I saw that if you did go on
+17:13 
+
+17:13 the Yeah.
+17:14 
+
+17:14 >> On the last
+17:15 
+
+17:15 >> Well, that's a shampoo.
+17:17 
+
+17:17 >> The last section of the list. So, yeah,
+17:20 
+
+17:20 this one right here. Yeah.
+17:22 
+
+17:22 >> Yeah.
+17:22 
+
+17:22 >> It didn't work shampoo.
+17:23 
+
+17:23 >> So, when you're looking at the issues,
+17:26 
+
+17:26 can you look into that as well?
+17:27 
+
+17:27 >> Yeah, sure. Good. Good.
+17:29 
+
+17:29 >> Okay. And then um the other thing I
+17:31 
+
+17:31 wanted to talk to you about is
+17:34 
+
+17:34 um in the monthly report
+17:39 
+
+17:39 um
+17:41 
+
+17:41 here
+17:43 
+
+17:43 I tried uploading yesterday
+17:48 
+
+17:48 um and I got
+17:52 
+
+17:52 I can show you the file that I used but
+17:55 
+
+17:55 this is
+17:57 
+
+17:57 the error. So this is the error. So I
+17:60 
+
+17:60 can show you my upload.
+18:02 
+
+18:02 But why is it saying that the values
+18:05 
+
+18:05 are not numbers?
+18:12 
+
+18:12 >> All of So this was my
+18:15 
+
+18:15 >> Yeah.
+18:15 
+
+18:15 >> Yeah. Can you go to the header section
+18:17 
+
+18:17 of the file?
+18:22 
+
+18:22 So the export when I exported the
+18:25 
+
+18:25 template it was
+18:28 
+
+18:28 >> um this is
+18:31 
+
+18:31 the template
+18:33 
+
+18:33 right because it populates if there's
+18:36 
+
+18:36 data there already
+18:38 
+
+18:38 >> yeah right
+18:39 
+
+18:39 >> so I so I downloaded the template
+18:43 
+
+18:43 and then I entered in
+18:46 
+
+18:46 >> the values
+18:47 
+
+18:47 >> the values here so I entered and and I
+18:51 
+
+18:51 think I have it right here. So I entered
+18:53 
+
+18:53 in
+18:56 
+
+18:56 >> That's the
+19:00 
+
+19:00 I entered in this information. So this
+19:02 
+
+19:02 was my upload updated.
+19:06 
+
+19:06 Um, so what I did is I entered in
+19:09 
+
+19:09 this information right here.
+19:14 
+
+19:14 And then the error message gave errors
+19:18 
+
+19:18 everywhere for almost every line. I
+19:21 
+
+19:21 think maybe every line here it says that
+19:24 
+
+19:24 there's not a banner, which there is a
+19:25 
+
+19:25 banner called this.
+19:27 
+
+19:27 >> That that's that's weird. I noticed as
+19:29 
+
+19:29 well. So um, can you send me the file
+19:31 
+
+19:31 please?
+19:32 
+
+19:32 >> It's in a ticket. So I did create a
+19:34 
+
+19:34 ticket.
+19:35 
+
+19:35 >> Yeah. What's the number
+19:38 
+
+19:38 >> um
+19:38 
+
+19:38 >> or any description if you remember like
+19:42 
+
+19:42 the surgery?
+19:44 
+
+19:44 >> Oh yeah, it's
+19:45 
+
+19:45 >> number 1431.
+19:48 
+
+19:48 >> And that's important because so Bubbies
+19:54 
+
+19:54 is trying to
+19:57 
+
+19:57 so it's their end of their so for their
+19:59 
+
+19:59 fiscal year. It's the end of their
+20:02 
+
+20:02 quarter and we need to get all of their
+20:05 
+
+20:05 actuals into the system so that they can
+20:08 
+
+20:08 see where they are. Um, but I can't
+20:11 
+
+20:11 update this because I'm getting those
+20:14 
+
+20:14 error messages.
+20:15 
+
+20:15 >> Okay.
+20:18 
+
+20:18 >> Yeah. But, um, this funny thing is this
+20:22 
+
+20:22 uploads been tested properly and then we
+20:25 
+
+20:25 pushed them into the live. So
+20:28 
+
+20:28 >> am I doing something wrong from what you
+20:30 
+
+20:30 can tell?
+20:31 
+
+20:31 >> Yeah, I have to look into the file first
+20:33 
+
+20:33 then you guys can tell what's
+20:36 
+
+20:36 >> okay. So I think on that ticket um
+20:40 
+
+20:40 oops sorry where's Jira? I think on this
+20:42 
+
+20:42 ticket I did provide all of the files
+20:49 
+
+20:49 >> the error files as well.
+20:52 
+
+20:52 >> Yeah, they're all here.
+20:56 
+
+20:56 >> Yeah. Okay. So, I will look into them
+20:58 
+
+20:58 tomorrow and I'll let you know.
+20:60 
+
+20:60 >> Okay.
+21:01 
+
+21:01 >> Um
+21:03 
+
+21:03 and then while we're at it, um
+21:10 
+
+21:10 I
+21:12 
+
+21:12 um
+21:15 
+
+21:15 I thought I brought that up a second
+21:17 
+
+21:17 here.
+21:22 
+
+21:22 Um,
+21:25 
+
+21:25 while we were at it, um,
+21:30 
+
+21:30 so
+21:32 
+
+21:32 back to Bubbies,
+21:34 
+
+21:34 um,
+21:37 
+
+21:37 they Okay, so if you're looking at this
+21:39 
+
+21:39 report here and so you can see like
+21:43 
+
+21:43 January, February, March, January, and
+21:46 
+
+21:46 February, they they're they're so this
+21:48 
+
+21:48 is their planned case total here. And
+21:51 
+
+21:51 then this is what's getting pulled in
+21:53 
+
+21:53 from the distributor report. So things
+21:56 
+
+21:56 start to fall apart a little bit like,
+21:60 
+
+21:60 you know, actually if you add these
+22:02 
+
+22:02 three together and these three together,
+22:04 
+
+22:04 they're pretty spot-on because they're
+22:06 
+
+22:06 up here and down here. But this quarter
+22:08 
+
+22:08 right here
+22:10 
+
+22:10 is um off. And so
+22:15 
+
+22:15 when you talk to the sales managers that
+22:17 
+
+22:17 are responsible for this um which we've
+22:21 
+
+22:21 been having conversations with them the
+22:23 
+
+22:23 levers that they have are in trade spend
+22:26 
+
+22:26 right so are they getting the lifts
+22:28 
+
+22:28 right
+22:30 
+
+22:30 um so like if you look at um you know
+22:36 
+
+22:36 January through May we've got June now
+22:39 
+
+22:39 and we go into their trade spend this
+22:42 
+
+22:42 will be good for tahheed to understand
+22:44 
+
+22:44 because this is coming.
+22:47 
+
+22:47 So I'm in the trade spin sandbox and
+22:50 
+
+22:50 this is their sprouts, right? And so
+22:53 
+
+22:53 this is what populates this, right?
+22:57 
+
+22:57 >> So the case projections
+23:00 
+
+23:00 from this
+23:03 
+
+23:03 is what this planned cases are. Okay. So
+23:10 
+
+23:10 if you're off, you're like, well, why am
+23:12 
+
+23:12 I off? Was it the lift? Was it the store
+23:15 
+
+23:15 count? Was it the velocity? Why is this
+23:18 
+
+23:18 not right? And so what I have been doing
+23:22 
+
+23:22 is going in here and I created so I I
+23:26 
+
+23:26 went to Claude, we created this badass
+23:29 
+
+23:29 report. Let me show you. Um,
+23:33 
+
+23:33 if I don't say so myself, Clark created
+23:35 
+
+23:35 it. I didn't create it. But what I can
+23:38 
+
+23:38 do here is select um
+23:43 
+
+23:43 delete.
+23:44 
+
+23:44 >> Yeah. So I'm going to select sprouts.
+23:59 
+
+23:59 >> And this comes from spins. So this data
+24:03 
+
+24:03 comes from their spins data which is
+24:06 
+
+24:06 ingested into the system. We do have
+24:08 
+
+24:08 their spins data in the system. So I'm
+24:10 
+
+24:10 going to go here. I'm going to select
+24:12 
+
+24:12 Sprouts and I'm going to go to this
+24:14 
+
+24:14 report. And this report is listing for
+24:17 
+
+24:17 Sprouts every item
+24:21 
+
+24:21 >> right
+24:21 
+
+24:21 >> that Sprouts is selling.
+24:24 
+
+24:24 >> And what it's going to do is by the week
+24:27 
+
+24:27 it's going to flag if it's on promo. I
+24:30 
+
+24:30 program this the flag if it's on promo
+24:34 
+
+24:34 see based on the ARP. So the average
+24:37 
+
+24:37 retail price is here. So if it's 5% less
+24:42 
+
+24:42 than this price, it's going to flag it
+24:45 
+
+24:45 as a promo.
+24:47 
+
+24:47 So here we have the store count, we have
+24:50 
+
+24:50 the ARP, we have the velocity, cases
+24:54 
+
+24:54 sold, what the discount percentage is,
+24:57 
+
+24:57 how deep of a discount is it, and what
+24:59 
+
+24:59 the lift was. So here's strawberry.
+25:03 
+
+25:03 So now if I go into the trade spend and
+25:08 
+
+25:08 I select strawberry
+25:12 
+
+25:12 which is right here and I go in and I
+25:15 
+
+25:15 look at these lists like here's the
+25:17 
+
+25:17 dates. Here's the dates right here.
+25:23 
+
+25:23 So for Mar January there was one week
+25:27 
+
+25:27 and in that one week we said that there
+25:30 
+
+25:30 was going to be a 64% left
+25:34 
+
+25:34 >> right. So if we look at this chart
+25:40 
+
+25:40 here's strawberry here's that one week
+25:42 
+
+25:42 it was only 24%.
+25:44 
+
+25:44 >> 24.
+25:46 
+
+25:46 >> So they were far off. Mhm.
+25:49 
+
+25:49 >> So what I did is I went in here and I
+25:54 
+
+25:54 actualized by hand. So I created I made
+25:57 
+
+25:57 a copy
+25:59 
+
+25:59 >> of this and see how this is my actual
+26:02 
+
+26:02 test CW. So yesterday I went in and I
+26:08 
+
+26:08 updated
+26:10 
+
+26:10 all of these lifts based on what I was
+26:13 
+
+26:13 seeing on that report. So see all these
+26:15 
+
+26:15 lifts. Some of them were actually
+26:16 
+
+26:16 higher, but I updated all of these lips
+26:21 
+
+26:21 based on what I saw
+26:23 
+
+26:23 >> on these pins
+26:25 
+
+26:25 >> on this report.
+26:28 
+
+26:28 So, I took each flavor,
+26:31 
+
+26:31 highlighted it
+26:33 
+
+26:33 >> and went in and made these changes. And
+26:35 
+
+26:35 for the most part, they were lower.
+26:37 
+
+26:37 >> Okay.
+26:38 
+
+26:38 >> So, then watch what happens. So, if I go
+26:43 
+
+26:43 back to this one,
+26:46 
+
+26:46 >> right,
+26:48 
+
+26:48 >> this is the original one and we say
+26:51 
+
+26:51 we're doing 120 basically 124,000 cases.
+26:57 
+
+26:57 >> Just actualizing
+27:01 
+
+27:01 January
+27:02 
+
+27:02 through
+27:05 
+
+27:05 um May May.
+27:09 
+
+27:09 >> Look what happens with the cases.
+27:11 
+
+27:11 Right. It's really
+27:12 
+
+27:12 >> goes down quite a bit because he overp
+27:14 
+
+27:14 projected on his lift.
+27:17 
+
+27:17 >> So I had a conversation with their sales
+27:20 
+
+27:20 manager yesterday. The person who is in
+27:22 
+
+27:22 charge of
+27:24 
+
+27:24 >> all of these things. Oh, these are
+27:27 
+
+27:27 December. That's why it's uh January.
+27:30 
+
+27:30 >> You can filter the data in strawberry if
+27:32 
+
+27:32 you want.
+27:34 
+
+27:34 >> Yeah. So let's look at this.
+27:40 
+
+27:40 Yes. You see these are much lower. Yeah.
+27:43 
+
+27:43 >> Okay. So,
+27:46 
+
+27:46 so then the situation is
+27:50 
+
+27:50 okay, we're off a little bit here. Why
+27:54 
+
+27:54 are we off? Well, the only reason the
+27:57 
+
+27:57 only way we know how to determine that
+28:00 
+
+28:00 is to go into the trade spin and check
+28:03 
+
+28:03 the levers. The levers are lift, store
+28:05 
+
+28:05 count, and velocity. these three things.
+28:08 
+
+28:08 That's what this report is doing for us.
+28:11 
+
+28:11 Now,
+28:13 
+
+28:13 what the sales manager is saying is that
+28:17 
+
+28:17 this is a great report, but this is a
+28:19 
+
+28:19 lot of work. Like, my reps are out busy
+28:22 
+
+28:22 selling. They're not going to have time
+28:24 
+
+28:24 to do this,
+28:25 
+
+28:25 >> right?
+28:26 
+
+28:26 >> So, the question becomes, is can this
+28:29 
+
+28:29 become automated?
+28:31 
+
+28:31 >> What does that look like to automate
+28:33 
+
+28:33 this? We have the information. It's in
+28:36 
+
+28:36 the It's in Kaboodle. It's in
+28:39 
+
+28:39 >> That's basically the spins report,
+28:40 
+
+28:40 right?
+28:41 
+
+28:41 >> It's the spins report. It's right here.
+28:44 
+
+28:44 It's um
+28:48 
+
+28:48 It's this
+28:50 
+
+28:50 >> right
+28:51 
+
+28:51 >> It's this report right here.
+28:52 
+
+28:52 >> Stores. Yeah.
+28:54 
+
+28:54 >> Yeah. So, um which is what I So, I took
+28:58 
+
+28:58 this report and I uploaded it into
+28:60 
+
+28:60 Claude and I told Claude what I needed
+29:03 
+
+29:03 it to do and it built this. So that gets
+29:05 
+
+29:05 me back to is this a ask kaboodleoodle
+29:08 
+
+29:08 function? I don't think what I'm getting
+29:10 
+
+29:10 at is I don't I don't think we need to
+29:12 
+
+29:12 build this report although this is a
+29:14 
+
+29:14 kick-ass report. Maybe I do something
+29:18 
+
+29:18 different with this report but how could
+29:21 
+
+29:21 we like so my thought was what we could
+29:25 
+
+29:25 do like for a SOP is to say okay to
+29:29 
+
+29:29 actualize
+29:30 
+
+29:30 what you're going to do is you're going
+29:32 
+
+29:32 to create a copy. Nobody wants to get
+29:34 
+
+29:34 rid of the original one, right? So, you
+29:37 
+
+29:37 would create a copy. You would call it
+29:39 
+
+29:39 actual. And somehow, can we hit a button
+29:43 
+
+29:43 in here
+29:46 
+
+29:46 that would pull in
+29:50 
+
+29:50 the actual
+29:52 
+
+29:52 >> lift store count? Yeah. All that stuff.
+29:56 
+
+29:56 >> Um, and then Yeah. And then they would
+29:59 
+
+29:59 have to save it and then push that back
+30:01 
+
+30:01 to approved, right? So, they would
+30:03 
+
+30:03 probably have to go
+30:05 
+
+30:05 >> delete what's approved now and repush
+30:08 
+
+30:08 this because what's going to happen with
+30:09 
+
+30:09 this report is they're going to say,
+30:11 
+
+30:11 "Okay, we were off.
+30:14 
+
+30:14 Make the changes you need to make.
+30:18 
+
+30:18 We would do that in the sandbox and then
+30:20 
+
+30:20 push that to approved and then this
+30:22 
+
+30:22 would be we'd probably want to save, you
+30:25 
+
+30:25 know, this as well." Also, it's it's we
+30:28 
+
+30:28 got to kind of figure out how we want to
+30:30 
+
+30:30 maintain an original report. Maybe we
+30:32 
+
+30:32 just export the first one because you
+30:35 
+
+30:35 always want to have a record of your
+30:38 
+
+30:38 original report and then your updated
+30:39 
+
+30:39 report. So maybe it's like in here we
+30:41 
+
+30:41 would need to make, you know, it would
+30:43 
+
+30:43 probably be done every quarter. So maybe
+30:46 
+
+30:46 this is, you know, the original and then
+30:48 
+
+30:48 you have Q1 update, Q2 update, Q3
+30:50 
+
+30:50 update, Q4 update. But that's kind of
+30:53 
+
+30:53 where we're going. So,
+30:56 
+
+30:56 I told them I would walk you through
+30:59 
+
+30:59 this today and try to get an
+31:02 
+
+31:02 understanding of how long
+31:04 
+
+31:04 it would take to try to automate
+31:06 
+
+31:06 something like this. And then because
+31:10 
+
+31:10 right now she's looking at having to
+31:12 
+
+31:12 update every single one of those files
+31:14 
+
+31:14 manually, which is it can be done, but
+31:17 
+
+31:17 it seems like we should be able to
+31:19 
+
+31:19 automate that eventually.
+31:23 
+
+31:23 >> Yeah. So if I understand the whole thing
+31:26 
+
+31:26 correctly.
+31:27 
+
+31:27 So this uh the thing is we should get
+31:31 
+
+31:31 the lift from the spins report and we
+31:33 
+
+31:33 should use that lift to create a new
+31:36 
+
+31:36 >> trade spin. Right.
+31:38 
+
+31:38 >> Right. And this lift I will have you
+31:40 
+
+31:40 know is a calculation. So
+31:43 
+
+31:43 >> yeah it's
+31:44 
+
+31:44 >> spin. Yeah spins doesn't provide the
+31:47 
+
+31:47 lift. You would have to we would have to
+31:48 
+
+31:48 create a calculation. I would say to you
+31:52 
+
+31:52 um what's interesting is that the
+31:54 
+
+31:54 calculation for the lift claude
+31:56 
+
+31:56 originally based it on velocity and its
+31:59 
+
+31:59 reasoning was um
+32:03 
+
+32:03 its reasoning was because it will
+32:05 
+
+32:05 account for store counts and items and
+32:07 
+
+32:07 this is a better this is a better way to
+32:10 
+
+32:10 do it. But I reprogrammed it and said no
+32:12 
+
+32:12 I want you to do it by units.
+32:14 
+
+32:14 >> Okay. Um the problem is when you do it
+32:18 
+
+32:18 by units what it doesn't account for and
+32:20 
+
+32:20 it was it was right the first time. Um
+32:24 
+
+32:24 if you look at
+32:29 
+
+32:29 passion fruit, see how it says calculate
+32:31 
+
+32:31 lift with velocity.
+32:34 
+
+32:34 >> These items lost some stores. See how it
+32:37 
+
+32:37 starts in January with 300 400 stores.
+32:41 
+
+32:41 >> No, but the end of the year it lost
+32:43 
+
+32:43 >> they ended up losing. So if you
+32:45 
+
+32:45 calculate it by units, see it's coming
+32:47 
+
+32:47 up with a negative lift.
+32:49 
+
+32:49 >> Um, which actually isn't very that's
+32:52 
+
+32:52 actually not true because if you look at
+32:53 
+
+32:53 your velocity, your loss, you actually
+32:55 
+
+32:55 did get a lift. So anyway, I can So this
+32:58 
+
+32:58 will give you all of the this report has
+33:01 
+
+33:01 all of the all of the programming in it.
+33:04 
+
+33:04 Um,
+33:06 
+
+33:06 if you unhide um created the whole
+33:09 
+
+33:09 report using the spins data, right?
+33:12 
+
+33:12 Yeah, it's all by spins, but it'll tell
+33:14 
+
+33:14 you everything here like all the
+33:16 
+
+33:16 formulas are in here, all the
+33:17 
+
+33:17 methodologies. In fact, I have it in
+33:20 
+
+33:20 Claude. I have all of the scripts.
+33:23 
+
+33:23 >> Um, in my clog,
+33:26 
+
+33:26 >> so we can utilize that so we don't have
+33:28 
+
+33:28 to reinvent that piece of it.
+33:30 
+
+33:30 >> Um, but anyway, so I told her I would
+33:33 
+
+33:33 talk to you about it today and we would
+33:35 
+
+33:35 try to get an idea of how long something
+33:36 
+
+33:36 like this would take. So I know you
+33:38 
+
+33:38 wouldn't know this second but um that's
+33:41 
+
+33:41 high on their radar.
+33:44 
+
+33:44 >> Okay. So uh the first thing is it's it's
+33:45 
+
+33:45 doable.
+33:47 
+
+33:47 >> It's pretty straightforward because we
+33:49 
+
+33:49 already have this pins data.
+33:51 
+
+33:51 >> So we just have to do couple of
+33:53 
+
+33:53 operations to get the lift.
+33:55 
+
+33:55 >> Mhm.
+33:56 
+
+33:56 >> So yes that's doable. And about the
+33:59 
+
+33:59 timeline,
+34:00 
+
+34:00 so um I'm not exactly sure, but I would
+34:04 
+
+34:04 say maybe maximum two days of max work
+34:07 
+
+34:07 >> and it's fully back in work as far as as
+34:09 
+
+34:09 far as I can tell you right now because
+34:12 
+
+34:12 >> Yeah. Uh
+34:14 
+
+34:14 >> so how he did I would just need to
+34:16 
+
+34:16 determine where this is going to fall on
+34:18 
+
+34:18 >> exactly
+34:20 
+
+34:20 >> major road map then.
+34:21 
+
+34:21 >> Right.
+34:22 
+
+34:22 >> Okay. Okay.
+34:24 
+
+34:24 >> Okay. Um and then I had I think one more
+34:27 
+
+34:27 thing and then um category review
+34:30 
+
+34:30 filters. Yeah. Okay. No, we're done.
+34:32 
+
+34:32 That's it.
+34:33 
+
+34:33 >> Yeah, I think. Yeah, we're done. So um
+34:36 
+
+34:36 if everything's done with me, can I
+34:39 
+
+34:39 >> jump off the
+34:40 
+
+34:40 >> Please? Yeah. So you have your number
+34:42 
+
+34:42 one thing tomorrow and that is um
+34:46 
+
+34:46 >> case propagation. Yeah.
+34:48 
+
+34:48 >> Yeah. Propagation. We got to get the
+34:50 
+
+34:50 category review um going and then and
+34:53 
+
+34:53 then I need you to allow me to make to
+34:56 
+
+34:56 allow the propagation from the product
+34:58 
+
+34:58 specs to the distributor report.
+34:60 
+
+34:60 >> Distributor report. Yeah. Okay.
+35:03 
+
+35:03 >> Okay. Thank you.
+35:04 
+
+35:04 >> Thank you. Have a good night.
+35:06 
+
+35:06 >> Have a great day. Byebye. Yeah. And
+35:07 
+
+35:07 sorry guys. We we kept you waiting so
+35:09 
+
+35:09 long.
+35:11 
+
+35:11 >> No problem. By
+35:15 
+
+35:15 >> joy and Tahit. I think that's good for
+35:16 
+
+35:16 you to kind of see some of that. Anyway,
+35:19 
+
+35:19 does that does that all make sense to
+35:20 
+
+35:20 you kind of?
+35:21 
+
+35:21 >> Yeah, it's kind of makes sense to me cuz
+35:23 
+
+35:23 like I have went through like the
+35:24 
+
+35:24 backlogs and the system with them and
+35:27 
+
+35:27 also uh trying to figure out everything.
+35:30 
+
+35:30 So, it made sense to me.
+35:33 
+
+35:33 >> Okay. Okay. Good. Um I think the main
+35:37 
+
+35:37 thing I wanted to do with you today is
+35:40 
+
+35:40 um we were gonna kind of take like one
+35:43 
+
+35:43 module at a time. Um I think for me the
+35:47 
+
+35:47 biggest priority besides some of these
+35:49 
+
+35:49 little issues that these little issues
+35:51 
+
+35:51 that we're talking about are important
+35:53 
+
+35:53 because
+35:54 
+
+35:54 um
+35:56 
+
+35:56 what's in the system currently is not
+35:58 
+
+35:58 working quite right. And so um we got to
+36:02 
+
+36:02 get if people are in the system and
+36:04 
+
+36:04 using things that we're telling them are
+36:06 
+
+36:06 delivered and they're not delivering
+36:08 
+
+36:08 properly then that becomes then a higher
+36:10 
+
+36:10 priority.
+36:11 
+
+36:11 >> Yeah. Um so
+36:14 
+
+36:14 um
+36:16 
+
+36:16 my biggest priority right now is the
+36:19 
+
+36:19 broker
+36:21 
+
+36:21 dashboard. Um so let's see
+36:26 
+
+36:26 the broker dashboard.
+36:30 
+
+36:30 >> Let's share my screen.
+36:33 
+
+36:33 So
+36:36 
+
+36:36 here
+36:39 
+
+36:39 it's this module here.
+36:42 
+
+36:42 >> Yes. So I can see in the backlog that
+36:45 
+
+36:45 there uh there are already some of the
+36:47 
+
+36:47 priorities in the higher section and
+36:49 
+
+36:49 also you have already
+36:52 
+
+36:52 >> uh listed down few of the things in the
+36:54 
+
+36:54 need sections. Right.
+36:57 
+
+36:57 >> Correct. So, if I'm in this section
+36:60 
+
+36:60 here,
+37:01 
+
+37:01 >> yeah,
+37:01 
+
+37:01 >> we're in broker dashboard.
+37:04 
+
+37:04 Um, and then I kind of I had a bunch of
+37:07 
+
+37:07 lists down here, but then I took it and
+37:09 
+
+37:09 kind of organized it a little bit more.
+37:11 
+
+37:11 >> Yes.
+37:12 
+
+37:12 >> Um,
+37:14 
+
+37:14 so
+37:16 
+
+37:16 here, um,
+37:21 
+
+37:21 do you want to go through these or what
+37:23 
+
+37:23 can we do to help you? um trying to
+37:28 
+
+37:28 become familiar with this and what do
+37:30 
+
+37:30 you need from me on these I guess is my
+37:32 
+
+37:32 question.
+37:32 
+
+37:32 >> So the thing is what can I do right now?
+37:35 
+
+37:35 The thing is I was talking with if I if
+37:38 
+
+37:38 like regarding this uh backlog and
+37:41 
+
+37:41 everything if told me that uh I should
+37:45 
+
+37:45 like start talk like I should talk with
+37:47 
+
+37:47 you like section by section like what it
+37:50 
+
+37:50 it's going to do so that I can update
+37:51 
+
+37:51 the description and create the
+37:53 
+
+37:53 acceptance criteria and all of those
+37:55 
+
+37:55 things plus uh take estimation from the
+37:58 
+
+37:58 developers plus the QA how many time
+38:00 
+
+38:00 it's going to need and then we can
+38:01 
+
+38:01 create a road map and everything so that
+38:03 
+
+38:03 you have a proper visibility how much
+38:05 
+
+38:05 time everything is going to take.
+38:08 
+
+38:08 >> Mhm.
+38:09 
+
+38:09 >> So it would uh if I correct me if I'm
+38:12 
+
+38:12 wrong, it would be better if if
+38:14 
+
+38:14 Constance uh like goes through the like
+38:17 
+
+38:17 uh from the high level she goes through
+38:18 
+
+38:18 the uh tickets and like what's going to
+38:23 
+
+38:23 happen in the ticket and and also in the
+38:26 
+
+38:26 needs section so that we can create the
+38:28 
+
+38:28 road map right?
+38:29 
+
+38:29 >> Right. Thanks.
+38:31 
+
+38:31 >> Okay. So shall we dive in? Yes, you.
+38:35 
+
+38:35 Yes, sure.
+38:36 
+
+38:36 >> Yes, please.
+38:37 
+
+38:37 >> Please.
+38:37 
+
+38:37 >> Okay. So, on this list here on what I'm
+38:40 
+
+38:40 what I'm thinking I'm going to do is
+38:42 
+
+38:42 just go through each. So, go through
+38:44 
+
+38:44 market overview, promotional management,
+38:46 
+
+38:46 category review, distributor APL.
+38:49 
+
+38:49 >> Yeah.
+38:49 
+
+38:49 >> Files, broker dashboard, right?
+38:51 
+
+38:51 >> Yes.
+38:52 
+
+38:52 >> Okay. So, starting off with market
+38:55 
+
+38:55 overview. Um,
+39:01 
+
+39:01 dashboard updates, APL, market overview.
+39:04 
+
+39:04 Um, I think what I need to do actually
+39:06 
+
+39:06 is open up the ticket on the other page
+39:09 
+
+39:09 as well, so I can see exactly what the
+39:11 
+
+39:11 ticket is. So, um,
+39:22 
+
+39:22 okay.
+39:25 
+
+39:25 Um
+39:27 
+
+39:27 >> uh but
+39:28 
+
+39:28 >> yeah,
+39:29 
+
+39:29 >> you have a meeting with G at 7, right?
+39:33 
+
+39:33 >> I do. Yeah.
+39:35 
+
+39:35 >> So does Kate though. So Kate can get
+39:38 
+
+39:38 started on that. Kate's actually more in
+39:40 
+
+39:40 charge of that that I am. So
+39:42 
+
+39:42 >> I see.
+39:42 
+
+39:42 >> Um if you if you want to let Is Kaya
+39:45 
+
+39:45 within close to you?
+39:48 
+
+39:48 >> Uh no, actually.
+39:49 
+
+39:49 >> Oh, okay.
+39:50 
+
+39:50 >> Uh she'll be joining from home.
+39:52 
+
+39:52 >> Okay. So Kate is going to be running
+39:55 
+
+39:55 that call. Um, so I'll let me just text
+39:59 
+
+39:59 Kate and let her know that might be a
+40:00 
+
+40:00 little late.
+40:02 
+
+40:02 >> Sure.
+40:19 
+
+40:19 Um
+40:21 
+
+40:21 so the one of the things here on market
+40:23 
+
+40:23 overview so this is um oh this is not a
+40:27 
+
+40:27 good example I'll do
+40:30 
+
+40:30 this one um
+40:34 
+
+40:34 on the market overview
+40:36 
+
+40:36 Um
+40:42 
+
+40:42 what this is is this is a way for the
+40:45 
+
+40:45 brokers to inform their brands as to
+40:49 
+
+40:49 what they're doing. So their
+40:51 
+
+40:51 responsibility is to go to the stores,
+40:53 
+
+40:53 go into the grocery stores and present
+40:56 
+
+40:56 the brands items for them to start
+40:59 
+
+40:59 selling. Right? So what they're doing is
+41:01 
+
+41:01 they're going out into the field,
+41:02 
+
+41:02 they're going to these stores, they're
+41:04 
+
+41:04 making presentations
+41:06 
+
+41:06 uh to the to the retailers and they're
+41:09 
+
+41:09 trying to inform their brands what
+41:12 
+
+41:12 they're doing. So the first thing I
+41:16 
+
+41:16 think we could do here is and there and
+41:18 
+
+41:18 so if you think if you've got like 50
+41:21 
+
+41:21 brands, some of them have 50 to 100
+41:23 
+
+41:23 brands.
+41:24 
+
+41:24 >> Yes. And so typically what happens is
+41:25 
+
+41:25 they're out in the field Monday through
+41:27 
+
+41:27 Thursday and then on Fridays they have
+41:29 
+
+41:29 to sit down and essentially kind of fill
+41:32 
+
+41:32 out some sort of report so that the
+41:36 
+
+41:36 brands know what they've been doing. Um
+41:39 
+
+41:39 so in this ad log right now if I'm a
+41:42 
+
+41:42 broker and I've got a 100 brands to get
+41:46 
+
+41:46 through this really fast. Let's say I'm
+41:47 
+
+41:47 in the Northeast region. I have to go up
+41:50 
+
+41:50 here. I have to go to Northeast. They
+41:52 
+
+41:52 have to hit the retailer. They have to
+41:54 
+
+41:54 hit the banner. And then they have to
+41:56 
+
+41:56 hit the stores. Now, the first thing is
+41:58 
+
+41:58 is this should be populating the store
+42:02 
+
+42:02 list. So, for for whatever reason,
+42:04 
+
+42:04 that's a bug. And there's a ticket for
+42:06 
+
+42:06 that.
+42:07 
+
+42:07 >> Yeah.
+42:08 
+
+42:08 >> So, there's a ticket for that. Um,
+42:11 
+
+42:11 but my thought is why should they have
+42:14 
+
+42:14 to click three times because this is all
+42:16 
+
+42:16 linked
+42:18 
+
+42:18 already. So really, they should just
+42:22 
+
+42:22 have to hit the banner. The banner
+42:24 
+
+42:24 should be able to prepopulate the region
+42:26 
+
+42:26 and the retailer.
+42:28 
+
+42:28 So that's that first ticket, $12.99. And
+42:32 
+
+42:32 then here's the stores. Um, then they
+42:35 
+
+42:35 would select the brand and then the SKUs
+42:39 
+
+42:39 and so on. So, the first thing here is
+42:42 
+
+42:42 that we need to kind of rework this so
+42:44 
+
+42:44 that if because if you're in a hurry,
+42:48 
+
+42:48 you're not going to want to have to
+42:49 
+
+42:49 click three times. I know it doesn't
+42:51 
+
+42:51 sound like much, but it is if you've got
+42:53 
+
+42:53 a lot you're doing.
+42:54 
+
+42:54 >> Yes.
+42:55 
+
+42:55 >> Um,
+42:58 
+
+42:58 the other thing I have in this ticket is
+43:00 
+
+43:00 um
+43:05 
+
+43:05 the filter. I can't
+43:09 
+
+43:09 filter by anything here hardly at all.
+43:11 
+
+43:11 >> Yeah, there's very less items here. Uh
+43:16 
+
+43:16 we should have uh all the columns uh as
+43:20 
+
+43:20 filters.
+43:22 
+
+43:22 >> Right. Exactly. So I think there's a
+43:25 
+
+43:25 ticket for that or I may have put that
+43:28 
+
+43:28 as a need. Um I think I put that as a
+43:31 
+
+43:31 need.
+43:33 
+
+43:33 Edit.
+43:35 
+
+43:35 Oh, that's the edit search option. If we
+43:38 
+
+43:38 have a good filter, we probably don't
+43:39 
+
+43:39 need the search option.
+43:41 
+
+43:41 Um,
+43:43 
+
+43:43 check and confirm hierarchy of status
+43:46 
+
+43:46 updates to brand ser. I want to talk
+43:49 
+
+43:49 about that for a minute, too. So, um,
+43:59 
+
+43:59 editing comment. Can this override
+44:02 
+
+44:02 push updates to brands via email? Okay,
+44:05 
+
+44:05 I'll talk to you about that in a minute
+44:07 
+
+44:07 too. So, um,
+44:12 
+
+44:12 so
+44:16 
+
+44:16 that is the main thing on market
+44:19 
+
+44:19 overviews. Now, what happens is that see
+44:23 
+
+44:23 how this says zucchini beanie. Yes,
+44:26 
+
+44:26 >> I do want to ify I do want to talk about
+44:28 
+
+44:28 this infra independence because
+44:32 
+
+44:32 this has been a source of contention for
+44:34 
+
+44:34 brands. Um so in for independence the
+44:37 
+
+44:37 banner does have 280 stores but here
+44:40 
+
+44:40 we're only talking about one store. So
+44:43 
+
+44:43 what's happening is that if you go to so
+44:46 
+
+44:46 this is for
+44:48 
+
+44:48 Zucchini beanie. If you go to zucchini
+44:50 
+
+44:50 beanie
+44:52 
+
+44:52 and go into their market broker insights
+44:57 
+
+44:57 um if you go to infra
+45:02 
+
+45:02 let's see and that was I think national
+45:05 
+
+45:05 let's see let's do
+45:14 
+
+45:14 here
+45:17 
+
+45:17 I I'm I think we need to rethink this
+45:21 
+
+45:21 store count because when if a brand is
+45:23 
+
+45:23 in here and they see this, they think
+45:25 
+
+45:25 they're getting into
+45:28 
+
+45:28 280 stores, but really
+45:32 
+
+45:32 >> yeah,
+45:33 
+
+45:33 >> it's only one.
+45:35 
+
+45:35 >> The other thing this the other thing
+45:37 
+
+45:37 that I think we're missing here is
+45:42 
+
+45:42 the date that it was done. So if I want
+45:46 
+
+45:46 to see what did my brokers because this
+45:48 
+
+45:48 is this is for the whole year
+45:51 
+
+45:51 >> but let's say I have a meeting with my
+45:53 
+
+45:53 broker. I want to I just want to know
+45:55 
+
+45:55 what happened last month.
+45:57 
+
+45:57 >> Yes.
+45:59 
+
+45:59 >> So there's no way now when you're
+46:02 
+
+46:02 putting it in the broker when the broker
+46:04 
+
+46:04 is putting it in
+46:06 
+
+46:06 almost do app. It does have a date that
+46:09 
+
+46:09 it was presented
+46:12 
+
+46:12 um in the ad log. See, there's the date
+46:15 
+
+46:15 right there.
+46:20 
+
+46:20 >> So, we need to have that date pushed to
+46:23 
+
+46:23 the brand side because the brand is
+46:25 
+
+46:25 probably just going to want to look at
+46:27 
+
+46:27 this month by month, right? So, there's
+46:31 
+
+46:31 no way for them to go into here and go,
+46:33 
+
+46:33 uh, what what did you do for me last
+46:35 
+
+46:35 month?
+46:38 
+
+46:38 H.
+46:42 
+
+46:42 >> Um,
+46:43 
+
+46:43 the other thing is if I'm if I if what
+46:46 
+
+46:46 we said we were going to do is talk
+46:47 
+
+46:47 about in a perfect world.
+46:50 
+
+46:50 Um, I want to show you here.
+46:58 
+
+46:58 Sorry.
+47:08 
+
+47:08 It must be the brand module.
+47:15 
+
+47:15 Yeah, this one.
+47:17 
+
+47:17 Um,
+47:26 
+
+47:26 I don't know what this might this may or
+47:28 
+
+47:28 may not work. I might have to use a
+47:29 
+
+47:29 different browser because I've got
+47:30 
+
+47:30 certain login in certain places.
+47:33 
+
+47:33 Let's see if this populates.
+47:44 
+
+47:44 By the way, if I think that Claude is
+47:46 
+
+47:46 what builds lovable.
+47:50 
+
+47:50 So, I think one thing we want to do is
+47:52 
+
+47:52 bump up our Claude subscription. I think
+47:56 
+
+47:56 we're using a lower level cloud
+47:58 
+
+47:58 subscription. I think that's one thing
+47:59 
+
+47:59 we're going to ask you guys to do is to
+48:01 
+
+48:01 bump that up.
+48:03 
+
+48:03 >> Oh.
+48:03 
+
+48:03 >> Um
+48:06 
+
+48:06 >> which we would pay for.
+48:09 
+
+48:09 >> So from a bigger level, what is
+48:12 
+
+48:12 happening is that the brand ultimately
+48:17 
+
+48:17 wants to have a sales tracker where
+48:20 
+
+48:20 they're looking at what is available for
+48:22 
+
+48:22 me to go and get and where are we now.
+48:25 
+
+48:25 >> Yeah. So here's a regional target. So we
+48:29 
+
+48:29 were just in the northeast. So what I
+48:31 
+
+48:31 would really like to see is in the
+48:35 
+
+48:35 northeast
+48:36 
+
+48:36 we have this many active, this many
+48:39 
+
+48:39 pending, this many have committed, this
+48:42 
+
+48:42 many not active, right? And so here's a
+48:44 
+
+48:44 nice little chart that tells us, you
+48:47 
+
+48:47 know, I if we were since we're active,
+48:50 
+
+48:50 this is the, you know, the volume of
+48:52 
+
+48:52 cases we would be looking at for
+48:54 
+
+48:54 approved. This is the volume and up here
+48:57 
+
+48:57 what you could do. So if you say okay
+49:01 
+
+49:01 here is northeast. So I have my
+49:03 
+
+49:03 northeastern regional broker and these
+49:05 
+
+49:05 are all of the stores in the northeast.
+49:08 
+
+49:08 If I said okay one of my targets is to
+49:12 
+
+49:12 get into um
+49:15 
+
+49:15 let's just say Dagustin's they have 11
+49:19 
+
+49:19 stores.
+49:21 
+
+49:21 The likelihood of me closing that
+49:24 
+
+49:24 account, let's say, is medium. I have a
+49:26 
+
+49:26 50/50 chance that I'm gonna get that.
+49:30 
+
+49:30 So, if I these are all my products. So,
+49:32 
+
+49:32 if I got three of these products
+49:36 
+
+49:36 into
+49:37 
+
+49:37 that store,
+49:39 
+
+49:39 that would generate 185 cases a year.
+49:43 
+
+49:43 So, this is a great tool, something like
+49:46 
+
+49:46 this for the brand and the broker to
+49:50 
+
+49:50 have this conversation. Then now the
+49:53 
+
+49:53 broker knows, okay, this is this is on
+49:56 
+
+49:56 their radar. This is a higher priority
+49:58 
+
+49:58 for me. Or you could go through each one
+50:01 
+
+50:01 and go, nope, this is a really low
+50:02 
+
+50:02 priority for me for whatever reason.
+50:05 
+
+50:05 Right? So then up here, it's like, okay,
+50:10 
+
+50:10 we have one target selected. it has 11
+50:12 
+
+50:12 stores, the likelihood is, you know, or
+50:16 
+
+50:16 my priority is is low projected that
+50:19 
+
+50:19 kind of thing. So, we need So, if the
+50:23 
+
+50:23 broker is
+50:26 
+
+50:26 out there
+50:28 
+
+50:28 and they're saying that these items are
+50:30 
+
+50:30 pending, it would be nice to have an
+50:32 
+
+50:32 overview
+50:35 
+
+50:35 up at the top. And that overview, what
+50:38 
+
+50:38 I'm saying could be something like what
+50:41 
+
+50:41 we just looked at. Here's here's your
+50:42 
+
+50:42 like by region. So if you wanted to look
+50:44 
+
+50:44 at the Northeast, here's what's
+50:46 
+
+50:46 happening in the Northeast. If you
+50:48 
+
+50:48 wanted to look at the Midwest, here's
+50:50 
+
+50:50 what's happening in the Midwest.
+50:53 
+
+50:53 So I think that's missing from here.
+50:56 
+
+50:56 this is a good start but ultimately if
+50:60 
+
+50:60 this is going to be an indispensable
+51:01 
+
+51:01 tool
+51:03 
+
+51:03 um I think we need to do something like
+51:06 
+
+51:06 that. So let's go back to our list. So
+51:11 
+
+51:11 we are in um
+51:15 
+
+51:15 broker dashboard.
+51:17 
+
+51:17 So um
+51:22 
+
+51:22 that one was moved overview. The store
+51:24 
+
+51:24 is not populating. We talked about that.
+51:26 
+
+51:26 That's when I was in the ad log and I
+51:28 
+
+51:28 was like this store not populating
+51:30 
+
+51:30 >> broker dashboard market overview
+51:33 
+
+51:33 needs more the filter. We talked about
+51:37 
+
+51:37 um enhanced broker market overview
+51:40 
+
+51:40 functionality
+51:43 
+
+51:43 uh 1326
+51:47 
+
+51:47 1326
+51:59 
+
+51:59 Oh, I think that's the story. I think
+52:01 
+
+52:01 all of these are already in here. Yeah,
+52:05 
+
+52:05 got that. And then um I don't know what
+52:09 
+
+52:09 this implement table is. FD is really
+52:11 
+
+52:11 old. Do you think that's still
+52:14 
+
+52:14 relevant?
+52:17 
+
+52:17 >> Maybe not.
+52:20 
+
+52:20 >> That was from
+52:22 
+
+52:22 a little over a year ago.
+52:24 
+
+52:24 >> Yeah.
+52:24 
+
+52:24 >> So, not sure about that.
+52:26 
+
+52:26 >> We actually we had that revamp uh in the
+52:30 
+
+52:30 middle. So, I don't think it's relevant
+52:33 
+
+52:33 now, but uh we will check it out.
+52:36 
+
+52:36 >> Okay.
+52:37 
+
+52:37 >> 688, right?
+52:39 
+
+52:39 >> So, edit market view edit log needs to
+52:42 
+
+52:42 allow user to edit DC. Um is that what
+52:46 
+
+52:46 are we doing with the with that DC? I
+52:49 
+
+52:49 don't even know what we're doing with um
+52:51 
+
+52:51 sorry back to
+52:54 
+
+52:54 uh
+52:57 
+
+52:57 see got way too much open here.
+53:02 
+
+53:02 So in the ad log
+53:08 
+
+53:08 it this is required. Do you know why
+53:10 
+
+53:10 this is required? Was that
+53:13 
+
+53:13 I'm not sure why a DC would be required.
+53:19 
+
+53:19 Well, we are uh I don't think
+53:23 
+
+53:23 >> yeah I don't think that will have any
+53:25 
+
+53:25 effect but
+53:27 
+
+53:27 >> I don't think it's doing it because I
+53:29 
+
+53:29 know the status like one thing I do want
+53:31 
+
+53:31 to do is review the hierarchy of the
+53:34 
+
+53:34 status because that's pushing to the
+53:36 
+
+53:36 brand CRM.
+53:39 
+
+53:39 >> I'm not watching this retail. Yeah, I
+53:41 
+
+53:41 think it's put it's changing these.
+53:44 
+
+53:44 >> Right. Right. it changes uh the banner
+53:48 
+
+53:48 skills. Yeah.
+53:49 
+
+53:49 >> Yeah. Yeah. So, I do want to review that
+53:52 
+
+53:52 status at some point. I don't know who
+53:54 
+
+53:54 has that. You probably
+53:58 
+
+53:58 um
+54:00 
+
+54:00 we can get out of here. I don't get this
+54:02 
+
+54:02 anymore.
+54:07 
+
+54:07 So, um
+54:16 
+
+54:16 market overview ad log insure.
+54:20 
+
+54:20 Oh, and then in that store list, you
+54:22 
+
+54:22 know, we want to make sure if they can
+54:24 
+
+54:24 enter multiple stores at the same time.
+54:28 
+
+54:28 So, when you're entering here
+54:32 
+
+54:32 in the ad log, do you remember if that
+54:36 
+
+54:36 because we can't test it because it's
+54:37 
+
+54:37 not populating
+54:41 
+
+54:41 >> here.
+54:44 
+
+54:44 I'm not sure.
+54:46 
+
+54:46 >> Yeah, you could have actually select
+54:48 
+
+54:48 mult multiple stores, I think.
+54:51 
+
+54:51 >> And based on that, uh, it would add
+54:55 
+
+54:55 multiple logs.
+54:59 
+
+54:59 Oh,
+55:02 
+
+55:02 >> right.
+55:04 
+
+55:04 >> Would it need to though because of your
+55:08 
+
+55:08 >> Well,
+55:10 
+
+55:10 >> because
+55:11 
+
+55:11 >> I mean uh if you close it. Yeah.
+55:14 
+
+55:14 Uh right now you see that uh the mid uh
+55:18 
+
+55:18 the Yeah, these are all same, right? So,
+55:23 
+
+55:23 uh,
+55:26 
+
+55:26 >> yeah, I'm just thinking it's the same
+55:27 
+
+55:27 banner.
+55:31 
+
+55:31 >> Yeah, but uh but the uh excuse is
+55:34 
+
+55:34 different.
+55:36 
+
+55:36 >> Yeah.
+55:40 
+
+55:40 So, how would this work on the nut?
+55:42 
+
+55:42 Remember when I was talking about the
+55:44 
+
+55:44 store count? So, this is going to push
+55:48 
+
+55:48 in for independence.
+55:50 
+
+55:50 This is going to push to here
+55:58 
+
+55:58 intra
+56:07 
+
+56:07 independence.
+56:10 
+
+56:10 >> So, it's going to have a row for each
+56:12 
+
+56:12 one,
+56:15 
+
+56:15 >> which could get
+56:16 
+
+56:16 >> that's kind of good. And you you would
+56:19 
+
+56:19 see u uh uh if you click it, it will uh
+56:24 
+
+56:24 yeah extend to the product names. I mean
+56:28 
+
+56:28 uh the SKS.
+56:35 
+
+56:35 >> Yeah, that's where we need to roll up
+56:38 
+
+56:38 though. I think that's going to get
+56:39 
+
+56:39 really
+56:41 
+
+56:41 hard to look at.
+56:44 
+
+56:44 >> Okay.
+56:48 
+
+56:48 I'm thinking of making
+56:50 
+
+56:50 I mean uh grouping them all together.
+56:53 
+
+56:53 For example, uh at uh any uh at the top
+56:58 
+
+56:58 level, it will be grouped by the banner
+57:02 
+
+57:02 and once uh you uh extend it uh then it
+57:07 
+
+57:07 will group by maybe the store and then
+57:10 
+
+57:10 when you extend it, it will show the
+57:13 
+
+57:13 product uh that table the products. So
+57:17 
+
+57:17 maybe something like that. I don't know.
+57:20 
+
+57:20 >> I think that's good. But I think having
+57:23 
+
+57:23 it nestled
+57:24 
+
+57:24 like that makes sense. It would it would
+57:26 
+
+57:26 be kind of like this one. It would be
+57:28 
+
+57:28 kind of like
+57:30 
+
+57:30 >> how this is done, right? So it could be
+57:33 
+
+57:33 nestled here and then underneath there,
+57:37 
+
+57:37 see you have all the stores and then
+57:39 
+
+57:39 under each store you could have a list
+57:41 
+
+57:41 of
+57:42 
+
+57:42 >> Right. Right. Exactly.
+57:44 
+
+57:44 >> Yeah. Like that. This is a good model
+57:48 
+
+57:48 actually for that.
+57:52 
+
+57:52 And then you could have the summary up
+57:54 
+
+57:54 here.
+57:57 
+
+57:57 >> So, um
+58:01 
+
+58:01 Oh, sorry. That that um
+58:05 
+
+58:05 that meeting was online. So, she's
+58:07 
+
+58:07 texting me that. Okay. So, she's gonna
+58:09 
+
+58:09 she's going to send out an if if um KA
+58:11 
+
+58:11 asks you, she's sending out an invite
+58:14 
+
+58:14 for that meeting. Um,
+58:17 
+
+58:17 >> oh,
+58:19 
+
+58:19 >> because it's on my I'm the organizer and
+58:21 
+
+58:21 I'm not opening it. I can't open it. So,
+58:24 
+
+58:24 I see.
+58:25 
+
+58:25 >> Yeah. So, she reaches out to you.
+58:28 
+
+58:28 >> Should we have this meeting tomorrow
+58:30 
+
+58:30 again? Same time.
+58:32 
+
+58:32 >> Well, we can. We just have a lot to do.
+58:34 
+
+58:34 So, um, we can't we can just wrap it up
+58:38 
+
+58:38 here in a few minutes. So, that I know
+58:39 
+
+58:39 we're late anyway.
+58:41 
+
+58:41 >> So, that just gets us through the market
+58:42 
+
+58:42 overview. Do you have any qu I guess we
+58:46 
+
+58:46 could stop there. I'm I am concerned if
+58:48 
+
+58:48 we've only got him for one more week how
+58:50 
+
+58:50 we're going to get through what the best
+58:52 
+
+58:52 way is. I don't this may not be the best
+58:54 
+
+58:54 way. Um
+58:57 
+
+58:57 so because we still have I think we have
+59:00 
+
+59:00 if you look at the calendar um
+59:04 
+
+59:04 I have us for
+59:08 
+
+59:08 um so this is today. So we have one,
+59:10 
+
+59:10 two,
+59:12 
+
+59:12 basically three only three three we've
+59:14 
+
+59:14 got four more calls.
+59:16 
+
+59:16 >> Yes.
+59:17 
+
+59:17 >> Now I did hog up today with a lot of
+59:20 
+
+59:20 questions but they were important. I had
+59:22 
+
+59:22 to talk to Joy about
+59:24 
+
+59:24 >> so I don't know what do you guys think?
+59:26 
+
+59:26 So what I can do? So tomorrow I'm going
+59:29 
+
+59:29 to like uh tomorrow first thing in the
+59:31 
+
+59:31 morning I'm going to come and work on
+59:33 
+
+59:33 this uh existing tickets. If they have
+59:36 
+
+59:36 the uh they have any kind of description
+59:39 
+
+59:39 or anything I going to fix it and if
+59:41 
+
+59:41 they don't have anything I'm going to
+59:42 
+
+59:42 fix it based on you this call and also
+59:44 
+
+59:44 I'm going to talk with uh ifai and I'm
+59:47 
+
+59:47 going to update this things and also for
+59:49 
+
+59:49 the needs thing the ticket needs to be
+59:51 
+
+59:51 created. I'm going to create a document
+59:53 
+
+59:53 and where them I going I'm going to put
+59:55 
+
+59:55 those requirements and everything based
+59:57 
+
+59:57 on what I have like you have told so far
+59:60 
+
+59:60 and you can just check and let me know
+60:02 
+
+60:02 day after tomorrow. So this way I think
+60:05 
+
+60:05 we can go faster.
+60:08 
+
+60:08 >> Okay. So so so you're going to go
+60:12 
+
+60:12 through this list
+60:14 
+
+60:14 >> and also this list. Yes.
+60:16 
+
+60:16 >> And you're going to add t you're going
+60:18 
+
+60:18 to add tickets for these.
+60:20 
+
+60:20 >> Yes.
+60:21 
+
+60:21 Is that what you're saying?
+60:23 
+
+60:23 >> Yes. Yes.
+60:24 
+
+60:24 >> Okay. So, do so what do you want to do
+60:27 
+
+60:27 then on our weekly call? Do you just
+60:29 
+
+60:29 want to ask me questions?
+60:33 
+
+60:33 >> So,
+60:34 
+
+60:34 >> or what what how how should we structure
+60:36 
+
+60:36 these calls? And like I said, we you
+60:38 
+
+60:38 know, we only had half the time for
+60:39 
+
+60:39 today cuz I
+60:40 
+
+60:40 >> Yeah. So, what I can do what we can do
+60:43 
+
+60:43 that like today we talked about broker
+60:45 
+
+60:45 dashboard, right? So tomorrow uh
+60:48 
+
+60:48 tomorrow I'm going to email you all of
+60:50 
+
+60:50 the things that like I have written and
+60:52 
+
+60:52 everything you can just uh verify
+60:54 
+
+60:54 everything is right like everything is
+60:56 
+
+60:56 exactly what you want or not and I can
+60:59 
+
+60:59 update those things also you tomorrow
+61:01 
+
+61:01 you are going to like you you can do
+61:03 
+
+61:03 with it in that in your own time but for
+61:06 
+
+61:06 in the meeting what we can go through
+61:08 
+
+61:08 for the we can go through the brand
+61:10 
+
+61:10 modules reports admin those kind of
+61:11 
+
+61:11 things so that every day I can do like I
+61:15 
+
+61:15 can update the backlog books and also
+61:17 
+
+61:17 create new tickets.
+61:19 
+
+61:19 >> Okay,
+61:20 
+
+61:20 >> that would be
+61:20 
+
+61:20 >> so for our calls.
+61:22 
+
+61:22 >> Sorry.
+61:23 
+
+61:23 >> Yeah. So for our calls, what so are you
+61:25 
+
+61:25 run? So do you want to go through and
+61:27 
+
+61:27 see if you have questions or do you do
+61:29 
+
+61:29 you want me to
+61:30 
+
+61:30 >> if I have question if I have any
+61:32 
+
+61:32 questions then I'm going to ask you
+61:33 
+
+61:33 tomorrow regarding this module for the
+61:36 
+
+61:36 broker dashboard. So cuz like I'll be
+61:38 
+
+61:38 working on this then when I'm while I'm
+61:40 
+
+61:40 working there will there might be some
+61:42 
+
+61:42 like confusion and some questions arise.
+61:45 
+
+61:45 I'm going to ask you tomorrow and then
+61:47 
+
+61:47 we can go to the next module and we can
+61:49 
+
+61:49 discuss on that like you can like went
+61:52 
+
+61:52 me like you can give me the walk through
+61:55 
+
+61:55 of that uh next module and day after
+61:58 
+
+61:58 tomorrow I'm going to give you the give
+62:01 
+
+62:01 you the uh backlogs and the requirements
+62:04 
+
+62:04 I have written and also ask you the
+62:06 
+
+62:06 questions then I think that would be
+62:08 
+
+62:08 fruitful what do you think if you wait
+62:10 
+
+62:10 >> okay
+62:12 
+
+62:12 >> yeah that
+62:16 
+
+62:16 Okay. So, for today on the broker
+62:17 
+
+62:17 dashboard, the only thing we really got
+62:19 
+
+62:19 through was this market overview. So,
+62:21 
+
+62:21 >> um you're going to go through the rest
+62:23 
+
+62:23 of these
+62:24 
+
+62:24 >> that on this list and then go through
+62:26 
+
+62:26 these as well down here at the bottom.
+62:28 
+
+62:28 >> Yeah.
+62:28 
+
+62:28 >> Okay. And then tomorrow you're going to
+62:32 
+
+62:32 ask you're going so you're going to
+62:33 
+
+62:33 provide the um the tickets for these and
+62:37 
+
+62:37 then
+62:39 
+
+62:39 um and then you'll ask me for any
+62:42 
+
+62:42 clarification you need on any of these
+62:43 
+
+62:43 others that are already created.
+62:45 
+
+62:45 >> Yes. And and and I will I will also go
+62:47 
+
+62:47 through for the I and can you please
+62:49 
+
+62:49 tell me that what would be the next
+62:51 
+
+62:51 thing we are going to see tomorrow? It
+62:53 
+
+62:53 it will it be the brand module or
+62:54 
+
+62:54 reports or the admin so that I can also
+62:57 
+
+62:57 go through those things. So that so that
+62:60 
+
+63:00 I can ask you question like I can
+63:02 
+
+63:02 prepare questions beforehand.
+63:05 
+
+63:05 >> Okay. Well, I think they're in order
+63:07 
+
+63:07 honestly. So I think after broker
+63:09 
+
+63:09 dashboard this is definitely the most
+63:10 
+
+63:10 important right now is this broker
+63:12 
+
+63:12 dashboard.
+63:14 
+
+63:14 >> So uh another thing constance let like I
+63:17 
+
+63:17 cannot I think uh if the um Excel you
+63:22 
+
+63:22 have provided me doesn't have everything
+63:24 
+
+63:24 like the ones constant. I I
+63:28 
+
+63:28 >> Yeah, I do. You want me to send this
+63:30 
+
+63:30 one?
+63:30 
+
+63:30 >> Yes. Yes.
+63:31 
+
+63:31 >> Yeah. Yeah. That'd be great.
+63:32 
+
+63:32 >> So, the reason why is because I add what
+63:34 
+
+63:34 I do is every time there's a ticket
+63:36 
+
+63:36 added in Jira, I copy and paste it into
+63:38 
+
+63:38 here. So, this is the most updated. The
+63:40 
+
+63:40 only thing this doesn't have in it is I
+63:43 
+
+63:43 think I created one yesterday. So, 1423
+63:47 
+
+63:47 I think is the highest one on this one.
+63:50 
+
+63:50 I'll take it. I'm just seeing.
+63:53 
+
+63:53 And uh the thing is for the lovable uh
+63:57 
+
+63:57 for the lovable prototypes I think I
+64:00 
+
+64:00 will not be able to
+64:04 
+
+64:04 >> uh access it.
+64:06 
+
+64:06 >> Can't see them.
+64:07 
+
+64:07 >> Yeah cuz like there is one.
+64:09 
+
+64:09 >> See if I can make make sure you share
+64:11 
+
+64:11 it.
+64:12 
+
+64:12 >> There is in the brand module option.
+64:14 
+
+64:14 Yes, you can share it. If you click on
+64:17 
+
+64:17 share
+64:19 
+
+64:19 uh
+64:21 
+
+64:21 it's empty. I think so.
+64:24 
+
+64:24 >> It's empty. M empty. Rahman
+64:28 
+
+64:28 >> empty.
+64:28 
+
+64:28 >> Yes.
+64:30 
+
+64:30 Rahman.
+64:31 
+
+64:31 >> R H M A
+64:34 
+
+64:34 >> R A H
+64:35 
+
+64:35 >> M.
+64:39 
+
+64:39 >> Do I have that right?
+64:39 
+
+64:39 >> R H M A N
+64:44 
+
+64:44 >> that
+64:45 
+
+64:45 >> at a
+64:47 
+
+64:47 >> Yes.
+64:51 
+
+64:51 I always just copy and paste it. So,
+64:54 
+
+64:54 what is it? A asshy
+64:59 
+
+64:59 this
+64:59 
+
+64:59 >> Oh no. Uh A S T H. Yeah,
+65:05 
+
+65:05 >> hang on. Let me just get it in the chat.
+65:06 
+
+65:06 Thank you. Sorry.
+65:08 
+
+65:08 >> No problem.
+65:18 
+
+65:18 >> Uh But candidate
+65:20 
+
+65:20 >> give me Okay.
+65:25 
+
+65:25 >> Tell me if you got that.
+65:26 
+
+65:26 >> Yes. Let me check.
+65:29 
+
+65:29 >> And then I need to do the other one too,
+65:31 
+
+65:31 I think. Will that share all of them or
+65:33 
+
+65:33 just that one?
+65:34 
+
+65:34 >> Just this one. I'm not going to get the
+65:37 
+
+65:37 other one.
+65:38 
+
+65:38 >> Okay. Let me give you the other one too
+65:40 
+
+65:40 then.
+65:43 
+
+65:43 Where am I?
+65:45 
+
+65:45 Oops.
+65:50 
+
+65:50 Yes, I got the invitation.
+65:54 
+
+65:54 >> Oh my goodness. Come on, Wolf. Taylor,
+66:02 
+
+66:02 you're going to need this one, too.
+66:09 
+
+66:09 This is for the category review.
+66:19 
+
+66:19 Tell me if you got that one too.
+66:33 
+
+66:33 >> Yes, I got the second one too.
+66:36 
+
+66:36 >> Okay. And are you able to open it? Uh
+66:38 
+
+66:38 I'm signing up with my like I didn't
+66:42 
+
+66:42 have lovable with my office account so
+66:46 
+
+66:46 I'm signing up.
+66:48 
+
+66:48 >> Gotcha.
+67:50 
+
+67:50 just there.
+67:52 
+
+67:52 >> Yeah, I was just waiting for him to see
+67:54 
+
+67:54 if he was able to get in.
+67:56 
+
+67:56 >> Yeah.
+67:59 
+
+67:59 >> Okay, let me check again.
+68:02 
+
+68:02 Accept invitation.
+68:05 
+
+68:05 Yeah.
+68:10 
+
+68:10 So it show it's showing me I already
+68:13 
+
+68:13 have access but it's saying it's
+68:15 
+
+68:15 private. Let me figure it out. I think I
+68:16 
+
+68:16 have the access but Lavable is Lavable
+68:18 
+
+68:18 is doing something.
+68:19 
+
+68:19 >> So let me figure it out. Okay. So like
+68:22 
+
+68:22 >> I already have the access. Lavable is
+68:24 
+
+68:24 saying but it's saying the project is
+68:26 
+
+68:26 private. So
+68:28 
+
+68:28 >> let me I think
+68:28 
+
+68:28 >> I'll see if I can make it unprivate on
+68:30 
+
+68:30 my end.
+68:31 
+
+68:31 >> You don't have to I think but let me
+68:33 
+
+68:33 figure it out. It's I think it's
+68:35 
+
+68:35 >> I see you on here.
+68:37 
+
+68:37 >> Yeah. Yeah. Yeah. See you're on here
+68:38 
+
+68:38 now.
+68:39 
+
+68:39 >> Yeah. Now I can I can it was a bug. I
+68:41 
+
+68:41 think it was a bug from the lovable
+68:43 
+
+68:43 lent. So it's
+68:45 
+
+68:45 >> Oh, gotcha. Okay. So tomorrow So do you
+68:48 
+
+68:48 what do you need me to do for tomorrow?
+68:50 
+
+68:50 Anything?
+68:51 
+
+68:51 >> Uh tomorrow we we are going to go
+68:54 
+
+68:54 through the uh uh brand modules. we can
+68:58 
+
+68:58 we can discuss on the brand module and I
+69:01 
+
+69:01 I will also have the requirements for
+69:04 
+
+69:04 the uh
+69:07 
+
+69:07 tickets those like task those don't have
+69:09 
+
+69:09 any kind of description or anything and
+69:12 
+
+69:12 also the newer ones I'm going to write
+69:13 
+
+69:13 down the requirements so so that you can
+69:16 
+
+69:16 go through it and if it's right then we
+69:19 
+
+69:19 I'm going to create those tickets on the
+69:21 
+
+69:21 uh Jira and then tomorrow we are going
+69:24 
+
+69:24 to discuss about the brand module and
+69:27 
+
+69:27 After that DF tomorrow, I'm going to
+69:29 
+
+69:29 send you the similar things for the
+69:32 
+
+69:32 brand module. I think that that's it.
+69:34 
+
+69:34 >> Yeah.
+69:35 
+
+69:35 >> Okay.
+69:35 
+
+69:35 >> Yeah.
+69:36 
+
+69:36 >> Okay. Sounds good. Okay. I'll send you
+69:39 
+
+69:39 the notes from my end and we'll see each
+69:41 
+
+69:41 other tomorrow then.
+69:43 
+
+69:43 >> Okay. Thank you.
+69:44 
+
+69:44 >> Okay. Thank you so much. Bye.
+69:47 
+
+69:47 >> Have a nice day. Bye. Go.
+69:49 
+
+69:49 >> Thanks. Have a good evening. Take care.
+69:51 
+
+69:51 Bye. Bye.
+69:56 
+
+69:56 Hi.
+70:14 
+
+70:14 supposed to
+71:31 
+
+71:31 Yeah.
+75:48 
+
+75:48 Yeah, actually
+76:05 
+
+76:05 I I didn't
+76:17 
+
+76:17 Yeah,
+76:32 
+
+76:32 I don't think so. I mean
+76:35 
+
+76:35 34 for bright.
+77:03 
+
+77:03 >> Come on.
+82:03 
+
+82:03 Hey,
+82:20 
+
+82:20 speech speech.
+82:29 
+
+82:29 back.
+83:05 
+
+83:05 What did it do?
+83:43 
+
+83:43 Okay.
+84:27 
+
+84:27 Not here. Not here.
+84:31 
+
+84:31 >> Yeah. Yeah. No. No. There.
+84:41 
+
+84:41 So, right Thank you.
+85:52 
+
+85:52 Thank you.
+86:30 
+
+86:30 Thank you.
+87:28 
+
+87:28 Robin
+87:30 
+
+87:30 loading
+87:36 
+
+87:36 screen.
+87:55 
+
+87:55 system.
+88:30 
+
+88:30 All
+88:47 
+
+88:47 right.
+89:14 
+
+89:14 What's
+90:02 
+
+90:02 No, no, no.
+91:04 
+
+91:04 pretty
+91:18 
+
+91:18 something like that.
+91:54 
+
+91:54 I'm started doing side
+91:58 
+
+91:58 You have to have to do that.
+92:49 
+
+92:49 What's this?
+93:01 
+
+93:01 Do you hope
+93:04 
+
+93:04 that's
+93:54 
+
+93:54 What I will do is I will all
+94:10 
+
+94:10 I will use something
+94:23 
+
+94:23 before
+94:26 
+
+94:26 and I'll just
+94:28 
+
+94:28 wait
+94:41 
+
+94:41 It should.
+95:13 
+
+95:13 
+
+95:13 Foreign speech. Foreign speech. Foreign
+95:13 speech.
+96:08 
+
+96:08 Foreign speech. Foreign speech. Foreign
+96:09 
+
+96:09 speech.
+96:29 
+
+96:29 I could go
+96:47 
+
+96:47 red.
+96:50 
+
+96:50 small.
+98:03 
+
+98:03 Well, for the time being, I can
+98:35 
+
+98:35 What What is this?
+99:23 
+
+99:23 It's like They can do
+99:53 
+
+99:53 that. based
+100:11 
+
+100:11 on
+100:17 
+
+100:17 the same.
+100:22 
+
+100:22 >> Yeah.
+100:30 
+
+100:30 I will just write
+100:54 
+
+100:54 sort of because
+100:57 
+
+100:57 we are actually using
+101:01 
+
+101:01 I mean it's only giving us
+101:07 
+
+101:07 but it's not
+101:23 
+
+101:23 me.
+101:26 
+
+101:26 me.
+102:35 
+
+102:35 Foreign
+108:42 
+
+108:42 Yeah, the better.
+109:02 
+
+109:02 the previous
+111:38 
+
+111:38 Don't know what is
+112:35 
+
+112:35 Everybody first.
+112:45 
+
+112:45 Thank you so much.
+112:47 
+
+112:47 Please.
+112:58 
+
+112:58 Take care. Goodbye.
+113:05 
+
+113:05 >> Take care.
+113:07 
+
+113:07 Goodbye.
+113:22 
+
+113:22 What's up?
