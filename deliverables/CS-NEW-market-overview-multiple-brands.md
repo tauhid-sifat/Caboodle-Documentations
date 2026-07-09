@@ -14,19 +14,28 @@
 
 ## Description
 
-Currently, each Market Overview record carries a single `BrandID` and `RetailerID`. A broker rep visiting a retailer may observe shelf conditions for several of their assigned brands in one trip. Today this requires creating separate records per brand even though the retailer, banner, date, and store are identical.
+Currently, each Market Overview record carries a single `BrandID` and `RetailerID`. A broker rep visiting a retailer (e.g., Costco) may represent 10+ brands. Today they must repeat the "Add Log" process 10 separate times — once per brand.
 
-This story allows a single Market Overview log entry to cover multiple brands under the same retailer/banner/store context, reducing data entry overhead.
+Per the client meeting, the desired solution is a **sheet-based multi-brand log entry**:
+
+1. User selects the retailer/banner at the top (e.g., Costco)
+2. A sheet/table appears below with all brands listed, each showing their SKUs
+3. User clicks through each brand's SKUs to mark status (click, click, click)
+4. One submit saves all observations across all brands in a single action
+
+The client has a mockup of this flow — request it from Constance.
 
 ---
 
 ## Acceptance Criteria
 
-### Scenario 1: Multiple Brand Selection
-- **Given** I am creating a new Market Overview record
-- **When** I select a Retailer/Banner
-- **Then** I can select one or more Brands associated with my broker account
-- **And** each selected brand is linked to the same observation context (retailer, banner, store, date, status)
+### Scenario 1: Sheet-Based Multi-Brand Log Entry
+- **Given** I am creating a new Market Overview observation
+- **When** I select a Retailer/Banner (e.g., Costco) at the top
+- **Then** a sheet/table appears listing all my assigned brands and their SKUs
+- **And** I can click each SKU to set its status (Active, Pending, etc.) inline
+- **And** one submit saves all observations across all brands at once
+- **And** each brand's observations are stored as separate records internally
 
 ### Scenario 2: Per-Brand SkuStatus (Optional)
 - **Given** I have selected multiple brands
@@ -49,22 +58,28 @@ This story allows a single Market Overview log entry to cover multiple brands un
 
 ## Design Notes
 
+### Proposed UI Flow (from client mockup)
+1. Select Retailer/Banner at the top of the page
+2. Sheet view loads with rows grouped by brand, each brand showing its SKUs
+3. Inline status clickers per SKU
+4. Single "Submit" button saves all
+
 ### Current Entity
 - `MarketOverview.cs` has a single `BrandID` (FK to Brand)
-- Proposal: add a join table (e.g., `MarketOverviewBrand`) with `MarketOverviewID` + `BrandID`
+- Each brand's observations are stored as individual `MarketOverview` records internally, but created in bulk
 
 ### API Changes
-- **POST/PUT MarketOverviews** — accept an array of `BrandIDs` instead of a single `BrandID`
-- **GET MarketOverviews** — include all brand names in the DTO
-- Scoping: broker can only select brands assigned to them (enforced by existing brand-assignment check)
+- **POST MarketOverviews** — accept a bulk payload: `{ retailerID, bannerID, storeIDs?, date, observations: [{ brandID, skuID, status, comment? }, ...] }`
+- Each observation creates a separate `MarketOverview` record server-side
+- **GET MarketOverviews** — support filtering by multiple brand IDs
 
 ### Scope & Relationship Impact
-- This change also connects to the multi-store story (`CS-NEW-market-overview-multiple-stores.md`) — both add many-to-many relationships to the Market Overview entity
-- If both are implemented, a single log entry = 1 retailer × N brands × N stores
+- This change connects to the multi-store story (`CS-NEW-market-overview-multiple-stores.md`)
+- If both are implemented, a single log entry = 1 retailer × N brands × N stores × N SKUs
 
 ---
 
 ## Notes
-- The per-brand SkuStatus variant adds significant complexity — recommend a single shared status for MVP
-- Confirm with business: should brands be mandatory (at least one required) or still allow single-brand records?
-- If broker reps typically observe the same status across their brands, a single status field is sufficient
+- Client has a mockup — request from Constance to confirm UI layout
+- The per-brand SkuStatus is essential here since different brands have different SKUs with different statuses
+- The "sheet" approach eliminates the need to repeat "Add Log" per brand (current complaint)

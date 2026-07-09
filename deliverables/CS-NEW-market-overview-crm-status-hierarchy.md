@@ -16,11 +16,25 @@
 
 When a Market Overview record is created, `PushMarketOverviewChangesIntoCRM` syncs the observation data (including `SkuStatus`) into the CRM module's `BannerSKU.Status`. However, there is currently:
 
-1. **No documented hierarchy** — it is unclear whether the Market Overview status always overwrites BannerSKU.Status, or if certain statuses take priority (e.g., CRM "Active" should never be overwritten by a Market Overview "Pending").
+1. **Undocumented hierarchy** — certain SkuStatus values cannot be overridden by Market Overview. Specifically:
+   - If Brand CRM status is **Discontinued**, Market Overview **cannot** change it
+   - If Brand CRM status is **Active** or lower (**Commit, Approved, Pending, NotActive**), Market Overview **can** update it
 2. **Unclear target** — `MarketOverview.SKUID` is ambiguous: does it reference `BannerSKU` or `ProductSpecification`?
 3. **Unsynced on edit/delete** — The sync only fires on create. Edits to Market Overview status or deletion of records are not reflected in CRM.
 
-This story requires defining (and optionally implementing) the business rules for how and when Market Overview statuses propagate to BannerSKU.Status.
+This story requires confirming the implemented hierarchy rules with engineering (Bijoy) and documenting them.
+
+### Confirmed Status Hierarchy (from client meeting)
+```
+Pending → Approved → Commit → Active → Discontinued
+Pending → Declined (dead-end, never placed)
+Pending → NotActive (dead-end, never activated)
+```
+
+**Rules:**
+- **Discontinued** is terminal — Market Overview cannot overwrite it
+- **NotActive/Pending** — any status can change it (lowest priority)
+- **Active/Commit/Approved** — Market Overview can update to a higher or equal status, but cannot downgrade to Discontinued if brand set it
 
 ---
 
@@ -45,6 +59,22 @@ This story requires defining (and optionally implementing) the business rules fo
 - **Or** document why create-only sync is intentional
 
 ---
+
+## Hierarchy Rules (Confirmed during client meeting)
+
+| Current CRM Status | Can Market Overview Override? | Notes |
+|--------------------|------------------------------|-------|
+| Discontinued | ❌ No | Terminal — broker observation cannot change |
+| Active | ✅ Yes | Can be changed to higher or equal status |
+| Commit | ✅ Yes | |
+| Approved | ✅ Yes | |
+| Pending | ✅ Yes | |
+| NotActive | ✅ Yes | Can be changed to any status |
+| Declined | ❌ No (assumed) | Dead-end — confirm with engineering |
+
+**Status flow confirmed:** Pending → Approved → Commit → Active → Discontinued
+
+**Next step:** Review with Bijoy what is currently implemented in the backend to ensure it matches these rules. Per the client, Bijoy has the hierarchy documented somewhere — verify alignment.
 
 ## Business Rules Questions (to resolve with stakeholders)
 
