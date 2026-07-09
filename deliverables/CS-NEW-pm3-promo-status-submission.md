@@ -26,13 +26,23 @@ The `IsSubmitted` flag already exists on events. When a broker submits events, t
 
 ## Status Hierarchy & Transition Rules
 
-```
-Non-Active ──→ Pending ──→ Approved ──→ Committed ──→ Active ──→ Discontinued
-                  │            │                            │
-                  ├──→ Declined├──→ Declined                │
-                  │            │                     [Terminal — no exit]
-                  │            └──→ Cancelled               │
-                  └──→ Cancelled                    Only Brand can set
+```mermaid
+stateDiagram-v2
+    [*] --> Pending
+    Pending --> Approved : Brand Owner
+    Pending --> Declined : Brand Owner
+    Pending --> Cancelled : Broker or Brand
+    Approved --> Committed : Brand Owner
+    Approved --> Declined : Brand Owner
+    Approved --> Cancelled : Brand Owner
+    Committed --> Active : Brand Owner
+    Active --> Discontinued : Brand Owner only
+    Discontinued --> [*]
+    Declined --> [*]
+    Cancelled --> Pending : Broker or Brand
+
+    note right of Discontinued : Terminal — no exit
+    note right of Declined : Terminal — no exit
 ```
 
 ### Allowed Transitions (by role)
@@ -44,9 +54,11 @@ Non-Active ──→ Pending ──→ Approved ──→ Committed ──→ Ac
 | Pending | Cancelled | Broker, Brand | |
 | Approved | Committed | Brand Owner | |
 | Approved | Declined | Brand Owner | Terminal |
+| Approved | Cancelled | Brand Owner | |
 | Committed | Active | Brand Owner | |
 | Active | Discontinued | **Brand Owner only** | Terminal — broker cannot override |
 | Discontinued | *(none)* | Neither | Absorbing state — no exit |
+| Cancelled | Pending | Broker, Brand | Re-activate |
 | Pending | Submitted (flag) | Broker | Flips `IsSubmitted=true`, status unchanged |
 
 **Rejected transitions return a 422 with message:** `"Cannot transition from {current} to {requested}"`.
