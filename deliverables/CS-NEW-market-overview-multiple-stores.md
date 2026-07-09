@@ -1,0 +1,67 @@
+# Market Overview | Allow Multiple Stores Per Log Entry
+
+**New Requirement** | User Story | Priority: TBD | Status: New
+
+---
+
+## User Story
+
+**As a** Broker user logging a Market Overview observation,  
+**I want** to associate multiple stores with a single log entry,  
+**So that** I can record the same SKU observation across several stores without creating duplicate entries.
+
+---
+
+## Description
+
+Currently, a Market Overview record has a single optional `StoreID` field — one observation per store. If a broker rep observes the same product (same SKU, same status, same date) at multiple stores under the same banner, they must create a separate record for each store.
+
+This story introduces a many-to-many relationship between Market Overview and Store, so a single log entry can cover multiple store locations.
+
+---
+
+## Acceptance Criteria
+
+### Scenario 1: Multiple Store Selection
+- **Given** I am creating a new Market Overview record
+- **When** I select a Banner
+- **Then** I can select one or more stores under that Banner to associate with the observation
+- **And** the selected stores appear as a list/chips in the form
+
+### Scenario 2: Single Store Backward Compatibility
+- **Given** I am creating a Market Overview record
+- **When** I do not select any store
+- **Then** the record can still be saved without a store association (matching current behavior)
+
+### Scenario 3: Display in List View
+- **Given** a Market Overview record is associated with multiple stores
+- **When** viewing the Market Overview list
+- **Then** the store column shows the count or abbreviated list of stores (e.g., "Store A, Store B +2")
+
+### Scenario 4: Edit Behavior
+- **Given** I am editing an existing Market Overview record
+- **When** I modify the store list (add or remove stores)
+- **Then** the changes are persisted
+
+---
+
+## Design Notes
+
+### Current Entity
+- `MarketOverview.cs` has `StoreID` (optional single FK to Store)
+- Proposal: add a join table (e.g., `MarketOverviewStore`) with `MarketOverviewID` + `StoreID`
+
+### API Changes
+- **POST/PUT MarketOverviews** — accept an array of `StoreIDs` instead of a single `StoreID`
+- **GET MarketOverviews** — include store names in the DTO (already has `StoreName` in `BrokerMarketOverviewDTO`)
+- Existing single-`StoreID` clients should still work (accept single value as array of one)
+
+### Frontend Changes
+- Store selector becomes a multi-select (checkboxes or tags) filtered by the chosen Banner
+- List view displays store summary instead of a single name
+
+---
+
+## Notes
+- Store is currently optional — maintain that flexibility
+- Confirm with business: does `NumberOfStores` in the DTO need to reflect the count of associated stores?
