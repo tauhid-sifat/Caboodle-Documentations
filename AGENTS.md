@@ -1,8 +1,8 @@
 # Caboodle Project — Permanent Knowledge Base
 
-> **Generated:** 2026-07-10
-> **Purpose:** Foundational memory for LLM agents working on this project.
-> **Source docs:** All files in `D:\My Code\Caboodle-Documentations\` (excluding `deliverables/`)
+> **Generated:** 2026-07-14  
+> **Purpose:** Foundational memory for LLM agents working on this project.  
+> **Source docs:** All files in `ba-onboarding/`, `Daily Delight Calendar/`, `Jira (3).csv`, meeting transcripts, Lovable prototype prompts.
 
 ---
 
@@ -58,26 +58,12 @@ Caboodle is a **multi-tenant SaaS platform for CPG (Consumer Packaged Goods) bra
 | Email | SES | Under upgrade (target Jan 15, 2026 update — still in progress) |
 | Migrations | EF Core | In `caboodle/src/Database/Migrator` |
 
-### Deployment
-| Environment | Region | Details |
-|-------------|--------|---------|
-| Production | AWS us-west-1 | EC2 Docker (8060→5060), RDS, S3, SES (ap-southeast-1), Seq |
-| Staging | AWS ap-northeast-1 | EC2 Docker, RDS |
-| Local | docker-compose | PostgreSQL, Redis (ready), pgAdmin, Seq |
-
-**CI/CD:** Bitbucket Pipelines → Docker → ECR → SSH deploy to EC2 (branch-based: staging/master).
-**Single-instance production** — no ALB/ASG, no high availability.
-
-### External Integrations
-- KeHE (distributor data)
-- UNFI (distributor data, crawler service)
-- SPINS (retail measurement)
-- AWS SES (email)
-- AWS S3 (files)
-- Seq (logging)
-- Discord (critical alerts)
-- Pulsetic (uptime monitoring)
-- **Planned:** Google login, Grafana/Prometheus, AWS Secrets Manager
+### Prototype Tools
+| Tool | Use |
+|------|-----|
+| Lovable.dev | Rapid prototyping — Category Review yearly grid prototype created here |
+| shadcn/ui + Tailwind | Prototype design system (Daily Delight Calendar) |
+| Framer Motion | Prototype animations |
 
 ---
 
@@ -122,7 +108,7 @@ Caboodle is a **multi-tenant SaaS platform for CPG (Consumer Packaged Goods) bra
 |--------|---------|--------|
 | **Admin** | Roles, permissions, settings, user management, data mapping, CRM data upload | 67 backlog tickets — highest volume |
 | **Brand** | Brand entity management, home page, branding | Stable |
-| **Broker** | Broker/sub-broker management, broker dashboard (Market Overview, Promo Management, Category Review, Distributor APL) | Active dev — 33 tickets |
+| **Broker** | Broker/sub-broker management, broker dashboard (Market Overview, Promo Management, Category Review, Distributor APL) | Active dev — 33+ tickets |
 | **CRM** | Distributors, Retailers, Banners, Regions, Contacts, Pipeline (Task Board) | Mostly stable, Retailers untested |
 | **Dashboard** | Summary KPIs, cross-module reads | Stable, low detail |
 | **DataHub** | Centralized data coordination, shared datasets | Internal |
@@ -161,7 +147,7 @@ Brand → Product Specs → TSS (Step 1-4 wizard) → Push to Approved → Promo
 - Step 1: Select retailers & banners
 - Step 2: Select SKUs, set velocity & store count
 - Step 3: Create events (Normal = specific months, EDLP = Jan-Dec)
-- Step 4: Configure metrics (ad fees, TPR, everyday allowance) — fees distributed equally per product within banner
+- Step 4: Configure metrics — fees distributed equally per product within banner
 - Push: System validates pricing exists → status changes to Approved → appears in Promotional Calendar
 
 ### Flow 2: Distributor Data Ingestion
@@ -176,9 +162,146 @@ Distributor (KeHE/UNFI/SPINS) → CSV/Excel upload → DataHub → Unmapped reco
 - Deletions at broker level propagate to brands — except items the brand added locally
 - Status hierarchy: Pending → Approved → Committed → Active → Discontinued (certain transitions restricted)
 
+### Flow 4: Market Overview → CRM Status Sync
+- `PushMarketOverviewChangesIntoCRM` fires on Market Overview **create only** (not update/delete)
+- Sync target: `BannerSKU.Status` (untyped integer — known gap)
+- Status hierarchy: **Discontinued is terminal** — Market Overview cannot overwrite it
+- Lower statuses (NotActive/Pending) can be changed to any status
+- Flow: Pending → Approved → Commit → Active → Discontinued
+- Dead-ends: Pending → Declined (never placed), Pending → NotActive (never activated)
+- `MarketOverview.SKUID` ambiguous — unclear if it targets `BannerSKU` or `ProductSpecification`
+
 ---
 
-## 7. KNOWN TECHNICAL DEBT & RISKS
+## 7. CRITICAL TERMINOLOGY (Broker-Brand Relationship)
+
+**Correct language (from ba-onboarding docs):**
+- **Brands are assigned to brokers** (endpoint: `PATCH /Brands/assign-brand-to-broker`)
+- **Broker represents brands** — not "broker assigned under brand"
+- **Admin assigns brands to a broker**, not the broker adding themselves
+- The link is `Brand.BrandBrokers` table (owned by Brand module)
+- KPI label: **"Brands Represented"** (not "Brands Assigned")
+
+**Incorrect (do not use):**
+- ❌ "Broker assigned to a brand"
+- ❌ "Broker assigned under brand"
+- ❌ "Brands assigned under broker"
+
+---
+
+## 8. BROKER DASHBOARD — WIREFRAME & FEATURES
+
+A live wireframe is deployed at **https://caboodle-broker-dashboard.vercel.app**
+
+### Layout (top to bottom)
+1. **Header** — Caboodle logo, nav (Dashboard, Management ▾, Strategy ▾, Files icon), brand selector
+2. **Quick Actions** — 5 tiles: Market Overview, Category Review, Distributor APL, Promotional Management, File
+3. **KPI Row** — 4 compact horizontal cards: Stores In (1,247), Reviews Due (3), Active Promos (8), Brands Represented (15)
+4. **Timeline + Task Board** — 55/45 split: 14-day unified feed + 3-column Kanban
+
+### Key Design Decisions
+- KPI cards are horizontal (icon + value/label + trend + View link on one row) — compact
+- Timeline merges Category Review deadlines, Promo events, and Tasks
+- Task Board is simple (To Do / In Progress / Done) — NOT the CRM Pipeline
+- Quick Actions are **under the header** (above KPI row)
+- Dark mode toggle removed from final wireframe
+
+---
+
+## 9. CATEGORY REVIEW — THREE DISTINCT FEATURES (CS-1361 vs CS-1296)
+
+From the Lovable prototype (prompts 1-17), the Category Review has **three separate interactions**:
+
+| Feature | Trigger | Linked to cell? | Purpose | Lovable Prompt |
+|---------|---------|----------------|---------|----------------|
+| **Send to Contacts** | Toolbar button | ❌ No — global email | Send free-form email about the calendar | Prompt 10 |
+| **Cell Click → Checkmark** | Single-click cell | ✅ Yes | Personal "I've reviewed this" tracking (per-user) | Prompt 11 |
+| **Cell Double-Click → Assign Contacts** | Double-click cell | ✅ Yes | Assign responsibility for that specific review | Prompt 17 |
+
+### CS-1361: Yearly Planning Grid
+- Row grouping: **Retailer** (not Banner — CSV has no Banner column)
+- Columns: 12 months (Jan-Dec)
+- Cell badges: color-coded milestone types
+- Filter: Category, Banner/Retailer, Month, Date Type
+- Year navigation with chevrons + "This Year" button
+- Promotional Calendar toggle (same grid, different data source)
+
+### CS-1296: Calendar Rollup (CSV Upload)
+- Upload format: `Region,Retailer,Category,Review Month,Submission Due Date(MM/DD/YY),Review Dates(MM/DD/YY),Reset Date(MM/DD/YY),Additional Notes`
+- Required columns: `Retailer`, `Category`, `Review Month`
+- Date format: MM/DD/YY
+- Reupload replaces all data (no merge)
+- Entity fields: `Region`, `Retailer`, `Category`, `ReviewMonth`, `SubmissionDueDate`, `ReviewDate`, `ResetDate`, `AdditionalNotes`
+- `BrandID` and `BrokerageCompanyID` set server-side
+- `ShouldBeInCalender` defaults to `false`
+
+### Data Flow
+```
+CS-1296: Upload CSV → POST /category-reviews/import → CategoryReview table
+CS-1361: Grid loads → GET /api/category-reviews/calendar?year=YYYY → reads from CategoryReview table
+```
+
+---
+
+## 10. PROMOTIONAL MANAGEMENT — STATUS LIFE
+
+### PromotionEventStatus Enum
+| Code | Label | Notes |
+|------|-------|-------|
+| 1 | Active | Planned/active |
+| 2 | Cancelled | Cancelled before running |
+| 3 | Pending | Awaiting approval |
+| 4 | DidNotRun | Scheduled but didn't occur |
+| 5 | Declined | Declined by retailer |
+| 6 | RetailerApproved | Approved by retailer |
+| 7 | Completed | Ran and concluded |
+
+**Gap:** Live TradeSpend module **never writes status** — only reads it for financial calculations. Status transitions happen only in Sandbox (`UpdateEventStatusAsync`).
+
+### Submission (IsSubmitted flag)
+- Separate from status — parallel flag on events
+- Managed by `UpdateSubmissionStatusOfEventsRequest`
+- Role-aware: BROKER/BROKERSUBUSER restricted to assigned brands
+
+### Market Overview SkuStatus (separate enum)
+Active, Pending, NotActive, Declined, Discontinued, Approved, Commit
+
+---
+
+## 11. MEETING OUTCOMES (Client Clarifications)
+
+### Key Decisions (from Broker Dashboard meetings)
+1. **Category Review scrolling** → Infinite scroll, not pagination (CS-1316)
+2. **CS-1305 re-scoped** → Broker Dashboard with KPI cards, not just UI polish
+3. **Pipeline ≠ CRM Pipeline** → Simple task board (To Do / In Progress / Done) — lightweight, no deal stages
+4. **Status hierarchy** → Discontinued is terminal; Market Overview cannot override it
+5. **UNFI Independents** → Door count (700) is misleading — actual per-store count needed for accurate KPIs
+6. **Multi-brand log entry** → Sheet view: select retailer → grid of all brands' SKUs → click-click → one submit
+7. **Broker adds/represents brands** — not "assigned under brand"
+
+### Open Questions
+| Question | Status |
+|----------|--------|
+| Status transition matrix for SkuStatus | Need to confirm with Bijoy |
+| Store count for UNFI Independents | Need store picker implementation |
+| MO6 sheet mockup | Client has one — need to obtain |
+| Email backend for Send to Contacts | SMTP/SendGrid/Resend? |
+| Is "Submitted" a new status value or parallel flag? | TBD |
+| PM6 scope (multi-month events) | Option A (read-only display) vs C (full drag) |
+
+---
+
+## 12. JIRA ISSUES — DESCRIPTION GAPS
+
+19 issues in `Jira (3).csv` lack proper descriptions (under 50 chars or only image):
+
+CS-478, CS-617, CS-725, CS-1090, CS-1092, CS-1150, CS-1177, CS-1178, CS-1185, CS-1186, CS-1197, CS-1202, CS-1209, CS-1211, CS-1236, CS-1258, CS-1259, CS-1307, CS-1354
+
+40 other issues in the listing have proper descriptions.
+
+---
+
+## 13. KNOWN TECHNICAL DEBT & RISKS
 
 ### High Priority
 1. **.NET 6 EOL** — no security patches, upgrade to .NET 9 deferred
@@ -186,7 +309,7 @@ Distributor (KeHE/UNFI/SPINS) → CSV/Excel upload → DataHub → Unmapped reco
 3. **Caching inactive** — Redis infra ready but off, unnecessary DB load
 4. **Secrets in config** — not using AWS Secrets Manager (planned)
 5. **Single-instance production** — no HA, EC2 failure = downtime
-6. **Image domain wildcard** `"*"` in `next.config.js` — security risk
+6. **Image domain wildcard `"*"`** in `next.config.js` — security risk
 7. **Token in localStorage** (Zustand persist) — XSS risk
 8. **No global error boundary** on frontend
 9. **Duplicate Axios instances** — inconsistent headers
@@ -208,49 +331,41 @@ Distributor (KeHE/UNFI/SPINS) → CSV/Excel upload → DataHub → Unmapped reco
 - **Authorization thin:** Many controllers lack `[Authorize]`; brand roles get empty permissions from server
 - **Store module is orphan:** Domain entities exist but no controller, service, or application layer
 - **Intelligence module is aspirational:** "ASK Cab" AI feature referenced but placeholder-only
-- **Frontend `Caboddle Admin Web`:** Separate Next.js app for admin — verify sync before dual changes
-- Several features throw `NotImplementedException` (e.g., product copy, export, some report features)
 
 ---
 
-## 8. TWO FRONTEND APPLICATIONS
+## 14. DELIVERABLES CREATED
 
-1. **Caboodle New Web** — main brand/broker app
-2. **Caboddle Admin Web** — admin-only app (separate Next.js project)
+All deliverable files in `deliverables/`:
 
-**Critical:** Changes to API contracts, auth, or shared logic must verify both apps are updated. The two apps share a backend API surface.
+| File | Description |
+|------|-------------|
+| `CS-1361-new-category-review-functionality.md` | Yearly planning grid, Send to Contacts, checkmark, cell contact assignment, Promotional Calendar toggle. Updated with FR1-FR8 sections. |
+| `CS-1296-category-review-calendar-rollup.md` | CSV upload/replace, bulk delete, grid data API, list/table view. Updated with FR1-FR6 sections. |
+| `CS-1296-vs-CS-1361-analysis.md` | Analysis resolving ambiguities between the two tickets |
+| `CS-1305-broker-dashboard-kpi-cards.md` | Broker Dashboard with KPI cards |
+| `CS-1305-broker-dashboard-full-spec.md` | Complete dashboard specification |
+| `CS-1072-broker-dashboard-landing-page.md` | Broker logo/branding on landing page |
+| `CS-1316-category-review-infinite-scroll.md` | Infinite scroll for Category Review |
+| `CS-NEW-broker-dashboard-task-board.md` | Simple 3-column Kanban |
+| `CS-NEW-category-review-email-notification-cr2.md` | Email notification based on Lovable SendToContacts |
+| `CS-NEW-category-review-email-notification.md` | Category Review email notifications |
+| `CS-NEW-bulk-delete-category-reviews.md` | Bulk delete across pages |
+| `CS-NEW-category-review-page-size.md` | Page size selector |
+| `CS-NEW-distributor-apl-infinite-scroll.md` | Infinite scroll for Distributor APL |
+| `CS-NEW-distributor-apl-wholesale-cost-validation.md` | Wholesale Case Cost validation mismatch |
+| `CS-NEW-market-overview-*.md` (9 files) | MO1-MO9: DC edit, search, status hierarchy, store count, multiple stores, multiple brands, require DC, comment append, email notifications |
+| `CS-NEW-pm1-*.md` through `CS-NEW-pm7-*.md` (7 files) | PM1-PM7: Submission button, export, promo status, pin filters, grid format, multi-month events, dashboard logo |
+| `CS-NEW-broker-dashboard-pipeline.md` | Pipeline integration concept |
+| `CS-1424-data-sync-broker-distributor-apl.md` | APL data sync |
+| `CS-1403-apl-upload-unfi-upc-adjustment.md` | UNFI UPC truncation fix |
 
----
-
-## 9. KEY FILES & LOCATIONS
-
-| File/Path | Purpose |
-|-----------|---------|
-| `BUSINESS.md` | CPG industry overview, business flows, glossary |
-| `Caboodle Architecture Review [Backend].md` | Full backend analysis (modules, stack, risks) |
-| `Frontend Architectural Review Summary (Caboodle).docx.md` | Frontend audit (tech debt, performance, security) |
-| `Caboodle_Product_Reconstruction_Handover.md` | BA handover — comprehensive product guide |
-| `Analysis_Part1.md` | Detailed module breakdown, backlog analysis, user journeys |
-| `Caboodle Testing Checklist.md` | Manual QA testing status by module/sub-module |
-| `Caboodle_Backlog_by_Module.xlsx` | 225+ Jira tickets by module |
-| `TSS Feature – QA Test Checklist.md` | Detailed TSS test cases (517 lines) |
-| `Jira (3).csv` | Jira export |
-| `deliverables/` | Deliverable CS tickets (Broker dashboard, reports, etc.) |
-
----
-
-## 10. KEY PEOPLE / TEAM DYNAMICS (from meeting transcripts)
-
-- **CW (Christina?):** Product owner/business stakeholder — drives requirements, tests features, reports bugs
-- **Tahi:** Developer working on broker dashboard features
-- **Ifty/Ify:** Developer/architect — created initial status hierarchy
-- **Bejoy:** Developer — implemented status hierarchy rules
-- **KA:** Team member involved in store list discussions
-- **Fifty:** Team member mentioned in ticket context
+### Wireframe
+- `Wireframe/index.html` — Deployed at https://caboodle-broker-dashboard.vercel.app
 
 ---
 
-## 11. GLOSSARY
+## 15. GLOSSARY
 
 | Term | Meaning |
 |------|---------|
@@ -270,4 +385,7 @@ Distributor (KeHE/UNFI/SPINS) → CSV/Excel upload → DataHub → Unmapped reco
 | **Roll-Up** | Aggregating data from lower to higher levels |
 | **TSS** | Trade Spend Sandbox |
 | **UNFI Independents** | Grouped mom-and-pop stores under a single banner for simplicity |
-| **Actualization** | Updating promo projections with real sales data (lift, velocity, store count) |
+| **Actualization** | Updating promo projections with real sales data |
+| **NotActive** | SkuStatus value — one word, not "Not Active" |
+| **IsSubmitted** | Boolean flag on promo events for broker submission |
+| **Brokerage** | The broker's organization — scope for data visibility |
