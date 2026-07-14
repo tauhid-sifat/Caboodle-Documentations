@@ -34,7 +34,7 @@ The current broker dashboard is a plain tile grid. The desired state includes:
   - Number of stores I'm in (with accurate count — see MO4)
   - Category Reviews due this month
   - Active/pending promotional events
-  - Total brands assigned
+  - Total brands represented
 - **And** each KPI card is clickable, linking to the relevant section
 
 ### Scenario 2: Calendar Summary

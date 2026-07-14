@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broker Dashboard — Wireframe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --background: 220 20% 97%;
+      --foreground: 222 47% 11%;
+      --card: 0 0% 100%;
+      --card-foreground: 222 47% 11%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 222 47% 11%;
+      --primary: 222 60% 18%;
+      --primary-foreground: 210 40% 98%;
+      --secondary: 220 14% 92%;
+      --secondary-foreground: 222 47% 11%;
+      --muted: 220 14% 95%;
+      --muted-foreground: 220 9% 46%;
+      --accent: 12 76% 61%;
+      --accent-foreground: 0 0% 100%;
+      --destructive: 0 84% 60%;
+      --destructive-foreground: 210 40% 98%;
+      --border: 220 13% 90%;
+      --input: 220 13% 90%;
+      --ring: 222 60% 18%;
+      --radius: 0.75rem;
+      --calendar-today: 222 60% 18%;
+      --calendar-today-foreground: 210 40% 98%;
+      --calendar-event: 12 76% 61%;
+      --calendar-event-foreground: 0 0% 100%;
+      --calendar-weekend: 220 14% 95%;
+      --calendar-hover: 220 14% 93%;
+      --calendar-selected: 222 60% 95%;
+      --calendar-grid: 220 13% 93%;
+      --calendar-time: 220 9% 72%;
+    }
+
+    .dark {
+      --background: 222 47% 6%;
+      --foreground: 210 40% 96%;
+      --card: 222 47% 9%;
+      --card-foreground: 210 40% 96%;
+      --popover: 222 47% 9%;
+      --popover-foreground: 210 40% 96%;
+      --primary: 210 40% 90%;
+      --primary-foreground: 222 47% 11%;
+      --secondary: 217 33% 17%;
+      --secondary-foreground: 210 40% 96%;
+      --muted: 217 33% 17%;
+      --muted-foreground: 215 20% 65%;
+      --accent: 12 76% 55%;
+      --accent-foreground: 0 0% 100%;
+      --destructive: 0 63% 31%;
+      --destructive-foreground: 210 40% 98%;
+      --border: 217 33% 17%;
+      --input: 217 33% 17%;
+      --ring: 213 27% 84%;
+      --calendar-today: 210 40% 90%;
+      --calendar-today-foreground: 222 47% 11%;
+      --calendar-event: 12 76% 55%;
+      --calendar-event-foreground: 0 0% 100%;
+      --calendar-weekend: 217 33% 12%;
+      --calendar-hover: 217 33% 20%;
+      --calendar-selected: 222 47% 15%;
+      --calendar-grid: 217 33% 15%;
+      --calendar-time: 215 20% 50%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: hsl(var(--background));
+      color: hsl(var(--foreground));
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
+
+    :root {
+      --bg: hsl(var(--background));
+      --fg: hsl(var(--foreground));
+      --card-bg: hsl(var(--card));
+      --primary-bg: hsl(var(--primary));
+      --primary-fg: hsl(var(--primary-foreground));
+      --secondary-bg: hsl(var(--secondary));
+      --muted-bg: hsl(var(--muted));
+      --muted-fg: hsl(var(--muted-foreground));
+      --accent-bg: hsl(var(--accent));
+      --border-color: hsl(var(--border));
+      --cal-hover: hsl(var(--calendar-hover));
+      --radius-lg: var(--radius);
+      --radius-md: calc(var(--radius) - 2px);
+      --radius-sm: calc(var(--radius) - 4px);
+    }
+
+    html, body { height: 100%; }
+    a { color: var(--primary-bg); text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    .flex { display: flex; }
+    .inline-flex { display: inline-flex; }
+    .flex-col { flex-direction: column; }
+    .flex-1 { flex: 1 1 0%; }
+    .items-center { align-items: center; }
+    .items-start { align-items: flex-start; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .gap-1 { gap: 4px; }
+    .gap-1\\.5 { gap: 6px; }
+    .gap-2 { gap: 8px; }
+    .gap-3 { gap: 12px; }
+    .gap-4 { gap: 16px; }
+    .gap-6 { gap: 24px; }
+    .px-4 { padding-left: 16px; padding-right: 16px; }
+    .px-6 { padding-left: 24px; padding-right: 24px; }
+    .py-2 { padding-top: 8px; padding-bottom: 8px; }
+    .py-3 { padding-top: 12px; padding-bottom: 12px; }
+    .py-4 { padding-top: 16px; padding-bottom: 16px; }
+    .p-3 { padding: 12px; }
+    .mt-2 { margin-top: 8px; }
+    .mb-2 { margin-bottom: 8px; }
+    .mb-4 { margin-bottom: 16px; }
+    .ml-1 { margin-left: 4px; }
+    .ml-auto { margin-left: auto; }
+    .border { border: 1px solid var(--border-color); }
+    .border-b { border-bottom: 1px solid var(--border-color); }
+    .border-t { border-top: 1px solid var(--border-color); }
+    .border-r { border-right: 1px solid var(--border-color); }
+    .rounded-full { border-radius: 9999px; }
+    .rounded-lg { border-radius: var(--radius-lg); }
+    .rounded-md { border-radius: var(--radius-md); }
+    .rounded-sm { border-radius: var(--radius-sm); }
+    .overflow-auto { overflow: auto; }
+    .overflow-hidden { overflow: hidden; }
+    .truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .h-4 { height: 16px; }
+    .h-8 { height: 32px; }
+    .h-screen { height: 100vh; }
+    .w-4 { width: 16px; }
+    .w-8 { width: 32px; }
+    .w-full { width: 100%; }
+    .min-w-0 { min-width: 0; }
+    .relative { position: relative; }
+    .absolute { position: absolute; }
+    .top-0 { top: 0; }
+    .left-0 { left: 0; }
+    .z-10 { z-index: 10; }
+    .text-left { text-align: left; }
+    .text-center { text-align: center; }
+    .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+    .text-xs { font-size: 0.75rem; line-height: 1rem; }
+    .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+    .text-\[11px\] { font-size: 11px; }
+    .font-display { font-family: 'Space Grotesk', sans-serif; }
+    .font-sans { font-family: 'Inter', sans-serif; }
+    .font-medium { font-weight: 500; }
+    .font-semibold { font-weight: 600; }
+    .font-bold { font-weight: 700; }
+    .tracking-tight { letter-spacing: -0.025em; }
+    .tracking-wider { letter-spacing: 0.05em; }
+    .uppercase { text-transform: uppercase; }
+    .capitalize { text-transform: capitalize; }
+    .bg-background { background-color: hsl(var(--background)); }
+    .bg-card { background-color: hsl(var(--card)); }
+    .bg-primary { background-color: hsl(var(--primary)); }
+    .bg-primary\/10 { background-color: hsla(var(--primary), 0.1); }
+    .bg-secondary { background-color: hsl(var(--secondary)); }
+    .bg-muted { background-color: hsl(var(--muted)); }
+    .bg-accent { background-color: hsl(var(--accent)); }
+    .bg-accent\/10 { background-color: hsla(var(--accent), 0.1); }
+    .bg-green-500\/20 { background-color: rgba(34, 197, 94, 0.2); }
+    .bg-green-500 { background-color: rgb(34, 197, 94); }
+    .bg-blue-500\/20 { background-color: rgba(59, 130, 246, 0.2); }
+    .bg-purple-500\/20 { background-color: rgba(168, 85, 247, 0.2); }
+    .bg-orange-500\/20 { background-color: rgba(249, 115, 22, 0.2); }
+    .text-foreground { color: hsl(var(--foreground)); }
+    .text-muted-foreground { color: hsl(var(--muted-foreground)); }
+    .text-primary { color: hsl(var(--primary)); }
+    .text-primary-foreground { color: hsl(var(--primary-foreground)); }
+    .text-white { color: white; }
+    .hover\:bg-secondary:hover { background-color: hsl(var(--secondary)); }
+    .hover\:bg-calendar-hover:hover { background-color: hsl(var(--calendar-hover)); }
+    .hover\:text-foreground:hover { color: hsl(var(--foreground)); }
+    .transition-colors { transition: background-color 0.15s, color 0.15s, border-color 0.15s; }
+    .transition-all { transition: all 0.2s; }
+    .transition-opacity { transition: opacity 0.15s; }
+    .group:hover .group-hover\:opacity-100 { opacity: 1; }
+    .grid { display: grid; }
+    .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .gap-4 { gap: 16px; }
+    .gap-3 { gap: 12px; }
+    .gap-6 { gap: 24px; }
+    .gap-2 { gap: 8px; }
+    .border-collapse { border-collapse: collapse; }
+    .list-none { list-style: none; }
+    .space-y-2 > * + * { margin-top: 8px; }
+
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: hsl(var(--muted-foreground) / 0.3); border-radius: 3px; }
+
+    .dashboard {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+      background-color: hsl(var(--background));
+    }
+
+    /* Header (matches actual Caboodle app) */
+    .header {
+      flex-shrink: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #ffffff !important;
+      padding: 0 48px 2px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; height: 100%; }
+    .header-left { display: flex; align-items: center; gap: 4px; }
+    .header-logo { width: 144px; height: 48px; object-fit: contain; }
+    .header-right { display: flex; align-items: center; justify-content: space-between; }
+    .header-nav { display: flex; align-items: center; list-style: none; gap: 0; font-size: 14px; background: #fff; margin: 0; padding: 0; height: 100%; }
+    .header-nav li { position: relative; display: flex; align-items: center; height: 100%; }
+    .header-nav a { display: flex; align-items: center; gap: 4px; padding: 12px 16px; color: #1e293b; text-decoration: none; font-size: 14px; height: 100%; cursor: pointer; }
+    .header-nav a:hover { background: #f3f4f6; }
+    .header-nav a svg { width: 14px; height: 14px; }
+    .nav-divider { margin: 0 16px; width: 4px; height: 24px; background: #d1d5db; border-radius: 2px; }
+    .nav-folder-icon { width: 24px; height: 24px; object-fit: contain; }
+    .brand-selector {
+      display: flex; align-items: center; gap: 12px;
+      padding: 8px; border-radius: 8px; cursor: pointer;
+      transition: background 0.3s; font-size: 14px;
+    }
+    .brand-selector:hover { background: #f3f4f6; }
+    .brand-avatar { width: 24px; height: 24px; border-radius: 4px; object-fit: contain; border: 1px solid #d1d5db; }
+    .brand-label { font-weight: 600; cursor: pointer; }
+
+    /* shadcn-style buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      border-radius: 9999px;
+      font-size: 0.75rem; font-weight: 500;
+      transition: all 0.15s;
+      white-space: nowrap;
+      height: 32px; padding: 0 16px;
+      border: 1px solid transparent;
+      line-height: 1;
+    }
+    .btn-icon { width: 32px; height: 32px; padding: 0; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; }
+    .btn-icon svg, .btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .btn-default { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+    .btn-default:hover { background: hsla(var(--primary), 0.9); }
+    .btn-outline { background: transparent; color: hsl(var(--foreground)); border-color: hsl(var(--border)); }
+    .btn-outline:hover { background: hsl(var(--accent)); color: hsl(var(--accent-foreground)); }
+    .btn-ghost { background: transparent; color: hsl(var(--foreground)); border-color: transparent; }
+    .btn-ghost:hover { background: hsl(var(--secondary)); }
+    .btn-sm { height: 28px; padding: 0 12px; font-size: 0.7rem; }
+
+    .pill-toggle {
+      display: flex;
+      background: hsl(var(--secondary));
+      border-radius: 9999px;
+      padding: 4px;
+    }
+    .pill-btn {
+      position: relative;
+      padding: 6px 16px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      border-radius: 9999px;
+      border: 0;
+      background: transparent;
+      color: hsl(var(--muted-foreground));
+      transition: color 0.15s;
+      cursor: pointer;
+    }
+    .pill-btn.active { color: hsl(var(--primary-foreground)); }
+    .pill-indicator {
+      position: absolute; inset: 0;
+      background: hsl(var(--primary));
+      border-radius: 9999px; z-index: 0;
+    }
+    .pill-btn span { position: relative; z-index: 1; }
+
+    /* KPI Cards */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding: 8px 24px;
+      background: hsl(var(--background));
+      flex-shrink: 0;
+    }
+    .kpi-card {
+      background: hsl(var(--card));
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius-lg);
+      padding: 10px 16px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .kpi-card:hover {
+      border-color: hsl(var(--primary));
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+    .kpi-top { display: none; }
+    .kpi-icon-wrap { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; }
+    .kpi-info { display: flex; align-items: center; gap: 6px; min-width: 0; }
+    .kpi-value { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; line-height: 1.2; white-space: nowrap; }
+    .kpi-label { font-size: 0.7rem; color: hsl(var(--muted-foreground)); white-space: nowrap; }
+    .kpi-trend {
+      display: inline-flex; align-items: center; gap: 3px;
+      font-size: 0.6rem; font-weight: 600;
+      color: hsl(160, 84%, 39%);
+      background: hsla(160, 84%, 39%, 0.1);
+      padding: 2px 6px; border-radius: 9999px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .kpi-link {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 0.65rem; font-weight: 600;
+      color: hsl(var(--muted-foreground));
+      padding-left: 10px;
+      border-left: 1px solid hsl(var(--border));
+      transition: color 0.15s;
+      flex-shrink: 0;
+      text-decoration: none;
+    }
+    .kpi-card:hover .kpi-link { color: hsl(var(--primary)); }
+    .kpi-link svg { width: 12px; height: 12px; transition: transform 0.15s; }
+    .kpi-card:hover .kpi-link svg { transform: translateX(2px); }
+
+    /* Main Content */
+    .main-content {
+      flex: 1 1 0%;
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 55% 45%;
+      gap: 24px;
+      padding: 8px 24px 24px;
+      overflow: hidden;
+    }
+
+    .panel {
+      background: hsl(var(--card));
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+    .panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      border-bottom: 1px solid hsl(var(--border));
+      background: hsl(var(--card));
+      flex-shrink: 0;
+    }
+    .panel-title {
+      display: flex;
+      align-items: center; gap: 8px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 600;
+    }
+    .panel-title svg { width: 18px; height: 18px; color: hsl(var(--primary)); }
+
+    /* Timeline */
+    .tl-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 20px;
+    }
+    .tl-day { margin-bottom: 24px; }
+    .tl-day:last-child { margin-bottom: 0; }
+    .tl-hdr {
+      display: flex; align-items: center; gap: 12px;
+      padding-bottom: 12px; margin-bottom: 12px;
+      border-bottom: 1px solid hsl(var(--border));
+    }
+    .tl-label {
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.05em; color: hsl(var(--muted-foreground));
+      background: hsl(var(--muted));
+      padding: 2px 10px; border-radius: 9999px;
+    }
+    .tl-day.today .tl-label {
+      background: hsla(var(--primary), 0.1);
+      color: hsl(var(--primary));
+    }
+    .tl-date { font-size: 0.75rem; font-weight: 500; color: hsl(var(--muted-foreground)); }
+    .tl-day.today .tl-date { color: hsl(var(--primary)); font-weight: 600; }
+    .tl-items { display: flex; flex-direction: column; gap: 10px; }
+    .tl-item {
+      display: flex; gap: 12px; padding: 12px 14px;
+      background: hsl(var(--muted)); border: 1px solid hsl(var(--border));
+      border-radius: var(--radius-md);
+      transition: all 0.15s; cursor: pointer;
+      border-left: 3px solid transparent;
+    }
+    .tl-item:hover {
+      border-color: hsla(var(--primary), 0.3);
+      background: hsl(var(--calendar-hover));
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .tl-item.review { border-left-color: hsl(var(--primary)); }
+    .tl-item.promo { border-left-color: hsl(160, 84%, 39%); }
+    .tl-item.task { border-left-color: hsl(250, 76%, 61%); }
+    .tl-ico {
+      width: 36px; height: 36px; border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 1rem;
+    }
+    .tl-ico.blue { background: hsla(var(--primary), 0.1); }
+    .tl-ico.green { background: hsla(160, 84%, 39%, 0.1); }
+    .tl-ico.purple { background: hsla(250, 76%, 61%, 0.1); }
+    .tl-c { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; }
+    .tl-t { font-size: 0.875rem; font-weight: 500; white-space: nowrap; }
+    .tl-m { display: flex; align-items: center; gap: 10px; font-size: 0.75rem; color: hsl(var(--muted-foreground)); flex-shrink: 0; }
+    .tl-m span { display: flex; align-items: center; gap: 4px; }
+    .tl-m svg { width: 12px; height: 12px; }
+    .status-pill {
+      display: inline-flex; align-items: center;
+      font-size: 0.65rem; font-weight: 600;
+      padding: 2px 8px; border-radius: 9999px; line-height: 1.4;
+    }
+    .status-pill.blue { background: hsla(var(--primary), 0.1); color: hsl(var(--primary)); }
+    .status-pill.green { background: hsla(160, 84%, 39%, 0.1); color: hsl(160, 84%, 39%); }
+    .status-pill.purple { background: hsla(250, 76%, 61%, 0.1); color: hsl(250, 76%, 61%); }
+    .tl-acts { display: flex; gap: 6px; opacity: 0; transition: opacity 0.15s; flex-shrink: 0; align-items: flex-start; }
+    .tl-item:hover .tl-acts { opacity: 1; }
+    .tl-more { text-align: center; padding: 16px 0 0; margin-top: 8px; border-top: 1px solid hsl(var(--border)); }
+
+    /* Task Board */
+    .task-cols { display: grid; grid-template-columns: repeat(3, 1fr); flex: 1; min-height: 0; }
+    .task-col {
+      display: flex; flex-direction: column;
+      background: hsl(var(--muted));
+      border-right: 1px solid hsl(var(--border));
+      min-height: 0;
+    }
+    .task-col:last-child { border-right: 0; }
+    .col-hdr {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 14px;
+      background: hsl(var(--card));
+      border-bottom: 1px solid hsl(var(--border));
+      flex-shrink: 0;
+    }
+    .col-title {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.03em; color: hsl(var(--muted-foreground));
+    }
+    .col-cnt {
+      background: hsla(var(--primary), 0.1);
+      color: hsl(var(--primary));
+      font-size: 0.65rem; font-weight: 700;
+      padding: 2px 8px; border-radius: 9999px;
+      line-height: 1.4;
+    }
+    .task-list { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+    .t-card {
+      background: hsl(var(--card)); border: 1px solid hsl(var(--border));
+      border-radius: var(--radius-md); padding: 12px;
+      display: flex; flex-direction: column; gap: 8px;
+      transition: all 0.15s; cursor: grab;
+    }
+    .t-card:hover { box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-color: hsl(var(--muted-foreground) / 0.3); }
+    .t-hdr { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+    .t-title { font-size: 0.8125rem; font-weight: 500; line-height: 1.4; flex: 1; }
+    .t-dots { opacity: 0; transition: opacity 0.15s; color: hsl(var(--muted-foreground)); cursor: pointer; }
+    .t-dots svg { width: 16px; height: 16px; }
+    .t-card:hover .t-dots { opacity: 1; }
+    .t-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 2px 8px; border-radius: 9999px;
+      font-size: 0.65rem; font-weight: 500; line-height: 1.4;
+    }
+    .tag-blue { background: hsla(var(--primary), 0.1); color: hsl(var(--primary)); }
+    .tag-green { background: hsla(160, 84%, 39%, 0.1); color: hsl(160, 84%, 39%); }
+    .tag-purple { background: hsla(250, 76%, 61%, 0.1); color: hsl(250, 76%, 61%); }
+    .tag-gray { background: hsl(var(--secondary)); color: hsl(var(--muted-foreground)); }
+    .t-due { display: inline-flex; align-items: center; gap: 4px; font-size: 0.65rem; color: hsl(var(--muted-foreground)); }
+    .t-due svg { width: 12px; height: 12px; }
+    .t-due.overdue { color: hsl(var(--destructive)); font-weight: 600; }
+    .t-foot {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 8px; border-top: 1px solid hsl(var(--border));
+      font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.03em; color: hsl(var(--muted-foreground));
+    }
+    .add-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px; background: transparent;
+      border-top: 1px solid hsl(var(--border));
+      color: hsl(var(--muted-foreground));
+      font-size: 0.8125rem; font-weight: 500;
+      transition: all 0.15s;
+    }
+    .add-btn:hover { background: hsl(var(--calendar-hover)); color: hsl(var(--primary)); }
+    .add-btn svg { width: 18px; height: 18px; }
+
+    /* Quick Actions */
+    .quick-actions {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      padding: 8px 24px;
+      background: hsl(var(--background));
+      flex-shrink: 0;
+    }
+    .action-tile {
+      background: hsl(var(--card));
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius-lg);
+      padding: 20px 16px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 10px;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+      position: relative;
+    }
+    .action-tile:hover {
+      border-color: hsl(var(--primary));
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+    .action-icon {
+      width: 44px; height: 44px; border-radius: var(--radius-md);
+      background: hsl(var(--secondary));
+      display: flex; align-items: center; justify-content: center;
+      color: hsl(var(--primary));
+      transition: all 0.15s;
+    }
+    .action-icon svg { width: 22px; height: 22px; }
+    .action-tile:hover .action-icon { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+    .action-label { font-family: 'Space Grotesk', sans-serif; font-size: 0.8125rem; font-weight: 600; }
+    .action-badge {
+      position: absolute; top: 10px; right: 10px;
+      background: hsl(var(--primary)); color: hsl(var(--primary-foreground));
+      font-size: 0.65rem; font-weight: 700;
+      padding: 2px 7px; border-radius: 9999px;
+      min-width: 20px; height: 20px;
+      display: flex; align-items: center; justify-content: center;
+      line-height: 1;
+    }
+    .empty-state { text-align: center; padding: 32px 16px; color: hsl(var(--muted-foreground)); }
+    .empty-state svg { width: 40px; height: 40px; margin: 0 auto 12px; opacity: 0.4; }
+    .empty-state p { font-size: 0.8125rem; }
+
+    @media (max-width: 1200px) {
+      .main-content { grid-template-columns: 1fr; }
+      .task-cols { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 1024px) {
+      .kpi-row { grid-template-columns: repeat(2, 1fr); }
+      .quick-actions { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .kpi-row { grid-template-columns: 1fr; gap: 8px; padding: 8px 16px; }
+      .quick-actions { grid-template-columns: repeat(2, 1fr); padding: 8px 16px; }
+      .main-content { padding: 8px 16px 16px; gap: 12px; }
+      .header { padding: 0 16px; }
+      .header-nav li { display: none; }
+      .task-cols { grid-template-columns: 1fr; }
+      .task-col { border-right: 0; border-bottom: 1px solid hsl(var(--border)); }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <!-- HEADER (matches actual Caboodle app) -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="header-left">
+          <a href="/dashboard">
+            <img src="Caboodle-logo-square.png" alt="Caboodle" style="width:144px;height:48px;object-fit:contain;">
+          </a>
+        </div>
+        <div class="header-right">
+          <ul class="header-nav">
+            <li><a href="/dashboard"><div style="padding:12px 16px;">Dashboard</div></a></li>
+            <li>
+              <a href="#">
+                Management
+                <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.586 4.5a.5.5 0 0 1 .53-.22.5.5 0 0 1 .24.16l3 3 3-3a.5.5 0 0 1 .8.8l-3.5 3.5a.5.5 0 0 1-.8 0l-3.5-3.5a.5.5 0 0 1-.14-.53.5.5 0 0 1 .16-.24z" fill="currentColor"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Strategy
+                <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.586 4.5a.5.5 0 0 1 .53-.22.5.5 0 0 1 .24.16l3 3 3-3a.5.5 0 0 1 .8.8l-3.5 3.5a.5.5 0 0 1-.8 0l-3.5-3.5a.5.5 0 0 1-.14-.53.5.5 0 0 1 .16-.24z" fill="currentColor"/></svg>
+              </a>
+            </li>
+            <li class="nav-divider"></li>
+            <li>
+              <a href="/file-repository">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </a>
+            </li>
+            <li class="nav-divider"></li>
+          </ul>
+          <div class="brand-selector">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:#64748b;"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            <label class="brand-label">Broker Dashboard</label>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- QUICK ACTIONS (under header) -->
+    <section class="quick-actions">
+      <a href="/market-overview/create" class="action-tile"><div class="action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M12 8v12M8 12h8"/></svg></div><span class="action-label">Market Overview</span></a>
+      <a href="/category-review" class="action-tile"><div class="action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><span class="action-label">Category Review</span></a>
+      <a href="/distributor-apl" class="action-tile"><div class="action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><span class="action-label">Distributor APL</span></a>
+      <a href="/promotional-management" class="action-tile"><div class="action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div><span class="action-label">Promotional Management</span></a>
+      <a href="/file-repository" class="action-tile"><div class="action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><span class="action-label">File</span></a>
+    </section>
+
+    <!-- KPI ROW -->
+    <section class="kpi-row">
+      <a href="/market-overview-report" class="kpi-card">
+        <div class="kpi-icon blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="kpi-icon-wrap">
+          <div class="kpi-info">
+            <span class="kpi-value">1,247</span>
+            <span class="kpi-label">Stores In</span>
+          </div>
+          <span class="kpi-trend">▲ 12 vs LM</span>
+        </div>
+        <span class="kpi-link">View All <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </a>
+      <a href="/category-review?filter=dueThisWeek" class="kpi-card">
+        <div class="kpi-icon purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <div class="kpi-icon-wrap">
+          <div class="kpi-info">
+            <span class="kpi-value">3</span>
+            <span class="kpi-label">Reviews Due</span>
+          </div>
+        </div>
+        <span class="kpi-link">View All <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </a>
+      <a href="/promotional-management?filter=active" class="kpi-card">
+        <div class="kpi-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div>
+        <div class="kpi-icon-wrap">
+          <div class="kpi-info">
+            <span class="kpi-value">8</span>
+            <span class="kpi-label">Active Promos</span>
+          </div>
+        </div>
+        <span class="kpi-link">View All <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </a>
+      <a href="/settings/brands" class="kpi-card">
+        <div class="kpi-icon orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+        <div class="kpi-icon-wrap">
+          <div class="kpi-info">
+            <span class="kpi-value">15</span>
+            <span class="kpi-label">Brands Represented</span>
+          </div>
+        </div>
+        <span class="kpi-link">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </a>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <!-- TIMELINE -->
+      <section class="panel">
+        <div class="panel-header">
+          <h2 class="panel-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Timeline <span style="font-size:0.75rem;font-weight:500;color:hsl(var(--muted-foreground));margin-left:4px;">Next 14 Days</span>
+          </h2>
+          <div class="pill-toggle">
+            <button class="pill-btn active"><span class="pill-indicator"></span><span>7d</span></button>
+            <button class="pill-btn"><span>14d</span></button>
+            <button class="pill-btn"><span>30d</span></button>
+          </div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-day today">
+            <div class="tl-hdr"><span class="tl-label">Today</span><span class="tl-date">Mon, Jun 23</span></div>
+            <div class="tl-items">
+              <div class="tl-item review">
+                <div class="tl-ico blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(var(--primary))"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+                <div class="tl-c"><div class="tl-t">Sprouts — Snacks</div><div class="tl-m"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Due Wed</span><span class="status-pill blue">Category Review</span></div></div>
+                <div class="tl-acts"><button class="btn btn-icon btn-ghost btn-sm" style="width:28px;height:28px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button></div>
+              </div>
+              <div class="tl-item promo">
+                <div class="tl-ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(160,84%,39%)"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div>
+                <div class="tl-c"><div class="tl-t">KeHE TPR — Beverages</div><div class="tl-m"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Starts Thu</span><span class="status-pill green">Promo</span></div></div>
+                <div class="tl-acts"><button class="btn btn-icon btn-ghost btn-sm" style="width:28px;height:28px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button></div>
+              </div>
+              <div class="tl-item task">
+                <div class="tl-ico purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(250,76%,61%)"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/></svg></div>
+                <div class="tl-c"><div class="tl-t">Costco Visit</div><div class="tl-m"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 10:00 AM</span><span class="status-pill purple">Task</span><span class="status-pill purple">In Progress</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="tl-day">
+            <div class="tl-hdr"><span class="tl-label">Tomorrow</span><span class="tl-date">Tue, Jun 24</span></div>
+            <div class="tl-items">
+              <div class="tl-item promo"><div class="tl-ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(160,84%,39%)"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div><div class="tl-c"><div class="tl-t">UNFI EDLP Review</div><div class="tl-m"><span>Review</span><span class="status-pill green">Promo</span></div></div><div class="tl-acts"><button class="btn btn-icon btn-ghost btn-sm" style="width:28px;height:28px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button></div></div>
+              <div class="tl-item review"><div class="tl-ico blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(var(--primary))"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="tl-c"><div class="tl-t">Whole Foods — Snacks</div><div class="tl-m"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Due Mon</span><span class="status-pill blue">Category Review</span></div></div><div class="tl-acts"><button class="btn btn-icon btn-ghost btn-sm" style="width:28px;height:28px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button></div></div>
+            </div>
+          </div>
+          <div class="tl-day">
+            <div class="tl-hdr"><span class="tl-label">This Week</span><span class="tl-date">Wed, Jun 25</span></div>
+            <div class="tl-items">
+              <div class="tl-item review"><div class="tl-ico blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(var(--primary))"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="tl-c"><div class="tl-t">Target — Beverages</div><div class="tl-m"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Due Wed</span><span class="status-pill blue">Category Review</span></div></div><div class="tl-acts"><button class="btn btn-icon btn-ghost btn-sm" style="width:28px;height:28px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button></div></div>
+              <div class="tl-item task"><div class="tl-ico purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(250,76%,61%)"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/></svg></div><div class="tl-c"><div class="tl-t">Follow up UNFI Independents</div><div class="tl-m"><span class="status-pill purple">Task</span><span class="status-pill purple">In Progress</span></div></div></div>
+            </div>
+          </div>
+          <div class="tl-more"><button class="btn btn-outline btn-sm" style="height:32px;padding:0 20px;">Load More</button></div>
+        </div>
+      </section>
+
+      <!-- TASK BOARD -->
+      <section class="panel">
+        <div class="panel-header">
+          <h2 class="panel-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/></svg>
+            My Tasks
+          </h2>
+        </div>
+        <div class="task-cols">
+          <div class="task-col">
+            <div class="col-hdr"><span class="col-title">To Do <span class="col-cnt">3</span></span></div>
+            <div class="task-list">
+              <div class="t-card"><div class="t-hdr"><span class="t-title">Upload Distributor APL Data</span><button class="t-dots"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div><div class="t-tags"><span class="tag tag-gray">Manual</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Due Today</span></div><div class="t-foot">To Do</div></div>
+              <div class="t-card"><div class="t-hdr"><span class="t-title">Prep Q3 Category Review</span><button class="t-dots"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Due Fri</span></div><div class="t-foot">To Do</div></div>
+              <div class="t-card"><div class="t-hdr"><span class="t-title">Email Brand A Contacts</span><button class="t-dots"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div><div class="t-tags"><span class="tag tag-gray">Manual</span><span class="t-due overdue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Overdue</span></div><div class="t-foot">To Do</div></div>
+            </div>
+            <button class="add-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> + Add Task</button>
+          </div>
+          <div class="task-col">
+            <div class="col-hdr"><span class="col-title">In Progress <span class="col-cnt">2</span></span></div>
+            <div class="task-list">
+              <div class="t-card"><div class="t-hdr"><span class="t-title">Follow up UNFI Independents</span><button class="t-dots"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span></div><div class="t-foot">In Progress</div></div>
+              <div class="t-card"><div class="t-hdr"><span class="t-title">Finalize Costco Promo</span><button class="t-dots"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div><div class="t-tags"><span class="tag tag-green">Promo</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Due Mon</span></div><div class="t-foot">In Progress</div></div>
+            </div>
+            <button class="add-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> + Add Task</button>
+          </div>
+          <div class="task-col">
+            <div class="col-hdr"><span class="col-title">Done <span class="col-cnt">1</span></span></div>
+            <div class="task-list">
+              <div class="t-card" style="opacity:0.6;"><div class="t-hdr"><span class="t-title" style="text-decoration:line-through;">Call Brand C</span><button class="t-dots"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div><div class="t-tags"><span class="tag tag-gray">Manual</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Jun 20</span></div><div class="t-foot">Done</div></div>
+            </div>
+            <button class="add-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> + Add Task</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+</body>
+</html>
