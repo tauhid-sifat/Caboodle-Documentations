@@ -140,7 +140,9 @@
     .t-due svg { width: 11px; height: 11px; }
     .t-due.overdue { color: hsl(var(--destructive)); font-weight: 600; }
     .t-foot { display: flex; padding-top: 6px; border-top: 1px solid hsl(var(--border)); font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: hsl(var(--muted-foreground)); }
-    .add-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px; background: transparent; border-top: 1px solid hsl(var(--border)); color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-weight: 500; transition: all 0.15s; cursor: pointer; border-left: 0; border-right: 0; border-bottom: 0; }
+    .add-btn { display: flex; align-items: center; justify-content: center; gap: 4px; padding: 4px 6px; background: transparent; border-top: 1px solid hsl(var(--border)); color: hsl(var(--muted-foreground)); font-size: 0.7rem; font-weight: 500; transition: all 0.15s; cursor: pointer; border-left: 0; border-right: 0; border-bottom: 0; }
+    .add-btn:hover { background: hsl(var(--calendar-hover)); color: hsl(var(--primary)); }
+    .add-btn svg { width: 10px; height: 10px; flex-shrink: 0; }
     /* Modal overlays */
     .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.4); z-index:1000; align-items:center; justify-content:center; }
     .modal-overlay.show { display:flex; }
@@ -223,13 +225,13 @@
         <div class="h-right">
           <ul class="h-nav">
             <li><button onclick="showView('dashboard')"><div style="padding:12px 16px;">Dashboard</div></button></li>
-            <li><a href="#">Management <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.586 4.5a.5.5 0 0 1 .53-.22.5.5 0 0 1 .24.16l3 3 3-3a.5.5 0 0 1 .8.8l-3.5 3.5a.5.5 0 0 1-.8 0l-3.5-3.5a.5.5 0 0 1-.14-.53.5.5 0 0 1 .16-.24z" fill="currentColor"/></svg></a></li>
-            <li><a href="#">Strategy <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.586 4.5a.5.5 0 0 1 .53-.22.5.5 0 0 1 .24.16l3 3 3-3a.5.5 0 0 1 .8.8l-3.5 3.5a.5.5 0 0 1-.8 0l-3.5-3.5a.5.5 0 0 1-.14-.53.5.5 0 0 1 .16-.24z" fill="currentColor"/></svg></a></li>
+            <li><a href="#">Management <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.586 4.5a.5.5 0 0 1 .53-.22.5.5 0 0 1 .24.16l3 3 3-3a.5.5 0 0 1 .8.8l-3.5 3.5a.5.5 0 0 1-.8 0l-3.5-3.5a.5.5 0 0 1-.14-.53.5.5 0 0 1 .16-.24z" fill="currentColor"></path></svg></a></li>
+            <li><a href="#">Strategy <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.586 4.5a.5.5 0 0 1 .53-.22.5.5 0 0 1 .24.16l3 3 3-3a.5.5 0 0 1 .8.8l-3.5 3.5a.5.5 0 0 1-.8 0l-3.5-3.5a.5.5 0 0 1-.14-.53.5.5 0 0 1 .16-.24z" fill="currentColor"></path></svg></a></li>
             <li class="nav-div"></li>
-            <li><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></a></li>
+            <li><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a></li>
             <li class="nav-div"></li>
           </ul>
-          <div class="brand-sel"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:#64748b;"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg><label>Acme Brokerage</label></div>
+          <div class="brand-sel"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:#64748b;"><circle cx="12" cy="8" r="4"></circle><path d="M20 21a8 8 0 1 0-16 0"></path></svg><label>Acme Brokerage</label></div>
         </div>
       </div>
     </header>
@@ -238,41 +240,41 @@
     <div id="view-dashboard" class="view active">
       <div class="dash-scroll">
         <div class="quick-actions">
-          <a href="#" class="action-tile" onclick="showView('catreview')"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><span class="a-label">Category Review</span></a>
-          <a href="#" class="action-tile" onclick="showView('promocal')"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div><span class="a-label">Promotional Management</span></a>
-          <a href="#" class="action-tile"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M12 8v12M8 12h8"/></svg></div><span class="a-label">Market Overview</span></a>
-          <a href="#" class="action-tile"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><span class="a-label">Distributor APL</span></a>
-          <a href="#" class="action-tile"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><span class="a-label">File</span></a>
+          <a href="#" class="action-tile" onclick="showView('catreview')"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div><span class="a-label">Category Review</span></a>
+          <a href="#" class="action-tile" onclick="showView('promocal')"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></div><span class="a-label">Promotional Management</span></a>
+          <a href="#" class="action-tile"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M12 8v12M8 12h8"></path></svg></div><span class="a-label">Market Overview</span></a>
+          <a href="#" class="action-tile"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div><span class="a-label">Distributor APL</span></a>
+          <a href="#" class="action-tile"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></div><span class="a-label">File</span></a>
         </div>
 
         <div class="kpi-row">
-          <a href="#" class="kpi-card"><div class="kpi-ico blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="kpi-wrap"><div class="kpi-info"><span class="kpi-val">1,247</span><span class="kpi-lbl">Stores In</span></div><span class="kpi-trend">▲ 12 vs LM</span></div><span class="kpi-link">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
-          <a href="#" class="kpi-card" onclick="showView('catreview')"><div class="kpi-ico purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="kpi-wrap"><div class="kpi-info"><span class="kpi-val">3</span><span class="kpi-lbl">Reviews Due</span></div></div><span class="kpi-link">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+          <a href="#" class="kpi-card" onclick="showView('catreview')"><div class="kpi-ico purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="kpi-wrap"><div class="kpi-info"><span class="kpi-val">7</span><span class="kpi-lbl">Reviews This Month</span></div><span class="kpi-trend">Next 60 days</span></div><span class="kpi-link">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+          <a href="#" class="kpi-card" onclick="showView('catreview')"><div class="kpi-ico orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="kpi-wrap"><div class="kpi-info"><span class="kpi-val">2</span><span class="kpi-lbl">Past Due</span></div><span class="kpi-trend" style="color:hsl(var(--destructive));background:hsla(var(--destructive),0.1);">Needs attention</span></div><span class="kpi-link">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
           <a href="#" class="kpi-card" onclick="showView('promocal')"><div class="kpi-ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div><div class="kpi-wrap"><div class="kpi-info"><span class="kpi-val">8</span><span class="kpi-lbl">Active Promos</span></div></div><span class="kpi-link">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
-          <a href="#" class="kpi-card"><div class="kpi-ico orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div class="kpi-wrap"><div class="kpi-info"><span class="kpi-val">15</span><span class="kpi-lbl">Brands Represented</span></div></div><span class="kpi-link">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+          <a href="#" class="kpi-card"><div class="kpi-ico blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div class="kpi-wrap"><div class="kpi-info"><span class="kpi-val">7</span><span class="kpi-lbl">Brands In Review</span></div></div><span class="kpi-link">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
         </div>
 
         <div class="dash-grid">
           <div class="panel">
-            <div class="p-hdr"><h2 class="p-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Timeline <span style="font-size:0.7rem;font-weight:500;color:hsl(var(--muted-foreground));margin-left:4px;">Next 14 Days</span></h2><div class="pill-g"><button class="active">7d</button><button>14d</button><button>30d</button></div></div>
+            <div class="p-hdr"><h2 class="p-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> Timeline <span style="font-size:0.7rem;font-weight:500;color:hsl(var(--muted-foreground));margin-left:4px;">Next 14 Days</span></h2><div class="pill-g"><button class="active">7d</button><button>14d</button><button>30d</button></div></div>
             <div class="tl-body">
               <div class="tl-day today">
                 <div class="tl-hdr"><span class="tl-lbl">Today</span><span class="tl-date">Mon, Jun 23</span></div>
                 <div class="tl-items">
-                  <div class="tl-item cr" onclick="showView('catreview')"><div class="tl-ico blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(var(--primary))"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="tl-c"><div class="tl-t">Sprouts — Snacks</div><div class="tl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Due Wed</span><span class="s-pill blue">Category Review</span></div></div></div>
-                  <div class="tl-item promo" onclick="showView('promocal')"><div class="tl-ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(160,84%,39%)"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div><div class="tl-c"><div class="tl-t">KeHE TPR — Beverages</div><div class="tl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Starts Thu</span><span class="s-pill green">Promo</span></div></div></div>
-                  <div class="tl-item task"><div class="tl-ico purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(250,76%,61%)"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/></svg></div><div class="tl-c"><div class="tl-t">Costco Visit</div><div class="tl-m"><span class="s-pill purple">Task</span><span class="s-pill purple">In Progress</span></div></div></div>
+                  <div class="tl-item cr" onclick="showView('catreview')"><div class="tl-ico blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(var(--primary))"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div><div class="tl-c"><div class="tl-t">Nugget Market — Specialty Asian</div><div class="tl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Starts Jul 20</span><span class="s-pill blue">Category Review</span></div></div></div>
+                  <div class="tl-item promo" onclick="showView('promocal')"><div class="tl-ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(160,84%,39%)"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></div><div class="tl-c"><div class="tl-t">KeHE TPR — Beverages</div><div class="tl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Starts Thu</span><span class="s-pill green">Promo</span></div></div></div>
+                  <div class="tl-item task"><div class="tl-ico purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(250,76%,61%)"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg></div><div class="tl-c"><div class="tl-t">F/U with Buyer — Gelson's</div><div class="tl-m"><span class="s-pill purple">Task</span><span class="s-pill purple">In Progress</span></div></div></div>
                 </div>
               </div>
-              <div class="tl-day"><div class="tl-hdr"><span class="tl-lbl">Tomorrow</span><span class="tl-date">Tue, Jun 24</span></div><div class="tl-items"><div class="tl-item promo" onclick="showView('promocal')"><div class="tl-ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(160,84%,39%)"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div><div class="tl-c"><div class="tl-t">UNFI EDLP Review</div><div class="tl-m"><span>Review</span><span class="s-pill green">Promo</span></div></div></div><div class="tl-item cr" onclick="showView('catreview')"><div class="tl-ico blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(var(--primary))"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="tl-c"><div class="tl-t">Whole Foods — Snacks</div><div class="tl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Due Mon</span><span class="s-pill blue">Category Review</span></div></div></div></div></div>
+              <div class="tl-day"><div class="tl-hdr"><span class="tl-lbl">Tomorrow</span><span class="tl-date">Tue, Jun 24</span></div><div class="tl-items"><div class="tl-item promo" onclick="showView('promocal')"><div class="tl-ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(160,84%,39%)"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></div><div class="tl-c"><div class="tl-t">UNFI EDLP Review</div><div class="tl-m"><span>Review</span><span class="s-pill green">Promo</span></div></div></div><div class="tl-item cr" onclick="showView('catreview')"><div class="tl-ico blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(var(--primary))"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div><div class="tl-c"><div class="tl-t">Lazy Acres — TBD Category</div><div class="tl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Review Jun</span><span class="s-pill blue">Category Review</span></div></div></div></div></div>
             </div>
           </div>
           <div class="panel">
-            <div class="p-hdr"><h2 class="p-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/></svg> My Tasks</h2></div>
+            <div class="p-hdr"><h2 class="p-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg> My Tasks</h2></div>
             <div class="task-cols">
-              <div class="task-col"><div class="col-hdr"><span class="col-title">To Do <span class="col-cnt">3</span></span></div><div class="t-list"><div class="t-card"><div class="t-hdr"><span class="t-title">Upload Distributor APL</span></div><div class="t-tags"><span class="tag tag-gray">Manual</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Due Today</span></div></div><div class="t-card"><div class="t-hdr"><span class="t-title">Prep Q3 Cat Review</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Due Fri</span></div></div><div class="t-card"><div class="t-hdr"><span class="t-title">Email Brand A</span></div><div class="t-tags"><span class="tag tag-gray">Manual</span><span class="t-due overdue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Overdue</span></div></div></div><button class="add-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> + Add Task</button></div>
-              <div class="task-col"><div class="col-hdr"><span class="col-title">In Progress <span class="col-cnt">2</span></span></div><div class="t-list"><div class="t-card"><div class="t-hdr"><span class="t-title">Follow up UNFI</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span></div></div><div class="t-card"><div class="t-hdr"><span class="t-title">Finalize Costco</span></div><div class="t-tags"><span class="tag tag-green">Promo</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Due Mon</span></div></div></div><button class="add-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> + Add Task</button></div>
-              <div class="task-col"><div class="col-hdr"><span class="col-title">Done <span class="col-cnt">1</span></span></div><div class="t-list"><div class="t-card" style="opacity:0.6;"><div class="t-hdr"><span class="t-title" style="text-decoration:line-through;">Call Brand C</span></div><div class="t-tags"><span class="tag tag-gray">Manual</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Jun 20</span></div></div></div><button class="add-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> + Add Task</button></div>
+              <div class="task-col"><div class="col-hdr"><span class="col-title">To Do <span class="col-cnt">3</span></span></div><div class="t-list"><div class="t-card"><div class="t-hdr"><span class="t-title">F/U Gelson's buyer — Colin</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Due Today</span></div></div><div class="t-card"><div class="t-hdr"><span class="t-title">Contact Di Bari for Lazy Acres</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Due Fri</span></div></div><div class="t-card"><div class="t-hdr"><span class="t-title">Upload APL — KeHE</span></div><div class="t-tags"><span class="tag tag-gray">APL</span><span class="t-due overdue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Overdue</span></div></div></div><button class="add-btn" onclick="openAddTaskModal('todo')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Task</button></div>
+              <div class="task-col"><div class="col-hdr"><span class="col-title">In Progress <span class="col-cnt">2</span></span></div><div class="t-list"><div class="t-card"><div class="t-hdr"><span class="t-title">Prep Nugget — Asian review</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span></div></div><div class="t-card"><div class="t-hdr"><span class="t-title">Finalize Costco Promo</span></div><div class="t-tags"><span class="tag tag-green">Promo</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Due Mon</span></div></div></div><button class="add-btn" onclick="openAddTaskModal('in_progress')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Task</button></div>
+              <div class="task-col"><div class="col-hdr"><span class="col-title">Done <span class="col-cnt">1</span></span></div><div class="t-list"><div class="t-card" style="opacity:0.6;"><div class="t-hdr"><span class="t-title" style="text-decoration:line-through;">Submit 24 Vegan to Lucky's</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Jun 20</span></div></div></div><button class="add-btn" onclick="openAddTaskModal('done')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Task</button></div>
             </div>
           </div>
         </div>
@@ -286,8 +288,8 @@
           <div class="cal-top-left">
             <h1 class="cal-title"><span id="crYear">2026</span> Category Review</h1>
             <div class="cal-nav">
-              <button class="cal-nav-btn" onclick="crChangeYear(-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></button>
-              <button class="cal-nav-btn" onclick="crChangeYear(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button>
+              <button class="cal-nav-btn" onclick="crChangeYear(-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"></path></svg></button>
+              <button class="cal-nav-btn" onclick="crChangeYear(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></button>
             </div>
             <button class="btn btn-sm" onclick="crSetThisYear()">This Year</button>
             <button class="btn btn-default btn-sm" onclick="showView('promocal')">Promotional Calendar</button>
@@ -298,7 +300,7 @@
             </div>
           </div>
           <div style="display:flex;gap:8px;">
-            <button class="btn btn-sm" onclick="crShowEmail()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6z"/><polyline points="22,6 12,13 2,6"/></svg> Send to Contacts</button>
+            <button class="btn btn-sm" onclick="crShowEmail()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Send to Contacts</button>
             <button class="btn btn-sm" onclick="showSendLog()">Send Log</button>
           </div>
         </div>
@@ -324,8 +326,8 @@
           <div class="cal-top-left">
             <h1 class="cal-title"><span id="pcYear">2026</span> Promotional Calendar</h1>
             <div class="cal-nav">
-              <button class="cal-nav-btn" onclick="pcChangeYear(-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></button>
-              <button class="cal-nav-btn" onclick="pcChangeYear(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button>
+              <button class="cal-nav-btn" onclick="pcChangeYear(-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"></path></svg></button>
+              <button class="cal-nav-btn" onclick="pcChangeYear(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></button>
             </div>
             <button class="btn btn-sm" onclick="pcSetThisYear()">This Year</button>
             <button class="btn btn-default btn-sm" onclick="showView('catreview')">Category Review</button>
@@ -414,11 +416,64 @@
       </div>
       <div class="modal-foot">
         <button class="btn btn-sm" onclick="closeModal('assignContactModal')">Done</button>
+        <button class="btn btn-sm btn-default" id="assignSendEmailBtn" onclick="openAssignSendEmail()">Send Email</button>
       </div>
     </div>
   </div>
 
-  <!-- MODAL: Send Log -->
+  <!-- MODAL: Compose Email for Assigned Contacts -->
+  <div id="assignComposeModal" class="modal-overlay">
+    <div class="modal-box" style="max-width:500px;">
+      <div class="modal-hdr"><h3>Compose Email</h3><button class="modal-close" onclick="closeModal('assignComposeModal')">✕</button></div>
+      <div class="modal-body">
+        <div style="margin-bottom:10px;">
+          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">To</label>
+          <div id="assignComposeRecipients" style="font-size:0.8rem;color:hsl(var(--foreground));background:hsl(var(--muted));padding:8px 12px;border-radius:8px;min-height:20px;"></div>
+        </div>
+        <div style="margin-bottom:10px;">
+          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Subject</label>
+          <input class="modal-input" id="assignComposeSubject" placeholder="e.g., Category Review Milestone" value="">
+        </div>
+        <div style="margin-bottom:10px;">
+          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Message</label>
+          <textarea class="modal-input" id="assignComposeBody" rows="5" placeholder="Type your message..." style="resize:vertical;min-height:80px;"></textarea>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-sm" onclick="closeModal('assignComposeModal')">Cancel</button>
+        <button class="btn btn-sm btn-default" id="assignSendBtn" onclick="sendAssignedEmail()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Add Task -->
+  <div id="addTaskModal" class="modal-overlay">
+    <div class="modal-box" style="max-width:400px;">
+      <div class="modal-hdr"><h3>Add Task</h3><button class="modal-close" onclick="closeModal('addTaskModal')">✕</button></div>
+      <div class="modal-body">
+        <div style="margin-bottom:10px;">
+          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Title</label>
+          <input class="modal-input" id="taskTitleInput" placeholder="e.g., F/U with buyer, Prep Nugget review" oninput="checkTaskForm()">
+        </div>
+        <div style="margin-bottom:10px;">
+          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Status</label>
+          <select class="modal-input" id="taskStatusSelect">
+            <option value="todo">To Do</option>
+            <option value="in_progress">In Progress</option>
+            <option value="done">Done</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Due Date</label>
+          <input class="modal-input" id="taskDueInput" type="date" style="font-size:0.85rem;">
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-sm" onclick="closeModal('addTaskModal')">Cancel</button>
+        <button class="btn btn-sm btn-default" id="addTaskBtn" disabled onclick="addTask()">Add Task</button>
+      </div>
+    </div>
+  </div>
   <div id="sendLogModal" class="modal-overlay">
     <div class="modal-box" style="max-width:500px;">
       <div class="modal-hdr"><h3>Send Log</h3><button class="modal-close" onclick="closeModal('sendLogModal')">✕</button></div>
@@ -449,13 +504,16 @@
     // ===== CATEGORY REVIEW DATA =====
     const CR_MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     const CR_DATA = [
-      { id:'wf', banner:'Whole Foods Market', category:'Frozen Desserts', months:{ Jan:'Review', Feb:'', Mar:'Review', Apr:'Reset', May:'', Jun:'Review', Jul:'', Aug:'Reset', Sep:'', Oct:'Review', Nov:'', Dec:'' } },
-      { id:'sp', banner:'Sprouts', category:'Frozen Desserts', months:{ Jan:'Review', Feb:'', Mar:'', Apr:'', May:'Reset', Jun:'', Jul:'Review', Aug:'', Sep:'Reset', Oct:'', Nov:'Review', Dec:'' } },
-      { id:'ng', banner:'Natural Grocers', category:'Frozen Novelties', months:{ Jan:'', Feb:'Review', Mar:'', Apr:'', May:'', Jun:'Reset', Jul:'', Aug:'', Sep:'Review', Oct:'', Nov:'', Dec:'Reset' } },
-      { id:'nm', banner:'Nugget Market', category:'Frozen Novelties', months:{ Jan:'Reset', Feb:'', Mar:'', Apr:'Review', May:'', Jun:'', Jul:'', Aug:'Review', Sep:'', Oct:'', Nov:'Reset', Dec:'' } },
-      { id:'ef', banner:'Earth Fare', category:'Ice Cream', months:{ Jan:'', Feb:'', Mar:'Review', Apr:'', May:'', Jun:'', Jul:'Reset', Aug:'', Sep:'', Oct:'', Nov:'Review', Dec:'' } },
-      { id:'cm', banner:'Central Market', category:'Ice Cream', months:{ Jan:'Review', Feb:'', Mar:'', Apr:'', May:'', Jun:'Review', Jul:'', Aug:'', Sep:'', Oct:'Reset', Nov:'', Dec:'' } },
-      { id:'wg', banner:'Wegmans', category:'Frozen', months:{ Jan:'', Feb:'Reset', Mar:'', Apr:'', May:'Review', Jun:'', Jul:'', Aug:'', Sep:'', Oct:'', Nov:'', Dec:'Review' } }
+      { id:'1', banner:'Nugget Market', category:'Specialty Asian', region:'NorCal', months:{ Jan:'', Feb:'', Mar:'', Apr:'', May:'', Jun:'', Jul:'Review', Aug:'', Sep:'', Oct:'', Nov:'', Dec:'' } },
+      { id:'2', banner:'Gelson\'s', category:'Mac & Cheese', region:'SoCal', months:{ Jan:'', Feb:'', Mar:'', Apr:'Review', May:'', Jun:'', Jul:'', Aug:'', Sep:'', Oct:'', Nov:'', Dec:'' } },
+      { id:'3', banner:'Lucky/Save Mart', category:'Pasta & Pasta Sauce', region:'NorCal', months:{ Jan:'', Feb:'', Mar:'', Apr:'', May:'', Jun:'', Jul:'', Aug:'', Sep:'', Oct:'Review', Nov:'', Dec:'' } },
+      { id:'4', banner:'Mother\'s Market', category:'SS Pasta Long & Short', region:'SoCal', months:{ Jan:'', Feb:'', Mar:'', Apr:'', May:'', Jun:'', Jul:'', Aug:'Review', Sep:'', Oct:'', Nov:'', Dec:'' } },
+      { id:'5', banner:'Raley\'s/Bel Air', category:'International - Asian', region:'NorCal', months:{ Jan:'', Feb:'', Mar:'', Apr:'', May:'', Jun:'', Jul:'', Aug:'', Sep:'', Oct:'Review', Nov:'', Dec:'' } },
+      { id:'6', banner:'Lazy Acres Market', category:'TBD', region:'SoCal', months:{ Jan:'', Feb:'', Mar:'', Apr:'', May:'', Jun:'Review', Jul:'', Aug:'', Sep:'', Oct:'', Nov:'', Dec:'' } },
+      { id:'7', banner:'Jimbos', category:'General', region:'SoCal', months:{ Jan:'', Feb:'', Mar:'', Apr:'', May:'', Jun:'', Jul:'', Aug:'', Sep:'', Oct:'', Nov:'Review', Dec:'' } },
+      { id:'8', banner:'Whole Foods Market', category:'Frozen Desserts', region:'National', months:{ Jan:'Review', Feb:'', Mar:'', Apr:'Reset', May:'', Jun:'', Jul:'', Aug:'Reset', Sep:'', Oct:'', Nov:'', Dec:'' } },
+      { id:'9', banner:'Sprouts', category:'Frozen Desserts', region:'National', months:{ Jan:'', Feb:'', Mar:'Review', Apr:'', May:'Reset', Jun:'', Jul:'', Aug:'', Sep:'', Oct:'', Nov:'', Dec:'Reset' } },
+      { id:'10', banner:'Wegmans', category:'Frozen', region:'National', months:{ Jan:'', Feb:'', Mar:'', Apr:'', May:'Review', Jun:'', Jul:'', Aug:'', Sep:'', Oct:'', Nov:'', Dec:'Review' } }
     ];
 
     let crYear = 2026;
@@ -618,14 +676,64 @@
       else arr.push(id);
     }
 
+    function openAssignSendEmail() {
+      const key = assignCellKey;
+      const selectedIds = assignContacts[key] || [];
+      if (!selectedIds.length) {
+        alert('Please select at least one contact.');
+        return;
+      }
+      const selected = contacts.filter(c => selectedIds.includes(c.id));
+      const recipientsHtml = selected.map(c =>
+        `<span style="display:inline-block;background:hsl(var(--primary));color:white;padding:2px 8px;border-radius:999px;font-size:0.7rem;margin:2px;">${c.brand} – ${c.name}</span>`
+      ).join('');
+      document.getElementById('assignComposeRecipients').innerHTML = recipientsHtml || 'No contacts selected';
+      document.getElementById('assignComposeSubject').value = '';
+      document.getElementById('assignComposeBody').value = '';
+      showModal('assignComposeModal');
+    }
+
+    function sendAssignedEmail() {
+      const subject = document.getElementById('assignComposeSubject').value.trim();
+      const body = document.getElementById('assignComposeBody').value.trim();
+      if (!subject || !body) {
+        alert('Please fill in subject and message.');
+        return;
+      }
+      closeModal('assignComposeModal');
+      closeModal('assignContactModal');
+      alert(`Email sent to assigned contacts.\nSubject: ${subject}`);
+    }
+
     // Modal helpers
     function showModal(id) { document.getElementById(id).classList.add('show'); }
     function closeModal(id) { document.getElementById(id).classList.remove('show'); }
+
+    // Add Task
+    function openAddTaskModal(status) {
+      document.getElementById('taskStatusSelect').value = status || 'todo';
+      document.getElementById('taskTitleInput').value = '';
+      document.getElementById('taskDueInput').value = '';
+      document.getElementById('taskSourceSelect').value = 'manual';
+      document.getElementById('addTaskBtn').disabled = true;
+      showModal('addTaskModal');
+    }
+    function checkTaskForm() {
+      const title = document.getElementById('taskTitleInput').value.trim();
+      document.getElementById('addTaskBtn').disabled = !title;
+    }
+    function addTask() {
+      const title = document.getElementById('taskTitleInput').value.trim();
+      if (!title) return;
+      closeModal('addTaskModal');
+      alert('Task "' + title + '" added to ' + document.getElementById('taskStatusSelect').value.replace('_', ' ') + '.');
+    }
 
     function crRender() {
       document.getElementById('crYear').textContent = crYear;
       const cats = [...new Set(CR_DATA.map(r => r.category))];
       const rets = [...new Set(CR_DATA.map(r => r.banner))];
+      const regs = [...new Set(CR_DATA.map(r => r.region))];
       const types = [...new Set(CR_DATA.flatMap(r => Object.values(r.months).filter(v => v)))];
       
       populateSelect('crCatFilter', cats, crFilterState.cat);
@@ -662,7 +770,7 @@
           const isChecked = crChecked[key];
           if (content) {
             const colorClass = content === 'Reset' ? 'green' : 'blue';
-            html += `<td class="month-cell"><span class="cat-badge ${colorClass}" onclick="crToggleCheck('${key}')" ondblclick="event.stopPropagation();openAssignContacts('${row.banner} - ${month}')">${content}${isChecked ? '<span class="ck-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>' : ''}</span></td>`;
+            html += `<td class="month-cell"><span class="cat-badge ${colorClass}" onclick="crToggleCheck('${key}')" ondblclick="event.stopPropagation();openAssignContacts('${row.banner} - ${month}')">${content}${isChecked ? '<span class="ck-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>' : ''}</span></td>`;
           } else {
             html += `<td class="month-cell"></td>`;
           }
@@ -685,12 +793,15 @@
           const content = row.months[month] || '';
           if (content) {
             entries.push({
-              retailer: row.banner, category: row.category, reviewMonth: month,
-              dateType: content, region: 'National',
+              region: row.region || 'National',
+              retailer: row.banner,
+              category: row.category,
+              reviewMonth: month,
+              dateType: content,
               submissionDue: month + ' 01, ' + crYear,
               reviewDates: month + ' 10-15, ' + crYear,
               resetDate: content === 'Reset' ? month + ' 28, ' + crYear : '',
-              notes: '', createdBy: 'Demo User'
+              notes: row.region === 'NorCal' ? 'Contact brand closer to review date' : (row.region === 'SoCal' ? 'Follow up with buyer for category schedule' : 'Standard review cycle')
             });
           }
         });
@@ -698,20 +809,20 @@
 
       let html = '<div class="bg-white rounded-lg border overflow-hidden" style="margin:16px;"><div class="p-4" style="border-bottom:1px solid hsl(var(--border));"><div style="display:flex;justify-content:space-between;align-items:center;"><h2 style="font-size:1.1rem;font-weight:600;font-family:\'Space Grotesk\',sans-serif;">Category Review</h2><div style="display:flex;gap:8px;flex-wrap:wrap;">';
       html += '<button class="btn btn-sm" style="background:#f5f5f5;border-color:#d9d9d9;color:rgba(0,0,0,0.25);cursor:not-allowed;">Add To Calendar</button>';
-      html += '<button class="btn btn-sm" style="background:#f5f5f5;border-color:#d9d9d9;color:rgba(0,0,0,0.25);cursor:not-allowed;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Export</button>';
-      html += '<button class="btn btn-sm btn-default"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg> Add Log</button>';
-      html += '<button class="btn btn-sm" style="background:#17a2b8;color:white;border-color:#17a2b8;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> Upload Category Review</button>';
-      html += '<button class="btn btn-sm" style="background:#ff4d4f;color:white;border-color:#ff4d4f;opacity:0.5;" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Remove Log</button>';
-      html += '<button class="btn btn-sm" style="background:#ff4d4f;color:white;border-color:#ff4d4f;opacity:0.5;" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg> Delete All Matching</button>';
-      html += '<button class="btn btn-sm btn-default" onclick="crToggleFilters()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polygon points="22 3 22 15 16 15 16 21 2 21 2 3"/><line x1="10" y1="9" x2="18" y2="9"/><line x1="10" y1="13" x2="16" y2="13"/><line x1="10" y1="17" x2="14" y2="17"/></svg> Filter</button>';
+      html += '<button class="btn btn-sm" style="background:#f5f5f5;border-color:#d9d9d9;color:rgba(0,0,0,0.25);cursor:not-allowed;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Export</button>';
+      html += '<button class="btn btn-sm btn-default"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg> Add Log</button>';
+      html += '<button class="btn btn-sm" style="background:#17a2b8;color:white;border-color:#17a2b8;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg> Upload Category Review</button>';
+      html += '<button class="btn btn-sm" style="background:#ff4d4f;color:white;border-color:#ff4d4f;opacity:0.5;" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg> Remove Log</button>';
+      html += '<button class="btn btn-sm" style="background:#ff4d4f;color:white;border-color:#ff4d4f;opacity:0.5;" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path></svg> Delete All Matching</button>';
+      html += '<button class="btn btn-sm btn-default" onclick="crToggleFilters()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polygon points="22 3 22 15 16 15 16 21 2 21 2 3"></polygon><line x1="10" y1="9" x2="18" y2="9"></line><line x1="10" y1="13" x2="16" y2="13"></line><line x1="10" y1="17" x2="14" y2="17"></line></svg> Filter</button>';
       html += '</div></div></div>';
       html += '<div style="overflow-x:auto;"><table class="cal-table"><thead><tr>';
       html += '<th style="width:40px;text-align:center;"><input type="checkbox" disabled></th>';
-      html += '<th>Region</th><th>Retailer</th><th>Category</th><th>Review Month</th><th>Submission Due Date</th><th>Review Date</th><th>Reset Date</th><th style="min-width:150px;">Additional Notes</th><th>Created By</th><th style="text-align:center;">Action</th>';
+      html += '<th>Region</th><th>Retailer</th><th>Category</th><th>Review Month</th><th>Submission Due Date</th><th>Review Date</th><th>Reset Date</th><th style="min-width:150px;">Additional Notes</th><th style="text-align:center;">Action</th>';
       html += '</tr></thead><tbody>';
 
       if (entries.length === 0) {
-        html += '<tr><td colspan="11" style="text-align:center;padding:60px;color:hsl(var(--muted-foreground));"><svg viewBox="0 0 64 41" fill="none" width="64" height="41" style="margin:0 auto 12px;opacity:0.4;"><ellipse cx="32" cy="33" rx="32" ry="7" fill="#f5f5f5"/><g fill-rule="nonzero" stroke="#d9d9d9"><path d="M55 12.76L44.854 1.258C44.367.474 43.656 0 42.907 0H21.093c-.749 0-1.46.474-1.947 1.257L9 12.761V22h46v-9.24z"/><path d="M41.613 15.931c0-1.605.994-2.93 2.227-2.931H55v18.137C55 33.26 53.68 35 52.05 35h-40.1C10.32 35 9 33.259 9 31.137V13h11.16c1.233 0 2.227 1.323 2.227 2.928v.022c0 1.605 1.005 2.901 2.237 2.901h14.752c1.232 0 2.237-1.308 2.237-2.913v-.007z" fill="#fafafa"/></g></svg><div>No data</div></td></tr>';
+        html += '<tr><td colspan="10" style="text-align:center;padding:60px;color:hsl(var(--muted-foreground));"><svg viewBox="0 0 64 41" fill="none" width="64" height="41" style="margin:0 auto 12px;opacity:0.4;"><ellipse cx="32" cy="33" rx="32" ry="7" fill="#f5f5f5"></ellipse><g fill-rule="nonzero" stroke="#d9d9d9"><path d="M55 12.76L44.854 1.258C44.367.474 43.656 0 42.907 0H21.093c-.749 0-1.46.474-1.947 1.257L9 12.761V22h46v-9.24z"></path><path d="M41.613 15.931c0-1.605.994-2.93 2.227-2.931H55v18.137C55 33.26 53.68 35 52.05 35h-40.1C10.32 35 9 33.259 9 31.137V13h11.16c1.233 0 2.227 1.323 2.227 2.928v.022c0 1.605 1.005 2.901 2.237 2.901h14.752c1.232 0 2.237-1.308 2.237-2.913v-.007z" fill="#fafafa"></path></g></svg><div>No data</div></td></tr>';
       } else {
         entries.forEach(e => {
           html += `<tr onclick="alert('Navigate to detail: ${e.retailer} - ${e.category} - ${e.reviewMonth}')">`;
@@ -722,8 +833,7 @@
           html += `<td>${e.submissionDue}</td><td>${e.reviewDates}</td>`;
           html += `<td>${e.resetDate || '—'}</td>`;
           html += `<td style="font-size:0.75rem;color:hsl(var(--muted-foreground));">${e.notes || '—'}</td>`;
-          html += `<td style="font-size:0.75rem;">${e.createdBy}</td>`;
-          html += `<td style="text-align:center;"><button class="btn btn-sm" style="font-size:0.6rem;" onclick="event.stopPropagation();alert('Edit ${e.retailer}')">Edit</button></td>`;
+          html += `<td style="text-align:center;"><button class="btn btn-sm" style="font-size:0.6rem;" onclick="event?event.stopPropagation():'';alert('Edit ${e.retailer}')">Edit</button></td>`;
           html += `</tr>`;
         });
       }
@@ -832,8 +942,8 @@
 
       let html = '<div class="bg-white rounded-lg border overflow-hidden" style="margin:16px;"><div class="p-4" style="border-bottom:1px solid hsl(var(--border));"><div style="display:flex;justify-content:space-between;align-items:center;"><h2 style="font-size:1.1rem;font-weight:600;font-family:\'Space Grotesk\',sans-serif;">Promotional Management</h2><div style="display:flex;gap:8px;">';
       html += '<button class="btn btn-sm" style="background:#28a745;color:white;border-color:#28a745;">Submission</button>';
-      html += '<button class="btn btn-sm" style="background:#28a745;color:white;border-color:#28a745;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Export All</button>';
-      html += '<button class="btn btn-sm btn-default"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polygon points="22 3 22 15 16 15 16 21 2 21 2 3"/><line x1="10" y1="9" x2="18" y2="9"/><line x1="10" y1="13" x2="16" y2="13"/><line x1="10" y1="17" x2="14" y2="17"/></svg> Filter</button>';
+      html += '<button class="btn btn-sm" style="background:#28a745;color:white;border-color:#28a745;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Export All</button>';
+      html += '<button class="btn btn-sm btn-default"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polygon points="22 3 22 15 16 15 16 21 2 21 2 3"></polygon><line x1="10" y1="9" x2="18" y2="9"></line><line x1="10" y1="13" x2="16" y2="13"></line><line x1="10" y1="17" x2="14" y2="17"></line></svg> Filter</button>';
       html += '</div></div></div>';
       html += '<div style="overflow-x:auto;"><table class="cal-table"><thead><tr>';
       html += '<th>Brand Name</th><th>Distributor Name</th><th>Banner Name</th><th>Category Name</th>';
