@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pipeline Ideation — Fellow-style</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #0f172a; display: flex; height: 100vh; overflow: hidden; }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar { width: 320px; min-width: 320px; background: #fff; border-right: 1px solid #e2e8f0; display: flex; flex-direction: column; }
+    .sidebar-hdr { padding: 20px 20px 16px; border-bottom: 1px solid #e2e8f0; flex-shrink: 0; }
+    .sidebar-hdr h1 { font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 700; }
+    .sidebar-hdr p { font-size: 0.8rem; color: #64748b; margin-top: 4px; }
+    .sidebar-body { flex: 1; overflow-y: auto; padding: 12px 0; }
+    .sidebar-foot { padding: 12px 16px; border-top: 1px solid #e2e8f0; flex-shrink: 0; }
+
+    .group-search { width:100%; padding:8px 12px 8px 34px; border:1px solid #e2e8f0; border-radius:8px; font-size:0.8rem; outline:none; }
+    .group-search:focus { border-color:#6366f1; }
+    .search-wrap { position:relative; margin-bottom:12px; }
+    .search-wrap svg { position:absolute; left:10px; top:50%; transform:translateY(-50%); pointer-events:none; }
+
+    .group-item { display:flex; align-items:center; gap:10px; padding:10px 20px; cursor:pointer; transition:all 0.12s; border-left:3px solid transparent; }
+    .group-item:hover { background:#f8fafc; }
+    .group-item.active { background:#eef2ff; border-left-color:#6366f1; }
+    .group-item .g-color { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+    .group-item .g-info { flex:1; min-width:0; }
+    .group-item .g-name { font-size:0.85rem; font-weight:500; }
+    .group-item .g-meta { font-size:0.7rem; color:#94a3b8; margin-top:2px; }
+    .group-item .g-cnt { background:#e2e8f0; color:#475569; font-size:0.65rem; font-weight:600; padding:2px 8px; border-radius:999px; flex-shrink:0; }
+
+    .add-group-btn { display:flex; align-items:center; justify-content:center; gap:6px; width:100%; padding:10px; background:none; border:1px dashed #cbd5e1; border-radius:8px; color:#64748b; font-size:0.8rem; cursor:pointer; transition:all 0.15s; }
+    .add-group-btn:hover { border-color:#6366f1; color:#6366f1; background:#eef2ff; }
+
+    /* ===== MAIN ===== */
+    .main { flex:1; display:flex; flex-direction:column; min-width:0; }
+    .main-hdr { padding:20px 28px 16px; border-bottom:1px solid #e2e8f0; background:#fff; flex-shrink:0; display:flex; align-items:flex-start; justify-content:space-between; }
+    .main-hdr .mh-left {}
+    .main-hdr .mh-title { font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:600; }
+    .main-hdr .mh-sub { font-size:0.75rem; color:#64748b; margin-top:2px; }
+    .main-hdr .mh-actions { display:flex; gap:8px; }
+    .main-hdr .mh-actions button { display:flex; align-items:center; gap:6px; padding:7px 14px; border-radius:8px; font-size:0.8rem; font-weight:500; cursor:pointer; transition:all 0.15s; border:1px solid #e2e8f0; background:#fff; }
+    .main-hdr .mh-actions button:hover { background:#f8fafc; border-color:#cbd5e1; }
+    .main-hdr .mh-actions button.primary { background:#6366f1; color:#fff; border-color:#6366f1; }
+    .main-hdr .mh-actions button.primary:hover { background:#4f46e5; }
+
+    .main-body { flex:1; overflow-y:auto; padding:20px 28px; }
+
+    /* ===== NOTES SECTION ===== */
+    .notes-section { background:#fffbeb; border:1px solid #fde68a; border-radius:10px; margin-bottom:20px; overflow:hidden; }
+    .notes-section .ns-hdr { display:flex; align-items:center; justify-content:space-between; padding:12px 16px; cursor:pointer; user-select:none; }
+    .notes-section .ns-hdr:hover { background:rgba(251,191,36,0.08); }
+    .notes-section .ns-hdr span { font-size:0.8rem; font-weight:600; display:flex; align-items:center; gap:6px; }
+    .notes-section .ns-body { padding:0 16px 16px; font-size:0.85rem; line-height:1.7; color:#92400e; white-space:pre-wrap; min-height:60px; }
+
+    /* ===== TASK LIST ===== */
+    .task-list-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; }
+    .task-list-header .tlh-title { font-size:0.8rem; font-weight:600; color:#64748b; text-transform:uppercase; letter-spacing:0.04em; }
+    .task-list-header .tlh-add { display:flex; align-items:center; gap:4px; font-size:0.8rem; color:#6366f1; cursor:pointer; padding:4px 10px; border-radius:6px; border:0; background:none; }
+    .task-list-header .tlh-add:hover { background:#eef2ff; }
+
+    .task-item { display:flex; align-items:center; gap:12px; padding:10px 14px; background:#fff; border:1px solid #e2e8f0; border-radius:8px; margin-bottom:6px; transition:all 0.12s; }
+    .task-item:hover { border-color:#cbd5e1; box-shadow:0 1px 4px rgba(0,0,0,0.04); }
+    .task-item.done { opacity:0.55; }
+    .task-item .t-check { width:18px; height:18px; border-radius:50%; border:2px solid #cbd5e1; flex-shrink:0; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.15s; background:#fff; }
+    .task-item .t-check:hover { border-color:#6366f1; }
+    .task-item .t-check.checked { background:#6366f1; border-color:#6366f1; }
+    .task-item .t-check.checked svg { display:block; }
+    .task-item .t-check svg { display:none; width:10px; height:10px; stroke:#fff; stroke-width:3; }
+    .task-item .t-body { flex:1; min-width:0; cursor:pointer; }
+    .task-item .t-title { font-size:0.85rem; font-weight:500; }
+    .task-item .t-title.done { text-decoration:line-through; color:#94a3b8; }
+    .task-item .t-meta { display:flex; align-items:center; gap:8px; margin-top:4px; flex-wrap:wrap; }
+    .t-meta .assignee { display:flex; align-items:center; gap:4px; font-size:0.7rem; color:#64748b; }
+    .t-meta .assignee .avatar { width:20px; height:20px; border-radius:50%; background:#e2e8f0; display:flex; align-items:center; justify-content:center; font-size:0.6rem; font-weight:600; color:#475569; flex-shrink:0; }
+    .t-meta .due { font-size:0.7rem; color:#64748b; display:flex; align-items:center; gap:3px; }
+    .t-meta .due.overdue { color:#ef4444; font-weight:600; }
+    .t-meta .priority { font-size:0.6rem; font-weight:600; padding:1px 8px; border-radius:999px; }
+    .priority.high { background:#fef2f2; color:#dc2626; }
+    .priority.med { background:#fffbeb; color:#d97706; }
+    .priority.low { background:#f0fdf4; color:#16a34a; }
+    .t-meta .status-badge { font-size:0.65rem; font-weight:500; padding:2px 8px; border-radius:999px; }
+    .status-badge.todo { background:#f1f5f9; color:#475569; }
+    .status-badge.in_progress { background:#dbeafe; color:#2563eb; }
+    .status-badge.done { background:#dcfce7; color:#16a34a; }
+    .task-item .t-expand { color:#94a3b8; cursor:pointer; padding:4px; border-radius:4px; transition:all 0.15s; flex-shrink:0; }
+    .task-item .t-expand:hover { background:#f1f5f9; color:#475569; }
+
+    .task-notes { display:none; margin:0 14px 8px 44px; padding:10px 14px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; font-size:0.8rem; line-height:1.6; color:#475569; }
+    .task-notes.open { display:block; }
+    .task-notes .tn-empty { color:#94a3b8; font-style:italic; }
+
+    .empty-state { text-align:center; padding:40px 20px; color:#94a3b8; }
+    .empty-state svg { width:48px; height:48px; color:#cbd5e1; margin-bottom:12px; }
+    .empty-state h3 { font-size:1rem; font-weight:600; color:#64748b; margin-bottom:4px; }
+    .empty-state p { font-size:0.85rem; }
+
+    /* ===== MODAL ===== */
+    .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.4); z-index:1000; align-items:center; justify-content:center; }
+    .modal-overlay.show { display:flex; }
+    .modal-box { background:#fff; border-radius:12px; width:100%; max-width:440px; box-shadow:0 20px 60px rgba(0,0,0,0.3); }
+    .modal-hdr { display:flex; align-items:center; justify-content:space-between; padding:16px 20px; border-bottom:1px solid #e2e8f0; }
+    .modal-hdr h3 { font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:600; }
+    .modal-close { width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; cursor:pointer; border:0; background:transparent; font-size:1.1rem; }
+    .modal-close:hover { background:#f1f5f9; }
+    .modal-body { padding:16px 20px; }
+    .modal-foot { display:flex; justify-content:flex-end; gap:8px; padding:12px 20px; border-top:1px solid #e2e8f0; }
+    .modal-input { width:100%; padding:9px 12px; border:1px solid #e2e8f0; border-radius:8px; font-size:0.85rem; font-family:inherit; outline:none; }
+    .modal-input:focus { border-color:#6366f1; }
+    .modal-label { font-size:0.75rem; font-weight:600; display:block; margin-bottom:4px; color:#475569; }
+    .modal-row { margin-bottom:12px; }
+    .modal-row:last-child { margin-bottom:0; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== SIDEBAR ===== -->
+  <div class="sidebar">
+    <div class="sidebar-hdr">
+      <h1>Pipeline</h1>
+      <p>Groups organize your tasks</p>
+    </div>
+    <div class="sidebar-body" id="groupList">
+      <!-- Rendered by JS -->
+    </div>
+    <div class="sidebar-foot">
+      <button class="add-group-btn" onclick="openAddGroup()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        New Group
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== MAIN ===== -->
+  <div class="main">
+    <div class="main-hdr">
+      <div class="mh-left">
+        <div class="mh-title" id="groupTitle">Select a group</div>
+        <div class="mh-sub" id="groupSub">Choose a group from the sidebar to view its tasks</div>
+      </div>
+      <div class="mh-actions">
+        <button onclick="openAddTask()" class="primary" id="addTaskBtn" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          Add Task
+        </button>
+        <button onclick="openEditGroup()" id="editGroupBtn" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+          Edit
+        </button>
+      </div>
+    </div>
+    <div class="main-body" id="groupContent">
+      <div class="empty-state">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg>
+        <h3>No group selected</h3>
+        <p>Pick a group from the sidebar or create a new one</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL: Add/Edit Task ===== -->
+  <div id="taskModal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-hdr"><h3 id="taskModalTitle">Add Task</h3><button class="modal-close" onclick="closeModal('taskModal')">✕</button></div>
+      <div class="modal-body">
+        <div class="modal-row">
+          <label class="modal-label">Title</label>
+          <input class="modal-input" id="taskTitleInput" placeholder="e.g., Follow up with Nugget buyer">
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div class="modal-row">
+            <label class="modal-label">Status</label>
+            <select class="modal-input" id="taskStatusInput">
+              <option value="todo">To Do</option>
+              <option value="in_progress">In Progress</option>
+              <option value="done">Done</option>
+            </select>
+          </div>
+          <div class="modal-row">
+            <label class="modal-label">Priority</label>
+            <select class="modal-input" id="taskPriorityInput">
+              <option value="low">Low</option>
+              <option value="med" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div class="modal-row">
+            <label class="modal-label">Assignee</label>
+            <input class="modal-input" id="taskAssigneeInput" placeholder="Name">
+          </div>
+          <div class="modal-row">
+            <label class="modal-label">Due Date</label>
+            <input class="modal-input" id="taskDueInput" type="date">
+          </div>
+        </div>
+        <div class="modal-row">
+          <label class="modal-label">Notes</label>
+          <textarea class="modal-input" id="taskNotesInput" rows="2" placeholder="Add notes..." style="resize:vertical;font-size:0.85rem;line-height:1.5;"></textarea>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button style="padding:8px 16px;border:1px solid #e2e8f0;border-radius:8px;background:#fff;cursor:pointer;font-size:0.85rem;" onclick="closeModal('taskModal')">Cancel</button>
+        <button style="padding:8px 16px;border:0;border-radius:8px;background:#6366f1;color:#fff;cursor:pointer;font-size:0.85rem;font-weight:500;" id="taskModalSave" onclick="saveTask()">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL: Add/Edit Group ===== -->
+  <div id="groupModal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-hdr"><h3 id="groupModalTitle">New Group</h3><button class="modal-close" onclick="closeModal('groupModal')">✕</button></div>
+      <div class="modal-body">
+        <div class="modal-row">
+          <label class="modal-label">Group Name</label>
+          <input class="modal-input" id="groupNameInput" placeholder="e.g., Q3 Category Reviews">
+        </div>
+        <div class="modal-row">
+          <label class="modal-label">Description</label>
+          <textarea class="modal-input" id="groupDescInput" rows="2" placeholder="Optional description..." style="resize:vertical;font-size:0.85rem;line-height:1.5;"></textarea>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button style="padding:8px 16px;border:1px solid #e2e8f0;border-radius:8px;background:#fff;cursor:pointer;font-size:0.85rem;" onclick="closeModal('groupModal')">Cancel</button>
+        <button style="padding:8px 16px;border:0;border-radius:8px;background:#6366f1;color:#fff;cursor:pointer;font-size:0.85rem;font-weight:500;" id="groupModalSave" onclick="saveGroup()">Create</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ===== DATA =====
+    let groupIdCounter = 0;
+    let taskIdCounter = 0;
+    let selectedGroupId = null;
+    let editingTaskId = null;
+    let editingGroupId = null;
+
+    const COLORS = ['#6366f1','#f59e0b','#10b981','#ef4444','#8b5cf6','#ec4899','#06b6d4'];
+
+    const groups = [
+      { id: ++groupIdCounter, name:'Q3 Category Reviews', desc:'All Q3 review deadlines across banners', color:COLORS[0] },
+      { id: ++groupIdCounter, name:'UNFI Setup', desc:'New item forms and setup with UNFI', color:COLORS[2] },
+      { id: ++groupIdCounter, name:'Broker Meetings', desc:'Meeting notes and action items', color:COLORS[1] },
+      { id: ++groupIdCounter, name:'KeHE EDLP Planning', desc:'Everyday low price promotions', color:COLORS[3] },
+    ];
+
+    let tasks = [
+      { id: ++taskIdCounter, groupId:1, title:'Prep Nugget Specialty Asian review', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-25', notes:'Need to gather all SKU data and velocity reports.' },
+      { id: ++taskIdCounter, groupId:1, title:'Submit new items to Lucky', status:'todo', priority:'high', assignee:'', due:'2026-07-18', notes:'' },
+      { id: ++taskIdCounter, groupId:1, title:'Raleys reset paperwork', status:'todo', priority:'med', assignee:'Kate', due:'2026-08-01', notes:'Reset pushed from July to September.' },
+      { id: ++taskIdCounter, groupId:1, title:'Gelsons Mac & Cheese review deck', status:'done', priority:'med', assignee:'You', due:'2026-06-30', notes:'Completed and submitted.' },
+      { id: ++taskIdCounter, groupId:1, title:'Whole Foods frozen dessert reset', status:'todo', priority:'low', assignee:'', due:'2026-09-15', notes:'' },
+      { id: ++taskIdCounter, groupId:2, title:'Submit UNFI new item forms', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-20', notes:'5 new SKUs pending. Need spec sheets from marketing.' },
+      { id: ++taskIdCounter, groupId:2, title:'Confirm UNFI warehouse assignments', status:'todo', priority:'med', assignee:'John', due:'2026-07-28', notes:'' },
+      { id: ++taskIdCounter, groupId:2, title:'Resolve UNFI invoice discrepancy', status:'todo', priority:'high', assignee:'You', due:'2026-07-15', notes:'Credit memo being processed for Q2 chargebacks.' },
+      { id: ++taskIdCounter, groupId:3, title:'F/U with Gelsons buyer — Colin', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-22', notes:'Colin interested in new Mac & Cheese SKUs.' },
+      { id: ++taskIdCounter, groupId:3, title:'Schedule Nugget buyer meeting', status:'todo', priority:'med', assignee:'', due:'2026-07-30', notes:'' },
+      { id: ++taskIdCounter, groupId:3, title:'Prep broker review deck (Q3)', status:'todo', priority:'med', assignee:'You', due:'2026-08-05', notes:'Include velocity, promo recaps, and new item pipeline.' },
+      { id: ++taskIdCounter, groupId:4, title:'KeHE Jan-Mar EDLP pricing', status:'done', priority:'med', assignee:'Kate', due:'2026-06-15', notes:'Pricing submitted and approved.' },
+      { id: ++taskIdCounter, groupId:4, title:'KeHE Apr-Jun EDLP renewal', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-28', notes:'Need to review lift data from Q1 before renewing.' },
+      { id: ++taskIdCounter, groupId:4, title:'KeHE slotting fee negotiation', status:'todo', priority:'low', assignee:'', due:'2026-08-10', notes:'' },
+    ];
+
+    // ===== GROUPS =====
+    function renderGroups() {
+      const list = document.getElementById('groupList');
+      let html = '<div class="search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input class="group-search" id="groupSearch" placeholder="Search groups" oninput="renderGroups()"></div>';
+      const q = (document.getElementById('groupSearch')?.value || '').toLowerCase();
+      const filtered = groups.filter(g => g.name.toLowerCase().includes(q));
+      filtered.forEach(g => {
+        const cnt = tasks.filter(t => t.groupId === g.id && t.status !== 'done').length;
+        const done = tasks.filter(t => t.groupId === g.id && t.status === 'done').length;
+        const active = g.id === selectedGroupId ? ' active' : '';
+        html += '<div class="group-item' + active + '" onclick="selectGroup(' + g.id + ')">' +
+          '<div class="g-color" style="background:' + g.color + '"></div>' +
+          '<div class="g-info"><div class="g-name">' + g.name + '</div><div class="g-meta">' + cnt + ' open · ' + done + ' done</div></div>' +
+          '<span class="g-cnt">' + (cnt + done) + '</span></div>';
+      });
+      list.innerHTML = html;
+    }
+
+    function selectGroup(id) {
+      selectedGroupId = id;
+      renderGroups();
+      renderGroupContent();
+      document.getElementById('addTaskBtn').disabled = false;
+      document.getElementById('editGroupBtn').disabled = false;
+    }
+
+    // ===== GROUP CONTENT =====
+    function renderGroupContent() {
+      const g = groups.find(x => x.id === selectedGroupId);
+      const container = document.getElementById('groupContent');
+      if (!g) {
+        container.innerHTML = '<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg><h3>No group selected</h3><p>Pick a group from the sidebar or create a new one</p></div>';
+        document.getElementById('groupTitle').textContent = 'Select a group';
+        document.getElementById('groupSub').textContent = 'Choose a group from the sidebar to view its tasks';
+        return;
+      }
+
+      document.getElementById('groupTitle').textContent = g.name;
+      document.getElementById('groupSub').textContent = g.desc || 'No description';
+
+      const groupTasks = tasks.filter(t => t.groupId === g.id);
+      const todos = groupTasks.filter(t => t.status === 'todo');
+      const inProgress = groupTasks.filter(t => t.status === 'in_progress');
+      const done = groupTasks.filter(t => t.status === 'done');
+
+      let html = '';
+
+      // Notes section (group-level)
+      html += '<div class="notes-section">' +
+        '<div class="ns-hdr" onclick="this.nextElementSibling.classList.toggle(\'open\');this.querySelector(\'svg\').style.transform=this.nextElementSibling.classList.contains(\'open\')?\'rotate(90deg)\':\'rotate(0)\'">' +
+        '<span><svg viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" width="14" height="14" style="transition:transform 0.15s;"><path d="M12 5v14M5 12h14"></path></svg> Group Notes</span>' +
+        '<span style="font-size:0.7rem;color:#d97706;cursor:pointer;" onclick="event.stopPropagation();openGroupNotes()">Edit</span></div>' +
+        '<div class="ns-body open" id="groupNotesBody">' + (g.notes || 'No notes yet. Click "Edit" to add group-level notes.') + '</div></div>';
+
+      // Tasks
+      if (!groupTasks.length) {
+        html += '<div class="empty-state" style="padding:20px;"><h3>No tasks yet</h3><p>Add your first task to get started</p></div>';
+      } else {
+        if (todos.length) {
+          html += renderTaskSection('To Do', 'todo', todos, '#64748b');
+        }
+        if (inProgress.length) {
+          html += renderTaskSection('In Progress', 'in_progress', inProgress, '#2563eb');
+        }
+        if (done.length) {
+          html += renderTaskSection('Done (' + done.length + ')', 'done', done, '#16a34a');
+        }
+      }
+
+      container.innerHTML = html;
+    }
+
+    function renderTaskSection(label, status, items, color) {
+      let html = '<div class="task-list-header" style="margin-top:16px;"><span class="tlh-title" style="display:flex;align-items:center;gap:6px;"><span style="width:8px;height:8px;border-radius:50%;background:' + color + ';display:inline-block;"></span>' + label + ' (' + items.length + ')</span></div>';
+      items.forEach(t => {
+        const initials = t.assignee ? t.assignee.split(' ').map(w => w[0]).join('').substring(0,2).toUpperCase() : '?';
+        const dueObj = t.due ? new Date(t.due + 'T00:00:00') : null;
+        const now = new Date();
+        const isOverdue = dueObj && dueObj < now && t.status !== 'done';
+        const dueText = dueObj ? dueObj.toLocaleDateString('en-US',{month:'short',day:'numeric'}) : '';
+        const isDone = t.status === 'done';
+        html += '<div class="task-item' + (isDone ? ' done' : '') + '">' +
+          '<div class="t-check' + (isDone ? ' checked' : '') + '" onclick="toggleTaskDone(' + t.id + ')"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>' +
+          '<div class="t-body" onclick="toggleTaskNotes(' + t.id + ')">' +
+          '<div class="t-title' + (isDone ? ' done' : '') + '">' + t.title + '</div>' +
+          '<div class="t-meta">' +
+          (t.assignee ? '<span class="assignee"><span class="avatar">' + initials + '</span>' + t.assignee + '</span>' : '') +
+          (t.due ? '<span class="due' + (isOverdue ? ' overdue' : '') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>' + dueText + '</span>' : '') +
+          (!isDone ? '<span class="priority ' + t.priority + '">' + t.priority + '</span>' : '') +
+          (!isDone ? '<span class="status-badge ' + t.status + '">' + (t.status === 'in_progress' ? 'In Progress' : status === 'todo' ? 'To Do' : '') + '</span>' : '') +
+          '</div></div>' +
+          '<div class="t-expand" onclick="event.stopPropagation();toggleTaskNotes(' + t.id + ')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"></polyline></svg></div>' +
+          '</div>' +
+          '<div class="task-notes" id="taskNotes-' + t.id + '">' + (t.notes || '<span class="tn-empty">No notes</span>') + '</div>';
+      });
+      return html;
+    }
+
+    function toggleTaskDone(id) {
+      const t = tasks.find(x => x.id === id);
+      if (!t) return;
+      t.status = t.status === 'done' ? 'todo' : 'done';
+      renderGroupContent();
+      renderGroups();
+    }
+
+    function toggleTaskNotes(id) {
+      const el = document.getElementById('taskNotes-' + id);
+      if (el) el.classList.toggle('open');
+    }
+
+    // ===== GROUP NOTES =====
+    function openGroupNotes() {
+      const g = groups.find(x => x.id === selectedGroupId);
+      if (!g) return;
+      const current = g.notes || '';
+      const text = prompt('Edit group notes:', current);
+      if (text !== null) {
+        g.notes = text;
+        document.getElementById('groupNotesBody').textContent = text || 'No notes yet. Click "Edit" to add group-level notes.';
+      }
+    }
+
+    // ===== ADD TASK =====
+    let editingTaskId = null;
+    function openAddTask() {
+      editingTaskId = null;
+      document.getElementById('taskModalTitle').textContent = 'Add Task';
+      document.getElementById('taskModalSave').textContent = 'Add';
+      document.getElementById('taskTitleInput').value = '';
+      document.getElementById('taskStatusInput').value = 'todo';
+      document.getElementById('taskPriorityInput').value = 'med';
+      document.getElementById('taskAssigneeInput').value = '';
+      document.getElementById('taskDueInput').value = '';
+      document.getElementById('taskNotesInput').value = '';
+      showModal('taskModal');
+    }
+
+    function saveTask() {
+      const title = document.getElementById('taskTitleInput').value.trim();
+      if (!title || !selectedGroupId) return;
+      if (editingTaskId) {
+        const t = tasks.find(x => x.id === editingTaskId);
+        if (t) {
+          t.title = title;
+          t.status = document.getElementById('taskStatusInput').value;
+          t.priority = document.getElementById('taskPriorityInput').value;
+          t.assignee = document.getElementById('taskAssigneeInput').value.trim();
+          t.due = document.getElementById('taskDueInput').value;
+          t.notes = document.getElementById('taskNotesInput').value.trim();
+        }
+      } else {
+        tasks.push({
+          id: ++taskIdCounter,
+          groupId: selectedGroupId,
+          title: title,
+          status: document.getElementById('taskStatusInput').value,
+          priority: document.getElementById('taskPriorityInput').value,
+          assignee: document.getElementById('taskAssigneeInput').value.trim(),
+          due: document.getElementById('taskDueInput').value,
+          notes: document.getElementById('taskNotesInput').value.trim(),
+        });
+      }
+      closeModal('taskModal');
+      renderGroupContent();
+      renderGroups();
+    }
+
+    // ===== ADD / EDIT GROUP =====
+    function openAddGroup() {
+      editingGroupId = null;
+      document.getElementById('groupModalTitle').textContent = 'New Group';
+      document.getElementById('groupModalSave').textContent = 'Create';
+      document.getElementById('groupNameInput').value = '';
+      document.getElementById('groupDescInput').value = '';
+      showModal('groupModal');
+    }
+
+    function openEditGroup() {
+      const g = groups.find(x => x.id === selectedGroupId);
+      if (!g) return;
+      editingGroupId = g.id;
+      document.getElementById('groupModalTitle').textContent = 'Edit Group';
+      document.getElementById('groupModalSave').textContent = 'Save';
+      document.getElementById('groupNameInput').value = g.name;
+      document.getElementById('groupDescInput').value = g.desc || '';
+      showModal('groupModal');
+    }
+
+    function saveGroup() {
+      const name = document.getElementById('groupNameInput').value.trim();
+      if (!name) return;
+      const desc = document.getElementById('groupDescInput').value.trim();
+      if (editingGroupId) {
+        const g = groups.find(x => x.id === editingGroupId);
+        if (g) { g.name = name; g.desc = desc; }
+      } else {
+        groups.push({ id: ++groupIdCounter, name, desc, color: COLORS[groupIdCounter % COLORS.length] });
+      }
+      closeModal('groupModal');
+      renderGroups();
+      if (selectedGroupId) renderGroupContent();
+    }
+
+    // ===== HELPERS =====
+    function showModal(id) { document.getElementById(id).classList.add('show'); }
+    function closeModal(id) { document.getElementById(id).classList.remove('show'); }
+
+    // ===== INIT =====
+    renderGroups();
+    // Auto-select first group
+    if (groups.length) selectGroup(groups[0].id);
+  </script>
+</body>
+</html>
