@@ -112,6 +112,8 @@
     .modal-label { font-size:0.75rem; font-weight:600; display:block; margin-bottom:4px; color:#475569; }
     .modal-row { margin-bottom:12px; }
     .modal-row:last-child { margin-bottom:0; }
+    .file-indicator { display:inline-flex; align-items:center; gap:3px; font-size:0.65rem; color:#64748b; }
+    .file-indicator svg { flex-shrink:0; }
   </style>
 </head>
 <body>
@@ -201,6 +203,11 @@
           <label class="modal-label">Notes</label>
           <textarea class="modal-input" id="taskNotesInput" rows="2" placeholder="Add notes..." style="resize:vertical;font-size:0.85rem;line-height:1.5;"></textarea>
         </div>
+        <div class="modal-row">
+          <label class="modal-label">Attachments</label>
+          <input type="file" id="taskFileInput" multiple style="font-size:0.8rem;width:100%;">
+          <div id="taskFilePreview" style="margin-top:6px;display:flex;flex-wrap:wrap;gap:4px;"></div>
+        </div>
       </div>
       <div class="modal-foot">
         <button style="padding:8px 16px;border:1px solid #e2e8f0;border-radius:8px;background:#fff;cursor:pointer;font-size:0.85rem;" onclick="closeModal('taskModal')">Cancel</button>
@@ -238,38 +245,66 @@
     let editingTaskId = null;
     let editingGroupId = null;
 
-    const COLORS = ['#6366f1','#f59e0b','#10b981','#ef4444','#8b5cf6','#ec4899','#06b6d4'];
+    const COLORS = ['#6366f1','#f59e0b','#10b981','#ef4444','#8b5cf6','#ec4899','#06b6d4','#14b8a6'];
 
     const groups = [
       { id: ++groupIdCounter, name:'Q3 Category Reviews', desc:'All Q3 review deadlines across banners', color:COLORS[0] },
-      { id: ++groupIdCounter, name:'UNFI Setup', desc:'New item forms and setup with UNFI', color:COLORS[2] },
-      { id: ++groupIdCounter, name:'Broker Meetings', desc:'Meeting notes and action items', color:COLORS[1] },
+      { id: ++groupIdCounter, name:'UNFI Setup & Maintenance', desc:'New item forms and setup with UNFI', color:COLORS[2] },
+      { id: ++groupIdCounter, name:'Broker Meetings & Follow-ups', desc:'Meeting notes and action items', color:COLORS[1] },
       { id: ++groupIdCounter, name:'KeHE EDLP Planning', desc:'Everyday low price promotions', color:COLORS[3] },
+      { id: ++groupIdCounter, name:'Distributor APL Updates', desc:'Authorized price list management', color:COLORS[4] },
+      { id: ++groupIdCounter, name:'Marketing & Collateral', desc:'POS materials, digital assets, sell sheets', color:COLORS[5] },
     ];
 
     let tasks = [
-      { id: ++taskIdCounter, groupId:1, title:'Prep Nugget Specialty Asian review', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-25', notes:'Need to gather all SKU data and velocity reports.' },
-      { id: ++taskIdCounter, groupId:1, title:'Submit new items to Lucky', status:'todo', priority:'high', assignee:'', due:'2026-07-18', notes:'' },
-      { id: ++taskIdCounter, groupId:1, title:'Raleys reset paperwork', status:'todo', priority:'med', assignee:'Kate', due:'2026-08-01', notes:'Reset pushed from July to September.' },
-      { id: ++taskIdCounter, groupId:1, title:'Gelsons Mac & Cheese review deck', status:'done', priority:'med', assignee:'You', due:'2026-06-30', notes:'Completed and submitted.' },
-      { id: ++taskIdCounter, groupId:1, title:'Whole Foods frozen dessert reset', status:'todo', priority:'low', assignee:'', due:'2026-09-15', notes:'' },
-      { id: ++taskIdCounter, groupId:2, title:'Submit UNFI new item forms', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-20', notes:'5 new SKUs pending. Need spec sheets from marketing.' },
-      { id: ++taskIdCounter, groupId:2, title:'Confirm UNFI warehouse assignments', status:'todo', priority:'med', assignee:'John', due:'2026-07-28', notes:'' },
-      { id: ++taskIdCounter, groupId:2, title:'Resolve UNFI invoice discrepancy', status:'todo', priority:'high', assignee:'You', due:'2026-07-15', notes:'Credit memo being processed for Q2 chargebacks.' },
-      { id: ++taskIdCounter, groupId:3, title:'F/U with Gelsons buyer — Colin', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-22', notes:'Colin interested in new Mac & Cheese SKUs.' },
-      { id: ++taskIdCounter, groupId:3, title:'Schedule Nugget buyer meeting', status:'todo', priority:'med', assignee:'', due:'2026-07-30', notes:'' },
-      { id: ++taskIdCounter, groupId:3, title:'Prep broker review deck (Q3)', status:'todo', priority:'med', assignee:'You', due:'2026-08-05', notes:'Include velocity, promo recaps, and new item pipeline.' },
-      { id: ++taskIdCounter, groupId:4, title:'KeHE Jan-Mar EDLP pricing', status:'done', priority:'med', assignee:'Kate', due:'2026-06-15', notes:'Pricing submitted and approved.' },
-      { id: ++taskIdCounter, groupId:4, title:'KeHE Apr-Jun EDLP renewal', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-28', notes:'Need to review lift data from Q1 before renewing.' },
-      { id: ++taskIdCounter, groupId:4, title:'KeHE slotting fee negotiation', status:'todo', priority:'low', assignee:'', due:'2026-08-10', notes:'' },
+      // Group 1: Q3 Category Reviews
+      { id: ++taskIdCounter, groupId:1, title:'Prep Nugget Specialty Asian review', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-25', notes:'Need to gather all SKU data and velocity reports from SPINS. Include category trends and competitive landscape.', files:[{name:'Nugget_Review_Template.xlsx',size:'245 KB'},{name:'SPINS_Category_Data_Q2.pdf',size:'1.2 MB'}] },
+      { id: ++taskIdCounter, groupId:1, title:'Submit new item forms to Lucky', status:'todo', priority:'high', assignee:'You', due:'2026-07-18', notes:'5 new SKUs for pasta sauce reset. Forms need: UPC, MSRP, case pack, Sage logo, ingredient statements.', files:[] },
+      { id: ++taskIdCounter, groupId:1, title:'Raleys reset paperwork — pushed to Sep', status:'todo', priority:'med', assignee:'Kate', due:'2026-08-01', notes:'Reset pushed from July to September per buyer request. Keep forms ready.', files:[] },
+      { id: ++taskIdCounter, groupId:1, title:'Gelsons Mac & Cheese review deck', status:'done', priority:'med', assignee:'You', due:'2026-06-30', notes:'Completed and submitted. Waiting for buyer feedback.', files:[{name:'Gelsons_Review_Deck.pptx',size:'4.7 MB'}] },
+      { id: ++taskIdCounter, groupId:1, title:'Whole Foods frozen dessert reset', status:'todo', priority:'low', assignee:'', due:'2026-09-15', notes:'Q4 reset. No rush but need to start gathering velocity data.', files:[] },
+      { id: ++taskIdCounter, groupId:1, title:'Sprouts organic reset paperwork', status:'todo', priority:'med', assignee:'John', due:'2026-08-20', notes:'New set expected Sep. Organic certifications needed.', files:[] },
+      { id: ++taskIdCounter, groupId:1, title:'Moms Market reset completed', status:'done', priority:'low', assignee:'Kate', due:'2026-06-10', notes:'All done. Reset went live June 8.', files:[] },
+
+      // Group 2: UNFI
+      { id: ++taskIdCounter, groupId:2, title:'Submit UNFI new item forms', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-20', notes:'5 new SKUs pending. Need spec sheets, ingredient decks, and margin analysis from marketing.', files:[{name:'UNFI_New_Item_Form.xlsx',size:'890 KB'},{name:'Product_Specs_v3.pdf',size:'3.4 MB'}] },
+      { id: ++taskIdCounter, groupId:2, title:'Confirm UNFI warehouse assignments', status:'todo', priority:'med', assignee:'John', due:'2026-07-28', notes:'Need to verify which warehouses for new SKUs. Sac, Atlanta, Harrisburg likely.', files:[] },
+      { id: ++taskIdCounter, groupId:2, title:'Resolve UNFI invoice discrepancy', status:'todo', priority:'high', assignee:'You', due:'2026-07-15', notes:'Credit memo being processed for Q2 chargebacks. $12,483 disputed. Attach supporting docs.', files:[{name:'Invoice_Dispute_Q2.pdf',size:'680 KB'},{name:'Credit_Memo_Request.xlsx',size:'120 KB'}] },
+      { id: ++taskIdCounter, groupId:2, title:'UNFI Q3 promotional calendar', status:'done', priority:'med', assignee:'Kate', due:'2026-06-28', notes:'Submitted for Jul-Sep. TPR slots confirmed for Aug and Sep.', files:[] },
+      { id: ++taskIdCounter, groupId:2, title:'Update UNFI pricing sheet', status:'todo', priority:'med', assignee:'', due:'2026-08-05', notes:'New MSRP effective Sep 1. Need to submit updated wholesale pricing.', files:[] },
+
+      // Group 3: Broker Meetings
+      { id: ++taskIdCounter, groupId:3, title:'F/U with Gelsons buyer — Colin', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-22', notes:'Colin interested in new Mac & Cheese SKUs. Promised samples by July 15. Send pricing提案.', files:[{name:'Gelsons_Proposal.pdf',size:'1.1 MB'}] },
+      { id: ++taskIdCounter, groupId:3, title:'Schedule Nugget buyer meeting', status:'todo', priority:'med', assignee:'You', due:'2026-07-30', notes:'Need to present Asian category review. Buyer prefers Tues/Wed mornings.', files:[] },
+      { id: ++taskIdCounter, groupId:3, title:'Prep broker review deck (Q3)', status:'todo', priority:'med', assignee:'You', due:'2026-08-05', notes:'Include velocity, promo recaps, new item pipeline, and category trends.', files:[] },
+      { id: ++taskIdCounter, groupId:3, title:'Jimbos buyer meeting done', status:'done', priority:'med', assignee:'You', due:'2026-06-22', notes:'Good meeting. Approved 2 new items for fall reset.', files:[{name:'Jimbos_Meeting_Notes.docx',size:'85 KB'}] },
+      { id: ++taskIdCounter, groupId:3, title:'Lazy Acres coffee category review', status:'todo', priority:'high', assignee:'John', due:'2026-08-12', notes:'New coffee program. Need samples and pitch deck ready by Aug 1.', files:[] },
+
+      // Group 4: KeHE EDLP
+      { id: ++taskIdCounter, groupId:4, title:'KeHE Jan-Mar EDLP pricing', status:'done', priority:'med', assignee:'Kate', due:'2026-06-15', notes:'Pricing submitted and approved for all 12 SKUs.', files:[{name:'KeHE_EDLP_Q1_Approved.pdf',size:'450 KB'}] },
+      { id: ++taskIdCounter, groupId:4, title:'KeHE Apr-Jun EDLP renewal', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-28', notes:'Need to review lift data from Q1 before renewing. Requesting 2% price increase.', files:[{name:'Q1_Lift_Analysis.xlsx',size:'2.3 MB'}] },
+      { id: ++taskIdCounter, groupId:4, title:'KeHE slotting fee negotiation', status:'todo', priority:'low', assignee:'', due:'2026-08-10', notes:'Negotiating slotting for 3 new items. Target: $500/sku.', files:[] },
+      { id: ++taskIdCounter, groupId:4, title:'KeHE display allowance Q3', status:'todo', priority:'med', assignee:'Kate', due:'2026-07-15', notes:'Q3 display program. Endcap opportunities at Sprouts and Natural Grocers.', files:[] },
+
+      // Group 5: Distributor APL
+      { id: ++taskIdCounter, groupId:5, title:'Upload KeHE Oct APL update', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-25', notes:'New pricing effective Aug 1. Check for UPC changes on 3 items.', files:[{name:'KeHE_APL_Oct.xlsx',size:'1.8 MB'}] },
+      { id: ++taskIdCounter, groupId:5, title:'UNFI APL — verify new item pricing', status:'todo', priority:'high', assignee:'John', due:'2026-07-20', notes:'5 new items need wholesale cost verified before upload.', files:[] },
+      { id: ++taskIdCounter, groupId:5, title:'SPINS APL reconciliation', status:'todo', priority:'med', assignee:'', due:'2026-08-15', notes:'Compare uploaded APL vs SPINS reported pricing. Flag discrepancies.', files:[] },
+      { id: ++taskIdCounter, groupId:5, title:'KeHE APL upload complete', status:'done', priority:'med', assignee:'You', due:'2026-06-20', notes:'Jun APL uploaded successfully. 45 SKUs confirmed.', files:[] },
+
+      // Group 6: Marketing
+      { id: ++taskIdCounter, groupId:6, title:'New product sell sheets', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-30', notes:'Need updated sell sheets for 8 new items. Include nutrition claims, certifications, and pricing.', files:[{name:'Sell_Sheet_Template_v2.indd',size:'5.6 MB'}] },
+      { id: ++taskIdCounter, groupId:6, title:'Digital shelf analytics review', status:'todo', priority:'med', assignee:'', due:'2026-08-10', notes:'Review content compliance across Amazon, Thrive, and Vitacost.', files:[] },
+      { id: ++taskIdCounter, groupId:6, title:'POS materials — Nugget endcap', status:'todo', priority:'low', assignee:'Kate', due:'2026-08-01', notes:'Design shelf talkers and wobblers for Nugget Asian endcap display.', files:[] },
+      { id: ++taskIdCounter, groupId:6, title:'Brand style guide update done', status:'done', priority:'low', assignee:'You', due:'2026-06-05', notes:'Updated for 2026. New logo assets and packaging guidelines.', files:[{name:'Brand_Style_Guide_2026.pdf',size:'8.2 MB'}] },
     ];
 
     // ===== GROUPS =====
     function renderGroups() {
       const list = document.getElementById('groupList');
-      let html = '<div class="search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input class="group-search" id="groupSearch" placeholder="Search groups" oninput="renderGroups()"></div>';
       const q = (document.getElementById('groupSearch')?.value || '').toLowerCase();
       const filtered = groups.filter(g => g.name.toLowerCase().includes(q));
+      let html = '<div class="search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input class="group-search" id="groupSearch" placeholder="Search groups" oninput="renderGroups()"></div>';
       filtered.forEach(g => {
         const cnt = tasks.filter(t => t.groupId === g.id && t.status !== 'done').length;
         const done = tasks.filter(t => t.groupId === g.id && t.status === 'done').length;
@@ -300,7 +335,6 @@
         document.getElementById('groupSub').textContent = 'Choose a group from the sidebar to view its tasks';
         return;
       }
-
       document.getElementById('groupTitle').textContent = g.name;
       document.getElementById('groupSub').textContent = g.desc || 'No description';
 
@@ -311,26 +345,27 @@
 
       let html = '';
 
-      // Notes section (group-level)
+      // Group Notes section
       html += '<div class="notes-section">' +
         '<div class="ns-hdr" onclick="this.nextElementSibling.classList.toggle(\'open\');this.querySelector(\'svg\').style.transform=this.nextElementSibling.classList.contains(\'open\')?\'rotate(90deg)\':\'rotate(0)\'">' +
         '<span><svg viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" width="14" height="14" style="transition:transform 0.15s;"><path d="M12 5v14M5 12h14"></path></svg> Group Notes</span>' +
         '<span style="font-size:0.7rem;color:#d97706;cursor:pointer;" onclick="event.stopPropagation();openGroupNotes()">Edit</span></div>' +
         '<div class="ns-body open" id="groupNotesBody">' + (g.notes || 'No notes yet. Click "Edit" to add group-level notes.') + '</div></div>';
 
-      // Tasks
+      // Quick-add bar
+      html += '<div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;padding:10px 14px;background:#fff;border:1px dashed #cbd5e1;border-radius:8px;">' +
+        '<input id="quickTaskInput" placeholder="Quick add task — press Enter" style="flex:1;border:0;outline:none;font-size:0.85rem;background:transparent;" onkeydown="if(event.key===\'Enter\')quickAddTask()">' +
+        '<select id="quickPriority" style="padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;font-size:0.75rem;background:#fff;">' +
+        '<option value="high">High</option><option value="med" selected>Med</option><option value="low">Low</option></select>' +
+        '<button onclick="quickAddTask()" style="padding:5px 12px;border:0;border-radius:6px;background:#6366f1;color:#fff;font-size:0.75rem;cursor:pointer;">Add</button></div>';
+
+      // Sections
       if (!groupTasks.length) {
-        html += '<div class="empty-state" style="padding:20px;"><h3>No tasks yet</h3><p>Add your first task to get started</p></div>';
+        html += '<div class="empty-state" style="padding:20px;"><h3>No tasks yet</h3><p>Type above and press Enter to add your first task</p></div>';
       } else {
-        if (todos.length) {
-          html += renderTaskSection('To Do', 'todo', todos, '#64748b');
-        }
-        if (inProgress.length) {
-          html += renderTaskSection('In Progress', 'in_progress', inProgress, '#2563eb');
-        }
-        if (done.length) {
-          html += renderTaskSection('Done (' + done.length + ')', 'done', done, '#16a34a');
-        }
+        if (todos.length) html += renderTaskSection('To Do', 'todo', todos, '#64748b');
+        if (inProgress.length) html += renderTaskSection('In Progress', 'in_progress', inProgress, '#2563eb');
+        if (done.length) html += renderTaskSection('Done (' + done.length + ')', 'done', done, '#16a34a');
       }
 
       container.innerHTML = html;
@@ -339,23 +374,25 @@
     function renderTaskSection(label, status, items, color) {
       let html = '<div class="task-list-header" style="margin-top:16px;"><span class="tlh-title" style="display:flex;align-items:center;gap:6px;"><span style="width:8px;height:8px;border-radius:50%;background:' + color + ';display:inline-block;"></span>' + label + ' (' + items.length + ')</span></div>';
       items.forEach(t => {
-        const initials = t.assignee ? t.assignee.split(' ').map(w => w[0]).join('').substring(0,2).toUpperCase() : '?';
+        const initials = t.assignee ? t.assignee.split(' ').map(w => w[0]).join('').substring(0,2).toUpperCase() : '';
         const dueObj = t.due ? new Date(t.due + 'T00:00:00') : null;
         const now = new Date();
         const isOverdue = dueObj && dueObj < now && t.status !== 'done';
         const dueText = dueObj ? dueObj.toLocaleDateString('en-US',{month:'short',day:'numeric'}) : '';
         const isDone = t.status === 'done';
+        const files = t.files && t.files.length ? '<span class="file-indicator" title="' + t.files.map(f => f.name + ' (' + f.size + ')').join(' | ') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>' + t.files.length + '</span>' : '';
         html += '<div class="task-item' + (isDone ? ' done' : '') + '">' +
           '<div class="t-check' + (isDone ? ' checked' : '') + '" onclick="toggleTaskDone(' + t.id + ')"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>' +
-          '<div class="t-body" onclick="toggleTaskNotes(' + t.id + ')">' +
+          '<div class="t-body" onclick="editTask(' + t.id + ')">' +
           '<div class="t-title' + (isDone ? ' done' : '') + '">' + t.title + '</div>' +
           '<div class="t-meta">' +
           (t.assignee ? '<span class="assignee"><span class="avatar">' + initials + '</span>' + t.assignee + '</span>' : '') +
           (t.due ? '<span class="due' + (isOverdue ? ' overdue' : '') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>' + dueText + '</span>' : '') +
           (!isDone ? '<span class="priority ' + t.priority + '">' + t.priority + '</span>' : '') +
-          (!isDone ? '<span class="status-badge ' + t.status + '">' + (t.status === 'in_progress' ? 'In Progress' : status === 'todo' ? 'To Do' : '') + '</span>' : '') +
+          (!isDone ? '<span class="status-badge ' + t.status + '">' + (t.status === 'in_progress' ? 'In Progress' : 'To Do') + '</span>' : '') +
+          files +
           '</div></div>' +
-          '<div class="t-expand" onclick="event.stopPropagation();toggleTaskNotes(' + t.id + ')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"></polyline></svg></div>' +
+          '<div class="t-expand" onclick="event.stopPropagation();editTask(' + t.id + ')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"></polyline></svg></div>' +
           '</div>' +
           '<div class="task-notes" id="taskNotes-' + t.id + '">' + (t.notes || '<span class="tn-empty">No notes</span>') + '</div>';
       });
@@ -370,25 +407,54 @@
       renderGroups();
     }
 
-    function toggleTaskNotes(id) {
-      const el = document.getElementById('taskNotes-' + id);
-      if (el) el.classList.toggle('open');
+    function editTask(id) {
+      const t = tasks.find(x => x.id === id);
+      if (!t) return;
+      editingTaskId = id;
+      document.getElementById('taskModalTitle').textContent = 'Edit Task';
+      document.getElementById('taskModalSave').textContent = 'Save';
+      document.getElementById('taskTitleInput').value = t.title;
+      document.getElementById('taskStatusInput').value = t.status;
+      document.getElementById('taskPriorityInput').value = t.priority;
+      document.getElementById('taskAssigneeInput').value = t.assignee || '';
+      document.getElementById('taskDueInput').value = t.due || '';
+      document.getElementById('taskNotesInput').value = t.notes || '';
+      showModal('taskModal');
     }
 
     // ===== GROUP NOTES =====
     function openGroupNotes() {
       const g = groups.find(x => x.id === selectedGroupId);
       if (!g) return;
-      const current = g.notes || '';
-      const text = prompt('Edit group notes:', current);
+      const text = prompt('Edit group notes:', g.notes || '');
       if (text !== null) {
         g.notes = text;
         document.getElementById('groupNotesBody').textContent = text || 'No notes yet. Click "Edit" to add group-level notes.';
       }
     }
 
-    // ===== ADD TASK =====
-    let editingTaskId = null;
+    // ===== QUICK ADD TASK =====
+    function quickAddTask() {
+      const input = document.getElementById('quickTaskInput');
+      const title = input.value.trim();
+      if (!title || !selectedGroupId) return;
+      tasks.push({
+        id: ++taskIdCounter,
+        groupId: selectedGroupId,
+        title: title,
+        status: 'todo',
+        priority: document.getElementById('quickPriority').value,
+        assignee: '',
+        due: '',
+        notes: '',
+        files: [],
+      });
+      input.value = '';
+      renderGroupContent();
+      renderGroups();
+    }
+
+    // ===== ADD / EDIT TASK MODAL =====
     function openAddTask() {
       editingTaskId = null;
       document.getElementById('taskModalTitle').textContent = 'Add Task';
@@ -399,6 +465,7 @@
       document.getElementById('taskAssigneeInput').value = '';
       document.getElementById('taskDueInput').value = '';
       document.getElementById('taskNotesInput').value = '';
+      document.getElementById('taskFilePreview').innerHTML = '';
       showModal('taskModal');
     }
 
@@ -425,6 +492,7 @@
           assignee: document.getElementById('taskAssigneeInput').value.trim(),
           due: document.getElementById('taskDueInput').value,
           notes: document.getElementById('taskNotesInput').value.trim(),
+          files: [],
         });
       }
       closeModal('taskModal');
@@ -474,7 +542,6 @@
 
     // ===== INIT =====
     renderGroups();
-    // Auto-select first group
     if (groups.length) selectGroup(groups[0].id);
   </script>
 </body>
