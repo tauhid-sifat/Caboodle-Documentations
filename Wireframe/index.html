@@ -58,7 +58,7 @@
 
     /* ===== DASHBOARD VIEW ===== */
     .dash-scroll { flex: 1; overflow-y: auto; padding: 0; }
-    .quick-actions { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; padding: 16px 24px 8px; background: hsl(var(--background)); flex-shrink: 0; }
+
     .action-tile { background: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center; text-decoration: none; color: inherit; transition: all 0.2s; cursor: pointer; position: relative; }
     .action-tile:hover { border-color: hsl(var(--primary)); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); transform: translateY(-2px); }
     .a-icon { width: 40px; height: 40px; border-radius: var(--radius); background: hsl(var(--secondary)); display: flex; align-items: center; justify-content: center; color: hsl(var(--primary)); transition: all 0.15s; }
@@ -84,7 +84,7 @@
     .kpi-card:hover .kpi-link { color: hsl(var(--primary)); }
     .kpi-link svg { width: 12px; height: 12px; }
 
-    .dash-grid { display: grid; grid-template-columns: 55% 45%; gap: 24px; padding: 8px 24px 24px; flex: 1; min-height: 0; overflow: hidden; }
+    .dash-grid { padding: 8px 24px 24px; flex: 1; min-height: 0; overflow-y: auto; }
     .panel { background: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; min-height: 0; }
     .p-hdr { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: 1px solid hsl(var(--border)); flex-shrink: 0; }
     .p-title { display: flex; align-items: center; gap: 8px; font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; font-weight: 600; }
@@ -120,6 +120,9 @@
     .s-pill.green { background: hsla(160, 84%, 39%, 0.1); color: hsl(160, 84%, 39%); }
     .s-pill.purple { background: hsla(250, 76%, 61%, 0.1); color: hsl(250, 76%, 61%); }
 
+
+
+    /* tasks board */
     .task-cols { display: grid; grid-template-columns: repeat(3, 1fr); flex: 1; min-height: 0; }
     .task-col { display: flex; flex-direction: column; background: hsl(var(--muted)); border-right: 1px solid hsl(var(--border)); min-height: 0; }
     .task-col:last-child { border-right: 0; }
@@ -133,16 +136,19 @@
     .t-title { font-size: 0.75rem; font-weight: 500; line-height: 1.4; flex: 1; }
     .t-tags { display: flex; flex-wrap: wrap; gap: 4px; }
     .tag { display: inline-flex; padding: 2px 8px; border-radius: 999px; font-size: 0.6rem; font-weight: 500; }
-    .tag-gray { background: hsl(var(--secondary)); color: hsl(var(--muted-foreground)); }
-    .tag-blue { background: hsla(var(--primary), 0.1); color: hsl(var(--primary)); }
-    .tag-green { background: hsla(160, 84%, 39%, 0.1); color: hsl(160, 84%, 39%); }
+    .tag-blue { background: rgba(59,130,246,0.1); color: #3b82f6; }
+    .tag-gray { background: hsl(var(--muted)); color: hsl(var(--muted-foreground)); }
+    .tag-green { background: rgba(34,197,94,0.1); color: #16a34a; }
     .t-due { display: inline-flex; align-items: center; gap: 4px; font-size: 0.6rem; color: hsl(var(--muted-foreground)); }
     .t-due svg { width: 11px; height: 11px; }
     .t-due.overdue { color: hsl(var(--destructive)); font-weight: 600; }
-    .t-foot { display: flex; padding-top: 6px; border-top: 1px solid hsl(var(--border)); font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: hsl(var(--muted-foreground)); }
     .add-btn { display: flex; align-items: center; justify-content: center; gap: 4px; padding: 4px 6px; background: transparent; border-top: 1px solid hsl(var(--border)); color: hsl(var(--muted-foreground)); font-size: 0.7rem; font-weight: 500; transition: all 0.15s; cursor: pointer; border-left: 0; border-right: 0; border-bottom: 0; }
     .add-btn:hover { background: hsl(var(--calendar-hover)); color: hsl(var(--primary)); }
     .add-btn svg { width: 10px; height: 10px; flex-shrink: 0; }
+    /* quick actions grid */
+    .qa-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; padding: 16px 24px 8px; background: hsl(var(--background)); flex-shrink: 0; }
+    @media (max-width: 1024px) { .qa-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 768px) { .qa-grid { grid-template-columns: repeat(2, 1fr); } }
     /* Modal overlays */
     .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.4); z-index:1000; align-items:center; justify-content:center; }
     .modal-overlay.show { display:flex; }
@@ -211,9 +217,11 @@
     .ck-marker svg { width: 10px; height: 10px; color: #fff; }
     .cal-empty { display: flex; align-items: center; justify-content: center; height: 100%; color: hsl(var(--muted-foreground)); font-size: 0.875rem; }
 
-    @media (max-width: 1200px) { .dash-grid { grid-template-columns: 1fr; } }
-    @media (max-width: 1024px) { .kpi-row { grid-template-columns: repeat(2, 1fr); } .quick-actions { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 768px) { .header { padding: 0 16px; } .h-nav li { display: none; } .kpi-row { grid-template-columns: 1fr; } .quick-actions { grid-template-columns: repeat(2, 1fr); } .dash-grid { padding: 8px 16px; } .task-cols { grid-template-columns: 1fr; } .task-col { border-right: 0; border-bottom: 1px solid hsl(var(--border)); } }
+
+
+    @media (max-width: 1200px) { .qa-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 1024px) { .kpi-row { grid-template-columns: repeat(2, 1fr); } .qa-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 768px) { .header { padding: 0 16px; } .h-nav li { display: none; } .kpi-row { grid-template-columns: 1fr; } .qa-grid { grid-template-columns: repeat(2, 1fr); } .dash-grid { padding: 8px 16px; } }
   </style>
 </head>
 <body>
@@ -239,11 +247,12 @@
     <!-- ===== VIEW: DASHBOARD ===== -->
     <div id="view-dashboard" class="view active">
       <div class="dash-scroll">
-        <div class="quick-actions">
+        <div class="qa-grid">
           <a href="#" class="action-tile" onclick="showView('catreview')"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div><span class="a-label">Category Review</span></a>
           <a href="#" class="action-tile" onclick="showView('promocal')"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></div><span class="a-label">Promotional Management</span></a>
           <a href="#" class="action-tile"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M12 8v12M8 12h8"></path></svg></div><span class="a-label">Market Overview</span></a>
           <a href="#" class="action-tile"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div><span class="a-label">Distributor APL</span></a>
+          <a href="#" class="action-tile" onclick="showView('tasks')"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg></div><span class="a-label">Tasks</span></a>
           <a href="#" class="action-tile"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></div><span class="a-label">File</span></a>
         </div>
 
@@ -267,14 +276,6 @@
                 </div>
               </div>
               <div class="tl-day"><div class="tl-hdr"><span class="tl-lbl">Tomorrow</span><span class="tl-date">Tue, Jun 24</span></div><div class="tl-items"><div class="tl-item promo" onclick="showView('promocal')"><div class="tl-ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(160,84%,39%)"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></div><div class="tl-c"><div class="tl-t">UNFI EDLP Review</div><div class="tl-m"><span>Review</span><span class="s-pill green">Promo</span></div></div></div><div class="tl-item cr" onclick="showView('catreview')"><div class="tl-ico blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(var(--primary))"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div><div class="tl-c"><div class="tl-t">Lazy Acres — TBD Category</div><div class="tl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Review Jun</span><span class="s-pill blue">Category Review</span></div></div></div></div></div>
-            </div>
-          </div>
-          <div class="panel">
-            <div class="p-hdr"><h2 class="p-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg> My Tasks</h2></div>
-            <div class="task-cols">
-              <div class="task-col"><div class="col-hdr"><span class="col-title">To Do <span class="col-cnt">3</span></span></div><div class="t-list"><div class="t-card"><div class="t-hdr"><span class="t-title">F/U Gelson's buyer — Colin</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Due Today</span></div></div><div class="t-card"><div class="t-hdr"><span class="t-title">Contact Di Bari for Lazy Acres</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Due Fri</span></div></div><div class="t-card"><div class="t-hdr"><span class="t-title">Upload APL — KeHE</span></div><div class="t-tags"><span class="tag tag-gray">APL</span><span class="t-due overdue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Overdue</span></div></div></div><button class="add-btn" onclick="openAddTaskModal('todo')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Task</button></div>
-              <div class="task-col"><div class="col-hdr"><span class="col-title">In Progress <span class="col-cnt">2</span></span></div><div class="t-list"><div class="t-card"><div class="t-hdr"><span class="t-title">Prep Nugget — Asian review</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span></div></div><div class="t-card"><div class="t-hdr"><span class="t-title">Finalize Costco Promo</span></div><div class="t-tags"><span class="tag tag-green">Promo</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Due Mon</span></div></div></div><button class="add-btn" onclick="openAddTaskModal('in_progress')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Task</button></div>
-              <div class="task-col"><div class="col-hdr"><span class="col-title">Done <span class="col-cnt">1</span></span></div><div class="t-list"><div class="t-card" style="opacity:0.6;"><div class="t-hdr"><span class="t-title" style="text-decoration:line-through;">Submit 24 Vegan to Lucky's</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Jun 20</span></div></div></div><button class="add-btn" onclick="openAddTaskModal('done')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Task</button></div>
             </div>
           </div>
         </div>
