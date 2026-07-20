@@ -145,6 +145,9 @@
     .add-btn { display: flex; align-items: center; justify-content: center; gap: 4px; padding: 4px 6px; background: transparent; border-top: 1px solid hsl(var(--border)); color: hsl(var(--muted-foreground)); font-size: 0.7rem; font-weight: 500; transition: all 0.15s; cursor: pointer; border-left: 0; border-right: 0; border-bottom: 0; }
     .add-btn:hover { background: hsl(var(--calendar-hover)); color: hsl(var(--primary)); }
     .add-btn svg { width: 10px; height: 10px; flex-shrink: 0; }
+    .t-notes-preview { font-size:0.7rem; color:hsl(var(--muted-foreground)); line-height:1.4; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; padding:2px 0; }
+    .t-files { display:flex; align-items:center; gap:4px; font-size:0.65rem; color:hsl(var(--muted-foreground)); }
+    .t-files svg { flex-shrink:0; }
     /* quick actions grid */
     .qa-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; padding: 16px 24px 8px; background: hsl(var(--background)); flex-shrink: 0; }
     @media (max-width: 1024px) { .qa-grid { grid-template-columns: repeat(3, 1fr); } }
@@ -366,11 +369,7 @@
           </div>
         </div>
         <div class="panel" style="flex:1;margin:16px;border-radius:var(--radius);overflow:hidden;">
-          <div class="task-cols" style="flex:1;min-height:0;">
-            <div class="task-col"><div class="col-hdr"><span class="col-title">To Do <span class="col-cnt">3</span></span></div><div class="t-list"><div class="t-card"><div class="t-hdr"><span class="t-title">F/U Gelson's buyer — Colin</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Due Today</span></div></div><div class="t-card"><div class="t-hdr"><span class="t-title">Contact Di Bari for Lazy Acres</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Due Fri</span></div></div><div class="t-card"><div class="t-hdr"><span class="t-title">Upload APL — KeHE</span></div><div class="t-tags"><span class="tag tag-gray">APL</span><span class="t-due overdue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Overdue</span></div></div></div><button class="add-btn" onclick="openAddTaskModal('todo')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Task</button></div>
-            <div class="task-col"><div class="col-hdr"><span class="col-title">In Progress <span class="col-cnt">2</span></span></div><div class="t-list"><div class="t-card"><div class="t-hdr"><span class="t-title">Prep Nugget — Asian review</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span></div></div><div class="t-card"><div class="t-hdr"><span class="t-title">Finalize Costco Promo</span></div><div class="t-tags"><span class="tag tag-green">Promo</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Due Mon</span></div></div></div><button class="add-btn" onclick="openAddTaskModal('in_progress')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Task</button></div>
-            <div class="task-col"><div class="col-hdr"><span class="col-title">Done <span class="col-cnt">1</span></span></div><div class="t-list"><div class="t-card" style="opacity:0.6;"><div class="t-hdr"><span class="t-title" style="text-decoration:line-through;">Submit 24 Vegan to Lucky's</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Jun 20</span></div></div></div><button class="add-btn" onclick="openAddTaskModal('done')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Task</button></div>
-          </div>
+          <div id="taskBoard" class="task-cols" style="flex:1;min-height:0;"></div>
         </div>
       </div>
     </div>
@@ -518,7 +517,7 @@
 
   <!-- MODAL: Add Task -->
   <div id="addTaskModal" class="modal-overlay">
-    <div class="modal-box" style="max-width:400px;">
+    <div class="modal-box" style="max-width:480px;">
       <div class="modal-hdr"><h3>Add Task</h3><button class="modal-close" onclick="closeModal('addTaskModal')">✕</button></div>
       <div class="modal-body">
         <div style="margin-bottom:10px;">
@@ -533,9 +532,29 @@
             <option value="done">Done</option>
           </select>
         </div>
-        <div>
+        <div style="margin-bottom:10px;">
           <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Due Date</label>
           <input class="modal-input" id="taskDueInput" type="date" style="font-size:0.85rem;">
+        </div>
+        <div style="margin-bottom:10px;">
+          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Tag</label>
+          <select class="modal-input" id="taskSourceSelect">
+            <option value="manual">General</option>
+            <option value="cat-review">Cat Review</option>
+            <option value="promo">Promo</option>
+            <option value="apl">APL</option>
+          </select>
+        </div>
+        <div style="margin-bottom:10px;">
+          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Notes</label>
+          <textarea class="modal-input" id="taskNotesInput" rows="3" placeholder="Add notes..." style="resize:vertical;font-size:0.85rem;line-height:1.5;"></textarea>
+        </div>
+        <div>
+          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Attachments</label>
+          <div style="display:flex;gap:8px;align-items:center;">
+            <input type="file" id="taskFileInput" multiple style="font-size:0.8rem;flex:1;">
+          </div>
+          <div id="taskFilePreview" style="margin-top:6px;display:flex;flex-wrap:wrap;gap:4px;"></div>
         </div>
       </div>
       <div class="modal-foot">
@@ -553,6 +572,32 @@
     </div>
   </div>
 
+  <!-- MODAL: Task Detail -->
+  <div id="taskDetailModal" class="modal-overlay">
+    <div class="modal-box" style="max-width:480px;">
+      <div class="modal-hdr"><h3>Task Details</h3><button class="modal-close" onclick="closeModal('taskDetailModal')">✕</button></div>
+      <div class="modal-body">
+        <div id="tdTitle" style="font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:600;margin-bottom:8px;"></div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;">
+          <span id="tdTag" class="tag"></span>
+          <span style="font-size:0.75rem;color:hsl(var(--muted-foreground));display:flex;align-items:center;gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span id="tdDue"></span></span>
+          <span style="font-size:0.75rem;color:hsl(var(--muted-foreground));display:flex;align-items:center;gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg><span id="tdStatus"></span></span>
+        </div>
+        <div style="margin-bottom:12px;">
+          <div style="font-size:0.75rem;font-weight:600;margin-bottom:4px;">Notes</div>
+          <div id="tdNotes" style="font-size:0.85rem;color:hsl(var(--foreground));line-height:1.6;background:hsl(var(--muted));border-radius:6px;padding:10px;white-space:pre-wrap;"></div>
+        </div>
+        <div>
+          <div style="font-size:0.75rem;font-weight:600;margin-bottom:4px;">Attachments</div>
+          <div id="tdFiles" style="display:flex;flex-direction:column;gap:4px;"></div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-sm btn-default" onclick="closeModal('taskDetailModal')">Close</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     const CONTACTS = [
       { id:'c1', brand:'Brand A', name:'Constance', email:'constance@branda.com' },
@@ -563,12 +608,94 @@
     let selectedContacts = [];
     let sendLog = [];
     let assignCellKey = null;
+
+    // ===== TASKS DATA =====
+    let taskIdCounter = 0;
+    let tasks = [
+      { id: ++taskIdCounter, title:'F/U Gelson\'s buyer — Colin', status:'todo', due:'2026-06-23', tag:'cat-review', notes:'Colin mentioned interest in our new SKUs for Q3.', files:[] },
+      { id: ++taskIdCounter, title:'Contact Di Bari for Lazy Acres', status:'todo', due:'2026-06-26', tag:'cat-review', notes:'', files:[] },
+      { id: ++taskIdCounter, title:'Upload APL — KeHE', status:'todo', due:'2026-06-20', tag:'apl', notes:'Need latest pricing sheet from finance.', files:[] },
+      { id: ++taskIdCounter, title:'Prep Nugget — Asian review', status:'in_progress', due:'', tag:'cat-review', notes:'Gather all specialty Asian SKU data.', files:[{name:'Nugget_Review_2025.xlsx',size:'2.1 MB'},{name:'Notes.txt',size:'0.3 KB'}] },
+      { id: ++taskIdCounter, title:'Finalize Costco Promo', status:'in_progress', due:'2026-06-29', tag:'promo', notes:'Slotting fee negotiation still pending.', files:[{name:'Costco_Promo_Terms.pdf',size:'1.5 MB'}] },
+      { id: ++taskIdCounter, title:'Submit 24 Vegan to Lucky\'s', status:'done', due:'2026-06-20', tag:'cat-review', notes:'', files:[] },
+    ];
+
+    function tagLabel(tag) {
+      const m = { 'cat-review':'Cat Review', 'promo':'Promo', 'apl':'APL', 'manual':'General' };
+      const c = { 'cat-review':'tag-blue', 'promo':'tag-green', 'apl':'tag-gray', 'manual':'' };
+      return { label: m[tag] || tag, cls: c[tag] || '' };
+    }
+
+    function taskDueText(due) {
+      if (!due) return '';
+      const d = new Date(due + 'T00:00:00');
+      const now = new Date();
+      const diff = Math.ceil((d - now) / 86400000);
+      if (diff < 0) return { text:'Overdue', cls:'overdue' };
+      if (diff === 0) return { text:'Due Today', cls:'' };
+      if (diff === 1) return { text:'Due Tomorrow', cls:'' };
+      const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+      if (diff <= 7) return { text:'Due ' + days[d.getDay()], cls:'' };
+      return { text:d.toLocaleDateString('en-US',{month:'short',day:'numeric'}), cls:'' };
+    }
+
+    function renderTaskBoard() {
+      const cols = { todo:'To Do', in_progress:'In Progress', done:'Done' };
+      const colKeys = Object.keys(cols);
+      let html = '';
+      colKeys.forEach((key, ci) => {
+        const items = tasks.filter(t => t.status === key);
+        html += '<div class="task-col"><div class="col-hdr"><span class="col-title">' + cols[key] + ' <span class="col-cnt">' + items.length + '</span></span></div><div class="t-list">';
+        items.forEach(t => {
+          const due = taskDueText(t.due);
+          const tl = tagLabel(t.tag);
+          const notesPreview = t.notes ? '<div class="t-notes-preview" title="' + t.notes.replace(/"/g,'&quot;') + '">' + (t.notes.length > 60 ? t.notes.substring(0,60) + '…' : t.notes) + '</div>' : '';
+          const filesHtml = t.files.length ? '<div class="t-files"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg> ' + t.files.length + ' file' + (t.files.length > 1 ? 's' : '') + '</div>' : '';
+          const doneStyle = t.status === 'done' ? ' style="opacity:0.6;"' : '';
+          const doneTitleStyle = t.status === 'done' ? ' style="text-decoration:line-through;"' : '';
+          html += '<div class="t-card"' + doneStyle + ' onclick="openTaskDetail(' + t.id + ')"><div class="t-hdr"><span class="t-title"' + doneTitleStyle + '>' + t.title + '</span></div>' + notesPreview + filesHtml + '<div class="t-tags">';
+          if (tl.label) html += '<span class="tag ' + tl.cls + '">' + tl.label + '</span>';
+          if (due.text) html += '<span class="t-due' + (due.cls ? ' ' + due.cls : '') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>' + due.text + '</span>';
+          html += '</div></div>';
+        });
+        html += '</div><button class="add-btn" onclick="openAddTaskModal(\'' + key + '\')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="10" height="10"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Task</button></div>';
+      });
+      document.getElementById('taskBoard').innerHTML = html;
+    }
+
+    // ===== TASK DETAIL =====
+    function openTaskDetail(id) {
+      const t = tasks.find(x => x.id === id);
+      if (!t) return;
+      document.getElementById('tdTitle').textContent = t.title;
+      const tl = tagLabel(t.tag);
+      document.getElementById('tdTag').textContent = tl.label;
+      document.getElementById('tdTag').className = 'tag ' + tl.cls;
+      document.getElementById('tdDue').textContent = t.due ? new Date(t.due + 'T00:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'}) : 'No due date';
+      document.getElementById('tdStatus').textContent = { todo:'To Do', in_progress:'In Progress', done:'Done' }[t.status];
+      document.getElementById('tdNotes').textContent = t.notes || 'No notes';
+      const fl = document.getElementById('tdFiles');
+      fl.innerHTML = '';
+      if (t.files.length) {
+        t.files.forEach(f => {
+          const div = document.createElement('div');
+          div.style.cssText = 'display:flex;align-items:center;gap:8px;padding:6px 10px;background:hsl(var(--muted));border-radius:6px;font-size:0.8rem;';
+          div.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="flex-shrink:0;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg><span style="flex:1;">' + f.name + '</span><span style="color:hsl(var(--muted-foreground));font-size:0.7rem;">' + f.size + '</span>';
+          fl.appendChild(div);
+        });
+      } else {
+        fl.innerHTML = '<div style="font-size:0.8rem;color:hsl(var(--muted-foreground));">No attachments</div>';
+      }
+      showModal('taskDetailModal');
+    }
+
     // ===== VIEW SWITCHER =====
     function showView(name) {
       document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
       document.getElementById('view-' + name).classList.add('active');
       if (name === 'catreview') crRender();
       if (name === 'promocal') pcRender();
+      if (name === 'tasks') renderTaskBoard();
     }
 
     // ===== CATEGORY REVIEW DATA =====
@@ -897,11 +1024,31 @@
     function closeModal(id) { document.getElementById(id).classList.remove('show'); }
 
     // Add Task
+    let pendingFiles = [];
+
+    document.getElementById('taskFileInput').addEventListener('change', function() {
+      const preview = document.getElementById('taskFilePreview');
+      preview.innerHTML = '';
+      pendingFiles = [];
+      for (let i = 0; i < this.files.length; i++) {
+        const f = this.files[i];
+        pendingFiles.push({ name: f.name, size: (f.size / 1024).toFixed(1) + ' KB' });
+        const el = document.createElement('span');
+        el.style.cssText = 'display:inline-flex;align-items:center;gap:4px;padding:2px 8px;background:hsl(var(--muted));border-radius:4px;font-size:0.75rem;';
+        el.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>' + f.name;
+        preview.appendChild(el);
+      }
+    });
+
     function openAddTaskModal(status) {
       document.getElementById('taskStatusSelect').value = status || 'todo';
       document.getElementById('taskTitleInput').value = '';
       document.getElementById('taskDueInput').value = '';
       document.getElementById('taskSourceSelect').value = 'manual';
+      document.getElementById('taskNotesInput').value = '';
+      document.getElementById('taskFileInput').value = '';
+      document.getElementById('taskFilePreview').innerHTML = '';
+      pendingFiles = [];
       document.getElementById('addTaskBtn').disabled = true;
       showModal('addTaskModal');
     }
@@ -912,8 +1059,18 @@
     function addTask() {
       const title = document.getElementById('taskTitleInput').value.trim();
       if (!title) return;
+      tasks.push({
+        id: ++taskIdCounter,
+        title: title,
+        status: document.getElementById('taskStatusSelect').value,
+        due: document.getElementById('taskDueInput').value,
+        tag: document.getElementById('taskSourceSelect').value,
+        notes: document.getElementById('taskNotesInput').value.trim(),
+        files: pendingFiles.slice()
+      });
+      pendingFiles = [];
       closeModal('addTaskModal');
-      alert('Task "' + title + '" added to ' + document.getElementById('taskStatusSelect').value.replace('_', ' ') + '.');
+      renderTaskBoard();
     }
 
     function crRender() {
