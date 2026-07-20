@@ -122,32 +122,54 @@
 
 
 
-    /* tasks board */
-    .task-cols { display: grid; grid-template-columns: repeat(3, 1fr); flex: 1; min-height: 0; }
-    .task-col { display: flex; flex-direction: column; background: hsl(var(--muted)); border-right: 1px solid hsl(var(--border)); min-height: 0; }
-    .task-col:last-child { border-right: 0; }
-    .col-hdr { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; background: hsl(var(--card)); border-bottom: 1px solid hsl(var(--border)); flex-shrink: 0; }
-    .col-title { display: flex; align-items: center; gap: 8px; font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: hsl(var(--muted-foreground)); }
-    .col-cnt { background: hsla(var(--primary), 0.1); color: hsl(var(--primary)); font-size: 0.6rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; }
-    .t-list { flex: 1; overflow-y: auto; padding: 10px; display: flex; flex-direction: column; gap: 8px; }
-    .t-card { background: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 10px; display: flex; flex-direction: column; gap: 6px; transition: all 0.15s; cursor: grab; }
-    .t-card:hover { box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-color: hsl(var(--muted-foreground) / 0.3); }
-    .t-hdr { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
-    .t-title { font-size: 0.75rem; font-weight: 500; line-height: 1.4; flex: 1; }
-    .t-tags { display: flex; flex-wrap: wrap; gap: 4px; }
-    .tag { display: inline-flex; padding: 2px 8px; border-radius: 999px; font-size: 0.6rem; font-weight: 500; }
-    .tag-blue { background: rgba(59,130,246,0.1); color: #3b82f6; }
-    .tag-gray { background: hsl(var(--muted)); color: hsl(var(--muted-foreground)); }
-    .tag-green { background: rgba(34,197,94,0.1); color: #16a34a; }
-    .t-due { display: inline-flex; align-items: center; gap: 4px; font-size: 0.6rem; color: hsl(var(--muted-foreground)); }
-    .t-due svg { width: 11px; height: 11px; }
-    .t-due.overdue { color: hsl(var(--destructive)); font-weight: 600; }
-    .add-btn { display: flex; align-items: center; justify-content: center; gap: 4px; padding: 4px 6px; background: transparent; border-top: 1px solid hsl(var(--border)); color: hsl(var(--muted-foreground)); font-size: 0.7rem; font-weight: 500; transition: all 0.15s; cursor: pointer; border-left: 0; border-right: 0; border-bottom: 0; }
-    .add-btn:hover { background: hsl(var(--calendar-hover)); color: hsl(var(--primary)); }
-    .add-btn svg { width: 10px; height: 10px; flex-shrink: 0; }
-    .t-notes-preview { font-size:0.7rem; color:hsl(var(--muted-foreground)); line-height:1.4; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; padding:2px 0; }
-    .t-files { display:flex; align-items:center; gap:4px; font-size:0.65rem; color:hsl(var(--muted-foreground)); }
-    .t-files svg { flex-shrink:0; }
+    /* pipeline layout */
+    .tasks-layout { display: flex; flex: 1; min-height: 0; overflow: hidden; }
+    .plan-sidebar { width: 380px; min-width: 380px; display: flex; flex-direction: column; border-right: 1px solid hsl(var(--border)); background: hsl(var(--card)); flex-shrink: 0; }
+    .plan-sidebar .sidebar-hdr { padding: 12px 16px; border-bottom: 1px solid hsl(var(--border)); background: hsl(var(--card)); flex-shrink: 0; }
+    .plan-sidebar .sidebar-body { flex: 1; overflow-y: auto; }
+    .plan-search { width:100%; padding:7px 12px 7px 32px; border:1px solid #e2e8f0; border-radius:6px; font-size:0.8rem; outline:none; background:transparent; }
+    .plan-search:focus { border-color:hsl(var(--primary)); }
+    .plan-search-wrap { position:relative; display:flex; align-items:center; flex:1; }
+    .plan-search-wrap svg { position:absolute; left:8px; pointer-events:none; }
+    .sidebar-actions { display:flex; gap:6px; }
+    .sidebar-actions button { display:flex; align-items:center; justify-content:center; width:32px; height:32px; border:1px solid #e2e8f0; border-radius:6px; background:transparent; cursor:pointer; transition:all 0.15s; }
+    .sidebar-actions button:hover { background:hsl(var(--muted)); }
+    .sidebar-actions button:disabled { opacity:0.4; cursor:default; }
+    .plan-table { width:100%; border-collapse:collapse; table-layout:fixed; }
+    .plan-table tr { border-bottom:1px solid hsl(var(--border)); cursor:pointer; transition:background 0.1s; }
+    .plan-table tr:hover { background:hsl(var(--calendar-hover)); }
+    .plan-table tr.active { background:#eff6ff; }
+    .plan-table td { padding:10px 16px; vertical-align:middle; }
+    .plan-table td:first-child { width:40px; text-align:center; }
+    .plan-table td:last-child { width:32px; }
+    .plan-name { font-size:0.8rem; font-weight:500; }
+    .plan-meta { font-size:0.7rem; color:hsl(var(--muted-foreground)); margin-top:2px; }
+    .sidebar-foot { padding:10px 16px; border-top:1px solid hsl(var(--border)); display:flex; align-items:center; justify-content:space-between; flex-shrink:0; font-size:0.75rem; color:hsl(var(--muted-foreground)); }
+    .sidebar-foot select { margin-left:4px; padding:2px 4px; border:1px solid #e2e8f0; border-radius:4px; font-size:0.75rem; }
+    .sidebar-foot button { display:flex; align-items:center; gap:2px; padding:4px 8px; border:1px solid #e2e8f0; border-radius:4px; background:transparent; cursor:pointer; font-size:0.7rem; }
+    .sidebar-foot button:disabled { opacity:0.3; }
+    .sidebar-foot button:hover:not(:disabled) { background:hsl(var(--muted)); }
+    .kanban-area { flex:1; display:flex; flex-direction:column; min-width:0; }
+    .kanban-hdr { display:flex; align-items:center; justify-content:space-between; padding:12px 16px; border-bottom:1px solid hsl(var(--border)); flex-shrink:0; }
+    .kanban-search-wrap { position:relative; }
+    .kanban-search { width:240px; padding:7px 12px 7px 32px; border:1px solid #e2e8f0; border-radius:6px; font-size:0.8rem; outline:none; background:transparent; }
+    .kanban-search:focus { border-color:hsl(var(--primary)); }
+    .kanban-search-wrap svg { position:absolute; left:8px; top:50%; transform:translateY(-50%); pointer-events:none; }
+    .kanban-cols { flex:1; display:flex; gap:0; min-height:0; overflow:hidden; background:#f8fafe; }
+    .kanban-col { flex:1; display:flex; flex-direction:column; min-width:0; border-right:1px solid hsl(var(--border)); min-height:0; }
+    .kanban-col:last-child { border-right:0; }
+    .kanban-hdr-col { padding:10px 12px; font-size:0.75rem; font-weight:600; display:flex; align-items:center; justify-content:center; gap:6px; border-bottom:1px solid hsl(var(--border)); background:hsl(var(--card)); flex-shrink:0; }
+    .kanban-hdr-col .cnt { border-radius:999px; padding:1px 10px; font-size:0.65rem; }
+    .kanban-hdr-col .cnt.slate { background:#e2e8f0; color:#475569; }
+    .kanban-hdr-col .cnt.blue { background:#dbeafe; color:#2563eb; }
+    .kanban-hdr-col .cnt.green { background:#dcfce7; color:#16a34a; }
+    .kanban-hdr-col .cnt.orange { background:#fed7aa; color:#ea580c; }
+    .kanban-list { flex:1; overflow-y:auto; padding:8px; display:flex; flex-direction:column; gap:4px; }
+    .k-card { background:#fff; border:1px solid #e2e8f0; border-radius:6px; padding:8px 10px; cursor:pointer; transition:all 0.15s; font-size:0.78rem; }
+    .k-card:hover { border-color:#cbd5e1; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+    .k-card.dragging { opacity:0.5; }
+    .k-card .k-title { font-weight:500; }
+    .drop-zone { min-height:40px; flex:1; }
     /* quick actions grid */
     .qa-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; padding: 16px 24px 8px; background: hsl(var(--background)); flex-shrink: 0; }
     @media (max-width: 1024px) { .qa-grid { grid-template-columns: repeat(3, 1fr); } }
@@ -357,19 +379,61 @@
       </div>
     </div>
 
-    <!-- ===== VIEW: TASKS ===== -->
+    <!-- ===== VIEW: TASKS / PIPELINE ===== -->
     <div id="view-tasks" class="view">
-      <div style="display:flex;flex-direction:column;height:100%;overflow:hidden;">
-        <div class="cal-top">
-          <div class="cal-top-left">
-            <h1 class="cal-title">Tasks</h1>
+      <div class="cal-top">
+        <div class="cal-top-left"><h1 class="cal-title">Pipeline</h1></div>
+        <div style="display:flex;gap:8px;">
+          <button class="btn btn-sm" onclick="showView('dashboard')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Dashboard</button>
+        </div>
+      </div>
+      <div class="tasks-layout">
+        <!-- LEFT: Plans sidebar -->
+        <div class="plan-sidebar">
+          <div class="sidebar-hdr">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+              <div class="plan-search-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input class="plan-search" id="planSearchInput" placeholder="Search plans by name" oninput="renderPlanList()">
+              </div>
+              <div class="sidebar-actions">
+                <button onclick="deleteSelectedPlans()" id="deletePlanBtn" disabled><svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" width="14" height="14"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
+                <button onclick="openAddPlanModal()" style="background:#16a34a;color:#fff;border-color:#16a34a;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.75rem;">
+              <input type="checkbox" id="planSelectAll" onchange="toggleSelectAllPlans()" style="width:15px;height:15px;cursor:pointer;">
+              <label for="planSelectAll" style="cursor:pointer;color:hsl(var(--muted-foreground));user-select:none;">Select All</label>
+            </div>
           </div>
-          <div style="display:flex;gap:8px;">
-            <button class="btn btn-sm" onclick="showView('dashboard')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Dashboard</button>
+          <div class="sidebar-body" id="planListBody"></div>
+          <div class="sidebar-foot">
+            <span id="planPaginationInfo">1 of 1</span>
+            <div style="display:flex;align-items:center;gap:4px;">
+              <span>Items per page:</span>
+              <select style="padding:2px 4px;border:1px solid #e2e8f0;border-radius:4px;font-size:0.75rem;">
+                <option>10</option>
+                <option>25</option>
+                <option>50</option>
+              </select>
+            </div>
           </div>
         </div>
-        <div class="panel" style="flex:1;margin:16px;border-radius:var(--radius);overflow:hidden;">
-          <div id="taskBoard" class="task-cols" style="flex:1;min-height:0;"></div>
+        <!-- RIGHT: Kanban -->
+        <div class="kanban-area" id="kanbanArea">
+          <div class="kanban-hdr">
+            <button class="btn btn-sm" style="background:#16a34a;color:#fff;border:0;" onclick="openAddTaskModal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Task</button>
+            <div class="kanban-search-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input class="kanban-search" placeholder="Search task" oninput="renderKanban()">
+            </div>
+          </div>
+          <div class="kanban-cols" id="kanbanCols">
+            <div class="kanban-col"><div class="kanban-hdr-col">To Do <span class="cnt slate">0</span></div><div class="kanban-list" data-col="todo" ondrop="dropTask(event)" ondragover="allowDrop(event)"></div></div>
+            <div class="kanban-col"><div class="kanban-hdr-col">In Progress <span class="cnt blue">0</span></div><div class="kanban-list" data-col="in_progress" ondrop="dropTask(event)" ondragover="allowDrop(event)"></div></div>
+            <div class="kanban-col"><div class="kanban-hdr-col">Complete <span class="cnt green">0</span></div><div class="kanban-list" data-col="complete" ondrop="dropTask(event)" ondragover="allowDrop(event)"></div></div>
+            <div class="kanban-col"><div class="kanban-hdr-col">Notes <span class="cnt orange">0</span></div><div class="kanban-list" data-col="notes" ondrop="dropTask(event)" ondragover="allowDrop(event)"></div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -515,54 +579,6 @@
     </div>
   </div>
 
-  <!-- MODAL: Add Task -->
-  <div id="addTaskModal" class="modal-overlay">
-    <div class="modal-box" style="max-width:480px;">
-      <div class="modal-hdr"><h3>Add Task</h3><button class="modal-close" onclick="closeModal('addTaskModal')">✕</button></div>
-      <div class="modal-body">
-        <div style="margin-bottom:10px;">
-          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Title</label>
-          <input class="modal-input" id="taskTitleInput" placeholder="e.g., F/U with buyer, Prep Nugget review" oninput="checkTaskForm()">
-        </div>
-        <div style="margin-bottom:10px;">
-          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Status</label>
-          <select class="modal-input" id="taskStatusSelect">
-            <option value="todo">To Do</option>
-            <option value="in_progress">In Progress</option>
-            <option value="done">Done</option>
-          </select>
-        </div>
-        <div style="margin-bottom:10px;">
-          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Due Date</label>
-          <input class="modal-input" id="taskDueInput" type="date" style="font-size:0.85rem;">
-        </div>
-        <div style="margin-bottom:10px;">
-          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Tag</label>
-          <select class="modal-input" id="taskSourceSelect">
-            <option value="manual">General</option>
-            <option value="cat-review">Cat Review</option>
-            <option value="promo">Promo</option>
-            <option value="apl">APL</option>
-          </select>
-        </div>
-        <div style="margin-bottom:10px;">
-          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Notes</label>
-          <textarea class="modal-input" id="taskNotesInput" rows="3" placeholder="Add notes..." style="resize:vertical;font-size:0.85rem;line-height:1.5;"></textarea>
-        </div>
-        <div>
-          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Attachments</label>
-          <div style="display:flex;gap:8px;align-items:center;">
-            <input type="file" id="taskFileInput" multiple style="font-size:0.8rem;flex:1;">
-          </div>
-          <div id="taskFilePreview" style="margin-top:6px;display:flex;flex-wrap:wrap;gap:4px;"></div>
-        </div>
-      </div>
-      <div class="modal-foot">
-        <button class="btn btn-sm" onclick="closeModal('addTaskModal')">Cancel</button>
-        <button class="btn btn-sm btn-default" id="addTaskBtn" disabled onclick="addTask()">Add Task</button>
-      </div>
-    </div>
-  </div>
   <div id="sendLogModal" class="modal-overlay">
     <div class="modal-box" style="max-width:500px;">
       <div class="modal-hdr"><h3>Send Log</h3><button class="modal-close" onclick="closeModal('sendLogModal')">✕</button></div>
@@ -574,22 +590,13 @@
 
   <!-- MODAL: Task Detail -->
   <div id="taskDetailModal" class="modal-overlay">
-    <div class="modal-box" style="max-width:480px;">
+    <div class="modal-box" style="max-width:420px;">
       <div class="modal-hdr"><h3>Task Details</h3><button class="modal-close" onclick="closeModal('taskDetailModal')">✕</button></div>
       <div class="modal-body">
         <div id="tdTitle" style="font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:600;margin-bottom:8px;"></div>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;">
-          <span id="tdTag" class="tag"></span>
-          <span style="font-size:0.75rem;color:hsl(var(--muted-foreground));display:flex;align-items:center;gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span id="tdDue"></span></span>
-          <span style="font-size:0.75rem;color:hsl(var(--muted-foreground));display:flex;align-items:center;gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg><span id="tdStatus"></span></span>
-        </div>
-        <div style="margin-bottom:12px;">
-          <div style="font-size:0.75rem;font-weight:600;margin-bottom:4px;">Notes</div>
-          <div id="tdNotes" style="font-size:0.85rem;color:hsl(var(--foreground));line-height:1.6;background:hsl(var(--muted));border-radius:6px;padding:10px;white-space:pre-wrap;"></div>
-        </div>
-        <div>
-          <div style="font-size:0.75rem;font-weight:600;margin-bottom:4px;">Attachments</div>
-          <div id="tdFiles" style="display:flex;flex-direction:column;gap:4px;"></div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px;">
+          <span style="font-size:0.75rem;color:hsl(var(--muted-foreground));display:flex;align-items:center;gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg> Plan: <span id="tdPlan"></span></span>
+          <span style="font-size:0.75rem;color:hsl(var(--muted-foreground));display:flex;align-items:center;gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg> Status: <span id="tdStatus"></span></span>
         </div>
       </div>
       <div class="modal-foot">
@@ -609,84 +616,162 @@
     let sendLog = [];
     let assignCellKey = null;
 
-    // ===== TASKS DATA =====
+    // ===== PIPELINE / PLANS & TASKS =====
+    let planIdCounter = 0;
     let taskIdCounter = 0;
-    let tasks = [
-      { id: ++taskIdCounter, title:'F/U Gelson\'s buyer — Colin', status:'todo', due:'2026-06-23', tag:'cat-review', notes:'Colin mentioned interest in our new SKUs for Q3.', files:[] },
-      { id: ++taskIdCounter, title:'Contact Di Bari for Lazy Acres', status:'todo', due:'2026-06-26', tag:'cat-review', notes:'', files:[] },
-      { id: ++taskIdCounter, title:'Upload APL — KeHE', status:'todo', due:'2026-06-20', tag:'apl', notes:'Need latest pricing sheet from finance.', files:[] },
-      { id: ++taskIdCounter, title:'Prep Nugget — Asian review', status:'in_progress', due:'', tag:'cat-review', notes:'Gather all specialty Asian SKU data.', files:[{name:'Nugget_Review_2025.xlsx',size:'2.1 MB'},{name:'Notes.txt',size:'0.3 KB'}] },
-      { id: ++taskIdCounter, title:'Finalize Costco Promo', status:'in_progress', due:'2026-06-29', tag:'promo', notes:'Slotting fee negotiation still pending.', files:[{name:'Costco_Promo_Terms.pdf',size:'1.5 MB'}] },
-      { id: ++taskIdCounter, title:'Submit 24 Vegan to Lucky\'s', status:'done', due:'2026-06-20', tag:'cat-review', notes:'', files:[] },
+    let selectedPlanId = null;
+    let selectedPlanIds = [];
+
+    const PLANS = [
+      { id: ++planIdCounter, name:'Brand Internal Notes', createdBy:'Broker User' },
+      { id: ++planIdCounter, name:'Eastern Region', createdBy:'Caboodle Admin' },
+      { id: ++planIdCounter, name:'New Plan', createdBy:'Caboodle Admin' },
+      { id: ++planIdCounter, name:'Nor Cal Region', createdBy:'Caboodle Admin' },
+      { id: ++planIdCounter, name:'South Region', createdBy:'Caboodle Admin' },
     ];
 
-    function tagLabel(tag) {
-      const m = { 'cat-review':'Cat Review', 'promo':'Promo', 'apl':'APL', 'manual':'General' };
-      const c = { 'cat-review':'tag-blue', 'promo':'tag-green', 'apl':'tag-gray', 'manual':'' };
-      return { label: m[tag] || tag, cls: c[tag] || '' };
-    }
+    let tasks = [
+      { id: ++taskIdCounter, planId:1, title:'dasdfadf', status:'todo' },
+      { id: ++taskIdCounter, planId:1, title:'sajdhbajsdhc', status:'todo' },
+      { id: ++taskIdCounter, planId:1, title:'Submit Plan to Jimbos', status:'todo' },
+      { id: ++taskIdCounter, planId:1, title:'Check Promo at Jimbos', status:'todo' },
+      { id: ++taskIdCounter, planId:1, title:'Prep Deck for Nugget Review 8-25-25', status:'todo' },
+      { id: ++taskIdCounter, planId:1, title:'Set up Rainforest 2025 Plan', status:'in_progress' },
+      { id: ++taskIdCounter, planId:1, title:'Check MOMs Promotion', status:'in_progress' },
+      { id: ++taskIdCounter, planId:1, title:'Fancy Food Show Planning', status:'in_progress' },
+      { id: ++taskIdCounter, planId:1, title:'NCG Show Planning', status:'complete' },
+      { id: ++taskIdCounter, planId:1, title:'PNW Meeting Note', status:'notes' },
+      { id: ++taskIdCounter, planId:1, title:'Asana tracker', status:'notes' },
+      { id: ++taskIdCounter, planId:1, title:'Check off shelf display at New Seasons', status:'notes' },
+      { id: ++taskIdCounter, planId:1, title:'MA Meeting Notes', status:'notes' },
+      { id: ++taskIdCounter, planId:1, title:'NorCal Meeting Notes', status:'notes' },
+      { id: ++taskIdCounter, planId:1, title:'Nathan - Call Notes', status:'notes' },
+      { id: ++taskIdCounter, planId:1, title:'DIGITAL TRACKER', status:'notes' },
+      { id: ++taskIdCounter, planId:2, title:'East Coast Review', status:'todo' },
+    ];
 
-    function taskDueText(due) {
-      if (!due) return '';
-      const d = new Date(due + 'T00:00:00');
-      const now = new Date();
-      const diff = Math.ceil((d - now) / 86400000);
-      if (diff < 0) return { text:'Overdue', cls:'overdue' };
-      if (diff === 0) return { text:'Due Today', cls:'' };
-      if (diff === 1) return { text:'Due Tomorrow', cls:'' };
-      const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-      if (diff <= 7) return { text:'Due ' + days[d.getDay()], cls:'' };
-      return { text:d.toLocaleDateString('en-US',{month:'short',day:'numeric'}), cls:'' };
-    }
+    const COL_KEYS = ['todo','in_progress','complete','notes'];
+    const COL_LABELS = { todo:'To Do', in_progress:'In Progress', complete:'Complete', notes:'Notes' };
+    const COL_CNT_CLS = { todo:'slate', in_progress:'blue', complete:'green', notes:'orange' };
 
-    function renderTaskBoard() {
-      const cols = { todo:'To Do', in_progress:'In Progress', done:'Done' };
-      const colKeys = Object.keys(cols);
-      let html = '';
-      colKeys.forEach((key, ci) => {
-        const items = tasks.filter(t => t.status === key);
-        html += '<div class="task-col"><div class="col-hdr"><span class="col-title">' + cols[key] + ' <span class="col-cnt">' + items.length + '</span></span></div><div class="t-list">';
-        items.forEach(t => {
-          const due = taskDueText(t.due);
-          const tl = tagLabel(t.tag);
-          const notesPreview = t.notes ? '<div class="t-notes-preview" title="' + t.notes.replace(/"/g,'&quot;') + '">' + (t.notes.length > 60 ? t.notes.substring(0,60) + '…' : t.notes) + '</div>' : '';
-          const filesHtml = t.files.length ? '<div class="t-files"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg> ' + t.files.length + ' file' + (t.files.length > 1 ? 's' : '') + '</div>' : '';
-          const doneStyle = t.status === 'done' ? ' style="opacity:0.6;"' : '';
-          const doneTitleStyle = t.status === 'done' ? ' style="text-decoration:line-through;"' : '';
-          html += '<div class="t-card"' + doneStyle + ' onclick="openTaskDetail(' + t.id + ')"><div class="t-hdr"><span class="t-title"' + doneTitleStyle + '>' + t.title + '</span></div>' + notesPreview + filesHtml + '<div class="t-tags">';
-          if (tl.label) html += '<span class="tag ' + tl.cls + '">' + tl.label + '</span>';
-          if (due.text) html += '<span class="t-due' + (due.cls ? ' ' + due.cls : '') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>' + due.text + '</span>';
-          html += '</div></div>';
-        });
-        html += '</div><button class="add-btn" onclick="openAddTaskModal(\'' + key + '\')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="10" height="10"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Task</button></div>';
+    function renderPlanList() {
+      const q = (document.getElementById('planSearchInput').value || '').toLowerCase();
+      const filtered = PLANS.filter(p => p.name.toLowerCase().includes(q));
+      const body = document.getElementById('planListBody');
+      let html = '<table class="plan-table"><tbody>';
+      filtered.forEach(p => {
+        const taskCount = tasks.filter(t => t.planId === p.id).length;
+        const active = p.id === selectedPlanId ? ' active' : '';
+        const checked = selectedPlanIds.includes(p.id) ? ' checked' : '';
+        html += '<tr class="plan-row' + active + '" onclick="selectPlan(' + p.id + ')">' +
+          '<td onclick="event.stopPropagation()"><input type="checkbox" onchange="togglePlanSelect(' + p.id + ')"' + checked + ' style="width:15px;height:15px;cursor:pointer;"></td>' +
+          '<td><div class="plan-name">' + p.name + '</div><div class="plan-meta">Task Count: ' + taskCount + ' &middot; CreatedBy: ' + p.createdBy + '</div></td>' +
+          '<td><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="color:#94a3b8;cursor:pointer;"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></td>' +
+          '</tr>';
       });
-      document.getElementById('taskBoard').innerHTML = html;
+      html += '</tbody></table>';
+      body.innerHTML = html;
+      document.getElementById('planPaginationInfo').textContent = '1 of 1';
+      document.getElementById('planSelectAll').checked = selectedPlanIds.length === PLANS.length && PLANS.length > 0;
     }
 
-    // ===== TASK DETAIL =====
+    function selectPlan(id) {
+      selectedPlanId = id;
+      renderPlanList();
+      renderKanban();
+    }
+
+    function togglePlanSelect(id) {
+      const idx = selectedPlanIds.indexOf(id);
+      if (idx >= 0) selectedPlanIds.splice(idx, 1);
+      else selectedPlanIds.push(id);
+      renderPlanList();
+      document.getElementById('deletePlanBtn').disabled = selectedPlanIds.length === 0;
+    }
+
+    function toggleSelectAllPlans() {
+      const checked = document.getElementById('planSelectAll').checked;
+      selectedPlanIds = checked ? PLANS.map(p => p.id) : [];
+      renderPlanList();
+      document.getElementById('deletePlanBtn').disabled = selectedPlanIds.length === 0;
+    }
+
+    function deleteSelectedPlans() {
+      if (!selectedPlanIds.length) return;
+      selectedPlanIds.forEach(id => {
+        const idx = PLANS.findIndex(p => p.id === id);
+        if (idx >= 0) PLANS.splice(idx, 1);
+        tasks = tasks.filter(t => t.planId !== id);
+      });
+      if (selectedPlanId && !PLANS.find(p => p.id === selectedPlanId)) selectedPlanId = PLANS.length ? PLANS[0].id : null;
+      selectedPlanIds = [];
+      renderPlanList();
+      renderKanban();
+      document.getElementById('deletePlanBtn').disabled = true;
+    }
+
+    function openAddPlanModal() {
+      const name = prompt('Enter plan name:');
+      if (name && name.trim()) {
+        PLANS.push({ id: ++planIdCounter, name: name.trim(), createdBy: 'Broker User' });
+        renderPlanList();
+      }
+    }
+
+    function renderKanban() {
+      const search = (document.querySelector('.kanban-search')?.value || '').toLowerCase();
+      const kanbanCols = document.getElementById('kanbanCols');
+      const planTasks = selectedPlanId ? tasks.filter(t => t.planId === selectedPlanId && t.title.toLowerCase().includes(search)) : [];
+      COL_KEYS.forEach((key, ci) => {
+        const items = planTasks.filter(t => t.status === key);
+        const col = kanbanCols.children[ci];
+        col.querySelector('.cnt').textContent = items.length;
+        const list = col.querySelector('.kanban-list');
+        list.innerHTML = items.map(t =>
+          '<div class="k-card" draggable="true" ondragstart="dragTask(event,' + t.id + ')" onclick="openTaskDetail(' + t.id + ')"><div class="k-title">' + t.title + '</div></div>'
+        ).join('');
+      });
+    }
+
+    // Drag-and-drop
+    let dragTaskId = null;
+    function dragTask(e, id) {
+      dragTaskId = id;
+      e.dataTransfer.effectAllowed = 'move';
+      setTimeout(() => e.target.classList.add('dragging'), 0);
+    }
+    function allowDrop(e) {
+      e.preventDefault();
+    }
+    function dropTask(e) {
+      e.preventDefault();
+      const col = e.currentTarget.dataset.col;
+      if (!col || !dragTaskId) return;
+      const t = tasks.find(x => x.id === dragTaskId);
+      if (t) { t.status = col; renderKanban(); }
+      document.querySelectorAll('.k-card.dragging').forEach(el => el.classList.remove('dragging'));
+      dragTaskId = null;
+    }
+
+    // Task detail
     function openTaskDetail(id) {
       const t = tasks.find(x => x.id === id);
       if (!t) return;
+      const plan = PLANS.find(p => p.id === t.planId);
       document.getElementById('tdTitle').textContent = t.title;
-      const tl = tagLabel(t.tag);
-      document.getElementById('tdTag').textContent = tl.label;
-      document.getElementById('tdTag').className = 'tag ' + tl.cls;
-      document.getElementById('tdDue').textContent = t.due ? new Date(t.due + 'T00:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'}) : 'No due date';
-      document.getElementById('tdStatus').textContent = { todo:'To Do', in_progress:'In Progress', done:'Done' }[t.status];
-      document.getElementById('tdNotes').textContent = t.notes || 'No notes';
-      const fl = document.getElementById('tdFiles');
-      fl.innerHTML = '';
-      if (t.files.length) {
-        t.files.forEach(f => {
-          const div = document.createElement('div');
-          div.style.cssText = 'display:flex;align-items:center;gap:8px;padding:6px 10px;background:hsl(var(--muted));border-radius:6px;font-size:0.8rem;';
-          div.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="flex-shrink:0;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg><span style="flex:1;">' + f.name + '</span><span style="color:hsl(var(--muted-foreground));font-size:0.7rem;">' + f.size + '</span>';
-          fl.appendChild(div);
-        });
-      } else {
-        fl.innerHTML = '<div style="font-size:0.8rem;color:hsl(var(--muted-foreground));">No attachments</div>';
-      }
+      document.getElementById('tdPlan').textContent = plan ? plan.name : '—';
+      document.getElementById('tdStatus').textContent = COL_LABELS[t.status] || t.status;
       showModal('taskDetailModal');
+    }
+
+    // Add Task (simple, no plan assignment — adds to selected plan)
+    function openAddTaskModal() {
+      if (!selectedPlanId) { alert('Select a plan first.'); return; }
+      const title = prompt('Enter task title:');
+      if (title && title.trim()) {
+        tasks.push({ id: ++taskIdCounter, planId: selectedPlanId, title: title.trim(), status: 'todo' });
+        renderKanban();
+      }
     }
 
     // ===== VIEW SWITCHER =====
@@ -695,7 +780,7 @@
       document.getElementById('view-' + name).classList.add('active');
       if (name === 'catreview') crRender();
       if (name === 'promocal') pcRender();
-      if (name === 'tasks') renderTaskBoard();
+      if (name === 'tasks') { selectedPlanId = PLANS.length ? PLANS[0].id : null; renderPlanList(); renderKanban(); }
     }
 
     // ===== CATEGORY REVIEW DATA =====
@@ -1022,56 +1107,6 @@
     // Modal helpers
     function showModal(id) { document.getElementById(id).classList.add('show'); }
     function closeModal(id) { document.getElementById(id).classList.remove('show'); }
-
-    // Add Task
-    let pendingFiles = [];
-
-    document.getElementById('taskFileInput').addEventListener('change', function() {
-      const preview = document.getElementById('taskFilePreview');
-      preview.innerHTML = '';
-      pendingFiles = [];
-      for (let i = 0; i < this.files.length; i++) {
-        const f = this.files[i];
-        pendingFiles.push({ name: f.name, size: (f.size / 1024).toFixed(1) + ' KB' });
-        const el = document.createElement('span');
-        el.style.cssText = 'display:inline-flex;align-items:center;gap:4px;padding:2px 8px;background:hsl(var(--muted));border-radius:4px;font-size:0.75rem;';
-        el.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>' + f.name;
-        preview.appendChild(el);
-      }
-    });
-
-    function openAddTaskModal(status) {
-      document.getElementById('taskStatusSelect').value = status || 'todo';
-      document.getElementById('taskTitleInput').value = '';
-      document.getElementById('taskDueInput').value = '';
-      document.getElementById('taskSourceSelect').value = 'manual';
-      document.getElementById('taskNotesInput').value = '';
-      document.getElementById('taskFileInput').value = '';
-      document.getElementById('taskFilePreview').innerHTML = '';
-      pendingFiles = [];
-      document.getElementById('addTaskBtn').disabled = true;
-      showModal('addTaskModal');
-    }
-    function checkTaskForm() {
-      const title = document.getElementById('taskTitleInput').value.trim();
-      document.getElementById('addTaskBtn').disabled = !title;
-    }
-    function addTask() {
-      const title = document.getElementById('taskTitleInput').value.trim();
-      if (!title) return;
-      tasks.push({
-        id: ++taskIdCounter,
-        title: title,
-        status: document.getElementById('taskStatusSelect').value,
-        due: document.getElementById('taskDueInput').value,
-        tag: document.getElementById('taskSourceSelect').value,
-        notes: document.getElementById('taskNotesInput').value.trim(),
-        files: pendingFiles.slice()
-      });
-      pendingFiles = [];
-      closeModal('addTaskModal');
-      renderTaskBoard();
-    }
 
     function crRender() {
       document.getElementById('crYear').textContent = crYear;
