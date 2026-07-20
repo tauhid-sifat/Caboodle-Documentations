@@ -169,6 +169,12 @@
     .k-card:hover { border-color:#cbd5e1; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
     .k-card.dragging { opacity:0.5; }
     .k-card .k-title { font-weight:500; }
+    .k-card.note { background:#fffbeb; border-color:#fde68a; cursor:default; }
+    .k-card.note:hover { border-color:#fbbf24; box-shadow:0 1px 4px rgba(251,191,36,0.15); }
+    .k-card.note .note-preview { font-size:0.7rem; color:#92400e; margin-top:4px; line-height:1.4; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+    .kanban-foot { padding:6px 12px; border-top:1px solid hsl(var(--border)); flex-shrink:0; text-align:center; }
+    .complete-toggle { background:none; border:0; font-size:0.7rem; color:hsl(var(--primary)); cursor:pointer; padding:4px 8px; border-radius:4px; transition:background 0.15s; }
+    .complete-toggle:hover { background:hsl(var(--muted)); text-decoration:underline; }
     .drop-zone { min-height:40px; flex:1; }
     /* quick actions grid */
     .qa-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; padding: 16px 24px 8px; background: hsl(var(--background)); flex-shrink: 0; }
@@ -431,8 +437,8 @@
           <div class="kanban-cols" id="kanbanCols">
             <div class="kanban-col"><div class="kanban-hdr-col">To Do <span class="cnt slate">0</span></div><div class="kanban-list" data-col="todo" ondrop="dropTask(event)" ondragover="allowDrop(event)"></div></div>
             <div class="kanban-col"><div class="kanban-hdr-col">In Progress <span class="cnt blue">0</span></div><div class="kanban-list" data-col="in_progress" ondrop="dropTask(event)" ondragover="allowDrop(event)"></div></div>
-            <div class="kanban-col"><div class="kanban-hdr-col">Complete <span class="cnt green">0</span></div><div class="kanban-list" data-col="complete" ondrop="dropTask(event)" ondragover="allowDrop(event)"></div></div>
-            <div class="kanban-col"><div class="kanban-hdr-col">Notes <span class="cnt orange">0</span></div><div class="kanban-list" data-col="notes" ondrop="dropTask(event)" ondragover="allowDrop(event)"></div></div>
+            <div class="kanban-col"><div class="kanban-hdr-col">Complete <span class="cnt green">0</span></div><div class="kanban-list" data-col="complete" ondrop="dropTask(event)" ondragover="allowDrop(event)"></div><div class="kanban-foot"><button class="complete-toggle" id="completeToggle" onclick="toggleCompleted()">Show all completed (0)</button></div></div>
+            <div class="kanban-col"><div class="kanban-hdr-col">Notes <span class="cnt orange">0</span></div><div class="kanban-list" id="notesList"></div></div>
           </div>
         </div>
       </div>
@@ -598,6 +604,7 @@
           <span style="font-size:0.75rem;color:hsl(var(--muted-foreground));display:flex;align-items:center;gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg> Plan: <span id="tdPlan"></span></span>
           <span style="font-size:0.75rem;color:hsl(var(--muted-foreground));display:flex;align-items:center;gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg> Status: <span id="tdStatus"></span></span>
         </div>
+        <div id="tdNoteContent" style="display:none;margin-top:10px;background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px;font-size:0.85rem;line-height:1.6;color:#92400e;white-space:pre-wrap;"></div>
       </div>
       <div class="modal-foot">
         <button class="btn btn-sm btn-default" onclick="closeModal('taskDetailModal')">Close</button>
@@ -640,13 +647,21 @@
       { id: ++taskIdCounter, planId:1, title:'Check MOMs Promotion', status:'in_progress' },
       { id: ++taskIdCounter, planId:1, title:'Fancy Food Show Planning', status:'in_progress' },
       { id: ++taskIdCounter, planId:1, title:'NCG Show Planning', status:'complete' },
-      { id: ++taskIdCounter, planId:1, title:'PNW Meeting Note', status:'notes' },
-      { id: ++taskIdCounter, planId:1, title:'Asana tracker', status:'notes' },
-      { id: ++taskIdCounter, planId:1, title:'Check off shelf display at New Seasons', status:'notes' },
-      { id: ++taskIdCounter, planId:1, title:'MA Meeting Notes', status:'notes' },
-      { id: ++taskIdCounter, planId:1, title:'NorCal Meeting Notes', status:'notes' },
-      { id: ++taskIdCounter, planId:1, title:'Nathan - Call Notes', status:'notes' },
-      { id: ++taskIdCounter, planId:1, title:'DIGITAL TRACKER', status:'notes' },
+      { id: ++taskIdCounter, planId:1, title:'KeHE EDLP Jan-Mar', status:'complete' },
+      { id: ++taskIdCounter, planId:1, title:'UNFI Spring Reset', status:'complete' },
+      { id: ++taskIdCounter, planId:1, title:'Sprouts Organic Launch', status:'complete' },
+      { id: ++taskIdCounter, planId:1, title:'Whole Foods Frozen Review', status:'complete' },
+      { id: ++taskIdCounter, planId:1, title:'Lucky\'s Q1 Promo', status:'complete' },
+      { id: ++taskIdCounter, planId:1, title:'Gelson\'s Pasta Reset', status:'complete' },
+      { id: ++taskIdCounter, planId:1, title:'Raley\'s Asian Review', status:'complete' },
+      { id: ++taskIdCounter, planId:1, title:'Nugget Market Reset', status:'complete' },
+      { id: ++taskIdCounter, planId:1, title:'PNW Meeting Note', status:'notes', content:'Discussed distribution expansion into Washington/Oregon. Key accounts: New Seasons, Chucks, Huckleberry. Follow up on slotting fees.' },
+      { id: ++taskIdCounter, planId:1, title:'Asana tracker', status:'notes', content:'Asana project board for Q3 category reviews. Need to update deadlines and assign owners.' },
+      { id: ++taskIdCounter, planId:1, title:'Check off shelf display at New Seasons', status:'notes', content:'New Seasons Portland location has endcap available for July. Confirm display dimensions and POS materials.' },
+      { id: ++taskIdCounter, planId:1, title:'MA Meeting Notes', status:'notes', content:'Marketing alignment meeting — budget approved for Q3 trade spend. Focus on digital ads and in-store demos.' },
+      { id: ++taskIdCounter, planId:1, title:'NorCal Meeting Notes', status:'notes', content:'NorCal team sync. Nugget reset scheduled for Aug. Raleys reset pushed to Sep. New item forms submitted for Lucky.' },
+      { id: ++taskIdCounter, planId:1, title:'Nathan - Call Notes', status:'notes', content:'Call with Nathan re: UNFI invoice discrepancies. Credits being processed for Q2 chargebacks. Estimated resolution 2 weeks.' },
+      { id: ++taskIdCounter, planId:1, title:'DIGITAL TRACKER', status:'notes', content:'Digital shelf analytics tracking sheet. Monitor out-of-stocks and content compliance across all banners.' },
       { id: ++taskIdCounter, planId:2, title:'East Coast Review', status:'todo' },
     ];
 
@@ -718,6 +733,8 @@
       }
     }
 
+    let completedShowAll = false;
+
     function renderKanban() {
       const search = (document.querySelector('.kanban-search')?.value || '').toLowerCase();
       const kanbanCols = document.getElementById('kanbanCols');
@@ -726,11 +743,39 @@
         const items = planTasks.filter(t => t.status === key);
         const col = kanbanCols.children[ci];
         col.querySelector('.cnt').textContent = items.length;
+
+        if (key === 'complete') {
+          const totalComplete = items.length;
+          const showItems = completedShowAll ? items : items.slice(-5);
+          const hidden = totalComplete - showItems.length;
+          const toggle = document.getElementById('completeToggle');
+          toggle.textContent = completedShowAll ? 'Show recent (5)' : 'Show all completed (' + totalComplete + ')';
+          toggle.style.display = totalComplete > 5 ? '' : 'none';
+          const list = col.querySelector('.kanban-list');
+          list.innerHTML = showItems.map(t =>
+            '<div class="k-card" draggable="true" ondragstart="dragTask(event,' + t.id + ')" onclick="openTaskDetail(' + t.id + ')" style="opacity:0.7;"><div class="k-title" style="text-decoration:line-through;">' + t.title + '</div></div>'
+          ).join('');
+          return;
+        }
+
+        if (key === 'notes') {
+          const list = document.getElementById('notesList');
+          list.innerHTML = items.map(t =>
+            '<div class="k-card note" onclick="openTaskDetail(' + t.id + ')"><div class="k-title">' + t.title + '</div><div class="note-preview">' + (t.content || '') + '</div></div>'
+          ).join('');
+          return;
+        }
+
         const list = col.querySelector('.kanban-list');
         list.innerHTML = items.map(t =>
           '<div class="k-card" draggable="true" ondragstart="dragTask(event,' + t.id + ')" onclick="openTaskDetail(' + t.id + ')"><div class="k-title">' + t.title + '</div></div>'
         ).join('');
       });
+    }
+
+    function toggleCompleted() {
+      completedShowAll = !completedShowAll;
+      renderKanban();
     }
 
     // Drag-and-drop
@@ -746,7 +791,7 @@
     function dropTask(e) {
       e.preventDefault();
       const col = e.currentTarget.dataset.col;
-      if (!col || !dragTaskId) return;
+      if (!col || !dragTaskId || col === 'notes') return;
       const t = tasks.find(x => x.id === dragTaskId);
       if (t) { t.status = col; renderKanban(); }
       document.querySelectorAll('.k-card.dragging').forEach(el => el.classList.remove('dragging'));
@@ -761,6 +806,13 @@
       document.getElementById('tdTitle').textContent = t.title;
       document.getElementById('tdPlan').textContent = plan ? plan.name : '—';
       document.getElementById('tdStatus').textContent = COL_LABELS[t.status] || t.status;
+      const noteContent = document.getElementById('tdNoteContent');
+      if (t.status === 'notes' && t.content) {
+        noteContent.style.display = 'block';
+        noteContent.textContent = t.content;
+      } else {
+        noteContent.style.display = 'none';
+      }
       showModal('taskDetailModal');
     }
 
