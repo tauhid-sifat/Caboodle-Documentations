@@ -256,14 +256,14 @@
 
         <div class="dash-grid">
           <div class="panel">
-            <div class="p-hdr"><h2 class="p-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> Timeline <span style="font-size:0.7rem;font-weight:500;color:hsl(var(--muted-foreground));margin-left:4px;">Next 14 Days</span></h2><div class="pill-g"><button class="active">7d</button><button>14d</button><button>30d</button></div></div>
+            <div class="p-hdr"><h2 class="p-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> Timeline <span style="font-size:0.7rem;font-weight:500;color:hsl(var(--muted-foreground));margin-left:4px;">Next 14 Days</span></h2><div style="display:flex;gap:6px;align-items:center;"><div class="pill-g" style="margin-right:8px;"><button class="active">7d</button><button>14d</button><button>30d</button></div><div class="pill-g"><button class="active" data-tlfilter="cr" onclick="toggleTlFilter(this)">Cat Review</button><button class="active" data-tlfilter="promo" onclick="toggleTlFilter(this)">Promo</button><button class="active" data-tlfilter="task" onclick="toggleTlFilter(this)">Tasks</button></div></div></div>
             <div class="tl-body">
               <div class="tl-day today">
                 <div class="tl-hdr"><span class="tl-lbl">Today</span><span class="tl-date">Mon, Jun 23</span></div>
                 <div class="tl-items">
                   <div class="tl-item cr" onclick="showView('catreview')"><div class="tl-ico blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(var(--primary))"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div><div class="tl-c"><div class="tl-t">Nugget Market — Specialty Asian</div><div class="tl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Starts Jul 20</span><span class="s-pill blue">Category Review</span></div></div></div>
                   <div class="tl-item promo" onclick="showView('promocal')"><div class="tl-ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(160,84%,39%)"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></div><div class="tl-c"><div class="tl-t">KeHE TPR — Beverages</div><div class="tl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Starts Thu</span><span class="s-pill green">Promo</span></div></div></div>
-                  <div class="tl-item task"><div class="tl-ico purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(250,76%,61%)"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg></div><div class="tl-c"><div class="tl-t">F/U with Buyer — Gelson's</div><div class="tl-m"><span class="s-pill purple">Task</span><span class="s-pill purple">In Progress</span></div></div></div>
+                  <div class="tl-item task" onclick="showView('tasks')"><div class="tl-ico purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(250,76%,61%)"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg></div><div class="tl-c"><div class="tl-t">F/U with Buyer — Gelson's</div><div class="tl-m"><span class="s-pill purple">Task</span><span class="s-pill purple">In Progress</span></div></div></div>
                 </div>
               </div>
               <div class="tl-day"><div class="tl-hdr"><span class="tl-lbl">Tomorrow</span><span class="tl-date">Tue, Jun 24</span></div><div class="tl-items"><div class="tl-item promo" onclick="showView('promocal')"><div class="tl-ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(160,84%,39%)"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></div><div class="tl-c"><div class="tl-t">UNFI EDLP Review</div><div class="tl-m"><span>Review</span><span class="s-pill green">Promo</span></div></div></div><div class="tl-item cr" onclick="showView('catreview')"><div class="tl-ico blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(var(--primary))"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div><div class="tl-c"><div class="tl-t">Lazy Acres — TBD Category</div><div class="tl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Review Jun</span><span class="s-pill blue">Category Review</span></div></div></div></div></div>
@@ -353,6 +353,27 @@
       </div>
     </div>
 
+    <!-- ===== VIEW: TASKS ===== -->
+    <div id="view-tasks" class="view">
+      <div style="display:flex;flex-direction:column;height:100%;overflow:hidden;">
+        <div class="cal-top">
+          <div class="cal-top-left">
+            <h1 class="cal-title">Tasks</h1>
+          </div>
+          <div style="display:flex;gap:8px;">
+            <button class="btn btn-sm" onclick="showView('dashboard')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Dashboard</button>
+          </div>
+        </div>
+        <div class="panel" style="flex:1;margin:16px;border-radius:var(--radius);overflow:hidden;">
+          <div class="task-cols" style="flex:1;min-height:0;">
+            <div class="task-col"><div class="col-hdr"><span class="col-title">To Do <span class="col-cnt">3</span></span></div><div class="t-list"><div class="t-card"><div class="t-hdr"><span class="t-title">F/U Gelson's buyer — Colin</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Due Today</span></div></div><div class="t-card"><div class="t-hdr"><span class="t-title">Contact Di Bari for Lazy Acres</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Due Fri</span></div></div><div class="t-card"><div class="t-hdr"><span class="t-title">Upload APL — KeHE</span></div><div class="t-tags"><span class="tag tag-gray">APL</span><span class="t-due overdue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Overdue</span></div></div></div><button class="add-btn" onclick="openAddTaskModal('todo')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Task</button></div>
+            <div class="task-col"><div class="col-hdr"><span class="col-title">In Progress <span class="col-cnt">2</span></span></div><div class="t-list"><div class="t-card"><div class="t-hdr"><span class="t-title">Prep Nugget — Asian review</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span></div></div><div class="t-card"><div class="t-hdr"><span class="t-title">Finalize Costco Promo</span></div><div class="t-tags"><span class="tag tag-green">Promo</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Due Mon</span></div></div></div><button class="add-btn" onclick="openAddTaskModal('in_progress')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Task</button></div>
+            <div class="task-col"><div class="col-hdr"><span class="col-title">Done <span class="col-cnt">1</span></span></div><div class="t-list"><div class="t-card" style="opacity:0.6;"><div class="t-hdr"><span class="t-title" style="text-decoration:line-through;">Submit 24 Vegan to Lucky's</span></div><div class="t-tags"><span class="tag tag-blue">Cat Review</span><span class="t-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Jun 20</span></div></div></div><button class="add-btn" onclick="openAddTaskModal('done')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Task</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- MODAL: Send to Contacts -->
@@ -423,25 +444,73 @@
 
   <!-- MODAL: Compose Email for Assigned Contacts -->
   <div id="assignComposeModal" class="modal-overlay">
-    <div class="modal-box" style="max-width:500px;">
-      <div class="modal-hdr"><h3>Compose Email</h3><button class="modal-close" onclick="closeModal('assignComposeModal')">✕</button></div>
+    <div class="modal-box" style="max-width:560px;">
+      <div class="modal-hdr"><h3>Compose Message</h3><button class="modal-close" onclick="closeModal('assignComposeModal')">✕</button></div>
       <div class="modal-body">
-        <div style="margin-bottom:10px;">
-          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">To</label>
-          <div id="assignComposeRecipients" style="font-size:0.8rem;color:hsl(var(--foreground));background:hsl(var(--muted));padding:8px 12px;border-radius:8px;min-height:20px;"></div>
+        <div class="to-summary">To: <span id="assignToNames"></span></div>
+        <div class="cc-bcc-row">
+          <input class="modal-input" id="assignCcField" placeholder="CC (comma-separated emails)" style="font-size:0.8rem;">
         </div>
-        <div style="margin-bottom:10px;">
-          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Subject</label>
-          <input class="modal-input" id="assignComposeSubject" placeholder="e.g., Category Review Milestone" value="">
+        <div class="cc-bcc-row">
+          <input class="modal-input" id="assignBccField" placeholder="BCC (comma-separated emails)" style="font-size:0.8rem;">
         </div>
-        <div style="margin-bottom:10px;">
-          <label style="font-size:0.75rem;font-weight:600;display:block;margin-bottom:4px;">Message</label>
-          <textarea class="modal-input" id="assignComposeBody" rows="5" placeholder="Type your message..." style="resize:vertical;min-height:80px;"></textarea>
+        <div style="margin-bottom:8px;">
+          <input class="modal-input" id="assignComposeSubject" placeholder="Subject line..." style="font-size:0.85rem;">
+        </div>
+        <div>
+          <textarea class="modal-textarea" id="assignComposeMessage" placeholder="Type your message... (bold, bullets, links supported)"></textarea>
+        </div>
+        <div style="display:flex;gap:4px;margin-top:6px;font-size:0.7rem;color:#94a3b8;">
+          <span style="cursor:pointer;padding:2px 6px;border-radius:4px;border:1px solid #e2e8f0;" title="Bold"><strong>B</strong></span>
+          <span style="cursor:pointer;padding:2px 6px;border-radius:4px;border:1px solid #e2e8f0;" title="Italic"><em>I</em></span>
+          <span style="cursor:pointer;padding:2px 6px;border-radius:4px;border:1px solid #e2e8f0;" title="Bullets">•</span>
+          <span style="cursor:pointer;padding:2px 6px;border-radius:4px;border:1px solid #e2e8f0;" title="Link">🔗</span>
         </div>
       </div>
       <div class="modal-foot">
         <button class="btn btn-sm" onclick="closeModal('assignComposeModal')">Cancel</button>
-        <button class="btn btn-sm btn-default" id="assignSendBtn" onclick="sendAssignedEmail()">Send</button>
+        <button class="btn btn-sm btn-default" id="assignSendBtn" disabled onclick="sendAssignedEmail()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Milestone Detail -->
+  <div id="milestoneDetailModal" class="modal-overlay">
+    <div class="modal-box" style="max-width:480px;">
+      <div class="modal-hdr"><h3>Milestone Details</h3><button class="modal-close" onclick="closeModal('milestoneDetailModal')">✕</button></div>
+      <div class="modal-body">
+        <div id="msDetailHeader" style="font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:600;margin-bottom:4px;"></div>
+        <div id="msDetailSub" style="font-size:0.8rem;color:#64748b;margin-bottom:14px;"></div>
+
+        <div style="border:1px solid #e2e8f0;border-radius:8px;overflow:hidden;margin-bottom:12px;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.8rem;">
+            <tr><td style="padding:8px 12px;font-weight:500;color:#64748b;width:120px;border-bottom:1px solid #e2e8f0;">Type</td>
+                <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msType"></td></tr>
+            <tr><td style="padding:8px 12px;font-weight:500;color:#64748b;width:120px;border-bottom:1px solid #e2e8f0;">Region</td>
+                <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msRegion"></td></tr>
+            <tr id="msReviewStartRow"><td style="padding:8px 12px;font-weight:500;color:#64748b;border-bottom:1px solid #e2e8f0;">Review Start</td>
+                <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msReviewStart"></td></tr>
+            <tr id="msReviewEndRow"><td style="padding:8px 12px;font-weight:500;color:#64748b;border-bottom:1px solid #e2e8f0;">Review End</td>
+                <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msReviewEnd"></td></tr>
+            <tr id="msSubmissionRow"><td style="padding:8px 12px;font-weight:500;color:#64748b;border-bottom:1px solid #e2e8f0;">Submission Due</td>
+                <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msSubmission"></td></tr>
+            <tr id="msResetDateRow" style="display:none;"><td style="padding:8px 12px;font-weight:500;color:#64748b;border-bottom:1px solid #e2e8f0;">Reset Date</td>
+                <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msResetDate"></td></tr>
+            <tr><td style="padding:8px 12px;font-weight:500;color:#64748b;border-bottom:1px solid #e2e8f0;">Assigned</td>
+                <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msAssigned">None</td></tr>
+            <tr><td style="padding:8px 12px;font-weight:500;color:#64748b;">Notes</td>
+                <td style="padding:8px 12px;font-size:0.78rem;color:#475569;" id="msNotes">—</td></tr>
+          </table>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+          <input type="checkbox" id="msMarkReviewed" onchange="msToggleReviewed()">
+          <label for="msMarkReviewed" style="font-size:0.8rem;cursor:pointer;">Mark as reviewed</label>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-sm" id="msAssignBtn" onclick="msOpenAssign()">Assign Contacts</button>
+        <button class="btn btn-sm btn-default" id="msEmailBtn" onclick="msSendEmail()">Send Email</button>
       </div>
     </div>
   </div>
@@ -683,26 +752,143 @@
         alert('Please select at least one contact.');
         return;
       }
-      const selected = contacts.filter(c => selectedIds.includes(c.id));
-      const recipientsHtml = selected.map(c =>
-        `<span style="display:inline-block;background:hsl(var(--primary));color:white;padding:2px 8px;border-radius:999px;font-size:0.7rem;margin:2px;">${c.brand} – ${c.name}</span>`
-      ).join('');
-      document.getElementById('assignComposeRecipients').innerHTML = recipientsHtml || 'No contacts selected';
+      const selected = CONTACTS.filter(c => selectedIds.includes(c.id));
+      const names = selected.map(c => c.name + ' (' + c.brand + ')').join(', ');
+      document.getElementById('assignToNames').textContent = names;
       document.getElementById('assignComposeSubject').value = '';
-      document.getElementById('assignComposeBody').value = '';
+      document.getElementById('assignComposeMessage').value = '';
+      document.getElementById('assignCcField').value = '';
+      document.getElementById('assignBccField').value = '';
+      document.getElementById('assignSendBtn').disabled = true;
+      closeModal('assignContactModal');
       showModal('assignComposeModal');
     }
 
+    function assignCheckComposeFields() {
+      const sub = document.getElementById('assignComposeSubject').value.trim();
+      const msg = document.getElementById('assignComposeMessage').value.trim();
+      document.getElementById('assignSendBtn').disabled = !sub || !msg;
+    }
+    document.getElementById('assignComposeSubject').addEventListener('input', assignCheckComposeFields);
+    document.getElementById('assignComposeMessage').addEventListener('input', assignCheckComposeFields);
+
     function sendAssignedEmail() {
-      const subject = document.getElementById('assignComposeSubject').value.trim();
-      const body = document.getElementById('assignComposeBody').value.trim();
-      if (!subject || !body) {
-        alert('Please fill in subject and message.');
-        return;
-      }
+      const sub = document.getElementById('assignComposeSubject').value.trim();
+      const msg = document.getElementById('assignComposeMessage').value.trim();
+      if (!sub || !msg) return;
+      const key = assignCellKey;
+      const selectedIds = assignContacts[key] || [];
+      const now = new Date().toLocaleString();
+      selectedIds.forEach(id => {
+        const c = CONTACTS.find(x => x.id === id);
+        if (c) sendLog.unshift({ subject: sub, message: msg, sentAt: now, name: c.name, brand: c.brand, email: c.email });
+      });
       closeModal('assignComposeModal');
       closeModal('assignContactModal');
-      alert(`Email sent to assigned contacts.\nSubject: ${subject}`);
+      alert('Message sent to ' + selectedIds.length + ' contact(s).');
+      localStorage.setItem('caboodleSendLog', JSON.stringify(sendLog));
+    }
+
+    // Milestone Detail
+    let msKey = null;
+    function openMilestoneDetail(key, rowId, month, banner, category, region, type) {
+      msKey = key;
+      document.getElementById('msDetailHeader').textContent = banner + ' — ' + category;
+      document.getElementById('msDetailSub').textContent = month + ' ' + crYear;
+
+      const typeLabel = type === 'Reset' ? 'Reset' : 'Review';
+      const typeColor = type === 'Reset' ? 'green' : 'blue';
+      document.getElementById('msType').innerHTML = '<span class="cat-badge ' + typeColor + '" style="font-size:0.7rem;padding:2px 10px;">' + typeLabel + '</span>';
+
+      document.getElementById('msRegion').textContent = region || 'National';
+
+      // Generate demo dates matching the list view logic
+      const monthNum = CR_MONTHS.indexOf(month) + 1;
+      const subDue = month + ' 01, ' + crYear;
+      const reviewStart = month + ' 10, ' + crYear;
+      const reviewEnd = month + ' 15, ' + crYear;
+      const resetDt = month + ' 28, ' + crYear;
+
+      if (type === 'Reset') {
+        document.getElementById('msReviewStartRow').style.display = 'none';
+        document.getElementById('msReviewEndRow').style.display = 'none';
+        document.getElementById('msSubmissionRow').style.display = 'none';
+        document.getElementById('msResetDateRow').style.display = '';
+        document.getElementById('msResetDate').textContent = resetDt;
+      } else {
+        document.getElementById('msReviewStartRow').style.display = '';
+        document.getElementById('msReviewEndRow').style.display = '';
+        document.getElementById('msSubmissionRow').style.display = '';
+        document.getElementById('msResetDateRow').style.display = 'none';
+        document.getElementById('msReviewStart').textContent = reviewStart;
+        document.getElementById('msReviewEnd').textContent = reviewEnd;
+        document.getElementById('msSubmission').textContent = subDue;
+      }
+
+      // Notes
+      const regionNotes = {
+        'NorCal': 'Contact brand closer to review date',
+        'SoCal': 'Review schedule TBD — follow up with buyer',
+        'National': 'Standard review cycle'
+      };
+      document.getElementById('msNotes').textContent = regionNotes[region] || '—';
+
+      // Assigned contacts
+      const assignedIds = assignContacts[key] || [];
+      if (assignedIds.length > 0) {
+        const names = assignedIds.map(id => { const c = CONTACTS.find(x => x.id === id); return c ? c.name : ''; }).filter(Boolean).join(', ');
+        document.getElementById('msAssigned').textContent = names;
+      } else {
+        document.getElementById('msAssigned').textContent = 'None';
+      }
+
+      // Checkmark state
+      document.getElementById('msMarkReviewed').checked = !!crChecked[key];
+      showModal('milestoneDetailModal');
+    }
+
+    function msToggleReviewed() {
+      const checked = document.getElementById('msMarkReviewed').checked;
+      crChecked[msKey] = checked;
+      crRender();
+    }
+
+    function msOpenAssign() {
+      closeModal('milestoneDetailModal');
+      // Extract banner and month from msKey (rowId-month)
+      const parts = msKey.split('-');
+      const month = parts.slice(1).join('-');
+      const row = CR_DATA.find(r => r.id === parts[0]);
+      if (row) openAssignContacts(row.banner + ' - ' + month);
+    }
+
+    function msSendEmail() {
+      const assignedIds = assignContacts[msKey] || [];
+      if (assignedIds.length === 0) {
+        msOpenAssign();
+        return;
+      }
+      closeModal('milestoneDetailModal');
+      const selected = CONTACTS.filter(c => assignedIds.includes(c.id));
+      const names = selected.map(c => c.name + ' (' + c.brand + ')').join(', ');
+      document.getElementById('assignToNames').textContent = names;
+      document.getElementById('assignComposeSubject').value = '';
+      document.getElementById('assignComposeMessage').value = '';
+      document.getElementById('assignCcField').value = '';
+      document.getElementById('assignBccField').value = '';
+      document.getElementById('assignSendBtn').disabled = true;
+      showModal('assignComposeModal');
+    }
+
+    // Timeline filter
+    function toggleTlFilter(btn) {
+      btn.classList.toggle('active');
+      const activeFilters = [...document.querySelectorAll('[data-tlfilter].active')].map(b => b.dataset.tlfilter);
+      document.querySelectorAll('.tl-item').forEach(item => {
+        const cls = item.classList;
+        const match = activeFilters.length === 0 || activeFilters.some(f => cls.contains(f));
+        item.style.display = match ? '' : 'none';
+      });
     }
 
     // Modal helpers
@@ -770,7 +956,7 @@
           const isChecked = crChecked[key];
           if (content) {
             const colorClass = content === 'Reset' ? 'green' : 'blue';
-            html += `<td class="month-cell"><span class="cat-badge ${colorClass}" onclick="crToggleCheck('${key}')" ondblclick="event.stopPropagation();openAssignContacts('${row.banner} - ${month}')">${content}${isChecked ? '<span class="ck-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>' : ''}</span></td>`;
+            html += `<td class="month-cell"><span class="cat-badge ${colorClass}" onclick="openMilestoneDetail('${key}','${row.id}','${month}','${row.banner.replace(/'/g, "\\'")}','${row.category.replace(/'/g, "\\'")}','${row.region}','${content}')">${content}${isChecked ? '<span class="ck-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>' : ''}</span></td>`;
           } else {
             html += `<td class="month-cell"></td>`;
           }
