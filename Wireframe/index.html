@@ -591,18 +591,16 @@
                 <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msType"></td></tr>
             <tr><td style="padding:8px 12px;font-weight:500;color:#64748b;width:120px;border-bottom:1px solid #e2e8f0;">Region</td>
                 <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msRegion"></td></tr>
-            <tr id="msReviewStartRow"><td style="padding:8px 12px;font-weight:500;color:#64748b;border-bottom:1px solid #e2e8f0;">Review Start</td>
-                <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msReviewStart"></td></tr>
-            <tr id="msReviewEndRow"><td style="padding:8px 12px;font-weight:500;color:#64748b;border-bottom:1px solid #e2e8f0;">Review End</td>
-                <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msReviewEnd"></td></tr>
-            <tr id="msSubmissionRow"><td style="padding:8px 12px;font-weight:500;color:#64748b;border-bottom:1px solid #e2e8f0;">Submission Due</td>
+            <tr><td style="padding:8px 12px;font-weight:500;color:#64748b;border-bottom:1px solid #e2e8f0;">Review Month</td>
+                <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msReviewMonth"></td></tr>
+            <tr id="msSubmissionRow"><td style="padding:8px 12px;font-weight:500;color:#64748b;border-bottom:1px solid #e2e8f0;">Submission Due Date</td>
                 <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msSubmission"></td></tr>
+            <tr id="msReviewEndRow"><td style="padding:8px 12px;font-weight:500;color:#64748b;border-bottom:1px solid #e2e8f0;">Review End Date</td>
+                <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msReviewEnd"></td></tr>
             <tr id="msResetDateRow" style="display:none;"><td style="padding:8px 12px;font-weight:500;color:#64748b;border-bottom:1px solid #e2e8f0;">Reset Date</td>
                 <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msResetDate"></td></tr>
             <tr><td style="padding:8px 12px;font-weight:500;color:#64748b;border-bottom:1px solid #e2e8f0;">Assigned</td>
                 <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msAssigned">None</td></tr>
-            <tr><td style="padding:8px 12px;font-weight:500;color:#64748b;">Notes</td>
-                <td style="padding:8px 12px;font-size:0.78rem;color:#475569;" id="msNotes">—</td></tr>
           </table>
         </div>
 
@@ -1069,44 +1067,31 @@
     function openMilestoneDetail(key, rowId, month, banner, category, region, type) {
       msKey = key;
       document.getElementById('msDetailHeader').textContent = banner + ' — ' + category;
-      document.getElementById('msDetailSub').textContent = month + ' ' + crYear;
+      document.getElementById('msDetailSub').textContent = region || 'National';
 
       const typeLabel = type === 'Reset' ? 'Reset' : 'Review';
       const typeColor = type === 'Reset' ? 'green' : 'blue';
       document.getElementById('msType').innerHTML = '<span class="cat-badge ' + typeColor + '" style="font-size:0.7rem;padding:2px 10px;">' + typeLabel + '</span>';
 
       document.getElementById('msRegion').textContent = region || 'National';
+      document.getElementById('msReviewMonth').textContent = month + ' ' + crYear;
 
-      // Generate demo dates matching the list view logic
-      const monthNum = CR_MONTHS.indexOf(month) + 1;
       const subDue = month + ' 01, ' + crYear;
-      const reviewStart = month + ' 10, ' + crYear;
       const reviewEnd = month + ' 15, ' + crYear;
       const resetDt = month + ' 28, ' + crYear;
 
       if (type === 'Reset') {
-        document.getElementById('msReviewStartRow').style.display = 'none';
-        document.getElementById('msReviewEndRow').style.display = 'none';
         document.getElementById('msSubmissionRow').style.display = 'none';
+        document.getElementById('msReviewEndRow').style.display = 'none';
         document.getElementById('msResetDateRow').style.display = '';
         document.getElementById('msResetDate').textContent = resetDt;
       } else {
-        document.getElementById('msReviewStartRow').style.display = '';
-        document.getElementById('msReviewEndRow').style.display = '';
         document.getElementById('msSubmissionRow').style.display = '';
+        document.getElementById('msReviewEndRow').style.display = '';
         document.getElementById('msResetDateRow').style.display = 'none';
-        document.getElementById('msReviewStart').textContent = reviewStart;
-        document.getElementById('msReviewEnd').textContent = reviewEnd;
         document.getElementById('msSubmission').textContent = subDue;
+        document.getElementById('msReviewEnd').textContent = reviewEnd;
       }
-
-      // Notes
-      const regionNotes = {
-        'NorCal': 'Contact brand closer to review date',
-        'SoCal': 'Review schedule TBD — follow up with buyer',
-        'National': 'Standard review cycle'
-      };
-      document.getElementById('msNotes').textContent = regionNotes[region] || '—';
 
       // Assigned contacts
       const assignedIds = assignContacts[key] || [];
