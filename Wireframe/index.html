@@ -390,9 +390,6 @@
             <button class="btn btn-sm" onclick="showView('catreview')" style="margin-left:8px;">Calendar</button>
           </div>
           <div style="display:flex;gap:8px;align-items:center;">
-            <select id="reportBrandFilter" onchange="renderBrandReport()" style="padding:6px 10px;border:1px solid #e2e8f0;border-radius:6px;font-size:0.8rem;">
-              <option value="all">All Brands</option>
-            </select>
             <button class="btn btn-sm" onclick="showView('dashboard')">Dashboard</button>
           </div>
         </div>
@@ -1168,13 +1165,6 @@
     }
 
     function renderBrandReport() {
-      const brandFilter = document.getElementById('reportBrandFilter').value;
-      const brands = [...new Set(CONTACTS.map(c => c.brand))];
-
-      let opts = '<option value="all">All Brands</option>';
-      brands.forEach(b => { opts += '<option value="' + b + '"' + (b === brandFilter ? ' selected' : '') + '>' + b + '</option>'; });
-      document.getElementById('reportBrandFilter').innerHTML = opts;
-
       // Build entries
       const entries = [];
       CR_DATA.forEach(row => {
@@ -1184,7 +1174,6 @@
           (assignContacts[cellKey] || []).forEach(contactId => {
             const contact = CONTACTS.find(c => c.id === contactId);
             if (!contact) return;
-            if (brandFilter !== 'all' && contact.brand !== brandFilter) return;
             const monthDate = new Date(crYear, mi, 1);
             entries.push({
               key: cellKey + '-' + contactId,
@@ -1275,6 +1264,7 @@
 
       const uniqVals = (field) => {
         const vals = entries.map(e => {
+          if (field === 'brand') return e.brand;
           if (field === 'retailer') return e.retailer;
           if (field === 'category') return e.category;
           if (field === 'reviewStart') return e.reviewStart;
@@ -1286,7 +1276,7 @@
       };
 
       const cols = [
-        { key:'brand', label:'Brand', filterable:false },  // brand filter only at top (Fix 3)
+        { key:'brand', label:'Brand', filterable:true },
         { key:'retailer', label:'Retailer', filterable:true },
         { key:'category', label:'Category', filterable:true },
         { key:'reviewStart', label:'Review Start', filterable:true },
