@@ -200,9 +200,10 @@
     .br-table select { padding:4px 6px; border:1px solid #e2e8f0; border-radius:4px; font-size:0.7rem; max-width:130px; background:#fff; }
     .br-table input.notes-input { width:100%; border:0; background:transparent; font-size:0.72rem; outline:none; border-bottom:1px dashed #e2e8f0; padding:2px 0; }
     .br-table input.notes-input:focus { border-bottom-color:#6366f1; }
-    .br-table tr.row-rejected { border-left:3px solid #ef4444; }
-    .br-table tr.row-accepted { border-left:3px solid #16a34a; }
-    .br-table tr.row-pending { border-left:3px solid #f59e0b; }
+    .br-table td:first-child { border-left:3px solid transparent; }
+    .br-table tr.row-rejected td:first-child { border-left-color:#ef4444; }
+    .br-table tr.row-accepted td:first-child { border-left-color:#16a34a; }
+    .br-table tr.row-pending td:first-child { border-left-color:#f59e0b; }
     .drop-zone { min-height:40px; flex:1; }
     /* quick actions grid */
     .qa-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; padding: 16px 24px 8px; background: hsl(var(--background)); flex-shrink: 0; }
