@@ -549,8 +549,7 @@
         <div id="assignContactList"></div>
       </div>
       <div class="modal-foot">
-        <button class="btn btn-sm" onclick="closeModal('assignContactModal')">Done</button>
-        <button class="btn btn-sm btn-default" id="assignSendEmailBtn" onclick="openAssignSendEmail()">Send Email</button>
+        <button class="btn btn-sm btn-default" onclick="msDoneAssign()">Done</button>
       </div>
     </div>
   </div>
@@ -609,19 +608,13 @@
                 <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msReviewEnd"></td></tr>
             <tr id="msResetDateRow" style="display:none;"><td style="padding:8px 12px;font-weight:500;color:#64748b;border-bottom:1px solid #e2e8f0;">Reset Date</td>
                 <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msResetDate"></td></tr>
-            <tr><td style="padding:8px 12px;font-weight:500;color:#64748b;border-bottom:1px solid #e2e8f0;">Assigned</td>
-                <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;" id="msAssigned">None</td></tr>
           </table>
         </div>
 
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
-          <input type="checkbox" id="msMarkReviewed" onchange="msToggleReviewed()">
-          <label for="msMarkReviewed" style="font-size:0.8rem;cursor:pointer;">Mark as reviewed</label>
-        </div>
+        <div id="msAssignedInfo" style="font-size:0.8rem;color:#64748b;margin-bottom:4px;"></div>
       </div>
       <div class="modal-foot">
-        <button class="btn btn-sm" id="msAssignBtn" onclick="msOpenAssign()">Assign Contacts</button>
-        <button class="btn btn-sm btn-default" id="msEmailBtn" onclick="msSendEmail()">Send Email</button>
+        <button class="btn btn-sm btn-default" id="msAssignBtn" onclick="msOpenAssign()">Assign Contacts</button>
       </div>
     </div>
   </div>
@@ -1103,51 +1096,51 @@
         document.getElementById('msReviewEnd').textContent = reviewEnd;
       }
 
-      // Assigned contacts
+      // Update button text based on existing assignments
       const assignedIds = assignContacts[key] || [];
+      const btn = document.getElementById('msAssignBtn');
       if (assignedIds.length > 0) {
         const names = assignedIds.map(id => { const c = CONTACTS.find(x => x.id === id); return c ? c.name : ''; }).filter(Boolean).join(', ');
-        document.getElementById('msAssigned').textContent = names;
+        btn.textContent = 'Assigned Contacts (' + names + ')';
+        document.getElementById('msAssignedInfo').textContent = '';
       } else {
-        document.getElementById('msAssigned').textContent = 'None';
+        btn.textContent = 'Assign Contacts';
+        document.getElementById('msAssignedInfo').textContent = '';
       }
 
-      // Checkmark state
-      document.getElementById('msMarkReviewed').checked = !!crChecked[key];
       showModal('milestoneDetailModal');
     }
 
-    function msToggleReviewed() {
-      const checked = document.getElementById('msMarkReviewed').checked;
-      crChecked[msKey] = checked;
-      crRender();
-    }
-
     function msOpenAssign() {
+      if (!msKey) return;
+      assignCellKey = msKey;
+      document.getElementById('assignCellLabel').textContent = 'Assign contacts to: ' + document.getElementById('msDetailHeader').textContent;
+      const existing = assignContacts[msKey] || [];
+      let html = '';
+      CONTACTS.forEach(c => {
+        const checked = existing.includes(c.id) ? ' checked' : '';
+        html += '<label class="contact-row"><input type="checkbox"' + checked + ' onchange="toggleAssignContact(\'' + c.id + '\')"><span><span class="contact-brand">' + c.brand + '</span> – <span class="contact-name">' + c.name + '</span></span></label>';
+      });
+      document.getElementById('assignContactList').innerHTML = html;
       closeModal('milestoneDetailModal');
-      // Extract banner and month from msKey (rowId-month)
-      const parts = msKey.split('-');
-      const month = parts.slice(1).join('-');
-      const row = CR_DATA.find(r => r.id === parts[0]);
-      if (row) openAssignContacts(row.banner + ' - ' + month);
+      showModal('assignContactModal');
     }
 
-    function msSendEmail() {
-      const assignedIds = assignContacts[msKey] || [];
-      if (assignedIds.length === 0) {
-        msOpenAssign();
-        return;
+    function msDoneAssign() {
+      closeModal('assignContactModal');
+      // Re-open milestone detail to update button text
+      // We need to re-trigger the detail with the stored msKey info
+      // Parse msKey to get the cell info
+      const parts = msKey.split('-');
+      const rowId = parts[0];
+      const month = parts.slice(1).join('-');
+      const row = CR_DATA.find(r => r.id === rowId);
+      if (row) {
+        const type = row.months[month] || 'Review';
+        openMilestoneDetail(msKey, rowId, month, row.banner, row.category, row.region, type);
+      } else {
+        showModal('milestoneDetailModal');
       }
-      closeModal('milestoneDetailModal');
-      const selected = CONTACTS.filter(c => assignedIds.includes(c.id));
-      const names = selected.map(c => c.name + ' (' + c.brand + ')').join(', ');
-      document.getElementById('assignToNames').textContent = names;
-      document.getElementById('assignComposeSubject').value = '';
-      document.getElementById('assignComposeMessage').value = '';
-      document.getElementById('assignCcField').value = '';
-      document.getElementById('assignBccField').value = '';
-      document.getElementById('assignSendBtn').disabled = true;
-      showModal('assignComposeModal');
     }
 
     // ===== BRAND REPORT =====
