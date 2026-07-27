@@ -1221,9 +1221,9 @@
           if (v && counts[v] !== undefined) counts[v]++;
         });
         const total = Object.values(counts).reduce((a,b) => a+b, 0);
-        const open = window._brKpiState[ci] || false;
-        kpiHtml += '<div class="br-kpi-card' + (open ? ' open' : '') + '">' +
-          '<div class="br-kpi-hdr" onclick="window._brKpiState[' + ci + ']=!window._brKpiState[' + ci + '];renderBrandReport()">' +
+        const open = window._brKpiState['c' + ci] || false;
+        kpiHtml += '<div class="br-kpi-card' + (open ? ' open' : '') + '" data-kpi="' + ci + '">' +
+          '<div class="br-kpi-hdr">' +
           '<span><svg class="br-kpi-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>' + card.title + '</span><strong>' + total + '</strong></div>' +
           '<div class="br-kpi-list">';
         card.options.forEach(o => {
@@ -1233,6 +1233,14 @@
         kpiHtml += '</div></div>';
       });
       document.getElementById('brKpiRow').innerHTML = kpiHtml;
+      // Delegated click for card toggle
+      document.getElementById('brKpiRow').onclick = function(e) {
+        const card = e.target.closest('[data-kpi]');
+        if (!card) return;
+        const ci = card.dataset.kpi;
+        window._brKpiState['c' + ci] = !window._brKpiState['c' + ci];
+        renderBrandReport();
+      };
 
       // Table
       if (!entries.length) {
