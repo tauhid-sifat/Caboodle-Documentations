@@ -1519,8 +1519,8 @@
               category: row.category,
               reviewMonth: month,
               dateType: content,
-              submissionDue: month + ' 01, ' + crYear,
-              reviewDates: month + ' 10-15, ' + crYear,
+              reviewStart: month + ' 01, ' + crYear,
+              reviewEnd: month + ' 15, ' + crYear,
               resetDate: content === 'Reset' ? month + ' 28, ' + crYear : '',
               notes: row.region === 'NorCal' ? 'Contact brand closer to review date' : (row.region === 'SoCal' ? 'Follow up with buyer for category schedule' : 'Standard review cycle')
             });
@@ -1539,7 +1539,7 @@
       html += '</div></div></div>';
       html += '<div style="overflow-x:auto;"><table class="cal-table"><thead><tr>';
       html += '<th style="width:40px;text-align:center;"><input type="checkbox" disabled></th>';
-      html += '<th>Region</th><th>Retailer</th><th>Category</th><th>Review Month</th><th>Submission Due Date</th><th>Review Date</th><th>Reset Date</th><th style="min-width:150px;">Additional Notes</th><th style="text-align:center;">Action</th>';
+      html += '<th>Region</th><th>Retailer</th><th>Category</th><th>Review Month</th><th>Review Start Date</th><th>Review End Date</th><th>Reset Date</th><th style="min-width:150px;">Additional Notes</th><th style="text-align:center;">Action</th>';
       html += '</tr></thead><tbody>';
 
       if (entries.length === 0) {
@@ -1551,7 +1551,7 @@
           html += `<td>${e.region}</td><td>${e.retailer}</td>`;
           html += `<td><span style="background:hsla(var(--primary),0.1);color:hsl(var(--primary));padding:2px 8px;border-radius:999px;font-size:0.6rem;">${e.category}</span></td>`;
           html += `<td>${e.reviewMonth} ${crYear}</td>`;
-          html += `<td>${e.submissionDue}</td><td>${e.reviewDates}</td>`;
+          html += `<td>${e.reviewStart}</td><td>${e.reviewEnd}</td>`;
           html += `<td>${e.resetDate || '—'}</td>`;
           html += `<td style="font-size:0.75rem;color:hsl(var(--muted-foreground));">${e.notes || '—'}</td>`;
           html += `<td style="text-align:center;"><button class="btn btn-sm" style="font-size:0.6rem;" onclick="event?event.stopPropagation():'';alert('Edit ${e.retailer}')">Edit</button></td>`;
