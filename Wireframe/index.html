@@ -1320,7 +1320,6 @@
 
       filtered.forEach(e => {
         const edit = brEdits[e.key] || {};
-        // Row urgency cue (Fix 7)
         let rowClass = '';
         if (edit.result === 'Rejected') rowClass = ' row-rejected';
         else if (edit.result === 'Accepted') rowClass = ' row-accepted';
@@ -1330,13 +1329,13 @@
           '<td><span style="display:inline-block;padding:1px 8px;border-radius:999px;background:#f1f5f9;font-size:0.65rem;">' + e.category + '</span></td>' +
           '<td>' + e.reviewStart + '</td>' +
           '<td>' + e.reviewEnd + '</td>' +
-          '<td><select onchange="saveBrEdit(\'' + e.key + '\',\'status\',this.value)">' + optsSelect(BR_STATUS_OPTS, edit.status||'') + '</select></td>' +
-          '<td><select onchange="saveBrEdit(\'' + e.key + '\',\'brandResponse\',this.value)">' + optsSelect(BR_RESPONSE_OPTS, edit.brandResponse||'') + '</select></td>' +
-          '<td><select onchange="saveBrEdit(\'' + e.key + '\',\'waitingOn\',this.value)">' + optsSelect(BR_WAITING_OPTS, edit.waitingOn||'') + '</select></td>' +
-          '<td><select onchange="saveBrEdit(\'' + e.key + '\',\'focus\',this.value)">' + optsSelect(BR_FOCUS_OPTS, edit.focus||'') + '</select></td>' +
-          '<td><select onchange="saveBrEdit(\'' + e.key + '\',\'actionNeeded\',this.value)">' + optsSelect(BR_ACTION_OPTS, edit.actionNeeded||'') + '</select></td>' +
-          '<td><select onchange="saveBrEdit(\'' + e.key + '\',\'nextAction\',this.value)">' + optsSelect(BR_NEXT_OPTS, edit.nextAction||'') + '</select></td>' +
-          '<td><select onchange="saveBrEdit(\'' + e.key + '\',\'result\',this.value)">' + optsSelect(BR_RESULT_OPTS, edit.result||'') + '</select></td>' +
+          '<td>' + coloredSelect(e.key, 'status', BR_STATUS_OPTS, edit.status) + '</td>' +
+          '<td>' + coloredSelect(e.key, 'brandResponse', BR_RESPONSE_OPTS, edit.brandResponse) + '</td>' +
+          '<td>' + coloredSelect(e.key, 'waitingOn', BR_WAITING_OPTS, edit.waitingOn) + '</td>' +
+          '<td>' + coloredSelect(e.key, 'focus', BR_FOCUS_OPTS, edit.focus) + '</td>' +
+          '<td>' + coloredSelect(e.key, 'actionNeeded', BR_ACTION_OPTS, edit.actionNeeded) + '</td>' +
+          '<td>' + coloredSelect(e.key, 'nextAction', BR_NEXT_OPTS, edit.nextAction) + '</td>' +
+          '<td>' + coloredSelect(e.key, 'result', BR_RESULT_OPTS, edit.result) + '</td>' +
           '<td><div style="display:flex;align-items:center;gap:4px;"><input class="notes-input" value="' + (edit.notes||'') + '" onchange="saveBrEdit(\'' + e.key + '\',\'notes\',this.value);this.parentElement.querySelector(\'.saved-indicator\').style.opacity=1;setTimeout(function(){this.parentElement.querySelector(\'.saved-indicator\').style.opacity=0}.bind(this),1500)" placeholder="Add notes..."><span class="saved-indicator" style="font-size:0.6rem;color:#16a34a;opacity:0;transition:opacity 0.3s;">Saved</span></div></td>' +
           '</tr>';
       });
@@ -1346,6 +1345,25 @@
 
     function optsSelect(opts, sel) {
       return (sel ? '' : '<option value="" disabled selected style="display:none;">—</option>') + opts.map(o => '<option' + (o === sel ? ' selected' : '') + '>' + o + '</option>').join('');
+    }
+
+    // Colored select based on field + value
+    window.FIELD_COLORS = {
+      status:       { 'Not Started':'#94a3b8','In Progress':'#3b82f6','Submitted':'#8b5cf6','Approved':'#22c55e','Rejected':'#ef4444' },
+      brandResponse:{ 'TBD':'#94a3b8','Need More Info':'#f59e0b','Not Interested':'#ef4444','On Hold':'#f59e0b','Opportunity Sent':'#3b82f6','Yes-Submit':'#22c55e' },
+      waitingOn:    { 'Brand':'#3b82f6','Buyer':'#3b82f6','Distributor':'#f59e0b','Sales Rep':'#f59e0b','Samples':'#22c55e' },
+      focus:        { 'Complete':'#22c55e','Now':'#ef4444','F/U':'#f59e0b','Monitor':'#94a3b8','Waiting':'#f59e0b' },
+      actionNeeded: { 'None':'#94a3b8','Determine Review timeline':'#f59e0b','Contact Brand':'#3b82f6','More Brand Info Needed':'#f59e0b','Request Samples':'#8b5cf6','Prepare Submission':'#8b5cf6','Submit to Buyer':'#22c55e','F/U w/ Brand':'#f59e0b','F/U w/ Buyer':'#f59e0b','Schedule Buyer Meeting':'#3b82f6','Review Decision':'#8b5cf6','Update Dashboard':'#3b82f6','Close Opportunity':'#22c55e' },
+      nextAction:   { 'Send Samples':'#3b82f6','Follow Up':'#f59e0b','Await Response':'#94a3b8','Schedule Meeting':'#3b82f6','Present Deck':'#8b5cf6','None':'#94a3b8' },
+      result:       { 'Pending':'#f59e0b','Accepted':'#22c55e','Rejected':'#ef4444','Deferred':'#f59e0b','N/A':'#94a3b8' },
+    };
+
+    function coloredSelect(key, field, options, value) {
+      const colors = window.FIELD_COLORS[field] || {};
+      const bg = colors[value] ? colors[value] + '20' : '';
+      const textColor = colors[value] || '#334155';
+      return '<select onchange="saveBrEdit(\'' + key + '\',\'' + field + '\',this.value);var c=(window.FIELD_COLORS[\'' + field + '\']||{})[this.value];this.style.background=(c||\'\')+\'20\';this.style.color=c||\'#334155\';this.style.fontWeight=\'600\'" style="background:' + bg + ';color:' + textColor + ';font-weight:600;">' +
+        optsSelect(options, value || '') + '</select>';
     }
 
     // Timeline filter
