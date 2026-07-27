@@ -175,10 +175,12 @@
 
     /* brand report */
     .br-kpi-row { margin-bottom:16px; display:flex; flex-direction:column; gap:6px; }
-    .br-kpi-cat { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
-    .br-kpi-cat-label { font-size:0.7rem; font-weight:600; color:#475569; min-width:100px; flex-shrink:0; display:flex; align-items:center; gap:4px; }
+    .br-kpi-cat { display:flex; align-items:center; gap:8px; }
+    .br-kpi-cat-label { font-size:0.7rem; font-weight:600; color:#475569; min-width:90px; flex-shrink:0; display:flex; align-items:center; gap:4px; }
     .br-kpi-cat-label strong { font-size:0.85rem; color:#0f172a; }
-    .br-kpi-chips { display:flex; flex-wrap:wrap; gap:4px; }
+    .br-kpi-chips { display:flex; gap:4px; overflow-x:auto; flex:1; padding-bottom:2px; scrollbar-width:thin; }
+    .br-kpi-chips::-webkit-scrollbar { height:3px; }
+    .br-kpi-chips::-webkit-scrollbar-thumb { background:#cbd5e1; border-radius:999px; }
     .br-kpi-chip { display:inline-flex; align-items:center; gap:3px; padding:2px 10px; border-radius:999px; font-size:0.68rem; font-weight:500; cursor:pointer; border:1px solid transparent; transition:all 0.12s; background:#f1f5f9; color:#475569; }
     .br-kpi-chip:hover { background:#e2e8f0; }
     .br-kpi-chip.active { background:#eef2ff; border-color:#6366f1; color:#4338ca; }
