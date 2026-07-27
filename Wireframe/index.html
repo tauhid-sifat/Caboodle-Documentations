@@ -176,10 +176,14 @@
     /* brand report */
     .br-kpi-row { display:flex; gap:12px; margin-bottom:16px; flex-wrap:nowrap; overflow-x:auto; padding-bottom:4px; }
     .br-kpi-card { flex:1; min-width:180px; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:14px; }
-    .br-kpi-hdr { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:8px; }
-    .br-kpi-hdr span { font-size:0.65rem; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; color:#64748b; }
+    .br-kpi-hdr { display:flex; align-items:center; justify-content:space-between; margin-bottom:0; cursor:pointer; user-select:none; }
+    .br-kpi-hdr span { font-size:0.65rem; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; color:#64748b; display:flex; align-items:center; gap:4px; }
     .br-kpi-hdr strong { font-size:1.1rem; font-family:'Space Grotesk',sans-serif; }
-    .br-kpi-list { max-height:130px; overflow-y:auto; display:flex; flex-direction:column; gap:3px; padding-right:4px; }
+    .br-kpi-chevron { width:12px; height:12px; color:#94a3b8; transition:transform 0.2s; flex-shrink:0; }
+    .br-kpi-card.open .br-kpi-chevron { transform:rotate(90deg); }
+    .br-kpi-card.open .br-kpi-hdr { margin-bottom:8px; }
+    .br-kpi-list { max-height:0; overflow:hidden; transition:max-height 0.25s ease; display:flex; flex-direction:column; gap:3px; }
+    .br-kpi-card.open .br-kpi-list { max-height:300px; overflow-y:auto; padding-right:4px; }
     .br-kpi-item { display:flex; justify-content:space-between; font-size:0.72rem; padding:2px 0; }
     .br-kpi-item .lbl { color:#64748b; }
     .br-kpi-item .val { font-weight:600; }
@@ -1198,7 +1202,8 @@
       const hdrEl = document.querySelector('#view-cr-report .cal-title');
       if (hdrEl) hdrEl.textContent = 'Brand Report (' + entries.length + ')';
 
-      // KPI cards (matching prototype)
+      // KPI cards (collapsible)
+      if (!window._brKpiState) window._brKpiState = {};
       const kpiCards = [
         { title:'Review Status', field:'status', options:BR_STATUS_OPTS },
         { title:'Action Needed', field:'actionNeeded', options:BR_ACTION_OPTS.filter(o => o !== 'None') },
@@ -1208,7 +1213,7 @@
       ];
 
       let kpiHtml = '';
-      kpiCards.forEach(card => {
+      kpiCards.forEach((card, ci) => {
         const counts = {};
         card.options.forEach(o => counts[o] = 0);
         entries.forEach(e => {
@@ -1216,7 +1221,11 @@
           if (v && counts[v] !== undefined) counts[v]++;
         });
         const total = Object.values(counts).reduce((a,b) => a+b, 0);
-        kpiHtml += '<div class="br-kpi-card"><div class="br-kpi-hdr"><span>' + card.title + '</span><strong>' + total + '</strong></div><div class="br-kpi-list">';
+        const open = window._brKpiState[ci] || false;
+        kpiHtml += '<div class="br-kpi-card' + (open ? ' open' : '') + '">' +
+          '<div class="br-kpi-hdr" onclick="window._brKpiState[' + ci + ']=!window._brKpiState[' + ci + '];renderBrandReport()">' +
+          '<span><svg class="br-kpi-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>' + card.title + '</span><strong>' + total + '</strong></div>' +
+          '<div class="br-kpi-list">';
         card.options.forEach(o => {
           const n = counts[o] || 0;
           kpiHtml += '<div class="br-kpi-item"><span class="lbl">' + o + '</span><span class="val' + (n === 0 ? ' dim' : '') + '">' + n + '</span></div>';
