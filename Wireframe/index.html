@@ -1393,7 +1393,7 @@
         if (edit.result === 'Rejected') rowClass = ' row-rejected';
         else if (edit.result === 'Accepted') rowClass = ' row-accepted';
         else if (edit.result === 'Pending' || edit.result === 'Deferred' || !edit.result) rowClass = ' row-pending';
-        tableHtml += '<tr class="' + rowClass + '"><td><strong>' + e.brand + '</strong><span style="margin-left:6px;font-size:0.7rem;color:#64748b;font-weight:normal;">· ' + e.contact + '</span></td>' +
+        tableHtml += '<tr class="' + rowClass + '"><td><div style="display:flex;align-items:center;gap:6px;"><strong>' + e.brand + '</strong><button onclick="alert(\'Email to: ' + e.contact + '\')" title="Email ' + e.contact + '" style="padding:2px;border:0;background:none;cursor:pointer;color:#94a3b8;flex-shrink:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></button><span style="font-size:0.7rem;color:#64748b;font-weight:normal;">· ' + e.contact + '</span></div></td>' +
           '<td>' + e.retailer + '</td>' +
           '<td><span style="display:inline-block;padding:1px 8px;border-radius:999px;background:#f1f5f9;font-size:0.65rem;">' + e.category + '</span></td>' +
           '<td>' + e.reviewStart + '</td>' +
