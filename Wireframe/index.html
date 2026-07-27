@@ -639,6 +639,20 @@
     </div>
   </div>
 
+  <!-- MODAL: Notes Management -->
+  <div id="notesModal" class="modal-overlay">
+    <div class="modal-box" style="max-width:460px;">
+      <div class="modal-hdr"><h3 id="notesModalTitle">Notes</h3><button class="modal-close" onclick="closeModal('notesModal')">✕</button></div>
+      <div class="modal-body">
+        <div id="notesList" style="max-height:300px;overflow-y:auto;margin-bottom:12px;"></div>
+        <div style="display:flex;gap:8px;">
+          <textarea id="notesInput" rows="2" placeholder="Add a note..." style="flex:1;padding:8px 10px;border:1px solid #e2e8f0;border-radius:8px;font-size:0.8rem;font-family:inherit;outline:none;resize:vertical;line-height:1.5;"></textarea>
+          <button onclick="addNote()" style="padding:8px 16px;border:0;border-radius:8px;background:#6366f1;color:#fff;font-size:0.8rem;cursor:pointer;white-space:nowrap;align-self:flex-end;">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- MODAL: Task Detail -->
   <div id="taskDetailModal" class="modal-overlay">
     <div class="modal-box" style="max-width:420px;">
@@ -1169,6 +1183,65 @@
       localStorage.setItem('brEdits', JSON.stringify(brEdits));
     }
 
+    function getNotes(key) {
+      const raw = brEdits[key] && brEdits[key].notes;
+      if (Array.isArray(raw)) return raw;
+      if (typeof raw === 'string' && raw) return [{ id:1, text:raw, createdAt:new Date().toLocaleString() }];
+      return [];
+    }
+
+    let notesModalKey = null;
+    function openNotesModal(key) {
+      notesModalKey = key;
+      const notes = getNotes(key);
+      const row = [...CR_DATA.entries()].flatMap(([ri, r]) => CR_MONTHS.map((m, mi) => ({ r, m, mi }))).find(x => key.startsWith(x.r.id + '-' + x.m));
+      const brand = brEdits[key] && brEdits[key]._brand;
+      document.getElementById('notesModalTitle').textContent = 'Notes' + (brand ? ' — ' + brand : '');
+      renderNotesList();
+      showModal('notesModal');
+    }
+
+    function renderNotesList() {
+      const notes = getNotes(notesModalKey);
+      const container = document.getElementById('notesList');
+      if (!notes.length) {
+        container.innerHTML = '<div style="font-size:0.8rem;color:#94a3b8;text-align:center;padding:20px;">No notes yet</div>';
+        return;
+      }
+      container.innerHTML = notes.map(n =>
+        '<div style="padding:10px 0;border-bottom:1px solid #f1f5f9;"><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">' +
+        '<div style="flex:1;font-size:0.85rem;line-height:1.5;white-space:pre-wrap;">' + n.text + '</div>' +
+        '<span style="cursor:pointer;color:#94a3b8;flex-shrink:0;" onclick="deleteNote(' + n.id + ')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></span></div>' +
+        '<div style="font-size:0.65rem;color:#94a3b8;margin-top:2px;">' + n.createdAt + '</div></div>'
+      ).join('');
+    }
+
+    function addNote() {
+      const input = document.getElementById('notesInput');
+      const text = input.value.trim();
+      if (!text || !notesModalKey) return;
+      const notes = getNotes(notesModalKey);
+      const maxId = notes.reduce((max, n) => Math.max(max, n.id), 0);
+      notes.push({ id: maxId + 1, text, createdAt: new Date().toLocaleString() });
+      if (!brEdits[notesModalKey]) brEdits[notesModalKey] = {};
+      brEdits[notesModalKey].notes = notes;
+      localStorage.setItem('brEdits', JSON.stringify(brEdits));
+      input.value = '';
+      renderNotesList();
+      // Refresh table notes indicator
+      renderBrandReport();
+    }
+
+    function deleteNote(id) {
+      if (!notesModalKey) return;
+      let notes = getNotes(notesModalKey);
+      notes = notes.filter(n => n.id !== id);
+      brEdits[notesModalKey].notes = notes;
+      localStorage.setItem('brEdits', JSON.stringify(brEdits));
+      renderNotesList();
+      renderBrandReport();
+    }
+
     function renderBrandReport() {
       // Build entries
       const entries = [];
@@ -1298,7 +1371,7 @@
       ];
 
       let tableHtml = '<table class="br-table"><thead><tr>';
-      cols.forEach(c => { tableHtml += '<th' + (c.key === 'notes' ? ' style="min-width:180px;"' : '') + '>' + c.label + '</th>'; });
+      cols.forEach(c => { tableHtml += '<th' + (c.key === 'notes' ? ' style="min-width:100px;"' : '') + '>' + c.label + '</th>'; });
       tableHtml += '</tr>';
 
       // Filter row
@@ -1332,7 +1405,7 @@
           '<td>' + coloredSelect(e.key, 'actionNeeded', BR_ACTION_OPTS, edit.actionNeeded) + '</td>' +
           '<td>' + coloredSelect(e.key, 'nextAction', BR_NEXT_OPTS, edit.nextAction) + '</td>' +
           '<td>' + coloredSelect(e.key, 'result', BR_RESULT_OPTS, edit.result) + '</td>' +
-          '<td><div style="display:flex;align-items:center;gap:4px;"><input class="notes-input" value="' + (edit.notes||'') + '" onchange="saveBrEdit(\'' + e.key + '\',\'notes\',this.value);this.parentElement.querySelector(\'.saved-indicator\').style.opacity=1;setTimeout(function(){this.parentElement.querySelector(\'.saved-indicator\').style.opacity=0}.bind(this),1500)" placeholder="Add notes..."><span class="saved-indicator" style="font-size:0.6rem;color:#16a34a;opacity:0;transition:opacity 0.3s;">Saved</span></div></td>' +
+          '<td><div style="display:flex;align-items:center;gap:4px;"><button onclick="openNotesModal(\'' + e.key + '\')" style="padding:3px 10px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;font-size:0.7rem;display:flex;align-items:center;gap:4px;white-space:nowrap;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>' + (getNotes(e.key).length || 'Note') + '</button></div></td>' +
           '</tr>';
       });
       tableHtml += '</tbody></table>';
