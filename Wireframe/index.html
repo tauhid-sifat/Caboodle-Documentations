@@ -200,6 +200,9 @@
     .br-table select { padding:4px 6px; border:1px solid #e2e8f0; border-radius:4px; font-size:0.7rem; max-width:130px; background:#fff; }
     .br-table input.notes-input { width:100%; border:0; background:transparent; font-size:0.72rem; outline:none; border-bottom:1px dashed #e2e8f0; padding:2px 0; }
     .br-table input.notes-input:focus { border-bottom-color:#6366f1; }
+    .br-table tr.row-rejected { border-left:3px solid #ef4444; }
+    .br-table tr.row-accepted { border-left:3px solid #16a34a; }
+    .br-table tr.row-pending { border-left:3px solid #f59e0b; }
     .drop-zone { min-height:40px; flex:1; }
     /* quick actions grid */
     .qa-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; padding: 16px 24px 8px; background: hsl(var(--background)); flex-shrink: 0; }
@@ -1167,19 +1170,17 @@
       const brandFilter = document.getElementById('reportBrandFilter').value;
       const brands = [...new Set(CONTACTS.map(c => c.brand))];
 
-      // Populate brand filter
       let opts = '<option value="all">All Brands</option>';
       brands.forEach(b => { opts += '<option value="' + b + '"' + (b === brandFilter ? ' selected' : '') + '>' + b + '</option>'; });
       document.getElementById('reportBrandFilter').innerHTML = opts;
 
-      // Build entries from contacts assigned to Review/Reset cells
+      // Build entries
       const entries = [];
       CR_DATA.forEach(row => {
         CR_MONTHS.forEach((m, mi) => {
           if (row.months[m] !== 'Review' && row.months[m] !== 'Reset') return;
           const cellKey = row.id + '-' + m;
-          const assigned = assignContacts[cellKey] || [];
-          assigned.forEach(contactId => {
+          (assignContacts[cellKey] || []).forEach(contactId => {
             const contact = CONTACTS.find(c => c.id === contactId);
             if (!contact) return;
             if (brandFilter !== 'all' && contact.brand !== brandFilter) return;
@@ -1190,7 +1191,6 @@
               contact: contact.name,
               retailer: row.banner,
               category: row.category,
-              type: row.months[m],
               reviewStart: monthDate.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}),
               reviewEnd: new Date(crYear, mi + 1, 0).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}),
             });
@@ -1198,11 +1198,24 @@
         });
       });
 
-      // Update header count
-      const hdrEl = document.querySelector('#view-cr-report .cal-title');
-      if (hdrEl) hdrEl.textContent = 'Brand Report (' + entries.length + ')';
+      // Header
+      document.querySelector('#view-cr-report .cal-title').textContent = 'Brand Report';
 
-      // KPI cards (collapsible)
+      // Column filters (applied to entries)
+      const colFilters = window._brColFilters || {};
+      const filtered = entries.filter(e => {
+        const edit = brEdits[e.key] || {};
+        const checks = { brand:e.brand, retailer:e.retailer, category:e.category, reviewStart:e.reviewStart, reviewEnd:e.reviewEnd, status:edit.status, brandResponse:edit.brandResponse, waitingOn:edit.waitingOn, focus:edit.focus, actionNeeded:edit.actionNeeded, nextAction:edit.nextAction, result:edit.result };
+        for (const field in colFilters) {
+          if (colFilters[field] && colFilters[field] !== 'all' && checks[field] !== colFilters[field]) return false;
+        }
+        return true;
+      });
+
+      // Count active filters
+      const activeFilterCount = Object.values(colFilters).filter(v => v && v !== 'all').length;
+
+      // KPI cards (from filtered data)
       if (!window._brKpiState) window._brKpiState = {};
       const kpiCards = [
         { title:'Review Status', field:'status', options:BR_STATUS_OPTS },
@@ -1211,19 +1224,18 @@
         { title:'Focus', field:'focus', options:BR_FOCUS_OPTS },
         { title:'Result', field:'result', options:BR_RESULT_OPTS },
       ];
-
       let kpiHtml = '';
       kpiCards.forEach((card, ci) => {
         const counts = {};
         card.options.forEach(o => counts[o] = 0);
-        entries.forEach(e => {
+        filtered.forEach(e => {
           const v = (brEdits[e.key] || {})[card.field];
           if (v && counts[v] !== undefined) counts[v]++;
         });
         const total = Object.values(counts).reduce((a,b) => a+b, 0);
         const open = window._brKpiState['c' + ci] || false;
-        kpiHtml += '<div class="br-kpi-card' + (open ? ' open' : '') + '" data-kpi="' + ci + '">' +
-          '<div class="br-kpi-hdr">' +
+        kpiHtml += '<div class="br-kpi-card' + (open ? ' open' : '') + '">' +
+          '<div class="br-kpi-hdr" data-kpi="' + ci + '">' +
           '<span><svg class="br-kpi-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>' + card.title + '</span><strong>' + total + '</strong></div>' +
           '<div class="br-kpi-list">';
         card.options.forEach(o => {
@@ -1233,8 +1245,8 @@
         kpiHtml += '</div></div>';
       });
       document.getElementById('brKpiRow').innerHTML = kpiHtml;
-      // Attach click toggle to each card
-      document.querySelectorAll('#brKpiRow .br-kpi-card').forEach(function(el) {
+      // Only header toggles card (Fix 1)
+      document.querySelectorAll('#brKpiRow .br-kpi-hdr').forEach(function(el) {
         el.addEventListener('click', function() {
           var idx = this.getAttribute('data-kpi');
           window._brKpiState['c' + idx] = !window._brKpiState['c' + idx];
@@ -1242,19 +1254,26 @@
         });
       });
 
+      // Filter indicator (Fix 4)
+      var filterInfo = document.getElementById('brFilterInfo');
+      if (!filterInfo) {
+        filterInfo = document.createElement('div');
+        filterInfo.id = 'brFilterInfo';
+        filterInfo.style.cssText = 'margin-bottom:8px;font-size:0.72rem;display:flex;gap:8px;align-items:center;';
+        document.getElementById('brKpiRow').after(filterInfo);
+      }
+      filterInfo.innerHTML = activeFilterCount > 0 ?
+        '<span style="color:#6366f1;">' + activeFilterCount + ' filter' + (activeFilterCount > 1 ? 's' : '') + ' active</span>' +
+        '<span style="cursor:pointer;color:#6366f1;text-decoration:underline;" onclick="window._brColFilters={};renderBrandReport()">Clear all</span>' : '';
+
       // Table
       if (!entries.length) {
         document.getElementById('brTableWrap').innerHTML = '<div style="text-align:center;padding:40px;color:#94a3b8;">Assign contacts to Review cells on the Category Review calendar to populate this report.</div>';
         return;
       }
 
-      // Column filters
-      const colFilters = window._brColFilters || {};
-      const applyFilter = (field, val) => { window._brColFilters[field] = val; renderBrandReport(); };
-
       const uniqVals = (field) => {
         const vals = entries.map(e => {
-          if (field === 'brand') return e.brand;
           if (field === 'retailer') return e.retailer;
           if (field === 'category') return e.category;
           if (field === 'reviewStart') return e.reviewStart;
@@ -1265,23 +1284,8 @@
         return [...new Set(vals)].sort();
       };
 
-      const filtered = entries.filter(e => {
-        const edit = brEdits[e.key] || {};
-        const checks = {
-          brand: e.brand, retailer: e.retailer, category: e.category,
-          reviewStart: e.reviewStart, reviewEnd: e.reviewEnd,
-          status: edit.status, brandResponse: edit.brandResponse,
-          waitingOn: edit.waitingOn, focus: edit.focus,
-          actionNeeded: edit.actionNeeded, nextAction: edit.nextAction, result: edit.result
-        };
-        for (const field in colFilters) {
-          if (colFilters[field] && colFilters[field] !== 'all' && checks[field] !== colFilters[field]) return false;
-        }
-        return true;
-      });
-
       const cols = [
-        { key:'brand', label:'Brand', filterable:true },
+        { key:'brand', label:'Brand', filterable:false },  // brand filter only at top (Fix 3)
         { key:'retailer', label:'Retailer', filterable:true },
         { key:'category', label:'Category', filterable:true },
         { key:'reviewStart', label:'Review Start', filterable:true },
@@ -1296,26 +1300,17 @@
         { key:'notes', label:'Notes', filterable:false },
       ];
 
-      let tableHtml = '<table class="br-table"><thead>';
-
-      // Header labels row
-      tableHtml += '<tr>';
-      cols.forEach(c => {
-        tableHtml += '<th' + (c.key === 'notes' ? ' style="min-width:180px;"' : '') + '>' + c.label + '</th>';
-      });
+      let tableHtml = '<table class="br-table"><thead><tr>';
+      cols.forEach(c => { tableHtml += '<th' + (c.key === 'notes' ? ' style="min-width:180px;"' : '') + '>' + c.label + '</th>'; });
       tableHtml += '</tr>';
 
       // Filter row
       tableHtml += '<tr class="filter-row">';
       cols.forEach(c => {
-        if (!c.filterable) {
-          tableHtml += '<th class="filter-row"></th>';
-          return;
-        }
+        if (!c.filterable) { tableHtml += '<th class="filter-row"></th>'; return; }
         const vals = uniqVals(c.key);
         const current = colFilters[c.key] || 'all';
-        let selHtml = '<select onchange="window._brColFilters[\'' + c.key + '\']=this.value;renderBrandReport()">';
-        selHtml += '<option value="all">All</option>';
+        let selHtml = '<select onchange="window._brColFilters[\'' + c.key + '\']=this.value;renderBrandReport()"><option value="all">All</option>';
         vals.forEach(v => { selHtml += '<option' + (v === current ? ' selected' : '') + '>' + v + '</option>'; });
         selHtml += '</select>';
         tableHtml += '<th class="filter-row">' + selHtml + '</th>';
@@ -1324,7 +1319,12 @@
 
       filtered.forEach(e => {
         const edit = brEdits[e.key] || {};
-        tableHtml += '<tr><td><strong>' + e.brand + '</strong><span style="margin-left:6px;font-size:0.7rem;color:#64748b;font-weight:normal;">· ' + e.contact + '</span></td>' +
+        // Row urgency cue (Fix 7)
+        let rowClass = '';
+        if (edit.result === 'Rejected') rowClass = ' row-rejected';
+        else if (edit.result === 'Accepted') rowClass = ' row-accepted';
+        else if (edit.result === 'Pending' || edit.result === 'Deferred' || !edit.result) rowClass = ' row-pending';
+        tableHtml += '<tr class="' + rowClass + '"><td><strong>' + e.brand + '</strong><span style="margin-left:6px;font-size:0.7rem;color:#64748b;font-weight:normal;">· ' + e.contact + '</span></td>' +
           '<td>' + e.retailer + '</td>' +
           '<td><span style="display:inline-block;padding:1px 8px;border-radius:999px;background:#f1f5f9;font-size:0.65rem;">' + e.category + '</span></td>' +
           '<td>' + e.reviewStart + '</td>' +
@@ -1336,7 +1336,7 @@
           '<td><select onchange="saveBrEdit(\'' + e.key + '\',\'actionNeeded\',this.value)">' + optsSelect(BR_ACTION_OPTS, edit.actionNeeded||'') + '</select></td>' +
           '<td><select onchange="saveBrEdit(\'' + e.key + '\',\'nextAction\',this.value)">' + optsSelect(BR_NEXT_OPTS, edit.nextAction||'') + '</select></td>' +
           '<td><select onchange="saveBrEdit(\'' + e.key + '\',\'result\',this.value)">' + optsSelect(BR_RESULT_OPTS, edit.result||'') + '</select></td>' +
-          '<td><input class="notes-input" value="' + (edit.notes||'') + '" onchange="saveBrEdit(\'' + e.key + '\',\'notes\',this.value)" placeholder="Add notes..."></td>' +
+          '<td><div style="display:flex;align-items:center;gap:4px;"><input class="notes-input" value="' + (edit.notes||'') + '" onchange="saveBrEdit(\'' + e.key + '\',\'notes\',this.value);this.parentElement.querySelector(\'.saved-indicator\').style.opacity=1;setTimeout(function(){this.parentElement.querySelector(\'.saved-indicator\').style.opacity=0}.bind(this),1500)" placeholder="Add notes..."><span class="saved-indicator" style="font-size:0.6rem;color:#16a34a;opacity:0;transition:opacity 0.3s;">Saved</span></div></td>' +
           '</tr>';
       });
       tableHtml += '</tbody></table>';
@@ -1344,7 +1344,7 @@
     }
 
     function optsSelect(opts, sel) {
-      return opts.map(o => '<option' + (o === sel ? ' selected' : '') + '>' + o + '</option>').join('');
+      return (sel ? '' : '<option value="" disabled selected style="display:none;">—</option>') + opts.map(o => '<option' + (o === sel ? ' selected' : '') + '>' + o + '</option>').join('');
     }
 
     // Timeline filter
