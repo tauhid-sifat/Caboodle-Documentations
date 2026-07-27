@@ -1233,14 +1233,14 @@
         kpiHtml += '</div></div>';
       });
       document.getElementById('brKpiRow').innerHTML = kpiHtml;
-      // Delegated click for card toggle
-      document.getElementById('brKpiRow').onclick = function(e) {
-        const card = e.target.closest('[data-kpi]');
-        if (!card) return;
-        const ci = card.dataset.kpi;
-        window._brKpiState['c' + ci] = !window._brKpiState['c' + ci];
-        renderBrandReport();
-      };
+      // Attach click toggle to each card
+      document.querySelectorAll('#brKpiRow .br-kpi-card').forEach(function(el) {
+        el.addEventListener('click', function() {
+          var idx = this.getAttribute('data-kpi');
+          window._brKpiState['c' + idx] = !window._brKpiState['c' + idx];
+          renderBrandReport();
+        });
+      });
 
       // Table
       if (!entries.length) {
