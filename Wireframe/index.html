@@ -1101,8 +1101,7 @@
       const assignedIds = assignContacts[key] || [];
       const btn = document.getElementById('msAssignBtn');
       if (assignedIds.length > 0) {
-        const names = assignedIds.map(id => { const c = CONTACTS.find(x => x.id === id); return c ? c.name : ''; }).filter(Boolean).join(', ');
-        btn.textContent = 'Assigned Contacts (' + names + ')';
+        btn.textContent = 'Assigned Contacts';
         document.getElementById('msAssignedInfo').textContent = '';
       } else {
         btn.textContent = 'Assign Contacts';
