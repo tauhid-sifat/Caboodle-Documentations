@@ -210,6 +210,29 @@
     .br-table tr.row-accepted td:first-child { border-left-color:#16a34a; }
     .br-table tr.row-pending td:first-child { border-left-color:#f59e0b; }
     .drop-zone { min-height:40px; flex:1; }
+    /* opt-in / notified flag on calendar cell */
+    .opt-dot { position:absolute; bottom:-4px; right:-4px; width:16px; height:16px; border-radius:50%; background:#16a34a; border:2px solid #fff; display:flex; align-items:center; justify-content:center; }
+    .opt-dot svg { width:9px; height:9px; color:#fff; }
+    /* brand report toolbar */
+    .br-toolbar { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+    .br-toolbar-left, .br-toolbar-right { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+    .toggle-wrap { display:flex; align-items:center; gap:6px; font-size:0.7rem; color:#64748b; cursor:pointer; user-select:none; white-space:nowrap; }
+    .toggle-switch { width:32px; height:18px; border-radius:999px; background:#cbd5e1; position:relative; transition:background 0.2s; flex-shrink:0; }
+    .toggle-switch.on { background:#22c55e; }
+    .toggle-switch::after { content:''; position:absolute; top:2px; left:2px; width:14px; height:14px; border-radius:50%; background:#fff; transition:left 0.2s; box-shadow:0 1px 2px rgba(0,0,0,0.2); }
+    .toggle-switch.on::after { left:16px; }
+    .row-check { width:15px; height:15px; cursor:pointer; accent-color:hsl(var(--primary)); }
+    .remove-row-btn { padding:2px; border:0; background:none; cursor:pointer; color:#cbd5e1; flex-shrink:0; }
+    .remove-row-btn:hover { color:#ef4444; }
+    .brand-check-list { max-height:240px; overflow-y:auto; }
+    .link-pill { display:inline-block; padding:2px 10px; border-radius:999px; background:rgba(139,92,246,0.12); color:#7c3aed; font-size:0.7rem; font-weight:500; }
+    .brand-view-banner { background:#f0f4ff; border:1px dashed #93c5fd; border-radius:10px; padding:12px 16px; margin:0 24px 12px; font-size:0.75rem; color:#1d4ed8; display:flex; align-items:center; gap:10px; }
+    .bs-chip { display:inline-flex; align-items:center; gap:6px; font-size:0.7rem; padding:3px 10px; border-radius:999px; background:#fff; border:1px solid #e2e8f0; cursor:pointer; transition:all 0.15s; }
+    .bs-chip:hover { border-color:#93c5fd; }
+    .bs-chip.selected { background:#dbeafe; border-color:#3b82f6; color:#1d4ed8; font-weight:600; }
+    .bs-kpi { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px 16px; flex:1; min-width:150px; border-top:3px solid #3b82f6; }
+    .bs-kpi .bs-kpi-lbl { font-size:0.62rem; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; color:#64748b; }
+    .bs-kpi .bs-kpi-val { font-size:1.15rem; font-family:'Space Grotesk',sans-serif; font-weight:700; }
     /* quick actions grid */
     .qa-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; padding: 16px 24px 8px; background: hsl(var(--background)); flex-shrink: 0; }
     @media (max-width: 1024px) { .qa-grid { grid-template-columns: repeat(3, 1fr); } }
@@ -367,8 +390,10 @@
             </div>
           </div>
           <div style="display:flex;gap:8px;">
+            <button class="btn btn-sm btn-default" onclick="crOpenNotifyBrands()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Notify Brands</button>
             <button class="btn btn-sm" onclick="crShowEmail()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Send to Contacts</button>
             <button class="btn btn-sm" onclick="showSendLog()">Send Log</button>
+            <button class="btn btn-sm" onclick="showView('cr-brand')" title="Demo: brand-side environment"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg> Brand Side</button>
           </div>
         </div>
 
@@ -382,6 +407,42 @@
 
         <div class="cal-table-wrap" id="crTableWrap">
           <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== VIEW: BRAND SIDE (DEMO of email-link brand environment) ===== -->
+    <div id="view-cr-brand" class="view">
+      <div style="display:flex;flex-direction:column;height:100%;overflow:hidden;">
+        <div class="cal-top">
+          <div class="cal-top-left">
+            <h1 class="cal-title">Category Review — Brand Side</h1>
+            <button class="btn btn-sm" onclick="showView('catreview')" style="margin-left:8px;">Broker Calendar</button>
+            <button class="btn btn-sm" onclick="showView('cr-report')">Broker Brand Report</button>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;">
+            <span style="font-size:0.75rem;color:#64748b;">Viewing as:</span>
+            <select id="bsBrandSelect" onchange="bsBrand=this.value;bsRender()" style="height:30px;padding:0 10px;border:1px solid #e2e8f0;border-radius:8px;font-size:0.75rem;"></select>
+          </div>
+        </div>
+        <div class="brand-view-banner">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          <span><strong>Demo — Brand environment:</strong> This is what opens from the notification email link. Brands only see the reviews they added to their calendar. Choosing a response below updates the broker's Brand Report.</span>
+        </div>
+        <div style="flex:1;overflow-y:auto;padding:16px 24px;">
+          <div style="display:flex;gap:12px;margin-bottom:16px;" id="bsKpiRow"></div>
+          <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:16px;padding:14px 16px;">
+            <div style="font-size:0.75rem;font-weight:600;color:#475569;margin-bottom:4px;">Your response to this review</div>
+            <div style="font-size:0.7rem;color:#94a3b8;margin-bottom:10px;">Opened from the broker notification email. Selecting an option populates <strong>Brand Response</strong> in the broker's Brand Report (broker can also edit it manually).</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;" id="bsResponseChips"></div>
+          </div>
+          <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;overflow:hidden;">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid #e2e8f0;">
+              <div style="font-size:0.85rem;font-weight:600;">My Category Reviews</div>
+              <button class="btn btn-sm btn-default" onclick="bsOpenAddReview()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Review to Calendar</button>
+            </div>
+            <div id="bsTableWrap" style="overflow-x:auto;"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -400,6 +461,19 @@
         </div>
         <div style="flex:1;overflow-y:auto;padding:16px 24px;">
           <div class="br-kpi-row" id="brKpiRow"></div>
+          <div class="br-toolbar">
+            <div class="br-toolbar-left">
+              <div class="toggle-wrap" onclick="brToggleHideNotInterested()" title="Keeps the report decluttered by hiding rows where the brand responded Not Interested">
+                <div class="toggle-switch on" id="brHideNotInterestedSwitch"></div>
+                <span>Hide "Not Interested" (Global Filter)</span>
+              </div>
+            </div>
+            <div class="br-toolbar-right">
+              <button class="btn btn-sm" onclick="openAddBrandModal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Brand</button>
+              <button class="btn btn-sm" onclick="brEmailBrands()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Email Brands</button>
+              <button class="btn btn-sm" onclick="openAdminOptionsModal()" title="Caboodle Admin controls these dropdown options"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg> Options</button>
+            </div>
+          </div>
           <div class="br-table-wrap" id="brTableWrap"></div>
         </div>
       </div>
@@ -518,6 +592,23 @@
     </div>
   </div>
 
+  <!-- MODAL: Notify Brands (from Grid) -->
+  <div id="notifyBrandsModal" class="modal-overlay">
+    <div class="modal-box" style="max-width:560px;">
+      <div class="modal-hdr"><h3>Notify Brands</h3><button class="modal-close" onclick="closeModal('notifyBrandsModal')">✕</button></div>
+      <div class="modal-body">
+        <p style="font-size:0.8rem;color:#64748b;margin-bottom:12px;">Sending an email notification automatically populates the Brand Report for the selected brands. Brand Response will default to <strong>Notified</strong> and the date + user will be logged in notes.</p>
+        <div class="to-summary" id="notifyReviewSummary">Selected review(s): <span id="notifyReviewNames"></span></div>
+        <div style="font-size:0.75rem;font-weight:600;color:#475569;margin-bottom:6px;">Select brands to notify (owner + sub-users)</div>
+        <div class="brand-check-list" id="notifyBrandList"></div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-sm" onclick="closeModal('notifyBrandsModal')">Cancel</button>
+        <button class="btn btn-sm btn-default" id="notifyNextBtn" disabled onclick="notifyOpenCompose()">Next</button>
+      </div>
+    </div>
+  </div>
+
   <!-- MODAL: Compose Email -->
   <div id="composeModal" class="modal-overlay">
     <div class="modal-box" style="max-width:560px;">
@@ -623,9 +714,22 @@
         </div>
 
         <div id="msAssignedInfo" style="font-size:0.8rem;color:#64748b;margin-bottom:4px;"></div>
+
+        <div style="margin-top:12px;border-top:1px solid #e2e8f0;padding-top:10px;">
+          <div style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:#64748b;margin-bottom:6px;">Notes</div>
+          <div id="msNotesList" style="max-height:150px;overflow-y:auto;margin-bottom:8px;font-size:0.8rem;"></div>
+          <div style="display:flex;gap:6px;">
+            <textarea id="msNotesInput" rows="2" placeholder="Add a note (e.g., 'Called buyer on 7/12')" style="flex:1;padding:8px 10px;border:1px solid #e2e8f0;border-radius:8px;font-size:0.8rem;font-family:inherit;outline:none;resize:vertical;line-height:1.5;"></textarea>
+            <button onclick="msAddNote()" style="padding:8px 14px;border:0;border-radius:8px;background:#6366f1;color:#fff;font-size:0.8rem;cursor:pointer;white-space:nowrap;align-self:flex-end;">Add</button>
+          </div>
+        </div>
       </div>
-      <div class="modal-foot">
-        <button class="btn btn-sm btn-default" id="msAssignBtn" onclick="msOpenAssign()">Assign Contacts</button>
+      <div class="modal-foot" style="justify-content:space-between;">
+        <button class="btn btn-sm" style="background:#ff4d4f;color:#fff;border-color:#ff4d4f;" onclick="msMarkComplete()">Mark Review Complete</button>
+        <div style="display:flex;gap:8px;">
+          <button class="btn btn-sm" onclick="closeModal('milestoneDetailModal')">Close</button>
+          <button class="btn btn-sm btn-default" id="msAssignBtn" onclick="msOpenAssign()">Assign Contacts</button>
+        </div>
       </div>
     </div>
   </div>
@@ -653,6 +757,81 @@
     </div>
   </div>
 
+  <!-- MODAL: Add Brand to Report (manual populate) -->
+  <div id="addBrandModal" class="modal-overlay">
+    <div class="modal-box" style="max-width:480px;">
+      <div class="modal-hdr"><h3>Add Brand to Report</h3><button class="modal-close" onclick="closeModal('addBrandModal')">✕</button></div>
+      <div class="modal-body">
+        <p style="font-size:0.8rem;color:#64748b;margin-bottom:12px;">Manually add a brand to the Brand Report without sending an email notification.</p>
+        <div style="margin-bottom:10px;">
+          <label style="font-size:0.72rem;font-weight:600;color:#475569;display:block;margin-bottom:4px;">Retailer / Review</label>
+          <select class="modal-input" id="abRetailer"></select>
+        </div>
+        <div style="margin-bottom:10px;">
+          <label style="font-size:0.72rem;font-weight:600;color:#475569;display:block;margin-bottom:4px;">Category</label>
+          <select class="modal-input" id="abCategory"></select>
+        </div>
+        <div style="margin-bottom:10px;">
+          <label style="font-size:0.72rem;font-weight:600;color:#475569;display:block;margin-bottom:4px;">Review Month</label>
+          <select class="modal-input" id="abMonth"></select>
+        </div>
+        <div style="margin-bottom:4px;">
+          <label style="font-size:0.72rem;font-weight:600;color:#475569;display:block;margin-bottom:4px;">Brand</label>
+          <select class="modal-input" id="abBrand"></select>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-sm" onclick="closeModal('addBrandModal')">Cancel</button>
+        <button class="btn btn-sm btn-default" onclick="addBrandSubmit()">Add to Report</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Brand Side Add Review -->
+  <div id="bsAddReviewModal" class="modal-overlay">
+    <div class="modal-box" style="max-width:440px;">
+      <div class="modal-hdr"><h3>Add Review to Calendar</h3><button class="modal-close" onclick="closeModal('bsAddReviewModal')">✕</button></div>
+      <div class="modal-body">
+        <p style="font-size:0.8rem;color:#64748b;margin-bottom:12px;">Select the category review you want to track on your calendar.</p>
+        <div style="margin-bottom:10px;">
+          <label style="font-size:0.72rem;font-weight:600;color:#475569;display:block;margin-bottom:4px;">Retailer / Review</label>
+          <select class="modal-input" id="bsRetailer"></select>
+        </div>
+        <div style="margin-bottom:10px;">
+          <label style="font-size:0.72rem;font-weight:600;color:#475569;display:block;margin-bottom:4px;">Category</label>
+          <select class="modal-input" id="bsCategory"></select>
+        </div>
+        <div style="margin-bottom:10px;">
+          <label style="font-size:0.72rem;font-weight:600;color:#475569;display:block;margin-bottom:4px;">Review Month</label>
+          <select class="modal-input" id="bsMonth"></select>
+        </div>
+        <label style="display:flex;align-items:center;gap:8px;font-size:0.8rem;cursor:pointer;padding:10px 12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;margin-top:4px;">
+          <input type="checkbox" id="bsNotifyBroker" style="width:16px;height:16px;cursor:pointer;accent-color:#16a34a;">
+          <span><strong>Notify Broker</strong><br><span style="font-size:0.7rem;color:#64748b;">Pushes this review to the broker's Brand Report automatically (Brand Response defaults to <strong>Yes-Submit</strong>) — even if the broker hasn't emailed yet.</span></span>
+        </label>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-sm" onclick="closeModal('bsAddReviewModal')">Cancel</button>
+        <button class="btn btn-sm btn-default" onclick="bsAddReview()">Add to Calendar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Admin Options (dropdown options control) -->
+  <div id="adminOptionsModal" class="modal-overlay">
+    <div class="modal-box" style="max-width:560px;">
+      <div class="modal-hdr"><h3>Caboodle Admin — Column Options</h3><button class="modal-close" onclick="closeModal('adminOptionsModal')">✕</button></div>
+      <div class="modal-body">
+        <p style="font-size:0.8rem;color:#64748b;margin-bottom:12px;">Admin controls the available options in each Brand Report dropdown. Edit comma-separated values.</p>
+        <div id="adminOptionsFields" style="display:flex;flex-direction:column;gap:10px;"></div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-sm" onclick="closeModal('adminOptionsModal')">Cancel</button>
+        <button class="btn btn-sm btn-default" onclick="saveAdminOptions()">Save Options</button>
+      </div>
+    </div>
+  </div>
+
   <!-- MODAL: Task Detail -->
   <div id="taskDetailModal" class="modal-overlay">
     <div class="modal-box" style="max-width:420px;">
@@ -672,10 +851,14 @@
 
   <script>
     const CONTACTS = [
-      { id:'c1', brand:'Brand A', name:'Constance', email:'constance@branda.com' },
-      { id:'c2', brand:'Brand B', name:'Kate', email:'kate@brandb.com' },
-      { id:'c3', brand:'Brand C', name:'Scott', email:'scott@brandc.com' },
-      { id:'c4', brand:'Brand D', name:'John', email:'john@brandd.com' }
+      { id:'c1', brand:'Brand A', name:'Constance', email:'constance@branda.com', role:'Brand Owner' },
+      { id:'c1b', brand:'Brand A', name:'Alex', email:'alex@branda.com', role:'Brand Sub-User' },
+      { id:'c2', brand:'Brand B', name:'Kate', email:'kate@brandb.com', role:'Brand Owner' },
+      { id:'c2b', brand:'Brand B', name:'Mia', email:'mia@brandb.com', role:'Brand Sub-User' },
+      { id:'c3', brand:'Brand C', name:'Scott', email:'scott@brandc.com', role:'Brand Owner' },
+      { id:'c3b', brand:'Brand C', name:'Noah', email:'noah@brandc.com', role:'Brand Sub-User' },
+      { id:'c4', brand:'Brand D', name:'John', email:'john@brandd.com', role:'Brand Owner' },
+      { id:'c4b', brand:'Brand D', name:'Lena', email:'lena@brandd.com', role:'Brand Sub-User' }
     ];
     let selectedContacts = [];
     let sendLog = [];
@@ -868,6 +1051,7 @@
       if (name === 'catreview') crRender();
       if (name === 'promocal') pcRender();
       if (name === 'cr-report') renderBrandReport();
+      if (name === 'cr-brand') bsRender();
       if (name === 'tasks') { selectedPlanId = PLANS.length ? PLANS[0].id : null; renderPlanList(); renderKanban(); }
     }
 
@@ -927,6 +1111,64 @@
       crRender();
     }
     function crShowEmail() { openSendContacts(); }
+
+    // ===== GRID SELECTION + NOTIFY BRANDS FLOW =====
+    let crSelectedRows = {};
+    let notifyContext = null;
+
+    function crToggleRow(id) { crSelectedRows[id] = !crSelectedRows[id]; crRender(); }
+    function crToggleSelectAll() {
+      const cb = document.getElementById('crSelectAllRows');
+      const on = cb.checked;
+      CR_DATA.forEach(r => crSelectedRows[r.id] = on);
+      crRender();
+    }
+
+    function crOpenNotifyBrands() {
+      const rows = CR_DATA.filter(r => crSelectedRows[r.id]);
+      if (!rows.length) { alert('Select at least one review on the grid first (checkbox in the first column).'); return; }
+      const cells = [];
+      rows.forEach(r => {
+        CR_MONTHS.forEach(m => {
+          if (r.months[m]) cells.push({ cellKey: r.id + '-' + m, month: m, banner: r.banner, category: r.category, region: r.region, type: r.months[m] });
+        });
+      });
+      if (!cells.length) { alert('Selected review(s) have no scheduled milestones.'); return; }
+      const names = rows.map(r => r.banner + ' — ' + r.category).join('; ');
+      document.getElementById('notifyReviewNames').textContent = names;
+      notifyContext = { cells, brands: [] };
+      const brands = [...new Set(CONTACTS.map(c => c.brand))];
+      let html = '';
+      brands.forEach(b => {
+        const people = CONTACTS.filter(c => c.brand === b);
+        html += '<label class="contact-row"><input type="checkbox" onchange="notifyToggleBrand(\'' + b.replace(/'/g,"\\'") + '\')"><span><span class="contact-brand">' + b + '</span> – <span style="font-size:0.7rem;color:#94a3b8;">' + people.map(p => p.name + ' (' + p.role + ')').join(', ') + '</span></span></label>';
+      });
+      document.getElementById('notifyBrandList').innerHTML = html;
+      document.getElementById('notifyNextBtn').disabled = true;
+      showModal('notifyBrandsModal');
+    }
+
+    function notifyToggleBrand(brand) {
+      if (!notifyContext) return;
+      const arr = notifyContext.brands;
+      const idx = arr.indexOf(brand);
+      if (idx >= 0) arr.splice(idx,1); else arr.push(brand);
+      document.getElementById('notifyNextBtn').disabled = arr.length === 0;
+    }
+
+    function notifyOpenCompose() {
+      if (!notifyContext || !notifyContext.brands.length) return;
+      const names = notifyContext.brands.join(', ');
+      document.getElementById('toNames').textContent = names;
+      const first = notifyContext.cells[0];
+      document.getElementById('subjectField').value = 'Category Review — ' + first.banner + ': ' + first.category + ' (' + first.month + ' ' + crYear + ')';
+      document.getElementById('messageField').value = 'Hi,\n\nA category review for ' + first.banner + ' — ' + first.category + ' is scheduled. Please confirm your participation using the link below.\n\nReview response link: https://caboodle.app/review/' + first.cellKey + '\n\nThanks,\nAcme Brokerage';
+      document.getElementById('ccField').value = '';
+      document.getElementById('bccField').value = '';
+      document.getElementById('sendBtn').disabled = false;
+      closeModal('notifyBrandsModal');
+      showModal('composeModal');
+    }
     
     function openSendContacts() {
       selectedContacts = [];
@@ -981,6 +1223,30 @@
       const msg = document.getElementById('messageField').value.trim();
       if (!sub || !msg) return;
       const now = new Date().toLocaleString();
+      if (notifyContext) {
+        const nBrands = notifyContext.brands.length;
+        notifyContext.brands.forEach(brand => {
+          const brandContacts = CONTACTS.filter(c => c.brand === brand);
+          brandContacts.forEach(contact => {
+            notifyContext.cells.forEach(cell => {
+              const key = ensureBrEntry(cell.cellKey, contact.id, brand, contact.name);
+              if (!brEdits[key]) brEdits[key] = {};
+              if (!brEdits[key].brandResponse) brEdits[key].brandResponse = 'Notified';
+              const notes = getNotes(key);
+              notes.push({ id: notes.reduce((m,n)=>Math.max(m,n.id),0)+1, text: 'Notified via email on ' + now + ' by Broker User', createdAt: now });
+              brEdits[key].notes = notes;
+              sendLog.unshift({ subject: sub, message: msg, sentAt: now, name: contact.name, brand: brand, email: contact.email });
+            });
+          });
+        });
+        localStorage.setItem('brEdits', JSON.stringify(brEdits));
+        localStorage.setItem('caboodleSendLog', JSON.stringify(sendLog));
+        closeModal('composeModal');
+        alert('Notification sent to ' + nBrands + ' brand(s) — Brand Report populated (Brand Response = Notified, date + user logged to notes).');
+        notifyContext = null;
+        renderBrandReport();
+        return;
+      }
       selectedContacts.forEach(id => {
         const c = CONTACTS.find(x => x.id === id);
         sendLog.unshift({ subject: sub, message: msg, sentAt: now, name: c.name, brand: c.brand, email: c.email });
@@ -1132,6 +1398,7 @@
         document.getElementById('msAssignedInfo').textContent = '';
       }
 
+      renderMsNotes();
       showModal('milestoneDetailModal');
     }
 
@@ -1167,9 +1434,59 @@
       }
     }
 
+    // Milestone notes
+    function renderMsNotes() {
+      const notes = getNotes(msKey);
+      const el = document.getElementById('msNotesList');
+      if (!notes.length) {
+        el.innerHTML = '<div style="font-size:0.75rem;color:#94a3b8;">No notes yet.</div>';
+        return;
+      }
+      el.innerHTML = notes.map(n =>
+        '<div style="padding:6px 0;border-bottom:1px solid #f1f5f9;"><div style="font-size:0.8rem;line-height:1.4;">' + n.text + '</div><div style="font-size:0.62rem;color:#94a3b8;margin-top:2px;">' + n.createdAt + '</div></div>'
+      ).join('');
+    }
+
+    function msAddNote() {
+      const input = document.getElementById('msNotesInput');
+      const text = input.value.trim();
+      if (!text || !msKey) return;
+      const notes = getNotes(msKey);
+      notes.push({ id: notes.reduce((m,n)=>Math.max(m,n.id),0)+1, text, createdAt: new Date().toLocaleString() });
+      if (!brEdits[msKey]) brEdits[msKey] = {};
+      brEdits[msKey].notes = notes;
+      localStorage.setItem('brEdits', JSON.stringify(brEdits));
+      input.value = '';
+      renderMsNotes();
+    }
+
+    function msMarkComplete() {
+      if (!msKey) return;
+      const parts = msKey.split('-');
+      const rowId = parts[0];
+      const month = parts.slice(1).join('-');
+      const row = CR_DATA.find(r => r.id === rowId);
+      if (row && row.months[month]) {
+        // remove from tracker (grid) and Brand Report
+        row.months[month] = '';
+        Object.keys(brMeta).forEach(k => {
+          if (k.startsWith(msKey + '-')) { delete brMeta[k]; }
+        });
+        Object.keys(brEdits).forEach(k => {
+          if (k.startsWith(msKey + '-')) { delete brEdits[k]; }
+        });
+        saveBrMeta();
+        localStorage.setItem('brEdits', JSON.stringify(brEdits));
+        closeModal('milestoneDetailModal');
+        alert('Review marked complete and cleared from the tracker.');
+        crRender();
+        renderBrandReport();
+      }
+    }
+
     // ===== BRAND REPORT =====
     const BR_STATUS_OPTS = ['Not Started','In Progress','Submitted','Approved','Rejected'];
-    const BR_RESPONSE_OPTS = ['TBD','Need More Info','Not Interested','On Hold','Opportunity Sent','Yes-Submit'];
+    const BR_RESPONSE_OPTS = ['Notified','Yes-Submit','TBD','Not Interested','Contact Me'];
     const BR_WAITING_OPTS = ['Brand','Buyer','Distributor','Sales Rep','Samples'];
     const BR_FOCUS_OPTS = ['Complete','Now','F/U','Monitor','Waiting'];
     const BR_ACTION_OPTS = ['None','Determine Review timeline','Contact Brand','More Brand Info Needed','Request Samples','Prepare Submission','Submit to Buyer','F/U w/ Brand','F/U w/ Buyer','Schedule Buyer Meeting','Review Decision','Update Dashboard','Close Opportunity'];
@@ -1181,6 +1498,58 @@
       if (!brEdits[key]) brEdits[key] = {};
       brEdits[key][field] = val;
       localStorage.setItem('brEdits', JSON.stringify(brEdits));
+    }
+
+    // Admin-controlled dropdown options
+    let brOptsOverride = JSON.parse(localStorage.getItem('brOptsOverride') || '{}');
+    function getBrOpts(field) {
+      const defs = { status: BR_STATUS_OPTS, brandResponse: BR_RESPONSE_OPTS, waitingOn: BR_WAITING_OPTS, focus: BR_FOCUS_OPTS, actionNeeded: BR_ACTION_OPTS, nextAction: BR_NEXT_OPTS, result: BR_RESULT_OPTS };
+      return (brOptsOverride[field] && brOptsOverride[field].length) ? brOptsOverride[field] : defs[field];
+    }
+
+    // Single source of Brand Report entries (populated by email notify flow, manual add, or brand side)
+    let brMeta = JSON.parse(localStorage.getItem('brMeta') || '{}');
+    function saveBrMeta() { localStorage.setItem('brMeta', JSON.stringify(brMeta)); }
+    function ensureBrEntry(cellKey, contactId, brand, contact) {
+      const key = cellKey + '-' + contactId;
+      if (brMeta[key]) return key;
+      const parts = cellKey.split('-');
+      const rowId = parts[0];
+      const month = parts.slice(1).join('-');
+      const row = CR_DATA.find(r => r.id === rowId);
+      const mi = CR_MONTHS.indexOf(month);
+      brMeta[key] = {
+        brand: brand,
+        contact: contact,
+        retailer: row ? row.banner : '',
+        category: row ? row.category : '',
+        reviewStart: new Date(crYear, mi, 1).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}),
+        reviewEnd: new Date(crYear, mi + 1, 0).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}),
+        cellKey: cellKey
+      };
+      saveBrMeta();
+      return key;
+    }
+    function removeBrEntry(key) {
+      if (brMeta[key]) { delete brMeta[key]; saveBrMeta(); }
+      if (brEdits[key]) { delete brEdits[key]; localStorage.setItem('brEdits', JSON.stringify(brEdits)); }
+      // cleanup assignContacts reference if this entry came from an assignment
+      const match = /^(.+)-([a-z0-9]+)$/i.exec(key);
+      if (match) {
+        const ck = match[1];
+        if (assignContacts[ck]) {
+          assignContacts[ck] = assignContacts[ck].filter(id => (ck + '-' + id) !== key);
+          if (!assignContacts[ck].length) delete assignContacts[ck];
+        }
+      }
+    }
+
+    // Global "hide Not Interested" toggle
+    let brHideNI = true;
+    function brToggleHideNotInterested() {
+      brHideNI = !brHideNI;
+      document.getElementById('brHideNotInterestedSwitch').classList.toggle('on', brHideNI);
+      renderBrandReport();
     }
 
     function getNotes(key) {
@@ -1195,7 +1564,7 @@
       notesModalKey = key;
       const notes = getNotes(key);
       const row = [...CR_DATA.entries()].flatMap(([ri, r]) => CR_MONTHS.map((m, mi) => ({ r, m, mi }))).find(x => key.startsWith(x.r.id + '-' + x.m));
-      const brand = brEdits[key] && brEdits[key]._brand;
+      const brand = (brEdits[key] && brEdits[key]._brand) || (brMeta[key] && brMeta[key].brand);
       document.getElementById('notesModalTitle').textContent = 'Notes' + (brand ? ' — ' + brand : '');
       renderNotesList();
       showModal('notesModal');
@@ -1243,28 +1612,22 @@
     }
 
     function renderBrandReport() {
-      // Build entries
-      const entries = [];
-      CR_DATA.forEach(row => {
-        CR_MONTHS.forEach((m, mi) => {
-          if (row.months[m] !== 'Review' && row.months[m] !== 'Reset') return;
-          const cellKey = row.id + '-' + m;
-          (assignContacts[cellKey] || []).forEach(contactId => {
-            const contact = CONTACTS.find(c => c.id === contactId);
-            if (!contact) return;
-            const monthDate = new Date(crYear, mi, 1);
-            entries.push({
-              key: cellKey + '-' + contactId,
-              brand: contact.brand,
-              contact: contact.name,
-              retailer: row.banner,
-              category: row.category,
-              reviewStart: monthDate.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}),
-              reviewEnd: new Date(crYear, mi + 1, 0).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}),
-            });
-          });
+      // Build entries from brMeta (populated by notify emails, manual add, or brand side)
+      Object.keys(assignContacts).forEach(cellKey => {
+        (assignContacts[cellKey] || []).forEach(contactId => {
+          const contact = CONTACTS.find(c => c.id === contactId);
+          if (contact) ensureBrEntry(cellKey, contactId, contact.brand, contact.name);
         });
       });
+      const entries = Object.keys(brMeta).map(key => ({
+        key: key,
+        brand: brMeta[key].brand,
+        contact: brMeta[key].contact,
+        retailer: brMeta[key].retailer,
+        category: brMeta[key].category,
+        reviewStart: brMeta[key].reviewStart,
+        reviewEnd: brMeta[key].reviewEnd,
+      }));
 
       // Header
       document.querySelector('#view-cr-report .cal-title').textContent = 'Brand Report';
@@ -1273,6 +1636,7 @@
       const colFilters = window._brColFilters || {};
       const filtered = entries.filter(e => {
         const edit = brEdits[e.key] || {};
+        if (brHideNI && edit.brandResponse === 'Not Interested') return false;
         const checks = { brand:e.brand, retailer:e.retailer, category:e.category, reviewStart:e.reviewStart, reviewEnd:e.reviewEnd, status:edit.status, brandResponse:edit.brandResponse, waitingOn:edit.waitingOn, focus:edit.focus, actionNeeded:edit.actionNeeded, nextAction:edit.nextAction, result:edit.result };
         for (const field in colFilters) {
           if (colFilters[field] && colFilters[field] !== 'all' && checks[field] !== colFilters[field]) return false;
@@ -1286,11 +1650,11 @@
       // KPI cards (from filtered data)
       if (!window._brKpiState) window._brKpiState = {};
       const kpiCards = [
-        { title:'Review Status', field:'status', options:BR_STATUS_OPTS },
-        { title:'Action Needed', field:'actionNeeded', options:BR_ACTION_OPTS.filter(o => o !== 'None') },
-        { title:'Waiting On', field:'waitingOn', options:BR_WAITING_OPTS },
-        { title:'Focus', field:'focus', options:BR_FOCUS_OPTS },
-        { title:'Result', field:'result', options:BR_RESULT_OPTS },
+        { title:'Review Status', field:'status', options:getBrOpts('status') },
+        { title:'Action Needed', field:'actionNeeded', options:getBrOpts('actionNeeded').filter(o => o !== 'None') },
+        { title:'Waiting On', field:'waitingOn', options:getBrOpts('waitingOn') },
+        { title:'Focus', field:'focus', options:getBrOpts('focus') },
+        { title:'Result', field:'result', options:getBrOpts('result') },
       ];
       let kpiHtml = '';
       const KPI_CLASSES = ['kpi-status','kpi-action','kpi-waiting','kpi-focus','kpi-result'];
@@ -1337,7 +1701,7 @@
 
       // Table
       if (!entries.length) {
-        document.getElementById('brTableWrap').innerHTML = '<div style="text-align:center;padding:40px;color:#94a3b8;">Assign contacts to Review cells on the Category Review calendar to populate this report.</div>';
+        document.getElementById('brTableWrap').innerHTML = '<div style="text-align:center;padding:40px;color:#94a3b8;">Notify brands from the Category Review grid (select reviews → Notify Brands), add a brand manually, or let brands add reviews with "Notify Broker" to populate this report.</div>';
         return;
       }
 
@@ -1367,7 +1731,7 @@
         { key:'actionNeeded', label:'Action Needed', filterable:true },
         { key:'nextAction', label:'Next Action', filterable:true },
         { key:'result', label:'Result', filterable:true },
-        { key:'notes', label:'Notes', filterable:false },
+        { key:'notes', label:'Notes to Brands', filterable:false },
       ];
 
       let tableHtml = '<table class="br-table"><thead><tr>';
@@ -1393,18 +1757,18 @@
         if (edit.result === 'Rejected') rowClass = ' row-rejected';
         else if (edit.result === 'Accepted') rowClass = ' row-accepted';
         else if (edit.result === 'Pending' || edit.result === 'Deferred' || !edit.result) rowClass = ' row-pending';
-        tableHtml += '<tr class="' + rowClass + '"><td><div style="display:flex;align-items:center;gap:6px;"><strong>' + e.brand + '</strong><button onclick="alert(\'Email to: ' + e.contact + '\')" title="Email ' + e.contact + '" style="padding:2px;border:0;background:none;cursor:pointer;color:#94a3b8;flex-shrink:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></button><span style="font-size:0.7rem;color:#64748b;font-weight:normal;">· ' + e.contact + '</span></div></td>' +
+        tableHtml += '<tr class="' + rowClass + '"><td><div style="display:flex;align-items:center;gap:6px;"><strong>' + e.brand + '</strong><button onclick="alert(\'Email to: ' + e.contact + '\')" title="Email ' + e.contact + '" style="padding:2px;border:0;background:none;cursor:pointer;color:#94a3b8;flex-shrink:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></button><span style="font-size:0.7rem;color:#64748b;font-weight:normal;">· ' + e.contact + '</span><button onclick="removeBrandRow(\'' + e.key + '\')" title="Remove from report" class="remove-row-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div></td>' +
           '<td>' + e.retailer + '</td>' +
           '<td><span style="display:inline-block;padding:1px 8px;border-radius:999px;background:#f1f5f9;font-size:0.65rem;">' + e.category + '</span></td>' +
           '<td>' + e.reviewStart + '</td>' +
           '<td>' + e.reviewEnd + '</td>' +
-          '<td>' + coloredSelect(e.key, 'status', BR_STATUS_OPTS, edit.status) + '</td>' +
-          '<td>' + coloredSelect(e.key, 'brandResponse', BR_RESPONSE_OPTS, edit.brandResponse) + '</td>' +
-          '<td>' + coloredSelect(e.key, 'waitingOn', BR_WAITING_OPTS, edit.waitingOn) + '</td>' +
-          '<td>' + coloredSelect(e.key, 'focus', BR_FOCUS_OPTS, edit.focus) + '</td>' +
-          '<td>' + coloredSelect(e.key, 'actionNeeded', BR_ACTION_OPTS, edit.actionNeeded) + '</td>' +
-          '<td>' + coloredSelect(e.key, 'nextAction', BR_NEXT_OPTS, edit.nextAction) + '</td>' +
-          '<td>' + coloredSelect(e.key, 'result', BR_RESULT_OPTS, edit.result) + '</td>' +
+          '<td>' + coloredSelect(e.key, 'status', getBrOpts('status'), edit.status) + '</td>' +
+          '<td>' + coloredSelect(e.key, 'brandResponse', getBrOpts('brandResponse'), edit.brandResponse) + '</td>' +
+          '<td>' + coloredSelect(e.key, 'waitingOn', getBrOpts('waitingOn'), edit.waitingOn) + '</td>' +
+          '<td>' + coloredSelect(e.key, 'focus', getBrOpts('focus'), edit.focus) + '</td>' +
+          '<td>' + coloredSelect(e.key, 'actionNeeded', getBrOpts('actionNeeded'), edit.actionNeeded) + '</td>' +
+          '<td>' + coloredSelect(e.key, 'nextAction', getBrOpts('nextAction'), edit.nextAction) + '</td>' +
+          '<td>' + coloredSelect(e.key, 'result', getBrOpts('result'), edit.result) + '</td>' +
           '<td><div style="display:flex;align-items:center;gap:4px;"><button onclick="openNotesModal(\'' + e.key + '\')" style="padding:3px 10px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;font-size:0.7rem;display:flex;align-items:center;gap:4px;white-space:nowrap;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>' + (getNotes(e.key).length || 'Note') + '</button></div></td>' +
           '</tr>';
       });
@@ -1419,7 +1783,7 @@
     // Colored select based on field + value
     window.FIELD_COLORS = {
       status:       { 'Not Started':'#94a3b8','In Progress':'#3b82f6','Submitted':'#8b5cf6','Approved':'#22c55e','Rejected':'#ef4444' },
-      brandResponse:{ 'TBD':'#94a3b8','Need More Info':'#f59e0b','Not Interested':'#ef4444','On Hold':'#f59e0b','Opportunity Sent':'#3b82f6','Yes-Submit':'#22c55e' },
+      brandResponse:{ 'Notified':'#8b5cf6','Yes-Submit':'#22c55e','TBD':'#94a3b8','Not Interested':'#ef4444','Contact Me':'#3b82f6' },
       waitingOn:    { 'Brand':'#3b82f6','Buyer':'#3b82f6','Distributor':'#f59e0b','Sales Rep':'#f59e0b','Samples':'#22c55e' },
       focus:        { 'Complete':'#22c55e','Now':'#ef4444','F/U':'#f59e0b','Monitor':'#94a3b8','Waiting':'#f59e0b' },
       actionNeeded: { 'None':'#94a3b8','Determine Review timeline':'#f59e0b','Contact Brand':'#3b82f6','More Brand Info Needed':'#f59e0b','Request Samples':'#8b5cf6','Prepare Submission':'#8b5cf6','Submit to Buyer':'#22c55e','F/U w/ Brand':'#f59e0b','F/U w/ Buyer':'#f59e0b','Schedule Buyer Meeting':'#3b82f6','Review Decision':'#8b5cf6','Update Dashboard':'#3b82f6','Close Opportunity':'#22c55e' },
@@ -1433,6 +1797,110 @@
       const textColor = colors[value] || '#334155';
       return '<select onchange="saveBrEdit(\'' + key + '\',\'' + field + '\',this.value);var c=(window.FIELD_COLORS[\'' + field + '\']||{})[this.value];this.style.background=(c||\'\')+\'20\';this.style.color=c||\'#334155\';this.style.fontWeight=\'600\'" style="background:' + bg + ';color:' + textColor + ';font-weight:600;">' +
         optsSelect(options, value || '') + '</select>';
+    }
+
+    // Remove a brand from the report
+    function removeBrandRow(key) {
+      removeBrEntry(key);
+      renderBrandReport();
+      crRender();
+    }
+
+    // Manual add a brand to the report
+    function openAddBrandModal() {
+      const retSel = document.getElementById('abRetailer');
+      const catSel = document.getElementById('abCategory');
+      const monSel = document.getElementById('abMonth');
+      const brandSel = document.getElementById('abBrand');
+      retSel.innerHTML = '<option value="">Select retailer</option>';
+      [...new Set(CR_DATA.map(r => r.banner))].forEach(b => { retSel.innerHTML += '<option>' + b + '</option>'; });
+      catSel.innerHTML = '<option value="">Select category</option>';
+      [...new Set(CR_DATA.map(r => r.category))].forEach(c => { catSel.innerHTML += '<option>' + c + '</option>'; });
+      monSel.innerHTML = '';
+      CR_MONTHS.forEach(m => { monSel.innerHTML += '<option>' + m + '</option>'; });
+      brandSel.innerHTML = '';
+      [...new Set(CONTACTS.map(c => c.brand))].forEach(b => { brandSel.innerHTML += '<option>' + b + '</option>'; });
+      showModal('addBrandModal');
+    }
+
+    function addBrandSubmit() {
+      const retailer = document.getElementById('abRetailer').value;
+      const category = document.getElementById('abCategory').value;
+      const month = document.getElementById('abMonth').value;
+      const brand = document.getElementById('abBrand').value;
+      if (!retailer || !category || !month || !brand) { alert('Please fill in all fields.'); return; }
+      const row = CR_DATA.find(r => r.banner === retailer && r.category === category);
+      if (!row) { alert('No matching review found.'); return; }
+      const cellKey = row.id + '-' + month;
+      const contact = CONTACTS.find(c => c.brand === brand);
+      ensureBrEntry(cellKey, contact.id, brand, contact.name);
+      const key = cellKey + '-' + contact.id;
+      if (!brEdits[key]) brEdits[key] = {};
+      if (!brEdits[key].brandResponse) brEdits[key].brandResponse = 'Notified';
+      localStorage.setItem('brEdits', JSON.stringify(brEdits));
+      closeModal('addBrandModal');
+      alert(brand + ' added to the Brand Report manually.');
+      renderBrandReport();
+      crRender();
+    }
+
+    // Email brands currently in the (filtered) report
+    function brEmailBrands() {
+      const colFilters = window._brColFilters || {};
+      const entries = Object.keys(brMeta).map(k => ({ key:k, brand:brMeta[k].brand, contact:brMeta[k].contact }));
+      const filtered = entries.filter(e => {
+        const edit = brEdits[e.key] || {};
+        if (brHideNI && edit.brandResponse === 'Not Interested') return false;
+        const checks = { brand:e.brand, brandResponse:edit.brandResponse, status:edit.status, result:edit.result, actionNeeded:edit.actionNeeded, nextAction:edit.nextAction, waitingOn:edit.waitingOn, focus:edit.focus };
+        for (const f in colFilters) {
+          if (colFilters[f] && colFilters[f] !== 'all' && checks[f] !== colFilters[f]) return false;
+        }
+        return true;
+      });
+      const brands = [...new Set(filtered.map(e => e.brand))];
+      if (!brands.length) { alert('No brands in the current view to email.'); return; }
+      selectedContacts = CONTACTS.filter(c => brands.includes(c.brand)).map(c => c.id);
+      document.getElementById('toNames').textContent = brands.join(', ');
+      document.getElementById('subjectField').value = 'Category Review — Update';
+      document.getElementById('messageField').value = 'Hi,\n\nFollow-up on the category review. Please respond using the link below.\n\nReview response link: https://caboodle.app/review/response\n\nThanks,\nAcme Brokerage';
+      document.getElementById('ccField').value = '';
+      document.getElementById('bccField').value = '';
+      document.getElementById('sendBtn').disabled = false;
+      showModal('composeModal');
+    }
+
+    // Admin options editor
+    function openAdminOptionsModal() {
+      const fields = [
+        { key:'status', label:'Status' },
+        { key:'brandResponse', label:'Brand Response' },
+        { key:'waitingOn', label:'Waiting On' },
+        { key:'focus', label:'Focus' },
+        { key:'actionNeeded', label:'Action Needed' },
+        { key:'nextAction', label:'Next Action' },
+        { key:'result', label:'Result' },
+      ];
+      let html = '';
+      fields.forEach(f => {
+        const opts = getBrOpts(f.key);
+        html += '<div><label style="font-size:0.72rem;font-weight:600;color:#475569;display:block;margin-bottom:4px;">' + f.label + '</label>' +
+          '<textarea class="modal-input" id="ao_' + f.key + '" rows="2" style="resize:vertical;font-size:0.8rem;">' + opts.join(', ') + '</textarea></div>';
+      });
+      document.getElementById('adminOptionsFields').innerHTML = html;
+      showModal('adminOptionsModal');
+    }
+
+    function saveAdminOptions() {
+      const fields = ['status','brandResponse','waitingOn','focus','actionNeeded','nextAction','result'];
+      fields.forEach(f => {
+        const el = document.getElementById('ao_' + f);
+        const val = (el.value || '').split(',').map(s => s.trim()).filter(Boolean);
+        if (val.length) brOptsOverride[f] = val;
+      });
+      localStorage.setItem('brOptsOverride', JSON.stringify(brOptsOverride));
+      closeModal('adminOptionsModal');
+      renderBrandReport();
+      alert('Dropdown options updated.');
     }
 
     // Timeline filter
@@ -1477,13 +1945,14 @@
       }
 
       let html = '<table class="cal-table"><thead><tr>';
-      html += '<th class="sticky-l">Banner Name</th><th class="sticky-l2">Category</th>';
+      const allSel = CR_DATA.length > 0 && CR_DATA.every(r => crSelectedRows[r.id]);
+      html += '<th class="sticky-l"><div style="display:flex;align-items:center;gap:8px;"><input type="checkbox" class="row-check" id="crSelectAllRows" ' + (allSel ? 'checked' : '') + ' onchange="crToggleSelectAll()"><span>Banner Name</span></div></th><th class="sticky-l2">Category</th>';
       CR_MONTHS.forEach(m => { html += `<th class="month-cell">${m}</th>`; });
       html += '</tr></thead><tbody>';
 
       rows.forEach(row => {
         html += `<tr>`;
-        html += `<td class="sticky-l">${row.banner}</td>`;
+        html += `<td class="sticky-l"><div style="display:flex;align-items:center;gap:8px;"><input type="checkbox" class="row-check" ${crSelectedRows[row.id] ? 'checked' : ''} onclick="crToggleRow('${row.id}')"><span>${row.banner}</span></div></td>`;
         html += `<td class="sticky-l2"><span class="cat-badge blue" style="background:hsla(var(--primary),0.1);color:hsl(var(--primary));padding:2px 8px;font-size:0.6rem;">${row.category}</span></td>`;
         CR_MONTHS.forEach(month => {
           const content = row.months[month] || '';
@@ -1491,7 +1960,8 @@
           const isChecked = crChecked[key];
           if (content) {
             const colorClass = content === 'Reset' ? 'green' : 'blue';
-            html += `<td class="month-cell"><span class="cat-badge ${colorClass}" onclick="openMilestoneDetail('${key}','${row.id}','${month}','${row.banner.replace(/'/g, "\\'")}','${row.category.replace(/'/g, "\\'")}','${row.region}','${content}')">${content}${isChecked ? '<span class="ck-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>' : ''}</span></td>`;
+            const optCount = Object.keys(brMeta).filter(k => k.startsWith(key + '-')).length;
+            html += `<td class="month-cell"><span class="cat-badge ${colorClass}" onclick="openMilestoneDetail('${key}','${row.id}','${month}','${row.banner.replace(/'/g, "\\'")}','${row.category.replace(/'/g, "\\'")}','${row.region}','${content}')">${content}${isChecked ? '<span class="ck-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>' : ''}${optCount ? '<span class="opt-dot" title="' + optCount + ' brand(s) notified / opted in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>' : ''}</span></td>`;
           } else {
             html += `<td class="month-cell"></td>`;
           }
@@ -1723,6 +2193,110 @@
       html += '<span style="font-size:0.75rem;color:hsl(var(--muted-foreground));margin-left:8px;">10 / page</span>';
       html += '</div></div>';
       document.getElementById('pcTableWrap').innerHTML = html;
+    }
+
+    // ===== BRAND SIDE (DEMO of email-link brand environment) =====
+    let bsBrand = 'Brand A';
+    const BS_REVIEWS = [
+      { banner:'Nugget Market', category:'Specialty Asian', month:'Jul', region:'NorCal' },
+      { banner:'Gelson\'s', category:'Mac & Cheese', month:'Apr', region:'SoCal' },
+      { banner:'Whole Foods Market', category:'Frozen Desserts', month:'Jan', region:'National' }
+    ];
+
+    function bsCellKey(banner, category, month) {
+      const row = CR_DATA.find(x => x.banner === banner && x.category === category);
+      return row ? row.id + '-' + month : null;
+    }
+
+    function bsRender() {
+      const sel = document.getElementById('bsBrandSelect');
+      if (!sel.options.length) {
+        [...new Set(CONTACTS.map(c => c.brand))].forEach(b => {
+          const opt = document.createElement('option'); opt.textContent = b; opt.value = b;
+          if (b === bsBrand) opt.selected = true;
+          sel.appendChild(opt);
+        });
+      }
+      const brandKeys = Object.keys(brMeta).filter(k => brMeta[k].brand === bsBrand);
+      const subStatus = brandKeys.map(k => (brEdits[k]||{}).status).filter(Boolean).pop() || 'Not Started';
+      const waitingOn = brandKeys.map(k => (brEdits[k]||{}).waitingOn).filter(Boolean).pop() || '—';
+      const result = brandKeys.map(k => (brEdits[k]||{}).result).filter(Boolean).pop() || 'Pending';
+      const notes = brandKeys.flatMap(k => getNotes(k)).slice(-3).map(n => n.text);
+      document.getElementById('bsKpiRow').innerHTML =
+        '<div class="bs-kpi"><div class="bs-kpi-lbl">Submission Status</div><div class="bs-kpi-val">' + subStatus + '</div></div>' +
+        '<div class="bs-kpi"><div class="bs-kpi-lbl">Waiting On</div><div class="bs-kpi-val">' + waitingOn + '</div></div>' +
+        '<div class="bs-kpi"><div class="bs-kpi-lbl">Review Result</div><div class="bs-kpi-val">' + result + '</div></div>' +
+        '<div class="bs-kpi"><div class="bs-kpi-lbl">Notes from Broker</div><div style="font-size:0.75rem;color:#64748b;margin-top:2px;">' + (notes.length ? notes.join('<br>') : 'No notes from broker yet') + '</div></div>';
+
+      const response = brandKeys.length ? ((brEdits[brandKeys[0]]||{}).brandResponse || 'Notified') : 'Notified';
+      const chips = document.getElementById('bsResponseChips');
+      chips.innerHTML = getBrOpts('brandResponse').map(o =>
+        '<span class="bs-chip' + (o === response ? ' selected' : '') + '" onclick="bsSetResponse(\'' + o.replace(/'/g,"\\'") + '\')">' + o + '</span>'
+      ).join('');
+
+      let html = '<table class="cal-table"><thead><tr><th>Retailer</th><th>Category</th><th>Review Month</th><th>Review Start</th><th>Review End</th><th>Notify Broker</th></tr></thead><tbody>';
+      BS_REVIEWS.forEach(r => {
+        const cellKey = bsCellKey(r.banner, r.category, r.month);
+        const notified = cellKey && Object.keys(brMeta).some(k => brMeta[k].brand === bsBrand && k.startsWith(cellKey + '-'));
+        html += '<tr><td>' + r.banner + '</td><td><span class="cat-badge blue" style="background:hsla(var(--primary),0.1);color:hsl(var(--primary));padding:2px 8px;font-size:0.6rem;">' + r.category + '</span></td><td>' + r.month + ' ' + crYear + '</td><td>' + r.month + ' 01, ' + crYear + '</td><td>' + r.month + ' 15, ' + crYear + '</td><td>' + (notified ? '<span style="color:#16a34a;font-size:0.7rem;">✓ Notified</span>' : '<span style="color:#94a3b8;font-size:0.7rem;">Not notified</span>') + '</td></tr>';
+      });
+      html += '</tbody></table>';
+      document.getElementById('bsTableWrap').innerHTML = html;
+    }
+
+    function bsSetResponse(opt) {
+      const key = Object.keys(brMeta).find(k => brMeta[k].brand === bsBrand);
+      if (key) {
+        saveBrEdit(key, 'brandResponse', opt);
+        const notes = getNotes(key);
+        notes.push({ id: notes.reduce((m,n)=>Math.max(m,n.id),0)+1, text: 'Brand responded "' + opt + '" via link on ' + new Date().toLocaleString(), createdAt: new Date().toLocaleString() });
+        brEdits[key].notes = notes;
+        localStorage.setItem('brEdits', JSON.stringify(brEdits));
+        alert('Brand Response set to "' + opt + '". Broker Brand Report updated.');
+      } else {
+        alert('No review entry for this brand yet. Add a review with "Notify Broker" first.');
+      }
+      bsRender();
+      renderBrandReport();
+    }
+
+    function bsOpenAddReview() {
+      const retSel = document.getElementById('bsRetailer');
+      const catSel = document.getElementById('bsCategory');
+      const monSel = document.getElementById('bsMonth');
+      if (!retSel.options.length) {
+        [...new Set(CR_DATA.map(r => r.banner))].forEach(b => { retSel.innerHTML += '<option>' + b + '</option>'; });
+        [...new Set(CR_DATA.map(r => r.category))].forEach(c => { catSel.innerHTML += '<option>' + c + '</option>'; });
+        CR_MONTHS.forEach(m => { monSel.innerHTML += '<option>' + m + '</option>'; });
+      }
+      document.getElementById('bsNotifyBroker').checked = true;
+      showModal('bsAddReviewModal');
+    }
+
+    function bsAddReview() {
+      const retailer = document.getElementById('bsRetailer').value;
+      const category = document.getElementById('bsCategory').value;
+      const month = document.getElementById('bsMonth').value;
+      if (!retailer || !category || !month) { alert('Please fill in all fields.'); return; }
+      const row = CR_DATA.find(r => r.banner === retailer && r.category === category);
+      if (!row) { alert('No matching review found.'); return; }
+      const cellKey = row.id + '-' + month;
+      const contact = CONTACTS.find(c => c.brand === bsBrand);
+      const notify = document.getElementById('bsNotifyBroker').checked;
+      if (notify) {
+        const key = ensureBrEntry(cellKey, contact.id, bsBrand, contact.name);
+        if (!brEdits[key]) brEdits[key] = {};
+        brEdits[key].brandResponse = 'Yes-Submit';
+        const notes = getNotes(key);
+        notes.push({ id: notes.reduce((m,n)=>Math.max(m,n.id),0)+1, text: 'Added to calendar with "Notify Broker" — pushed to Broker Brand Report on ' + new Date().toLocaleString(), createdAt: new Date().toLocaleString() });
+        brEdits[key].notes = notes;
+        localStorage.setItem('brEdits', JSON.stringify(brEdits));
+      }
+      closeModal('bsAddReviewModal');
+      alert(notify ? 'Review added. Broker notified — Brand Report updated (Brand Response = Yes-Submit).' : 'Review added to your calendar.');
+      bsRender();
+      renderBrandReport();
+      crRender();
     }
 
     // ===== HELPERS =====
