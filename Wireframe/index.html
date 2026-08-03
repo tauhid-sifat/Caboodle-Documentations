@@ -1523,8 +1523,9 @@
         contact: contact,
         retailer: row ? row.banner : '',
         category: row ? row.category : '',
-        reviewStart: new Date(crYear, mi, 1).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}),
-        reviewEnd: new Date(crYear, mi + 1, 0).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}),
+        submissionDue: new Date(crYear, mi, 1).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}),
+        reviewStart: new Date(crYear, mi, 10).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}),
+        reviewEnd: new Date(crYear, mi, 15).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}),
         cellKey: cellKey
       };
       saveBrMeta();
@@ -1619,15 +1620,25 @@
           if (contact) ensureBrEntry(cellKey, contactId, contact.brand, contact.name);
         });
       });
-      const entries = Object.keys(brMeta).map(key => ({
-        key: key,
-        brand: brMeta[key].brand,
-        contact: brMeta[key].contact,
-        retailer: brMeta[key].retailer,
-        category: brMeta[key].category,
-        reviewStart: brMeta[key].reviewStart,
-        reviewEnd: brMeta[key].reviewEnd,
-      }));
+      const entries = Object.keys(brMeta).map(key => {
+        const m = brMeta[key];
+        let submissionDue = m.submissionDue;
+        if (!submissionDue) {
+          const parts = m.cellKey ? m.cellKey.split('-') : [];
+          const mi = CR_MONTHS.indexOf(parts.slice(1).join('-'));
+          submissionDue = new Date(crYear, mi, 1).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+        }
+        return {
+          key: key,
+          brand: m.brand,
+          contact: m.contact,
+          retailer: m.retailer,
+          category: m.category,
+          submissionDue: submissionDue,
+          reviewStart: m.reviewStart,
+          reviewEnd: m.reviewEnd,
+        };
+      });
 
       // Header
       document.querySelector('#view-cr-report .cal-title').textContent = 'Brand Report';
@@ -1637,7 +1648,7 @@
       const filtered = entries.filter(e => {
         const edit = brEdits[e.key] || {};
         if (brHideNI && edit.brandResponse === 'Not Interested') return false;
-        const checks = { brand:e.brand, retailer:e.retailer, category:e.category, reviewStart:e.reviewStart, reviewEnd:e.reviewEnd, status:edit.status, brandResponse:edit.brandResponse, waitingOn:edit.waitingOn, focus:edit.focus, actionNeeded:edit.actionNeeded, nextAction:edit.nextAction, result:edit.result };
+        const checks = { brand:e.brand, retailer:e.retailer, category:e.category, submissionDue:e.submissionDue, reviewStart:e.reviewStart, reviewEnd:e.reviewEnd, status:edit.status, brandResponse:edit.brandResponse, waitingOn:edit.waitingOn, focus:edit.focus, actionNeeded:edit.actionNeeded, nextAction:edit.nextAction, result:edit.result };
         for (const field in colFilters) {
           if (colFilters[field] && colFilters[field] !== 'all' && checks[field] !== colFilters[field]) return false;
         }
@@ -1710,6 +1721,7 @@
           if (field === 'brand') return e.brand;
           if (field === 'retailer') return e.retailer;
           if (field === 'category') return e.category;
+          if (field === 'submissionDue') return e.submissionDue;
           if (field === 'reviewStart') return e.reviewStart;
           if (field === 'reviewEnd') return e.reviewEnd;
           const v = (brEdits[e.key] || {})[field];
@@ -1722,6 +1734,7 @@
         { key:'brand', label:'Brand', filterable:true },
         { key:'retailer', label:'Retailer', filterable:true },
         { key:'category', label:'Category', filterable:true },
+        { key:'submissionDue', label:'Submission Due Date', filterable:true },
         { key:'reviewStart', label:'Review Start', filterable:true },
         { key:'reviewEnd', label:'Review End', filterable:true },
         { key:'status', label:'Status', filterable:true },
@@ -1760,6 +1773,7 @@
         tableHtml += '<tr class="' + rowClass + '"><td><div style="display:flex;align-items:center;gap:6px;"><strong>' + e.brand + '</strong><button onclick="alert(\'Email to: ' + e.contact + '\')" title="Email ' + e.contact + '" style="padding:2px;border:0;background:none;cursor:pointer;color:#94a3b8;flex-shrink:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></button><span style="font-size:0.7rem;color:#64748b;font-weight:normal;">· ' + e.contact + '</span><button onclick="removeBrandRow(\'' + e.key + '\')" title="Remove from report" class="remove-row-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div></td>' +
           '<td>' + e.retailer + '</td>' +
           '<td><span style="display:inline-block;padding:1px 8px;border-radius:999px;background:#f1f5f9;font-size:0.65rem;">' + e.category + '</span></td>' +
+          '<td>' + e.submissionDue + '</td>' +
           '<td>' + e.reviewStart + '</td>' +
           '<td>' + e.reviewEnd + '</td>' +
           '<td>' + coloredSelect(e.key, 'status', getBrOpts('status'), edit.status) + '</td>' +
