@@ -2,7 +2,7 @@
 
 > **Generated:** 2026-07-14  
 > **Purpose:** Foundational memory for LLM agents working on this project.  
-> **Source docs:** All files in `ba-onboarding/`, `Daily Delight Calendar/`, `Jira (3).csv`, meeting transcripts, Lovable prototype prompts.
+> **Source docs:** All files in `ba-onboarding/`, `prototypes/Daily Delight Calendar/`, `data/Jira (3).csv`, `meetings/` (meeting transcripts), Lovable prototype prompts.
 
 ---
 
@@ -293,7 +293,7 @@ Active, Pending, NotActive, Declined, Discontinued, Approved, Commit
 
 ## 12. JIRA ISSUES — DESCRIPTION GAPS
 
-19 issues in `Jira (3).csv` lack proper descriptions (under 50 chars or only image):
+19 issues in `data/Jira (3).csv` lack proper descriptions (under 50 chars or only image):
 
 CS-478, CS-617, CS-725, CS-1090, CS-1092, CS-1150, CS-1177, CS-1178, CS-1185, CS-1186, CS-1197, CS-1202, CS-1209, CS-1211, CS-1236, CS-1258, CS-1259, CS-1307, CS-1354
 
@@ -336,7 +336,7 @@ CS-478, CS-617, CS-725, CS-1090, CS-1092, CS-1150, CS-1177, CS-1178, CS-1185, CS
 
 ## 14. DELIVERABLES CREATED
 
-All deliverable files in `deliverables/`:
+All ticket-spec files in `tickets/`, grouped by module (broker-dashboard/, category-review/, market-overview/, promo-management/, trade-spend/, brand/, talking-points/):
 
 | File | Description |
 |------|-------------|
@@ -362,6 +362,7 @@ All deliverable files in `deliverables/`:
 
 ### Wireframe
 - `Wireframe/index.html` — Deployed at https://caboodle-broker-dashboard.vercel.app
+- `prototypes/Daily Delight Calendar/` — Lovable prototype (SendToContacts, YearlyPlanningTable, infinite scroll)
 
 ---
 

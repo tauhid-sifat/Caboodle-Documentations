@@ -6,10 +6,10 @@
 ---
 
 ## Current Objective
-Write user stories and requirements deliverables (Markdown files in `deliverables/`) for Caboodle's Broker Dashboard features based on:
-- Jira export (`Jira (3).csv` — ~130 CS-* issues)
-- Lovable prototype (`Daily Delight Calendar/`) — Category Review yearly grid, SendToContacts, infinite scroll patterns
-- Two client meeting transcripts clarifying scope
+Write user stories and requirements deliverables (Markdown files in `tickets/`) for Caboodle's Broker Dashboard features based on:
+- Jira export (`data/Jira (3).csv` — ~130 CS-* issues)
+- Lovable prototype (`prototypes/Daily Delight Calendar/`) — Category Review yearly grid, SendToContacts, infinite scroll patterns
+- Client meeting transcripts (`meetings/`)
 - **Current focus:** Wireframe implementation in `Wireframe/index.html` and deployment to Vercel
 
 ---
@@ -37,7 +37,7 @@ Write user stories and requirements deliverables (Markdown files in `deliverable
 - Data: Hardcoded `CONTACTS` (4), `CR_DATA` (10 rows), `PC_DATA` (7 rows)
 - Persistence: `localStorage` for send log only; everything else in-memory
 
-### Ticket Updates (deliverables/)
+### Ticket Updates (tickets/)
 
 | File | What Changed |
 |------|-------------|
@@ -48,7 +48,7 @@ Write user stories and requirements deliverables (Markdown files in `deliverable
 
 ## Previous Sessions (Jul 12, 2026 — Deliverables Creation)
 
-### Deliverables Created (Markdown files in `deliverables/`)
+### Deliverables Created (Markdown files in `tickets/`)
 
 **Category Review / Broker Dashboard**
 - `CS-1316-category-review-infinite-scroll.md` — Replace pagination with infinite scroll (per meeting)
@@ -129,6 +129,6 @@ Write user stories and requirements deliverables (Markdown files in `deliverable
 ## Reference Files (Not Modified)
 
 - `ba-onboarding/` — All backend/frontend/module documentation
-- `Daily Delight Calendar/` — Lovable prototype (SendToContacts, YearlyPlanningTable, infinite scroll CSS)
-- `Jira (3).csv` — Full issue export
-- `Broker Dashboard meeting.txt` / `Broker Dashboard meeting 2 Clarification.txt` — Client meeting transcripts
+- `prototypes/Daily Delight Calendar/` — Lovable prototype (SendToContacts, YearlyPlanningTable, infinite scroll CSS)
+- `data/Jira (3).csv` — Full issue export
+- `meetings/Broker Dashboard meeting.txt` / `meetings/Broker Dashboard meeting 2 Clarification.txt` — Client meeting transcripts
