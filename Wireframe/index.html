@@ -122,56 +122,96 @@
 
 
 
-    /* pipeline layout */
-    .tasks-layout { display: flex; flex: 1; min-height: 0; overflow: hidden; }
-    .plan-sidebar { width: 380px; min-width: 380px; display: flex; flex-direction: column; border-right: 1px solid hsl(var(--border)); background: hsl(var(--card)); flex-shrink: 0; }
-    .plan-sidebar .sidebar-hdr { padding: 12px 16px; border-bottom: 1px solid hsl(var(--border)); background: hsl(var(--card)); flex-shrink: 0; }
-    .plan-sidebar .sidebar-body { flex: 1; overflow-y: auto; }
-    .plan-search { width:100%; padding:7px 12px 7px 32px; border:1px solid #e2e8f0; border-radius:6px; font-size:0.8rem; outline:none; background:transparent; }
-    .plan-search:focus { border-color:hsl(var(--primary)); }
-    .plan-search-wrap { position:relative; display:flex; align-items:center; flex:1; }
-    .plan-search-wrap svg { position:absolute; left:8px; pointer-events:none; }
-    .sidebar-actions { display:flex; gap:6px; }
-    .sidebar-actions button { display:flex; align-items:center; justify-content:center; width:32px; height:32px; border:1px solid #e2e8f0; border-radius:6px; background:transparent; cursor:pointer; transition:all 0.15s; }
-    .sidebar-actions button:hover { background:hsl(var(--muted)); }
-    .sidebar-actions button:disabled { opacity:0.4; cursor:default; }
-    .plan-table { width:100%; border-collapse:collapse; table-layout:fixed; }
-    .plan-table tr { border-bottom:1px solid hsl(var(--border)); cursor:pointer; transition:background 0.1s; }
-    .plan-table tr:hover { background:hsl(var(--calendar-hover)); }
-    .plan-table tr.active { background:#eff6ff; }
-    .plan-table td { padding:10px 16px; vertical-align:middle; }
-    .plan-table td:first-child { width:40px; text-align:center; }
-    .plan-table td:last-child { width:32px; }
-    .plan-name { font-size:0.8rem; font-weight:500; }
-    .plan-meta { font-size:0.7rem; color:hsl(var(--muted-foreground)); margin-top:2px; }
-    .sidebar-foot { padding:10px 16px; border-top:1px solid hsl(var(--border)); display:flex; align-items:center; justify-content:space-between; flex-shrink:0; font-size:0.75rem; color:hsl(var(--muted-foreground)); }
-    .sidebar-foot select { margin-left:4px; padding:2px 4px; border:1px solid #e2e8f0; border-radius:4px; font-size:0.75rem; }
-    .sidebar-foot button { display:flex; align-items:center; gap:2px; padding:4px 8px; border:1px solid #e2e8f0; border-radius:4px; background:transparent; cursor:pointer; font-size:0.7rem; }
-    .sidebar-foot button:disabled { opacity:0.3; }
-    .sidebar-foot button:hover:not(:disabled) { background:hsl(var(--muted)); }
-    .kanban-area { flex:1; display:flex; flex-direction:column; min-width:0; }
-    .kanban-hdr { display:flex; align-items:center; justify-content:space-between; padding:12px 16px; border-bottom:1px solid hsl(var(--border)); flex-shrink:0; }
-    .kanban-search-wrap { position:relative; }
-    .kanban-search { width:240px; padding:7px 12px 7px 32px; border:1px solid #e2e8f0; border-radius:6px; font-size:0.8rem; outline:none; background:transparent; }
-    .kanban-search:focus { border-color:hsl(var(--primary)); }
-    .kanban-search-wrap svg { position:absolute; left:8px; top:50%; transform:translateY(-50%); pointer-events:none; }
-    .kanban-cols { flex:1; display:flex; gap:0; min-height:0; overflow:hidden; background:#f8fafe; }
-    .kanban-col { flex:1; display:flex; flex-direction:column; min-width:0; border-right:1px solid hsl(var(--border)); min-height:0; }
-    .kanban-col:last-child { border-right:0; }
-    .kanban-hdr-col { padding:10px 12px; font-size:0.75rem; font-weight:600; display:flex; align-items:center; justify-content:center; gap:6px; border-bottom:1px solid hsl(var(--border)); background:hsl(var(--card)); flex-shrink:0; }
-    .kanban-hdr-col .cnt { border-radius:999px; padding:1px 10px; font-size:0.65rem; }
-    .kanban-hdr-col .cnt.slate { background:#e2e8f0; color:#475569; }
-    .kanban-hdr-col .cnt.blue { background:#dbeafe; color:#2563eb; }
-    .kanban-hdr-col .cnt.green { background:#dcfce7; color:#16a34a; }
-    .kanban-hdr-col .cnt.orange { background:#fed7aa; color:#ea580c; }
-    .kanban-list { flex:1; overflow-y:auto; padding:8px; display:flex; flex-direction:column; gap:4px; }
-    .k-card { background:#fff; border:1px solid #e2e8f0; border-radius:6px; padding:8px 10px; cursor:pointer; transition:all 0.15s; font-size:0.78rem; }
-    .k-card:hover { border-color:#cbd5e1; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
-    .k-card.dragging { opacity:0.5; }
-    .k-card .k-title { font-weight:500; }
-    .kanban-foot { padding:6px 12px; border-top:1px solid hsl(var(--border)); flex-shrink:0; text-align:center; }
-    .complete-toggle { background:none; border:0; font-size:0.7rem; color:hsl(var(--primary)); cursor:pointer; padding:4px 8px; border-radius:4px; transition:background 0.15s; }
-    .complete-toggle:hover { background:hsl(var(--muted)); text-decoration:underline; }
+    /* pipeline layout (Fellow-style list) */
+    .tasks-layout { display: flex; flex: 1; min-height: 0; overflow: hidden; background: #f8fafc; }
+    .plan-sidebar { width: 320px; min-width: 320px; display: flex; flex-direction: column; border-right: 1px solid #e2e8f0; background: #fff; flex-shrink: 0; }
+    .plan-sidebar .sidebar-hdr { padding: 16px 16px 12px; border-bottom: 1px solid #e2e8f0; background: #fff; flex-shrink: 0; }
+    .plan-sidebar .sidebar-hdr h1 { font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; font-weight: 700; }
+    .plan-sidebar .sidebar-hdr p { font-size: 0.72rem; color: #64748b; margin-top: 2px; }
+    .plan-sidebar .sidebar-body { flex: 1; overflow-y: auto; padding: 8px 0; }
+    .plan-sidebar .sidebar-foot { padding: 12px 16px; border-top: 1px solid #e2e8f0; flex-shrink: 0; }
+    .plan-search { width:100%; padding:8px 12px 8px 34px; border:1px solid #e2e8f0; border-radius:8px; font-size:0.8rem; outline:none; background:#fff; }
+    .plan-search:focus { border-color:#6366f1; }
+    .plan-search-wrap { position:relative; margin-bottom:12px; }
+    .plan-search-wrap svg { position:absolute; left:10px; top:50%; transform:translateY(-50%); pointer-events:none; }
+    .plan-item { display:flex; align-items:center; gap:10px; padding:10px 20px; cursor:pointer; transition:all 0.12s; border-left:3px solid transparent; }
+    .plan-item:hover { background:#f8fafc; }
+    .plan-item.active { background:#eef2ff; border-left-color:#6366f1; }
+    .plan-item .p-color { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+    .plan-item .p-info { flex:1; min-width:0; }
+    .plan-item .p-name { font-size:0.85rem; font-weight:500; }
+    .plan-item .p-meta { font-size:0.7rem; color:#94a3b8; margin-top:2px; }
+    .plan-item .p-cnt { background:#e2e8f0; color:#475569; font-size:0.65rem; font-weight:600; padding:2px 8px; border-radius:999px; flex-shrink:0; }
+    .add-plan-btn { display:flex; align-items:center; justify-content:center; gap:6px; width:100%; padding:10px; background:none; border:1px dashed #cbd5e1; border-radius:8px; color:#64748b; font-size:0.8rem; cursor:pointer; transition:all 0.15s; font-family:inherit; }
+    .add-plan-btn:hover { border-color:#6366f1; color:#6366f1; background:#eef2ff; }
+
+    .plan-main { flex:1; display:flex; flex-direction:column; min-width:0; }
+    .plan-main-hdr { padding:18px 24px 14px; border-bottom:1px solid #e2e8f0; background:#fff; flex-shrink:0; display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+    .plan-main-hdr .pmh-title { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:600; }
+    .plan-main-hdr .pmh-sub { font-size:0.75rem; color:#64748b; margin-top:2px; }
+    .plan-main-hdr .pmh-actions { display:flex; gap:8px; flex-shrink:0; }
+    .plan-main-hdr .pmh-actions button { display:flex; align-items:center; gap:6px; padding:7px 14px; border-radius:8px; font-size:0.8rem; font-weight:500; cursor:pointer; transition:all 0.15s; border:1px solid #e2e8f0; background:#fff; font-family:inherit; }
+    .plan-main-hdr .pmh-actions button:hover { background:#f8fafc; border-color:#cbd5e1; }
+    .plan-main-hdr .pmh-actions button.primary { background:#6366f1; color:#fff; border-color:#6366f1; }
+    .plan-main-hdr .pmh-actions button.primary:hover { background:#4f46e5; }
+    .plan-main-hdr .pmh-actions button:disabled { opacity:0.5; cursor:default; }
+
+    .plan-body { flex:1; overflow-y:auto; padding:20px 24px; }
+    .plan-notes { background:#fffbeb; border:1px solid #fde68a; border-radius:10px; margin-bottom:20px; overflow:hidden; }
+    .plan-notes .pn-hdr { display:flex; align-items:center; justify-content:space-between; padding:12px 16px; cursor:pointer; user-select:none; }
+    .plan-notes .pn-hdr:hover { background:rgba(251,191,36,0.08); }
+    .plan-notes .pn-hdr span { font-size:0.8rem; font-weight:600; display:flex; align-items:center; gap:6px; }
+    .plan-notes .pn-body { padding:0 16px 16px; font-size:0.85rem; line-height:1.7; color:#92400e; white-space:pre-wrap; min-height:60px; }
+
+    .task-list-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; margin-top:16px; }
+    .task-list-header .tlh-title { font-size:0.78rem; font-weight:600; color:#64748b; text-transform:uppercase; letter-spacing:0.04em; display:flex; align-items:center; gap:6px; }
+    .task-list-header .tlh-title .dot { width:8px; height:8px; border-radius:50%; display:inline-block; }
+
+    .quick-add { display:flex; align-items:center; gap:8px; margin-bottom:16px; padding:10px 14px; background:#fff; border:1px dashed #cbd5e1; border-radius:8px; }
+    .quick-add input { flex:1; border:0; outline:none; font-size:0.85rem; background:transparent; font-family:inherit; }
+    .quick-add select { padding:4px 8px; border:1px solid #e2e8f0; border-radius:6px; font-size:0.75rem; background:#fff; }
+    .quick-add button { padding:5px 12px; border:0; border-radius:6px; background:#6366f1; color:#fff; font-size:0.75rem; cursor:pointer; font-family:inherit; }
+
+    .task-item { display:flex; align-items:center; gap:12px; padding:10px 14px; background:#fff; border:1px solid #e2e8f0; border-radius:8px; margin-bottom:6px; transition:all 0.12s; }
+    .task-item:hover { border-color:#cbd5e1; box-shadow:0 1px 4px rgba(0,0,0,0.04); }
+    .task-item.done { opacity:0.55; }
+    .task-item .t-check { width:18px; height:18px; border-radius:50%; border:2px solid #cbd5e1; flex-shrink:0; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.15s; background:#fff; padding:0; }
+    .task-item .t-check:hover { border-color:#6366f1; }
+    .task-item .t-check.checked { background:#6366f1; border-color:#6366f1; }
+    .task-item .t-check svg { display:none; width:10px; height:10px; stroke:#fff; stroke-width:3; fill:none; }
+    .task-item .t-check.checked svg { display:block; }
+    .task-item .t-body { flex:1; min-width:0; cursor:pointer; }
+    .task-item .t-title { font-size:0.85rem; font-weight:500; }
+    .task-item .t-title.done { text-decoration:line-through; color:#94a3b8; }
+    .task-item .t-meta { display:flex; align-items:center; gap:8px; margin-top:4px; flex-wrap:wrap; }
+    .t-meta .assignee { display:flex; align-items:center; gap:4px; font-size:0.7rem; color:#64748b; }
+    .t-meta .assignee .avatar { width:20px; height:20px; border-radius:50%; background:#e2e8f0; display:flex; align-items:center; justify-content:center; font-size:0.6rem; font-weight:600; color:#475569; flex-shrink:0; }
+    .t-meta .due { font-size:0.7rem; color:#64748b; display:flex; align-items:center; gap:3px; }
+    .t-meta .due.overdue { color:#ef4444; font-weight:600; }
+    .t-meta .priority { font-size:0.6rem; font-weight:600; padding:1px 8px; border-radius:999px; text-transform:capitalize; }
+    .priority.high { background:#fef2f2; color:#dc2626; }
+    .priority.med { background:#fffbeb; color:#d97706; }
+    .priority.low { background:#f0fdf4; color:#16a34a; }
+    .t-meta .status-badge { font-size:0.65rem; font-weight:500; padding:2px 8px; border-radius:999px; }
+    .status-badge.todo { background:#f1f5f9; color:#475569; }
+    .status-badge.in_progress { background:#dbeafe; color:#2563eb; }
+    .status-badge.done { background:#dcfce7; color:#16a34a; }
+    .file-indicator { display:inline-flex; align-items:center; gap:3px; font-size:0.65rem; color:#64748b; }
+    .file-indicator svg { flex-shrink:0; }
+    .task-item .t-expand { color:#94a3b8; cursor:pointer; padding:4px; border-radius:4px; transition:all 0.15s; flex-shrink:0; background:none; border:0; display:flex; }
+    .task-item .t-expand:hover { background:#f1f5f9; color:#475569; }
+    .task-notes { display:none; margin:0 14px 8px 44px; padding:10px 14px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; font-size:0.8rem; line-height:1.6; color:#475569; white-space:pre-wrap; }
+    .task-notes.open { display:block; }
+    .task-notes .tn-empty { color:#94a3b8; font-style:italic; }
+    .empty-state { text-align:center; padding:40px 20px; color:#94a3b8; }
+    .empty-state svg { width:48px; height:48px; color:#cbd5e1; margin-bottom:12px; }
+    .empty-state h3 { font-size:1rem; font-weight:600; color:#64748b; margin-bottom:4px; }
+    .empty-state p { font-size:0.85rem; }
+    .modal-input { width:100%; padding:9px 12px; border:1px solid #e2e8f0; border-radius:8px; font-size:0.85rem; font-family:inherit; outline:none; }
+    .modal-input:focus { border-color:#6366f1; }
+    .modal-label { font-size:0.75rem; font-weight:600; display:block; margin-bottom:4px; color:#475569; }
+    .modal-row { margin-bottom:12px; }
+    .modal-row:last-child { margin-bottom:0; }
 
     /* brand report */
     .br-kpi-row { display:flex; gap:12px; margin-bottom:16px; flex-wrap:nowrap; overflow-x:auto; padding-bottom:4px; }
@@ -513,7 +553,7 @@
       </div>
     </div>
 
-    <!-- ===== VIEW: TASKS / PIPELINE ===== -->
+    <!-- ===== VIEW: TASKS / PIPELINE (Fellow-style) ===== -->
     <div id="view-tasks" class="view">
       <div class="cal-top">
         <div class="cal-top-left"><h1 class="cal-title">Pipeline</h1></div>
@@ -525,47 +565,43 @@
         <!-- LEFT: Plans sidebar -->
         <div class="plan-sidebar">
           <div class="sidebar-hdr">
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-              <div class="plan-search-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                <input class="plan-search" id="planSearchInput" placeholder="Search plans by name" oninput="renderPlanList()">
-              </div>
-              <div class="sidebar-actions">
-                <button onclick="deleteSelectedPlans()" id="deletePlanBtn" disabled><svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" width="14" height="14"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
-                <button onclick="openAddPlanModal()" style="background:#16a34a;color:#fff;border-color:#16a34a;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
-              </div>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;font-size:0.75rem;">
-              <input type="checkbox" id="planSelectAll" onchange="toggleSelectAllPlans()" style="width:15px;height:15px;cursor:pointer;">
-              <label for="planSelectAll" style="cursor:pointer;color:hsl(var(--muted-foreground));user-select:none;">Select All</label>
-            </div>
+            <h1>Plans</h1>
+            <p>Plans organize your tasks</p>
           </div>
-          <div class="sidebar-body" id="planListBody"></div>
+          <div class="sidebar-body" id="planListBody">
+            <!-- Rendered by JS -->
+          </div>
           <div class="sidebar-foot">
-            <span id="planPaginationInfo">1 of 1</span>
-            <div style="display:flex;align-items:center;gap:4px;">
-              <span>Items per page:</span>
-              <select style="padding:2px 4px;border:1px solid #e2e8f0;border-radius:4px;font-size:0.75rem;">
-                <option>10</option>
-                <option>25</option>
-                <option>50</option>
-              </select>
-            </div>
+            <button class="add-plan-btn" onclick="openAddPlan()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              New Plan
+            </button>
           </div>
         </div>
-        <!-- RIGHT: Kanban -->
-        <div class="kanban-area" id="kanbanArea">
-          <div class="kanban-hdr">
-            <button class="btn btn-sm" style="background:#16a34a;color:#fff;border:0;" onclick="openAddTaskModal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Task</button>
-            <div class="kanban-search-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-              <input class="kanban-search" placeholder="Search task" oninput="renderKanban()">
+        <!-- RIGHT: Plan content -->
+        <div class="plan-main">
+          <div class="plan-main-hdr">
+            <div>
+              <div class="pmh-title" id="planTitle">Select a plan</div>
+              <div class="pmh-sub" id="planSub">Choose a plan from the sidebar to view its tasks</div>
+            </div>
+            <div class="pmh-actions">
+              <button onclick="openAddTask()" class="primary" id="addTaskBtn" disabled>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                Add Task
+              </button>
+              <button onclick="openEditPlan()" id="editPlanBtn" disabled>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                Edit
+              </button>
             </div>
           </div>
-          <div class="kanban-cols" id="kanbanCols">
-            <div class="kanban-col"><div class="kanban-hdr-col">To Do <span class="cnt slate">0</span></div><div class="kanban-list" data-col="todo" ondrop="dropTask(event)" ondragover="allowDrop(event)"></div></div>
-            <div class="kanban-col"><div class="kanban-hdr-col">In Progress <span class="cnt blue">0</span></div><div class="kanban-list" data-col="in_progress" ondrop="dropTask(event)" ondragover="allowDrop(event)"></div></div>
-            <div class="kanban-col"><div class="kanban-hdr-col">Complete <span class="cnt green">0</span></div><div class="kanban-list" data-col="complete" ondrop="dropTask(event)" ondragover="allowDrop(event)"></div><div class="kanban-foot"><button class="complete-toggle" id="completeToggle" onclick="toggleCompleted()">Show all completed (0)</button></div></div>
+          <div class="plan-body" id="planContent">
+            <div class="empty-state">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg>
+              <h3>No plan selected</h3>
+              <p>Pick a plan from the sidebar or create a new one</p>
+            </div>
           </div>
         </div>
       </div>
@@ -832,19 +868,77 @@
     </div>
   </div>
 
-  <!-- MODAL: Task Detail -->
-  <div id="taskDetailModal" class="modal-overlay">
-    <div class="modal-box" style="max-width:420px;">
-      <div class="modal-hdr"><h3>Task Details</h3><button class="modal-close" onclick="closeModal('taskDetailModal')">✕</button></div>
+  <!-- MODAL: Add/Edit Task -->
+  <div id="taskModal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-hdr"><h3 id="taskModalTitle">Add Task</h3><button class="modal-close" onclick="closeModal('taskModal')">✕</button></div>
       <div class="modal-body">
-        <div id="tdTitle" style="font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:600;margin-bottom:8px;"></div>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px;">
-          <span style="font-size:0.75rem;color:hsl(var(--muted-foreground));display:flex;align-items:center;gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg> Plan: <span id="tdPlan"></span></span>
-          <span style="font-size:0.75rem;color:hsl(var(--muted-foreground));display:flex;align-items:center;gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg> Status: <span id="tdStatus"></span></span>
+        <div class="modal-row">
+          <label class="modal-label">Title</label>
+          <input class="modal-input" id="taskTitleInput" placeholder="e.g., Follow up with Nugget buyer">
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div class="modal-row">
+            <label class="modal-label">Status</label>
+            <select class="modal-input" id="taskStatusInput">
+              <option value="todo">To Do</option>
+              <option value="in_progress">In Progress</option>
+              <option value="done">Done</option>
+            </select>
+          </div>
+          <div class="modal-row">
+            <label class="modal-label">Priority</label>
+            <select class="modal-input" id="taskPriorityInput">
+              <option value="low">Low</option>
+              <option value="med" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div class="modal-row">
+            <label class="modal-label">Assignee</label>
+            <input class="modal-input" id="taskAssigneeInput" placeholder="Name">
+          </div>
+          <div class="modal-row">
+            <label class="modal-label">Due Date</label>
+            <input class="modal-input" id="taskDueInput" type="date">
+          </div>
+        </div>
+        <div class="modal-row">
+          <label class="modal-label">Notes</label>
+          <textarea class="modal-input" id="taskNotesInput" rows="2" placeholder="Add notes..." style="resize:vertical;font-size:0.85rem;line-height:1.5;"></textarea>
+        </div>
+        <div class="modal-row">
+          <label class="modal-label">Attachments</label>
+          <input type="file" id="taskFileInput" multiple onchange="onTaskFileChange()" style="font-size:0.8rem;width:100%;">
+          <div id="taskFilePreview" style="margin-top:6px;display:flex;flex-wrap:wrap;gap:4px;"></div>
         </div>
       </div>
       <div class="modal-foot">
-        <button class="btn btn-sm btn-default" onclick="closeModal('taskDetailModal')">Close</button>
+        <button class="btn btn-sm" onclick="closeModal('taskModal')">Cancel</button>
+        <button class="btn btn-sm btn-default" id="taskModalSave" onclick="saveTask()">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Add/Edit Plan -->
+  <div id="planModal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-hdr"><h3 id="planModalTitle">New Plan</h3><button class="modal-close" onclick="closeModal('planModal')">✕</button></div>
+      <div class="modal-body">
+        <div class="modal-row">
+          <label class="modal-label">Plan Name</label>
+          <input class="modal-input" id="planNameInput" placeholder="e.g., Q3 Category Reviews">
+        </div>
+        <div class="modal-row">
+          <label class="modal-label">Description</label>
+          <textarea class="modal-input" id="planDescInput" rows="2" placeholder="Optional description..." style="resize:vertical;font-size:0.85rem;line-height:1.5;"></textarea>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-sm" onclick="closeModal('planModal')">Cancel</button>
+        <button class="btn btn-sm btn-default" id="planModalSave" onclick="savePlan()">Create</button>
       </div>
     </div>
   </div>
@@ -864,184 +958,323 @@
     let sendLog = [];
     let assignCellKey = null;
 
-    // ===== PIPELINE / PLANS & TASKS =====
+    // ===== PIPELINE / PLANS & TASKS (Fellow-style) =====
     let planIdCounter = 0;
     let taskIdCounter = 0;
     let selectedPlanId = null;
-    let selectedPlanIds = [];
+    let editingTaskId = null;
+    let editingPlanId = null;
+
+    const PLAN_COLORS = ['#6366f1','#10b981','#f59e0b','#ef4444','#8b5cf6','#ec4899','#06b6d4','#14b8a6'];
 
     const PLANS = [
-      { id: ++planIdCounter, name:'Brand Internal Notes', createdBy:'Broker User' },
-      { id: ++planIdCounter, name:'Eastern Region', createdBy:'Caboodle Admin' },
-      { id: ++planIdCounter, name:'New Plan', createdBy:'Caboodle Admin' },
-      { id: ++planIdCounter, name:'Nor Cal Region', createdBy:'Caboodle Admin' },
-      { id: ++planIdCounter, name:'South Region', createdBy:'Caboodle Admin' },
+      { id: ++planIdCounter, name:'Q3 Category Reviews', desc:'All Q3 review deadlines across banners', color:PLAN_COLORS[0], notes:'Tracking all Q3 category reviews. Key deadlines: Nugget Specialty Asian review (Jul 25), Lucky new item forms (Jul 18).' },
+      { id: ++planIdCounter, name:'UNFI Setup & Maintenance', desc:'New item forms and setup with UNFI', color:PLAN_COLORS[1], notes:'UNFI new item forms and warehouse assignments for 5 new SKUs.' },
+      { id: ++planIdCounter, name:'Broker Meetings & Follow-ups', desc:'Meeting notes and action items', color:PLAN_COLORS[2], notes:'Weekly buyer meetings. Track proposals, samples, and follow-ups.' },
+      { id: ++planIdCounter, name:'KeHE EDLP Planning', desc:'Everyday low price promotions', color:PLAN_COLORS[3], notes:'EDLP renewal cycles. Review lift data before renewing pricing.' },
+      { id: ++planIdCounter, name:'Distributor APL Updates', desc:'Authorized price list management', color:PLAN_COLORS[4], notes:'Monthly APL uploads for KeHE, UNFI, and SPINS.' },
+      { id: ++planIdCounter, name:'Marketing & Collateral', desc:'POS materials, digital assets, sell sheets', color:PLAN_COLORS[5], notes:'Sell sheets, digital shelf analytics, and store POS materials.' },
     ];
 
     let tasks = [
-      { id: ++taskIdCounter, planId:1, title:'dasdfadf', status:'todo' },
-      { id: ++taskIdCounter, planId:1, title:'sajdhbajsdhc', status:'todo' },
-      { id: ++taskIdCounter, planId:1, title:'Submit Plan to Jimbos', status:'todo' },
-      { id: ++taskIdCounter, planId:1, title:'Check Promo at Jimbos', status:'todo' },
-      { id: ++taskIdCounter, planId:1, title:'Prep Deck for Nugget Review 8-25-25', status:'todo' },
-      { id: ++taskIdCounter, planId:1, title:'Set up Rainforest 2025 Plan', status:'in_progress' },
-      { id: ++taskIdCounter, planId:1, title:'Check MOMs Promotion', status:'in_progress' },
-      { id: ++taskIdCounter, planId:1, title:'Fancy Food Show Planning', status:'in_progress' },
-      { id: ++taskIdCounter, planId:1, title:'NCG Show Planning', status:'complete' },
-      { id: ++taskIdCounter, planId:1, title:'KeHE EDLP Jan-Mar', status:'complete' },
-      { id: ++taskIdCounter, planId:1, title:'UNFI Spring Reset', status:'complete' },
-      { id: ++taskIdCounter, planId:1, title:'Sprouts Organic Launch', status:'complete' },
-      { id: ++taskIdCounter, planId:1, title:'Whole Foods Frozen Review', status:'complete' },
-      { id: ++taskIdCounter, planId:1, title:'Lucky\'s Q1 Promo', status:'complete' },
-      { id: ++taskIdCounter, planId:1, title:'Gelson\'s Pasta Reset', status:'complete' },
-      { id: ++taskIdCounter, planId:1, title:'Raley\'s Asian Review', status:'complete' },
-      { id: ++taskIdCounter, planId:1, title:'Nugget Market Reset', status:'complete' },
-      { id: ++taskIdCounter, planId:2, title:'East Coast Review', status:'todo' },
+      // Plan 1: Q3 Category Reviews
+      { id: ++taskIdCounter, planId:1, title:'Prep Nugget Specialty Asian review', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-25', notes:'Need to gather all SKU data and velocity reports from SPINS. Include category trends and competitive landscape.', files:[{name:'Nugget_Review_Template.xlsx',size:'245 KB'},{name:'SPINS_Category_Data_Q2.pdf',size:'1.2 MB'}] },
+      { id: ++taskIdCounter, planId:1, title:'Submit new item forms to Lucky', status:'todo', priority:'high', assignee:'You', due:'2026-07-18', notes:'5 new SKUs for pasta sauce reset. Forms need: UPC, MSRP, case pack, Sage logo, ingredient statements.', files:[] },
+      { id: ++taskIdCounter, planId:1, title:'Raleys reset paperwork — pushed to Sep', status:'todo', priority:'med', assignee:'Kate', due:'2026-08-01', notes:'Reset pushed from July to September per buyer request. Keep forms ready.', files:[] },
+      { id: ++taskIdCounter, planId:1, title:'Gelsons Mac & Cheese review deck', status:'done', priority:'med', assignee:'You', due:'2026-06-30', notes:'Completed and submitted. Waiting for buyer feedback.', files:[{name:'Gelsons_Review_Deck.pptx',size:'4.7 MB'}] },
+      { id: ++taskIdCounter, planId:1, title:'Whole Foods frozen dessert reset', status:'todo', priority:'low', assignee:'', due:'2026-09-15', notes:'Q4 reset. No rush but need to start gathering velocity data.', files:[] },
+      { id: ++taskIdCounter, planId:1, title:'Sprouts organic reset paperwork', status:'todo', priority:'med', assignee:'John', due:'2026-08-20', notes:'New set expected Sep. Organic certifications needed.', files:[] },
+      { id: ++taskIdCounter, planId:1, title:'Moms Market reset completed', status:'done', priority:'low', assignee:'Kate', due:'2026-06-10', notes:'All done. Reset went live June 8.', files:[] },
+
+      // Plan 2: UNFI
+      { id: ++taskIdCounter, planId:2, title:'Submit UNFI new item forms', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-20', notes:'5 new SKUs pending. Need spec sheets, ingredient decks, and margin analysis from marketing.', files:[{name:'UNFI_New_Item_Form.xlsx',size:'890 KB'},{name:'Product_Specs_v3.pdf',size:'3.4 MB'}] },
+      { id: ++taskIdCounter, planId:2, title:'Confirm UNFI warehouse assignments', status:'todo', priority:'med', assignee:'John', due:'2026-07-28', notes:'Need to verify which warehouses for new SKUs. Sac, Atlanta, Harrisburg likely.', files:[] },
+      { id: ++taskIdCounter, planId:2, title:'Resolve UNFI invoice discrepancy', status:'todo', priority:'high', assignee:'You', due:'2026-07-15', notes:'Credit memo being processed for Q2 chargebacks. $12,483 disputed. Attach supporting docs.', files:[{name:'Invoice_Dispute_Q2.pdf',size:'680 KB'},{name:'Credit_Memo_Request.xlsx',size:'120 KB'}] },
+      { id: ++taskIdCounter, planId:2, title:'UNFI Q3 promotional calendar', status:'done', priority:'med', assignee:'Kate', due:'2026-06-28', notes:'Submitted for Jul-Sep. TPR slots confirmed for Aug and Sep.', files:[] },
+      { id: ++taskIdCounter, planId:2, title:'Update UNFI pricing sheet', status:'todo', priority:'med', assignee:'', due:'2026-08-05', notes:'New MSRP effective Sep 1. Need to submit updated wholesale pricing.', files:[] },
+
+      // Plan 3: Broker Meetings
+      { id: ++taskIdCounter, planId:3, title:'F/U with Gelsons buyer — Colin', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-22', notes:'Colin interested in new Mac & Cheese SKUs. Promised samples by July 15. Send pricing.', files:[{name:'Gelsons_Proposal.pdf',size:'1.1 MB'}] },
+      { id: ++taskIdCounter, planId:3, title:'Schedule Nugget buyer meeting', status:'todo', priority:'med', assignee:'You', due:'2026-07-30', notes:'Need to present Asian category review. Buyer prefers Tues/Wed mornings.', files:[] },
+      { id: ++taskIdCounter, planId:3, title:'Prep broker review deck (Q3)', status:'todo', priority:'med', assignee:'You', due:'2026-08-05', notes:'Include velocity, promo recaps, new item pipeline, and category trends.', files:[] },
+      { id: ++taskIdCounter, planId:3, title:'Jimbos buyer meeting done', status:'done', priority:'med', assignee:'You', due:'2026-06-22', notes:'Good meeting. Approved 2 new items for fall reset.', files:[{name:'Jimbos_Meeting_Notes.docx',size:'85 KB'}] },
+      { id: ++taskIdCounter, planId:3, title:'Lazy Acres coffee category review', status:'todo', priority:'high', assignee:'John', due:'2026-08-12', notes:'New coffee program. Need samples and pitch deck ready by Aug 1.', files:[] },
+
+      // Plan 4: KeHE EDLP
+      { id: ++taskIdCounter, planId:4, title:'KeHE Jan-Mar EDLP pricing', status:'done', priority:'med', assignee:'Kate', due:'2026-06-15', notes:'Pricing submitted and approved for all 12 SKUs.', files:[{name:'KeHE_EDLP_Q1_Approved.pdf',size:'450 KB'}] },
+      { id: ++taskIdCounter, planId:4, title:'KeHE Apr-Jun EDLP renewal', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-28', notes:'Need to review lift data from Q1 before renewing. Requesting 2% price increase.', files:[{name:'Q1_Lift_Analysis.xlsx',size:'2.3 MB'}] },
+      { id: ++taskIdCounter, planId:4, title:'KeHE slotting fee negotiation', status:'todo', priority:'low', assignee:'', due:'2026-08-10', notes:'Negotiating slotting for 3 new items. Target: $500/sku.', files:[] },
+      { id: ++taskIdCounter, planId:4, title:'KeHE display allowance Q3', status:'todo', priority:'med', assignee:'Kate', due:'2026-07-15', notes:'Q3 display program. Endcap opportunities at Sprouts and Natural Grocers.', files:[] },
+
+      // Plan 5: Distributor APL
+      { id: ++taskIdCounter, planId:5, title:'Upload KeHE Oct APL update', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-25', notes:'New pricing effective Aug 1. Check for UPC changes on 3 items.', files:[{name:'KeHE_APL_Oct.xlsx',size:'1.8 MB'}] },
+      { id: ++taskIdCounter, planId:5, title:'UNFI APL — verify new item pricing', status:'todo', priority:'high', assignee:'John', due:'2026-07-20', notes:'5 new items need wholesale cost verified before upload.', files:[] },
+      { id: ++taskIdCounter, planId:5, title:'SPINS APL reconciliation', status:'todo', priority:'med', assignee:'', due:'2026-08-15', notes:'Compare uploaded APL vs SPINS reported pricing. Flag discrepancies.', files:[] },
+      { id: ++taskIdCounter, planId:5, title:'KeHE APL upload complete', status:'done', priority:'med', assignee:'You', due:'2026-06-20', notes:'Jun APL uploaded successfully. 45 SKUs confirmed.', files:[] },
+
+      // Plan 6: Marketing
+      { id: ++taskIdCounter, planId:6, title:'New product sell sheets', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-30', notes:'Need updated sell sheets for 8 new items. Include nutrition claims, certifications, and pricing.', files:[{name:'Sell_Sheet_Template_v2.indd',size:'5.6 MB'}] },
+      { id: ++taskIdCounter, planId:6, title:'Digital shelf analytics review', status:'todo', priority:'med', assignee:'', due:'2026-08-10', notes:'Review content compliance across Amazon, Thrive, and Vitacost.', files:[] },
+      { id: ++taskIdCounter, planId:6, title:'POS materials — Nugget endcap', status:'todo', priority:'low', assignee:'Kate', due:'2026-08-01', notes:'Design shelf talkers and wobblers for Nugget Asian endcap display.', files:[] },
+      { id: ++taskIdCounter, planId:6, title:'Brand style guide update done', status:'done', priority:'low', assignee:'You', due:'2026-06-05', notes:'Updated for 2026. New logo assets and packaging guidelines.', files:[{name:'Brand_Style_Guide_2026.pdf',size:'8.2 MB'}] },
     ];
 
-    const COL_KEYS = ['todo','in_progress','complete'];
-    const COL_LABELS = { todo:'To Do', in_progress:'In Progress', complete:'Complete' };
-    const COL_CNT_CLS = { todo:'slate', in_progress:'blue', complete:'green' };
-
+    // ===== PLANS SIDEBAR =====
     function renderPlanList() {
-      const q = (document.getElementById('planSearchInput').value || '').toLowerCase();
-      const filtered = PLANS.filter(p => p.name.toLowerCase().includes(q));
       const body = document.getElementById('planListBody');
-      let html = '<table class="plan-table"><tbody>';
+      const q = (document.getElementById('planSearch')?.value || '').toLowerCase();
+      const filtered = PLANS.filter(p => p.name.toLowerCase().includes(q));
+      let html = '<div class="plan-search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input class="plan-search" id="planSearch" placeholder="Search plans" oninput="renderPlanList()"></div>';
       filtered.forEach(p => {
-        const taskCount = tasks.filter(t => t.planId === p.id).length;
+        const open = tasks.filter(t => t.planId === p.id && t.status !== 'done').length;
+        const done = tasks.filter(t => t.planId === p.id && t.status === 'done').length;
         const active = p.id === selectedPlanId ? ' active' : '';
-        const checked = selectedPlanIds.includes(p.id) ? ' checked' : '';
-        html += '<tr class="plan-row' + active + '" onclick="selectPlan(' + p.id + ')">' +
-          '<td onclick="event.stopPropagation()"><input type="checkbox" onchange="togglePlanSelect(' + p.id + ')"' + checked + ' style="width:15px;height:15px;cursor:pointer;"></td>' +
-          '<td><div class="plan-name">' + p.name + '</div><div class="plan-meta">Task Count: ' + taskCount + ' &middot; CreatedBy: ' + p.createdBy + '</div></td>' +
-          '<td><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="color:#94a3b8;cursor:pointer;"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></td>' +
-          '</tr>';
+        html += '<div class="plan-item' + active + '" onclick="selectPlan(' + p.id + ')">' +
+          '<div class="p-color" style="background:' + p.color + '"></div>' +
+          '<div class="p-info"><div class="p-name">' + p.name + '</div><div class="p-meta">' + open + ' open &middot; ' + done + ' done</div></div>' +
+          '<span class="p-cnt">' + (open + done) + '</span></div>';
       });
-      html += '</tbody></table>';
       body.innerHTML = html;
-      document.getElementById('planPaginationInfo').textContent = '1 of 1';
-      document.getElementById('planSelectAll').checked = selectedPlanIds.length === PLANS.length && PLANS.length > 0;
     }
 
     function selectPlan(id) {
       selectedPlanId = id;
       renderPlanList();
-      renderKanban();
+      renderPlanContent();
+      document.getElementById('addTaskBtn').disabled = false;
+      document.getElementById('editPlanBtn').disabled = false;
     }
 
-    function togglePlanSelect(id) {
-      const idx = selectedPlanIds.indexOf(id);
-      if (idx >= 0) selectedPlanIds.splice(idx, 1);
-      else selectedPlanIds.push(id);
-      renderPlanList();
-      document.getElementById('deletePlanBtn').disabled = selectedPlanIds.length === 0;
+    // ===== PLAN CONTENT =====
+    function renderPlanContent() {
+      const p = PLANS.find(x => x.id === selectedPlanId);
+      const container = document.getElementById('planContent');
+      if (!p) {
+        container.innerHTML = '<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg><h3>No plan selected</h3><p>Pick a plan from the sidebar or create a new one</p></div>';
+        document.getElementById('planTitle').textContent = 'Select a plan';
+        document.getElementById('planSub').textContent = 'Choose a plan from the sidebar to view its tasks';
+        return;
+      }
+      document.getElementById('planTitle').textContent = p.name;
+      document.getElementById('planSub').textContent = p.desc || 'No description';
+
+      const planTasks = tasks.filter(t => t.planId === p.id);
+      const todos = planTasks.filter(t => t.status === 'todo');
+      const inProgress = planTasks.filter(t => t.status === 'in_progress');
+      const done = planTasks.filter(t => t.status === 'done');
+
+      let html = '';
+
+      // Plan Notes section
+      html += '<div class="plan-notes">' +
+        '<div class="pn-hdr" onclick="togglePlanNotes(this)">' +
+        '<span><svg viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" width="14" height="14" class="pn-chevron" style="transition:transform 0.15s;"><path d="M12 5v14M5 12h14"></path></svg> Plan Notes</span>' +
+        '<span style="font-size:0.7rem;color:#d97706;cursor:pointer;" onclick="event.stopPropagation();openPlanNotes()">Edit</span></div>' +
+        '<div class="pn-body open" id="planNotesBody">' + (p.notes || 'No notes yet. Click "Edit" to add plan-level notes.') + '</div></div>';
+
+      // Quick-add bar
+      html += '<div class="quick-add">' +
+        '<input id="quickTaskInput" placeholder="Quick add task — press Enter" onkeydown="if(event.key===\'Enter\')quickAddTask()">' +
+        '<select id="quickPriority"><option value="high">High</option><option value="med" selected>Med</option><option value="low">Low</option></select>' +
+        '<button onclick="quickAddTask()">Add</button></div>';
+
+      // Sections
+      if (!planTasks.length) {
+        html += '<div class="empty-state" style="padding:20px;"><h3>No tasks yet</h3><p>Type above and press Enter to add your first task</p></div>';
+      } else {
+        if (todos.length) html += renderTaskSection('To Do', 'todo', todos, '#64748b');
+        if (inProgress.length) html += renderTaskSection('In Progress', 'in_progress', inProgress, '#2563eb');
+        if (done.length) html += renderTaskSection('Done (' + done.length + ')', 'done', done, '#16a34a');
+      }
+
+      container.innerHTML = html;
     }
 
-    function toggleSelectAllPlans() {
-      const checked = document.getElementById('planSelectAll').checked;
-      selectedPlanIds = checked ? PLANS.map(p => p.id) : [];
-      renderPlanList();
-      document.getElementById('deletePlanBtn').disabled = selectedPlanIds.length === 0;
+    function togglePlanNotes(hdr) {
+      const body = hdr.nextElementSibling;
+      body.classList.toggle('open');
+      const chev = hdr.querySelector('.pn-chevron');
+      if (chev) chev.style.transform = body.classList.contains('open') ? 'rotate(45deg)' : 'rotate(0)';
     }
 
-    function deleteSelectedPlans() {
-      if (!selectedPlanIds.length) return;
-      selectedPlanIds.forEach(id => {
-        const idx = PLANS.findIndex(p => p.id === id);
-        if (idx >= 0) PLANS.splice(idx, 1);
-        tasks = tasks.filter(t => t.planId !== id);
-      });
-      if (selectedPlanId && !PLANS.find(p => p.id === selectedPlanId)) selectedPlanId = PLANS.length ? PLANS[0].id : null;
-      selectedPlanIds = [];
-      renderPlanList();
-      renderKanban();
-      document.getElementById('deletePlanBtn').disabled = true;
-    }
-
-    function openAddPlanModal() {
-      const name = prompt('Enter plan name:');
-      if (name && name.trim()) {
-        PLANS.push({ id: ++planIdCounter, name: name.trim(), createdBy: 'Broker User' });
-        renderPlanList();
+    function openPlanNotes() {
+      const p = PLANS.find(x => x.id === selectedPlanId);
+      if (!p) return;
+      const text = prompt('Edit plan notes:', p.notes || '');
+      if (text !== null) {
+        p.notes = text;
+        const body = document.getElementById('planNotesBody');
+        if (body) body.textContent = text || 'No notes yet. Click "Edit" to add plan-level notes.';
       }
     }
 
-    let completedShowAll = false;
-
-    function renderKanban() {
-      const search = (document.querySelector('.kanban-search')?.value || '').toLowerCase();
-      const kanbanCols = document.getElementById('kanbanCols');
-      const planTasks = selectedPlanId ? tasks.filter(t => t.planId === selectedPlanId && t.title.toLowerCase().includes(search)) : [];
-      COL_KEYS.forEach((key, ci) => {
-        const items = planTasks.filter(t => t.status === key);
-        const col = kanbanCols.children[ci];
-        col.querySelector('.cnt').textContent = items.length;
-
-        if (key === 'complete') {
-          const totalComplete = items.length;
-          const showItems = completedShowAll ? items : items.slice(-5);
-          const toggle = document.getElementById('completeToggle');
-          toggle.textContent = completedShowAll ? 'Show recent (5)' : 'Show all completed (' + totalComplete + ')';
-          toggle.style.display = totalComplete > 5 ? '' : 'none';
-          const list = col.querySelector('.kanban-list');
-          list.innerHTML = showItems.map(t =>
-            '<div class="k-card" draggable="true" ondragstart="dragTask(event,' + t.id + ')" onclick="openTaskDetail(' + t.id + ')" style="opacity:0.7;"><div class="k-title" style="text-decoration:line-through;">' + t.title + '</div></div>'
-          ).join('');
-          return;
-        }
-
-        const list = col.querySelector('.kanban-list');
-        list.innerHTML = items.map(t =>
-          '<div class="k-card" draggable="true" ondragstart="dragTask(event,' + t.id + ')" onclick="openTaskDetail(' + t.id + ')"><div class="k-title">' + t.title + '</div></div>'
-        ).join('');
+    function renderTaskSection(label, status, items, color) {
+      let html = '<div class="task-list-header"><span class="tlh-title"><span class="dot" style="background:' + color + ';"></span>' + label + ' (' + items.length + ')</span></div>';
+      items.forEach(t => {
+        const initials = t.assignee ? t.assignee.split(' ').map(w => w[0]).join('').substring(0,2).toUpperCase() : '';
+        const dueObj = t.due ? new Date(t.due + 'T00:00:00') : null;
+        const now = new Date();
+        const isOverdue = dueObj && dueObj < now && t.status !== 'done';
+        const dueText = dueObj ? dueObj.toLocaleDateString('en-US',{month:'short',day:'numeric'}) : '';
+        const isDone = t.status === 'done';
+        const files = t.files && t.files.length ? '<span class="file-indicator" title="' + t.files.map(f => f.name + ' (' + f.size + ')').join(' | ') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>' + t.files.length + '</span>' : '';
+        html += '<div class="task-item' + (isDone ? ' done' : '') + '">' +
+          '<div class="t-check' + (isDone ? ' checked' : '') + '" onclick="toggleTaskDone(' + t.id + ')"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>' +
+          '<div class="t-body" onclick="editTask(' + t.id + ')">' +
+          '<div class="t-title' + (isDone ? ' done' : '') + '">' + t.title + '</div>' +
+          '<div class="t-meta">' +
+          (t.assignee ? '<span class="assignee"><span class="avatar">' + initials + '</span>' + t.assignee + '</span>' : '') +
+          (t.due ? '<span class="due' + (isOverdue ? ' overdue' : '') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>' + dueText + '</span>' : '') +
+          (!isDone ? '<span class="priority ' + t.priority + '">' + t.priority + '</span>' : '') +
+          (!isDone ? '<span class="status-badge ' + t.status + '">' + (t.status === 'in_progress' ? 'In Progress' : 'To Do') + '</span>' : '') +
+          files +
+          '</div></div>' +
+          '<button class="t-expand" onclick="event.stopPropagation();toggleTaskNotes(' + t.id + ')" title="Toggle notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"></polyline></svg></button>' +
+          '</div>' +
+          '<div class="task-notes" id="taskNotes-' + t.id + '">' + (t.notes || '<span class="tn-empty">No notes</span>') + '</div>';
       });
+      return html;
     }
 
-    function toggleCompleted() {
-      completedShowAll = !completedShowAll;
-      renderKanban();
+    function toggleTaskNotes(id) {
+      const el = document.getElementById('taskNotes-' + id);
+      if (el) el.classList.toggle('open');
     }
 
-    // Drag-and-drop
-    let dragTaskId = null;
-    function dragTask(e, id) {
-      dragTaskId = id;
-      e.dataTransfer.effectAllowed = 'move';
-      setTimeout(() => e.target.classList.add('dragging'), 0);
-    }
-    function allowDrop(e) {
-      e.preventDefault();
-    }
-    function dropTask(e) {
-      e.preventDefault();
-      const col = e.currentTarget.dataset.col;
-      if (!col || !dragTaskId) return;
-      const t = tasks.find(x => x.id === dragTaskId);
-      if (t) { t.status = col; renderKanban(); }
-      document.querySelectorAll('.k-card.dragging').forEach(el => el.classList.remove('dragging'));
-      dragTaskId = null;
-    }
-
-    // Task detail
-    function openTaskDetail(id) {
+    function toggleTaskDone(id) {
       const t = tasks.find(x => x.id === id);
       if (!t) return;
-      const plan = PLANS.find(p => p.id === t.planId);
-      document.getElementById('tdTitle').textContent = t.title;
-      document.getElementById('tdPlan').textContent = plan ? plan.name : '—';
-      document.getElementById('tdStatus').textContent = COL_LABELS[t.status] || t.status;
-      showModal('taskDetailModal');
+      t.status = t.status === 'done' ? 'todo' : 'done';
+      renderPlanContent();
+      renderPlanList();
     }
 
-    // Add Task (simple, no plan assignment — adds to selected plan)
-    function openAddTaskModal() {
+    // ===== TASK MODAL =====
+    function openAddTask() {
       if (!selectedPlanId) { alert('Select a plan first.'); return; }
-      const title = prompt('Enter task title:');
-      if (title && title.trim()) {
-        tasks.push({ id: ++taskIdCounter, planId: selectedPlanId, title: title.trim(), status: 'todo' });
-        renderKanban();
+      editingTaskId = null;
+      document.getElementById('taskModalTitle').textContent = 'Add Task';
+      document.getElementById('taskModalSave').textContent = 'Add';
+      document.getElementById('taskTitleInput').value = '';
+      document.getElementById('taskStatusInput').value = 'todo';
+      document.getElementById('taskPriorityInput').value = 'med';
+      document.getElementById('taskAssigneeInput').value = '';
+      document.getElementById('taskDueInput').value = '';
+      document.getElementById('taskNotesInput').value = '';
+      document.getElementById('taskFileInput').value = '';
+      document.getElementById('taskFilePreview').innerHTML = '';
+      showModal('taskModal');
+    }
+
+    function editTask(id) {
+      const t = tasks.find(x => x.id === id);
+      if (!t) return;
+      editingTaskId = id;
+      document.getElementById('taskModalTitle').textContent = 'Edit Task';
+      document.getElementById('taskModalSave').textContent = 'Save';
+      document.getElementById('taskTitleInput').value = t.title;
+      document.getElementById('taskStatusInput').value = t.status;
+      document.getElementById('taskPriorityInput').value = t.priority;
+      document.getElementById('taskAssigneeInput').value = t.assignee || '';
+      document.getElementById('taskDueInput').value = t.due || '';
+      document.getElementById('taskNotesInput').value = t.notes || '';
+      document.getElementById('taskFileInput').value = '';
+      const preview = document.getElementById('taskFilePreview');
+      preview.innerHTML = (t.files || []).map(f => '<span class="file-indicator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>' + f.name + ' (' + f.size + ')</span>').join('');
+      showModal('taskModal');
+    }
+
+    function onTaskFileChange() {
+      const input = document.getElementById('taskFileInput');
+      const preview = document.getElementById('taskFilePreview');
+      preview.innerHTML = Array.from(input.files || []).map(f => '<span class="file-indicator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>' + f.name + '</span>').join('');
+    }
+
+    function quickAddTask() {
+      const input = document.getElementById('quickTaskInput');
+      const title = input.value.trim();
+      if (!title || !selectedPlanId) return;
+      tasks.push({
+        id: ++taskIdCounter,
+        planId: selectedPlanId,
+        title: title,
+        status: 'todo',
+        priority: document.getElementById('quickPriority').value,
+        assignee: '',
+        due: '',
+        notes: '',
+        files: [],
+      });
+      input.value = '';
+      renderPlanContent();
+      renderPlanList();
+    }
+
+    function saveTask() {
+      const title = document.getElementById('taskTitleInput').value.trim();
+      if (!title || !selectedPlanId) return;
+      if (editingTaskId) {
+        const t = tasks.find(x => x.id === editingTaskId);
+        if (t) {
+          t.title = title;
+          t.status = document.getElementById('taskStatusInput').value;
+          t.priority = document.getElementById('taskPriorityInput').value;
+          t.assignee = document.getElementById('taskAssigneeInput').value.trim();
+          t.due = document.getElementById('taskDueInput').value;
+          t.notes = document.getElementById('taskNotesInput').value.trim();
+        }
+      } else {
+        tasks.push({
+          id: ++taskIdCounter,
+          planId: selectedPlanId,
+          title: title,
+          status: document.getElementById('taskStatusInput').value,
+          priority: document.getElementById('taskPriorityInput').value,
+          assignee: document.getElementById('taskAssigneeInput').value.trim(),
+          due: document.getElementById('taskDueInput').value,
+          notes: document.getElementById('taskNotesInput').value.trim(),
+          files: [],
+        });
       }
+      closeModal('taskModal');
+      renderPlanContent();
+      renderPlanList();
+    }
+
+    // ===== PLAN MODAL =====
+    function openAddPlan() {
+      editingPlanId = null;
+      document.getElementById('planModalTitle').textContent = 'New Plan';
+      document.getElementById('planModalSave').textContent = 'Create';
+      document.getElementById('planNameInput').value = '';
+      document.getElementById('planDescInput').value = '';
+      showModal('planModal');
+    }
+
+    function openEditPlan() {
+      const p = PLANS.find(x => x.id === selectedPlanId);
+      if (!p) return;
+      editingPlanId = p.id;
+      document.getElementById('planModalTitle').textContent = 'Edit Plan';
+      document.getElementById('planModalSave').textContent = 'Save';
+      document.getElementById('planNameInput').value = p.name;
+      document.getElementById('planDescInput').value = p.desc || '';
+      showModal('planModal');
+    }
+
+    function savePlan() {
+      const name = document.getElementById('planNameInput').value.trim();
+      if (!name) return;
+      const desc = document.getElementById('planDescInput').value.trim();
+      if (editingPlanId) {
+        const p = PLANS.find(x => x.id === editingPlanId);
+        if (p) { p.name = name; p.desc = desc; }
+      } else {
+        PLANS.push({ id: ++planIdCounter, name, desc, color: PLAN_COLORS[planIdCounter % PLAN_COLORS.length], notes:'' });
+      }
+      closeModal('planModal');
+      renderPlanList();
+      if (selectedPlanId) renderPlanContent();
     }
 
     // ===== VIEW SWITCHER =====
@@ -1052,7 +1285,7 @@
       if (name === 'promocal') pcRender();
       if (name === 'cr-report') renderBrandReport();
       if (name === 'cr-brand') bsRender();
-      if (name === 'tasks') { selectedPlanId = PLANS.length ? PLANS[0].id : null; renderPlanList(); renderKanban(); }
+      if (name === 'tasks') { if (!selectedPlanId && PLANS.length) selectedPlanId = PLANS[0].id; renderPlanList(); renderPlanContent(); }
     }
 
     // ===== CATEGORY REVIEW DATA =====
