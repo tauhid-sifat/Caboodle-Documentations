@@ -168,9 +168,9 @@
     .task-list-header .tlh-title .dot { width:8px; height:8px; border-radius:50%; display:inline-block; }
 
     .quick-add { display:flex; align-items:center; gap:8px; margin-bottom:16px; padding:10px 14px; background:#fff; border:1px dashed #cbd5e1; border-radius:8px; }
-    .quick-add input { flex:1; border:0; outline:none; font-size:0.85rem; background:transparent; font-family:inherit; }
-    .quick-add select { padding:4px 8px; border:1px solid #e2e8f0; border-radius:6px; font-size:0.75rem; background:#fff; }
-    .quick-add button { padding:5px 12px; border:0; border-radius:6px; background:#6366f1; color:#fff; font-size:0.75rem; cursor:pointer; font-family:inherit; }
+    .quick-add #quickTaskInput { flex:1; border:0; outline:none; font-size:0.85rem; background:transparent; font-family:inherit; min-width:0; }
+    .quick-add select, .quick-add input[type="date"] { padding:4px 8px; border:1px solid #e2e8f0; border-radius:6px; font-size:0.75rem; background:#fff; font-family:inherit; }
+    .quick-add button { padding:5px 12px; border:0; border-radius:6px; background:#6366f1; color:#fff; font-size:0.75rem; cursor:pointer; font-family:inherit; flex-shrink:0; }
 
     .task-item { display:flex; align-items:center; gap:12px; padding:10px 14px; background:#fff; border:1px solid #e2e8f0; border-radius:8px; margin-bottom:6px; transition:all 0.12s; }
     .task-item:hover { border-color:#cbd5e1; box-shadow:0 1px 4px rgba(0,0,0,0.04); }
@@ -1075,6 +1075,7 @@
       // Quick-add bar
       html += '<div class="quick-add">' +
         '<input id="quickTaskInput" placeholder="Quick add task — press Enter" onkeydown="if(event.key===\'Enter\')quickAddTask()">' +
+        '<input type="date" id="quickDue" title="Deadline" onkeydown="if(event.key===\'Enter\')quickAddTask()">' +
         '<select id="quickPriority"><option value="high">High</option><option value="med" selected>Med</option><option value="low">Low</option></select>' +
         '<button onclick="quickAddTask()">Add</button></div>';
 
@@ -1194,6 +1195,7 @@
       const input = document.getElementById('quickTaskInput');
       const title = input.value.trim();
       if (!title || !selectedPlanId) return;
+      const dueInput = document.getElementById('quickDue');
       tasks.push({
         id: ++taskIdCounter,
         planId: selectedPlanId,
@@ -1201,11 +1203,12 @@
         status: 'todo',
         priority: document.getElementById('quickPriority').value,
         assignee: '',
-        due: '',
+        due: dueInput ? dueInput.value : '',
         notes: '',
         files: [],
       });
       input.value = '';
+      if (dueInput) dueInput.value = '';
       renderPlanContent();
       renderPlanList();
     }
