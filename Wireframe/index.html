@@ -191,6 +191,17 @@
     .status-badge.todo { background:#f1f5f9; color:#475569; }
     .status-badge.in_progress { background:#dbeafe; color:#2563eb; }
     .status-badge.done { background:#dcfce7; color:#16a34a; }
+    .t-meta .status-select { font-size:0.65rem; font-weight:600; padding:2px 8px; border-radius:999px; border:1px solid #e2e8f0; background:#fff; color:#475569; cursor:pointer; font-family:inherit; outline:none; }
+    .status-select.todo { background:#f1f5f9; color:#475569; border-color:#e2e8f0; }
+    .status-select.in_progress { background:#dbeafe; color:#2563eb; border-color:#bfdbfe; }
+    .status-select.done { background:#dcfce7; color:#16a34a; border-color:#bbf7d0; }
+    .status-select option { color:#334155; background:#fff; }
+    .done-header { cursor:pointer; user-select:none; }
+    .done-header:hover .tlh-title { color:#16a34a; }
+    .done-toggle-btn { display:inline-flex; align-items:center; gap:4px; font-size:0.7rem; color:#16a34a; background:none; border:0; cursor:pointer; padding:2px 8px; border-radius:6px; font-family:inherit; }
+    .done-toggle-btn:hover { background:#f0fdf4; }
+    .done-toggle-btn svg { transition:transform 0.15s; }
+    .done-toggle-btn.open svg { transform:rotate(90deg); }
     .file-indicator { display:inline-flex; align-items:center; gap:3px; font-size:0.65rem; color:#64748b; }
     .file-indicator svg { flex-shrink:0; }
     .task-item .t-expand { color:#94a3b8; cursor:pointer; padding:4px; border-radius:4px; transition:all 0.15s; flex-shrink:0; background:none; border:0; display:flex; }
@@ -955,6 +966,7 @@
     let selectedPlanId = null;
     let editingTaskId = null;
     let editingPlanId = null;
+    let pipelineDoneOpen = false;
 
     const PLAN_COLORS = ['#6366f1','#10b981','#f59e0b','#ef4444','#8b5cf6','#ec4899','#06b6d4','#14b8a6'];
 
@@ -1049,9 +1061,6 @@
       document.getElementById('planSub').textContent = p.desc || 'No description';
 
       const planTasks = tasks.filter(t => t.planId === p.id);
-      const todos = planTasks.filter(t => t.status === 'todo');
-      const inProgress = planTasks.filter(t => t.status === 'in_progress');
-      const done = planTasks.filter(t => t.status === 'done');
 
       let html = '';
 
@@ -1062,21 +1071,67 @@
         '<select id="quickPriority"><option value="high">High</option><option value="med" selected>Med</option><option value="low">Low</option></select>' +
         '<button onclick="quickAddTask()">Add</button></div>';
 
-      // Sections
+      // Group by date buckets
+      const buckets = [
+        { key:'overdue', label:'Overdue', color:'#ef4444', items: [] },
+        { key:'today', label:'Today', color:'#f59e0b', items: [] },
+        { key:'thisWeek', label:'Next 7 Days', color:'#3b82f6', items: [] },
+        { key:'next30', label:'Next 30 Days', color:'#64748b', items: [] },
+        { key:'later', label:'Later', color:'#94a3b8', items: [] },
+        { key:'noDue', label:'No Due Date', color:'#cbd5e1', items: [] },
+      ];
+      const done = [];
+      planTasks.forEach(t => {
+        if (t.status === 'done') { done.push(t); return; }
+        const b = buckets.find(b => b.key === dateBucketKey(t.due));
+        if (b) b.items.push(t);
+      });
+
       if (!planTasks.length) {
         html += '<div class="empty-state" style="padding:20px;"><h3>No tasks yet</h3><p>Type above and press Enter to add your first task</p></div>';
       } else {
-        if (todos.length) html += renderTaskSection('To Do', 'todo', todos, '#64748b');
-        if (inProgress.length) html += renderTaskSection('In Progress', 'in_progress', inProgress, '#2563eb');
-        if (done.length) html += renderTaskSection('Done (' + done.length + ')', 'done', done, '#16a34a');
+        buckets.forEach(b => {
+          if (b.items.length) html += renderTaskSection(b.label, b.items, b.color);
+        });
+        // Done section — collapsible to keep the view decluttered
+        if (done.length) {
+          html += '<div class="task-list-header done-header" onclick="toggleDoneSection()">' +
+            '<span class="tlh-title"><span class="dot" style="background:#16a34a;"></span>Done (' + done.length + ')</span>' +
+            '<button class="done-toggle-btn' + (pipelineDoneOpen ? ' open' : '') + '" onclick="event.stopPropagation();toggleDoneSection()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="9 18 15 12 9 6"></polyline></svg>' + (pipelineDoneOpen ? 'Hide done' : 'Show done') + '</button></div>';
+          if (pipelineDoneOpen) html += renderTaskRows(done);
+        }
       }
 
       container.innerHTML = html;
     }
 
-    function renderTaskSection(label, status, items, color) {
-      let html = '<div class="task-list-header"><span class="tlh-title"><span class="dot" style="background:' + color + ';"></span>' + label + ' (' + items.length + ')</span></div>';
-      items.forEach(t => {
+    function dateBucketKey(dueStr) {
+      if (!dueStr) return 'noDue';
+      const due = new Date(dueStr + 'T00:00:00');
+      const now = new Date(); now.setHours(0,0,0,0);
+      const diff = Math.floor((due - now) / 86400000);
+      if (diff < 0) return 'overdue';
+      if (diff === 0) return 'today';
+      if (diff <= 7) return 'thisWeek';
+      if (diff <= 30) return 'next30';
+      return 'later';
+    }
+
+    function toggleDoneSection() {
+      pipelineDoneOpen = !pipelineDoneOpen;
+      renderPlanContent();
+    }
+
+    function setTaskStatus(id, status) {
+      const t = tasks.find(x => x.id === id);
+      if (!t) return;
+      t.status = status;
+      renderPlanContent();
+      renderPlanList();
+    }
+
+    function renderTaskRows(items) {
+      return items.map(t => {
         const initials = t.assignee ? t.assignee.split(' ').map(w => w[0]).join('').substring(0,2).toUpperCase() : '';
         const dueObj = t.due ? new Date(t.due + 'T00:00:00') : null;
         const now = new Date();
@@ -1084,7 +1139,7 @@
         const dueText = dueObj ? dueObj.toLocaleDateString('en-US',{month:'short',day:'numeric'}) : '';
         const isDone = t.status === 'done';
         const files = t.files && t.files.length ? '<span class="file-indicator" title="' + t.files.map(f => f.name + ' (' + f.size + ')').join(' | ') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>' + t.files.length + '</span>' : '';
-        html += '<div class="task-item' + (isDone ? ' done' : '') + '">' +
+        return '<div class="task-item' + (isDone ? ' done' : '') + '">' +
           '<div class="t-check' + (isDone ? ' checked' : '') + '" onclick="toggleTaskDone(' + t.id + ')"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>' +
           '<div class="t-body" onclick="editTask(' + t.id + ')">' +
           '<div class="t-title' + (isDone ? ' done' : '') + '">' + t.title + '</div>' +
@@ -1092,14 +1147,20 @@
           (t.assignee ? '<span class="assignee"><span class="avatar">' + initials + '</span>' + t.assignee + '</span>' : '') +
           (t.due ? '<span class="due' + (isOverdue ? ' overdue' : '') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>' + dueText + '</span>' : '') +
           (!isDone ? '<span class="priority ' + t.priority + '">' + t.priority + '</span>' : '') +
-          (!isDone ? '<span class="status-badge ' + t.status + '">' + (t.status === 'in_progress' ? 'In Progress' : 'To Do') + '</span>' : '') +
+          '<select class="status-select ' + t.status + '" onclick="event.stopPropagation()" onchange="setTaskStatus(' + t.id + ', this.value)">' +
+          '<option value="todo"' + (t.status === 'todo' ? ' selected' : '') + '>To Do</option>' +
+          '<option value="in_progress"' + (t.status === 'in_progress' ? ' selected' : '') + '>In Progress</option>' +
+          '<option value="done"' + (t.status === 'done' ? ' selected' : '') + '>Done</option></select>' +
           files +
           '</div></div>' +
           '<button class="t-expand" onclick="event.stopPropagation();toggleTaskNotes(' + t.id + ')" title="Toggle notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"></polyline></svg></button>' +
           '</div>' +
           '<div class="task-notes" id="taskNotes-' + t.id + '">' + (t.notes || '<span class="tn-empty">No notes</span>') + '</div>';
-      });
-      return html;
+      }).join('');
+    }
+
+    function renderTaskSection(label, items, color) {
+      return '<div class="task-list-header"><span class="tlh-title"><span class="dot" style="background:' + color + ';"></span>' + label + ' (' + items.length + ')</span></div>' + renderTaskRows(items);
     }
 
     function toggleTaskNotes(id) {
