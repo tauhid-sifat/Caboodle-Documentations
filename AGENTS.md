@@ -1,8 +1,9 @@
 # Caboodle Project — Permanent Knowledge Base
 
-> **Generated:** 2026-07-14  
+> **Generated:** 2026-07-14 · **Last synced with live evidence:** 2026-08-20  
 > **Purpose:** Foundational memory for LLM agents working on this project.  
-> **Source docs:** All files in `ba-onboarding/`, `prototypes/Daily Delight Calendar/`, `data/Jira (3).csv`, `meetings/` (meeting transcripts), Lovable prototype prompts.
+> **Source docs:** `ba-onboarding/`, `prototypes/Daily Delight Calendar/`, `data/jira-tickets/` (live Jira export — 1,567 tickets, **authoritative**), `meetings/` (14 raw transcripts — **raw evidence**), Lovable prototype prompts.  
+> **Note:** `data/Jira (3).csv` is **legacy** (130-issue export from kickoff) and superseded by `data/jira-tickets/`. Do not treat the CSV as source of truth.
 
 ---
 
@@ -120,6 +121,8 @@ Caboodle is a **multi-tenant SaaS platform for CPG (Consumer Packaged Goods) bra
 | **TradeSpend** | Core trade promotions and planning | Stable |
 | **TradeSpendSandbox** | TSS — draft promos, what-if scenarios, 4-step wizard | Functional, ongoing QA — 37 tickets |
 | **PromotionalCalendar** | Calendar view of promotions | Partial, untested |
+
+> **Backlog counts:** figures above are from legacy notes. See **§16** for live, evidence-based counts from the 1,567-ticket Jira export.
 
 ---
 
@@ -289,9 +292,13 @@ Active, Pending, NotActive, Declined, Discontinued, Approved, Commit
 | Is "Submitted" a new status value or parallel flag? | TBD |
 | PM6 scope (multi-month events) | Option A (read-only display) vs C (full drag) |
 
+> **Consolidated, provenance-tagged decisions & open questions** are in **§17** (synthesized from all 14 `meetings/` transcripts).
+
 ---
 
 ## 12. JIRA ISSUES — DESCRIPTION GAPS
+
+> **Legacy:** the gap list below was computed against `data/Jira (3).csv` (130 issues) at kickoff. It should be **re-derived from `data/jira-tickets/`** (1,567 live tickets) — the CSV is superseded.
 
 19 issues in `data/Jira (3).csv` lack proper descriptions (under 50 chars or only image):
 
@@ -390,3 +397,63 @@ All ticket-spec files in `tickets/`, grouped by module (broker-dashboard/, categ
 | **NotActive** | SkuStatus value — one word, not "Not Active" |
 | **IsSubmitted** | Boolean flag on promo events for broker submission |
 | **Brokerage** | The broker's organization — scope for data visibility |
+
+---
+
+## 16. JIRA BACKLOG INTELLIGENCE (Live Export — 1,567 tickets)
+
+> **Source:** `data/jira-tickets/` — full live Jira export (CS-1 … CS-1567 + GTMS-*), generated **2026-08-20** from `caboodleservices.atlassian.net`. This supersedes the legacy `data/Jira (3).csv` (130 issues).  
+> **Method:** structured metadata + statistics extracted programmatically across all 1,567 files (AI-readable conversion per BA Step 1); individual tickets were not read raw.  
+> **Status model:** Open = Backlog / On Hold / In Progress / In Staging / In Production / Reopened / Demo / Ready for Production / Dev Sprints. Closed = Closed / Won't Do / Resolved.
+
+- **Total tickets:** 1,567
+- **Created range:** 2023-09-11 → 2026-08-20 (backlog spans ~3 years; actively maintained through today)
+- **Open:** ~295 (Backlog 242 + active states) · **Closed / Won't-Do:** 1,208 · **Ambiguous status:** 64
+- **By type:** Task 761 · Bug 444 · Sub-task 280 · Story 72 · Epic 10
+- **By priority:** High 626 · Highest 440 · Medium 268 · Low 233 (≈68% High/Highest — backlog skews urgent)
+- **Top labels:** Front_end 249 · Backend 215 · Admin_App 42
+- **Status distribution (top):** Closed 1,111 · Backlog 242 · Won't Do 75 · On Hold 40 · Resolved 22 · In Staging 19 · In Progress 13 · In Production 12 · Reopened 11 · Demo 8
+- **Module concentration (title/label keyword heuristic — directional, not exact):** Admin-dominant, then Brand, TradeSpend, CRM, Market Overview, Category Review, Broker Dashboard, Distributor APL.
+
+**Implications for BA:**
+1. The backlog is **bug/task-heavy and priority-skewed** — the active client-facing workstreams are Broker Dashboard, Category Review, Market Overview, and Promo Management (see §17).
+2. The curated `tickets/` deliverables are a small, **client-reviewed subset (≈23 active tickets)** of this 1,567-ticket universe — the prioritized, spec'd slice, not the whole backlog.
+3. Admin is the **largest maintenance surface** (label `Admin_App` 42; admin keyword dominant in open backlog).
+
+---
+
+## 17. CONSOLIDATED CLIENT DECISIONS & OPEN QUESTIONS
+
+> **Source:** `meetings/` — 14 raw transcripts (Jul 15 – Aug 19, 2026). Raw transcripts remain the **source of truth**; this section is the extracted, provenance-tagged knowledge. Each item carries a **knowledge status** (APPROVED / VALIDATED / CLARIFIED / PROPOSED / UNKNOWN) per the BA status model.
+
+### Validated / Approved Decisions
+| # | Decision | Provenance | Status |
+|---|----------|-----------|--------|
+| D1 | Category Review & Distributor APL use **infinite scroll**, not pagination | Broker Dashboard meeting 2 Clarification | APPROVED |
+| D2 | Broker Dashboard = **KPI cards + calendars + task board** (re-scoped from "UI polish") | Broker Dashboard meeting 2 Clarification | APPROVED |
+| D3 | Simple task board (To Do / In Progress / Done), **NOT** the CRM Pipeline | Broker Dashboard meeting 2 Clarification | APPROVED |
+| D4 | Market Overview status hierarchy: Pending→Approved→Commit→Active→**Discontinued**; Discontinued is **terminal** (broker cannot override); NotActive/Pending flexible | Broker Dashboard meeting 2 Clarification | VALIDATED |
+| D5 | UNFI / Infra Independents = grouped mom-and-pop stores, **not real banners**; banner door count (e.g., 700) misleads KPIs | Broker Dashboard meeting 2 Clarification | VALIDATED |
+| D6 | Multi-brand log entry via **sheet view** (one retailer → grid of all brands' SKUs → one submit) | Broker Dashboard meeting 2 Clarification | APPROVED |
+| D7 | "Send to Contacts" = **broker-composed email** (CC/BCC), NOT auto system notifications | Broker Dashboard meeting 2 Clarification | CLARIFIED |
+| D8 | Brand–Broker CR propagation: broker rows editable by brand (local unless pushed); calendar pushes propagate to broker; deletions cascade **except** brand-local rows | Broker Dashboard meeting | VALIDATED |
+| D9 | Brand Report redesign: Send-to-Contacts originates from CR list page, auto-populates Brand Report; brand replies via email link; **Calendar becomes view-only** (review/reset only, no submission) | CR Brand Report & Ticket Review (Jul 30) | APPROVED |
+| D10 | Notify brand = **brand owners AND sub-users** (corrects earlier owners-only guidance) | CR Brand Report & Ticket Review (Jul 30); Review Broker Questions (Aug 4) | VALIDATED |
+| D11 | "Status" = broker's progress getting a meeting (not review outcome); "submitted" is a **result**, not a status | Category Review Tracker (Jul 24) | VALIDATED |
+| D12 | **User-based fixed/sticky filters** saved server-side per user per brand (not browser); first 3 modules: Retailers, Promo Planning, Pipeline | User Based Fixed Filter (Aug 18) | APPROVED |
+| D13 | **"Simple Entries"** section for non-calculated promos (bypass TSS stepper); upload template = banner+UPC+event+dates; old Yin-Yang bypass disabled | Broker Promo Entry (Jul 13) | APPROVED |
+| D14 | Brand Report / Calendar stay in sync; remove from either removes from both; remove from calendar cascades to brand report | Daily Caboodle (Jul 16) | VALIDATED |
+| D15 | "Submission due date" terminology → **"review start date"** (60-day advance-notice expectation) | Daily Caboodle (Jul 15) | VALIDATED |
+
+### Open Questions (consolidated)
+| Q | Status | Source |
+|---|--------|--------|
+| Exact Market Overview→CRM `SkuStatus` transition matrix | UNKNOWN — confirm w/ Bijoy | Broker Dashboard meeting |
+| Store-count mechanism for UNFI Independents (store picker?) | UNKNOWN | Broker Dashboard meeting 2 Clarification |
+| Is "Submitted" a new status enum value or parallel `IsSubmitted` flag? | UNKNOWN / TBD | multiple |
+| PM6 scope: read-only multi-month display (A) vs full drag/resize (C)? *(Per CW: only A)* | PROPOSED (A) | PM6 ticket + CW note |
+| Email backend for Send to Contacts (SMTP/SendGrid/Resend?) + template storage | UNKNOWN | CR meetings |
+| Full module list for user-based fixed filters (all or subset?) | UNKNOWN — Constance to decide | User Based Fixed Filter (Aug 18) |
+| MO6 sheet-view mockup — client has one, not yet obtained | UNKNOWN | Review Broker Questions (Aug 4) |
+| CS-1362 (Ask Caboodle AI) & CS-1406 (dashboard switching) — no deliverables yet | UNKNOWN | general |
+| Analytics (PostHog), Jira attachment-storage cleanup | PROPOSED | Caboodle Ticket Call (Aug 17) |

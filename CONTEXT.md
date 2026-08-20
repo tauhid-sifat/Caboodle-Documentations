@@ -1,16 +1,36 @@
 # Project Context — Caboodle BA Deliverables
 
-**Last Updated:** Jul 20, 2026  
-**Session:** Wireframe implementation & deployment
+**Last Updated:** 2026-08-20  
+**Session:** Knowledge-base sync from live Jira (1,567 tickets) + 14 meeting transcripts
 
 ---
 
 ## Current Objective
-Write user stories and requirements deliverables (Markdown files in `tickets/`) for Caboodle's Broker Dashboard features based on:
-- Jira export (`data/Jira (3).csv` — ~130 CS-* issues)
-- Lovable prototype (`prototypes/Daily Delight Calendar/`) — Category Review yearly grid, SendToContacts, infinite scroll patterns
-- Client meeting transcripts (`meetings/`)
-- **Current focus:** Wireframe implementation in `Wireframe/index.html` and deployment to Vercel
+Maintain the Caboodle BA knowledge base and ticket deliverables, keeping them synchronized with **live evidence**:
+- Live Jira export (`data/jira-tickets/` — 1,567 tickets, **authoritative**; supersedes the legacy `data/Jira (3).csv`)
+- 14 client meeting transcripts (`meetings/` — raw evidence)
+- Lovable prototype (`prototypes/Daily Delight Calendar/`) — Category Review patterns
+- Curated ticket specs in `tickets/` (client-reviewed subset)
+
+**This session:** Synthesized the full Jira backlog + all meeting transcripts into `AGENTS.md` (knowledge) and this snapshot, applying the BA workflow (evidence → knowledge → snapshot, with provenance + status model). See "Evidence Inventory" and "This Session" below.
+
+---
+
+## Evidence Inventory
+
+| Source | Count | Format | Status as evidence |
+|--------|-------|--------|--------------------|
+| `data/jira-tickets/` | 1,567 tickets (CS-1…CS-1567 + GTMS-*) | Markdown (Jira export) | **Authoritative** live backlog — generated 2026-08-20 from `caboodleservices.atlassian.net` |
+| `meetings/` | 14 transcripts (Jul 15 – Aug 19, 2026) | Raw text | **Raw evidence** — structured knowledge extracted to AGENTS.md §17; transcripts kept intact |
+| `tickets/` | ~50 curated spec files | Markdown | BA deliverables (prioritized, client-reviewed subset) |
+| `ba-onboarding/`, `prototypes/` | docs + Lovable prototype | Mixed | Reference |
+| `data/Jira (3).csv` | legacy 130-issue export | CSV | **Legacy** — superseded by `data/jira-tickets/`; not source of truth |
+
+## This Session (Aug 20, 2026)
+
+- **Jira backlog analysis:** programmatically extracted metadata from all 1,567 tickets in `data/jira-tickets/`; aggregated status / type / priority / label distributions (see AGENTS.md §16). No individual tickets read raw — statistics are the AI-readable conversion.
+- **Meeting structuring:** all 14 `meetings/` transcripts processed; structured knowledge (decisions / requirements / questions / actions) extracted with **provenance** and **knowledge-status tags** (see AGENTS.md §17).
+- **Knowledge base update:** `AGENTS.md` (permanent knowledge) + this `CONTEXT.md` (snapshot) refreshed to reflect live evidence per the BA workflow (evidence → knowledge → snapshot; provenance + status model applied).
 
 ---
 
@@ -106,16 +126,20 @@ Write user stories and requirements deliverables (Markdown files in `tickets/`) 
 
 ## Outstanding Issues / Open Questions
 
-| Item | Question |
-|------|----------|
-| MO3 | Confirm exact status transition matrix with Bijoy (Pending→Approved→Commit→Active→Discontinued; dead-ends Declined/NotActive) |
-| MO4 | How to track actual store count for UNFI Independents? Add store picker? |
-| MO6 | Client has mockup for sheet view — need to obtain it |
-| CR2 | Email backend: SMTP/SendGrid/Resend? Template storage? |
-| PM3 | Is "Submitted" a new status enum value or parallel IsSubmitted flag? |
-| PM6 | Start with read-only multi-month display (Option A) or full drag/resize (Option C)? |
-| CS-1305 | KPI card definitions — store count (fixed per MO4), reviews due, promos active, brands assigned — confirm formulas |
-| General | CS-1362 (Ask Caboodle AI) and CS-1406 (dashboard switching) have no deliverables yet |
+> Consolidated, provenance-tagged list is in **AGENTS.md §17**. Key open items:
+
+| Item | Question | Source |
+|------|----------|--------|
+| MO3 | Exact Market Overview→CRM `SkuStatus` transition matrix | Broker Dashboard meeting — confirm w/ Bijoy |
+| MO4 | Store-count mechanism for UNFI Independents (store picker?) | Broker Dashboard meeting 2 Clarification |
+| MO6 | Client has sheet-view mockup — not yet obtained | Review Broker Questions (Aug 4) |
+| CR2 | Email backend for Send to Contacts (SMTP/SendGrid/Resend?) + template storage | CR meetings |
+| PM3 | Is "Submitted" a new status enum value or parallel `IsSubmitted` flag? | multiple |
+| PM6 | Read-only multi-month display (A) vs full drag/resize (C)? *(Per CW: only A)* | PM6 + CW note |
+| CS-1305 | KPI card definitions (store count, reviews due, promos active, brands) — confirm formulas | Broker Dashboard meetings |
+| General | CS-1362 (Ask Caboodle AI) & CS-1406 (dashboard switching) — no deliverables yet | general |
+| Filters | Full module list for user-based fixed filters (all or subset?) | User Based Fixed Filter (Aug 18) |
+| Analytics | PostHog analytics, Jira attachment-storage cleanup | Caboodle Ticket Call (Aug 17) |
 
 ---
 
@@ -130,5 +154,5 @@ Write user stories and requirements deliverables (Markdown files in `tickets/`) 
 
 - `ba-onboarding/` — All backend/frontend/module documentation
 - `prototypes/Daily Delight Calendar/` — Lovable prototype (SendToContacts, YearlyPlanningTable, infinite scroll CSS)
-- `data/Jira (3).csv` — Full issue export
-- `meetings/Broker Dashboard meeting.txt` / `meetings/Broker Dashboard meeting 2 Clarification.txt` — Client meeting transcripts
+- `data/jira-tickets/` — **Live Jira export (1,567 tickets)** — authoritative backlog source (supersedes `data/Jira (3).csv`)
+- `meetings/` — 14 client meeting transcripts (raw evidence; structured decisions in AGENTS.md §17)
