@@ -28,13 +28,13 @@ This story allows events with date ranges spanning multiple months to appear in 
 - **Then** the event appears in both the January and February columns
 - **And** a visual indicator shows it's a continuation (e.g., arrow, connector line, or truncated badge)
 
-### Scenario 2: Drag Event Across Months
+### Scenario 2: Drag Event Across Months (DISCUSS WITH CW — NOT SURE THAT WE WANT USER TO DRAG AND CHANGE DATES)
 - **Given** I am on the grid view
 - **When** I drag an event card from one month to another
 - **Then** the event's date range updates to reflect the new month(s)
 - **And** the change is persisted via API
 
-### Scenario 3: Resize Event Duration
+### Scenario 3: Resize Event Duration (CW needs clarity on this)
 - **Given** an event is displayed as a bar/card spanning its duration
 - **When** I drag the edge of the event bar to extend or shorten it
 - **Then** the start or end date updates accordingly
@@ -54,7 +54,7 @@ This story allows events with date ranges spanning multiple months to appear in 
 
 ---
 
-## Implementation Options
+## Implementation Options (CW — I don't believe we need B & C — Just A)
 
 | Option | Complexity | Description |
 |--------|-----------|-------------|
@@ -62,7 +62,7 @@ This story allows events with date ranges spanning multiple months to appear in 
 | B | Medium | Option A + drag between months to reassign |
 | C | High | Full gantt-style resize and drag within/between months |
 
-Recommend starting with Option A (multi-month display) and adding drag/resize in a follow-up.
+Recommend starting with Option A (multi-month display) and adding drag/resize in a follow-up. Per CW: only Option A is needed — no drag/resize (B & C).
 
 ---
 

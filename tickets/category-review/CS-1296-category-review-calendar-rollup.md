@@ -54,14 +54,14 @@ The uploaded data feeds the CS-1361 yearly planning grid:
 
 | CSV Column | Grid Element |
 |------------|-------------|
-| Region | Optional — derived list view column |
-| Retailer | Row label (maps to "Banner Name" in grid view) |
-| Category | Sub-row label (sticky column in grid view) |
+| Region | Optional grouping row |
+| Retailer | Row label (replaces "Banner Name" in the grid) |
+| Category | Sub-row label |
 | Review Month | Which month column the milestone appears in |
-| Submission Due Date | Shown in list view column |
-| Review Dates | Shown in list view column |
-| Reset Date | Shown in list view column |
-| Additional Notes | Shown in list view column |
+| Submission Due Date | Shown in cell or detail popover |
+| Review Dates | Shown in cell or detail popover |
+| Reset Date | Shown in cell or detail popover |
+| Additional Notes | Shown in detail popover |
 
 **Example:** A row with Retailer="Sprouts", Category="Frozen Desserts", Review Month="January" creates a milestone in the Sprouts → Frozen Desserts row, January column with label "Review" or "Reset" depending on the date type.
 
@@ -84,51 +84,19 @@ The uploaded data feeds the CS-1361 yearly planning grid:
 
 ### Scenario 3: Bulk Delete
 - **Given** I have uploaded records
-- **When** I click "Clear All" or "Delete All Matching"
+- **When** I click "Clear All" or "Delete All"
 - **Then** all category review records for my brokerage are deleted
 - **And** the grid shows empty state
 
-### Scenario 4: List View
-- **Given** records exist from a CSV upload
-- **When** I switch to List view
-- **Then** I see a flat table with columns: Region, Retailer, Category, Review Month, Submission Due Date, Review Date, Reset Date, Additional Notes, Action
-- **And** each row corresponds to one category review milestone
-- **And** I can filter by Region, Retailer, Category, Review Month
-
-### Scenario 5: Grid Display
+### Scenario 4: Grid Display
 - **Given** records exist from a CSV upload
 - **When** I navigate to the Category Review page (CS-1361 yearly grid)
 - **Then** I see milestones populated from the uploaded data
 - **And** I can interact with them (checkmark, assign contacts, filter)
 
-### Scenario 6: Permissions
-- **Given** I am logged in as a Broker
-- **Then** I see all reviews uploaded by my brokerage (not scoped to brands I represent)
-- **And** filtering by brand is optional
-
----
-
-## Design Notes
-
-### Wireframe Reference
-- **Wireframe:** `../../Wireframe/index.html` — deployed at https://caboodle-broker-dashboard.vercel.app
-- The list view (`crRenderList`) displays uploaded records in a flat table
-- Grid view (`crRender`) displays the same data in a monthly matrix
-
-### Wireframe List View Toolbar
-The wireframe includes these toolbar buttons in the list view (see CS-1361 FR7.2 for full details):
-- **Upload Category Review** — enabled button (no handler in prototype — placeholder for CSV upload modal)
-- **Add To Calendar** — **DISABLED** placeholder
-- **Export** — **DISABLED** placeholder
-- **Add Log** — enabled placeholder (no handler)
-- **Remove Log** — **DISABLED** placeholder
-- **Delete All Matching** — **DISABLED** placeholder
-- **Filter** — toggles filter bar
-
-### Data Notes
-- **Wireframe:** Category review data is **hardcoded** (`CR_DATA` array). No actual CSV upload exists in the prototype. The list view derives its entries from the hardcoded data.
-- **Wireframe list view data derivation:** Each milestone cell in `CR_DATA` becomes one row; region-based notes are hardcoded per region (NorCal → "Contact brand closer to review date", SoCal → "Follow up with buyer for category schedule", National → "Standard review cycle")
-- **Production:** All upload, storage, and retrieval must use API endpoints
+### Scenario 5: Filtering
+- **Given** I am viewing the list/table view of uploaded records
+- **Then** I can filter by: **Region**, **Retailer**, **Category**, **Review Month**
 
 ---
 
@@ -143,84 +111,30 @@ The wireframe includes these toolbar buttons in the list view (see CS-1361 FR7.2
 - **FR1.6** `ShouldBeInCalender` defaults to `false`
 - **FR1.7** Response returns: count of rows imported, count of errors, error details per row
 - **FR1.8** On re-upload: **delete all existing records for this brokerage** before inserting new rows (replace, not merge)
-- **FR1.9** **Wireframe:** Upload button exists in list view toolbar but is non-functional. Production must implement a file picker dialog/modal that validates the CSV before submitting
 
 ### FR2: Bulk Delete
 - **FR2.1** Endpoint: `DELETE /api/category-reviews/clear`
 - **FR2.2** Deletes all `CategoryReview` records where `BrokerageCompanyID` matches the current broker's org
 - **FR2.3** Requires confirmation dialog before executing
 - **FR2.4** Returns count of deleted records
-- **FR2.5** **Wireframe:** "Delete All Matching" button exists but is **DISABLED** (placeholder). "Remove Log" button is also **DISABLED** (placeholder for a different feature — possibly removing sent email logs)
 
 ### FR3: Grid Data API
 - **FR3.1** Endpoint: `GET /api/category-reviews/calendar?year={year}`
-- **FR3.2** Returns records grouped by Retailer → Category → Month (see CS-1361 FR9 for response shape)
+- **FR3.2** Returns records grouped by Retailer → Category → Month (see CS-1361 FR8 for response shape)
 - **FR3.3** The `Review Month` CSV column determines which grid column the milestone appears in
 - **FR3.4** Each row becomes a milestone cell in the grid with type "Review" or "Reset" (derived from whether a Reset Date is present)
 
 ### FR4: List/Table View
 - **FR4.1** A separate list/table view of all uploaded records with columns matching the CSV
 - **FR4.2** Endpoint: `GET /api/category-reviews/list?region=&retailer=&category=&reviewMonth=`
-- **FR4.3** List view columns: Checkbox (select), Region, Retailer, Category, Review Month, Submission Due Date, Review Date, Reset Date, Additional Notes, Action (Edit button)
-- **FR4.4** Supports filtering by Region, Retailer, Category, Review Month (same filter bar as grid view)
-- **FR4.5** Edit button per row → navigates to edit screen for that record (placeholder in wireframe)
-- **FR4.6** Row click → navigates to Category Review detail page (placeholder in wireframe — shows alert)
-
-### FR5: List View Toolbar
-- **FR5.1** **Upload Category Review** — opens file picker, triggers CSV import (FR1). Wireframe: placeholder only
-- **FR5.2** **Add To Calendar** — pushes selected records to promotional calendar. Wireframe: **DISABLED** placeholder
-- **FR5.3** **Export** — exports list view data to CSV/Excel. Wireframe: **DISABLED** placeholder
-- **FR5.4** **Add Log** — adds manual log entry for a review. Wireframe: enabled placeholder, no handler
-- **FR5.5** **Remove Log** — removes a log entry. Wireframe: **DISABLED** placeholder
-- **FR5.6** **Delete All Matching** — bulk delete (FR2). Wireframe: **DISABLED** placeholder
-- **FR5.7** **Filter** — toggles filter panel (same as grid view)
-
-### FR6: Permissions
-- **FR6.1** All brokers in a brokerage see all uploaded reviews (not scoped to brands they represent)
-- **FR6.2** Brand filtering is optional (client-side or query parameter)
-- **FR6.3** Import and delete actions restricted to BROKER and BROKERSUBUSER roles
-
-### FR7: Data Model — CategoryReview Entity
-```
-CategoryReview
-├── Id (Guid, PK)
-├── BrokerageCompanyId (Guid, FK → BrokerageCompany)
-├── BrandId (Guid, FK → Brand, nullable — set server-side)
-├── Region (string, optional)
-├── Retailer (string, required)
-├── Category (string, required)
-├── ReviewMonth (string, required — e.g., "January")
-├── SubmissionDueDate (date, nullable)
-├── ReviewDate (date, nullable)
-├── ResetDate (date, nullable)
-├── AdditionalNotes (text, nullable)
-├── ShouldBeInCalender (bool, default false)
-├── CreatedBy/On, LastModifiedBy/On (AuditableEntity)
-└── Deleted (bool, soft delete)
-```
-
----
-
-## Wireframe Implementation Status
-
-| Feature | Wireframe Status | Production Status |
-|---------|-----------------|-------------------|
-| CSV Upload button | Placeholder (no handler) | Needs implementation |
-| CSV upload modal/dialog | Not present | Needs implementation |
-| List view table | Implemented (hardcoded data) | Needs API integration |
-| Grid view | Implemented (hardcoded data) | Needs API integration |
-| Bulk delete button | DISABLED placeholder | Needs implementation |
-| Add To Calendar button | DISABLED placeholder | Needs implementation |
-| Export button | DISABLED placeholder | Needs implementation |
-| Add Log button | Placeholder (no handler) | Needs implementation |
-| Remove Log button | DISABLED placeholder | Needs implementation |
-| Filter bar | Implemented | Needs API integration |
-| Edit button per row | Alert placeholder | Needs implementation |
-| Row click navigation | Alert placeholder | Needs implementation |
+- **FR4.3** Supports filtering by Region, Retailer, Category, Review Month
+- **FR4.4** Supports sorting by any column
+- **FR4.5** Each row is clickable → navigates to the Category Review detail page
 
 ---
 
 ## Dependencies
+
 - **CS-1361** — Yearly planning grid (consumes data from this feature)
 - **CS-NEW-bulk-delete-category-reviews.md** — Bulk delete
 - `POST category-reviews/import` (existing endpoint)

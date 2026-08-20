@@ -76,6 +76,20 @@ The **Brand Report** is the broker's operational hub for Category Review. It rep
 - **When** I log in, my saved filters apply automatically and can be changed/cleared at any time.
 - **Then** I only see data I'm responsible for; other users' views are unaffected. Applies across Category Review, Promotional Management, and other modules (system-wide).
 
+### AC10: Export Brand Report
+- **Given** I am on the Brand Report, I can **export** the currently visible data (respecting active filters/sort).
+- **When** I click **Export**, I receive a CSV/Excel download containing all visible columns and rows.
+- **Then** the export includes: Brand, Category, Retailer, Review Month, Brand Response, Submission Status, Meeting Status, Next Action, Waiting On, Review Results, Notes count, and any other visible columns.
+- **And** the export respects the current filter state (e.g., if "Hide Not Interested" is on, those rows are excluded).
+- **And** the export is logged in the audit log (see AC11).
+
+### AC11: Audit log
+- **Given** any change is made to a Brand Report row (status update, note added, email sent, brand added/removed, export triggered), an **audit log entry** is created.
+- **When** I open the audit log for a row, I see: **timestamp**, **user**, **action type** (status change, note added, email sent, brand added, brand removed, export), **old value**, **new value**.
+- **Then** the audit log is append-only (no edits or deletes).
+- **And** the audit log is visible to broker users only (not brand-side).
+- **And** the audit log can be filtered by user, action type, or date range.
+
 ---
 
 ## Functional Requirements
@@ -88,6 +102,8 @@ The **Brand Report** is the broker's operational hub for Category Review. It rep
 - **FR6:** Calendar is view/filter-only, showing Review Month + Reset Month.
 - **FR7:** KPI cards (broker + brand) act as filters.
 - **FR8:** User-specific fixed filters, applied on login.
+- **FR9:** Export respects current filter state; generates CSV/Excel with all visible columns.
+- **FR10:** Audit log captures all row-level changes (status, notes, email, add/remove, export) with timestamp, user, old/new values. Append-only, broker-only, filterable.
 
 ---
 
