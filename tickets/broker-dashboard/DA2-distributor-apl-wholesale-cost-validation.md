@@ -1,6 +1,6 @@
-# Distributor APL | Wholesale Case Cost Required on Edit But Not on Upload
+﻿# Distributor APL | Wholesale Case Cost Required on Edit But Not on Upload
 
-**New Requirement** | Bug | Priority: TBD | Status: New
+**DA2** | New Requirement | Bug | Priority: TBD | Status: New
 
 ---
 
@@ -16,8 +16,8 @@
 
 There is a validation mismatch in the Distributor APL module:
 
-- **Upload (CSV import):** Wholesale Case Cost is **not required** — records can be imported without it
-- **Edit (manual upsert):** Wholesale Case Cost **is required** — the form/API rejects saving if the field is empty
+- **Upload (CSV import):** Wholesale Case Cost is **not required** â€” records can be imported without it
+- **Edit (manual upsert):** Wholesale Case Cost **is required** â€” the form/API rejects saving if the field is empty
 
 This means records uploaded without a Wholesale Case Cost cannot be edited later unless the cost is provided, even if the user only wants to update other fields (e.g., item code, unit cost).
 
@@ -40,4 +40,4 @@ This means records uploaded without a Wholesale Case Cost cannot be edited later
 
 ## Notes
 - Existing endpoint: `POST Brokers/apl*` (upsert distributor APL)
-- Resolve the direction with the business — does Wholesale Case Cost need to be mandatory or not?
+- Resolve the direction with the business â€” does Wholesale Case Cost need to be mandatory or not?

@@ -1,0 +1,60 @@
+# Admin | Store Report | Eliminate / Merge Store Duplicates
+
+**ASR1** | New Requirement | User Story | Priority: TBD | Status: New
+
+---
+
+## User Story
+
+**As an** Admin user,
+**I want** to eliminate or merge duplicate stores in the Store Report (and underlying store data),
+**So that** store listings are clean, de-duplicated, and correctly mapped.
+
+---
+
+## Description
+
+Store data contains duplicates (due to naming inconsistencies) and some stores are incorrectly mapped to multiple banners/retailers. Need a way to **eliminate/merge** duplicate stores and enforce clean mapping, without losing historical data tied to those stores.
+
+This is a direct match to Jira **CS-1419** (Admin CRM Data Upload Stores | Remove Duplicates & Resolve Multi-Mapping) - ASR1 is the working ticket for that effort, extended to the Store Report surface.
+
+---
+
+## Acceptance Criteria
+
+### Scenario 1: Identify & Merge Duplicates
+- **Given** duplicate store entries (by name/address/geo)
+- **When** the dedupe process runs
+- **Then** duplicates are merged into a single store record
+- **And** historical data tied to the merged stores is preserved
+
+### Scenario 2: Enforce 1:1 Mapping Where Applicable
+- **Given** stores improperly mapped to multiple banners/retailers
+- **When** resolved
+- **Then** a 1:1 mapping rule is enforced where applicable
+- **And** multi-mapping is corrected without data loss
+
+### Scenario 3: Store Report Reflects Clean Data
+- **Given** the cleanup is complete
+- **When** the Admin opens the Store Report
+- **Then** duplicates no longer appear
+
+---
+
+## Jira Reference (data/jira-tickets)
+- **CS-1419** - Admin CRM Data Upload Stores | Remove Duplicates & Resolve Multi-Mapping - EXACT match (dedupe script, 1:1 mapping, preserve history).
+- **CS-1502** - Investigate root cause of duplicate store creation (prevention).
+- **CS-1308 / CS-1309 / CS-1364 / CS-1342** - CRM Data Upload Stores edit/delete/upload issues (related store-data hygiene).
+- **CS-1418** - CRM Data Upload Stores: missing State field (store data quality).
+
+---
+
+## Related
+- **BMTRC1** - Retailer CRM store-level listing from Banner Page (depends on clean store data).
+- **AGENTS.md - Store module** - orphan domain; store dedupe supports making store data usable.
+
+---
+
+## Notes
+- Coordinate with CS-1419's cleanup script; ASR1 may be the Store-Report-facing view of the same work.
+- Define 'duplicate' matching rules (name, address, geo lat/long).

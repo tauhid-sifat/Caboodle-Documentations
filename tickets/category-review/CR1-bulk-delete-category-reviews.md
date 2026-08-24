@@ -1,6 +1,6 @@
-# Category Review | Remove All Reviews at Once Rather Than Page by Page
+﻿# Category Review | Remove All Reviews at Once Rather Than Page by Page
 
-**New Requirement** | User Story | Priority: TBD | Status: New
+**CR1** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -61,6 +61,6 @@ The Category Review list is paginated, and the current delete flow only allows r
 ---
 
 ## Notes
-- The current `DELETE Brokers/category-reviews` endpoint has no permission attribute — the new bulk endpoint should apply the same auth treatment (or add `[MustHavePermission]` if the existing one is being fixed).
+- The current `DELETE Brokers/category-reviews` endpoint has no permission attribute â€” the new bulk endpoint should apply the same auth treatment (or add `[MustHavePermission]` if the existing one is being fixed).
 - Consider whether the bulk delete should also handle calendar propagation (removing the review from brand calendars when deleted).
 - Selection state should persist client-side across pages (not reset on navigation).

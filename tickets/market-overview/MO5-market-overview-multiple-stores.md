@@ -1,6 +1,6 @@
-# Market Overview | Allow Multiple Stores Per Log Entry
+﻿# Market Overview | Allow Multiple Stores Per Log Entry
 
-**New Requirement** | User Story | Priority: TBD | Status: New
+**MO5** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -14,7 +14,7 @@
 
 ## Description
 
-Currently, a Market Overview record has a single optional `StoreID` field — one observation per store. If a broker rep observes the same product (same SKU, same status, same date) at multiple stores under the same banner, they must create a separate record for each store.
+Currently, a Market Overview record has a single optional `StoreID` field â€” one observation per store. If a broker rep observes the same product (same SKU, same status, same date) at multiple stores under the same banner, they must create a separate record for each store.
 
 This story introduces a many-to-many relationship between Market Overview and Store, so a single log entry can cover multiple store locations.
 
@@ -52,8 +52,8 @@ This story introduces a many-to-many relationship between Market Overview and St
 - Proposal: add a join table (e.g., `MarketOverviewStore`) with `MarketOverviewID` + `StoreID`
 
 ### API Changes
-- **POST/PUT MarketOverviews** — accept an array of `StoreIDs` instead of a single `StoreID`
-- **GET MarketOverviews** — include store names in the DTO (already has `StoreName` in `BrokerMarketOverviewDTO`)
+- **POST/PUT MarketOverviews** â€” accept an array of `StoreIDs` instead of a single `StoreID`
+- **GET MarketOverviews** â€” include store names in the DTO (already has `StoreName` in `BrokerMarketOverviewDTO`)
 - Existing single-`StoreID` clients should still work (accept single value as array of one)
 
 ### Frontend Changes
@@ -63,5 +63,5 @@ This story introduces a many-to-many relationship between Market Overview and St
 ---
 
 ## Notes
-- Store is currently optional — maintain that flexibility
+- Store is currently optional â€” maintain that flexibility
 - Confirm with business: does `NumberOfStores` in the DTO need to reflect the count of associated stores?

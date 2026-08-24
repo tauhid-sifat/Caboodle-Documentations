@@ -1,0 +1,54 @@
+# Brand Modules | TSS | EDLP in Stepper - Clarify Stepper vs Edit Promo Details
+
+**BMTSS3** | Question | Priority: TBD | Status: New
+
+---
+
+## User Story
+
+**As a** Brand user creating an EDLP promotion in Trade Spend Sandbox,
+**I want** clear guidance on when to enter the EDLP in the stepper versus in the Trade Spend Results page (Edit Promo Details),
+**So that** I enter it in the right place and avoid inconsistent data.
+
+---
+
+## Description
+
+An EDLP can currently be entered in two places:
+1. In the **stepper** (Step 4 metrics / EDLP setup), and
+2. In the **Trade Spend Results page**, under the **Edit Promo Details** section.
+
+We need to clarify the intended usage of each path. The answer may depend on whether the user is entering **both an EDLP and temporary price reductions (TPR)** versus **just an EDLP**. The guidance should state, per scenario, which entry point is correct and whether both should be supported or one deprecated.
+
+---
+
+## Acceptance Criteria
+
+### Scenario 1: Decision Recorded
+- **Given** the ambiguity exists
+- **When** product/Client decides the rule
+- **Then** the rule is documented here (e.g., 'EDLP-only uses stepper; EDLP+TPR uses Edit Promo Details', or vice versa)
+- **And** the chosen path is reflected in the UI guidance/help text
+
+### Scenario 2: Enforcement / Guidance
+- **Given** the decision
+- **When** a user enters an EDLP
+- **Then** the system guides them to the correct location (or clearly allows both without conflict)
+
+---
+
+## Jira Reference (data/jira-tickets)
+- **CS-1302** - 'Needs a little discussion to determine if this should be added in the Promo Results Page in View & Edit Promo Event Details or the Step 4 Metrics in the stepper. Leaning towards the Promo Results Page.' Direct match for this clarification.
+- **CS-575 / CS-576** - EDLP only implementation in stepper (stepper-side behavior).
+- Related EDLP bug cluster: **CS-1073, CS-1130, CS-1141-CS-1198, CS-1200, CS-1212, CS-1244, CS-1260, CS-1337** (EDLP creation/calculation bugs) - context for why the entry path matters.
+
+---
+
+## Related
+- **BMTSS6** - EDLP calendar/report rendering (downstream of correct EDLP entry).
+
+---
+
+## Notes
+- Determine whether entering EDLP in both places causes double-counting or override.
+- Consider deprecating one path if only one is correct.

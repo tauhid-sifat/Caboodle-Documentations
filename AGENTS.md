@@ -354,15 +354,16 @@ All ticket-spec files in `tickets/`, grouped by module (broker-dashboard/, categ
 | `CS-1305-broker-dashboard-full-spec.md` | Complete dashboard specification |
 | `CS-1072-broker-dashboard-landing-page.md` | Broker logo/branding on landing page |
 | `CS-1316-category-review-infinite-scroll.md` | Infinite scroll for Category Review |
-| `CS-NEW-broker-dashboard-task-board.md` | Simple 3-column Kanban |
+| `CS-NEW-broker-dashboard-task-board.md` | **REMOVED** — was Simple 3-column Kanban; contradicted wireframe (no Kanban). Superseded by **BD4** (`BD4-broker-dashboard-pipeline-task-board.md`). |
 | `CS-NEW-category-review-email-notification-cr2.md` | Email notification based on Lovable SendToContacts |
 | `CS-NEW-category-review-email-notification.md` | Category Review email notifications |
-| `CS-NEW-bulk-delete-category-reviews.md` | Bulk delete across pages |
-| `CS-NEW-category-review-page-size.md` | Page size selector |
-| `CS-NEW-distributor-apl-infinite-scroll.md` | Infinite scroll for Distributor APL |
-| `CS-NEW-distributor-apl-wholesale-cost-validation.md` | Wholesale Case Cost validation mismatch |
-| `CS-NEW-market-overview-*.md` (9 files) | MO1-MO9: DC edit, search, status hierarchy, store count, multiple stores, multiple brands, require DC, comment append, email notifications |
-| `CS-NEW-pm1-*.md` through `CS-NEW-pm7-*.md` (7 files) | PM1-PM7: Submission button, export, promo status, pin filters, grid format, multi-month events, dashboard logo |
+| `CR1-bulk-delete-category-reviews.md` | Bulk delete across pages (renamed from CS-NEW-bulk-delete) |
+| `CS-NEW-category-review-page-size.md` | Page size selector (superseded by CS-1316 infinite scroll) |
+| `DA1-distributor-apl-infinite-scroll.md` | Infinite scroll for Distributor APL (renamed from CS-NEW) |
+| `DA2-distributor-apl-wholesale-cost-validation.md` | Wholesale Case Cost validation mismatch (renamed from CS-NEW) |
+| `MO1`-`MO6`-market-overview-*.md (renamed) + `CS-NEW-market-overview-*.md` (MO7-MO9) | Market Overview MO1-MO9: DC edit, search, status hierarchy, store count, multiple stores, multiple brands, require DC, comment append, email notifications |
+| `CS-NEW-pm1-submission-button-fix.md` + `PM2`-`PM7`-*.md (renamed) | PM1-PM7: Submission button, export, promo status, pin filters, grid format, multi-month events, dashboard logo |
+| `BD1`-`BD4`-broker-dashboard-*.md | Broker Dashboard: BD1 dashboard shell (wireframe), BD2 assign time/person, BD3 filter my tasks/contact, BD4 Pipeline/Task view (Fellow-style, replaces old Kanban) |
 | `CS-NEW-broker-dashboard-pipeline.md` | Pipeline integration concept |
 | `CS-1424-data-sync-broker-distributor-apl.md` | APL data sync |
 | `CS-1403-apl-upload-unfi-upc-adjustment.md` | UNFI UPC truncation fix |

@@ -1,0 +1,49 @@
+# Reports | SPINS | Hide Market Insights
+
+**RBS1** | New Requirement | User Story | Priority: TBD | Status: New
+
+---
+
+## User Story
+
+**As a** user of the SPINS reports,
+**I want** the ability to hide the **Market Insights** section,
+**So that** I can focus on the core SPINS data without the insights panel.
+
+---
+
+## Description
+
+Provide a control (toggle/hide) to **hide Market Insights** within the SPINS reporting area. Users who don't need the insights view should be able to collapse/hide it.
+
+---
+
+## Acceptance Criteria
+
+### Scenario 1: Hide Market Insights
+- **Given** the SPINS report with a Market Insights section
+- **When** the user toggles it off
+- **Then** the Market Insights section is hidden
+- **And** the rest of the SPINS report remains usable
+
+### Scenario 2: Show Again
+- **Given** Market Insights is hidden
+- **When** the user toggles it back on
+- **Then** the section reappears with its content
+
+---
+
+## Jira Reference (data/jira-tickets)
+- **CS-1294** - Market Insights > Ask Caboodle? vs canned reporting: Needs Discussion (existing Market Insights discussion).
+- **CS-688** - Market Overview read-only tables to display market insights efficiently (Market Insights display context).
+
+---
+
+## Related
+- SPINS reporting module (DataHub / Report modules).
+
+---
+
+## Notes
+- Clarify whether 'hide' is per-user preference (persisted) or a session toggle.
+- Confirm whether hiding also stops any data/compute for insights (performance).

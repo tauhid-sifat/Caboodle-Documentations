@@ -1,6 +1,6 @@
-# Market Overview | Allow Editing DC in Edit Log
+﻿# Market Overview | Allow Editing DC in Edit Log
 
-**New Requirement** | User Story | Priority: TBD | Status: New
+**MO1** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -14,7 +14,7 @@
 
 ## Description
 
-The Market Overview record has a `DCID` field (distribution center), but the current edit flow does not allow changing it. When a broker rep records an observation with the wrong DC, they cannot correct it through the edit log — they would need to delete and recreate the record.
+The Market Overview record has a `DCID` field (distribution center), but the current edit flow does not allow changing it. When a broker rep records an observation with the wrong DC, they cannot correct it through the edit log â€” they would need to delete and recreate the record.
 
 The update endpoint (`PUT MarketOverviews`) and its handler (`UpdateMarketOverviewRequest`) should allow the DC field to be modified alongside the other editable fields (status, date, comment, training, case stack, launch date).
 
@@ -38,7 +38,7 @@ The update endpoint (`PUT MarketOverviews`) and its handler (`UpdateMarketOvervi
 ---
 
 ## Design Reference
-- **Entity:** `MarketOverview` — includes `DCID` field
+- **Entity:** `MarketOverview` â€” includes `DCID` field
 - **Endpoint:** `PUT MarketOverviews` (`MarketOverviewsController.cs:281`)
 - **Handler:** `UpdateMarketOverviewRequest`
 
@@ -46,4 +46,4 @@ The update endpoint (`PUT MarketOverviews`) and its handler (`UpdateMarketOvervi
 
 ## Notes
 - Ensure the DC dropdown/picker shows only distribution centers relevant to the record's distributor/banner context.
-- The `DCID` field on `MarketOverview` references a distribution center entity — confirm which DC table it targets (`DistributionCenter` vs `DistributorDc`).
+- The `DCID` field on `MarketOverview` references a distribution center entity â€” confirm which DC table it targets (`DistributionCenter` vs `DistributorDc`).

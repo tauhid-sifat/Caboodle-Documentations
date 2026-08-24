@@ -1,6 +1,6 @@
-# Market Overview | Add Text Search to List View
+﻿# Market Overview | Add Text Search to List View
 
-**New Requirement** | User Story | Priority: TBD | Status: New
+**MO2** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -16,7 +16,7 @@
 
 The Market Overview list view currently supports heavy filtering via dropdowns (statuses, brand, banner, retailer, SKU, DC, store, region IDs, created by, date range, case stack, training flags), but lacks a general text search input. Users must click through multiple filter fields to narrow down results.
 
-A single search bar that performs full-text search across key fields — SKU name, comment text, brand name, DC name — would speed up locating specific observations.
+A single search bar that performs full-text search across key fields â€” SKU name, comment text, brand name, DC name â€” would speed up locating specific observations.
 
 ---
 
@@ -48,7 +48,7 @@ A single search bar that performs full-text search across key fields — SKU nam
 ---
 
 ## API Reference
-- **Endpoint:** `GET .../MarketOverviews` (line 66) — currently filterable by IDs and flags
+- **Endpoint:** `GET .../MarketOverviews` (line 66) â€” currently filterable by IDs and flags
 - **Extension:** Add a `SearchTerm` query parameter, server-side searches across relevant text fields
 
 ---

@@ -1,0 +1,59 @@
+# Reports | Brand Distributor Report | Should User Be Able to Export the Data?
+
+**RDR1** | Question | Priority: TBD | Status: New
+
+---
+
+## User Story
+
+**As a** Brand user of the Distributor Report,
+**I want** clarity on whether the report data should be exportable,
+**So that** the export behavior matches the intended permission/use.
+
+---
+
+## Description
+
+Open question: **Should users be able to export the Brand Distributor Report data?** Today export behavior is inconsistent/buggy (exports all data instead of the specific report, or only the first page). This ticket captures the decision (allow export vs. restrict) and the related fix if export is permitted.
+
+- If **allowed**: export must respect the current filter/report scope (not dump all data) and export the full result set (not just page 1).
+- If **not allowed**: remove/disable the export control for this report.
+
+---
+
+## Acceptance Criteria
+
+### Scenario 1: Decision Recorded
+- **Given** the export question is raised
+- **When** product/Client decides
+- **Then** the decision (export allowed vs. restricted) is documented here
+- **And** the implementation ticket references it
+
+### Scenario 2a: Export Allowed (if decided)
+- **Given** export is permitted
+- **When** the user exports the Distributor Report
+- **Then** only the filtered/current report data is exported (not all data)
+- **And** the full result set exports (not just the first page)
+
+### Scenario 2b: Export Restricted (if decided)
+- **Given** export is not permitted
+- **When** the user views the report
+- **Then** no export control is offered (or it is disabled with explanation)
+
+---
+
+## Jira Reference (data/jira-tickets)
+- **CS-1334** - Improve Distributor Report Filtering, Naming and Export (direct overlap - export improvement).
+- **CS-1277** - Distributor Report Discussion: Individual Reports not Exporting Properly (exporting all data rather than specific report).
+- **CS-278** - APL Distributor Report only Exports first page (first-page export bug).
+
+---
+
+## Related
+- **RDR2** - rolling 12-month scope for the same report (export scope should honor the same filter window).
+
+---
+
+## Notes
+- Confirm whether 'export' means CSV/Excel and whether permissions differ by role.
+- Coordinate with the broader Distributor Report export improvements (CS-1334).

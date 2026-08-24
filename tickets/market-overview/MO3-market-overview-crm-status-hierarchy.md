@@ -1,6 +1,6 @@
-# Market Overview | Document and Define Status Update Hierarchy to Brand CRM
+﻿# Market Overview | Document and Define Status Update Hierarchy to Brand CRM
 
-**New Requirement** | User Story | Priority: High | Status: New
+**MO3** | New Requirement | User Story | Priority: High | Status: New
 
 ---
 
@@ -16,25 +16,25 @@
 
 When a Market Overview record is created, `PushMarketOverviewChangesIntoCRM` syncs the observation data (including `SkuStatus`) into the CRM module's `BannerSKU.Status`. However, there is currently:
 
-1. **Undocumented hierarchy** — certain SkuStatus values cannot be overridden by Market Overview. Specifically:
+1. **Undocumented hierarchy** â€” certain SkuStatus values cannot be overridden by Market Overview. Specifically:
    - If Brand CRM status is **Discontinued**, Market Overview **cannot** change it
    - If Brand CRM status is **Active** or lower (**Commit, Approved, Pending, NotActive**), Market Overview **can** update it
-2. **Unclear target** — `MarketOverview.SKUID` is ambiguous: does it reference `BannerSKU` or `ProductSpecification`?
-3. **Unsynced on edit/delete** — The sync only fires on create. Edits to Market Overview status or deletion of records are not reflected in CRM.
+2. **Unclear target** â€” `MarketOverview.SKUID` is ambiguous: does it reference `BannerSKU` or `ProductSpecification`?
+3. **Unsynced on edit/delete** â€” The sync only fires on create. Edits to Market Overview status or deletion of records are not reflected in CRM.
 
 This story requires confirming the implemented hierarchy rules with engineering (Bijoy) and documenting them.
 
 ### Confirmed Status Hierarchy (from client meeting)
 ```
-Pending → Approved → Commit → Active → Discontinued
-Pending → Declined (dead-end, never placed)
-Pending → NotActive (dead-end, never activated)
+Pending â†’ Approved â†’ Commit â†’ Active â†’ Discontinued
+Pending â†’ Declined (dead-end, never placed)
+Pending â†’ NotActive (dead-end, never activated)
 ```
 
 **Rules:**
-- **Discontinued** is terminal — Market Overview cannot overwrite it
-- **NotActive/Pending** — any status can change it (lowest priority)
-- **Active/Commit/Approved** — Market Overview can update to a higher or equal status, but cannot downgrade to Discontinued if brand set it
+- **Discontinued** is terminal â€” Market Overview cannot overwrite it
+- **NotActive/Pending** â€” any status can change it (lowest priority)
+- **Active/Commit/Approved** â€” Market Overview can update to a higher or equal status, but cannot downgrade to Discontinued if brand set it
 
 ---
 
@@ -64,17 +64,17 @@ Pending → NotActive (dead-end, never activated)
 
 | Current CRM Status | Can Market Overview Override? | Notes |
 |--------------------|------------------------------|-------|
-| Discontinued | ❌ No | Terminal — broker observation cannot change |
-| Active | ✅ Yes | Can be changed to higher or equal status |
-| Commit | ✅ Yes | |
-| Approved | ✅ Yes | |
-| Pending | ✅ Yes | |
-| NotActive | ✅ Yes | Can be changed to any status |
-| Declined | ❌ No (assumed) | Dead-end — confirm with engineering |
+| Discontinued | âŒ No | Terminal â€” broker observation cannot change |
+| Active | âœ… Yes | Can be changed to higher or equal status |
+| Commit | âœ… Yes | |
+| Approved | âœ… Yes | |
+| Pending | âœ… Yes | |
+| NotActive | âœ… Yes | Can be changed to any status |
+| Declined | âŒ No (assumed) | Dead-end â€” confirm with engineering |
 
-**Status flow confirmed:** Pending → Approved → Commit → Active → Discontinued
+**Status flow confirmed:** Pending â†’ Approved â†’ Commit â†’ Active â†’ Discontinued
 
-**Next step:** Review with Bijoy what is currently implemented in the backend to ensure it matches these rules. Per the client, Bijoy has the hierarchy documented somewhere — verify alignment.
+**Next step:** Review with Bijoy what is currently implemented in the backend to ensure it matches these rules. Per the client, Bijoy has the hierarchy documented somewhere â€” verify alignment.
 
 ## Business Rules Questions (to resolve with stakeholders)
 
@@ -86,7 +86,7 @@ Pending → NotActive (dead-end, never activated)
 ---
 
 ## Reference
-- **Trigger:** `CreateMarketOverviewsRequest.cs:113` — `ISharedDataService.PushMarketOverviewChangesIntoCRM`
-- **Source entity:** `MarketOverview.cs` — fields include `SKUID`, `SkuStatus` (int)
-- **Target entity:** `BannerSKU.cs` — fields include `Status` (untyped int), `ActiveDate`, `DiscoDate`
+- **Trigger:** `CreateMarketOverviewsRequest.cs:113` â€” `ISharedDataService.PushMarketOverviewChangesIntoCRM`
+- **Source entity:** `MarketOverview.cs` â€” fields include `SKUID`, `SkuStatus` (int)
+- **Target entity:** `BannerSKU.cs` â€” fields include `Status` (untyped int), `ActiveDate`, `DiscoDate`
 - **SkuStatus values:** Active (1), Pending, NotActive (3), Declined, Discontinued (5), Approved, Commit

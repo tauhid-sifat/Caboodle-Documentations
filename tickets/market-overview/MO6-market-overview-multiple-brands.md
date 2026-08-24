@@ -1,6 +1,6 @@
-# Market Overview | Allow One Retailer with Multiple Brands Per Log Entry
+﻿# Market Overview | Allow One Retailer with Multiple Brands Per Log Entry
 
-**New Requirement** | User Story | Priority: TBD | Status: New
+**MO6** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -14,7 +14,7 @@
 
 ## Description
 
-Currently, each Market Overview record carries a single `BrandID` and `RetailerID`. A broker rep visiting a retailer (e.g., Costco) may represent 10+ brands. Today they must repeat the "Add Log" process 10 separate times — once per brand.
+Currently, each Market Overview record carries a single `BrandID` and `RetailerID`. A broker rep visiting a retailer (e.g., Costco) may represent 10+ brands. Today they must repeat the "Add Log" process 10 separate times â€” once per brand.
 
 Per the client meeting, the desired solution is a **sheet-based multi-brand log entry**:
 
@@ -23,7 +23,7 @@ Per the client meeting, the desired solution is a **sheet-based multi-brand log 
 3. User clicks through each brand's SKUs to mark status (click, click, click)
 4. One submit saves all observations across all brands in a single action
 
-The client has a mockup of this flow — request it from Constance.
+The client has a mockup of this flow â€” request it from Constance.
 
 ---
 
@@ -69,17 +69,17 @@ The client has a mockup of this flow — request it from Constance.
 - Each brand's observations are stored as individual `MarketOverview` records internally, but created in bulk
 
 ### API Changes
-- **POST MarketOverviews** — accept a bulk payload: `{ retailerID, bannerID, storeIDs?, date, observations: [{ brandID, skuID, status, comment? }, ...] }`
+- **POST MarketOverviews** â€” accept a bulk payload: `{ retailerID, bannerID, storeIDs?, date, observations: [{ brandID, skuID, status, comment? }, ...] }`
 - Each observation creates a separate `MarketOverview` record server-side
-- **GET MarketOverviews** — support filtering by multiple brand IDs
+- **GET MarketOverviews** â€” support filtering by multiple brand IDs
 
 ### Scope & Relationship Impact
 - This change connects to the multi-store story (`CS-NEW-market-overview-multiple-stores.md`)
-- If both are implemented, a single log entry = 1 retailer × N brands × N stores × N SKUs
+- If both are implemented, a single log entry = 1 retailer Ã— N brands Ã— N stores Ã— N SKUs
 
 ---
 
 ## Notes
-- Client has a mockup — request from Constance to confirm UI layout
+- Client has a mockup â€” request from Constance to confirm UI layout
 - The per-brand SkuStatus is essential here since different brands have different SKUs with different statuses
 - The "sheet" approach eliminates the need to repeat "Add Log" per brand (current complaint)
