@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Dashboard — Wireframe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --teal: #14B8A6;
+      --teal-600: #0D9488;
+      --teal-50: #F0FDFA;
+      --teal-100: #CCFBF1;
+      --orange: #F5A623;
+      --page-bg: #F5F6F8;
+      --card-bg: #FFFFFF;
+      --card-radius: 16px;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.06);
+      --text: #1F2937;
+      --muted: #6B7280;
+      --border: #E5E7EB;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--page-bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+    h1,h2,h3 { font-family: 'Inter', sans-serif; }
+    a { text-decoration: none; }
+
+    /* ===== PAGE SHELL ===== */
+    .top-nav {
+      height: 64px;
+      background: #fff;
+      border-bottom: 1px solid #E5E7EB;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center;
+    }
+    .nav-inner {
+      max-width: 1280px; width: 100%; margin: 0 auto;
+      padding: 0 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 100%;
+    }
+    .nav-left { display: flex; align-items: center; gap: 28px; height: 100%; }
+    .logo {
+      font-size: 1.55rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1;
+      user-select: none; cursor: pointer;
+    }
+    .logo .cab { color: #111827; }
+    .logo .oodle { color: var(--teal); }
+    .nav-tabs { display: flex; align-items: center; gap: 4px; height: 100%; list-style: none; }
+    .nav-tabs a {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 7px 14px; border-radius: 999px;
+      font-size: 0.82rem; font-weight: 500; color: var(--muted);
+      transition: all 0.15s; white-space: nowrap;
+    }
+    .nav-tabs a:hover { color: var(--text); background: #F3F4F6; }
+    .nav-tabs a.active { background: var(--teal-50); color: var(--teal-600); border: 1px solid #99F6E4; }
+    .nav-tabs a svg { width: 16px; height: 16px; flex-shrink: 0; opacity: 0.85; }
+    .nav-right { display: flex; align-items: center; gap: 18px; }
+    .bell-btn {
+      width: 36px; height: 36px; border-radius: 999px; display: flex; align-items: center; justify-content: center;
+      border: 0; background: transparent; cursor: pointer; position: relative; color: #6B7280;
+    }
+    .bell-btn:hover { background: #F3F4F6; color: var(--text); }
+    .bell-dot { position: absolute; top: 6px; right: 7px; width: 8px; height: 8px; background: #EF4444; border-radius: 50%; border: 2px solid #fff; }
+    .brand-switcher {
+      display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 6px 8px; border-radius: 10px; transition: background 0.15s;
+    }
+    .brand-switcher:hover { background: #F3F4F6; }
+    .avatar {
+      width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: #fff;
+      display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
+      flex-shrink: 0;
+    }
+    .brand-name { font-size: 0.84rem; font-weight: 600; color: #111827; display: flex; align-items: center; gap: 6px; }
+    .brand-name svg { width: 14px; height: 14px; color: #9CA3AF; }
+
+    /* ===== CONTENT SHELL ===== */
+    .page { max-width: 1280px; margin: 0 auto; padding: 28px 32px 40px; display: flex; flex-direction: column; gap: 24px; }
+    .grid-60-40 { display: grid; grid-template-columns: 3fr 2fr; gap: 24px; align-items: stretch; }
+    .grid-55-45 { display: grid; grid-template-columns: 11fr 9fr; gap: 24px; align-items: stretch; }
+    @media (max-width: 1024px) { .grid-60-40, .grid-55-45 { grid-template-columns: 1fr; } .kpi-row { grid-template-columns: repeat(2,1fr) !important; } }
+    @media (max-width: 640px) { .nav-inner { padding: 0 16px; } .page { padding: 18px 16px 32px; } .nav-tabs { display: none; } .kpi-row { grid-template-columns: 1fr !important; } }
+
+    .card {
+      background: var(--card-bg); border-radius: 16px;
+      box-shadow: var(--card-shadow); border: 1px solid #F0F0F3;
+      padding: 24px;
+      display: flex; flex-direction: column; height: 100%;
+    }
+    .card-hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; flex-shrink: 0; }
+    .card-title { font-size: 0.95rem; font-weight: 700; color: #111827; display: flex; align-items: center; gap: 8px; }
+    .card-link { font-size: 0.78rem; font-weight: 600; color: var(--teal-600); display: inline-flex; align-items: center; gap: 4px; cursor: pointer; }
+    .card-link:hover { text-decoration: underline; }
+    .hbar-rows, .promo-rows, .task-rows { flex: 1; }
+    .trend-wrap { flex: 1; display: flex; align-items: center; flex-direction: column; }
+
+    /* ===== ASK CAB BAR ===== */
+    .ask-bar {
+      display: flex; align-items: center; gap: 12px;
+      background: #fff; border: 1px solid #E5E7EB; border-radius: 16px;
+      padding: 12px 16px; box-shadow: var(--card-shadow);
+    }
+    .ask-bar svg { width: 18px; height: 18px; color: var(--teal); flex-shrink: 0; }
+    .ask-input {
+      flex: 1; border: 0; outline: none; font-size: 0.88rem; color: var(--text); background: transparent; font-family: inherit;
+    }
+    .ask-input::placeholder { color: #9CA3AF; }
+    .ask-hint { font-size: 0.7rem; color: #9CA3AF; white-space: nowrap; display: flex; align-items: center; gap: 6px; }
+    .ask-badge { font-size: 0.62rem; font-weight: 600; background: #F3F4F6; color: #6B7280; padding: 2px 7px; border-radius: 999px; border: 1px solid #E5E7EB; }
+
+    /* ===== KPI ROW ===== */
+    .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .kpi-card {
+      background: var(--card-bg); border-radius: 16px; box-shadow: var(--card-shadow); border: 1px solid #F0F0F3;
+      padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; cursor: pointer; transition: all 0.15s; position: relative; overflow: hidden;
+    }
+    .kpi-card:hover { border-color: #BFDBFE; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transform: translateY(-1px); }
+    .kpi-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+    .kpi-ico { width: 32px; height: 32px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .kpi-ico svg { width: 16px; height: 16px; }
+    .kpi-ico.teal { background: var(--teal-50); color: var(--teal-600); }
+    .kpi-ico.orange { background: #FFF7ED; color: #EA580C; }
+    .kpi-ico.blue { background: #EFF6FF; color: #2563EB; }
+    .kpi-ico.purple { background: #F5F3FF; color: #7C3AED; }
+    .kpi-trend { font-size: 0.68rem; font-weight: 700; padding: 3px 7px; border-radius: 999px; white-space: nowrap; }
+    .kpi-trend.up { background: #DCFCE7; color: #15803D; }
+    .kpi-trend.warn { background: #FFFBEB; color: #B45309; border: 1px solid #FDE68A; }
+    .kpi-trend.neutral { background: #F3F4F6; color: #6B7280; }
+    .kpi-val { font-size: 1.55rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1; color: #111827; }
+    .kpi-lbl { font-size: 0.75rem; font-weight: 600; color: #6B7280; }
+    .kpi-sub { font-size: 0.7rem; color: #9CA3AF; line-height: 1.3; }
+    .kpi-link { font-size: 0.72rem; font-weight: 600; color: var(--teal-600); display: inline-flex; align-items: center; gap: 4px; margin-top: 2px; }
+    .kpi-progress { height: 4px; background: #F3F4F6; border-radius: 999px; overflow: hidden; margin-top: 6px; }
+    .kpi-progress-fill { height: 100%; border-radius: 999px; }
+
+    /* ===== PIPELINE / SANDBOX FUNNEL ===== */
+    .pipeline-card { padding: 20px 24px; }
+    .pipeline-hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; gap: 12px; flex-wrap: wrap; }
+    .funnel { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .funnel-step {
+      background: #F9FAFB; border: 1px solid #F3F4F6; border-radius: 12px; padding: 16px;
+      display: flex; flex-direction: column; gap: 8px; position: relative;
+    }
+    .funnel-step.blocked { background: #FEF2F2; border-color: #FECACA; }
+    .funnel-step.pending { background: #FFFBEB; border-color: #FDE68A; }
+    .funnel-step.draft { background: #F0FDFA; border-color: #99F6E4; }
+    .funnel-num { font-size: 1.6rem; font-weight: 800; line-height: 1; letter-spacing: -0.03em; }
+    .funnel-num.draft { color: var(--teal-600); }
+    .funnel-num.pending { color: #B45309; }
+    .funnel-num.blocked { color: #DC2626; }
+    .funnel-lbl { font-size: 0.78rem; font-weight: 700; color: #111827; }
+    .funnel-sub { font-size: 0.72rem; color: #6B7280; line-height: 1.4; }
+    .funnel-arrow { position: absolute; right: -12px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: #fff; border: 1px solid #E5E7EB; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #9CA3AF; z-index: 1; }
+    .funnel-step:last-child .funnel-arrow { display: none; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; background: var(--teal); color: #fff; border: 0; border-radius: 999px; font-size: 0.78rem; font-weight: 600; cursor: pointer; font-family: inherit; transition: background 0.15s; }
+    .btn-primary:hover { background: var(--teal-600); }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; background: #fff; color: #374151; border: 1px solid #E5E7EB; border-radius: 999px; font-size: 0.78rem; font-weight: 600; cursor: pointer; font-family: inherit; }
+    .btn-ghost:hover { background: #F9FAFB; }
+
+    /* ===== ALERT BANNER ===== */
+    .alert-banner {
+      display: flex; align-items: center; gap: 12px; padding: 12px 16px;
+      background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 12px; font-size: 0.8rem; color: #92400E;
+    }
+    .alert-banner svg { width: 18px; height: 18px; color: #D97706; flex-shrink: 0; }
+    .alert-banner strong { color: #78350F; }
+    .alert-banner a { color: #B45309; font-weight: 600; text-decoration: underline; cursor: pointer; }
+
+    /* ===== ROW 1a: Horizontal bar chart ===== */
+    .hbar-rows { display: flex; flex-direction: column; gap: 16px; }
+    .hbar-row { display: grid; grid-template-columns: 150px 1fr; align-items: center; gap: 14px; }
+    .hbar-label { font-size: 0.82rem; color: #374151; text-align: right; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .hbar-track { height: 18px; background: #F3F4F6; border-radius: 999px; overflow: hidden; position: relative; }
+    .hbar-fill { height: 100%; background: var(--orange); border-radius: 999px; transition: width 0.6s ease; }
+    .hbar-axis {
+      display: flex; justify-content: space-between; margin-top: 14px; padding-left: 164px;
+      font-size: 0.68rem; color: #9CA3AF; border-top: 1px solid #F3F4F6; padding-top: 8px;
+    }
+
+    /* ===== ROW 1b: Top promotions ===== */
+    .promo-rows { display: flex; flex-direction: column; gap: 14px; }
+    .promo-row { display: grid; grid-template-columns: 1fr 120px 54px; align-items: center; gap: 14px; }
+    .promo-name { font-size: 0.84rem; color: #1F2937; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .promo-track { height: 8px; background: #E5E7EB; border-radius: 999px; overflow: hidden; }
+    .promo-fill { height: 100%; background: linear-gradient(90deg, #14B8A6, #2DD4BF); border-radius: 999px; }
+    .promo-val { font-size: 0.84rem; font-weight: 600; color: #111827; text-align: right; }
+
+    /* ===== ROW 2a: Line chart ===== */
+    .trend-wrap { padding-top: 4px; gap: 10px; }
+    .trend-legend { display: flex; align-items: center; gap: 16px; font-size: 0.72rem; color: #6B7280; font-weight: 500; }
+    .legend-dot { width: 10px; height: 3px; border-radius: 999px; display: inline-block; }
+    .legend-dot.solid { background: var(--teal); }
+    .legend-dot.dashed { background: repeating-linear-gradient(90deg, #9CA3AF 0 4px, transparent 4px 7px); height: 2px; width: 16px; }
+    .trend-svg { width: 100%; height: 170px; display: block; overflow: visible; }
+    .trend-grid line { stroke: #F3F4F6; stroke-width: 1; }
+    .trend-axis-y text { font-size: 9px; fill: #9CA3AF; }
+    .trend-axis-x text { font-size: 10px; fill: #6B7280; font-weight: 500; }
+    .trend-line { fill: none; stroke: var(--teal); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .trend-budget { fill: none; stroke: #9CA3AF; stroke-width: 2; stroke-dasharray: 6 6; stroke-linecap: round; }
+    .trend-dot { fill: var(--teal); stroke: #fff; stroke-width: 2; }
+    .trend-dot-budget { fill: #fff; stroke: #9CA3AF; stroke-width: 2; }
+
+    /* ===== ROW 2b: CRM tasks ===== */
+    .task-toolbar { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+    .filter-pills { display: flex; gap: 6px; }
+    .filter-pill {
+      font-size: 0.7rem; font-weight: 600; padding: 5px 10px; border-radius: 999px; border: 1px solid #E5E7EB;
+      background: #fff; color: #6B7280; cursor: pointer; font-family: inherit; transition: all 0.15s; white-space: nowrap;
+    }
+    .filter-pill.active { background: var(--teal-50); color: var(--teal-600); border-color: #99F6E4; }
+    .task-quick-add { display: flex; gap: 8px; margin-bottom: 12px; }
+    .task-quick-add input { flex: 1; padding: 8px 12px; border: 1px solid #E5E7EB; border-radius: 10px; font-size: 0.82rem; font-family: inherit; outline: none; }
+    .task-quick-add input:focus { border-color: var(--teal); }
+    .task-quick-add button { padding: 8px 14px; background: var(--teal); color: #fff; border: 0; border-radius: 10px; font-size: 0.78rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .task-rows { display: flex; flex-direction: column; gap: 10px; max-height: 260px; overflow-y: auto; padding-right: 2px; }
+    .crm-row {
+      display: flex; align-items: center; gap: 10px;
+      background: #F9FAFB; border: 1px solid #F3F4F6; border-radius: 10px;
+      padding: 10px 12px; cursor: pointer; transition: border-color 0.15s;
+    }
+    .crm-row:hover { border-color: #E5E7EB; }
+    .crm-row.done { opacity: 0.6; }
+    .crm-check { width: 18px; height: 18px; border-radius: 50%; border: 2px solid #D1D5DB; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #fff; cursor: pointer; }
+    .crm-check.checked { background: var(--teal); border-color: var(--teal); color: #fff; }
+    .crm-check svg { width: 10px; height: 10px; display: none; }
+    .crm-check.checked svg { display: block; }
+    .pill {
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+      padding: 4px 8px; border-radius: 999px; white-space: nowrap; flex-shrink: 0;
+    }
+    .pill.in_progress { background: #E0F2FE; color: #0E7490; border: 1px solid #BAE6FD; }
+    .pill.to_do { background: #F3F4F6; color: #6B7280; border: 1px solid #E5E7EB; }
+    .pill.completed { background: #DCFCE7; color: #15803D; border: 1px solid #BBF7D0; }
+    .crm-task { flex: 1; font-size: 0.84rem; font-weight: 500; color: #111827; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .crm-task.done { text-decoration: line-through; color: #9CA3AF; }
+    .crm-retailer { font-size: 0.75rem; color: #9CA3AF; font-weight: 500; flex-shrink: 0; }
+    .show-done-link { font-size: 0.72rem; font-weight: 600; color: var(--teal-600); cursor: pointer; margin-top: 8px; display: inline-flex; align-items: center; gap: 4px; }
+
+    /* ===== ROW 3: Promotional Calendar ===== */
+    .section-title { font-size: 1.25rem; font-weight: 800; color: #111827; letter-spacing: -0.02em; }
+    .cal-card { background: var(--card-bg); border-radius: var(--card-radius); box-shadow: var(--card-shadow); border: 1px solid #F0F0F3; overflow: hidden; }
+    .cal-tabs { display: flex; align-items: center; gap: 28px; padding: 0 24px; border-bottom: 1px solid #E5E7EB; }
+    section:last-of-type { display: flex; flex-direction: column; gap: 16px; }
+    .cal-tab {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 2px; font-size: 0.84rem; font-weight: 600; cursor: pointer;
+      border-bottom: 2px solid transparent; margin-bottom: -1px; color: #6B7280; transition: all 0.15s;
+      background: none; border-top: 0; border-left: 0; border-right: 0; font-family: inherit;
+    }
+    .cal-tab.active { color: var(--teal-600); border-bottom-color: var(--teal); }
+    .cal-tab svg { width: 16px; height: 16px; }
+    .legend {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      padding: 12px 24px; border-bottom: 1px solid #F3F4F6; background: #FCFCFD;
+    }
+    .legend-item { display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; color: #6B7280; font-weight: 500; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+    .dot.active { background: #3B82F6; }
+    .dot.cancelled { background: #EF4444; }
+    .dot.pending { background: #F59E0B; }
+    .dot.did_not_run { background: #9CA3AF; }
+    .dot.declined { background: #991B1B; }
+    .dot.retailer_approved { background: #22C55E; }
+    .dot.completed { background: #111827; }
+
+    .gantt-wrap { overflow-x: auto; }
+    .gantt { width: 100%; border-collapse: collapse; min-width: 980px; }
+    .gantt th {
+      text-align: center; padding: 10px 6px; font-size: 0.68rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.06em; color: #9CA3AF; border-bottom: 1px solid #E5E7EB; background: #fff;
+      white-space: nowrap;
+    }
+    .gantt th:first-child { text-align: left; padding-left: 24px; min-width: 170px; position: sticky; left: 0; z-index: 2; background: #fff; }
+    .gantt td { padding: 12px 6px; border-bottom: 1px solid #F3F4F6; text-align: center; vertical-align: middle; height: 48px; }
+    .gantt td:first-child {
+      text-align: left; padding-left: 24px; font-size: 0.84rem; font-weight: 600; color: #111827;
+      position: sticky; left: 0; background: #fff; z-index: 1; border-right: 1px solid #F3F4F6;
+    }
+    .gantt tr:hover td { background: #F9FAFB; }
+    .gantt tr:hover td:first-child { background: #F9FAFB; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 600;
+      white-space: nowrap; max-width: 158px; overflow: hidden; text-overflow: ellipsis;
+      border: 1px solid transparent;
+    }
+    .chip .c-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    .chip.pending { background: #FFFBEB; color: #92400E; border-color: #FDE68A; }
+    .chip.pending .c-dot { background: #F59E0B; }
+    .chip.active { background: #EFF6FF; color: #1D4ED8; border-color: #BFDBFE; }
+    .chip.active .c-dot { background: #3B82F6; }
+    .chip.declined { background: #FEF2F2; color: #991B1B; border-color: #FECACA; }
+    .chip.declined .c-dot { background: #991B1B; }
+    .chip.completed { background: #F3F4F6; color: #111827; border-color: #E5E7EB; }
+    .chip.completed .c-dot { background: #111827; }
+    .chip.retailer_approved { background: #F0FDF4; color: #166534; border-color: #BBF7D0; }
+    .chip.retailer_approved .c-dot { background: #22C55E; }
+    .chip.cancelled { background: #FEF2F2; color: #DC2626; border-color: #FECACA; }
+    .chip.cancelled .c-dot { background: #EF4444; }
+    .chip.did_not_run { background: #F9FAFB; color: #6B7280; border-color: #E5E7EB; }
+    .chip.did_not_run .c-dot { background: #9CA3AF; }
+    .chip.cont::after { content: '→'; margin-left: 2px; opacity: 0.6; }
+    .notes-empty { padding: 48px 24px; text-align: center; color: #9CA3AF; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== TOP NAV ===== -->
+  <header class="top-nav">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="logo" onclick="location.reload()"><span class="cab">cab</span><span class="oodle">oodle</span></div>
+        <nav class="nav-tabs" aria-label="Primary">
+          <a href="#" class="active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect></svg>
+            Overview
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            Management
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Promotional Planning
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            Reports
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21a8 8 0 1 0-16 0"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            CRM
+          </a>
+        </nav>
+      </div>
+      <div class="nav-right">
+        <button class="bell-btn" aria-label="Notifications">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-6 9-6 9h16s-6-2-6-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          <span class="bell-dot"></span>
+        </button>
+        <div class="brand-switcher">
+          <div class="avatar">ZA</div>
+          <div class="brand-name">Zucchini Beanie Demo Brand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PAGE CONTENT ===== -->
+  <main class="page">
+
+    <!-- ASK CAB -->
+    <div class="ask-bar" title="Intelligence module is placeholder — deterministic compiler emits SELECT-only SQL (index.md DEC-062)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input class="ask-input" placeholder="Ask Caboodle — e.g. Which promos went over budget at Kroger last quarter?" onkeydown="if(event.key==='Enter'){alert('Ask Caboodle is placeholder-only (DEC-062): LLM -> QueryPlan -> parameterized SELECT with Deleted/BrandID filters, 1000-row cap. No backend wired in this wireframe.');}">
+      <span class="ask-hint">Press Enter <span class="ask-badge">AI · 1000 row cap</span></span>
+    </div>
+
+    <!-- KPI ROW (Brand equivalents of Broker KPIs REQ-027 / DEC-038) -->
+    <section class="kpi-row" id="kpiRow"></section>
+
+    <!-- DATA HEALTH ALERT (DEC-058 / BUSINESS.md DataHub) -->
+    <div class="alert-banner" id="alertBanner">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+      <span><strong>12 unmapped records</strong> from last UNFI + KeHE sync need resolution — sales for 3 SKUs are excluded from reports until mapped. <a onclick="alert('Would open DataHub -> Unmapped Records (DEC-058) — suggestions at 0.65 cutoff, aliases as Suggested)')">Resolve now →</a></span>
+      <span style="margin-left:auto; font-size:0.7rem; color:#B45309; white-space:nowrap; cursor:pointer;" onclick="this.parentElement.style.display='none'">Dismiss ✕</span>
+    </div>
+
+    <!-- ROW 1: Top SKUs + Top promotions (60/40) -->
+    <section class="grid-60-40">
+      <!-- 3a -->
+      <div class="card">
+        <div class="card-hdr">
+          <h2 class="card-title">Top SKUs by volume</h2>
+        </div>
+        <div class="hbar-rows" id="hbarRows"></div>
+        <div class="hbar-axis">
+          <span>0</span><span>50</span><span>100</span><span>150</span><span>200</span><span>250</span><span>300</span>
+        </div>
+      </div>
+      <!-- 3b -->
+      <div class="card">
+        <div class="card-hdr">
+          <h2 class="card-title">Top promotions</h2>
+          <a class="card-link">View all →</a>
+        </div>
+        <div class="promo-rows" id="promoRows"></div>
+      </div>
+    </section>
+
+    <!-- SANDBOX FUNNEL (DEC-045 / REQ-040 / Flow 1) -->
+    <section class="card pipeline-card">
+      <div class="pipeline-hdr">
+        <h2 class="card-title">Trade Spend Sandbox — promotion pipeline</h2>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="btn-ghost" onclick="alert('Would open TSS 4-step wizard (Step 1 Retailers/Banners -> Step 2 SKUs/Velocity -> Step 3 Events Normal/EDLP -> Step 4 Fees)')">Open Sandbox</button>
+          <button class="btn-primary" onclick="alert('Push to Approved: destructive REPLACE (DEC-055) — validates pricing exists, archives version, appears in Promotional Calendar & Broker Promo Management')">Push to Approved</button>
+        </div>
+      </div>
+      <div class="funnel" id="funnel"></div>
+      <div style="margin-top:12px; font-size:0.72rem; color:#6B7280; display:flex; gap:16px; flex-wrap:wrap;">
+        <span>● Destructive REPLACE: push re-deletes/re-inserts live events/fees (DEC-055)</span>
+        <span>● Blocked = missing pricing (must exist before push)</span>
+        <span>● Version archived on every push (DEC-045)</span>
+      </div>
+    </section>
+
+    <!-- ROW 2: Monthly spend trend + CRM tasks (55/45) -->
+    <section class="grid-55-45">
+      <!-- 4a -->
+      <div class="card">
+        <div class="card-hdr">
+          <h2 class="card-title">Monthly spend trend <span style="font-weight:500; color:#6B7280; font-size:0.78rem; margin-left:6px;">Actual vs Budget</span></h2>
+          <a class="card-link">Monthly report →</a>
+        </div>
+        <div class="trend-wrap">
+          <div class="trend-legend">
+            <span style="display:inline-flex; align-items:center; gap:6px;"><span class="legend-dot solid"></span> Actual</span>
+            <span style="display:inline-flex; align-items:center; gap:6px;"><span class="legend-dot dashed"></span> Budget</span>
+          </div>
+          <svg class="trend-svg" id="trendSvg" viewBox="0 0 560 170" preserveAspectRatio="none"></svg>
+          <div style="display:flex; gap:12px; font-size:0.72rem; margin-top:4px;">
+            <span style="background:#EFF6FF; color:#1D4ED8; padding:3px 8px; border-radius:999px; font-weight:600; border:1px solid #BFDBFE;">Net basis 23.8% (DEC-034)</span>
+            <span style="background:#F0FDF4; color:#15803D; padding:3px 8px; border-radius:999px; font-weight:600; border:1px solid #BBF7D0;">Lift = velocity-based (DEC-035)</span>
+          </div>
+        </div>
+      </div>
+      <!-- 4b -->
+      <div class="card">
+        <div class="card-hdr">
+          <h2 class="card-title">CRM plan tasks</h2>
+          <a class="card-link" onclick="document.getElementById('taskQuickAdd').focus()">+ Add task</a>
+        </div>
+        <div class="task-toolbar">
+          <div class="filter-pills" id="taskFilters">
+            <button class="filter-pill active" data-f="all" onclick="setTaskFilter('all')">All</button>
+            <button class="filter-pill" data-f="IN_PROGRESS" onclick="setTaskFilter('IN_PROGRESS')">In Progress</button>
+            <button class="filter-pill" data-f="TO_DO" onclick="setTaskFilter('TO_DO')">To-Do</button>
+            <button class="filter-pill" data-f="COMPLETED" onclick="setTaskFilter('COMPLETED')">Completed</button>
+          </div>
+        </div>
+        <div class="task-quick-add">
+          <input id="taskQuickAdd" placeholder="Quick add task — press Enter" onkeydown="if(event.key==='Enter')quickAddTask()">
+          <button onclick="quickAddTask()">Add</button>
+        </div>
+        <div class="task-rows" id="crmRows"></div>
+        <a class="show-done-link" id="showDoneLink" onclick="toggleShowDone()" style="display:none;">Show completed (0) ↓</a>
+      </div>
+    </section>
+
+    <!-- ROW 3: Promotional Calendar (full width, sits on page bg) -->
+    <section>
+      <h2 class="section-title">Promotional Calendar <span style="font-size:0.78rem; font-weight:500; color:#6B7280; margin-left:8px;">Option A — multi-month spans read-only (DEC-044)</span></h2>
+      <div class="cal-card">
+        <div class="cal-tabs">
+          <button class="cal-tab active" id="tabPromo" onclick="switchCalTab('promo')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Promotional Calendar
+          </button>
+          <button class="cal-tab" id="tabNotes" onclick="switchCalTab('notes')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            Notes
+          </button>
+        </div>
+        <div class="legend">
+          <span class="legend-item"><span class="dot active"></span> Active</span>
+          <span class="legend-item"><span class="dot cancelled"></span> Cancelled</span>
+          <span class="legend-item"><span class="dot pending"></span> Pending</span>
+          <span class="legend-item"><span class="dot did_not_run"></span> Did not run</span>
+          <span class="legend-item"><span class="dot declined"></span> Declined</span>
+          <span class="legend-item"><span class="dot retailer_approved"></span> Retailer approved</span>
+          <span class="legend-item"><span class="dot completed"></span> Completed</span>
+          <span style="margin-left:auto; font-size:0.68rem; color:#9CA3AF; display:flex; align-items:center; gap:6px;"><span style="display:inline-block; width:12px; height:2px; background: repeating-linear-gradient(90deg,#9CA3AF 0 4px,transparent 4px 7px);"></span> Budget &nbsp; <span class="chip cont" style="padding:2px 8px; font-size:0.65rem;">→ = continues next month</span></span>
+        </div>
+        <div id="calPanePromo" class="gantt-wrap">
+          <table class="gantt" id="ganttTable">
+            <thead><tr id="ganttHead"></tr></thead>
+            <tbody id="ganttBody"></tbody>
+          </table>
+        </div>
+        <div id="calPaneNotes" class="notes-empty" style="display:none;">
+          No notes yet. Notes added to a promotion will appear here.<br><span style="font-size:0.75rem; color:#9CA3AF;">Removing a review from Brand Report also removes it from Calendar (DEC-014) — master CR list row survives.</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // ===== DATA (from spec, exact shapes) =====
+    const topSkus = [
+      { name: "Choc IC Sandwich", value: 245 },
+      { name: "Strawberry Bomb Pop", value: 248 },
+      { name: "Strawberry IC 16oz", value: 250 }
+    ];
+    const topPromos = [
+      { name: "Summer Scoop Bundle", spend: 32000 },
+      { name: "Kroger Feature Event", spend: 74000 },
+      { name: "UNFI Spring TPR", spend: 61000 },
+      { name: "KeHE Summer Deal", spend: 45000 },
+      { name: "Whole Foods Seasonal", spend: 34000 }
+    ];
+    const spendTrend = [
+      { month: "Nov", spend: 180000, budget: 190000 },
+      { month: "Dec", spend: 215000, budget: 210000 },
+      { month: "Jan", spend: 200000, budget: 205000 },
+      { month: "Feb", spend: 222000, budget: 215000 },
+      { month: "Mar", spend: 218000, budget: 225000 },
+      { month: "Apr", spend: 238000, budget: 230000 }
+    ];
+    let crmTasks = [
+      { id: 1, status: "IN_PROGRESS", task: "Q2 KeHE promo plan review", retailer: "KeHE" },
+      { id: 2, status: "TO_DO", task: "Update Kroger banner SKU mapping", retailer: "Kroger" },
+      { id: 3, status: "COMPLETED", task: "UNFI pricing list submission", retailer: "UNFI" },
+      { id: 4, status: "IN_PROGRESS", task: "New SKU setup — Sorbet line", retailer: "Informed" },
+      { id: 5, status: "TO_DO", task: "Retailer onboarding — Sprouts", retailer: "Sprouts" }
+    ];
+    let taskFilter = 'all';
+    let showDone = false;
+    let nextTaskId = 6;
+
+    const kpis = [
+      { label: 'Stores In Distribution', value: '847', sub: 'Active + Commit · last 90 days', trend: '+12 vs last month', trendCls: 'up', icon: 'teal', fill: 'var(--teal)', pct: 84, link: 'View distribution →' , hint: 'Fixes UNFI 700-door trap (REQ-024)' },
+      { label: 'Active Promotions', value: '8', sub: 'Live in Trade Spend', trend: '2 pending push', trendCls: 'warn', icon: 'blue', fill: '#2563EB', pct: 62, link: 'Manage promos →', hint: 'Sandbox→Approved (DEC-055)' },
+      { label: 'Reviews Awaiting Response', value: '3', sub: 'Brand Report · Notified/TBD', trend: 'Needs attention', trendCls: 'warn', icon: 'orange', fill: '#EA580C', pct: 38, link: 'Open Brand Report →', hint: 'DEC-009/REQ-015' },
+      { label: 'YTD Spend', value: '$1.24M', sub: 'Net 23.8% · Budget $1.42M', trend: '87% of budget', trendCls: 'neutral', icon: 'purple', fill: '#7C3AED', pct: 87, link: 'View report →', hint: 'Net basis (DEC-034)' },
+    ];
+    const funnelData = [
+      { cls: 'draft', num: 4, lbl: 'Draft in Sandbox', sub: 'In TSS stepper — not yet pushed. Edit fees/velocity/stores.', cta: 'Continue editing' },
+      { cls: 'pending', num: 2, lbl: 'Pending Push', sub: 'Ready for Approved. Pricing validated. Will archive version on push.', cta: 'Review & push' },
+      { cls: 'blocked', num: 1, lbl: 'Blocked', sub: 'Missing pricing for 2 SKUs at Whole Foods — push will fail until fixed.', cta: 'Fix pricing' },
+    ];
+    const calData = {
+      months: ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"],
+      rows: [
+        {
+          banner: "Fresh Direct",
+          promotions: [
+            { month: "MAR", status: "pending", dateRange: "3/19-4/2" },
+            { month: "APR", status: "active", dateRange: "6/15-6/29" },
+            { month: "MAY", status: "active", dateRange: "5/14-5/28" },
+            { month: "JUL", status: "declined", dateRange: "7/9-7/23" },
+            { month: "NOV", status: "completed", dateRange: "11/12-11/26" },
+            { span: ["FEB","MAR","APR"], status: "active", dateRange: "2/12-4/15", label: "KeHE Spring Feature →" }
+          ]
+        },
+        {
+          banner: "Kroger — Midwest",
+          promotions: [
+            { month: "JAN", status: "completed", dateRange: "1/8-1/22" },
+            { month: "MAR", status: "retailer_approved", dateRange: "3/5-3/19" },
+            { month: "JUN", status: "active", dateRange: "6/3-6/17" },
+            { month: "OCT", status: "pending", dateRange: "10/14-10/28" }
+          ]
+        },
+        {
+          banner: "Whole Foods",
+          promotions: [
+            { month: "FEB", status: "active", dateRange: "2/12-2/26" },
+            { month: "APR", status: "cancelled", dateRange: "4/10-4/24" },
+            { month: "AUG", status: "pending", dateRange: "8/7-8/21" },
+            { month: "NOV", status: "retailer_approved", dateRange: "11/5-11/19" }
+          ]
+        },
+        {
+          banner: "UNFI — Independents",
+          promotions: [
+            { month: "JAN", status: "did_not_run", dateRange: "1/15-1/29" },
+            { month: "MAY", status: "pending", dateRange: "5/6-5/20" },
+            { month: "SEP", status: "active", dateRange: "9/10-9/24" }
+          ]
+        },
+        {
+          banner: "Sprouts Farmers Market",
+          promotions: [
+            { month: "FEB", status: "completed", dateRange: "2/5-2/19" },
+            { month: "JUL", status: "active", dateRange: "7/16-7/30" },
+            { month: "DEC", status: "pending", dateRange: "12/3-12/17" }
+          ]
+        }
+      ]
+    };
+
+    // ===== RENDER: KPIs =====
+    function renderKpis() {
+      const wrap = document.getElementById('kpiRow');
+      const icons = {
+        teal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"></path><rect x="7" y="12" width="3" height="7"></rect><rect x="12" y="8" width="3" height="11"></rect><rect x="17" y="5" width="3" height="14"></rect></svg>',
+        blue: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>',
+        orange: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>',
+        purple: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>',
+      };
+      wrap.innerHTML = kpis.map(k => `
+        <div class="kpi-card" title="${k.hint}">
+          <div class="kpi-top">
+            <div class="kpi-ico ${k.icon}">${icons[k.icon]}</div>
+            <span class="kpi-trend ${k.trendCls}">${k.trend}</span>
+          </div>
+          <div class="kpi-val">${k.value}</div>
+          <div class="kpi-lbl">${k.label}</div>
+          <div class="kpi-sub">${k.sub}</div>
+          <div class="kpi-progress"><div class="kpi-progress-fill" style="width:${k.pct}%; background:${k.fill}"></div></div>
+          <span class="kpi-link">${k.link} →</span>
+        </div>
+      `).join('');
+    }
+
+    // ===== RENDER: Funnel =====
+    function renderFunnel() {
+      const wrap = document.getElementById('funnel');
+      wrap.innerHTML = funnelData.map(f => `
+        <div class="funnel-step ${f.cls}">
+          <div class="funnel-num ${f.cls}">${f.num}</div>
+          <div class="funnel-lbl">${f.lbl}</div>
+          <div class="funnel-sub">${f.sub}</div>
+          <div class="funnel-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M9 18l6-6-6-6"></path></svg></div>
+        </div>
+      `).join('');
+    }
+
+    // ===== RENDER: Top SKUs =====
+    function renderSkus() {
+      const wrap = document.getElementById('hbarRows');
+      const max = 300;
+      wrap.innerHTML = topSkus.map(r => {
+        const w = (r.value / max * 100).toFixed(1);
+        return '<div class="hbar-row">' +
+          '<div class="hbar-label">' + r.name + '</div>' +
+          '<div class="hbar-track"><div class="hbar-fill" style="width:' + w + '%"></div></div>' +
+          '</div>';
+      }).join('');
+    }
+
+    // ===== RENDER: Top promotions =====
+    function renderPromos() {
+      const wrap = document.getElementById('promoRows');
+      const max = Math.max(...topPromos.map(p => p.spend));
+      const fmt = v => v >= 1000 ? '$' + Math.round(v/1000) + 'K' : '$' + v;
+      wrap.innerHTML = topPromos.map(p => {
+        const w = (p.spend / max * 100).toFixed(1);
+        return '<div class="promo-row">' +
+          '<div class="promo-name" title="' + p.name + '">' + p.name + '</div>' +
+          '<div class="promo-track"><div class="promo-fill" style="width:' + w + '%"></div></div>' +
+          '<div class="promo-val">' + fmt(p.spend) + '</div>' +
+          '</div>';
+      }).join('');
+    }
+
+    // ===== RENDER: Spend trend with Budget dashed line =====
+    function renderTrend() {
+      const svg = document.getElementById('trendSvg');
+      const W = 560, H = 170;
+      const pad = { l: 48, r: 16, t: 12, b: 26 };
+      const plotW = W - pad.l - pad.r;
+      const plotH = H - pad.t - pad.b;
+      const minY = 180000, maxY = 240000, step = 10000;
+      const n = spendTrend.length;
+      const x = i => pad.l + (i / (n - 1)) * plotW;
+      const y = v => pad.t + (1 - (v - minY) / (maxY - minY)) * plotH;
+      let html = '';
+      for (let v = minY; v <= maxY; v += step) {
+        const yy = y(v);
+        const label = '$' + (v/1000) + 'K';
+        html += '<g class="trend-grid"><line x1="' + pad.l + '" x2="' + (W - pad.r) + '" y1="' + yy + '" y2="' + yy + '"></line></g>';
+        html += '<g class="trend-axis-y"><text x="' + (pad.l - 8) + '" y="' + (yy + 3) + '" text-anchor="end">' + label + '</text></g>';
+      }
+      spendTrend.forEach((d,i) => {
+        html += '<g class="trend-axis-x"><text x="' + x(i) + '" y="' + (H - 6) + '" text-anchor="middle">' + d.month + '</text></g>';
+      });
+      // budget dashed
+      const bpts = spendTrend.map((d,i) => ({ x: x(i), y: y(d.budget) }));
+      let bd = 'M ' + bpts[0].x + ' ' + bpts[0].y;
+      for (let i = 0; i < bpts.length - 1; i++) {
+        const p0 = bpts[i], p1 = bpts[i+1];
+        const mx = (p0.x + p1.x) / 2;
+        bd += ' C ' + mx + ' ' + p0.y + ', ' + mx + ' ' + p1.y + ', ' + p1.x + ' ' + p1.y;
+      }
+      html += '<path class="trend-budget" d="' + bd + '"></path>';
+      bpts.forEach(p => { html += '<circle class="trend-dot-budget" cx="' + p.x + '" cy="' + p.y + '" r="3.5"></circle>'; });
+      // actual solid
+      const pts = spendTrend.map((d,i) => ({ x: x(i), y: y(d.spend) }));
+      let d = 'M ' + pts[0].x + ' ' + pts[0].y;
+      for (let i = 0; i < pts.length - 1; i++) {
+        const p0 = pts[i], p1 = pts[i+1];
+        const mx = (p0.x + p1.x) / 2;
+        d += ' C ' + mx + ' ' + p0.y + ', ' + mx + ' ' + p1.y + ', ' + p1.x + ' ' + p1.y;
+      }
+      html += '<path class="trend-line" d="' + d + '"></path>';
+      pts.forEach(p => { html += '<circle class="trend-dot" cx="' + p.x + '" cy="' + p.y + '" r="4.5"></circle>'; });
+      svg.innerHTML = html;
+    }
+
+    // ===== RENDER: CRM tasks with filter + quick-add + done toggle =====
+    function renderCrm() {
+      const wrap = document.getElementById('crmRows');
+      const labels = { IN_PROGRESS: 'In Progress', TO_DO: 'To-Do', COMPLETED: 'Completed' };
+      const cls = { IN_PROGRESS: 'in_progress', TO_DO: 'to_do', COMPLETED: 'completed' };
+      let filtered = crmTasks;
+      if (taskFilter !== 'all') filtered = crmTasks.filter(t => t.status === taskFilter);
+      const visible = showDone ? filtered : filtered.filter(t => t.status !== 'COMPLETED');
+      const hiddenDone = filtered.filter(t => t.status === 'COMPLETED').length - visible.filter(t => t.status==='COMPLETED').length;
+      // update filter pills active state
+      document.querySelectorAll('.filter-pill').forEach(b => b.classList.toggle('active', b.dataset.f === taskFilter));
+      const link = document.getElementById('showDoneLink');
+      const doneCount = crmTasks.filter(t => t.status==='COMPLETED').length;
+      const hidden = showDone ? 0 : doneCount - (taskFilter==='COMPLETED' ? doneCount : 0);
+      // Actually compute hidden for current filter
+      let hiddenForFilter = 0;
+      if (!showDone) {
+        if (taskFilter === 'all') hiddenForFilter = crmTasks.filter(t=>t.status==='COMPLETED').length;
+        else if (taskFilter === 'COMPLETED') hiddenForFilter = 0; // would show none then
+        else hiddenForFilter = 0;
+      }
+      // Show link only when filtered includes hidden
+      if (!showDone && (taskFilter==='all' && doneCount>0)) {
+        link.style.display='inline-flex';
+        link.textContent = 'Show completed (' + doneCount + ') ↓';
+      } else if (showDone && taskFilter==='all') {
+        link.style.display='inline-flex';
+        link.textContent = 'Hide completed ↑';
+      } else {
+        link.style.display='none';
+      }
+      if (!visible.length) {
+        wrap.innerHTML = '<div style="text-align:center; padding:20px; color:#9CA3AF; font-size:0.82rem;">No tasks in this filter.</div>';
+        return;
+      }
+      wrap.innerHTML = visible.map(r => {
+        const isDone = r.status==='COMPLETED';
+        return '<div class="crm-row' + (isDone ? ' done' : '') + '" onclick="toggleTask(' + r.id + ')">' +
+          '<button class="crm-check' + (isDone ? ' checked' : '') + '" onclick="event.stopPropagation(); toggleTask(' + r.id + ')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></button>' +
+          '<span class="pill ' + cls[r.status] + '">' + labels[r.status] + '</span>' +
+          '<span class="crm-task' + (isDone ? ' done' : '') + '" title="' + r.task + '">' + r.task + '</span>' +
+          '<span class="crm-retailer">' + r.retailer + '</span>' +
+          '</div>';
+      }).join('');
+    }
+    function setTaskFilter(f) { taskFilter = f; if (f==='COMPLETED') showDone=true; renderCrm(); }
+    function toggleShowDone() { showDone = !showDone; renderCrm(); }
+    function toggleTask(id) {
+      const t = crmTasks.find(x=>x.id===id);
+      if (!t) return;
+      t.status = t.status==='COMPLETED' ? 'TO_DO' : 'COMPLETED';
+      renderCrm();
+    }
+    function quickAddTask() {
+      const inp = document.getElementById('taskQuickAdd');
+      const v = inp.value.trim();
+      if (!v) return;
+      crmTasks.unshift({ id: nextTaskId++, status: 'TO_DO', task: v, retailer: '—' });
+      inp.value='';
+      taskFilter='all';
+      renderCrm();
+    }
+
+    // ===== RENDER: Gantt with multi-month span (PM6 Option A) =====
+    function renderGantt() {
+      const head = document.getElementById('ganttHead');
+      const body = document.getElementById('ganttBody');
+      const months = calData.months;
+      head.innerHTML = '<th>Banner Name</th>' + months.map(m => '<th>' + m + '</th>').join('');
+      body.innerHTML = calData.rows.map(row => {
+        const monthMap = {};
+        row.promotions.forEach(p => {
+          if (p.span) {
+            p.span.forEach((m, idx) => {
+              const isCont = idx>0;
+              monthMap[m] = { ...p, month: m, isCont };
+            });
+          } else {
+            monthMap[p.month] = { ...p, isCont: false };
+          }
+        });
+        const cells = months.map(m => {
+          const e = monthMap[m];
+          if (!e) return '<td></td>';
+          const txt = e.label || (m.slice(0,3).toUpperCase() + ' ' + e.dateRange);
+          const contCls = e.isCont ? ' cont' : '';
+          return '<td><span class="chip ' + e.status + contCls + '"><span class="c-dot"></span>' + txt + '</span></td>';
+        }).join('');
+        return '<tr><td>' + row.banner + '</td>' + cells + '</tr>';
+      }).join('');
+    }
+
+    function switchCalTab(which) {
+      document.getElementById('tabPromo').classList.toggle('active', which === 'promo');
+      document.getElementById('tabNotes').classList.toggle('active', which === 'notes');
+      document.getElementById('calPanePromo').style.display = which === 'promo' ? '' : 'none';
+      document.getElementById('calPaneNotes').style.display = which === 'notes' ? '' : 'none';
+    }
+
+    // init
+    renderKpis(); renderFunnel(); renderSkus(); renderPromos(); renderTrend(); renderCrm(); renderGantt();
+  </script>
+</body>
+</html>
