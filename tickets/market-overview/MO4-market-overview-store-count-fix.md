@@ -1,6 +1,6 @@
 # Market Overview | Fix Misleading Store Count for UNFI Independents / Infra
 
-**MO4** | Bug | Priority: High | Status: New
+**CS-1611** | Bug | Priority: High | Status: New
 
 ---
 
@@ -51,5 +51,5 @@ This makes every downstream metric unreliable — KPI cards, store count dashboa
 ## Notes
 - Per client meeting: UNFI Independents is a catch-all for standalone stores without a dedicated banner
 - Infra has the same aggregation pattern — apply the same fix
-- The MO5 (multiple stores per log) deliverable enables selecting specific stores, which feeds into this fix
+- The CS-1612 (multiple stores per log) deliverable enables selecting specific stores, which feeds into this fix
 - Coordinate with the dashboard KPI cards work (CS-1305)

@@ -1,6 +1,6 @@
 # Caboodle — Interlinked Project Knowledge Index
 
-> **Generated:** 2026-08-23 · **Maintained by:** BA (per DEC-031 this file is the project "second brain")
+> **Generated:** 2026-09-02 · **Maintained by:** BA (per DEC-031 this file is the project "second brain")
 > **Purpose:** Single-file knowledge base. Every entry is self-sufficient (no detail files behind it) and cross-linked both directions. When prompted later, pull relevant rows + their Related IDs — no other file required.
 > **ID scheme:** `REQ-nnn` requirements · `DEC-nnn` decisions/constraints · `STK-nnn` stakeholders · `RISK-nnn` risks · `CON-nn` contradictions (see register at bottom).
 > **Status vocabulary:** REQ: RAISED / SPEC'D / OPEN QUESTION / UNTICKETED / SUPERSEDED / DONE · DEC: APPROVED / VALIDATED / CLARIFIED / PROPOSED / ESTABLISHED / CONSTRAINT / ASSESSED · STK: IDENTIFIED · RISK: OPEN / FLAGGED / CONFIRMED / SUSPECTED / ACCEPTED.
@@ -16,7 +16,7 @@
 | `tickets/**` (~44 spec files: broker-dashboard/, category-review/, market-overview/, promo-management/, trade-spend/, brand/, talking-points/) | BA-written ticket specifications | Deliverables (client-reviewed subset); proposals unless marked approved |
 | `ba-onboarding/backend/*`, `ba-onboarding/frontend/*` (incl. `modules/*`) | AI-generated AS-IS codebase analysis | Evidence about the system as built |
 | `docs/` (Analysis_Part1, Backend Architecture Review, Testing Checklist, Product_Reconstruction_Handover, Frontend Architectural Review, TSS QA Checklist) | Reviews, handover, QA baselines | Evidence / assessment |
-| `data/jira-tickets/` (1,567 files, CS-1…1567 + GTMS-*) | Live Jira export (2026-08-20) | **Authoritative backlog.** Represented here via aggregate stats (AGENTS §16) + the active tickets covered by `tickets/`; not read raw individually |
+| `data/jira-tickets/` (1,654 files, CS-1…1651 + GTMS-*) | Live Jira export (2026-09-02) | **Authoritative backlog.** Represented here via aggregate stats (AGENTS §16) + the active tickets covered by `tickets/`; not read raw individually |
 | `prototypes/Daily Delight Calendar/`, `Wireframe/index.html`, `scripts/check-descriptions.js` | Lovable prototype, deployed wireframe, backlog-audit script | Reference |
 
 ---

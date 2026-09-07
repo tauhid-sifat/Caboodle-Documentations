@@ -1,6 +1,6 @@
 # Broker Dashboard | Pipeline (Task) — from Wireframe
 
-**BD4** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1601** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -47,7 +47,7 @@ This view is reached from the dashboard via the **Tasks** quick-action tile, and
 ### Scenario 4: Task Detail
 - **Given** a task is selected
 - **Then** I can view/edit notes and attached files
-- **And** (with BD2) I can set assignee and due date
+- **And** (with CS-1599) I can set assignee and due date
 
 ### Scenario 5: Independent of CRM Pipeline
 - **Given** the view is rendered
@@ -58,17 +58,17 @@ This view is reached from the dashboard via the **Tasks** quick-action tile, and
 
 ## Design Reference
 - Wireframe: `Wireframe/index.html` (https://caboodle-broker-dashboard.vercel.app) — `view-tasks` section (Fellow-style list, `tasks-layout`, `plan-sidebar`)
-- Dashboard shell: `BD1-broker-dashboard-from-wireframe.md`
-- Assignment fields: `BD2-broker-dashboard-assign-time-person.md`
-- Filtering: `BD3-broker-dashboard-filter-my-tasks-contact.md`
+- Dashboard shell: `CS-1598-broker-dashboard-from-wireframe.md`
+- Assignment fields: `CS-1599-broker-dashboard-assign-time-person.md`
+- Filtering: `CS-1600-broker-dashboard-filter-my-tasks-contact.md`
 
 ---
 
 ## Related / Conflict
-- The former `CS-NEW-broker-dashboard-task-board.md` (3-column Kanban) has been **removed** as obsolete — it contradicted the wireframe (no Kanban) and is superseded by this ticket (BD4).
+- The former `CS-NEW-broker-dashboard-task-board.md` (3-column Kanban) has been **removed** as obsolete — it contradicted the wireframe (no Kanban) and is superseded by this ticket (CS-1601).
 
 ---
 
 ## Notes
-- Keep MVP aligned to the wireframe; enhancements (assignee, time, filtering) live in BD2 / BD3.
+- Keep MVP aligned to the wireframe; enhancements (assignee, time, filtering) live in CS-1599 / CS-1600.
 - Confirm whether "Plans" are user-created or map to existing entities (e.g., buyer-meeting plans).

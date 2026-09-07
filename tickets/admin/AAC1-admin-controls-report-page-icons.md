@@ -1,6 +1,6 @@
 # Admin | Admin Controls | Control Icons on Report Page Buttons (e.g., Monthly Report)
 
-**AAC1** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1588** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -39,8 +39,27 @@ Admins should have an **Admin Control** to manage the **icons on buttons** acros
 
 ---
 
+## Clarification — Not Related to User-Based Fixed Filters (per Constance review 2026-09-07)
+
+> **Constance question:** Is this the user-based fixed filters ticket?
+
+**Answer: No — CS-1588 is entirely distinct and has no overlap.**
+
+| Aspect | CS-1588 (this ticket) | User-Based Fixed Filters |
+|--------|----------------------|--------------------------|
+| **What** | Admin Controls for **button iconography** on Reports pages (Monthly Report etc.) — configurable `button -> icon` mapping | **User-specific sticky/saved filters** persisted **server-side per user per brand** and auto-applied on login |
+| **Who configures** | **Admin only** (central Admin Controls) | **Each end-user** (Brand Owner / Sub-User / Broker) saves their own defaults |
+| **Scope** | Presentation layer — which icon renders on which Reports-page button | Data-filtering layer — which retailers/brands/regions are pre-filtered on load |
+| **Modules** | Reports pages (Monthly Report first, then all Reports) | Approved starter set: **Retailers, Promo Planning (Sandbox + Approved), Pipeline** — whether to extend to all modules is deferred to Constance post-roadmap (see D12, Aug 18 meeting) |
+| **Storage** | Icon/button config entity (to be added/confirmed — see Notes) | User-preference entity (server-side, scoped `userId + brandId`, explicitly NOT browser/localStorage per Bijoy) |
+
+There is no dependency, no shared UI, and no shared data model. Closing this clarifying question in-ticket so it does not recur.
+
+---
+
 ## Related
-- **AAC2** - Admin control of dropdown options (same Admin Controls area).
+- **CS-1589** - Admin control of dropdown options (same Admin Controls area).
+- **User-Based Fixed Filters** — D12 / Aug 18 "User Based Fixed Filter" meeting (Retailers, Promo Planning, Pipeline) — **separate workstream, not a duplicate or subtask of this ticket**.
 
 ---
 

@@ -1,6 +1,6 @@
 # Brand Modules | TSS | Remove or Modify Approved Promotions - Detailed SOP
 
-**BMTSS2** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1626** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -63,7 +63,7 @@ The goal is to turn this manual SOP into a supported, system-guided workflow (id
 ---
 
 ## Related
-- **BMTSS1** - the capability ticket; BMTSS2 is the detailed versioning SOP.
+- **CS-1625** - the capability ticket; CS-1626 is the detailed versioning SOP.
 
 ---
 

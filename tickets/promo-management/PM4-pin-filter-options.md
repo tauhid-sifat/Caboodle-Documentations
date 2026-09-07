@@ -1,6 +1,6 @@
 # Promotional Management | Pin/Freeze Filter Options
 
-**PM4** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1616** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 

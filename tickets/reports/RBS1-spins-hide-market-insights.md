@@ -1,6 +1,6 @@
 # Reports | SPINS | Hide Market Insights
 
-**RBS1** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1620** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 

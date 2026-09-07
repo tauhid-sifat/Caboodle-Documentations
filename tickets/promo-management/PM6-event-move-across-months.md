@@ -1,6 +1,6 @@
 # Promotional Management | Allow Event to Span/Move Across Months
 
-**PM6** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1618** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 

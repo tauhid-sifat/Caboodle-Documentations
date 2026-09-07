@@ -1,4 +1,4 @@
-﻿# CS-4 - Add sku name and banner filter in admin CRM Banner SKu section.
+# CS-4 - Add sku name and banner filter in admin CRM Banner SKu section.
 
 | Field | Value |
 |-------|-------|

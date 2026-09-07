@@ -1,6 +1,6 @@
 ﻿# Market Overview | Allow Multiple Stores Per Log Entry
 
-**MO5** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1612** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 

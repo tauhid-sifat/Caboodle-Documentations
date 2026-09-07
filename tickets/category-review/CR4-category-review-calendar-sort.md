@@ -1,6 +1,6 @@
 # Category Review | Calendar Sort by Banner or Category?
 
-**CR4** | Question | Priority: TBD | Status: New
+**CS-1606** | Question | Priority: TBD | Status: New
 
 ---
 
@@ -49,7 +49,7 @@ This ticket captures the open decision: confirm the intended primary sort/group 
 
 ## Related
 - **CS-1361** — defines current Retailer-based row grouping.
-- **CR5** — relates to the upload template fields that feed these views.
+- **CS-1607** — relates to the upload template fields that feed these views.
 
 ---
 
@@ -67,4 +67,4 @@ This ticket captures the open decision: confirm the intended primary sort/group 
 
 ## Confirmed Grid Columns (from the 2026 Category Review screenshot)
 
-The Category Review grid (list view) exposes these sortable/groupable columns: `Region | Retailer | Category | Review Month | Review Start Date | Review End Date | Reset Date | Additional Notes | ACTION`. Notably there is **no dedicated Banner column** — grouping is by **Retailer** (Region + Retailer), while **Category** is a per-row field. This reinforces the core question in CR4: whether to sort/group by **Retailer (as today)** or by **Category** (the available independent field), and whether a Banner dimension needs to be introduced.
+The Category Review grid (list view) exposes these sortable/groupable columns: `Region | Retailer | Category | Review Month | Review Start Date | Review End Date | Reset Date | Additional Notes | ACTION`. Notably there is **no dedicated Banner column** — grouping is by **Retailer** (Region + Retailer), while **Category** is a per-row field. This reinforces the core question in CS-1606: whether to sort/group by **Retailer (as today)** or by **Category** (the available independent field), and whether a Banner dimension needs to be introduced.

@@ -19,7 +19,7 @@
 
 This ticket updates the broker **landing page** to match the Brand environment pattern: the dashboard surface should be replaced/branded with the **broker's logo** as the hero element, consistent with how Brand dashboards present the Brand logo. The implementation work is primarily backend — exposing/serving the broker's logo and branding metadata so the frontend can render it.
 
-This pairs with **PM7** (add the broker logo to the dashboard *button/nav*) and **BD1** (dashboard shell from wireframe), which cover the frontend presentation of the logo. CS-1072 is the backend foundation (logo source, storage, and API).
+This pairs with **CS-1604** (add the broker logo to the dashboard *button/nav*) and **CS-1598** (dashboard shell from wireframe), which cover the frontend presentation of the logo. CS-1072 is the backend foundation (logo source, storage, and API).
 
 ---
 
@@ -54,13 +54,13 @@ This pairs with **PM7** (add the broker logo to the dashboard *button/nav*) and 
 ## Design Reference
 - **Brand dashboard pattern:** `(brand)/[brandID]/dashboard` — brand logo + two summary cards ("Banner Count for Item Status" and "Trade Spend Roll Up")
 - **Current broker dashboard:** `(broker)/dashboard` — tile grid only, no logo or branded hero
-- **Wireframe:** `Wireframe/index.html` (dashboard shell with logo in header — see BD1)
+- **Wireframe:** `Wireframe/index.html` (dashboard shell with logo in header — see CS-1598)
 
 ---
 
 ## Related Tickets
-- **PM7** — Broker Dashboard | Add Broker Logo to Dashboard Button (frontend logo placement)
-- **BD1** — Broker Dashboard | Dashboard (from wireframe) — overall dashboard shell
+- **CS-1604** — Broker Dashboard | Add Broker Logo to Dashboard Button (frontend logo placement)
+- **CS-1598** — Broker Dashboard | Dashboard (from wireframe) — overall dashboard shell
 - **CS-1362** — Broker Dashboard | Ask Caboodle (AI assistant for broker dashboard)
 - **CS-1406** — Switching from Broker Dashboard to Brand Dashboard Sometimes Does Not Work
 
@@ -68,7 +68,7 @@ This pairs with **PM7** (add the broker logo to the dashboard *button/nav*) and 
 
 ## CW Note 7/20/26 — Potential Obsolescence
 
-Some of this ticket may become obsolete as the new dashboard mockups (Lovable wireframe / BD1) evolve. The broker landing page is being redesigned as part of CS-1305 (Broker Dashboard KPI Cards / Full Spec). Coordinate scope with those updates before implementation. Note the new BD/PM tickets (BD1, PM7) now own the frontend presentation; this CS-1072 ticket is scoped to the **backend** (logo source, storage, API).
+Some of this ticket may become obsolete as the new dashboard mockups (Lovable wireframe / CS-1598) evolve. The broker landing page is being redesigned as part of CS-1305 (Broker Dashboard KPI Cards / Full Spec). Coordinate scope with those updates before implementation. Note the new BD/PM tickets (CS-1598, CS-1604) now own the frontend presentation; this CS-1072 ticket is scoped to the **backend** (logo source, storage, API).
 
 ---
 

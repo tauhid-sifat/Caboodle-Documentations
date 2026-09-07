@@ -33,6 +33,26 @@
 
     .add-group-btn { display:flex; align-items:center; justify-content:center; gap:6px; width:100%; padding:10px; background:none; border:1px dashed #cbd5e1; border-radius:8px; color:#64748b; font-size:0.8rem; cursor:pointer; transition:all 0.15s; }
     .add-group-btn:hover { border-color:#6366f1; color:#6366f1; background:#eef2ff; }
+    .group-item.sub-project { padding-left:36px; background:#f8fafc; }
+    .group-item.sub-project.active { background:#eef2ff; border-left-color:#6366f1; }
+    .group-parent { display:flex; align-items:center; gap:6px; padding:8px 20px 4px; font-size:0.7rem; font-weight:600; color:#475569; text-transform:uppercase; letter-spacing:0.04em; cursor:pointer; }
+    .group-parent .chevron { transition:transform 0.15s; }
+    .group-parent.collapsed .chevron { transform:rotate(-90deg); }
+    .group-children.collapsed { display:none; }
+    .view-toggle { display:flex; background:#f1f5f9; border-radius:999px; padding:3px; gap:2px; }
+    .view-toggle button { padding:5px 12px; font-size:0.7rem; font-weight:600; border-radius:999px; border:0; background:transparent; color:#64748b; cursor:pointer; }
+    .view-toggle button.active { background:#fff; color:#0f172a; box-shadow:0 1px 2px rgba(0,0,0,0.08); }
+    .pipeline-cal { background:#fff; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; }
+    .pipeline-cal-hdr { display:flex; align-items:center; justify-content:space-between; padding:12px 16px; border-bottom:1px solid #e2e8f0; font-weight:600; }
+    .pipeline-cal-grid { display:grid; grid-template-columns:repeat(7,1fr); }
+    .pipeline-cal-dayname { padding:8px; text-align:center; font-size:0.65rem; font-weight:600; text-transform:uppercase; color:#94a3b8; background:#f8fafc; border-bottom:1px solid #e2e8f0; border-right:1px solid #f1f5f9; }
+    .pipeline-cal-cell { min-height:84px; padding:6px; border-right:1px solid #f1f5f9; border-bottom:1px solid #f1f5f9; }
+    .pipeline-cal-cell.today { background:#eef2ff; }
+    .pipeline-cal-date { font-size:0.7rem; font-weight:600; color:#475569; margin-bottom:4px; }
+    .pipeline-cal-task { font-size:0.65rem; padding:2px 6px; border-radius:6px; margin-bottom:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer; border-left:3px solid transparent; background:#f1f5f9; }
+    .pipeline-cal-task.high { border-left-color:#ef4444; background:#fef2f2; color:#991b1b; }
+    .pipeline-cal-task.med { border-left-color:#f59e0b; background:#fffbeb; color:#92400e; }
+    .pipeline-cal-task.low { border-left-color:#10b981; background:#f0fdf4; color:#065f46; }
 
     /* ===== MAIN ===== */
     .main { flex:1; display:flex; flex-direction:column; min-width:0; }
@@ -118,19 +138,19 @@
 </head>
 <body>
 
-  <!-- ===== SIDEBAR ===== -->
+  <!-- ===== SIDEBAR — Projects (renamed from Plans/Groups) ===== -->
   <div class="sidebar">
     <div class="sidebar-hdr">
       <h1>Pipeline</h1>
-      <p>Groups organize your tasks</p>
+      <p>Projects organize your tasks</p>
     </div>
     <div class="sidebar-body" id="groupList">
-      <!-- Rendered by JS -->
+      <!-- Rendered by JS — hierarchical Projects + Sub-Projects -->
     </div>
     <div class="sidebar-foot">
       <button class="add-group-btn" onclick="openAddGroup()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-        New Group
+        New Project
       </button>
     </div>
   </div>
@@ -139,10 +159,18 @@
   <div class="main">
     <div class="main-hdr">
       <div class="mh-left">
-        <div class="mh-title" id="groupTitle">Select a group</div>
-        <div class="mh-sub" id="groupSub">Choose a group from the sidebar to view its tasks</div>
+        <div class="mh-title" id="groupTitle">Select a project</div>
+        <div class="mh-sub" id="groupSub">Choose a project from the sidebar to view its tasks</div>
       </div>
-      <div class="mh-actions">
+      <div class="mh-actions" style="align-items:center;">
+        <div class="view-toggle" title="Switch between list and calendar">
+          <button id="ideateListBtn" class="active" onclick="setIdeateView('list')">List</button>
+          <button id="ideateCalBtn" onclick="setIdeateView('calendar')">Calendar</button>
+        </div>
+        <button onclick="openGroupNotes()" id="notesBtn" disabled title="Project notes — top near Add Task as requested">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          Notes
+        </button>
         <button onclick="openAddTask()" class="primary" id="addTaskBtn" disabled>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
           Add Task
@@ -156,8 +184,8 @@
     <div class="main-body" id="groupContent">
       <div class="empty-state">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg>
-        <h3>No group selected</h3>
-        <p>Pick a group from the sidebar or create a new one</p>
+        <h3>No project selected</h3>
+        <p>Pick a project from the sidebar or create a new one</p>
       </div>
     </div>
   </div>
@@ -216,14 +244,19 @@
     </div>
   </div>
 
-  <!-- ===== MODAL: Add/Edit Group ===== -->
+  <!-- ===== MODAL: Add/Edit Project (renamed from Group) + Sub-Project ===== -->
   <div id="groupModal" class="modal-overlay">
     <div class="modal-box">
-      <div class="modal-hdr"><h3 id="groupModalTitle">New Group</h3><button class="modal-close" onclick="closeModal('groupModal')">✕</button></div>
+      <div class="modal-hdr"><h3 id="groupModalTitle">New Project</h3><button class="modal-close" onclick="closeModal('groupModal')">✕</button></div>
       <div class="modal-body">
         <div class="modal-row">
-          <label class="modal-label">Group Name</label>
-          <input class="modal-input" id="groupNameInput" placeholder="e.g., Q3 Category Reviews">
+          <label class="modal-label">Project Name</label>
+          <input class="modal-input" id="groupNameInput" placeholder="e.g., AIT, Q3 Category Reviews">
+        </div>
+        <div class="modal-row">
+          <label class="modal-label">Parent Project (optional)</label>
+          <select class="modal-input" id="groupParentInput"></select>
+          <div style="font-size:0.65rem;color:#94a3b8;margin-top:4px;">Leave as "No parent" for a top-level project. Select a parent to create a Sub-Project (1 level, like Jira sub-tasks).</div>
         </div>
         <div class="modal-row">
           <label class="modal-label">Description</label>
@@ -238,23 +271,30 @@
   </div>
 
   <script>
-    // ===== DATA =====
+    // ===== DATA — Projects + Sub-Projects + Calendar =====
     let groupIdCounter = 0;
     let taskIdCounter = 0;
     let selectedGroupId = null;
     let editingTaskId = null;
     let editingGroupId = null;
+    let ideateView = 'list'; // list | calendar
+    let ideateCalDate = new Date(2026,6,1);
+    let expandedGroups = {};
 
     const COLORS = ['#6366f1','#f59e0b','#10b981','#ef4444','#8b5cf6','#ec4899','#06b6d4','#14b8a6'];
 
     const groups = [
-      { id: ++groupIdCounter, name:'Q3 Category Reviews', desc:'All Q3 review deadlines across banners', color:COLORS[0] },
-      { id: ++groupIdCounter, name:'UNFI Setup & Maintenance', desc:'New item forms and setup with UNFI', color:COLORS[2] },
-      { id: ++groupIdCounter, name:'Broker Meetings & Follow-ups', desc:'Meeting notes and action items', color:COLORS[1] },
-      { id: ++groupIdCounter, name:'KeHE EDLP Planning', desc:'Everyday low price promotions', color:COLORS[3] },
-      { id: ++groupIdCounter, name:'Distributor APL Updates', desc:'Authorized price list management', color:COLORS[4] },
-      { id: ++groupIdCounter, name:'Marketing & Collateral', desc:'POS materials, digital assets, sell sheets', color:COLORS[5] },
+      { id: ++groupIdCounter, name:'AIT', desc:'AIT parent — group sub-projects under one initiative (avoids duplicate AIT projects)', color:COLORS[0], parentId:null, notes:'AIT parent notes — overall timeline, buyer contacts, links to decks.' },
+      { id: ++groupIdCounter, name:'AIT — Buyer Decks', desc:'Category review decks for AIT', color:COLORS[0], parentId:1, notes:'Sub-project of AIT — decks for Nugget, Raleys, Whole Foods.' },
+      { id: ++groupIdCounter, name:'AIT — UNFI Setup', desc:'New item forms + warehouse assignments', color:COLORS[0], parentId:1, notes:'Sub-project of AIT — UNFI forms for 5 SKUs.' },
+      { id: ++groupIdCounter, name:'AIT — Sampling & Collateral', desc:'Samples and sell sheets', color:COLORS[0], parentId:1, notes:'Sub-project — samples, POS.' },
+      { id: ++groupIdCounter, name:'Q3 Category Reviews', desc:'All Q3 review deadlines across banners', color:COLORS[1], parentId:null },
+      { id: ++groupIdCounter, name:'Broker Meetings & Follow-ups', desc:'Meeting notes and action items', color:COLORS[2], parentId:null },
+      { id: ++groupIdCounter, name:'KeHE EDLP Planning', desc:'Everyday low price promotions', color:COLORS[3], parentId:null },
+      { id: ++groupIdCounter, name:'Distributor APL Updates', desc:'Authorized price list management', color:COLORS[4], parentId:null },
+      { id: ++groupIdCounter, name:'Marketing & Collateral', desc:'POS materials, digital assets, sell sheets', color:COLORS[5], parentId:null },
     ];
+    groups.filter(g=> !g.parentId).forEach(g=> expandedGroups[g.id]=true);
 
     let tasks = [
       // Group 1: Q3 Category Reviews
@@ -298,61 +338,120 @@
       { id: ++taskIdCounter, groupId:6, title:'POS materials — Nugget endcap', status:'todo', priority:'low', assignee:'Kate', due:'2026-08-01', notes:'Design shelf talkers and wobblers for Nugget Asian endcap display.', files:[] },
       { id: ++taskIdCounter, groupId:6, title:'Brand style guide update done', status:'done', priority:'low', assignee:'You', due:'2026-06-05', notes:'Updated for 2026. New logo assets and packaging guidelines.', files:[{name:'Brand_Style_Guide_2026.pdf',size:'8.2 MB'}] },
     ];
+    // --- migrate old groupIds 1..6 -> new project ids (AIT hierarchy demo + seed preservation) ---
+    (function(){
+      const map={1:5,2:6,3:6,4:7,5:8,6:9}; // old1 Q3->5, old2 UNFI->6 etc — keeps seed visible
+      // more precise: move old2 UNFI tasks to AIT subproject demo? Keep mapping above for visibility; add explicit AIT tasks below
+      tasks.forEach(t=>{ if(map[t.groupId]) t.groupId=map[t.groupId]; });
+      tasks.push(
+        { id: ++taskIdCounter, groupId:2, title:'AIT — Nugget deck draft', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-20', notes:'AIT buyer deck for Nugget — velocity + lift.', files:[] },
+        { id: ++taskIdCounter, groupId:3, title:'AIT — UNFI new item forms (5 SKUs)', status:'todo', priority:'high', assignee:'You', due:'2026-07-18', notes:'Spec sheets + ingredient decks for AIT SKUs.', files:[{name:'AIT_UNFI_Form.xlsx',size:'420 KB'}] },
+        { id: ++taskIdCounter, groupId:4, title:'AIT — Sell sheet + samples', status:'todo', priority:'med', assignee:'John', due:'2026-07-25', notes:'Samples and sell sheets for AIT launch.', files:[] },
+        { id: ++taskIdCounter, groupId:1, title:'AIT — Overall timeline & kickoff', status:'todo', priority:'high', assignee:'You', due:'2026-07-15', notes:'Parent-level milestone — AIT kickoff, links to sub-projects.', files:[] }
+      );
+    })();
 
-    // ===== GROUPS =====
+    // ===== PROJECTS (hierarchical) =====
+    function getChildren(pid){ return groups.filter(g=> g.parentId===pid); }
+    function toggleParent(pid){ expandedGroups[pid]=!expandedGroups[pid]; renderGroups(); }
+    function setIdeateView(mode){ ideateView=mode; document.getElementById('ideateListBtn').className=mode==='list'?'active':''; document.getElementById('ideateCalBtn').className=mode==='calendar'?'active':''; renderGroupContent(); }
+    function renderIdeateCalendar(g, groupTasks){
+      const y=ideateCalDate.getFullYear(), m=ideateCalDate.getMonth();
+      const first=new Date(y,m,1), startDay=first.getDay(), daysInMonth=new Date(y,m+1,0).getDate();
+      const prevDays=new Date(y,m,0).getDate();
+      const monthName=ideateCalDate.toLocaleString('en-US',{month:'long',year:'numeric'});
+      let html='<div class=\"pipeline-cal\"><div class=\"pipeline-cal-hdr\"><span>'+monthName+' — '+g.name+'</span><span style=\"display:flex;gap:6px;\"><button onclick=\"ideateCalDate=new Date(ideateCalDate.getFullYear(),ideateCalDate.getMonth()-1,1);renderGroupContent();\" style=\"padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;\">‹</button><button onclick=\"ideateCalDate=new Date();renderGroupContent();\" style=\"padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;\">Today</button><button onclick=\"ideateCalDate=new Date(ideateCalDate.getFullYear(),ideateCalDate.getMonth()+1,1);renderGroupContent();\" style=\"padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;\">›</button></span></div>';
+      html+='<div class=\"pipeline-cal-grid\"><div class=\"pipeline-cal-dayname\">Sun</div><div class=\"pipeline-cal-dayname\">Mon</div><div class=\"pipeline-cal-dayname\">Tue</div><div class=\"pipeline-cal-dayname\">Wed</div><div class=\"pipeline-cal-dayname\">Thu</div><div class=\"pipeline-cal-dayname\">Fri</div><div class=\"pipeline-cal-dayname\">Sat</div>';
+      for(let i=0;i<startDay;i++) html+='<div class=\"pipeline-cal-cell\" style=\"background:#f8fafc;\"><div class=\"pipeline-cal-date\">'+(prevDays-startDay+1+i)+'</div></div>';
+      const todayStr=new Date().toISOString().slice(0,10);
+      for(let d=1; d<=daysInMonth; d++){
+        const dateStr=new Date(y,m,d).toISOString().slice(0,10);
+        const isToday=dateStr===todayStr;
+        html+='<div class=\"pipeline-cal-cell'+(isToday?' today':'')+'\"><div class=\"pipeline-cal-date\">'+d+'</div>';
+        groupTasks.filter(t=> t.due===dateStr).forEach(t=>{ html+='<div class=\"pipeline-cal-task '+t.priority+'\" onclick=\"editTask('+t.id+')\">'+t.title+'</div>'; });
+        html+='</div>';
+      }
+      const rem=(startDay+daysInMonth)%7;
+      if(rem!==0) for(let i=0;i<7-rem;i++) html+='<div class=\"pipeline-cal-cell\" style=\"background:#f8fafc;\"><div class=\"pipeline-cal-date\">'+(i+1)+'</div></div>';
+      html+='</div></div>';
+      return html;
+    }
     function renderGroups() {
       const list = document.getElementById('groupList');
       const q = (document.getElementById('groupSearch')?.value || '').toLowerCase();
-      const filtered = groups.filter(g => g.name.toLowerCase().includes(q));
-      let html = '<div class="search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input class="group-search" id="groupSearch" placeholder="Search groups" oninput="renderGroups()"></div>';
-      filtered.forEach(g => {
-        const cnt = tasks.filter(t => t.groupId === g.id && t.status !== 'done').length;
-        const done = tasks.filter(t => t.groupId === g.id && t.status === 'done').length;
-        const active = g.id === selectedGroupId ? ' active' : '';
-        html += '<div class="group-item' + active + '" onclick="selectGroup(' + g.id + ')">' +
-          '<div class="g-color" style="background:' + g.color + '"></div>' +
-          '<div class="g-info"><div class="g-name">' + g.name + '</div><div class="g-meta">' + cnt + ' open · ' + done + ' done</div></div>' +
-          '<span class="g-cnt">' + (cnt + done) + '</span></div>';
+      const parents = groups.filter(g=> !g.parentId);
+      let html = '<div class="search-wrap" style="padding:0 12px;"><svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input class="group-search" id="groupSearch" placeholder="Search projects" oninput="renderGroups()"></div>';
+      parents.forEach(parent=>{
+        const children = getChildren(parent.id);
+        const childMatch = children.some(c=> c.name.toLowerCase().includes(q));
+        const parentMatch = parent.name.toLowerCase().includes(q);
+        if(q && !parentMatch && !childMatch) return;
+        const expanded = expandedGroups[parent.id]!==false;
+        const hasChildren = children.length>0;
+        const open = tasks.filter(t=> t.groupId===parent.id && t.status!=='done').length + children.reduce((a,c)=> a + tasks.filter(t=>t.groupId===c.id && t.status!=='done').length,0);
+        const done = tasks.filter(t=> t.groupId===parent.id && t.status==='done').length + children.reduce((a,c)=> a + tasks.filter(t=>t.groupId===c.id && t.status==='done').length,0);
+        const active = parent.id===selectedGroupId?' active':'';
+        html += '<div class="group-parent'+(expanded?'':' collapsed')+'" onclick="toggleParent('+parent.id+')"><span class="chevron" style="display:'+(hasChildren?'inline':'none')+'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="m6 9 6 6 6-6"/></svg></span><span style="flex:1;">'+parent.name+'</span><span class="g-cnt">'+(open+done)+'</span></div>';
+        html += '<div class="group-item'+active+'" onclick="selectGroup('+parent.id+')" style="margin-left:8px;border-left:2px solid '+parent.color+'"><div class="g-color" style="background:'+parent.color+'"></div><div class="g-info"><div class="g-name">'+parent.name+'</div><div class="g-meta">'+open+' open · '+done+' done</div></div></div>';
+        if(hasChildren){
+          html += '<div class="group-children'+(expanded?'':' collapsed')+'">';
+          children.forEach(c=>{
+            if(q && !c.name.toLowerCase().includes(q) && !parentMatch) return;
+            const co=tasks.filter(t=>t.groupId===c.id && t.status!=='done').length;
+            const cd=tasks.filter(t=>t.groupId===c.id && t.status==='done').length;
+            const cActive=c.id===selectedGroupId?' active':'';
+            html += '<div class="group-item sub-project'+cActive+'" onclick="selectGroup('+c.id+')"><div class="g-color" style="background:'+c.color+'"></div><div class="g-info"><div class="g-name">'+c.name+'</div><div class="g-meta">'+co+' open · '+cd+' done</div></div><span class="g-cnt">'+(co+cd)+'</span></div>';
+          });
+          html+='</div>';
+        }
       });
       list.innerHTML = html;
     }
 
     function selectGroup(id) {
       selectedGroupId = id;
+      ideateView='list';
       renderGroups();
       renderGroupContent();
       document.getElementById('addTaskBtn').disabled = false;
       document.getElementById('editGroupBtn').disabled = false;
+      document.getElementById('notesBtn').disabled = false;
     }
 
-    // ===== GROUP CONTENT =====
+    // ===== PROJECT CONTENT — Notes (top near Add Task) + List vs Calendar =====
+    function getParentLabelIdeate(g){ if(!g.parentId) return ''; const par=groups.find(x=>x.id===g.parentId); return par? par.name+' / ':''; }
     function renderGroupContent() {
       const g = groups.find(x => x.id === selectedGroupId);
       const container = document.getElementById('groupContent');
       if (!g) {
-        container.innerHTML = '<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg><h3>No group selected</h3><p>Pick a group from the sidebar or create a new one</p></div>';
-        document.getElementById('groupTitle').textContent = 'Select a group';
-        document.getElementById('groupSub').textContent = 'Choose a group from the sidebar to view its tasks';
+        container.innerHTML = '<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg><h3>No project selected</h3><p>Pick a project from the sidebar or create a new one</p></div>';
+        document.getElementById('groupTitle').textContent = 'Select a project';
+        document.getElementById('groupSub').textContent = 'Choose a project from the sidebar to view its tasks';
         return;
       }
-      document.getElementById('groupTitle').textContent = g.name;
+      document.getElementById('groupTitle').textContent = getParentLabelIdeate(g) + g.name;
       document.getElementById('groupSub').textContent = g.desc || 'No description';
+      document.getElementById('ideateListBtn').className = ideateView==='list'?'active':'';
+      document.getElementById('ideateCalBtn').className = ideateView==='calendar'?'active':'';
 
       const groupTasks = tasks.filter(t => t.groupId === g.id);
-      const todos = groupTasks.filter(t => t.status === 'todo');
-      const inProgress = groupTasks.filter(t => t.status === 'in_progress');
-      const done = groupTasks.filter(t => t.status === 'done');
 
       let html = '';
 
-      // Group Notes section
+      // Project Notes — top near Add Task, as requested
       html += '<div class="notes-section">' +
-        '<div class="ns-hdr" onclick="this.nextElementSibling.classList.toggle(\'open\');this.querySelector(\'svg\').style.transform=this.nextElementSibling.classList.contains(\'open\')?\'rotate(90deg)\':\'rotate(0)\'">' +
-        '<span><svg viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" width="14" height="14" style="transition:transform 0.15s;"><path d="M12 5v14M5 12h14"></path></svg> Group Notes</span>' +
-        '<span style="font-size:0.7rem;color:#d97706;cursor:pointer;" onclick="event.stopPropagation();openGroupNotes()">Edit</span></div>' +
-        '<div class="ns-body open" id="groupNotesBody">' + (g.notes || 'No notes yet. Click "Edit" to add group-level notes.') + '</div></div>';
+        '<div class="ns-hdr" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display===\'none\'?\'block\':\'none\'">' +
+        '<span><svg viewBox="0 0 24 24" fill="none" stroke="#92400e" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg> Project Notes</span>' +
+        '<span style="font-size:0.7rem;color:#b45309;cursor:pointer;" onclick="event.stopPropagation();openGroupNotes()">Edit</span></div>' +
+        '<div class="ns-body" id="groupNotesBody">' + (g.notes ? g.notes.replace(/</g,'&lt;') : 'No notes yet — click Notes in the header (next to Add Task) or Edit here to add context.') + '</div></div>';
 
-      // Quick-add bar
+      if(ideateView==='calendar'){
+        html += renderIdeateCalendar(g, groupTasks);
+        container.innerHTML = html;
+        return;
+      }
+
+      // Quick-add bar (list view)
       html += '<div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;padding:10px 14px;background:#fff;border:1px dashed #cbd5e1;border-radius:8px;">' +
         '<input id="quickTaskInput" placeholder="Quick add task — press Enter" style="flex:1;border:0;outline:none;font-size:0.85rem;background:transparent;" onkeydown="if(event.key===\'Enter\')quickAddTask()">' +
         '<select id="quickPriority" style="padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;font-size:0.75rem;background:#fff;">' +
@@ -500,13 +599,28 @@
       renderGroups();
     }
 
-    // ===== ADD / EDIT GROUP =====
+    // ===== ADD / EDIT PROJECT (with Sub-Project) =====
+    function populateIdeateParent(selectedId){
+      const sel=document.getElementById('groupParentInput');
+      const parents=groups.filter(g=> !g.parentId);
+      let html='<option value=\"\">No parent — top-level project</option>';
+      parents.forEach(p=>{
+        if(selectedId && p.id===selectedId) return;
+        html+='<option value=\"'+p.id+'\">'+p.name+'</option>';
+      });
+      sel.innerHTML=html;
+      if(selectedId) sel.value=String(selectedId);
+    }
     function openAddGroup() {
       editingGroupId = null;
-      document.getElementById('groupModalTitle').textContent = 'New Group';
+      document.getElementById('groupModalTitle').textContent = 'New Project';
       document.getElementById('groupModalSave').textContent = 'Create';
       document.getElementById('groupNameInput').value = '';
       document.getElementById('groupDescInput').value = '';
+      populateIdeateParent(null);
+      const cur=groups.find(x=>x.id===selectedGroupId);
+      if(cur && !cur.parentId) document.getElementById('groupParentInput').value=String(cur.id);
+      else if(cur && cur.parentId) document.getElementById('groupParentInput').value=String(cur.parentId);
       showModal('groupModal');
     }
 
@@ -514,10 +628,12 @@
       const g = groups.find(x => x.id === selectedGroupId);
       if (!g) return;
       editingGroupId = g.id;
-      document.getElementById('groupModalTitle').textContent = 'Edit Group';
+      document.getElementById('groupModalTitle').textContent = 'Edit Project';
       document.getElementById('groupModalSave').textContent = 'Save';
       document.getElementById('groupNameInput').value = g.name;
       document.getElementById('groupDescInput').value = g.desc || '';
+      populateIdeateParent(g.parentId||null);
+      if(g.parentId) document.getElementById('groupParentInput').value=String(g.parentId);
       showModal('groupModal');
     }
 
@@ -525,11 +641,17 @@
       const name = document.getElementById('groupNameInput').value.trim();
       if (!name) return;
       const desc = document.getElementById('groupDescInput').value.trim();
+      const parentVal=document.getElementById('groupParentInput').value;
+      const parentId=parentVal?parseInt(parentVal,10):null;
+      if(parentId && groups.find(x=>x.id===parentId && x.parentId)){ alert('Sub-projects can only be 1 level deep.'); return; }
       if (editingGroupId) {
         const g = groups.find(x => x.id === editingGroupId);
-        if (g) { g.name = name; g.desc = desc; }
+        if (g) { g.name = name; g.desc = desc; g.parentId=parentId; }
       } else {
-        groups.push({ id: ++groupIdCounter, name, desc, color: COLORS[groupIdCounter % COLORS.length] });
+        const nid=++groupIdCounter;
+        groups.push({ id:nid, name, desc, color: COLORS[nid % COLORS.length], parentId });
+        if(parentId) expandedGroups[parentId]=true;
+        selectedGroupId=nid;
       }
       closeModal('groupModal');
       renderGroups();

@@ -1,6 +1,6 @@
 # Reports | Brand Distributor Report | Rolling Latest 12 Months Unless Filtered
 
-**RDR2** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1623** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -16,7 +16,7 @@
 
 By default, the Brand Distributor Report should display only a **rolling latest 12 months** of data. Users can override this with an explicit date filter to view a different range. This matches the broader 'rolling 12 months for all Reports & Grids' rule.
 
-This is a direct match to Jira **CS-1274** ('Show only rolling 12 months for all Reports & Grids') - RDR2 is the working ticket for that rule as applied to the Distributor Report.
+This is a direct match to Jira **CS-1274** ('Show only rolling 12 months for all Reports & Grids') - CS-1623 is the working ticket for that rule as applied to the Distributor Report.
 
 ---
 
@@ -46,7 +46,7 @@ This is a direct match to Jira **CS-1274** ('Show only rolling 12 months for all
 ---
 
 ## Related
-- **RDR1** - export scope should honor the same filter window.
+- **CS-1622** - export scope should honor the same filter window.
 
 ---
 

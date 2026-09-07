@@ -1,6 +1,6 @@
 # Brand Modules | TSS | Edit Promo Details - More Space at Bottom for Single Row
 
-**BMTSS5** | Bug / Enhancement | User Story | Priority: TBD | Status: New
+**CS-1629** | Bug / Enhancement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -42,7 +42,7 @@ In the **Edit Promo Details / View & Edit Promo Event Details** panel, when only
 ---
 
 ## Related
-- **BMTSS3** - EDLP entry in Edit Promo Details (same panel).
+- **CS-1627** - EDLP entry in Edit Promo Details (same panel).
 
 ---
 

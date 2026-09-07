@@ -1,6 +1,8 @@
 # Admin | Store Report | Eliminate / Merge Store Duplicates
 
-**ASR1** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1593** | New Requirement | User Story | Priority: TBD | Status: New → **Resolved / Awaiting Live Push** (per Bijoy 8/24) | https://caboodleservices.atlassian.net/browse/CS-1593
+
+> **Status update 2026-08-24 (Bijoy, ticket call) + synced 2026-09-07:** Bijoy reported this has been **resolved and pushing to live soon**. Live Jira status still shows `Backlog` as of fetch — treat as **status lag**; directory reflects resolved/pending deploy.
 
 ---
 
@@ -16,7 +18,7 @@
 
 Store data contains duplicates (due to naming inconsistencies) and some stores are incorrectly mapped to multiple banners/retailers. Need a way to **eliminate/merge** duplicate stores and enforce clean mapping, without losing historical data tied to those stores.
 
-This is a direct match to Jira **CS-1419** (Admin CRM Data Upload Stores | Remove Duplicates & Resolve Multi-Mapping) - ASR1 is the working ticket for that effort, extended to the Store Report surface.
+This is a direct match to Jira **CS-1419** (Admin CRM Data Upload Stores | Remove Duplicates & Resolve Multi-Mapping) - CS-1593 is the working ticket for that effort, extended to the Store Report surface.
 
 ---
 
@@ -50,11 +52,13 @@ This is a direct match to Jira **CS-1419** (Admin CRM Data Upload Stores | Remov
 ---
 
 ## Related
-- **BMTRC1** - Retailer CRM store-level listing from Banner Page (depends on clean store data).
+- **CS-1597** - Retailer CRM store-level listing from Banner Page (depends on clean store data).
 - **AGENTS.md - Store module** - orphan domain; store dedupe supports making store data usable.
 
 ---
 
 ## Notes
-- Coordinate with CS-1419's cleanup script; ASR1 may be the Store-Report-facing view of the same work.
+- Coordinate with CS-1419's cleanup script; CS-1593 may be the Store-Report-facing view of the same work.
 - Define 'duplicate' matching rules (name, address, geo lat/long).
+- **2026-08-24 — Bijoy update:** Dedup/merge fix complete in staging; pushing to live soon. Verify on live that Store Report no longer shows duplicates and that historical data/mapping preservation holds; close ticket after live verification.
+- **2026-09-07 — Sync note:** Live Jira still `Backlog`/`Medium` (updated 2026-08-25) — no Jira status transition yet. Next action: update Jira to `In Staging` → `In Production`/`Closed` after deploy and add deployment note.

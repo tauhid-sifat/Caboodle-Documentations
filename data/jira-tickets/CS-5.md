@@ -1,4 +1,4 @@
-﻿# CS-5 - All brand skus should be available to select in this drop down. Even if they are not associated with a retailer
+# CS-5 - All brand skus should be available to select in this drop down. Even if they are not associated with a retailer
 
 | Field | Value |
 |-------|-------|

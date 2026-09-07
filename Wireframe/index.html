@@ -144,6 +144,48 @@
     .plan-item .p-cnt { background:#e2e8f0; color:#475569; font-size:0.65rem; font-weight:600; padding:2px 8px; border-radius:999px; flex-shrink:0; }
     .add-plan-btn { display:flex; align-items:center; justify-content:center; gap:6px; width:100%; padding:10px; background:none; border:1px dashed #cbd5e1; border-radius:8px; color:#64748b; font-size:0.8rem; cursor:pointer; transition:all 0.15s; font-family:inherit; }
     .add-plan-btn:hover { border-color:#6366f1; color:#6366f1; background:#eef2ff; }
+    .add-plan-btn.sub { border-style:solid; background:#fff; }
+
+    /* sub-project hierarchy */
+    .plan-item.sub-project { padding-left:36px; background:#f8fafc; border-left-color:transparent; }
+    .plan-item.sub-project.active { background:#eef2ff; border-left-color:#6366f1; }
+    .plan-parent { display:flex; align-items:center; gap:10px; padding:10px 20px 6px; cursor:pointer; font-size:0.75rem; font-weight:600; color:#475569; text-transform:uppercase; letter-spacing:0.04em; }
+    .plan-parent:hover { background:#f8fafc; }
+    .plan-parent .chevron { transition:transform 0.15s; }
+    .plan-parent.collapsed .chevron { transform:rotate(-90deg); }
+    .plan-children { overflow:hidden; }
+    .plan-children.collapsed { display:none; }
+    .plan-item .p-expand { color:#94a3b8; display:flex; padding:2px; border-radius:4px; }
+    .plan-item .p-expand:hover { background:#e2e8f0; color:#475569; }
+
+    /* project notes banner near Add Task */
+    .project-notes { background:#fffbeb; border:1px solid #fde68a; border-radius:10px; margin-bottom:16px; overflow:hidden; }
+    .project-notes-hdr { display:flex; align-items:center; justify-content:space-between; padding:10px 14px; cursor:pointer; user-select:none; }
+    .project-notes-hdr:hover { background:rgba(251,191,36,0.08); }
+    .project-notes-hdr span { font-size:0.8rem; font-weight:600; display:flex; align-items:center; gap:6px; color:#92400e; }
+    .project-notes-body { padding:0 14px 12px; font-size:0.83rem; line-height:1.6; color:#92400e; white-space:pre-wrap; max-height:120px; overflow-y:auto; }
+    .project-notes-body.empty { color:#b45309; font-style:italic; }
+    .project-notes.collapsed .project-notes-body { display:none; }
+
+    /* pipeline view toggle */
+    .view-toggle { display:flex; background:#f1f5f9; border-radius:999px; padding:3px; gap:2px; }
+    .view-toggle button { padding:5px 12px; font-size:0.7rem; font-weight:600; border-radius:999px; border:0; background:transparent; color:#64748b; cursor:pointer; transition:all 0.15s; font-family:inherit; }
+    .view-toggle button.active { background:#fff; color:#0f172a; box-shadow:0 1px 2px rgba(0,0,0,0.08); }
+
+    /* pipeline calendar */
+    .pipeline-cal { background:#fff; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; }
+    .pipeline-cal-hdr { display:flex; align-items:center; justify-content:space-between; padding:12px 16px; border-bottom:1px solid #e2e8f0; }
+    .pipeline-cal-grid { display:grid; grid-template-columns:repeat(7,1fr); }
+    .pipeline-cal-dayname { padding:8px; text-align:center; font-size:0.65rem; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; color:#94a3b8; background:#f8fafc; border-bottom:1px solid #e2e8f0; border-right:1px solid #f1f5f9; }
+    .pipeline-cal-cell { min-height:88px; padding:6px; border-right:1px solid #f1f5f9; border-bottom:1px solid #f1f5f9; background:#fff; }
+    .pipeline-cal-cell.today { background:#eef2ff; }
+    .pipeline-cal-cell.other { background:#f8fafc; color:#94a3b8; }
+    .pipeline-cal-date { font-size:0.7rem; font-weight:600; color:#475569; margin-bottom:4px; }
+    .pipeline-cal-task { font-size:0.65rem; padding:2px 6px; border-radius:6px; margin-bottom:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer; border-left:3px solid transparent; background:#f1f5f9; }
+    .pipeline-cal-task.high { border-left-color:#ef4444; background:#fef2f2; color:#991b1b; }
+    .pipeline-cal-task.med { border-left-color:#f59e0b; background:#fffbeb; color:#92400e; }
+    .pipeline-cal-task.low { border-left-color:#10b981; background:#f0fdf4; color:#065f46; }
+    .pipeline-cal-task.done { opacity:0.5; text-decoration:line-through; }
 
     .plan-main { flex:1; display:flex; flex-direction:column; min-width:0; }
     .plan-main-hdr { padding:18px 24px 14px; border-bottom:1px solid #e2e8f0; background:#fff; flex-shrink:0; display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
@@ -568,19 +610,19 @@
         </div>
       </div>
       <div class="tasks-layout">
-        <!-- LEFT: Plans sidebar -->
+        <!-- LEFT: Projects sidebar (renamed from Plans) -->
         <div class="plan-sidebar">
           <div class="sidebar-hdr">
-            <h1>Plans</h1>
-            <p>Plans organize your tasks</p>
+            <h1>Projects</h1>
+            <p>Projects organize your tasks</p>
           </div>
           <div class="sidebar-body" id="planListBody">
             <!-- Rendered by JS -->
           </div>
           <div class="sidebar-foot">
-            <button class="add-plan-btn" onclick="openAddPlan()">
+            <button class="add-plan-btn" onclick="openAddProject()">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-              New Plan
+              New Project
             </button>
           </div>
         </div>
@@ -588,10 +630,18 @@
         <div class="plan-main">
           <div class="plan-main-hdr">
             <div>
-              <div class="pmh-title" id="planTitle">Select a plan</div>
-              <div class="pmh-sub" id="planSub">Choose a plan from the sidebar to view its tasks</div>
+              <div class="pmh-title" id="planTitle">Select a project</div>
+              <div class="pmh-sub" id="planSub">Choose a project from the sidebar to view its tasks</div>
             </div>
-            <div class="pmh-actions">
+            <div class="pmh-actions" style="align-items:center;">
+              <div class="view-toggle" title="Switch between list and calendar">
+                <button id="pipelineListBtn" class="active" onclick="setPipelineView('list')">List</button>
+                <button id="pipelineCalBtn" onclick="setPipelineView('calendar')">Calendar</button>
+              </div>
+              <button onclick="openProjectNotes()" id="projectNotesBtn" disabled title="Project notes">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                Notes
+              </button>
               <button onclick="openAddTask()" class="primary" id="addTaskBtn" disabled>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                 Add Task
@@ -601,8 +651,8 @@
           <div class="plan-body" id="planContent">
             <div class="empty-state">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg>
-              <h3>No plan selected</h3>
-              <p>Pick a plan from the sidebar or create a new one</p>
+              <h3>No project selected</h3>
+              <p>Pick a project from the sidebar or create a new one</p>
             </div>
           </div>
         </div>
@@ -924,14 +974,19 @@
     </div>
   </div>
 
-  <!-- MODAL: Add/Edit Plan -->
+  <!-- MODAL: Add/Edit Project (renamed from Plan) + Sub-Project support -->
   <div id="planModal" class="modal-overlay">
     <div class="modal-box">
-      <div class="modal-hdr"><h3 id="planModalTitle">New Plan</h3><button class="modal-close" onclick="closeModal('planModal')">✕</button></div>
+      <div class="modal-hdr"><h3 id="planModalTitle">New Project</h3><button class="modal-close" onclick="closeModal('planModal')">✕</button></div>
       <div class="modal-body">
         <div class="modal-row">
-          <label class="modal-label">Plan Name</label>
-          <input class="modal-input" id="planNameInput" placeholder="e.g., Q3 Category Reviews">
+          <label class="modal-label">Project Name</label>
+          <input class="modal-input" id="planNameInput" placeholder="e.g., AIT, Q3 Category Reviews">
+        </div>
+        <div class="modal-row">
+          <label class="modal-label">Parent Project (optional)</label>
+          <select class="modal-input" id="planParentInput"></select>
+          <div style="font-size:0.65rem;color:#94a3b8;margin-top:4px;">Leave as "No parent" to create a top-level project. Select a parent to create a Sub-Project (1 level, like Jira sub-tasks).</div>
         </div>
         <div class="modal-row">
           <label class="modal-label">Description</label>
@@ -941,6 +996,21 @@
       <div class="modal-foot">
         <button class="btn btn-sm" onclick="closeModal('planModal')">Cancel</button>
         <button class="btn btn-sm btn-default" id="planModalSave" onclick="savePlan()">Create</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Project Notes (top near Add Task) -->
+  <div id="projectNotesModal" class="modal-overlay">
+    <div class="modal-box" style="max-width:520px;">
+      <div class="modal-hdr"><h3 id="projectNotesTitle">Project Notes</h3><button class="modal-close" onclick="closeModal('projectNotesModal')">✕</button></div>
+      <div class="modal-body">
+        <div style="font-size:0.7rem;color:#94a3b8;margin-bottom:8px;">Notes are attached to the selected project. Use for meeting context, buyer preferences, or links.</div>
+        <textarea class="modal-input" id="projectNotesInput" rows="5" placeholder="Add project notes..." style="resize:vertical;line-height:1.6;"></textarea>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-sm" onclick="closeModal('projectNotesModal')">Cancel</button>
+        <button class="btn btn-sm btn-default" onclick="saveProjectNotes()">Save Notes</button>
       </div>
     </div>
   </div>
@@ -960,24 +1030,34 @@
     let sendLog = [];
     let assignCellKey = null;
 
-    // ===== PIPELINE / PLANS & TASKS (Fellow-style) =====
+    // ===== PIPELINE / PROJECTS & TASKS (Fellow-style) — Projects + Sub-Projects + Notes + Calendar =====
     let planIdCounter = 0;
     let taskIdCounter = 0;
     let selectedPlanId = null;
     let editingTaskId = null;
     let editingPlanId = null;
     let pipelineDoneOpen = false;
+    let pipelineView = 'list'; // list | calendar
+    let pipelineCalDate = new Date(2026, 6, 1); // July 2026 default
+    let expandedParents = {}; // parentId -> bool (true = expanded)
+    let projectNotesCollapsed = false;
 
     const PLAN_COLORS = ['#6366f1','#10b981','#f59e0b','#ef4444','#8b5cf6','#ec4899','#06b6d4','#14b8a6'];
 
+    // parentId = null = top-level Project; otherwise Sub-Project (1 level max, like Jira sub-tasks)
     const PLANS = [
-      { id: ++planIdCounter, name:'Q3 Category Reviews', desc:'All Q3 review deadlines across banners', color:PLAN_COLORS[0], notes:'Tracking all Q3 category reviews. Key deadlines: Nugget Specialty Asian review (Jul 25), Lucky new item forms (Jul 18).' },
-      { id: ++planIdCounter, name:'UNFI Setup & Maintenance', desc:'New item forms and setup with UNFI', color:PLAN_COLORS[1], notes:'UNFI new item forms and warehouse assignments for 5 new SKUs.' },
-      { id: ++planIdCounter, name:'Broker Meetings & Follow-ups', desc:'Meeting notes and action items', color:PLAN_COLORS[2], notes:'Weekly buyer meetings. Track proposals, samples, and follow-ups.' },
-      { id: ++planIdCounter, name:'KeHE EDLP Planning', desc:'Everyday low price promotions', color:PLAN_COLORS[3], notes:'EDLP renewal cycles. Review lift data before renewing pricing.' },
-      { id: ++planIdCounter, name:'Distributor APL Updates', desc:'Authorized price list management', color:PLAN_COLORS[4], notes:'Monthly APL uploads for KeHE, UNFI, and SPINS.' },
-      { id: ++planIdCounter, name:'Marketing & Collateral', desc:'POS materials, digital assets, sell sheets', color:PLAN_COLORS[5], notes:'Sell sheets, digital shelf analytics, and store POS materials.' },
+      { id: ++planIdCounter, name:'AIT', desc:'AIT parent — organize sub-projects under one brand initiative', color:PLAN_COLORS[0], notes:'AIT is a parent project. Create sub-projects for each workstream (buyer decks, UNFI setup, sampling). This demonstrates the new Sub-Project hierarchy — avoids duplicating \"AIT\" as multiple top-level projects.', parentId: null },
+      { id: ++planIdCounter, name:'AIT — Buyer Decks', desc:'Category review decks for AIT', color:PLAN_COLORS[0], notes:'Sub-project of AIT. Decks for Nugget, Raleys, Whole Foods.', parentId:1 },
+      { id: ++planIdCounter, name:'AIT — UNFI Setup', desc:'New item forms + warehouse assignments', color:PLAN_COLORS[0], notes:'Sub-project of AIT. UNFI new item forms for 5 SKUs.', parentId:1 },
+      { id: ++planIdCounter, name:'AIT — Sampling & Collateral', desc:'Samples and sell sheets', color:PLAN_COLORS[0], notes:'Sub-project of AIT. Samples, sell sheets, POS.', parentId:1 },
+      { id: ++planIdCounter, name:'Q3 Category Reviews', desc:'All Q3 review deadlines across banners', color:PLAN_COLORS[1], notes:'Tracking all Q3 category reviews. Key deadlines: Nugget Specialty Asian review (Jul 25), Lucky new item forms (Jul 18).', parentId: null },
+      { id: ++planIdCounter, name:'Broker Meetings & Follow-ups', desc:'Meeting notes and action items', color:PLAN_COLORS[2], notes:'Weekly buyer meetings. Track proposals, samples, and follow-ups.', parentId: null },
+      { id: ++planIdCounter, name:'KeHE EDLP Planning', desc:'Everyday low price promotions', color:PLAN_COLORS[3], notes:'EDLP renewal cycles. Review lift data before renewing pricing.', parentId: null },
+      { id: ++planIdCounter, name:'Distributor APL Updates', desc:'Authorized price list management', color:PLAN_COLORS[4], notes:'Monthly APL uploads for KeHE, UNFI, and SPINS.', parentId: null },
+      { id: ++planIdCounter, name:'Marketing & Collateral', desc:'POS materials, digital assets, sell sheets', color:PLAN_COLORS[5], notes:'Sell sheets, digital shelf analytics, and store POS materials.', parentId: null },
     ];
+    // default expanded
+    PLANS.filter(p=>!p.parentId).forEach(p=> expandedParents[p.id]=true);
 
     let tasks = [
       // Plan 1: Q3 Category Reviews
@@ -1021,50 +1101,135 @@
       { id: ++taskIdCounter, planId:6, title:'POS materials — Nugget endcap', status:'todo', priority:'low', assignee:'Kate', due:'2026-08-01', notes:'Design shelf talkers and wobblers for Nugget Asian endcap display.', files:[] },
       { id: ++taskIdCounter, planId:6, title:'Brand style guide update done', status:'done', priority:'low', assignee:'You', due:'2026-06-05', notes:'Updated for 2026. New logo assets and packaging guidelines.', files:[{name:'Brand_Style_Guide_2026.pdf',size:'8.2 MB'}] },
     ];
+    // --- migrate seeded tasks from old planIds 1..6 to new project ids 5..9 + add AIT demo tasks ---
+    (function(){
+      const remap = {1:5,2:6,3:6,4:7,5:8,6:9}; // old->new (2 originally UNFI, 3 Broker etc - consolidate)
+      // Fix: original file had 1->Q3,2->UNFI,3->Broker,4->KeHE,5->APL,6->Marketing. Map to new ids:
+      const exact = {1:5,2:3,3:6,4:7,5:8,6:9};
+      // But tasks for old 2 were UNFI tasks - they should go to new 3? No, new 3 is AIT UNFI. Use exact for demo clarity:
+      // We'll keep UNFI tasks on a real project: move old 2 tasks to a temp then reassign to Broker Meetings (6) if needed. Simpler: just reassign old 2 (UNFI) -> 6's UNFI? Let's just map 1:5,2:6,3:6,4:7,5:8,6:9 and then add explicit AIT tasks below. This keeps seeded data on visible projects.
+      tasks.forEach(t=>{ if(exact[t.planId]) t.planId = exact[t.planId]; });
+      // Add AIT sub-project tasks to show hierarchy value (avoids duplicate AIT top-level)
+      tasks.push(
+        { id: ++taskIdCounter, planId:2, title:'AIT — Nugget deck draft', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-20', notes:'AIT buyer deck for Nugget — include velocity and promo lift.', files:[] },
+        { id: ++taskIdCounter, planId:2, title:'AIT — Raleys reset checklist', status:'todo', priority:'med', assignee:'Kate', due:'2026-07-28', notes:'Raleys reset pushed to Sep, keep checklist ready.', files:[] },
+        { id: ++taskIdCounter, planId:3, title:'AIT — UNFI new item forms (5 SKUs)', status:'todo', priority:'high', assignee:'You', due:'2026-07-18', notes:'Spec sheets + ingredient decks for AIT SKUs.', files:[{name:'AIT_UNFI_Form.xlsx',size:'420 KB'}] },
+        { id: ++taskIdCounter, planId:4, title:'AIT — Sell sheet + samples', status:'todo', priority:'med', assignee:'John', due:'2026-07-25', notes:'Samples and sell sheets for AIT launch.', files:[] },
+        { id: ++taskIdCounter, planId:1, title:'AIT — Overall timeline & kickoff', status:'todo', priority:'high', assignee:'You', due:'2026-07-15', notes:'Parent-level milestone — AIT kickoff call, links to sub-projects.', files:[] }
+      );
+    })();
 
-    // ===== PLANS SIDEBAR =====
+    // ===== PROJECTS SIDEBAR (hierarchical) =====
+    function isParent(p){ return !p.parentId; }
+    function getChildren(parentId){ return PLANS.filter(x=> x.parentId===parentId); }
+    function getParentLabel(p){ if(!p.parentId) return ''; const par=PLANS.find(x=>x.id===p.parentId); return par? par.name+' / ' : ''; }
+    function toggleParent(pid){ expandedParents[pid]=!expandedParents[pid]; renderPlanList(); }
     function renderPlanList() {
       const body = document.getElementById('planListBody');
       const q = (document.getElementById('planSearch')?.value || '').toLowerCase();
-      const filtered = PLANS.filter(p => p.name.toLowerCase().includes(q));
-      let html = '<div class="plan-search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input class="plan-search" id="planSearch" placeholder="Search plans" oninput="renderPlanList()"></div>';
-      filtered.forEach(p => {
+      const parents = PLANS.filter(p=> !p.parentId);
+      let html = '<div class="plan-search-wrap" style="padding:0 12px;"><svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input class="plan-search" id="planSearch" placeholder="Search projects" oninput="renderPlanList()"></div>';
+      parents.forEach(parent=>{
+        const children = getChildren(parent.id);
+        const childMatch = children.some(c=> c.name.toLowerCase().includes(q));
+        const parentMatch = parent.name.toLowerCase().includes(q);
+        if(q && !parentMatch && !childMatch) return;
+        const open = tasks.filter(t => t.planId === parent.id && t.status !== 'done').length + children.reduce((a,c)=> a + tasks.filter(t=>t.planId===c.id && t.status!=='done').length,0);
+        const done = tasks.filter(t => t.planId === parent.id && t.status === 'done').length + children.reduce((a,c)=> a + tasks.filter(t=>t.planId===c.id && t.status==='done').length,0);
+        const total = open+done;
+        const active = parent.id === selectedPlanId ? ' active' : '';
+        const expanded = expandedParents[parent.id]!==false;
+        const hasChildren = children.length>0;
+        html += '<div class="plan-parent' + (expanded?'':' collapsed') + '" onclick="toggleParent('+parent.id+')"><span class="chevron" style="display:'+(hasChildren?'inline':'none')+'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="m6 9 6 6 6-6"/></svg></span><span style="flex:1;">'+parent.name+'</span><span class="p-cnt" style="background:#e2e8f0;">'+total+'</span></div>';
+        html += '<div class="plan-item' + active + '" onclick="selectPlan(' + parent.id + ')" style="margin-left:8px;border-left:2px solid '+parent.color+'"><div class="p-color" style="background:' + parent.color + '"></div><div class="p-info"><div class="p-name">' + parent.name + '</div><div class="p-meta">' + open + ' open &middot; ' + done + ' done</div></div></div>';
+        if(hasChildren){
+          html += '<div class="plan-children' + (expanded?'':' collapsed') + '">';
+          children.forEach(c=>{
+            if(q && !c.name.toLowerCase().includes(q) && !parentMatch) return;
+            const co = tasks.filter(t => t.planId === c.id && t.status !== 'done').length;
+            const cd = tasks.filter(t => t.planId === c.id && t.status === 'done').length;
+            const cActive = c.id === selectedPlanId ? ' active' : '';
+            html += '<div class="plan-item sub-project' + cActive + '" onclick="selectPlan(' + c.id + ')"><div class="p-color" style="background:' + c.color + '"></div><div class="p-info"><div class="p-name">' + c.name + '</div><div class="p-meta">' + co + ' open &middot; ' + cd + ' done</div></div><span class="p-cnt">' + (co+cd) + '</span></div>';
+          });
+          html += '</div>';
+        }
+      });
+      // orphan sub-projects check
+      const orphans = PLANS.filter(p=> p.parentId && !PLANS.find(x=>x.id===p.parentId));
+      orphans.forEach(p=>{
+        if(q && !p.name.toLowerCase().includes(q)) return;
         const open = tasks.filter(t => t.planId === p.id && t.status !== 'done').length;
         const done = tasks.filter(t => t.planId === p.id && t.status === 'done').length;
         const active = p.id === selectedPlanId ? ' active' : '';
-        html += '<div class="plan-item' + active + '" onclick="selectPlan(' + p.id + ')">' +
-          '<div class="p-color" style="background:' + p.color + '"></div>' +
-          '<div class="p-info"><div class="p-name">' + p.name + '</div><div class="p-meta">' + open + ' open &middot; ' + done + ' done</div></div>' +
-          '<span class="p-cnt">' + (open + done) + '</span></div>';
+        html += '<div class="plan-item' + active + '" onclick="selectPlan(' + p.id + ')"><div class="p-color" style="background:' + p.color + '"></div><div class="p-info"><div class="p-name">' + p.name + '</div><div class="p-meta">' + open + ' open &middot; ' + done + ' done</div></div><span class="p-cnt">' + (open+done) + '</span></div>';
       });
       body.innerHTML = html;
+      const sel = document.getElementById('planSearch');
+      if(sel){ sel.focus(); const v=sel.value; sel.value=''; sel.value=v; }
     }
 
     function selectPlan(id) {
       selectedPlanId = id;
+      pipelineView = 'list';
       renderPlanList();
       renderPlanContent();
       document.getElementById('addTaskBtn').disabled = false;
+      document.getElementById('projectNotesBtn').disabled = false;
     }
 
-    // ===== PLAN CONTENT =====
+    function setPipelineView(mode){
+      pipelineView = mode;
+      document.getElementById('pipelineListBtn').className = mode==='list'?'active':'';
+      document.getElementById('pipelineCalBtn').className = mode==='calendar'?'active':'';
+      renderPlanContent();
+    }
+    function openProjectNotes(){
+      const p = PLANS.find(x=>x.id===selectedPlanId);
+      if(!p) return;
+      document.getElementById('projectNotesTitle').textContent = 'Notes — ' + p.name;
+      document.getElementById('projectNotesInput').value = p.notes || '';
+      showModal('projectNotesModal');
+    }
+    function saveProjectNotes(){
+      const p = PLANS.find(x=>x.id===selectedPlanId);
+      if(!p) return;
+      p.notes = document.getElementById('projectNotesInput').value.trim();
+      closeModal('projectNotesModal');
+      renderPlanContent();
+    }
+
+    // ===== PROJECT CONTENT (list + calendar + notes) =====
     function renderPlanContent() {
       const p = PLANS.find(x => x.id === selectedPlanId);
       const container = document.getElementById('planContent');
       if (!p) {
-        container.innerHTML = '<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg><h3>No plan selected</h3><p>Pick a plan from the sidebar or create a new one</p></div>';
-        document.getElementById('planTitle').textContent = 'Select a plan';
-        document.getElementById('planSub').textContent = 'Choose a plan from the sidebar to view its tasks';
+        container.innerHTML = '<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg><h3>No project selected</h3><p>Pick a project from the sidebar or create a new one</p></div>';
+        document.getElementById('planTitle').textContent = 'Select a project';
+        document.getElementById('planSub').textContent = 'Choose a project from the sidebar to view its tasks';
         return;
       }
-      document.getElementById('planTitle').textContent = p.name;
+      document.getElementById('planTitle').textContent = getParentLabel(p) + p.name;
       document.getElementById('planSub').textContent = p.desc || 'No description';
+      document.getElementById('pipelineListBtn').className = pipelineView==='list'?'active':'';
+      document.getElementById('pipelineCalBtn').className = pipelineView==='calendar'?'active':'';
 
       const planTasks = tasks.filter(t => t.planId === p.id);
 
       let html = '';
 
-      // Quick-add bar
+      // Project Notes (top near Add Task) — collapsible banner
+      const hasNotes = p.notes && p.notes.trim().length;
+      html += '<div class="project-notes' + (projectNotesCollapsed?' collapsed':'') + '" onclick="projectNotesCollapsed=!projectNotesCollapsed; renderPlanContent();">' +
+        '<div class="project-notes-hdr"><span><svg viewBox="0 0 24 24" fill="none" stroke="#92400e" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg> Project Notes' + (hasNotes?'':' — no notes yet') + '</span><span style="font-size:0.7rem;color:#b45309;" onclick="event.stopPropagation(); openProjectNotes();">Edit</span></div>' +
+        '<div class="project-notes-body' + (hasNotes?'':' empty') + '">' + (hasNotes? p.notes.replace(/</g,'&lt;') : 'Click Edit to add context for this project (buyer prefs, links, decisions)...') + '</div></div>';
+
+      if(pipelineView==='calendar'){
+        html += renderPipelineCalendar(p, planTasks);
+        container.innerHTML = html;
+        return;
+      }
+
+      // Quick-add bar (list view)
       html += '<div class="quick-add">' +
         '<input id="quickTaskInput" placeholder="Quick add task — press Enter" onkeydown="if(event.key===\'Enter\')quickAddTask()">' +
         '<input type="date" id="quickDue" title="Deadline" onkeydown="if(event.key===\'Enter\')quickAddTask()">' +
@@ -1168,6 +1333,38 @@
       if (el) el.classList.toggle('open');
     }
 
+    function renderPipelineCalendar(project, planTasks){
+      const y = pipelineCalDate.getFullYear();
+      const m = pipelineCalDate.getMonth();
+      const first = new Date(y,m,1);
+      const startDay = first.getDay();
+      const daysInMonth = new Date(y,m+1,0).getDate();
+      const prevDays = new Date(y,m,0).getDate();
+      const monthName = pipelineCalDate.toLocaleString('en-US',{month:'long',year:'numeric'});
+      let html = '<div class="pipeline-cal"><div class="pipeline-cal-hdr"><div style="font-weight:600;">' + monthName + ' — ' + project.name + '</div><div style="display:flex;gap:6px;"><button class="btn btn-sm" onclick="pipelineCalDate=new Date(pipelineCalDate.getFullYear(),pipelineCalDate.getMonth()-1,1);renderPlanContent();">‹</button><button class="btn btn-sm" onclick="pipelineCalDate=new Date()">Today</button><button class="btn btn-sm" onclick="pipelineCalDate=new Date(pipelineCalDate.getFullYear(),pipelineCalDate.getMonth()+1,1);renderPlanContent();">›</button></div></div>';
+      html += '<div class="pipeline-cal-grid"><div class="pipeline-cal-dayname">Sun</div><div class="pipeline-cal-dayname">Mon</div><div class="pipeline-cal-dayname">Tue</div><div class="pipeline-cal-dayname">Wed</div><div class="pipeline-cal-dayname">Thu</div><div class="pipeline-cal-dayname">Fri</div><div class="pipeline-cal-dayname">Sat</div>';
+      // leading
+      for(let i=0;i<startDay;i++){ html += '<div class="pipeline-cal-cell other"><div class="pipeline-cal-date">' + (prevDays - startDay + 1 + i) + '</div></div>'; }
+      const todayStr = new Date().toISOString().slice(0,10);
+      for(let d=1; d<=daysInMonth; d++){
+        const dateStr = new Date(y,m,d).toISOString().slice(0,10);
+        const isToday = dateStr===todayStr;
+        html += '<div class="pipeline-cal-cell' + (isToday?' today':'') + '"><div class="pipeline-cal-date">' + d + '</div>';
+        planTasks.filter(t=> t.due===dateStr).forEach(t=>{
+          html += '<div class="pipeline-cal-task ' + t.priority + (t.status==='done'?' done':'') + '" title="' + t.title + '" onclick="editTask('+t.id+')">' + t.title + '</div>';
+        });
+        html += '</div>';
+      }
+      const rem = (startDay + daysInMonth) % 7;
+      if(rem!==0){ for(let i=0;i<7-rem;i++){ html += '<div class="pipeline-cal-cell other"><div class="pipeline-cal-date">' + (i+1) + '</div></div>'; } }
+      html += '</div>';
+      // undated
+      const undated = planTasks.filter(t=> !t.due);
+      if(undated.length){ html += '<div style="padding:12px 16px;border-top:1px solid #e2e8f0;"><div style="font-size:0.75rem;font-weight:600;color:#64748b;margin-bottom:6px;">No Due Date ('+undated.length+')</div>' + undated.map(t=> '<span class="pipeline-cal-task '+t.priority+'" onclick="editTask('+t.id+')" style="display:inline-block;margin:3px;">'+t.title+'</span>').join('') + '</div>'; }
+      html += '</div>';
+      return html;
+    }
+
     function toggleTaskDone(id) {
       const t = tasks.find(x => x.id === id);
       if (!t) return;
@@ -1178,7 +1375,7 @@
 
     // ===== TASK MODAL =====
     function openAddTask() {
-      if (!selectedPlanId) { alert('Select a plan first.'); return; }
+      if (!selectedPlanId) { alert('Select a project first.'); return; }
       editingTaskId = null;
       document.getElementById('taskModalTitle').textContent = 'Add Task';
       document.getElementById('taskModalSave').textContent = 'Add';
@@ -1270,13 +1467,41 @@
       renderPlanList();
     }
 
-    // ===== PLAN MODAL =====
-    function openAddPlan() {
+    // ===== PROJECT MODAL (with Sub-Project support) =====
+    function populateParentSelect(selectedId){
+      const sel = document.getElementById('planParentInput');
+      const parents = PLANS.filter(p=> !p.parentId);
+      let html = '<option value=\"\">No parent — top-level project</option>';
+      parents.forEach(p=>{
+        if(selectedId && p.id===selectedId) return;
+        html += '<option value=\"'+p.id+'\"'+(selectedId===p.id?' selected':'')+'>'+p.name+'</option>';
+      });
+      sel.innerHTML = html;
+    }
+    function openAddPlan(){ openAddProject(); }
+    function openAddProject(){
       editingPlanId = null;
-      document.getElementById('planModalTitle').textContent = 'New Plan';
+      document.getElementById('planModalTitle').textContent = 'New Project';
       document.getElementById('planModalSave').textContent = 'Create';
       document.getElementById('planNameInput').value = '';
       document.getElementById('planDescInput').value = '';
+      populateParentSelect(null);
+      // pre-select parent if a parent project is selected
+      const cur = PLANS.find(x=>x.id===selectedPlanId);
+      if(cur && !cur.parentId){ document.getElementById('planParentInput').value = String(cur.id); }
+      else if(cur && cur.parentId){ document.getElementById('planParentInput').value = String(cur.parentId); }
+      showModal('planModal');
+    }
+    function openEditProject(){
+      const p = PLANS.find(x=>x.id===selectedPlanId);
+      if(!p) return;
+      editingPlanId = p.id;
+      document.getElementById('planModalTitle').textContent = 'Edit Project';
+      document.getElementById('planModalSave').textContent = 'Save';
+      document.getElementById('planNameInput').value = p.name;
+      document.getElementById('planDescInput').value = p.desc||'';
+      populateParentSelect(p.parentId || null);
+      if(p.parentId) document.getElementById('planParentInput').value = String(p.parentId);
       showModal('planModal');
     }
 
@@ -1284,15 +1509,25 @@
       const name = document.getElementById('planNameInput').value.trim();
       if (!name) return;
       const desc = document.getElementById('planDescInput').value.trim();
+      const parentVal = document.getElementById('planParentInput').value;
+      const parentId = parentVal ? parseInt(parentVal,10) : null;
+      if(parentId && PLANS.find(x=>x.id===parentId && x.parentId)){
+        alert('Sub-projects can only be 1 level deep — cannot nest under a sub-project.');
+        return;
+      }
       if (editingPlanId) {
         const p = PLANS.find(x => x.id === editingPlanId);
-        if (p) { p.name = name; p.desc = desc; }
+        if (p) { p.name = name; p.desc = desc; p.parentId = parentId; }
       } else {
-        PLANS.push({ id: ++planIdCounter, name, desc, color: PLAN_COLORS[planIdCounter % PLAN_COLORS.length], notes:'' });
+        const newId = ++planIdCounter;
+        PLANS.push({ id:newId, name, desc, color: PLAN_COLORS[newId % PLAN_COLORS.length], notes:'', parentId });
+        if(parentId) expandedParents[parentId]=true;
+        selectedPlanId = newId;
       }
       closeModal('planModal');
       renderPlanList();
       if (selectedPlanId) renderPlanContent();
+      document.getElementById('projectNotesBtn').disabled = !selectedPlanId;
     }
 
     // ===== VIEW SWITCHER =====

@@ -1,6 +1,6 @@
 # Broker Dashboard | Dashboard Filter — My Tasks or Contact Name
 
-**BD3** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1600** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -18,7 +18,7 @@ Add a filter control to the broker dashboard **Pipeline/Task view** that lets th
 - **"My tasks"** — show only tasks assigned to the current user.
 - **Contact name** — show only tasks assigned to a selected person (from the brokerage user list).
 
-The filter applies across the task list (regardless of status: todo / in-progress / done) and is independent of any search term. This pairs with BD2 (assigning a person to a task).
+The filter applies across the task list (regardless of status: todo / in-progress / done) and is independent of any search term. This pairs with CS-1599 (assigning a person to a task).
 
 ---
 
@@ -48,15 +48,15 @@ The filter applies across the task list (regardless of status: todo / in-progres
 ---
 
 ## Design Reference
-- Pipeline/Task view: `BD4-broker-dashboard-pipeline-task-board.md`
-- Assignment fields: `BD2-broker-dashboard-assign-time-person.md`
-- Dashboard shell: `BD1-broker-dashboard-from-wireframe.md`
+- Pipeline/Task view: `CS-1601-broker-dashboard-pipeline-task-board.md`
+- Assignment fields: `CS-1599-broker-dashboard-assign-time-person.md`
+- Dashboard shell: `CS-1598-broker-dashboard-from-wireframe.md`
 
 ---
 
 ## Related
-- **BD2** — required for the assignee values this filter operates on.
-- **BD4** — the base Pipeline/Task list.
+- **CS-1599** — required for the assignee values this filter operates on.
+- **CS-1601** — the base Pipeline/Task list.
 
 ---
 

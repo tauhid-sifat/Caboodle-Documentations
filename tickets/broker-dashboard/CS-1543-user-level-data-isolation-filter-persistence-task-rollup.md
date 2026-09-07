@@ -21,7 +21,7 @@ This ticket implements three related user-centric improvements discussed on Augu
 
 | # | Requirement | Coverage |
 |---|-------------|----------|
-| 1 | User-specific saved filters (system-wide) | **NEW** — expands PM4 to all modules |
+| 1 | User-specific saved filters (system-wide) | **NEW** — expands CS-1616 to all modules |
 | 2 | User-specific data/task visibility | **NEW** — enforce access control |
 | 3 | Organizational model for brokers | **COVERED by CS-1461** |
 | 4 | Master task roll-up in Broker Dashboard | **NEW** |

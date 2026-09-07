@@ -1,6 +1,6 @@
 ﻿# Distributor APL | Wholesale Case Cost Required on Edit But Not on Upload
 
-**DA2** | New Requirement | Bug | Priority: TBD | Status: New
+**CS-1603** | New Requirement | Bug | Priority: TBD | Status: New
 
 ---
 

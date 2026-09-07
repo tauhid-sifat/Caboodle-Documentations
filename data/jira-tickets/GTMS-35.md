@@ -1,4 +1,4 @@
-# GTMS-35 - YYN Clover Sonoma
+# GTMS-35 - YYN Clover Sonoma 
 
 | Field | Value |
 |-------|-------|
@@ -7,9 +7,10 @@
 | **Priority** | Medium |
 | **Assignee** |  |
 | **Reporter** | Constance Wolfe |
-| **Created** | 11/Apr/24 4:20 PM |
-| **Updated** | 11/Apr/24 4:32 PM |
+| **Created** | 2024-04-11T16:20:39.974+0600 |
+| **Updated** | 2024-04-11T16:32:30.416+0600 |
+| **Labels** |  |
 
 ## Description
 
-*No description provided*
+No description provided.

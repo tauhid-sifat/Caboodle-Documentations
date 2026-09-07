@@ -1,6 +1,6 @@
 # Reports | Brand Distributor Report | Should User Be Able to Export the Data?
 
-**RDR1** | Question | Priority: TBD | Status: New
+**CS-1622** | Question | Priority: TBD | Status: New
 
 ---
 
@@ -50,7 +50,7 @@ Open question: **Should users be able to export the Brand Distributor Report dat
 ---
 
 ## Related
-- **RDR2** - rolling 12-month scope for the same report (export scope should honor the same filter window).
+- **CS-1623** - rolling 12-month scope for the same report (export scope should honor the same filter window).
 
 ---
 

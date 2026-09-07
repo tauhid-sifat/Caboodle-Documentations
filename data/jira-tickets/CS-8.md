@@ -1,4 +1,4 @@
-﻿# CS-8 - Convert UPCNumber(Unit UPC) number to string in Product Spec creation.
+# CS-8 - Convert UPCNumber(Unit UPC) number to string in Product Spec creation.
 
 | Field | Value |
 |-------|-------|

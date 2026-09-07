@@ -7,12 +7,13 @@
 | **Priority** | Medium |
 | **Assignee** |  |
 | **Reporter** | Constance Wolfe |
-| **Created** | 09/Apr/24 2:25 AM |
-| **Updated** | 09/Apr/24 2:25 AM |
+| **Created** | 2024-04-09T02:25:28.214+0600 |
+| **Updated** | 2024-04-09T02:25:39.080+0600 |
+| **Labels** |  |
 
 ## Description
 
-*April 21st Sprint*
+**April 21st Sprint**
 
 Trade Spend (Add to sprint of 22nd April)
 

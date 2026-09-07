@@ -1,6 +1,6 @@
 # Brand Modules | TSS / Promo Calendar | EDLP Shows Only in January - Should Span All Months
 
-**BMTSS6** | Bug | Priority: TBD | Status: New
+**CS-1630** | Bug | Priority: TBD | Status: New
 
 ---
 
@@ -54,8 +54,8 @@ This is a direct match to Jira **CS-1436** (same symptom, same environments).
 ---
 
 ## Related
-- **BMTSS3** - EDLP entry path (upstream).
-- **BMTSS4** - actualization/reporting consistency.
+- **CS-1627** - EDLP entry path (upstream).
+- **CS-1628** - actualization/reporting consistency.
 
 ---
 

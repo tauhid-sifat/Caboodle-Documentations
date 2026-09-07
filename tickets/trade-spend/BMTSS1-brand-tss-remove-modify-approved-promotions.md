@@ -1,6 +1,6 @@
 # Brand Modules | TSS | Remove or Modify Approved Promotions
 
-**BMTSS1** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1625** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -14,9 +14,9 @@
 
 ## Description
 
-Currently there is **no option to remove a promotion from Approved Promotions** once it's approved. The only workaround is to delete the Approved promotion from the Sandbox, which causes data/calendar side-effects (see Jira refs). Users instead follow a manual SOP (see BMTSS2): copy the Approved promo into the Sandbox, rename it ("Original Version …"), delete the original, and (for modifications) create a "Revised …" copy, edit, and push back to Approved.
+Currently there is **no option to remove a promotion from Approved Promotions** once it's approved. The only workaround is to delete the Approved promotion from the Sandbox, which causes data/calendar side-effects (see Jira refs). Users instead follow a manual SOP (see CS-1626): copy the Approved promo into the Sandbox, rename it ("Original Version …"), delete the original, and (for modifications) create a "Revised …" copy, edit, and push back to Approved.
 
-This ticket captures the **need** for a first-class Remove/Modify capability on Approved Promotions. The detailed SOP and versioning rules are specified in **BMTSS2**.
+This ticket captures the **need** for a first-class Remove/Modify capability on Approved Promotions. The detailed SOP and versioning rules are specified in **CS-1626**.
 
 ---
 
@@ -32,7 +32,7 @@ This ticket captures the **need** for a first-class Remove/Modify capability on 
 - **Given** a promotion is Approved
 - **When** the user wants to change it
 - **Then** they can do so without the manual copy/rename/delete dance
-- **And** prior versions are preserved per the versioning rules in BMTSS2
+- **And** prior versions are preserved per the versioning rules in CS-1626
 
 ---
 
@@ -45,11 +45,11 @@ This ticket captures the **need** for a first-class Remove/Modify capability on 
 ---
 
 ## Related
-- **BMTSS2** — detailed SOP for remove/modify (version naming: "Original Version", "Revised …").
+- **CS-1626** — detailed SOP for remove/modify (version naming: "Original Version", "Revised …").
 - **CS-1098 / CS-1108** — module renamed Promo Planning → Brand Approved Promotions (BAP).
 
 ---
 
 ## Notes
-- Coordinate with BMTSS2 (versioning SOP) — this ticket is the capability; BMTSS2 is the procedure.
+- Coordinate with CS-1626 (versioning SOP) — this ticket is the capability; CS-1626 is the procedure.
 - Confirm whether "remove" = soft-delete (preserve for audit) vs. hard delete.

@@ -1,6 +1,6 @@
 # Broker Dashboard | Add Broker Logo to Dashboard Button
 
-**PM7** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1604** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -16,7 +16,7 @@
 
 The broker dashboard landing page has a tile grid of navigation buttons (Market Overview, Category Review, Promotional Management, etc.). The dashboard header or primary navigation button area currently lacks the broker's logo. Adding the broker logo to the dashboard button area (e.g., the top navigation bar or the dashboard tile itself) reinforces brand identity.
 
-Note: This differs from CS-1072, which covers the landing page hero/header logo. PM7 specifically targets the dashboard navigation button/badge showing the broker logo.
+Note: This differs from CS-1072, which covers the landing page hero/header logo. CS-1604 specifically targets the dashboard navigation button/badge showing the broker logo.
 
 ---
 

@@ -1,6 +1,6 @@
 # Promotional Management | Implement Promo Status Options in Submission Button
 
-**PM3** | New Requirement | User Story | Priority: High | Status: New
+**CS-1615** | New Requirement | User Story | Priority: High | Status: New
 
 ---
 

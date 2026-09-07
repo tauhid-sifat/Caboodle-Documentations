@@ -1,6 +1,6 @@
 ﻿# Category Review | Remove All Reviews at Once Rather Than Page by Page
 
-**CR1** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1605** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 

@@ -44,13 +44,13 @@
   - Who receives it (brand owner + sub-users)? Same per-brand grouping as Category Review emails?
   - Should there be a toggle to silence notifications for minor edits (like the Pipeline "don't email on every save" complaint)?
 
-### 1.7 Promo Management — PM1–PM6 (unticketed; deliverables exist)
+### 1.7 Promo Management — PM1–CS-1618 (unticketed; deliverables exist)
 - **PM1 Submission button doesn't work:** Repro steps? Is it broken in live, or never built? What should the button do end-to-end?
-- **PM2 Formatted export:** Export to what format (Excel/PDF/CSV)? "Formatted" = pre-styled so no post-formatting? Any column set/layout preference?
-- **PM3 Status options in Submission button:** Confirm the exact status list to surface (from Brand promo calendar: Active/Cancelled/Pending/DidNotRun/Declined/RetailerApproved/Completed/Submitted). Tagged per logged-in user — explain what "tagged by user login" means for us (visibility scope?).
-- **PM4 Pin/freeze filter options:** Pin = saved default filter applied on login? Should it be per-user (fixed filters) or per-brokerage? Which fields (year, brand, retailer)?
-- **PM5 Uniform grid format:** The monthly columns are uneven widths — confirm we should standardize to equal-width months.
-- **PM6 Event across months:** If a promo spans Jan–Mar, should it display on each month (read-only) or be draggable/movable between months? (Transcripts: Option A read-only vs Option C full drag — pick one.)
+- **CS-1614 Formatted export:** Export to what format (Excel/PDF/CSV)? "Formatted" = pre-styled so no post-formatting? Any column set/layout preference?
+- **CS-1615 Status options in Submission button:** Confirm the exact status list to surface (from Brand promo calendar: Active/Cancelled/Pending/DidNotRun/Declined/RetailerApproved/Completed/Submitted). Tagged per logged-in user — explain what "tagged by user login" means for us (visibility scope?).
+- **CS-1616 Pin/freeze filter options:** Pin = saved default filter applied on login? Should it be per-user (fixed filters) or per-brokerage? Which fields (year, brand, retailer)?
+- **CS-1617 Uniform grid format:** The monthly columns are uneven widths — confirm we should standardize to equal-width months.
+- **CS-1618 Event across months:** If a promo spans Jan–Mar, should it display on each month (read-only) or be draggable/movable between months? (Transcripts: Option A read-only vs Option C full drag — pick one.)
 
 ---
 
@@ -173,7 +173,7 @@
 ---
 
 ## Summary checklist for the call
-- [ ] Broker Dashboard: my-tasks filter, pipeline, assign time/person, CR sort, upload template, MO email push, PM1–PM6 status options
+- [ ] Broker Dashboard: my-tasks filter, pipeline, assign time/person, CR sort, upload template, MO email push, PM1–CS-1618 status options
 - [ ] Brand: dashboard update + flags, pipeline (5 sub-items), TSS unpublish + actualize + EDLP rule + promo year, UPC in pricing, store-level page
 - [ ] Reports: distributor export, MO sort + summary, SPINS hide, sales tracker bug + look, rolling 12-month scope
 - [ ] Admin: icons on report buttons, store duplicate merge scope

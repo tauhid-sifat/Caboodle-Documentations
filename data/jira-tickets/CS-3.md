@@ -1,4 +1,4 @@
-﻿# CS-3 - UPC code will be used as ProductID
+# CS-3 - UPC code will be used as ProductID
 
 | Field | Value |
 |-------|-------|

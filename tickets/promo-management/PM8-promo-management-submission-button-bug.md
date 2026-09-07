@@ -45,14 +45,14 @@ Reported symptom: "Submission Button Does not work." Needs investigation to dete
 
 ## Design Reference
 - Existing submission flow: `UpdateSubmissionStatusOfEventsRequest` (role-aware submission flag)
-- Promo status options in submission: `PM3-promo-status-submission.md`
+- Promo status options in submission: `CS-1615-promo-status-submission.md`
 
 ---
 
 ## Related
 - **PM1** — `CS-NEW-pm1-submission-button-fix.md` — prior "Submission Button Fix" ticket; confirm whether PM8 is the same defect resurfaced or a different root cause.
-- **PM3** — `PM3-promo-status-submission.md` — implements promo status options in the submission button (enhancement, not the bug itself).
-- **PM7** — `PM7-broker-dashboard-logo-button.md` — unrelated (broker logo button); PM8 was chosen to avoid colliding with PM7.
+- **CS-1615** — `CS-1615-promo-status-submission.md` — implements promo status options in the submission button (enhancement, not the bug itself).
+- **CS-1604** — `CS-1604-broker-dashboard-logo-button.md` — unrelated (broker logo button); PM8 was chosen to avoid colliding with CS-1604.
 
 ---
 

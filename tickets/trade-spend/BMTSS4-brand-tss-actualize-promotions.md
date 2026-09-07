@@ -1,6 +1,6 @@
 # Brand Modules | TSS | Actualize Promotions - Best Method and Plan-to-Actual Reports
 
-**BMTSS4** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1628** | New Requirement | User Story | Priority: TBD | Status: New
 **Reporter:** Constance Wolfe
 
 ---
@@ -59,7 +59,7 @@ This ticket supersedes/extends the prior placeholder `CS-NEW-brand-tss-actualize
 ---
 
 ## Related
-- **BMTSS6** - EDLP rendering in reports (downstream of correct actualization).
+- **CS-1630** - EDLP rendering in reports (downstream of correct actualization).
 - **CS-1284 / CS-1282** - Monthly Report navigation/hierarchy (report presentation).
 
 ---

@@ -1,6 +1,6 @@
 # Admin | Admin Controls | Control Dropdown Options for Broker Category Review Brand Report
 
-**AAC2** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1589** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -41,8 +41,8 @@ Provide an **Admin Control** to manage the **dropdown option lists** used by the
 ---
 
 ## Related
-- **AAC1** - Admin control of report-page button icons (same Admin Controls area).
-- **ACDU1** - filter audit (dropdown/filter options overlap in scope).
+- **CS-1588** - Admin control of report-page button icons (same Admin Controls area).
+- **CS-1590** - filter audit (dropdown/filter options overlap in scope).
 
 ---
 

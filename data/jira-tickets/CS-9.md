@@ -1,4 +1,4 @@
-﻿# CS-9 - [FE] Add SKU name and banner filter
+# CS-9 - [FE] Add SKU name and banner filter
 
 | Field | Value |
 |-------|-------|

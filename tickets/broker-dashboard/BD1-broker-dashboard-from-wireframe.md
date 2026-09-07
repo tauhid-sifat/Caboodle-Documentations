@@ -1,6 +1,6 @@
 # Broker Dashboard | Dashboard (from wireframe)
 
-**BD1** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1598** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -17,11 +17,11 @@
 Build (or finalize) the broker dashboard to match the deployed wireframe (`Wireframe/index.html`, live at https://caboodle-broker-dashboard.vercel.app). The dashboard layout, top to bottom, is:
 
 1. **Header** — Caboodle logo, nav (Dashboard, Management ▾, Strategy ▾, Files icon), brand selector.
-2. **Quick Actions** — 6 tiles: Market Overview, Category Review, Distributor APL, Promotional Management, File, and **Tasks** (which opens the Pipeline/Task view — see BD4).
+2. **Quick Actions** — 6 tiles: Market Overview, Category Review, Distributor APL, Promotional Management, File, and **Tasks** (which opens the Pipeline/Task view — see CS-1601).
 3. **KPI Row** — 4 compact horizontal cards: Stores In, Reviews Due, Active Promos, Brands Represented (each with icon + value/label + trend + "View" link).
 4. **Timeline panel** — a single panel titled **"Timeline — Next 14 Days"** showing a unified feed of Category Review deadlines, Promo events, and Tasks, grouped by day (Today, Tomorrow, …). Filter pills switch the window (7d / 14d / 30d) and toggle visibility of Cat Review / Promo / Tasks. Each timeline item links out to its source view (Category Review, Promo Calendar, or the Pipeline/Tasks view).
 
-Note: the wireframe does **not** contain a Kanban / task board on the dashboard. Tasks live in the separate Pipeline/Task view (BD4), reached via the **Tasks** quick-action tile; the dashboard only surfaces task items inside the Timeline feed.
+Note: the wireframe does **not** contain a Kanban / task board on the dashboard. Tasks live in the separate Pipeline/Task view (CS-1601), reached via the **Tasks** quick-action tile; the dashboard only surfaces task items inside the Timeline feed.
 
 This ticket is the container/umbrella for the dashboard shell and composition. Specific sub-features (KPI cards, the Pipeline/Task view, filters, assignments) are tracked in their own tickets (see Related).
 
@@ -57,18 +57,18 @@ This ticket is the container/umbrella for the dashboard shell and composition. S
 ## Design Reference
 - Wireframe: `Wireframe/index.html` (https://caboodle-broker-dashboard.vercel.app) — `view-dashboard` section
 - KPI cards spec: `CS-1305-broker-dashboard-kpi-cards.md`
-- Pipeline/Task view: `BD4-broker-dashboard-pipeline-task-board.md`
+- Pipeline/Task view: `CS-1601-broker-dashboard-pipeline-task-board.md`
 
 ---
 
 ## Related
-- **CS-1305** — original broker dashboard KPI/calendar ticket (this BD1 expands scope to the full wireframe shell).
-- **BD4** — the separate Pipeline/Task view (Fellow-style list, not a Kanban).
-- **BD2 / BD3** — task-level enhancements (assign time/person, filter) that apply to the Pipeline/Task view.
+- **CS-1305** — original broker dashboard KPI/calendar ticket (this CS-1598 expands scope to the full wireframe shell).
+- **CS-1601** — the separate Pipeline/Task view (Fellow-style list, not a Kanban).
+- **CS-1599 / CS-1600** — task-level enhancements (assign time/person, filter) that apply to the Pipeline/Task view.
 
 ---
 
 ## Notes
 - Dark mode toggle was removed from the final wireframe — do not implement.
 - Quick Actions sit *under* the header (above the KPI row) per the wireframe.
-- The former `CS-NEW-broker-dashboard-task-board.md` (3-column Kanban) has been **removed** as obsolete — it contradicted the wireframe (no Kanban) and is superseded by BD4.
+- The former `CS-NEW-broker-dashboard-task-board.md` (3-column Kanban) has been **removed** as obsolete — it contradicted the wireframe (no Kanban) and is superseded by CS-1601.

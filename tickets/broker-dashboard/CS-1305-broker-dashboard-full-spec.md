@@ -204,9 +204,9 @@ GET /api/broker/branding → { logoUrl?, name, primaryColor }
 
 | Dependency | Status |
 |------------|--------|
-| MO4 (store count fix) | Required for accurate "Stores In" KPI |
+| CS-1611 (store count fix) | Required for accurate "Stores In" KPI |
 | CS-1316 (Category Review infinite scroll) | Quick Action tile links here |
-| PM2/PM3 (Promotional Management fixes) | Quick Action tile links here |
+| CS-1614/CS-1615 (Promotional Management fixes) | Quick Action tile links here |
 | Distributor APL infinite scroll | Quick Action tile links here |
 | Broker branding admin endpoint | New backend work |
 

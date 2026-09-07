@@ -1,6 +1,6 @@
 # Brand Modules | Pipeline | Option to Not Send Email for Every Update
 
-**BMP2** | Bug / Enhancement | User Story | Priority: TBD | Status: New
+**CS-1595** | Bug / Enhancement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -54,18 +54,18 @@ Proposed direction:
 
 ## Design Reference
 - Brand Module Pipeline (CRM Pipeline task board) — current behavior sends email on every update
-- Assignment behavior: `BMP1-brand-pipeline-assign-users.md`
+- Assignment behavior: `CS-1594-brand-pipeline-assign-users.md`
 
 ---
 
 ## Jira Reference (data/jira-tickets)
-- **CS-530** — "Can we add an email option to Pipeline @teamate to send an email?" Directly related existing request about Pipeline email notifications; reconcile BMP2's scope (frequency control + change context) with it.
+- **CS-530** — "Can we add an email option to Pipeline @teamate to send an email?" Directly related existing request about Pipeline email notifications; reconcile CS-1595's scope (frequency control + change context) with it.
 - Other Pipeline defects for context: **CS-1535** (plan search bar not functioning), **CS-540** (activity URL sharing).
 
 ---
 
 ## Related
-- **BMP1** — assignment vs. email-recipient distinction; notification scope should follow true assignments.
+- **CS-1594** — assignment vs. email-recipient distinction; notification scope should follow true assignments.
 
 ---
 

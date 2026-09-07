@@ -1,6 +1,6 @@
 # Store Report Management (SRM) | House Accounts - Direct-to-Store Program Tracking
 
-**SRM1** | New Requirement | Concept / Epic | Priority: TBD | Status: New
+**CS-1624** | New Requirement | Concept / Epic | Priority: TBD | Status: New
 
 ---
 
@@ -68,9 +68,9 @@ Many Brands run a **direct-to-store program for smaller stores** and need a way 
 ---
 
 ## Related
-- **ASR1** - Admin > Store Report: eliminate/merge store duplicates (clean store data is a prerequisite for House Accounts).
-- **BMTRC1** - Retailer CRM store-level listing (store data reuse).
-- **AGENTS.md - Store module** - orphan domain; SRM1 motivates store-level data surfacing.
+- **CS-1593** - Admin > Store Report: eliminate/merge store duplicates (clean store data is a prerequisite for House Accounts).
+- **CS-1597** - Retailer CRM store-level listing (store data reuse).
+- **AGENTS.md - Store module** - orphan domain; CS-1624 motivates store-level data surfacing.
 
 ---
 

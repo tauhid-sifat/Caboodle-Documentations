@@ -1,6 +1,6 @@
 # Brand Modules | Product Spec | Add Product UPC to Pricing Module
 
-**BMTPS1** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1596** | New Requirement | User Story | Priority: TBD | Status: New
 **Reporter:** Constance Wolfe
 
 ---

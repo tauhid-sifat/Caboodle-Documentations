@@ -1,6 +1,6 @@
 # Reports | Brand Broker Market Overview | Sort Function - Date/Time Doesn't Work, List Needs a Date
 
-**RBMO1** | Bug | Priority: TBD | Status: New
+**CS-1619** | Bug | Priority: TBD | Status: New
 
 ---
 
@@ -45,7 +45,7 @@ In the **Broker Market Overview** report, there is a Date/Time column but the **
 ---
 
 ## Related
-- Market Overview module tickets (MO1-MO6 in tickets/market-overview) - this is the Broker-facing Market Overview report variant.
+- Market Overview module tickets (CS-1608-CS-1613 in tickets/market-overview) - this is the Broker-facing Market Overview report variant.
 
 ---
 

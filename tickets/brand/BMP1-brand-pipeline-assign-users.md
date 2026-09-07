@@ -1,6 +1,6 @@
 # Brand Modules | Pipeline | Allow User to Assign to Users
 
-**BMP1** | Bug / Enhancement | User Story | Priority: TBD | Status: New
+**CS-1594** | Bug / Enhancement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -44,7 +44,7 @@ The expected behavior: adding a user should create an **assignment** (the user i
 
 ## Design Reference
 - Brand Module Pipeline (CRM Pipeline task board) — assignment/notification behavior
-- Related email behavior: `BMP2-brand-pipeline-email-on-update.md`
+- Related email behavior: `CS-1595-brand-pipeline-email-on-update.md`
 
 ---
 
@@ -54,7 +54,7 @@ The expected behavior: adding a user should create an **assignment** (the user i
 ---
 
 ## Related
-- **BMP2** — controlling when emails are sent for pipeline updates (assignment notifications should respect that control).
+- **CS-1595** — controlling when emails are sent for pipeline updates (assignment notifications should respect that control).
 
 ---
 

@@ -1,6 +1,6 @@
 # Category Review | Review End Date Added to List — Do We Need to Change the Upload Template?
 
-**CR5** | Question | Priority: TBD | Status: New
+**CS-1607** | Question | Priority: TBD | Status: New
 
 ---
 
@@ -63,7 +63,7 @@ Open question: does the new Review End Date require a **change to the upload tem
 
 ## Related
 - **CS-1296** — owns the upload format; this question gates a potential template change to that ticket.
-- **CR4** — sorting/grouping of the calendar (related data presentation question).
+- **CS-1606** — sorting/grouping of the calendar (related data presentation question).
 
 ---
 

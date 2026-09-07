@@ -1,6 +1,6 @@
 # Brand Modules | TSS | EDLP in Stepper - Clarify Stepper vs Edit Promo Details
 
-**BMTSS3** | Question | Priority: TBD | Status: New
+**CS-1627** | Question | Priority: TBD | Status: New
 
 ---
 
@@ -45,7 +45,7 @@ We need to clarify the intended usage of each path. The answer may depend on whe
 ---
 
 ## Related
-- **BMTSS6** - EDLP calendar/report rendering (downstream of correct EDLP entry).
+- **CS-1630** - EDLP calendar/report rendering (downstream of correct EDLP entry).
 
 ---
 

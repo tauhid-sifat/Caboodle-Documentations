@@ -1,6 +1,6 @@
 # Brand Modules | Retailer CRM | Add Store-Level Listing from Banner Page
 
-**BMTRC1** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1597** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -16,7 +16,7 @@
 
 From the **Banner Page** in Retailer CRM, add a **store-level listing** of the banner's stores. This could be exposed as a **link to a new page within Caboodle** — referenced as the **STORE REPORT MGMT Tab**. The goal is to give users store-level visibility (individual stores under a banner) that today is not readily reachable from the Banner Page.
 
-This relates to the broader **Store** domain, which per AGENTS.md is currently an *orphan module* (domain entities exist but no controller/service layer). BMTRC1 may be the entry point that surfaces store data via the Retailer CRM UI.
+This relates to the broader **Store** domain, which per AGENTS.md is currently an *orphan module* (domain entities exist but no controller/service layer). CS-1597 may be the entry point that surfaces store data via the Retailer CRM UI.
 
 ---
 
@@ -53,11 +53,11 @@ This relates to the broader **Store** domain, which per AGENTS.md is currently a
 ---
 
 ## Related
-- **AGENTS.md — Store module** - Orphan domain (entities only, no controller/service). BMTRC1 may depend on or motivate building store data access.
+- **AGENTS.md — Store module** - Orphan domain (entities only, no controller/service). CS-1597 may depend on or motivate building store data access.
 
 ---
 
 ## Notes
-- Confirm whether the "STORE REPORT MGMT Tab" already exists in the app (the user references it as existing) — if so, BMTRC1 is primarily about linking to it from the Banner Page.
+- Confirm whether the "STORE REPORT MGMT Tab" already exists in the app (the user references it as existing) — if so, CS-1597 is primarily about linking to it from the Banner Page.
 - Clarify store-level data source (Store domain entities vs. distributor/banner mappings).
 - Ensure the new page has proper navigation/back behavior (several Banner Page navigation gaps exist per CS-814/CS-1056).

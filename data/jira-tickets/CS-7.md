@@ -1,4 +1,4 @@
-﻿# CS-7 - remove the name Promoted Case allowance and just enter “OI Discount” or “MCB Discount”
+# CS-7 - remove the name Promoted Case allowance and just enter “OI Discount” or “MCB Discount”
 
 | Field | Value |
 |-------|-------|

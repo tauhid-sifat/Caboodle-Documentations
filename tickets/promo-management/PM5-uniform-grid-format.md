@@ -1,6 +1,6 @@
 # Promotional Management | Format Grid Uniformly
 
-**PM5** | Bug | Priority: Low | Status: New
+**CS-1617** | Bug | Priority: Low | Status: New
 
 ---
 

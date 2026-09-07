@@ -1,6 +1,6 @@
 # Broker Dashboard | Assign Time and Person (Dashboard)
 
-**BD2** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1599** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 
@@ -14,7 +14,7 @@
 
 ## Description
 
-Extends the broker dashboard **Pipeline/Task view** (Fellow-style list, see BD4) with two assignment fields per task:
+Extends the broker dashboard **Pipeline/Task view** (Fellow-style list, see CS-1601) with two assignment fields per task:
 - **Person** — the broker/user the task is assigned to (e.g., from the brokerage's user list).
 - **Time** — a due date / scheduled time for the task.
 
@@ -41,22 +41,22 @@ This makes the task list actionable for a team rather than just a personal check
 - **Then** the row shows a neutral "Unassigned" / "No date" indicator
 - **And** the task still appears in the list
 
-### Scenario 4: Filter by Assignee (link to BD3)
+### Scenario 4: Filter by Assignee (link to CS-1600)
 - **Given** tasks have assignees
-- **When** I filter by "My tasks" or a contact name (see BD3)
+- **When** I filter by "My tasks" or a contact name (see CS-1600)
 - **Then** only matching tasks are shown
 
 ---
 
 ## Design Reference
-- Pipeline/Task view: `BD4-broker-dashboard-pipeline-task-board.md`
-- Dashboard shell: `BD1-broker-dashboard-from-wireframe.md`
+- Pipeline/Task view: `CS-1601-broker-dashboard-pipeline-task-board.md`
+- Dashboard shell: `CS-1598-broker-dashboard-from-wireframe.md`
 
 ---
 
 ## Related
-- **BD4** — the base Pipeline/Task list this enhances. BD2 adds the `AssignedTo` and `DueTime` fields to that entity.
-- **BD3** — filtering by assignee / contact name.
+- **CS-1601** — the base Pipeline/Task list this enhances. CS-1599 adds the `AssignedTo` and `DueTime` fields to that entity.
+- **CS-1600** — filtering by assignee / contact name.
 
 ---
 

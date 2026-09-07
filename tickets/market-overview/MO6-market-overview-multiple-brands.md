@@ -1,6 +1,6 @@
 ﻿# Market Overview | Allow One Retailer with Multiple Brands Per Log Entry
 
-**MO6** | New Requirement | User Story | Priority: TBD | Status: New
+**CS-1613** | New Requirement | User Story | Priority: TBD | Status: New
 
 ---
 

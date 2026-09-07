@@ -1,6 +1,6 @@
 # Promotional Management | Export to Formatted Report
 
-**PM2** | New Requirement | User Story | Priority: High | Status: New
+**CS-1614** | New Requirement | User Story | Priority: High | Status: New
 
 ---
 
