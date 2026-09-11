@@ -186,6 +186,26 @@
     .pipeline-cal-task.med { border-left-color:#f59e0b; background:#fffbeb; color:#92400e; }
     .pipeline-cal-task.low { border-left-color:#10b981; background:#f0fdf4; color:#065f46; }
     .pipeline-cal-task.done { opacity:0.5; text-decoration:line-through; }
+    /* Dashboard calendar (Google-style Day/Week/Month/Year) */
+    .dash-cal-month { display:grid; grid-template-columns:repeat(7,1fr); background:#fff; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; }
+    .dash-cal-dayname { padding:8px; text-align:center; font-size:0.65rem; font-weight:600; text-transform:uppercase; color:#94a3b8; background:#f8fafc; border-bottom:1px solid #e2e8f0; border-right:1px solid #f1f5f9; }
+    .dash-cal-cell { min-height:92px; padding:6px; border-right:1px solid #f1f5f9; border-bottom:1px solid #f1f5f9; background:#fff; overflow:hidden; }
+    .dash-cal-cell.today { background:#eef2ff; }
+    .dash-cal-cell.other { background:#f8fafc; color:#94a3b8; }
+    .dash-cal-date { font-size:0.7rem; font-weight:600; color:#475569; margin-bottom:4px; display:flex; justify-content:space-between; align-items:center; }
+    .dash-cal-date .num.today { background:#6366f1; color:#fff; width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+    .dash-week-grid { display:grid; grid-template-columns:60px repeat(7,1fr); background:#fff; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; }
+    .dash-week-head { padding:10px 6px; text-align:center; border-right:1px solid #f1f5f9; border-bottom:1px solid #e2e8f0; background:#f8fafc; }
+    .dash-week-head.today { background:#eef2ff; }
+    .dash-week-cell { min-height:48px; padding:4px; border-right:1px solid #f1f5f9; border-bottom:1px solid #f1f5f9; }
+    .dash-day-list { background:#fff; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; }
+    .dash-day-slot { display:flex; gap:12px; padding:8px 12px; border-bottom:1px solid #f1f5f9; min-height:44px; }
+    .dash-day-slot:last-child { border-bottom:0; }
+    .dash-day-time { width:70px; font-size:0.65rem; color:#94a3b8; font-weight:500; flex-shrink:0; padding-top:2px; }
+    .dash-year-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+    @media(max-width:900px){ .dash-year-grid{ grid-template-columns:repeat(2,1fr);} }
+    .dash-year-month { background:#fff; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; }
+    .dash-year-title { padding:8px 12px; font-size:0.75rem; font-weight:600; background:#f8fafc; border-bottom:1px solid #e2e8f0; text-align:center; }
 
     .plan-main { flex:1; display:flex; flex-direction:column; min-width:0; }
     .plan-main-hdr { padding:18px 24px 14px; border-bottom:1px solid #e2e8f0; background:#fff; flex-shrink:0; display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
@@ -440,18 +460,22 @@
         </div>
 
         <div class="dash-grid">
-          <div class="panel">
-            <div class="p-hdr"><h2 class="p-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> Timeline <span style="font-size:0.7rem;font-weight:500;color:hsl(var(--muted-foreground));margin-left:4px;">Next 14 Days</span></h2><div style="display:flex;gap:6px;align-items:center;"><div class="pill-g" style="margin-right:8px;"><button class="active">7d</button><button>14d</button><button>30d</button></div><div class="pill-g"><button class="active" data-tlfilter="cr" onclick="toggleTlFilter(this)">Cat Review</button><button class="active" data-tlfilter="promo" onclick="toggleTlFilter(this)">Promo</button><button class="active" data-tlfilter="task" onclick="toggleTlFilter(this)">Tasks</button></div></div></div>
-            <div class="tl-body">
-              <div class="tl-day today">
-                <div class="tl-hdr"><span class="tl-lbl">Today</span><span class="tl-date">Mon, Jun 23</span></div>
-                <div class="tl-items">
-                  <div class="tl-item cr" onclick="showView('catreview')"><div class="tl-ico blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(var(--primary))"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div><div class="tl-c"><div class="tl-t">Nugget Market — Specialty Asian</div><div class="tl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Starts Jul 20</span><span class="s-pill blue">Category Review</span></div></div></div>
-                  <div class="tl-item promo" onclick="showView('promocal')"><div class="tl-ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(160,84%,39%)"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></div><div class="tl-c"><div class="tl-t">KeHE TPR — Beverages</div><div class="tl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Starts Thu</span><span class="s-pill green">Promo</span></div></div></div>
-                  <div class="tl-item task" onclick="showView('tasks')"><div class="tl-ico purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(250,76%,61%)"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg></div><div class="tl-c"><div class="tl-t">F/U with Buyer — Gelson's</div><div class="tl-m"><span class="s-pill purple">Task</span><span class="s-pill purple">In Progress</span></div></div></div>
+          <div class="panel" style="min-height:420px;">
+            <div class="p-hdr"><h2 class="p-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> Timeline <span id="dashRangeLabel" style="font-size:0.7rem;font-weight:500;color:hsl(var(--muted-foreground));margin-left:4px;">Next 14 Days</span></h2><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;"><div class="view-toggle" title="Switch between list and calendar"><button id="dashTlBtn" class="active" onclick="setDashView('timeline')">Timeline</button><button id="dashCalBtn" onclick="setDashView('calendar')">Calendar</button></div><div id="dashRangePills" class="pill-g" style="margin-left:4px;"><button class="active" data-range="7" onclick="setDashRange(7,this)">7d</button><button data-range="14" onclick="setDashRange(14,this)">14d</button><button data-range="30" onclick="setDashRange(30,this)">30d</button></div><div class="pill-g"><button class="active" data-tlfilter="cr" onclick="toggleTlFilter(this)">Cat Review</button><button class="active" data-tlfilter="promo" onclick="toggleTlFilter(this)">Promo</button><button class="active" data-tlfilter="task" onclick="toggleTlFilter(this)">Tasks</button></div></div></div>
+            <!-- TIMELINE WRAP (list view) -->
+            <div id="dashTimelineWrap" style="display:flex;flex-direction:column;flex:1;min-height:0;"><div class="tl-body" id="dashTimelineBody"></div></div>
+            <!-- CALENDAR WRAP (Google-calendar style) -->
+            <div id="dashCalWrap" style="display:none;flex-direction:column;flex:1;min-height:0;overflow:hidden;">
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 20px;border-bottom:1px solid hsl(var(--border));background:#fff;flex-wrap:wrap;gap:8px;">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <button class="cal-nav-btn" onclick="dashCalNav(-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="m15 18-6-6 6-6"></path></svg></button>
+                  <button class="cal-nav-btn" onclick="dashCalNav(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="m9 18 6-6-6-6"></path></svg></button>
+                  <button class="btn btn-sm" onclick="dashCalToday()">Today</button>
+                  <div id="dashCalLabel" style="font-weight:600;font-size:0.9rem;margin-left:8px;font-family:'Space Grotesk',sans-serif;"></div>
                 </div>
+                <div class="pill-g" id="dashCalModePills"><button data-dashmode="day" onclick="setDashCalMode('day',this)">Day</button><button data-dashmode="week" onclick="setDashCalMode('week',this)">Week</button><button class="active" data-dashmode="month" onclick="setDashCalMode('month',this)">Month</button><button data-dashmode="year" onclick="setDashCalMode('year',this)">Year</button></div>
               </div>
-              <div class="tl-day"><div class="tl-hdr"><span class="tl-lbl">Tomorrow</span><span class="tl-date">Tue, Jun 24</span></div><div class="tl-items"><div class="tl-item promo" onclick="showView('promocal')"><div class="tl-ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(160,84%,39%)"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></div><div class="tl-c"><div class="tl-t">UNFI EDLP Review</div><div class="tl-m"><span>Review</span><span class="s-pill green">Promo</span></div></div></div><div class="tl-item cr" onclick="showView('catreview')"><div class="tl-ico blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="hsl(var(--primary))"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div><div class="tl-c"><div class="tl-t">Lazy Acres — TBD Category</div><div class="tl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Review Jun</span><span class="s-pill blue">Category Review</span></div></div></div></div></div>
+              <div id="dashCalGrid" style="flex:1;overflow:auto;background:hsl(var(--background));padding:0;"></div>
             </div>
           </div>
         </div>
@@ -1037,6 +1061,7 @@
     let editingTaskId = null;
     let editingPlanId = null;
     let pipelineDoneOpen = false;
+    let pipelineCalHideDone = false; // Calendar: hide completed tasks
     let pipelineView = 'list'; // list | calendar
     let pipelineCalDate = new Date(2026, 6, 1); // July 2026 default
     let expandedParents = {}; // parentId -> bool (true = expanded)
@@ -1060,64 +1085,63 @@
     PLANS.filter(p=>!p.parentId).forEach(p=> expandedParents[p.id]=true);
 
     let tasks = [
-      // Plan 1: Q3 Category Reviews
-      { id: ++taskIdCounter, planId:1, title:'Prep Nugget Specialty Asian review', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-25', notes:'Need to gather all SKU data and velocity reports from SPINS. Include category trends and competitive landscape.', files:[{name:'Nugget_Review_Template.xlsx',size:'245 KB'},{name:'SPINS_Category_Data_Q2.pdf',size:'1.2 MB'}] },
-      { id: ++taskIdCounter, planId:1, title:'Submit new item forms to Lucky', status:'todo', priority:'high', assignee:'You', due:'2026-07-18', notes:'5 new SKUs for pasta sauce reset. Forms need: UPC, MSRP, case pack, Sage logo, ingredient statements.', files:[] },
-      { id: ++taskIdCounter, planId:1, title:'Raleys reset paperwork — pushed to Sep', status:'todo', priority:'med', assignee:'Kate', due:'2026-08-01', notes:'Reset pushed from July to September per buyer request. Keep forms ready.', files:[] },
-      { id: ++taskIdCounter, planId:1, title:'Gelsons Mac & Cheese review deck', status:'done', priority:'med', assignee:'You', due:'2026-06-30', notes:'Completed and submitted. Waiting for buyer feedback.', files:[{name:'Gelsons_Review_Deck.pptx',size:'4.7 MB'}] },
-      { id: ++taskIdCounter, planId:1, title:'Whole Foods frozen dessert reset', status:'todo', priority:'low', assignee:'', due:'2026-09-15', notes:'Q4 reset. No rush but need to start gathering velocity data.', files:[] },
-      { id: ++taskIdCounter, planId:1, title:'Sprouts organic reset paperwork', status:'todo', priority:'med', assignee:'John', due:'2026-08-20', notes:'New set expected Sep. Organic certifications needed.', files:[] },
-      { id: ++taskIdCounter, planId:1, title:'Moms Market reset completed', status:'done', priority:'low', assignee:'Kate', due:'2026-06-10', notes:'All done. Reset went live June 8.', files:[] },
+      // === AIT PARENT (id 1) — demo hierarchy: avoids duplicate "AIT" top-level projects ===
+      { id: ++taskIdCounter, planId:1, title:'AIT — Overall timeline & kickoff', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-15', notes:'Parent milestone. Kickoff call Mon. Sub-projects hold workstreams. Buyer: Nugget/Raleys/WFM.', files:[] },
+      { id: ++taskIdCounter, planId:1, title:'AIT — Budget & forecast sign-off', status:'todo', priority:'high', assignee:'You', due:'2026-07-22', notes:'Finance sign-off for AIT launch: samples, slotting, promo spend.', files:[{name:'AIT_Budget_v2.xlsx',size:'310 KB'}] },
+      { id: ++taskIdCounter, planId:1, title:'AIT — Stakeholder sync done', status:'done', priority:'med', assignee:'Kate', due:'2026-07-01', notes:'Done. Aligned on scope for Buyer Decks / UNFI / Sampling splits.', files:[] },
 
-      // Plan 2: UNFI
-      { id: ++taskIdCounter, planId:2, title:'Submit UNFI new item forms', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-20', notes:'5 new SKUs pending. Need spec sheets, ingredient decks, and margin analysis from marketing.', files:[{name:'UNFI_New_Item_Form.xlsx',size:'890 KB'},{name:'Product_Specs_v3.pdf',size:'3.4 MB'}] },
-      { id: ++taskIdCounter, planId:2, title:'Confirm UNFI warehouse assignments', status:'todo', priority:'med', assignee:'John', due:'2026-07-28', notes:'Need to verify which warehouses for new SKUs. Sac, Atlanta, Harrisburg likely.', files:[] },
-      { id: ++taskIdCounter, planId:2, title:'Resolve UNFI invoice discrepancy', status:'todo', priority:'high', assignee:'You', due:'2026-07-15', notes:'Credit memo being processed for Q2 chargebacks. $12,483 disputed. Attach supporting docs.', files:[{name:'Invoice_Dispute_Q2.pdf',size:'680 KB'},{name:'Credit_Memo_Request.xlsx',size:'120 KB'}] },
-      { id: ++taskIdCounter, planId:2, title:'UNFI Q3 promotional calendar', status:'done', priority:'med', assignee:'Kate', due:'2026-06-28', notes:'Submitted for Jul-Sep. TPR slots confirmed for Aug and Sep.', files:[] },
-      { id: ++taskIdCounter, planId:2, title:'Update UNFI pricing sheet', status:'todo', priority:'med', assignee:'', due:'2026-08-05', notes:'New MSRP effective Sep 1. Need to submit updated wholesale pricing.', files:[] },
+      // === AIT — Buyer Decks (id 2) — sub-project ===
+      { id: ++taskIdCounter, planId:2, title:'AIT — Nugget deck draft', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-20', notes:'Velocity + lift from SPINS. Include category trends, comp set.', files:[] },
+      { id: ++taskIdCounter, planId:2, title:'AIT — Raleys reset checklist', status:'todo', priority:'med', assignee:'Kate', due:'2026-07-28', notes:'Raleys reset pushed to Sep — keep forms ready. UPCs verified.', files:[] },
+      { id: ++taskIdCounter, planId:2, title:'AIT — WFM deck: frozen desserts', status:'todo', priority:'high', assignee:'You', due:'2026-07-18', notes:'WFM buyer wants velocity last 90d + promo recaps.', files:[{name:'AIT_WFM_Deck.pptx',size:'2.1 MB'}] },
+      { id: ++taskIdCounter, planId:2, title:'AIT — Gelsons deck submitted', status:'done', priority:'med', assignee:'You', due:'2026-06-30', notes:'Submitted. Waiting buyer feedback.', files:[{name:'AIT_Gelsons_Deck.pptx',size:'3.4 MB'}] },
 
-      // Plan 3: Broker Meetings
-      { id: ++taskIdCounter, planId:3, title:'F/U with Gelsons buyer — Colin', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-22', notes:'Colin interested in new Mac & Cheese SKUs. Promised samples by July 15. Send pricing.', files:[{name:'Gelsons_Proposal.pdf',size:'1.1 MB'}] },
-      { id: ++taskIdCounter, planId:3, title:'Schedule Nugget buyer meeting', status:'todo', priority:'med', assignee:'You', due:'2026-07-30', notes:'Need to present Asian category review. Buyer prefers Tues/Wed mornings.', files:[] },
-      { id: ++taskIdCounter, planId:3, title:'Prep broker review deck (Q3)', status:'todo', priority:'med', assignee:'You', due:'2026-08-05', notes:'Include velocity, promo recaps, new item pipeline, and category trends.', files:[] },
-      { id: ++taskIdCounter, planId:3, title:'Jimbos buyer meeting done', status:'done', priority:'med', assignee:'You', due:'2026-06-22', notes:'Good meeting. Approved 2 new items for fall reset.', files:[{name:'Jimbos_Meeting_Notes.docx',size:'85 KB'}] },
-      { id: ++taskIdCounter, planId:3, title:'Lazy Acres coffee category review', status:'todo', priority:'high', assignee:'John', due:'2026-08-12', notes:'New coffee program. Need samples and pitch deck ready by Aug 1.', files:[] },
+      // === AIT — UNFI Setup (id 3) — sub-project ===
+      { id: ++taskIdCounter, planId:3, title:'AIT — UNFI new item forms (5 SKUs)', status:'todo', priority:'high', assignee:'You', due:'2026-07-18', notes:'Spec sheets + ingredient decks + margin analysis for 5 SKUs.', files:[{name:'AIT_UNFI_Form.xlsx',size:'420 KB'}] },
+      { id: ++taskIdCounter, planId:3, title:'AIT — Confirm UNFI warehouse assignments', status:'todo', priority:'med', assignee:'John', due:'2026-07-26', notes:'Sac / Atlanta / Harrisburg assignments for new SKUs.', files:[] },
+      { id: ++taskIdCounter, planId:3, title:'AIT — UNFI invoice discrepancy', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-14', notes:'$12,483 disputed — credit memo in progress.', files:[{name:'Invoice_Dispute_Q2.pdf',size:'680 KB'}] },
+      { id: ++taskIdCounter, planId:3, title:'AIT — UNFI pricing sheet updated', status:'done', priority:'low', assignee:'Kate', due:'2026-06-28', notes:'Pricing effective Sep 1 uploaded.', files:[] },
 
-      // Plan 4: KeHE EDLP
-      { id: ++taskIdCounter, planId:4, title:'KeHE Jan-Mar EDLP pricing', status:'done', priority:'med', assignee:'Kate', due:'2026-06-15', notes:'Pricing submitted and approved for all 12 SKUs.', files:[{name:'KeHE_EDLP_Q1_Approved.pdf',size:'450 KB'}] },
-      { id: ++taskIdCounter, planId:4, title:'KeHE Apr-Jun EDLP renewal', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-28', notes:'Need to review lift data from Q1 before renewing. Requesting 2% price increase.', files:[{name:'Q1_Lift_Analysis.xlsx',size:'2.3 MB'}] },
-      { id: ++taskIdCounter, planId:4, title:'KeHE slotting fee negotiation', status:'todo', priority:'low', assignee:'', due:'2026-08-10', notes:'Negotiating slotting for 3 new items. Target: $500/sku.', files:[] },
-      { id: ++taskIdCounter, planId:4, title:'KeHE display allowance Q3', status:'todo', priority:'med', assignee:'Kate', due:'2026-07-15', notes:'Q3 display program. Endcap opportunities at Sprouts and Natural Grocers.', files:[] },
+      // === AIT — Sampling & Collateral (id 4) — sub-project ===
+      { id: ++taskIdCounter, planId:4, title:'AIT — Sell sheet + samples', status:'todo', priority:'med', assignee:'John', due:'2026-07-25', notes:'Samples + sell sheets for AIT launch. POS for endcap.', files:[] },
+      { id: ++taskIdCounter, planId:4, title:'AIT — Sample shipment to Nugget', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-19', notes:'Ship 12 units to Nugget buyer by 7/19. Tracking # pending.', files:[] },
+      { id: ++taskIdCounter, planId:4, title:'AIT — Collateral review done', status:'done', priority:'low', assignee:'John', due:'2026-07-02', notes:'Sell sheet approved.', files:[{name:'AIT_Sell_Sheet.pdf',size:'1.8 MB'}] },
 
-      // Plan 5: Distributor APL
-      { id: ++taskIdCounter, planId:5, title:'Upload KeHE Oct APL update', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-25', notes:'New pricing effective Aug 1. Check for UPC changes on 3 items.', files:[{name:'KeHE_APL_Oct.xlsx',size:'1.8 MB'}] },
-      { id: ++taskIdCounter, planId:5, title:'UNFI APL — verify new item pricing', status:'todo', priority:'high', assignee:'John', due:'2026-07-20', notes:'5 new items need wholesale cost verified before upload.', files:[] },
-      { id: ++taskIdCounter, planId:5, title:'SPINS APL reconciliation', status:'todo', priority:'med', assignee:'', due:'2026-08-15', notes:'Compare uploaded APL vs SPINS reported pricing. Flag discrepancies.', files:[] },
-      { id: ++taskIdCounter, planId:5, title:'KeHE APL upload complete', status:'done', priority:'med', assignee:'You', due:'2026-06-20', notes:'Jun APL uploaded successfully. 45 SKUs confirmed.', files:[] },
+      // === Q3 Category Reviews (id 5) ===
+      { id: ++taskIdCounter, planId:5, title:'Prep Nugget Specialty Asian review', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-25', notes:'Gather SKU velocity from SPINS + category trends. Deadline Jul 25.', files:[{name:'Nugget_Review_Template.xlsx',size:'245 KB'},{name:'SPINS_Category_Data_Q2.pdf',size:'1.2 MB'}] },
+      { id: ++taskIdCounter, planId:5, title:'Submit new item forms to Lucky', status:'todo', priority:'high', assignee:'You', due:'2026-07-18', notes:'5 new SKUs for pasta sauce reset. Need UPC/MSRP/case pack.', files:[] },
+      { id: ++taskIdCounter, planId:5, title:'Raleys reset paperwork — pushed to Sep', status:'todo', priority:'med', assignee:'Kate', due:'2026-08-01', notes:'Reset pushed to September per buyer. Keep forms ready.', files:[] },
+      { id: ++taskIdCounter, planId:5, title:'Gelsons Mac & Cheese review deck', status:'done', priority:'med', assignee:'You', due:'2026-06-30', notes:'Submitted. Awaiting feedback.', files:[{name:'Gelsons_Review_Deck.pptx',size:'4.7 MB'}] },
+      { id: ++taskIdCounter, planId:5, title:'Whole Foods frozen dessert reset', status:'todo', priority:'low', assignee:'', due:'2026-09-15', notes:'Q4 reset — start velocity pull in Aug.', files:[] },
+      { id: ++taskIdCounter, planId:5, title:'Sprouts organic reset paperwork', status:'todo', priority:'med', assignee:'John', due:'2026-08-20', notes:'Organic certs needed for Sep set.', files:[] },
+      { id: ++taskIdCounter, planId:5, title:'Moms Market reset completed', status:'done', priority:'low', assignee:'Kate', due:'2026-06-10', notes:'Went live Jun 8.', files:[] },
 
-      // Plan 6: Marketing
-      { id: ++taskIdCounter, planId:6, title:'New product sell sheets', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-30', notes:'Need updated sell sheets for 8 new items. Include nutrition claims, certifications, and pricing.', files:[{name:'Sell_Sheet_Template_v2.indd',size:'5.6 MB'}] },
-      { id: ++taskIdCounter, planId:6, title:'Digital shelf analytics review', status:'todo', priority:'med', assignee:'', due:'2026-08-10', notes:'Review content compliance across Amazon, Thrive, and Vitacost.', files:[] },
-      { id: ++taskIdCounter, planId:6, title:'POS materials — Nugget endcap', status:'todo', priority:'low', assignee:'Kate', due:'2026-08-01', notes:'Design shelf talkers and wobblers for Nugget Asian endcap display.', files:[] },
-      { id: ++taskIdCounter, planId:6, title:'Brand style guide update done', status:'done', priority:'low', assignee:'You', due:'2026-06-05', notes:'Updated for 2026. New logo assets and packaging guidelines.', files:[{name:'Brand_Style_Guide_2026.pdf',size:'8.2 MB'}] },
+      // === Broker Meetings & Follow-ups (id 6) ===
+      { id: ++taskIdCounter, planId:6, title:'F/U with Gelsons buyer — Colin', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-22', notes:'Colin wants Mac & Cheese samples by 7/15. Send pricing.', files:[{name:'Gelsons_Proposal.pdf',size:'1.1 MB'}] },
+      { id: ++taskIdCounter, planId:6, title:'Schedule Nugget buyer meeting', status:'todo', priority:'med', assignee:'You', due:'2026-07-30', notes:'Buyer prefers Tue/Wed mornings. Category review deck needed.', files:[] },
+      { id: ++taskIdCounter, planId:6, title:'Prep broker review deck (Q3)', status:'todo', priority:'med', assignee:'You', due:'2026-08-05', notes:'Include velocity, promo recaps, pipeline.', files:[] },
+      { id: ++taskIdCounter, planId:6, title:'Jimbos buyer meeting done', status:'done', priority:'med', assignee:'You', due:'2026-06-22', notes:'Approved 2 items for fall reset.', files:[{name:'Jimbos_Meeting_Notes.docx',size:'85 KB'}] },
+      { id: ++taskIdCounter, planId:6, title:'Lazy Acres coffee category review', status:'todo', priority:'high', assignee:'John', due:'2026-08-12', notes:'Samples + deck due Aug 1.', files:[] },
+      { id: ++taskIdCounter, planId:6, title:'Submit UNFI new item forms (legacy)', status:'todo', priority:'high', assignee:'You', due:'2026-07-20', notes:'5 SKUs pending — spec sheets from marketing.', files:[{name:'UNFI_New_Item_Form.xlsx',size:'890 KB'}] },
+
+      // === KeHE EDLP Planning (id 7) ===
+      { id: ++taskIdCounter, planId:7, title:'KeHE Jan-Mar EDLP pricing', status:'done', priority:'med', assignee:'Kate', due:'2026-06-15', notes:'12 SKUs approved.', files:[{name:'KeHE_EDLP_Q1_Approved.pdf',size:'450 KB'}] },
+      { id: ++taskIdCounter, planId:7, title:'KeHE Apr-Jun EDLP renewal', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-28', notes:'Review Q1 lift before 2% increase request.', files:[{name:'Q1_Lift_Analysis.xlsx',size:'2.3 MB'}] },
+      { id: ++taskIdCounter, planId:7, title:'KeHE slotting fee negotiation', status:'todo', priority:'low', assignee:'', due:'2026-08-10', notes:'Negotiate $500/SKU for 3 items.', files:[] },
+      { id: ++taskIdCounter, planId:7, title:'KeHE display allowance Q3', status:'todo', priority:'med', assignee:'Kate', due:'2026-07-15', notes:'Endcap at Sprouts / Natural Grocers.', files:[] },
+
+      // === Distributor APL Updates (id 8) ===
+      { id: ++taskIdCounter, planId:8, title:'Upload KeHE Oct APL update', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-25', notes:'Effective Aug 1. Check UPC changes.', files:[{name:'KeHE_APL_Oct.xlsx',size:'1.8 MB'}] },
+      { id: ++taskIdCounter, planId:8, title:'UNFI APL — verify new item pricing', status:'todo', priority:'high', assignee:'John', due:'2026-07-20', notes:'5 items wholesale verification.', files:[] },
+      { id: ++taskIdCounter, planId:8, title:'SPINS APL reconciliation', status:'todo', priority:'med', assignee:'', due:'2026-08-15', notes:'Flag price discrepancies.', files:[] },
+      { id: ++taskIdCounter, planId:8, title:'KeHE APL upload complete', status:'done', priority:'med', assignee:'You', due:'2026-06-20', notes:'45 SKUs confirmed.', files:[] },
+
+      // === Marketing & Collateral (id 9) ===
+      { id: ++taskIdCounter, planId:9, title:'New product sell sheets', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-30', notes:'8 new items — nutrition claims + certs + pricing.', files:[{name:'Sell_Sheet_Template_v2.indd',size:'5.6 MB'}] },
+      { id: ++taskIdCounter, planId:9, title:'Digital shelf analytics review', status:'todo', priority:'med', assignee:'', due:'2026-08-10', notes:'Check Amazon/Thrive/Vitacost compliance.', files:[] },
+      { id: ++taskIdCounter, planId:9, title:'POS materials — Nugget endcap', status:'todo', priority:'low', assignee:'Kate', due:'2026-08-01', notes:'Shelf talkers + wobblers for endcap.', files:[] },
+      { id: ++taskIdCounter, planId:9, title:'Brand style guide update done', status:'done', priority:'low', assignee:'You', due:'2026-06-05', notes:'2026 guide — new logo/packaging.', files:[{name:'Brand_Style_Guide_2026.pdf',size:'8.2 MB'}] },
     ];
-    // --- migrate seeded tasks from old planIds 1..6 to new project ids 5..9 + add AIT demo tasks ---
-    (function(){
-      const remap = {1:5,2:6,3:6,4:7,5:8,6:9}; // old->new (2 originally UNFI, 3 Broker etc - consolidate)
-      // Fix: original file had 1->Q3,2->UNFI,3->Broker,4->KeHE,5->APL,6->Marketing. Map to new ids:
-      const exact = {1:5,2:3,3:6,4:7,5:8,6:9};
-      // But tasks for old 2 were UNFI tasks - they should go to new 3? No, new 3 is AIT UNFI. Use exact for demo clarity:
-      // We'll keep UNFI tasks on a real project: move old 2 tasks to a temp then reassign to Broker Meetings (6) if needed. Simpler: just reassign old 2 (UNFI) -> 6's UNFI? Let's just map 1:5,2:6,3:6,4:7,5:8,6:9 and then add explicit AIT tasks below. This keeps seeded data on visible projects.
-      tasks.forEach(t=>{ if(exact[t.planId]) t.planId = exact[t.planId]; });
-      // Add AIT sub-project tasks to show hierarchy value (avoids duplicate AIT top-level)
-      tasks.push(
-        { id: ++taskIdCounter, planId:2, title:'AIT — Nugget deck draft', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-20', notes:'AIT buyer deck for Nugget — include velocity and promo lift.', files:[] },
-        { id: ++taskIdCounter, planId:2, title:'AIT — Raleys reset checklist', status:'todo', priority:'med', assignee:'Kate', due:'2026-07-28', notes:'Raleys reset pushed to Sep, keep checklist ready.', files:[] },
-        { id: ++taskIdCounter, planId:3, title:'AIT — UNFI new item forms (5 SKUs)', status:'todo', priority:'high', assignee:'You', due:'2026-07-18', notes:'Spec sheets + ingredient decks for AIT SKUs.', files:[{name:'AIT_UNFI_Form.xlsx',size:'420 KB'}] },
-        { id: ++taskIdCounter, planId:4, title:'AIT — Sell sheet + samples', status:'todo', priority:'med', assignee:'John', due:'2026-07-25', notes:'Samples and sell sheets for AIT launch.', files:[] },
-        { id: ++taskIdCounter, planId:1, title:'AIT — Overall timeline & kickoff', status:'todo', priority:'high', assignee:'You', due:'2026-07-15', notes:'Parent-level milestone — AIT kickoff call, links to sub-projects.', files:[] }
-      );
-    })();
 
     // ===== PROJECTS SIDEBAR (hierarchical) =====
     function isParent(p){ return !p.parentId; }
@@ -1341,16 +1365,20 @@
       const daysInMonth = new Date(y,m+1,0).getDate();
       const prevDays = new Date(y,m,0).getDate();
       const monthName = pipelineCalDate.toLocaleString('en-US',{month:'long',year:'numeric'});
-      let html = '<div class="pipeline-cal"><div class="pipeline-cal-hdr"><div style="font-weight:600;">' + monthName + ' — ' + project.name + '</div><div style="display:flex;gap:6px;"><button class="btn btn-sm" onclick="pipelineCalDate=new Date(pipelineCalDate.getFullYear(),pipelineCalDate.getMonth()-1,1);renderPlanContent();">‹</button><button class="btn btn-sm" onclick="pipelineCalDate=new Date()">Today</button><button class="btn btn-sm" onclick="pipelineCalDate=new Date(pipelineCalDate.getFullYear(),pipelineCalDate.getMonth()+1,1);renderPlanContent();">›</button></div></div>';
+      const doneCount = planTasks.filter(t=>t.status==='done').length;
+      let html = '<div class="pipeline-cal"><div class="pipeline-cal-hdr"><div style="font-weight:600;">' + monthName + ' — ' + project.name + '</div><div style="display:flex;align-items:center;gap:8px;">' +
+        (doneCount ? '<label class="toggle-wrap" onclick="pipelineCalHideDone=!pipelineCalHideDone; renderPlanContent();" title="Hide/show completed tasks on calendar" style="cursor:pointer;gap:6px;font-size:0.7rem;color:#64748b;"><div class="toggle-switch ' + (pipelineCalHideDone?'on':'') + '"></div>Hide done (' + doneCount + ')</label>' : '') +
+        '<button class="btn btn-sm" onclick="pipelineCalDate=new Date(pipelineCalDate.getFullYear(),pipelineCalDate.getMonth()-1,1);renderPlanContent();">‹</button><button class="btn btn-sm" onclick="pipelineCalDate=new Date();renderPlanContent();">Today</button><button class="btn btn-sm" onclick="pipelineCalDate=new Date(pipelineCalDate.getFullYear(),pipelineCalDate.getMonth()+1,1);renderPlanContent();">›</button></div></div>';
       html += '<div class="pipeline-cal-grid"><div class="pipeline-cal-dayname">Sun</div><div class="pipeline-cal-dayname">Mon</div><div class="pipeline-cal-dayname">Tue</div><div class="pipeline-cal-dayname">Wed</div><div class="pipeline-cal-dayname">Thu</div><div class="pipeline-cal-dayname">Fri</div><div class="pipeline-cal-dayname">Sat</div>';
       // leading
       for(let i=0;i<startDay;i++){ html += '<div class="pipeline-cal-cell other"><div class="pipeline-cal-date">' + (prevDays - startDay + 1 + i) + '</div></div>'; }
       const todayStr = new Date().toISOString().slice(0,10);
+      const visTasks = pipelineCalHideDone ? planTasks.filter(t=>t.status!=='done') : planTasks;
       for(let d=1; d<=daysInMonth; d++){
         const dateStr = new Date(y,m,d).toISOString().slice(0,10);
         const isToday = dateStr===todayStr;
         html += '<div class="pipeline-cal-cell' + (isToday?' today':'') + '"><div class="pipeline-cal-date">' + d + '</div>';
-        planTasks.filter(t=> t.due===dateStr).forEach(t=>{
+        visTasks.filter(t=> t.due===dateStr).forEach(t=>{
           html += '<div class="pipeline-cal-task ' + t.priority + (t.status==='done'?' done':'') + '" title="' + t.title + '" onclick="editTask('+t.id+')">' + t.title + '</div>';
         });
         html += '</div>';
@@ -1359,8 +1387,8 @@
       if(rem!==0){ for(let i=0;i<7-rem;i++){ html += '<div class="pipeline-cal-cell other"><div class="pipeline-cal-date">' + (i+1) + '</div></div>'; } }
       html += '</div>';
       // undated
-      const undated = planTasks.filter(t=> !t.due);
-      if(undated.length){ html += '<div style="padding:12px 16px;border-top:1px solid #e2e8f0;"><div style="font-size:0.75rem;font-weight:600;color:#64748b;margin-bottom:6px;">No Due Date ('+undated.length+')</div>' + undated.map(t=> '<span class="pipeline-cal-task '+t.priority+'" onclick="editTask('+t.id+')" style="display:inline-block;margin:3px;">'+t.title+'</span>').join('') + '</div>'; }
+      const undated = visTasks.filter(t=> !t.due);
+      if(undated.length){ html += '<div style="padding:12px 16px;border-top:1px solid #e2e8f0;"><div style="font-size:0.75rem;font-weight:600;color:#64748b;margin-bottom:6px;">No Due Date ('+undated.length+')</div>' + undated.map(t=> '<span class="pipeline-cal-task '+t.priority+(t.status==='done'?' done':'')+'" onclick="editTask('+t.id+')" style="display:inline-block;margin:3px;">'+t.title+'</span>').join('') + '</div>'; }
       html += '</div>';
       return html;
     }
@@ -2403,16 +2431,226 @@
       alert('Dropdown options updated.');
     }
 
-    // Timeline filter
+    // Timeline filter (shared timeline + calendar)
     function toggleTlFilter(btn) {
       btn.classList.toggle('active');
-      const activeFilters = [...document.querySelectorAll('[data-tlfilter].active')].map(b => b.dataset.tlfilter);
-      document.querySelectorAll('.tl-item').forEach(item => {
-        const cls = item.classList;
-        const match = activeFilters.length === 0 || activeFilters.some(f => cls.contains(f));
-        item.style.display = match ? '' : 'none';
-      });
+      if(typeof dashView!=='undefined'){
+        if(dashView==='calendar') renderDashCal();
+        else renderDashTimeline();
+      } else {
+        const activeFilters = [...document.querySelectorAll('[data-tlfilter].active')].map(b => b.dataset.tlfilter);
+        document.querySelectorAll('.tl-item').forEach(item => {
+          const cls = item.classList;
+          const match = activeFilters.length === 0 || activeFilters.some(f => cls.contains(f));
+          item.style.display = match ? '' : 'none';
+        });
+      }
     }
+
+    // ===== BROKER DASHBOARD — Timeline + Google-calendar (Day/Week/Month/Year) =====
+    let dashView = 'timeline'; // timeline | calendar
+    let dashRange = 14; // 7|14|30 for timeline
+    let dashCalDate = new Date(2026, 5, 23); // Jun 23 2026 — matches timeline "Today"
+    let dashCalMode = 'month'; // day|week|month|year
+    function setDashView(mode){
+      dashView = mode;
+      document.getElementById('dashTlBtn').className = mode==='timeline'?'active':'';
+      document.getElementById('dashCalBtn').className = mode==='calendar'?'active':'';
+      document.getElementById('dashRangePills').style.display = mode==='timeline' ? '' : 'none';
+      document.getElementById('dashRangeLabel').textContent = mode==='timeline' ? ('Next '+dashRange+' Days') : 'Calendar';
+      document.getElementById('dashTimelineWrap').style.display = mode==='timeline' ? 'flex' : 'none';
+      document.getElementById('dashCalWrap').style.display = mode==='calendar' ? 'flex' : 'none';
+      if(mode==='calendar') renderDashCal();
+      else renderDashTimeline();
+    }
+    function setDashRange(days, btn){
+      dashRange = days;
+      document.querySelectorAll('#dashRangePills button').forEach(b=>b.className='');
+      if(btn) btn.className='active';
+      document.getElementById('dashRangeLabel').textContent = 'Next '+days+' Days';
+      renderDashTimeline();
+    }
+    function setDashCalMode(mode, btn){
+      dashCalMode = mode;
+      document.querySelectorAll('#dashCalModePills button').forEach(b=>b.className='');
+      if(btn) btn.className='active';
+      renderDashCal();
+    }
+    function dashCalNav(dir){
+      if(dashCalMode==='day') dashCalDate.setDate(dashCalDate.getDate()+dir);
+      else if(dashCalMode==='week') dashCalDate.setDate(dashCalDate.getDate()+dir*7);
+      else if(dashCalMode==='month') dashCalDate = new Date(dashCalDate.getFullYear(), dashCalDate.getMonth()+dir, 1);
+      else if(dashCalMode==='year') dashCalDate = new Date(dashCalDate.getFullYear()+dir, 0, 1);
+      renderDashCal();
+    }
+    function dashCalToday(){ dashCalDate = new Date(2026,5,23); renderDashCal(); }
+    function getDashEvents(){
+      const ev = [];
+      // Tasks: use real tasks[] due dates
+      try{
+        (typeof tasks!=='undefined'?tasks:[]).forEach(t=>{
+          if(!t.due) return;
+          ev.push({ date: t.due, type:'task', cls:'task', title: t.title, sub: (t.assignee||'Unassigned')+' · '+t.priority, color:'purple', onClick: ()=>{ showView('tasks'); setTimeout(()=>selectPlan(t.planId),100); } });
+        });
+      }catch(e){}
+      // Category Review: every CR month with value -> event on 12th
+      try{
+        (typeof CR_DATA!=='undefined'?CR_DATA:[]).forEach(r=>{
+          CR_MONTHS.forEach((m,i)=>{
+            const v = r.months[m];
+            if(!v) return;
+            const mm = String(i+1).padStart(2,'0');
+            ev.push({ date: `2026-${mm}-12`, type:'cr', cls:'cr', title: r.banner+' — '+r.category, sub: v, color:'blue', onClick: ()=>showView('catreview') });
+          });
+        });
+      }catch(e){}
+      // Promos: PC_DATA month entries -> event on 08th
+      try{
+        (typeof PC_DATA!=='undefined'?PC_DATA:[]).forEach(r=>{
+          CR_MONTHS.forEach((m,i)=>{
+            const v = r.months[m];
+            if(!v) return;
+            const mm = String(i+1).padStart(2,'0');
+            ev.push({ date: `2026-${mm}-08`, type:'promo', cls:'promo', title: r.banner+' — '+r.category, sub: v, color:'green', onClick: ()=>showView('promocal') });
+          });
+        });
+      }catch(e){}
+      // Demo pins so Today (Jun 23) is never empty — matches prior static timeline for client demo
+      ev.push({ date:'2026-06-23', type:'cr', cls:'cr', title:'Nugget Market — Specialty Asian', sub:'Starts Jul 20 · Category Review', onClick: ()=>showView('catreview') });
+      ev.push({ date:'2026-06-23', type:'promo', cls:'promo', title:'KeHE TPR — Beverages', sub:'Starts Thu · Promo', onClick: ()=>showView('promocal') });
+      ev.push({ date:'2026-06-23', type:'task', cls:'task', title:"F/U with Buyer — Gelson's", sub:'In Progress · task', onClick: ()=>{ showView('tasks'); setTimeout(()=>selectPlan(6),100); } });
+      ev.push({ date:'2026-06-24', type:'promo', cls:'promo', title:'UNFI EDLP Review', sub:'Review · Promo', onClick: ()=>showView('promocal') });
+      ev.push({ date:'2026-06-24', type:'cr', cls:'cr', title:'Lazy Acres — TBD Category', sub:'Review Jun · Category Review', onClick: ()=>showView('catreview') });
+      return ev;
+    }
+    function dashActiveFilters(){
+      return [...document.querySelectorAll('[data-tlfilter].active')].map(b=>b.dataset.tlfilter);
+    }
+    function renderDashTimeline(){
+      const body = document.getElementById('dashTimelineBody');
+      if(!body) return;
+      const filters = dashActiveFilters();
+      const all = getDashEvents();
+      // window: dashCalDate (Jun 23) to dashCalDate + dashRange days
+      const start = new Date(dashCalDate); start.setHours(0,0,0,0);
+      const end = new Date(start); end.setDate(end.getDate()+dashRange);
+      const inRange = all.filter(e=>{
+        const d = new Date(e.date+'T00:00:00');
+        if(isNaN(d)) return false;
+        if(d < start || d >= end) return false;
+        if(filters.length && !filters.includes(e.type)) return false;
+        return true;
+      }).sort((a,b)=> a.date.localeCompare(b.date));
+      // group by date
+      const groups = {};
+      inRange.forEach(e=>{ if(!groups[e.date]) groups[e.date]=[]; groups[e.date].push(e); });
+      const dates = Object.keys(groups).sort();
+      if(!dates.length){
+        body.innerHTML = '<div style="padding:28px;text-align:center;color:#94a3b8;"><div style="font-size:0.85rem;">No events in this window</div><div style="font-size:0.7rem;margin-top:4px;">Try 30d or enable filters, or switch to Calendar to see full month</div></div>';
+        return;
+      }
+      let html = '';
+      const todayStr = '2026-06-23';
+      dates.forEach(ds=>{
+        const d = new Date(ds+'T00:00:00');
+        const isToday = ds===todayStr;
+        const label = isToday ? 'Today' : d.toLocaleDateString('en-US',{weekday:'short', month:'short', day:'numeric'});
+        const hdrClass = isToday ? 'tl-day today' : 'tl-day';
+        const lbl = isToday ? 'Today' : d.toLocaleDateString('en-US',{weekday:'short'});
+        html += '<div class="'+hdrClass+'"><div class="tl-hdr"><span class="tl-lbl">'+lbl+'</span><span class="tl-date">'+d.toLocaleDateString('en-US',{month:'short', day:'numeric', year:'numeric'})+' · '+label+'</span></div><div class="tl-items">';
+        groups[ds].forEach(e=>{
+          const ico = e.type==='cr' ? '<div class="tl-ico blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>' : e.type==='promo' ? '<div class="tl-ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></div>' : '<div class="tl-ico purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg></div>';
+          const pill = e.type==='cr' ? 'Category Review' : e.type==='promo' ? 'Promo' : 'Task';
+          html += '<div class="tl-item '+e.cls+'" onclick="('+e.onClick.toString()+')(); window.scrollTo(0,0)"><div>'+ico+'</div><div class="tl-c"><div class="tl-t">'+e.title+'</div><div class="tl-m"><span>'+e.sub+'</span><span class="s-pill '+(e.type==='cr'?'blue':e.type==='promo'?'green':'purple')+'">'+pill+'</span></div></div></div>';
+        });
+        html += '</div></div>';
+      });
+      body.innerHTML = html;
+    }
+    function renderDashCal(){
+      const grid = document.getElementById('dashCalGrid');
+      const label = document.getElementById('dashCalLabel');
+      if(!grid || !label) return;
+      const filters = dashActiveFilters();
+      const all = getDashEvents().filter(e=> !filters.length || filters.includes(e.type));
+      const todayStr = '2026-06-23';
+      if(dashCalMode==='month'){
+        const y=dashCalDate.getFullYear(), m=dashCalDate.getMonth();
+        label.textContent = dashCalDate.toLocaleString('en-US',{month:'long', year:'numeric'});
+        const first=new Date(y,m,1), startDay=first.getDay(), days=new Date(y,m+1,0).getDate(), prevDays=new Date(y,m,0).getDate();
+        let html='<div class="dash-cal-month" style="margin:12px;">';
+        ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].forEach(d=> html+='<div class="dash-cal-dayname">'+d+'</div>');
+        for(let i=0;i<startDay;i++) html+='<div class="dash-cal-cell other"><div class="dash-cal-date"><span>'+(prevDays-startDay+1+i)+'</span></div></div>';
+        for(let d=1; d<=days; d++){
+          const ds = y+'-'+String(m+1).padStart(2,'0')+'-'+String(d).padStart(2,'0');
+          const isToday = ds===todayStr;
+          const dayEvents = all.filter(e=> e.date===ds);
+          html+='<div class="dash-cal-cell'+(isToday?' today':'')+'"><div class="dash-cal-date"><span class="num'+(isToday?' today':'')+'">'+d+'</span>'+(dayEvents.length>2?'<span style="font-size:0.6rem;color:#94a3b8;">'+dayEvents.length+'</span>':'')+'</div>';
+          dayEvents.slice(0,3).forEach(e=>{
+            const bg = e.type==='cr'?'#eff6ff':e.type==='promo'?'#f0fdf4':'#f5f3ff';
+            const bd = e.type==='cr'?'#bfdbfe':e.type==='promo'?'#bbf7d0':'#ddd6fe';
+            const txt = e.type==='cr'?'#1e40af':e.type==='promo'?'#15803d':'#6d28d9';
+            html+='<div style="font-size:0.6rem;padding:2px 6px;border-radius:6px;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border:1px solid '+bd+';background:'+bg+';color:'+txt+';cursor:pointer;" onclick="('+e.onClick.toString()+')()">'+e.title+'</div>';
+          });
+          if(dayEvents.length>3) html+='<div style="font-size:0.6rem;color:#64748b;padding-left:2px;">+'+(dayEvents.length-3)+' more</div>';
+          html+='</div>';
+        }
+        const rem=(startDay+days)%7; if(rem!==0) for(let i=0;i<7-rem;i++) html+='<div class="dash-cal-cell other"><div class="dash-cal-date"><span>'+(i+1)+'</span></div></div>';
+        html+='</div>';
+        grid.innerHTML=html;
+      } else if(dashCalMode==='week'){
+        const start=new Date(dashCalDate); const day=start.getDay(); start.setDate(start.getDate()-day);
+        const end=new Date(start); end.setDate(end.getDate()+6);
+        label.textContent = start.toLocaleDateString('en-US',{month:'short', day:'numeric'})+' – '+end.toLocaleDateString('en-US',{month:'short', day:'numeric', year:'numeric'});
+        let html='<div class="dash-week-grid" style="margin:12px;"><div class="dash-week-head" style="background:#f8fafc;"></div>';
+        for(let i=0;i<7;i++){ const d=new Date(start); d.setDate(start.getDate()+i); const ds=d.toISOString().slice(0,10); const isToday=ds===todayStr; html+='<div class="dash-week-head'+(isToday?' today':'')+'"><div style="font-size:0.65rem;font-weight:600;color:#64748b;">'+['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][d.getDay()]+'</div><div style="font-size:0.9rem;font-weight:700;'+(isToday?'background:#6366f1;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:4px auto 0;':'')+'">'+d.getDate()+'</div></div>'; }
+        // single row of day cells with events (simplified week)
+        html+='<div style="padding:8px 6px;font-size:0.65rem;font-weight:600;color:#94a3b8;border-right:1px solid #f1f5f9;">All day</div>';
+        for(let i=0;i<7;i++){ const d=new Date(start); d.setDate(start.getDate()+i); const ds=d.toISOString().slice(0,10); const dayEvents=all.filter(e=>e.date===ds); html+='<div class="dash-week-cell">'; dayEvents.forEach(e=>{
+          const bg = e.type==='cr'?'#eff6ff':e.type==='promo'?'#f0fdf4':'#f5f3ff'; const bd = e.type==='cr'?'#bfdbfe':e.type==='promo'?'#bbf7d0':'#ddd6fe'; const txt = e.type==='cr'?'#1e40af':e.type==='promo'?'#15803d':'#6d28d9';
+          html+='<div style="font-size:0.6rem;padding:3px 6px;border-radius:6px;margin-bottom:4px;border:1px solid '+bd+';background:'+bg+';color:'+txt+';cursor:pointer;" onclick="('+e.onClick.toString()+')()">'+e.title+'</div>';
+        }); if(!dayEvents.length) html+='<div style="font-size:0.65rem;color:#cbd5e1;text-align:center;padding:8px;">—</div>'; html+='</div>'; }
+        html+='</div>';
+        grid.innerHTML=html;
+      } else if(dashCalMode==='day'){
+        const ds=dashCalDate.toISOString().slice(0,10);
+        label.textContent = dashCalDate.toLocaleDateString('en-US',{weekday:'long', month:'long', day:'numeric', year:'numeric'});
+        const dayEvents=all.filter(e=>e.date===ds);
+        let html='<div class="dash-day-list" style="margin:12px;">';
+        if(!dayEvents.length) html+='<div style="padding:28px;text-align:center;color:#94a3b8;">No events on this day<br><span style="font-size:0.7rem;">Try Week or Month view</span></div>';
+        else {
+          const slots=['09:00','10:30','12:00','14:00','15:30'];
+          dayEvents.forEach((e,i)=>{
+            const t=slots[i%slots.length];
+            const bg = e.type==='cr'?'#eff6ff':e.type==='promo'?'#f0fdf4':'#f5f3ff'; const bd = e.type==='cr'?'#bfdbfe':e.type==='promo'?'#bbf7d0':'#ddd6fe'; const txt = e.type==='cr'?'#1e40af':e.type==='promo'?'#15803d':'#6d28d9';
+            html+='<div class="dash-day-slot"><div class="dash-day-time">'+t+'</div><div style="flex:1;padding:8px 12px;border-radius:8px;border:1px solid '+bd+';background:'+bg+';color:'+txt+';cursor:pointer;" onclick="('+e.onClick.toString()+')()"><div style="font-size:0.8rem;font-weight:600;">'+e.title+'</div><div style="font-size:0.7rem;opacity:0.8;">'+e.sub+' · '+e.type+'</div></div></div>';
+          });
+        }
+        html+='</div>';
+        grid.innerHTML=html;
+      } else if(dashCalMode==='year'){
+        label.textContent = String(dashCalDate.getFullYear());
+        let html='<div class="dash-year-grid" style="margin:12px;">';
+        for(let mi=0;mi<12;mi++){
+          const y=dashCalDate.getFullYear(), m=mi;
+          const first=new Date(y,m,1), startDay=first.getDay(), days=new Date(y,m+1,0).getDate();
+          html+='<div class="dash-year-month"><div class="dash-year-title">'+new Date(y,m,1).toLocaleString('en-US',{month:'long'})+'</div><div style="display:grid;grid-template-columns:repeat(7,1fr);gap:1px;padding:6px;background:#fff;">';
+          ['S','M','T','W','T','F','S'].forEach(d=> html+='<div style="font-size:0.55rem;text-align:center;color:#94a3b8;padding:2px;">'+d+'</div>');
+          for(let i=0;i<startDay;i++) html+='<div></div>';
+          for(let d=1; d<=days; d++){
+            const ds=y+'-'+String(m+1).padStart(2,'0')+'-'+String(d).padStart(2,'0');
+            const cnt=all.filter(e=>e.date===ds).length;
+            const isToday=ds===todayStr;
+            html+='<div style="font-size:0.6rem;text-align:center;padding:4px 0;border-radius:4px;'+(isToday?'background:#6366f1;color:#fff;':cnt?'background:#f1f5f9;':'')+'">'+d+(cnt?'<span style="display:block;width:4px;height:4px;background:#6366f1;border-radius:50%;margin:2px auto 0;"></span>':'')+'</div>';
+          }
+          html+='</div></div>';
+        }
+        html+='</div>';
+        grid.innerHTML=html;
+      }
+    }
+    // init dash timeline on load
+    document.addEventListener('DOMContentLoaded', ()=>{ setTimeout(()=>{ try{ renderDashTimeline(); }catch(e){} },300); });
 
     // Modal helpers
     function showModal(id) { document.getElementById(id).classList.add('show'); }

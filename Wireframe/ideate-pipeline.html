@@ -279,6 +279,7 @@
     let editingGroupId = null;
     let ideateView = 'list'; // list | calendar
     let ideateCalDate = new Date(2026,6,1);
+    let ideateCalHideDone = false;
     let expandedGroups = {};
 
     const COLORS = ['#6366f1','#f59e0b','#10b981','#ef4444','#8b5cf6','#ec4899','#06b6d4','#14b8a6'];
@@ -360,7 +361,10 @@
       const first=new Date(y,m,1), startDay=first.getDay(), daysInMonth=new Date(y,m+1,0).getDate();
       const prevDays=new Date(y,m,0).getDate();
       const monthName=ideateCalDate.toLocaleString('en-US',{month:'long',year:'numeric'});
-      let html='<div class=\"pipeline-cal\"><div class=\"pipeline-cal-hdr\"><span>'+monthName+' — '+g.name+'</span><span style=\"display:flex;gap:6px;\"><button onclick=\"ideateCalDate=new Date(ideateCalDate.getFullYear(),ideateCalDate.getMonth()-1,1);renderGroupContent();\" style=\"padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;\">‹</button><button onclick=\"ideateCalDate=new Date();renderGroupContent();\" style=\"padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;\">Today</button><button onclick=\"ideateCalDate=new Date(ideateCalDate.getFullYear(),ideateCalDate.getMonth()+1,1);renderGroupContent();\" style=\"padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;\">›</button></span></div>';
+      const doneCnt = groupTasks.filter(t=>t.status==='done').length;
+      let html='<div class=\"pipeline-cal\"><div class=\"pipeline-cal-hdr\"><span>'+monthName+' — '+g.name+'</span><span style=\"display:flex;align-items:center;gap:8px;\">' +
+        (doneCnt ? '<label style=\"display:flex;align-items:center;gap:4px;font-size:0.7rem;color:#64748b;cursor:pointer;\"><input type=\"checkbox\" '+(ideateCalHideDone?'checked':'')+' onchange=\"ideateCalHideDone=this.checked;renderGroupContent();\">Hide done ('+doneCnt+')</label>' : '') +
+        '<button onclick=\"ideateCalDate=new Date(ideateCalDate.getFullYear(),ideateCalDate.getMonth()-1,1);renderGroupContent();\" style=\"padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;\">‹</button><button onclick=\"ideateCalDate=new Date();renderGroupContent();\" style=\"padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;\">Today</button><button onclick=\"ideateCalDate=new Date(ideateCalDate.getFullYear(),ideateCalDate.getMonth()+1,1);renderGroupContent();\" style=\"padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;\">›</button></span></div>';
       html+='<div class=\"pipeline-cal-grid\"><div class=\"pipeline-cal-dayname\">Sun</div><div class=\"pipeline-cal-dayname\">Mon</div><div class=\"pipeline-cal-dayname\">Tue</div><div class=\"pipeline-cal-dayname\">Wed</div><div class=\"pipeline-cal-dayname\">Thu</div><div class=\"pipeline-cal-dayname\">Fri</div><div class=\"pipeline-cal-dayname\">Sat</div>';
       for(let i=0;i<startDay;i++) html+='<div class=\"pipeline-cal-cell\" style=\"background:#f8fafc;\"><div class=\"pipeline-cal-date\">'+(prevDays-startDay+1+i)+'</div></div>';
       const todayStr=new Date().toISOString().slice(0,10);
@@ -368,7 +372,7 @@
         const dateStr=new Date(y,m,d).toISOString().slice(0,10);
         const isToday=dateStr===todayStr;
         html+='<div class=\"pipeline-cal-cell'+(isToday?' today':'')+'\"><div class=\"pipeline-cal-date\">'+d+'</div>';
-        groupTasks.filter(t=> t.due===dateStr).forEach(t=>{ html+='<div class=\"pipeline-cal-task '+t.priority+'\" onclick=\"editTask('+t.id+')\">'+t.title+'</div>'; });
+        (ideateCalHideDone ? groupTasks.filter(t=>t.status!=='done') : groupTasks).filter(t=> t.due===dateStr).forEach(t=>{ html+='<div class=\"pipeline-cal-task '+t.priority+(t.status==='done'?' done':'')+'\" onclick=\"editTask('+t.id+')\">'+t.title+'</div>'; });
         html+='</div>';
       }
       const rem=(startDay+daysInMonth)%7;
