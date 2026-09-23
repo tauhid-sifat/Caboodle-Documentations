@@ -1,8 +1,8 @@
-// Ask Caboodle POC proxy: browser -> same-origin /api/ask -> OpenCode Zen.
+// Ask Caboodle POC proxy: browser -> same-origin /api/ask -> OpenCode Go.
 // Key stays server-side in Vercel env OPENCODE_API_KEY. Never ship it to the client.
-// Per https://opencode.ai/docs/zen: Muse Spark uses the Responses API at
-// https://opencode.ai/zen/v1/responses with model id 'muse-spark-1.3'
-// (paid) or 'muse-spark-1.3-contributor-free' (free tier).
+// Per https://opencode.ai/docs/go: Muse Spark 1.3 Contributor uses the Responses API at
+// https://opencode.ai/zen/go/v1/responses with model id 'muse-spark-1.3-contributor'.
+// Go requires an identifying User-Agent plus a stable x-opencode-session header.
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
   const key = process.env.OPENCODE_API_KEY;
@@ -12,12 +12,12 @@ export default async function handler(req, res) {
   const controller = new AbortController();
   const t = setTimeout(() => controller.abort(), 25000);
   try {
-    const r = await fetch('https://opencode.ai/zen/v1/responses', {
+    const r = await fetch('https://opencode.ai/zen/go/v1/responses', {
       method: 'POST',
       signal: controller.signal,
-      headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + key },
+      headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + key, 'User-Agent': 'ask-caboodle-poc/1.0', 'x-opencode-session': 'ask-caboodle-broker-poc' },
       body: JSON.stringify({
-        model: process.env.OPENCODE_MODEL || 'muse-spark-1.3',
+        model: process.env.OPENCODE_MODEL || 'muse-spark-1.3-contributor',
         input: 'You polish short BI answers for a food-broker demo. One or two sentences, plain language, no invented numbers. The deterministic headline with exact counts is provided and must stay consistent.\nQuestion: ' + question + '\nDeterministic result: ' + (headline || 'n/a') + '\nReply with a polished one-sentence version.',
         max_output_tokens: 120,
         temperature: 0.2
