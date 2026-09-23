@@ -19,7 +19,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         model: process.env.OPENCODE_MODEL || 'muse-spark-1.3-contributor',
         input: 'You polish short BI answers for a food-broker demo. One or two sentences, plain language, no invented numbers. The deterministic headline with exact counts is provided and must stay consistent.\nQuestion: ' + question + '\nDeterministic result: ' + (headline || 'n/a') + '\nReply with a polished one-sentence version.',
-        max_output_tokens: 120,
+        max_output_tokens: 2000,
         temperature: 0.2
       })
     });
