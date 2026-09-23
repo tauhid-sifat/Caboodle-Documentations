@@ -417,7 +417,8 @@
 
     @media (max-width: 1200px) { .qa-grid { grid-template-columns: repeat(3, 1fr); } }
     @media (max-width: 1024px) { .kpi-row { grid-template-columns: repeat(2, 1fr); } .qa-grid { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 768px) { .header { padding: 0 16px; } .h-nav li { display: none; } .kpi-row { grid-template-columns: 1fr; } .qa-grid { grid-template-columns: repeat(2, 1fr); } .dash-grid { padding: 8px 16px; } }
+     @media (max-width: 768px) { .header { padding: 0 16px; } .h-nav li { display: none; } .kpi-row { grid-template-columns: 1fr; } .qa-grid { grid-template-columns: repeat(2, 1fr); } .dash-grid { padding: 8px 16px; } }
+     @media (max-width: 860px) { #view-askchat .ask-side { display: none !important; } #askBar { padding: 10px 16px; } #askBar #askInput { flex-basis: 100%; order: 3; } #askChatLog { padding: 14px !important; } }
   </style>
 </head>
 <body>
@@ -722,7 +723,7 @@
     <!-- ===== VIEW: ASK CHAT (POC, ChatGPT-style) ===== -->
     <div id="view-askchat" class="view">
       <div style="display:flex;height:100%;overflow:hidden;">
-        <div style="width:240px;min-width:240px;background:#f8fafc;border-right:1px solid #e2e8f0;display:flex;flex-direction:column;">
+        <div class="ask-side" style="width:240px;min-width:240px;background:#f8fafc;border-right:1px solid #e2e8f0;display:flex;flex-direction:column;">
           <div style="padding:12px;"><button class="btn btn-sm btn-default" style="width:100%;" onclick="askChatNew()">+ New chat</button></div>
           <div style="padding:0 12px 4px;font-size:0.7rem;font-weight:700;color:#94a3b8;letter-spacing:0.06em;">THIS CHAT</div>
           <div id="askChatHistory" style="flex:1;overflow-y:auto;padding:0 8px 8px;"></div>
@@ -3190,14 +3191,24 @@
       ASK.itemLoading = false; return ASK.item;
     }
     function askCol(table, name) { return table.head.findIndex(h => (h || '').trim().toLowerCase() === name.toLowerCase()); }
+    const ASK_COL_PRIORITY = ['brand', 'brand name', 'retailer', 'retailer name', 'banner', 'banner name', 'region', 'region name', 'product', 'product name', 'product description', 'sku', 'upc number', 'unit upc', 'product upc', 'event name', 'category', 'category name', 'review month', 'month', 'submission due date(mm/dd/yyyy)', 'review end date(mm/dd/yyyy)', 'reset date(mm/dd/yyyy)', 'start date', 'end date', 'date', 'status', 'event status', 'sku status', 'dc', 'distribution center name', 'distributor item code', 'number of stores', 'wholesale case cost', 'wholesale unit cost', 'additional notes'];
+    function askCurate(head, rows) {
+      if (!head || head.length <= 10) return { head, rows, dropped: 0 };
+      const lower = head.map(h => (h || '').trim().toLowerCase());
+      const idx = [];
+      ASK_COL_PRIORITY.forEach(p => { const i = lower.indexOf(p); if (i >= 0 && idx.indexOf(i) < 0 && idx.length < 10) idx.push(i); });
+      for (let i = 0; i < head.length && idx.length < 10; i++) if (idx.indexOf(i) < 0) idx.push(i);
+      idx.sort((a, b) => a - b);
+      return { head: idx.map(i => head[i]), rows: rows.map(r => idx.map(i => r[i])), dropped: head.length - idx.length };
+    }
     function askTableHTML(head, rows, cap) {
       const n = Math.min(rows.length, cap || ASK_CAP);
       let h = '<table class="cal-table" style="width:100%;border-collapse:collapse;font-size:0.75rem;"><thead><tr>';
-      head.forEach(c => { h += '<th style="text-align:left;padding:6px 8px;border-bottom:1px solid #e2e8f0;">' + String(c).replace(/</g, '&lt;') + '</th>'; });
+      head.forEach(c => { h += '<th style="text-align:left;padding:6px 8px;border-bottom:1px solid #e2e8f0;position:sticky;top:0;background:#f8fafc;z-index:1;white-space:nowrap;">' + String(c).replace(/</g, '&lt;') + '</th>'; });
       h += '</tr></thead><tbody>';
       for (let i = 0; i < n; i++) {
         h += '<tr>';
-        rows[i].forEach(c => { h += '<td style="padding:6px 8px;border-bottom:1px solid #f1f5f9;">' + String(c == null ? '' : c).replace(/</g, '&lt;').slice(0, 120) + '</td>'; });
+        rows[i].forEach(c => { h += '<td style="padding:6px 8px;border-bottom:1px solid #f1f5f9;vertical-align:top;overflow-wrap:anywhere;min-width:90px;">' + String(c == null ? '' : c).replace(/</g, '&lt;').slice(0, 120) + '</td>'; });
         h += '</tr>';
       }
       return h + '</tbody></table>' + (rows.length > n ? '<div style="font-size:0.72rem;color:#64748b;padding:6px 2px;">showing ' + n + ' of ' + rows.length + ' (capped)</div>' : '');
@@ -3208,7 +3219,9 @@
       document.getElementById('askAnswer').textContent = headline;
       document.getElementById('askMeta').textContent = meta + ' · as of ' + ASK.asOf;
       document.getElementById('askTableWrap').innerHTML = rows && rows.length ? askTableHTML(head, rows) : '<div style="font-size:0.78rem;color:#64748b;">No rows.</div>';
-      askChatPush(document.getElementById('askInput').value, headline, meta, head, rows);
+      const cur = askCurate(head, rows);
+      const note = cur.dropped ? ' · ' + cur.head.length + '/' + head.length + ' columns (full table in CSV export)' : '';
+      askChatPush(document.getElementById('askInput').value, headline, meta + note, cur.head, cur.rows, head, rows);
       showView('askchat');
     }
     function askCantAnswer(q) {
@@ -3362,8 +3375,8 @@
       askRun(q);
     }
     function askChatNew() { ASK.chat = []; askChatRender(); }
-    function askChatPush(q, headline, meta, head, rows) {
-      ASK.chat.push({ q, headline, meta, head, rows: (rows || []).slice(0, ASK_CAP), html: rows && rows.length ? askTableHTML(head, rows) : '' });
+    function askChatPush(q, headline, meta, showHead, showRows, fullHead, fullRows) {
+      ASK.chat.push({ q, headline, meta, head: fullHead || showHead, rows: ((fullRows || showRows) || []).slice(0, 1000), html: showRows && showRows.length ? askTableHTML(showHead, showRows) : '' });
       askChatRender();
     }
     function askChatRender() {
