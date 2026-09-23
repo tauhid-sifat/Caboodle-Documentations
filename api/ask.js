@@ -23,7 +23,7 @@ export default async function handler(req, res) {
         temperature: 0.2
       })
     });
-    if (!r.ok) return res.status(502).json({ error: 'opencode ' + r.status, keyLen: key.length, keyPrefix: key.slice(0, 4) });
+    if (!r.ok) return res.status(502).json({ error: 'opencode ' + r.status, detail: (await r.text()).slice(0, 300), keyLen: key.length, keyPrefix: key.slice(0, 4) });
     const data = await r.json();
     const polished = data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content;
     return res.status(200).json({ polished: (polished || '').trim().slice(0, 500) });
