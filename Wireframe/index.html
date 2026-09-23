@@ -445,7 +445,7 @@
     <!-- ===== ASK CABOODLE BAR (POC) ===== -->
     <div id="askBar" style="background:#fff;border-bottom:1px solid hsl(var(--border));padding:10px 24px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
       <span style="font-weight:700;font-family:'Space Grotesk',sans-serif;">Ask Caboodle</span>
-      <span id="askDataState" style="font-size:0.72rem;color:#64748b;">loading broker data…</span>
+      <span id="askDataState" style="display:none;"></span>
       <input id="askInput" placeholder='Try: "What promos are running this month?" or "Reviews due in 60 days?"' onkeydown="if(event.key==='Enter')askRun()" style="flex:1;min-width:240px;height:34px;padding:0 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:0.82rem;">
       <button class="btn btn-sm btn-default" onclick="askRun()">Ask</button>
       <button class="btn btn-sm" onclick="showView('ask')">Library</button>
