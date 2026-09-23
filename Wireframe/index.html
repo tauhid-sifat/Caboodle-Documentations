@@ -3228,6 +3228,79 @@
       askShow("I can't answer that from the broker demo data.", 'scope: Market Overview, Promotions, Category Review, Distributor APL, Item Status', [], []);
     }
     function askParseDate(s) { const t = Date.parse(s); return isNaN(t) ? null : t; }
+    // ===== ASK KNOWLEDGE BASE + LLM PLANNING (primary) + regex fallback =====
+    function askTopValues(rows, ci, cap) {
+      const m = new Map();
+      for (const r of rows) { const v = String(r[ci] || '').trim(); if (v) m.set(v, (m.get(v) || 0) + 1); }
+      return [...m.entries()].sort((a, b) => b[1] - a[1]).slice(0, cap || 50).map(e => e[0]);
+    }
+    function askDateRange(rows, ci) {
+      let lo = null, hi = null;
+      for (const r of rows) { const t = askParseDate(r[ci]); if (t == null) continue; if (lo == null || t < lo) lo = t; if (hi == null || t > hi) hi = t; }
+      const f = t => t == null ? null : new Date(t).toISOString().slice(0, 10);
+      return { min: f(lo), max: f(hi) };
+    }
+    function askBuildKB() {
+      const T = (t, dims, dates) => {
+        const o = { rows: t.rows.length, columns: t.head };
+        dims.forEach(d => { const i = askCol(t, d); if (i >= 0) o['values:' + d] = askTopValues(t.rows, i); });
+        (dates || []).forEach(d => { const i = askCol(t, d); if (i >= 0) o['range:' + d] = askDateRange(t.rows, i); });
+        return o;
+      };
+      return {
+        mo: T(ASK.mo, ['Brand', 'Retailer', 'Banner', 'Region', 'SKU Status'], ['Date']),
+        promo: T(ASK.promo, ['Brand', 'Distributor', 'Retailer', 'Banner', 'Event Status', 'SKU Status', 'Month'], ['Start Date', 'End Date']),
+        cr: T(ASK.cr, ['Retailer', 'Category', 'Review Month'], ['Submission Due Date(MM/DD/YYYY)']),
+        apl: T(ASK.apl, ['Brand Name', 'Distribution Center Name', 'Region Name'], []),
+        item: ASK.item ? T(ASK.item, ['Brand Name', 'Retailer Name', 'Status'], []) : { columns: ['Brand Name', 'Retailer Name', 'Banner Name', 'Product Name', 'UPC Number', 'Category Name', 'Status'], note: 'loads on demand' }
+      };
+    }
+    async function askPlanFirst(q) {
+      const ctrl = new AbortController();
+      const to = setTimeout(() => ctrl.abort(), 22000);
+      try {
+        const r = await fetch('/api/ask', { method: 'POST', headers: { 'Content-Type': 'application/json' }, signal: ctrl.signal, body: JSON.stringify({ question: q, mode: 'plan', kb: askBuildKB() }) });
+        if (!r.ok) return false;
+        const d = await r.json();
+        const plan = d && d.plan;
+        if (!plan) return false;
+        if (plan.intent === 'greeting' || plan.intent === 'help') { askQHello(q, q.toLowerCase()); return true; }
+        if (plan.intent !== 'query') return false;
+        return await askRunPlan(plan, q);
+      } catch (e) { return false; } finally { clearTimeout(to); }
+    }
+    async function askRunPlan(plan, q) {
+      const tables = { mo: ASK.mo, promo: ASK.promo, cr: ASK.cr, apl: ASK.apl, item: ASK.item };
+      let t = tables[plan.dataset];
+      if (!t) return false;
+      if (plan.dataset === 'item' && (!t.rows || !t.rows.length)) { await askEnsureItem(); t = ASK.item; if (!t || !t.rows.length) return false; }
+      const lower = t.head.map(h => (h || '').trim().toLowerCase());
+      const colIdx = name => lower.indexOf(String(name || '').trim().toLowerCase());
+      let rows = t.rows;
+      for (const f of (plan.filters || [])) {
+        const ci = colIdx(f.col);
+        if (ci < 0) return false;
+        const vals = Array.isArray(f.value) ? f.value : [f.value];
+        const op = String(f.op || 'contains').toLowerCase();
+        rows = rows.filter(r => {
+          const cl = String(r[ci] || '').toLowerCase();
+          return vals.some(v => { const sl = String(v == null ? '' : v).toLowerCase(); return (op === 'eq' || op === 'in') ? cl === sl : cl.includes(sl); });
+        });
+        if (!rows.length) break;
+      }
+      let head = t.head, out = rows;
+      if (plan.groupBy) {
+        const gi = colIdx(plan.groupBy);
+        if (gi < 0) return false;
+        const m = new Map();
+        rows.forEach(r => { const k = String(r[gi] || '(blank)').trim() || '(blank)'; m.set(k, (m.get(k) || 0) + 1); });
+        head = [t.head[gi], 'Count'];
+        out = [...m.entries()].sort((a, b) => b[1] - a[1]).map(e => [e[0], e[1]]);
+      }
+      out = out.slice(0, 1000);
+      askShow(plan.title || (out.length + ' rows match.'), 'source: ' + plan.dataset + ' · planned by OpenCode', head, out);
+      return true;
+    }
     async function askRun(rerunQ) {
       const q = (rerunQ != null ? rerunQ : document.getElementById('askInput').value || '').trim();
       if (!q) return;
@@ -3239,6 +3312,7 @@
         if (/^(hi|hello|hey|yo|howdy|good\s?(morning|afternoon|evening|day)|thanks|thank\s?you|bye|help|what can you do)\b/.test(lq)) return askQHello(q, lq);
         if (/what\s+(is|are)\s+.*(goal|purpose|point)|how\s+can\s+you\s+help|what\s+(do|can)\s+you\s+do|what\s+is\s+this/.test(lq)) return askQHello(q, lq);
         if (/how\s+(are|r|is)\s+(you|u|your\s+\w+|yourself|things|it\s+going|life|work|everything)/.test(lq)) { askShow("I'm just a demo assistant, so no complaints. Want to try a data question? Ask what needs attention today, or what's running this month.", 'small talk', [], []); return; }
+        try { if (await askPlanFirst(q)) return; } catch (e) {}
         if (/review.*due|due.*review|60 day|upcoming review/.test(lq)) return askQReviewsDue(q);
         if (/attention|brief|today/.test(lq)) return askQBrief(q);
         if (/reconcil|distributor.*not|not.*item status|active on.*distributor/.test(lq)) return await askQRecon(q);
