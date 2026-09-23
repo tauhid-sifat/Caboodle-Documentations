@@ -436,9 +436,29 @@
             <li class="nav-div"></li>
           </ul>
           <div class="brand-sel"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:#64748b;"><circle cx="12" cy="8" r="4"></circle><path d="M20 21a8 8 0 1 0-16 0"></path></svg><label>Acme Brokerage</label></div>
+          <button class="btn btn-sm" onclick="showView('ask')" title="Ask Caboodle library" style="margin-left:8px;">Ask</button>
         </div>
       </div>
     </header>
+
+    <!-- ===== ASK CABOODLE BAR (POC) ===== -->
+    <div id="askBar" style="background:#fff;border-bottom:1px solid hsl(var(--border));padding:10px 24px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+      <span style="font-weight:700;font-family:'Space Grotesk',sans-serif;">Ask Caboodle</span>
+      <span id="askDataState" style="font-size:0.72rem;color:#64748b;">loading broker data…</span>
+      <input id="askInput" placeholder='Try: "What promos are running this month?" or "Reviews due in 60 days?"' onkeydown="if(event.key==='Enter')askRun()" style="flex:1;min-width:240px;height:34px;padding:0 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:0.82rem;">
+      <button class="btn btn-sm btn-default" onclick="askRun()">Ask</button>
+      <button class="btn btn-sm" onclick="showView('ask')">Library</button>
+    </div>
+    <div id="askPanel" style="display:none;background:#fff;border-bottom:1px solid hsl(var(--border));padding:12px 24px;">
+      <div id="askAnswer" style="font-size:0.85rem;margin-bottom:8px;"></div>
+      <div id="askMeta" style="font-size:0.72rem;color:#64748b;margin-bottom:8px;"></div>
+      <div id="askTableWrap" style="overflow-x:auto;max-height:300px;overflow-y:auto;"></div>
+      <div style="display:flex;gap:8px;margin-top:8px;">
+        <button class="btn btn-sm" onclick="askSaveCurrent()">Save question</button>
+        <button class="btn btn-sm" onclick="askExportCurrent()">Export CSV</button>
+        <button class="btn btn-sm" onclick="document.getElementById('askPanel').style.display='none'">Close</button>
+      </div>
+    </div>
 
     <!-- ===== VIEW: DASHBOARD ===== -->
     <div id="view-dashboard" class="view active">
@@ -683,7 +703,45 @@
       </div>
     </div>
 
+    <!-- ===== VIEW: ASK LIBRARY (POC) ===== -->
+    <div id="view-ask" class="view">
+      <div style="display:flex;flex-direction:column;height:100%;overflow:hidden;">
+        <div class="cal-top">
+          <div class="cal-top-left">
+            <h1 class="cal-title">Ask Library</h1>
+            <button class="btn btn-sm" onclick="showView('dashboard')" style="margin-left:8px;">Dashboard</button>
+          </div>
+        </div>
+        <div style="flex:1;overflow-y:auto;padding:16px 24px;">
+          <p style="font-size:0.78rem;color:#64748b;margin-bottom:12px;">Saved questions store the <strong>query</strong>, not the snapshot — clicking re-runs live against the broker CSVs.</p>
+          <div id="askLibraryWrap"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== VIEW: ASK CHAT (POC, ChatGPT-style) ===== -->
+    <div id="view-askchat" class="view">
+      <div style="display:flex;height:100%;overflow:hidden;">
+        <div style="width:240px;min-width:240px;background:#f8fafc;border-right:1px solid #e2e8f0;display:flex;flex-direction:column;">
+          <div style="padding:12px;"><button class="btn btn-sm btn-default" style="width:100%;" onclick="askChatNew()">+ New chat</button></div>
+          <div style="padding:0 12px 4px;font-size:0.7rem;font-weight:700;color:#94a3b8;letter-spacing:0.06em;">THIS CHAT</div>
+          <div id="askChatHistory" style="flex:1;overflow-y:auto;padding:0 8px 8px;"></div>
+          <div style="padding:0 12px 4px;font-size:0.7rem;font-weight:700;color:#94a3b8;letter-spacing:0.06em;">SAVED</div>
+          <div id="askChatSaved" style="max-height:32%;overflow-y:auto;padding:0 8px 12px;"></div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;min-width:0;background:#fff;">
+          <div id="askChatLog" style="flex:1;overflow-y:auto;padding:20px 28px;"></div>
+          <div style="border-top:1px solid #e2e8f0;padding:12px 28px;display:flex;gap:8px;">
+            <input id="askChatInput" placeholder="Ask about promos, reviews, distribution, costs…" onkeydown="if(event.key==='Enter')askChatSend()" style="flex:1;height:36px;padding:0 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:0.85rem;">
+            <button class="btn btn-sm btn-default" onclick="askChatSend()">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
+
+
 
   <!-- MODAL: Send to Contacts -->
   <div id="sendContactsModal" class="modal-overlay">
@@ -1567,6 +1625,8 @@
       if (name === 'cr-report') renderBrandReport();
       if (name === 'cr-brand') bsRender();
       if (name === 'tasks') { if (!selectedPlanId && PLANS.length) selectedPlanId = PLANS[0].id; if (selectedPlanId) selectPlan(selectedPlanId); else { renderPlanList(); renderPlanContent(); } }
+      if (name === 'ask') askRenderLibrary();
+      if (name === 'askchat') askChatRender();
     }
 
     // ===== CATEGORY REVIEW DATA =====
@@ -3036,6 +3096,316 @@
       renderBrandReport();
       crRender();
     }
+
+    // ===== ASK CABOODLE POC (broker, CSV-backed, read-only) =====
+    const ASK_FILES = {
+      mo: 'data/broker/market-overview.csv',
+      cr: 'data/broker/category-review.csv',
+      apl: 'data/broker/distributor-apl.csv',
+      promo: 'data/broker/promotions.csv',
+      item: 'data/broker/item-status.csv'
+    };
+    const ASK = { mo: {head:[],rows:[]}, cr: {head:[],rows:[]}, apl: {head:[],rows:[]}, promo: {head:[],rows:[]}, item: null, itemLoading: false, last: null, asOf: null };
+    const ASK_CAP = 100;
+
+    function askParseCSV(text) {
+      const rows = []; let row = []; let cur = ''; let q = false;
+      for (let i = 0; i < text.length; i++) {
+        const c = text[i];
+        if (q) {
+          if (c === '"') { if (text[i + 1] === '"') { cur += '"'; i++; } else q = false; }
+          else cur += c;
+        } else {
+          if (c === '"') q = true;
+          else if (c === ',') { row.push(cur); cur = ''; }
+          else if (c === '\n') { row.push(cur); rows.push(row); row = []; cur = ''; }
+          else if (c === '\r') { /* skip, handled by \n */ }
+          else cur += c;
+        }
+      }
+      if (cur !== '' || row.length) { row.push(cur); rows.push(row); }
+      return rows.filter(r => r.length && !(r.length === 1 && r[0].trim() === ''));
+    }
+    async function askLoad(key) {
+      const res = await fetch(ASK_FILES[key]);
+      if (!res.ok) throw new Error('fetch ' + ASK_FILES[key] + ' -> ' + res.status);
+      const text = await res.text();
+      const rows = askParseCSV(text);
+      const head = rows.shift() || [];
+      return { head, rows };
+    }
+    function askSetState(msg) { const el = document.getElementById('askDataState'); if (el) el.textContent = msg; }
+    async function askInit() {
+      try {
+        askSetState('loading broker data…');
+        const [mo, cr, apl, promo] = await Promise.all([askLoad('mo'), askLoad('cr'), askLoad('apl'), askLoad('promo')]);
+        ASK.mo = mo; ASK.cr = cr; ASK.apl = apl; ASK.promo = promo;
+        ASK.asOf = new Date().toLocaleString();
+        askSetState('ready: MO ' + mo.rows.length + ' · CR ' + cr.rows.length + ' · APL ' + apl.rows.length + ' · Promo ' + promo.rows.length + ' · Item Status on demand (136k)');
+      } catch (e) { askSetState('data load failed: ' + e.message); askShowPicker(); }
+    }
+    function askShowPicker() {
+      if (document.getElementById('askFilePick')) return;
+      const bar = document.getElementById('askBar');
+      const btn = document.createElement('button');
+      btn.id = 'askFilePick'; btn.className = 'btn btn-sm btn-default';
+      btn.textContent = 'Load data files (no server? pick the 5 CSVs)';
+      btn.title = 'Pick market-overview.csv, category-review.csv, distributor-apl.csv, promotions.csv, item-status.csv from Wireframe/data/broker/';
+      btn.onclick = () => {
+        const inp = document.createElement('input');
+        inp.type = 'file'; inp.accept = '.csv'; inp.multiple = true;
+        inp.onchange = () => askFilesPicked(inp.files);
+        inp.click();
+      };
+      bar.appendChild(btn);
+      const hint = document.createElement('span');
+      hint.style.cssText = 'font-size:0.72rem;color:#64748b;';
+      hint.textContent = 'or serve via http: python -m http.server --directory Wireframe';
+      bar.appendChild(hint);
+    }
+    function askFilesPicked(files) {
+      const map = { 'market-overview': 'mo', 'category-review': 'cr', 'distributor-apl': 'apl', 'promotions': 'promo', 'item-status': 'item' };
+      let done = 0; const names = Array.from(files);
+      askSetState('reading ' + names.length + ' local files…');
+      names.forEach(f => {
+        const key = Object.keys(map).find(k => f.name.toLowerCase().includes(k));
+        if (!key) { done++; return; }
+        const rd = new FileReader();
+        rd.onload = () => {
+          const rows = askParseCSV(rd.result);
+          ASK[map[key]] = { head: rows.shift() || [], rows };
+          if (++done === names.length) {
+            ASK.asOf = new Date().toLocaleString();
+            askSetState('ready (local files): MO ' + (ASK.mo.rows || []).length + ' · CR ' + (ASK.cr.rows || []).length + ' · APL ' + (ASK.apl.rows || []).length + ' · Promo ' + (ASK.promo.rows || []).length + ' · Item ' + ((ASK.item && ASK.item.rows.length) || 'on demand'));
+          }
+        };
+        rd.readAsText(f);
+      });
+    }
+    async function askEnsureItem() {
+      if (ASK.item || ASK.itemLoading) return ASK.item;
+      ASK.itemLoading = true; askSetState('loading item status (16MB)…');
+      try { ASK.item = await askLoad('item'); askSetState('ready incl. Item Status ' + ASK.item.rows.length + ' rows'); }
+      catch (e) { askSetState('item status load failed: ' + e.message + ' — use "Load data files" above and include item-status.csv'); askShowPicker(); }
+      ASK.itemLoading = false; return ASK.item;
+    }
+    function askCol(table, name) { return table.head.findIndex(h => (h || '').trim().toLowerCase() === name.toLowerCase()); }
+    function askTableHTML(head, rows, cap) {
+      const n = Math.min(rows.length, cap || ASK_CAP);
+      let h = '<table class="cal-table" style="width:100%;border-collapse:collapse;font-size:0.75rem;"><thead><tr>';
+      head.forEach(c => { h += '<th style="text-align:left;padding:6px 8px;border-bottom:1px solid #e2e8f0;">' + String(c).replace(/</g, '&lt;') + '</th>'; });
+      h += '</tr></thead><tbody>';
+      for (let i = 0; i < n; i++) {
+        h += '<tr>';
+        rows[i].forEach(c => { h += '<td style="padding:6px 8px;border-bottom:1px solid #f1f5f9;">' + String(c == null ? '' : c).replace(/</g, '&lt;').slice(0, 120) + '</td>'; });
+        h += '</tr>';
+      }
+      return h + '</tbody></table>' + (rows.length > n ? '<div style="font-size:0.72rem;color:#64748b;padding:6px 2px;">showing ' + n + ' of ' + rows.length + ' (capped)</div>' : '');
+    }
+    function askShow(headline, meta, head, rows) {
+      ASK.last = { q: document.getElementById('askInput').value, headline, meta, head, rows };
+      document.getElementById('askPanel').style.display = 'none';
+      document.getElementById('askAnswer').textContent = headline;
+      document.getElementById('askMeta').textContent = meta + ' · as of ' + ASK.asOf;
+      document.getElementById('askTableWrap').innerHTML = rows && rows.length ? askTableHTML(head, rows) : '<div style="font-size:0.78rem;color:#64748b;">No rows.</div>';
+      askChatPush(document.getElementById('askInput').value, headline, meta, head, rows);
+      showView('askchat');
+    }
+    function askCantAnswer(q) {
+      askShow("I can't answer that from the broker demo data.", 'scope: Market Overview, Promotions, Category Review, Distributor APL, Item Status', [], []);
+    }
+    function askParseDate(s) { const t = Date.parse(s); return isNaN(t) ? null : t; }
+    async function askRun(rerunQ) {
+      const q = (rerunQ != null ? rerunQ : document.getElementById('askInput').value || '').trim();
+      if (!q) return;
+      document.getElementById('askInput').value = q;
+      const lq = q.toLowerCase();
+      try {
+        if (!ASK.mo.rows.length) await askInit();
+        if (!ASK.mo.rows.length) { askShow('Broker data is not loaded yet. ' + (document.getElementById('askFilePick') ? 'Use "Load data files" above to pick the 5 CSVs.' : 'Check the status next to Ask Caboodle.'), 'data not loaded', [], []); return; }
+        if (/^(hi|hello|hey|yo|howdy|good\s?(morning|afternoon|evening|day)|thanks|thank\s?you|bye|help|what can you do)\b/.test(lq)) return askQHello(q, lq);
+        if (/review.*due|due.*review|60 day|upcoming review/.test(lq)) return askQReviewsDue(q);
+        if (/attention|brief|today/.test(lq)) return askQBrief(q);
+        if (/reconcil|distributor.*not|not.*item status|active on.*distributor/.test(lq)) return await askQRecon(q);
+        if (/wholesale|case cost|unit cost|\bcost\b/.test(lq)) return askQApl(q);
+        if (/stop.*order|dropped|new store/.test(lq)) return await askQDropped(q);
+        if (/running|this month|active promo/.test(lq)) return askQRunning(q);
+        if (/discontinued/.test(lq)) return askQDisco(q);
+        if (/banner.*carr|carr.*banner|assort|which stores|distribution status|white ?space|chino/.test(lq)) return await askQDistro(q, lq);
+        return await askQDistro(q, lq);
+      } catch (e) { askShow('Error answering: ' + e.message, 'error', [], []); }
+      askMistralPolish(q);
+    }
+    function askQHello(q, lq) {
+      if (/thanks|thank\s?you/.test(lq)) { askShow("You're welcome. Ask another anytime.", 'greeting', [], []); return; }
+      if (/bye/.test(lq)) { askShow('Goodbye. Your saved questions stay in the sidebar.', 'greeting', [], []); return; }
+      askShow("Hello. I'm Ask Caboodle for brokers. Try: What needs my attention today? · What promos are running this month? · What reviews are due in the next 60 days? · Distribution status for a brand at a retailer?", 'greeting — answers come from Market Overview, Promotions, Category Review, Distributor APL, Item Status', [], []);
+    }
+    function askQRunning(q) {
+      const H = ASK.promo.head, R = ASK.promo.rows;
+      const sI = askCol(ASK.promo, 'Start Date'), eI = askCol(ASK.promo, 'End Date'), stI = askCol(ASK.promo, 'Event Status');
+      const now = Date.now();
+      const rows = R.filter(r => {
+        const s = sI >= 0 ? askParseDate(r[sI]) : null, e = eI >= 0 ? askParseDate(r[eI]) : null;
+        const st = stI >= 0 ? (r[stI] || '').toLowerCase() : 'active';
+        return st === 'active' && (s == null || s <= now + 864e5 * 31) && (e == null || e >= now - 864e5 * 31);
+      });
+      askShow(rows.length + ' promos around the current window (Event Status = Active).', 'source: promotions.csv (' + R.length + ' rows)', H, rows.slice(0, 500));
+    }
+    function askQDisco(q) {
+      const H = ASK.promo.head, R = ASK.promo.rows;
+      const stI = askCol(ASK.promo, 'Event Status'), skI = askCol(ASK.promo, 'SKU Status');
+      const rows = R.filter(r => (r[stI] || '').toLowerCase() === 'active' && (r[skI] || '').toLowerCase() === 'discontinued');
+      askShow(rows.length + ' promos are Active but Discontinued at SKU level.', 'source: promotions.csv', H, rows.slice(0, 500));
+    }
+    function askQReviewsDue(q) {
+      const H = ASK.cr.head, R = ASK.cr.rows;
+      const mI = askCol(ASK.cr, 'Review Month'), sI = askCol(ASK.cr, 'Submission Due Date(MM/DD/YYYY)');
+      const now = Date.now(), lim = now + 60 * 864e5;
+      const rows = R.filter(r => { const t = sI >= 0 ? askParseDate(r[sI]) : null; return t != null && t >= now - 864e5 * 30 && t <= lim; });
+      askShow(rows.length + ' reviews due in the next 60 days (by Submission Due Date).', 'source: category-review.csv (' + R.length + ' rows)', H, rows);
+    }
+    function askQApl(q) {
+      const H = ASK.apl.head, R = ASK.apl.rows;
+      const uI = askCol(ASK.apl, 'Unit UPC'), dI = askCol(ASK.apl, 'Distribution Center Name'), bI = askCol(ASK.apl, 'Brand Name');
+      const m = q.match(/\b\d{5,14}\b/);
+      let rows = R;
+      if (m) rows = R.filter(r => (r[uI] || '').replace(/\D/g, '').includes(m[0].replace(/\D/g, '').slice(-6)));
+      else { const tok = q.toLowerCase().split(/\s+/).filter(w => w.length > 3 && !/wholesale|cost|unit|case|what|which/.test(w)); if (tok.length) rows = R.filter(r => tok.some(t => ((r[bI] || '') + ' ' + (r[dI] || '')).toLowerCase().includes(t))); }
+      askShow(rows.length + ' APL rows match.', 'source: distributor-apl.csv (' + R.length + ' rows)', H, rows.slice(0, 500));
+    }
+    async function askQDropped(q) {
+      await askEnsureItem();
+      const H = ASK.mo.head, R = ASK.mo.rows;
+      const stI = askCol(ASK.mo, 'SKU Status');
+      const rows = R.filter(r => /discontinued|notactive|declined/i.test(r[stI] || ''));
+      askShow(rows.length + ' market-overview rows are Discontinued/NotActive/Declined (dropped candidates).', 'source: market-overview.csv (' + R.length + ' rows)', H, rows.slice(0, 1000));
+    }
+    async function askQDistro(q, lq) {
+      await askEnsureItem();
+      const H = ASK.mo.head, R = ASK.mo.rows;
+      const cols = ['Brand', 'Retailer', 'Banner', 'SKU', 'SKU Status', 'DC'];
+      const idx = cols.map(c => askCol(ASK.mo, c));
+      const stop = new Set(['which', 'what', 'show', 'list', 'stores', 'banners', 'banner', 'status', 'distribution', 'active', 'carry', 'carries', 'does', 'that', 'with', 'from', 'into', 'space', 'white', 'chino', 'sku', 'for', 'are', 'the', 'and', 'you', 'your', 'our', 'any', 'all', 'get', 'give', 'tell', 'find', 'there', 'their', 'about', 'how', 'many', 'much']);
+      const toks = lq.split(/[^a-z0-9&']+/).filter(w => w.length > 2 && !stop.has(w));
+      if (!toks.length) return askCantAnswer(q);
+      let rows = R.filter(r => { const s = ((r[idx[0]] || '') + ' ' + (r[idx[1]] || '') + ' ' + (r[idx[2]] || '') + ' ' + (r[idx[3]] || '') + ' ' + (r[idx[5]] || '')).toLowerCase(); return toks.some(t => s.includes(t)); });
+      if (!rows.length) { askShow('No distribution rows match. Try a brand, retailer, banner, or SKU name.', 'source: market-overview.csv (' + R.length + ' rows)', H, []); return; }
+      askShow(rows.length + ' distribution rows match. Refine with a brand, retailer, banner, or SKU name.', 'source: market-overview.csv (' + R.length + ' rows)', H, rows.slice(0, 1000));
+    }
+    async function askQRecon(q) {
+      const item = await askEnsureItem();
+      const pU = askCol(ASK.promo, 'Product UPC'), iU = askCol(item, 'UPC Number'), iS = askCol(item, 'Status');
+      const iBN = askCol(item, 'Banner Name'), iPN = askCol(item, 'Product Name');
+      const activeUPC = new Set();
+      ASK.promo.rows.forEach(r => { const u = (r[pU] || '').replace(/\D/g, ''); if (u) activeUPC.add(u); });
+      ASK.apl.rows.forEach(r => { const u = (r[askCol(ASK.apl, 'Unit UPC')] || '').replace(/\D/g, ''); if (u) activeUPC.add(u); });
+      const rows = item.rows.filter(r => {
+        const u = (r[iU] || '').replace(/\D/g, '');
+        return u && activeUPC.has(u) && !/^active$/i.test(r[iS] || '');
+      });
+      askShow(rows.length + ' items are on the distributor/promo side but NOT Active in Item Status (reconciliation).', 'sources: promotions.csv + distributor-apl.csv vs item-status.csv (' + item.rows.length + ' rows)', item.head, rows.slice(0, 1000));
+    }
+    function askQBrief(q) {
+      const now = Date.now();
+      const sI = askCol(ASK.cr, 'Submission Due Date(MM/DD/YYYY)');
+      const due = ASK.cr.rows.filter(r => { const t = askParseDate(r[sI]); return t != null && t >= now - 864e5 * 30 && t <= now + 60 * 864e5; }).length;
+      const stI = askCol(ASK.promo, 'Event Status');
+      const act = ASK.promo.rows.filter(r => (r[stI] || '').toLowerCase() === 'active').length;
+      const mstI = askCol(ASK.mo, 'SKU Status');
+      const pend = ASK.mo.rows.filter(r => /pending/i.test(r[mstI] || '')).length;
+      askShow('Morning brief: ' + due + ' reviews due (60d) · ' + act + ' active promos · ' + pend + ' pending distribution rows.', 'sources: category-review.csv, promotions.csv, market-overview.csv', ['Metric', 'Count'], [['Reviews due (60d)', due], ['Active promos', act], ['Pending distribution', pend]]);
+    }
+    async function askMistralPolish(q) {
+      try {
+        const res = await fetch('/api/ask', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ question: q, headline: ASK.last && ASK.last.headline }) });
+        if (!res.ok) return;
+        const data = await res.json();
+        if (data && data.polished && ASK.last && ASK.last.q === q) {
+          document.getElementById('askAnswer').textContent = data.polished + ' (' + ASK.last.headline + ')';
+        }
+      } catch (e) { /* proxy missing offline — deterministic answer stands */ }
+    }
+    function askSaveCurrent() {
+      if (!ASK.last) return;
+      let lib = []; try { lib = JSON.parse(localStorage.getItem('caboodleAskLib') || '[]'); } catch (e) {}
+      lib.unshift({ q: ASK.last.q, ts: new Date().toLocaleString() });
+      localStorage.setItem('caboodleAskLib', JSON.stringify(lib.slice(0, 50)));
+      alert('Saved. Open Library to re-run it live.');
+    }
+    function askExportCurrent() {
+      if (!ASK.last || !ASK.last.rows) return;
+      const esc = v => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"';
+      const csv = [ASK.last.head.map(esc).join(',')].concat(ASK.last.rows.slice(0, ASK_CAP).map(r => r.map(esc).join(','))).join('\n');
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
+      a.download = 'ask-caboodle-answer.csv'; a.click();
+    }
+    function askRenderLibrary() {
+      const el = document.getElementById('askLibraryWrap'); if (!el) return;
+      let lib = []; try { lib = JSON.parse(localStorage.getItem('caboodleAskLib') || '[]'); } catch (e) {}
+      if (!lib.length) { el.innerHTML = '<div style="font-size:0.8rem;color:#64748b;">Nothing saved yet. Ask something above, then Save question.</div>'; return; }
+      el.innerHTML = lib.map((s, i) => '<div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:10px 14px;margin-bottom:8px;display:flex;gap:8px;align-items:center;"><div style="flex:1;"><div style="font-size:0.82rem;font-weight:600;">' + String(s.q).replace(/</g, '&lt;') + '</div><div style="font-size:0.7rem;color:#94a3b8;">saved ' + String(s.ts).replace(/</g, '&lt;') + '</div></div><button class="btn btn-sm btn-default" onclick="askRun(' + JSON.stringify(s.q).replace(/</g, '\\u003c') + ')">Re-run</button><button class="btn btn-sm" onclick="askLibDelete(' + i + ')">Delete</button></div>').join('');
+    }
+    function askLibDelete(i) {
+      let lib = []; try { lib = JSON.parse(localStorage.getItem('caboodleAskLib') || '[]'); } catch (e) {}
+      lib.splice(i, 1); localStorage.setItem('caboodleAskLib', JSON.stringify(lib)); askRenderLibrary();
+    }
+    // ===== ASK CHAT PAGE (ChatGPT-style) =====
+    ASK.chat = [];
+    function askChatSend() {
+      const inp = document.getElementById('askChatInput');
+      const q = (inp.value || '').trim();
+      if (!q) return;
+      inp.value = '';
+      document.getElementById('askInput').value = q;
+      askRun(q);
+    }
+    function askChatNew() { ASK.chat = []; askChatRender(); }
+    function askChatPush(q, headline, meta, head, rows) {
+      ASK.chat.push({ q, headline, meta, head, rows: (rows || []).slice(0, ASK_CAP), html: rows && rows.length ? askTableHTML(head, rows) : '' });
+      askChatRender();
+    }
+    function askChatRender() {
+      const log = document.getElementById('askChatLog');
+      if (!log) return;
+      if (!ASK.chat.length) {
+        log.innerHTML = '<div style="max-width:640px;margin:60px auto;text-align:center;color:#94a3b8;"><div style="font-size:1.1rem;font-weight:700;color:#334155;margin-bottom:8px;">Ask Caboodle</div><div style="font-size:0.82rem;">Ask about promos, reviews, distribution, costs. Answers come from your broker data with source links.</div></div>';
+      } else {
+        log.innerHTML = ASK.chat.map((m, mi) =>
+          '<div style="max-width:860px;margin:0 auto 16px;"><div style="display:flex;justify-content:flex-end;margin-bottom:8px;"><div style="background:#f1f5f9;border-radius:12px;padding:8px 14px;font-size:0.85rem;max-width:80%;">' + String(m.q).replace(/</g, '&lt;') + '</div></div>' +
+          '<div style="font-size:0.88rem;margin-bottom:4px;">' + String(m.headline).replace(/</g, '&lt;') + '</div>' +
+          '<div style="font-size:0.7rem;color:#94a3b8;margin-bottom:8px;">' + String(m.meta).replace(/</g, '&lt;') + (ASK.asOf ? ' · as of ' + ASK.asOf : '') + '</div>' +
+          (m.html ? '<div style="overflow-x:auto;border:1px solid #e2e8f0;border-radius:10px;">' + m.html + '</div>' : '') + '<div style="margin-top:6px;display:flex;gap:8px;"><button class="btn btn-sm" onclick="askSaveMsg(' + mi + ')">Save</button><button class="btn btn-sm" onclick="askExportMsg(' + mi + ')">Export CSV</button></div></div>'
+        ).join('');
+        log.scrollTop = log.scrollHeight;
+      }
+      const hist = document.getElementById('askChatHistory');
+      hist.innerHTML = ASK.chat.length ? ASK.chat.map((m, i) => '<div onclick="askChatJump(' + i + ')" style="padding:8px 10px;border-radius:8px;font-size:0.78rem;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" onmouseover="this.style.background=\'#eef2ff\'" onmouseout="this.style.background=\'\'" title="' + String(m.q).replace(/"/g, '&quot;') + '">' + String(m.q).replace(/</g, '&lt;') + '</div>').join('') : '<div style="font-size:0.75rem;color:#94a3b8;padding:8px 10px;">No questions yet in this chat.</div>';
+      let lib = []; try { lib = JSON.parse(localStorage.getItem('caboodleAskLib') || '[]'); } catch (e) {}
+      document.getElementById('askChatSaved').innerHTML = lib.length ? lib.map(s => '<div onclick="askRun(' + JSON.stringify(s.q).replace(/</g, '\\u003c') + ')" style="padding:8px 10px;border-radius:8px;font-size:0.78rem;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" onmouseover="this.style.background=\'#eef2ff\'" onmouseout="this.style.background=\'\'" title="' + String(s.q).replace(/"/g, '&quot;') + '">' + String(s.q).replace(/</g, '&lt;') + '</div>').join('') : '<div style="font-size:0.75rem;color:#94a3b8;padding:8px 10px;">Nothing saved yet.</div>';
+    }
+    function askChatJump(i) {
+      const log = document.getElementById('askChatLog');
+      const node = log.children[i];
+      if (node) node.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    function askSaveMsg(i) {
+      const m = ASK.chat[i]; if (!m) return;
+      let lib = []; try { lib = JSON.parse(localStorage.getItem('caboodleAskLib') || '[]'); } catch (e) {}
+      lib.unshift({ q: m.q, ts: new Date().toLocaleString() });
+      localStorage.setItem('caboodleAskLib', JSON.stringify(lib.slice(0, 50)));
+      askChatRender();
+    }
+    function askExportMsg(i) {
+      const m = ASK.chat[i]; if (!m || !m.rows) return;
+      const esc = v => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"';
+      const csv = [(m.head || []).map(esc).join(',')].concat(m.rows.map(r => r.map(esc).join(','))).join('\n');
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
+      a.download = 'ask-caboodle-answer.csv'; a.click();
+    }
+    askInit();
 
     // ===== HELPERS =====
     function populateSelect(id, items, selected) {
