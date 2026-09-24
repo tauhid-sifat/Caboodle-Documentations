@@ -3250,7 +3250,24 @@
       askShow("I can't answer that from the broker demo data.", 'scope: Market Overview, Promotions, Category Review, Distributor APL, Item Status', [], []);
     }
     function askParseDate(s) { const t = Date.parse(s); return isNaN(t) ? null : t; }
-    // ===== ASK KNOWLEDGE BASE + LLM PLANNING (primary) + regex fallback =====
+    // ===== ASK SMALL-TALK (exact + typo-tolerant) =====
+    const ASK_SMALLTALK = ['hello', 'hi', 'hey', 'good morning', 'good afternoon', 'good evening', 'how are you', 'how is it going', 'thanks', 'thank you', 'bye', 'goodbye', 'help', 'what can you do', 'what is the goal', 'how can you help'];
+    function askLev(a, b) {
+      const m = a.length, n = b.length;
+      if (!m) return n; if (!n) return m;
+      let prev = [...Array(n + 1).keys()], cur = new Array(n + 1);
+      for (let i = 1; i <= m; i++) {
+        cur[0] = i;
+        for (let j = 1; j <= n; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+        [prev, cur] = [cur, prev];
+      }
+      return prev[n];
+    }
+    function askIsSmalltalk(lq) {
+      const t = lq.trim().replace(/[?!.,]+$/g, '');
+      if (t.length > 40) return false;
+      return ASK_SMALLTALK.some(p => askLev(t, p) <= Math.max(1, Math.floor(p.length / 5)));
+    }
     function askTopValues(rows, ci, cap) {
       const m = new Map();
       for (const r of rows) { const v = String(r[ci] || '').trim(); if (v) m.set(v, (m.get(v) || 0) + 1); }
@@ -3334,6 +3351,7 @@
         if (!ASK.mo.rows.length) await askInit();
         if (!ASK.mo.rows.length) { askShow('Broker data is not loaded yet. ' + (document.getElementById('askFilePick') ? 'Use "Load data files" above to pick the 5 CSVs.' : 'Check the status next to Ask Caboodle.'), 'data not loaded', [], []); return; }
         if (/^(hi|hello|hey|yo|howdy|good\s?(morning|afternoon|evening|day)|thanks|thank\s?you|bye|help|what can you do)\b/.test(lq)) return askQHello(q, lq);
+        if (askIsSmalltalk(lq)) return askQHello(q, lq);
         if (/what\s+(is|are)\s+.*(goal|purpose|point)|how\s+can\s+you\s+help|what\s+(do|can)\s+you\s+do|what\s+is\s+this/.test(lq)) return askQHello(q, lq);
         if (/how\s+(are|r|is)\s+(you|u|your\s+\w+|yourself|things|it\s+going|life|work|everything)/.test(lq)) { askShow("I'm just a demo assistant, so no complaints. Want to try a data question? Ask what needs attention today, or what's running this month.", 'small talk', [], []); return; }
         try { if (await askPlanFirst(q)) return; } catch (e) {}
@@ -3545,7 +3563,6 @@
         log.innerHTML = ASK.chat.map((m, mi) =>
           '<div style="max-width:860px;margin:0 auto 16px;"><div style="display:flex;justify-content:flex-end;margin-bottom:8px;"><div style="background:#f1f5f9;border-radius:12px;padding:8px 14px;font-size:0.85rem;max-width:80%;">' + String(m.q).replace(/</g, '&lt;') + '</div></div>' +
           '<div style="font-size:0.88rem;margin-bottom:4px;">' + String(m.headline).replace(/</g, '&lt;') + '</div>' +
-          '<div style="font-size:0.7rem;color:#94a3b8;margin-bottom:8px;">' + String(m.meta).replace(/</g, '&lt;') + (ASK.asOf ? ' · as of ' + ASK.asOf : '') + '</div>' +
           (m.html ? '<div style="overflow-x:auto;border:1px solid #e2e8f0;border-radius:10px;">' + m.html + '</div>' : '') + ((m.rows && m.rows.length) ? '<div style="margin-top:6px;display:flex;gap:8px;"><button class="btn btn-sm" onclick="askSaveMsg(' + mi + ')">Save</button><button class="btn btn-sm" onclick="askExportMsg(' + mi + ')">Export CSV</button></div>' : '') + '</div>'
         ).join('');
         log.scrollTop = log.scrollHeight;
