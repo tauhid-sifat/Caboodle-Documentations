@@ -3306,6 +3306,8 @@
       if (!q) return;
       document.getElementById('askInput').value = q;
       const lq = q.toLowerCase();
+      ASK.chat.push({ q, headline: 'Thinking…', meta: '', head: [], rows: [], html: '', pending: true });
+      showView('askchat'); askChatRender();
       try {
         if (!ASK.mo.rows.length) await askInit();
         if (!ASK.mo.rows.length) { askShow('Broker data is not loaded yet. ' + (document.getElementById('askFilePick') ? 'Use "Load data files" above to pick the 5 CSVs.' : 'Check the status next to Ask Caboodle.'), 'data not loaded', [], []); return; }
@@ -3412,6 +3414,10 @@
         const data = await res.json();
         if (data && data.polished && ASK.last && ASK.last.q === q) {
           document.getElementById('askAnswer').textContent = data.polished + ' (' + ASK.last.headline + ')';
+          for (let i = ASK.chat.length - 1; i >= 0; i--) {
+            if (ASK.chat[i].q === q && !ASK.chat[i].pending) { ASK.chat[i].headline = data.polished + ' (' + ASK.chat[i].headline + ')'; break; }
+          }
+          askPersist(); askChatRender();
         }
       } catch (e) { /* proxy missing offline — deterministic answer stands */ }
     }
@@ -3450,10 +3456,25 @@
       document.getElementById('askInput').value = q;
       askRun(q);
     }
-    function askChatNew() { ASK.chat = []; askChatRender(); }
+    function askChatNew() { ASK.chat = []; try { localStorage.removeItem('caboodleAskChat'); } catch (e) {} askChatRender(); }
+    function askPersist() {
+      try {
+        const slim = ASK.chat.filter(m => !m.pending).slice(-8).map(m => ({ q: m.q, headline: m.headline, meta: m.meta, head: m.head || [], rows: (m.rows || []).slice(0, 100) }));
+        localStorage.setItem('caboodleAskChat', JSON.stringify(slim));
+      } catch (e) {}
+    }
+    function askRestore() {
+      try {
+        const arr = JSON.parse(localStorage.getItem('caboodleAskChat') || '[]');
+        ASK.chat = arr.map(m => ({ q: m.q, headline: m.headline, meta: m.meta, head: m.head || [], rows: m.rows || [], html: (m.rows && m.rows.length) ? askTableHTML(m.head || [], m.rows) : '' }));
+      } catch (e) { ASK.chat = []; }
+    }
     function askChatPush(q, headline, meta, showHead, showRows, fullHead, fullRows) {
-      ASK.chat.push({ q, headline, meta, head: fullHead || showHead, rows: ((fullRows || showRows) || []).slice(0, 1000), html: showRows && showRows.length ? askTableHTML(showHead, showRows) : '' });
-      askChatRender();
+      const msg = { q, headline, meta, head: fullHead || showHead, rows: ((fullRows || showRows) || []).slice(0, 1000), html: showRows && showRows.length ? askTableHTML(showHead, showRows) : '' };
+      const last = ASK.chat[ASK.chat.length - 1];
+      if (last && last.pending && last.q === q) ASK.chat[ASK.chat.length - 1] = msg;
+      else ASK.chat.push(msg);
+      askPersist(); askChatRender();
     }
     function askChatRender() {
       const log = document.getElementById('askChatLog');
@@ -3494,6 +3515,7 @@
       a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
       a.download = 'ask-caboodle-answer.csv'; a.click();
     }
+    askRestore();
     askInit();
 
     // ===== HELPERS =====
