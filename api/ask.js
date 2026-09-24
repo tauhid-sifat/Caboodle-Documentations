@@ -9,12 +9,16 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
   const key = process.env.OPENCODE_API_KEY;
   if (!key) return res.status(500).json({ error: 'OPENCODE_API_KEY not configured' });
-  const { question, headline, mode, kb } = req.body || {};
+  const { question, headline, mode, kb, columns, rows } = req.body || {};
   if (!question || String(question).length > 500) return res.status(400).json({ error: 'bad question' });
   const isPlan = mode === 'plan';
+  const isNarrate = mode === 'narrate';
   const input = isPlan
     ? 'You plan data questions for a food-broker demo assistant. Reply with JSON ONLY, no other text: {"intent":"query|greeting|help|unknown","dataset":"mo|promo|cr|apl|item","filters":[{"col":"exact column name","op":"eq|contains|in","value":"string or array"}],"groupBy":"column name or null","metric":"count","chart":"bar|donut|kpi|table|null","showTable":true,"title":"short title","reply":"one-line summary with no numbers"}. Datasets: mo=Market Overview distribution (Brand,Retailer,Banner,Region,Store,DC,SKU,SKU Status,Date), promo=promotions (Brand,Distributor,Retailer,Banner,Product,Event Name,Month,Start Date,End Date,Event Status,SKU Status), cr=category reviews (Region,Retailer,Category,Review Month,Submission Due Date), apl=wholesale costs (Distribution Center Name,Brand Name,Product Description,Unit UPC,Wholesale Case Cost), item=item status (Brand Name,Retailer Name,Banner Name,Product Name,UPC Number,Status). Use ONLY column names from the knowledge base. groupBy=null means return matching rows. Dates in data look like MM/DD/YYYY or month names.'
       + '\nKnowledge base: ' + JSON.stringify(kb || {}).slice(0, 6000) + '\nQuestion: ' + question
+    : isNarrate
+    ? 'You narrate data answers for a food-broker demo assistant. Below are the REAL result rows from the database (columns, then rows). Start with the given result line verbatim, then add one sentence on what stands out in the rows. Never invent values not present. If empty, say nothing matched.'
+      + '\nQuestion: ' + question + '\nResult: ' + (headline || '') + '\nColumns: ' + JSON.stringify(columns || []).slice(0, 800) + '\nRows: ' + JSON.stringify(rows || []).slice(0, 6000)
     : 'You polish short BI answers for a food-broker demo. One or two sentences, plain language, no invented numbers. The deterministic headline with exact counts is provided and must stay consistent.'
       + '\nQuestion: ' + question + '\nDeterministic result: ' + (headline || 'n/a') + '\nReply with a polished one-sentence version.';
   const controller = new AbortController();
