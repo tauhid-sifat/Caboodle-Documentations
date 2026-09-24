@@ -3342,19 +3342,21 @@
       askNarrate(q, planTitle, head, out);
       return true;
     }
-    async function askNarrate(q, headline, head, rows) {
+    async function askNarrate(q, headline, head, rows, retry) {
       try {
         const cur = askCurate(head, rows);
         const res = await fetch('/api/ask', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ question: q, headline, mode: 'narrate', columns: cur.head, rows: cur.rows.slice(0, 30) }) });
-        if (!res.ok) return;
+        if (!res.ok) throw new Error('bad status');
         const data = await res.json();
         if (data && data.polished) {
           for (let i = ASK.chat.length - 1; i >= 0; i--) {
             if (ASK.chat[i].q === q && !ASK.chat[i].pending) { ASK.chat[i].headline = data.polished; break; }
           }
           askPersist(); askChatRender();
-        }
-      } catch (e) {}
+        } else throw new Error('empty');
+      } catch (e) {
+        if (!retry) setTimeout(() => askNarrate(q, headline, head, rows, true), 8000);
+      }
     }
     async function askRun(rerunQ) {
       const q = (rerunQ != null ? rerunQ : document.getElementById('askInput').value || '').trim();
