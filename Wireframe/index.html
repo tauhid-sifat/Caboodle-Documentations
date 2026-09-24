@@ -418,7 +418,7 @@
     @media (max-width: 1200px) { .qa-grid { grid-template-columns: repeat(3, 1fr); } }
     @media (max-width: 1024px) { .kpi-row { grid-template-columns: repeat(2, 1fr); } .qa-grid { grid-template-columns: repeat(3, 1fr); } }
      @media (max-width: 768px) { .header { padding: 0 16px; } .h-nav li { display: none; } .kpi-row { grid-template-columns: 1fr; } .qa-grid { grid-template-columns: repeat(2, 1fr); } .dash-grid { padding: 8px 16px; } }
-     @media (max-width: 768px) { .header { padding: 0 16px; } .h-nav li { display: none; } .kpi-row { grid-template-columns: 1fr; } .qa-grid { grid-template-columns: repeat(2, 1fr); } .dash-grid { padding: 8px 16px; } } #view-askchat .ask-pane-toggle { display: none; } @media (max-width: 1250px) { #view-askchat .ask-right { display: none !important; } #view-askchat.show-right .ask-right { display: flex; position: absolute; right: 0; top: 0; bottom: 0; z-index: 30; box-shadow: -8px 0 24px rgba(0,0,0,.08); } #view-askchat .ask-tg-right { display: inline-block; } } @media (max-width: 860px) { #view-askchat .ask-left { display: none !important; } #view-askchat.show-left .ask-left { display: flex; position: absolute; left: 0; top: 0; bottom: 0; z-index: 30; box-shadow: 8px 0 24px rgba(0,0,0,.08); } #view-askchat .ask-tg-left { display: inline-block; } #askBar { padding: 10px 16px; } #askBar #askInput { flex-basis: 100%; order: 3; } #askChatLog { padding: 14px !important; } #askTryGrid { grid-template-columns: 1fr !important; } }
+     @media (max-width: 768px) { .header { padding: 0 16px; } .h-nav li { display: none; } .kpi-row { grid-template-columns: 1fr; } .qa-grid { grid-template-columns: repeat(2, 1fr); } .dash-grid { padding: 8px 16px; } } #view-askchat .ask-pane-toggle { display: none; } @media (max-width: 1250px) { #view-askchat .ask-right { display: none !important; } #view-askchat.show-right .ask-right { display: flex !important; position: absolute; right: 0; top: 0; bottom: 0; z-index: 30; box-shadow: -8px 0 24px rgba(0,0,0,.08); } #view-askchat .ask-tg-right { display: inline-block; } } @media (max-width: 860px) { #view-askchat .ask-left { display: none !important; } #view-askchat.show-left .ask-left { display: flex !important; position: absolute; left: 0; top: 0; bottom: 0; z-index: 30; box-shadow: 8px 0 24px rgba(0,0,0,.08); } #view-askchat .ask-tg-left { display: inline-block; } #askBar { padding: 10px 16px; } #askBar #askInput { flex-basis: 100%; order: 3; } #askChatLog { padding: 14px !important; } #askTryGrid { grid-template-columns: 1fr !important; } }
   </style>
 </head>
 <body>
@@ -3479,24 +3479,61 @@
       document.getElementById('askInput').value = q;
       askRun(q);
     }
-    function askChatNew() { ASK.chat = []; try { localStorage.removeItem('caboodleAskChat'); } catch (e) {} askChatRender(); }
+    // ===== ASK SESSION STORE (multi-session, persisted) =====
+    ASK.sessions = []; ASK.activeId = null;
+    function askSessionsInit() {
+      try {
+        const arr = JSON.parse(localStorage.getItem('caboodleAskSessions') || '[]');
+        ASK.sessions = arr.map(s => ({ id: s.id, title: s.title, created: s.created, messages: (s.messages || []).map(m => ({ q: m.q, headline: m.headline, meta: m.meta, head: m.head || [], rows: m.rows || [], html: (m.rows && m.rows.length) ? askTableHTML(m.head || [], m.rows) : '' })) }));
+        ASK.activeId = JSON.parse(localStorage.getItem('caboodleAskActive') || 'null');
+      } catch (e) { ASK.sessions = []; }
+      if (!ASK.sessions.length) {
+        let legacy = [];
+        try { legacy = JSON.parse(localStorage.getItem('caboodleAskChat') || '[]'); } catch (e) {}
+        if (legacy.length) ASK.sessions.push({ id: Date.now(), title: (legacy[0].q || 'Previous chat').slice(0, 40), created: Date.now(), messages: legacy.map(m => ({ q: m.q, headline: m.headline, meta: m.meta, head: m.head || [], rows: m.rows || [], html: (m.rows && m.rows.length) ? askTableHTML(m.head || [], m.rows) : '' })) });
+        try { localStorage.removeItem('caboodleAskChat'); } catch (e) {}
+      }
+      if (!ASK.sessions.some(s => s.id === ASK.activeId)) {
+        if (!ASK.sessions.length) ASK.sessions.push({ id: Date.now(), title: 'New session', created: Date.now(), messages: [] });
+        ASK.activeId = ASK.sessions[ASK.sessions.length - 1].id;
+      }
+      ASK.chat = ASK.sessions.find(s => s.id === ASK.activeId).messages;
+    }
+    function askActive() { return ASK.sessions.find(s => s.id === ASK.activeId); }
+    function askChatNew() { askSessionNew(); }
+    function askSessionNew() {
+      const s = { id: Date.now(), title: 'New session', created: Date.now(), messages: [] };
+      ASK.sessions.push(s); ASK.activeId = s.id; ASK.chat = s.messages;
+      askPersist(); askChatRender();
+    }
+    function askSessionOpen(id) {
+      if (!ASK.sessions.some(s => s.id === id)) return;
+      ASK.activeId = id; ASK.chat = askActive().messages;
+      askPersist(); askChatRender();
+    }
     function askPersist() {
       try {
-        const slim = ASK.chat.filter(m => !m.pending).slice(-8).map(m => ({ q: m.q, headline: m.headline, meta: m.meta, head: m.head || [], rows: (m.rows || []).slice(0, 100) }));
-        localStorage.setItem('caboodleAskChat', JSON.stringify(slim));
+        const slim = ASK.sessions.slice(-10).map(s => ({ id: s.id, title: s.title, created: s.created, messages: s.messages.filter(m => !m.pending).slice(-20).map(m => ({ q: m.q, headline: m.headline, meta: m.meta, head: m.head || [], rows: (m.rows || []).slice(0, 100) })) }));
+        localStorage.setItem('caboodleAskSessions', JSON.stringify(slim));
+        localStorage.setItem('caboodleAskActive', JSON.stringify(ASK.activeId));
       } catch (e) {}
     }
-    function askRestore() {
-      try {
-        const arr = JSON.parse(localStorage.getItem('caboodleAskChat') || '[]');
-        ASK.chat = arr.map(m => ({ q: m.q, headline: m.headline, meta: m.meta, head: m.head || [], rows: m.rows || [], html: (m.rows && m.rows.length) ? askTableHTML(m.head || [], m.rows) : '' }));
-      } catch (e) { ASK.chat = []; }
+    function askRestore() { askSessionsInit(); }
+    function askWeekGroup(ts) {
+      const d = new Date(ts); const now = new Date();
+      const startOfWeek = d2 => { const x = new Date(d2); x.setHours(0, 0, 0, 0); x.setDate(x.getDate() - x.getDay()); return x; };
+      if (d >= startOfWeek(now)) return 'THIS WEEK';
+      const last = new Date(startOfWeek(now)); last.setDate(last.getDate() - 7);
+      if (d >= last) return 'LAST WEEK';
+      return 'OLDER';
     }
     function askChatPush(q, headline, meta, showHead, showRows, fullHead, fullRows) {
       const msg = { q, headline, meta, head: fullHead || showHead, rows: ((fullRows || showRows) || []).slice(0, 1000), html: showRows && showRows.length ? askTableHTML(showHead, showRows) : '' };
       const last = ASK.chat[ASK.chat.length - 1];
       if (last && last.pending && last.q === q) ASK.chat[ASK.chat.length - 1] = msg;
       else ASK.chat.push(msg);
+      const sess = askActive();
+      if (sess && (!sess.title || sess.title === 'New session') && q) sess.title = q.slice(0, 40);
       askPersist(); askChatRender();
     }
     function askChatRender() {
@@ -3553,13 +3590,18 @@
         || '<div style="font-size:0.75rem;color:#94a3b8;padding:8px;">No prompts match.</div>';
     }
     function askGalRun(i) { const g = ASK_GALLERY[i]; if (!g) return; document.getElementById('askInput').value = g.q; askRun(g.q); }
-    function askSessionNew() { askChatNew(); }
     function askRenderSessions() {
       const s = (document.getElementById('askSessionSearch').value || '').toLowerCase();
-      const items = ASK.chat.map((m, i) => ({ m, i })).filter(x => !s || x.m.q.toLowerCase().includes(s));
-      document.getElementById('askSessionList').innerHTML = items.length
-        ? items.map(x => '<div onclick="askChatJump(' + x.i + ')" style="padding:8px 10px;border-radius:8px;font-size:0.78rem;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" onmouseover="this.style.background=\'#eef2ff\'" onmouseout="this.style.background=\'\'" title="' + String(x.m.q).replace(/"/g, '&quot;') + '">' + String(x.m.q).replace(/</g, '&lt;') + '</div>').join('')
-        : '<div style="font-size:0.75rem;color:#94a3b8;padding:8px 10px;">No sessions yet. Ask something to start one.</div>';
+      const list = ASK.sessions.slice().reverse().filter(x => !s || x.title.toLowerCase().includes(s) || x.messages.some(m => m.q.toLowerCase().includes(s)));
+      if (!list.length) { document.getElementById('askSessionList').innerHTML = '<div style="font-size:0.75rem;color:#94a3b8;padding:8px 10px;">No sessions yet. Ask something to start one.</div>'; return; }
+      let html = '', lastGroup = null;
+      list.forEach(x => {
+        const g = askWeekGroup(x.created);
+        if (g !== lastGroup) { html += '<div style="padding:8px 10px 2px;font-size:0.65rem;font-weight:700;color:#94a3b8;letter-spacing:0.06em;">' + g + ' (' + list.filter(y => askWeekGroup(y.created) === g).length + ')</div>'; lastGroup = g; }
+        const active = x.id === ASK.activeId;
+        html += '<div onclick="askSessionOpen(' + x.id + ')" style="padding:8px 10px;border-radius:8px;font-size:0.78rem;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;' + (active ? 'background:#eef2ff;font-weight:600;' : '') + '" onmouseover="if(this.dataset.a!=\'1\')this.style.background=\'#eef2ff\'" onmouseout="if(this.dataset.a!=\'1\')this.style.background=\'\'" data-a="' + (active ? '1' : '') + '" title="' + String(x.title).replace(/"/g, '&quot;') + '">' + String(x.title).replace(/</g, '&lt;') + '</div>';
+      });
+      document.getElementById('askSessionList').innerHTML = html;
     }
     function askRenderTry() {
       const grid = document.getElementById('askTryGrid');
