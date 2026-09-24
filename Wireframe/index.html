@@ -733,7 +733,7 @@
             <button class="btn btn-sm ask-pane-toggle ask-tg-left" onclick="askTogglePane('left')">Sessions</button>
             <button class="btn btn-sm ask-pane-toggle ask-tg-right" onclick="askTogglePane('right')">Gallery</button>
           </div>
-          <div id="askChatLog" style="flex:1;overflow-y:auto;padding:20px 28px;display:none;"></div>
+          <div id="askChatLog" style="flex:1;overflow-y:auto;padding:28px 32px;display:none;"></div>
           <div id="askEmpty" style="flex:1;overflow-y:auto;padding:24px;display:flex;flex-direction:column;align-items:center;">
             <img src="Caboodle-logo-square.png" alt="Caboodle" style="width:120px;height:40px;object-fit:contain;margin:32px 0 12px;">
             <div style="font-size:1rem;font-weight:700;">New session</div>
@@ -742,9 +742,9 @@
             <div style="font-size:0.8rem;font-weight:700;margin-bottom:10px;">Try asking</div>
             <div id="askTryGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:640px;width:100%;"></div>
           </div>
-          <div style="border-top:1px solid #e2e8f0;padding:12px 28px;" class="ask-composer">
-            <div style="display:flex;gap:8px;align-items:center;border:1px solid #cbd5e1;border-radius:12px;padding:6px 6px 6px 14px;">
-              <input id="askChatInput" placeholder="Ask anything…" onkeydown="if(event.key==='Enter')askChatSend()" style="flex:1;height:36px;border:0;outline:none;font-size:0.88rem;background:transparent;">
+          <div style="border-top:1px solid #e2e8f0;padding:16px 32px;" class="ask-composer">
+            <div style="display:flex;gap:10px;align-items:center;border:1px solid #cbd5e1;border-radius:14px;padding:8px 8px 8px 18px;">
+              <input id="askChatInput" placeholder="Ask anything…" onkeydown="if(event.key==='Enter')askChatSend()" style="flex:1;height:44px;border:0;outline:none;font-size:0.9rem;background:transparent;">
               <button class="btn btn-sm btn-default" onclick="askChatSend()" style="border-radius:8px;">Send</button>
             </div>
           </div>
@@ -3225,12 +3225,12 @@
     }
     function askTableHTML(head, rows, cap) {
       const n = Math.min(rows.length, cap || ASK_CAP);
-      let h = '<table class="cal-table" style="width:100%;border-collapse:collapse;font-size:0.75rem;"><thead><tr>';
-      head.forEach(c => { h += '<th style="text-align:left;padding:6px 8px;border-bottom:1px solid #e2e8f0;position:sticky;top:0;background:#f8fafc;z-index:1;white-space:nowrap;">' + String(c).replace(/</g, '&lt;') + '</th>'; });
+      let h = '<table class="cal-table" style="width:100%;border-collapse:collapse;font-size:0.8rem;line-height:1.5;"><thead><tr>';
+      head.forEach(c => { h += '<th style="text-align:left;padding:10px 14px;border-bottom:1px solid #e2e8f0;position:sticky;top:0;background:#f8fafc;z-index:1;white-space:nowrap;font-size:0.72rem;letter-spacing:0.02em;">' + String(c).replace(/</g, '&lt;') + '</th>'; });
       h += '</tr></thead><tbody>';
       for (let i = 0; i < n; i++) {
         h += '<tr>';
-        rows[i].forEach(c => { h += '<td style="padding:6px 8px;border-bottom:1px solid #f1f5f9;vertical-align:top;overflow-wrap:anywhere;min-width:90px;">' + String(c == null ? '' : c).replace(/</g, '&lt;').slice(0, 120) + '</td>'; });
+        rows[i].forEach(c => { h += '<td style="padding:10px 14px;border-bottom:1px solid #f1f5f9;vertical-align:top;overflow-wrap:anywhere;min-width:90px;">' + String(c == null ? '' : c).replace(/</g, '&lt;').slice(0, 120) + '</td>'; });
         h += '</tr>';
       }
       return h + '</tbody></table>' + (rows.length > n ? '<div style="font-size:0.72rem;color:#64748b;padding:6px 2px;">showing ' + n + ' of ' + rows.length + ' (capped)</div>' : '');
@@ -3581,9 +3581,9 @@
       document.getElementById('askEmpty').style.display = empty ? '' : 'none';
       if (!empty) {
         log.innerHTML = ASK.chat.map((m, mi) =>
-          '<div style="max-width:860px;margin:0 auto 16px;"><div style="display:flex;justify-content:flex-end;margin-bottom:8px;"><div style="background:#f1f5f9;border-radius:12px;padding:8px 14px;font-size:0.85rem;max-width:80%;">' + String(m.q).replace(/</g, '&lt;') + '</div></div>' +
-          '<div style="font-size:0.88rem;margin-bottom:4px;">' + String(m.headline).replace(/</g, '&lt;') + '</div>' +
-          (m.html ? '<div style="overflow-x:auto;border:1px solid #e2e8f0;border-radius:10px;">' + m.html + '</div>' : '') + ((m.rows && m.rows.length) ? '<div style="margin-top:6px;display:flex;gap:8px;"><button class="btn btn-sm" onclick="askSaveMsg(' + mi + ')">Save</button><button class="btn btn-sm" onclick="askExportMsg(' + mi + ')">Export CSV</button></div>' : '') + '</div>'
+          '<div style="max-width:860px;margin:0 auto 28px;"><div style="display:flex;justify-content:flex-end;margin-bottom:12px;"><div style="background:#f1f5f9;border-radius:14px;padding:10px 16px;font-size:0.86rem;line-height:1.5;max-width:80%;">' + String(m.q).replace(/</g, '&lt;') + '</div></div>' +
+          '<div style="font-size:0.95rem;line-height:1.55;margin-bottom:10px;">' + String(m.headline).replace(/</g, '&lt;') + '</div>' +
+          (m.html ? '<div style="overflow-x:auto;border:1px solid #e2e8f0;border-radius:12px;margin-top:4px;">' + m.html + '</div>' : '') + ((m.rows && m.rows.length) ? '<div style="margin-top:12px;display:flex;gap:10px;"><button class="btn btn-sm" onclick="askSaveMsg(' + mi + ')">Save</button><button class="btn btn-sm" onclick="askExportMsg(' + mi + ')">Export CSV</button></div>' : '') + '</div>'
         ).join('');
         log.scrollTop = log.scrollHeight;
       }
@@ -3619,9 +3619,9 @@
       const s = (document.getElementById('askGalSearch').value || '').toLowerCase();
       document.getElementById('askGalList').innerHTML = ASK_GALLERY.map((g, i) => ({ g, i }))
         .filter(x => (ASK.galPill === 'All' || x.g.tag === ASK.galPill) && (!s || (x.g.t + ' ' + x.g.d).toLowerCase().includes(s)))
-        .map(x => '<div onclick="askGalRun(' + x.i + ')" style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin-bottom:8px;cursor:pointer;" onmouseover="this.style.borderColor=\'#0958D9\'" onmouseout="this.style.borderColor=\'#e2e8f0\'">'
-          + '<div style="font-size:0.8rem;font-weight:700;">' + x.g.t + '</div>'
-          + '<div style="font-size:0.72rem;color:#64748b;margin:2px 0 6px;">' + x.g.d + '</div>'
+        .map(x => '<div onclick="askGalRun(' + x.i + ')" style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:12px 14px;margin-bottom:10px;cursor:pointer;" onmouseover="this.style.borderColor=\'#0958D9\'" onmouseout="this.style.borderColor=\'#e2e8f0\'">'
+          + '<div style="font-size:0.82rem;font-weight:700;">' + x.g.t + '</div>'
+          + '<div style="font-size:0.74rem;line-height:1.5;color:#64748b;margin:4px 0 8px;">' + x.g.d + '</div>'
           + '<span style="font-size:0.65rem;font-weight:700;color:#0958D9;background:#eef2ff;border-radius:4px;padding:1px 6px;">' + x.g.tag + '</span></div>').join('')
         || '<div style="font-size:0.75rem;color:#94a3b8;padding:8px;">No prompts match.</div>';
     }
@@ -3635,15 +3635,15 @@
         const g = askWeekGroup(x.created);
         if (g !== lastGroup) { html += '<div style="padding:8px 10px 2px;font-size:0.65rem;font-weight:700;color:#94a3b8;letter-spacing:0.06em;">' + g + ' (' + list.filter(y => askWeekGroup(y.created) === g).length + ')</div>'; lastGroup = g; }
         const active = x.id === ASK.activeId;
-        html += '<div onclick="askSessionOpen(' + x.id + ')" style="padding:8px 10px;border-radius:8px;font-size:0.78rem;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;' + (active ? 'background:#eef2ff;font-weight:600;' : '') + '" onmouseover="if(this.dataset.a!=\'1\')this.style.background=\'#eef2ff\'" onmouseout="if(this.dataset.a!=\'1\')this.style.background=\'\'" data-a="' + (active ? '1' : '') + '" title="' + String(x.title).replace(/"/g, '&quot;') + '">' + String(x.title).replace(/</g, '&lt;') + '</div>';
+        html += '<div onclick="askSessionOpen(' + x.id + ')" style="padding:10px 12px;border-radius:10px;font-size:0.8rem;line-height:1.45;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;' + (active ? 'background:#eef2ff;font-weight:600;' : '') + '" onmouseover="if(this.dataset.a!=\'1\')this.style.background=\'#eef2ff\'" onmouseout="if(this.dataset.a!=\'1\')this.style.background=\'\'" data-a="' + (active ? '1' : '') + '" title="' + String(x.title).replace(/"/g, '&quot;') + '">' + String(x.title).replace(/</g, '&lt;') + '</div>';
       });
       document.getElementById('askSessionList').innerHTML = html;
     }
     function askRenderTry() {
       const grid = document.getElementById('askTryGrid');
       if (grid.children.length) return;
-      grid.innerHTML = ASK_GALLERY.map((g, i) => '<div onclick="askGalRun(' + i + ')" style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;cursor:pointer;display:flex;gap:8px;align-items:center;" onmouseover="this.style.borderColor=\'#0958D9\'" onmouseout="this.style.borderColor=\'#e2e8f0\'">'
-        + '<span style="font-size:0.8rem;">&#128172;</span><span style="font-size:0.76rem;flex:1;">' + g.q + '</span><span style="color:#94a3b8;">&#8593;</span></div>').join('');
+      grid.innerHTML = ASK_GALLERY.map((g, i) => '<div onclick="askGalRun(' + i + ')" style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:12px 14px;cursor:pointer;display:flex;gap:10px;align-items:center;" onmouseover="this.style.borderColor=\'#0958D9\'" onmouseout="this.style.borderColor=\'#e2e8f0\'">'
+        + '<span style="font-size:0.85rem;">&#128172;</span><span style="font-size:0.78rem;line-height:1.45;flex:1;">' + g.q + '</span><span style="color:#94a3b8;">&#8593;</span></div>').join('');
     }
     function askChatJump(i) {
       const log = document.getElementById('askChatLog');
