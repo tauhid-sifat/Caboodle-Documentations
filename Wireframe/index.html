@@ -257,6 +257,7 @@
     .status-select.todo { background:#f1f5f9; color:#475569; border-color:#e2e8f0; }
     .status-select.in_progress { background:#dbeafe; color:#2563eb; border-color:#bfdbfe; }
     .status-select.done { background:#dcfce7; color:#16a34a; border-color:#bbf7d0; }
+    .status-select.blocked { background:#ffe4e6; color:#e11d48; border-color:#fecdd3; }
     .status-select option { color:#334155; background:#fff; }
     .done-header { cursor:pointer; user-select:none; }
     .done-header:hover .tlh-title { color:#16a34a; }
@@ -436,50 +437,54 @@
             <li><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a></li>
             <li class="nav-div"></li>
           </ul>
-          <div class="brand-sel"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:#64748b;"><circle cx="12" cy="8" r="4"></circle><path d="M20 21a8 8 0 1 0-16 0"></path></svg><label>Acme Brokerage</label></div>
+          <div class="brand-sel"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:#64748b;"><circle cx="12" cy="8" r="4"></circle><path d="M20 21a8 8 0 1 0-16 0"></path></svg><select id="brokerSelect" onchange="setBroker(this.value)" style="font-weight:600;font-size:14px;border:0;background:transparent;cursor:pointer;"><option value="acme">Acme Brokerage</option><option value="jade">Jade Street</option></select></div>
         </div>
       </div>
     </header>
 
-    <!-- ===== ASK CABOODLE BAR (POC) ===== -->
-    <div id="askBar" style="background:#fff;border-bottom:1px solid hsl(var(--border));padding:10px 24px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
-      <span style="font-weight:700;font-family:'Space Grotesk',sans-serif;">Ask Caboodle</span>
-      <span id="askDataState" style="display:none;"></span>
-      <input id="askInput" placeholder='Try: "What promos are running this month?" or "Reviews due in 60 days?"' onkeydown="if(event.key==='Enter')askRun()" style="flex:1;min-width:240px;height:34px;padding:0 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:0.82rem;">
-      <button class="btn btn-sm btn-default" onclick="askRun()">Ask</button>
-      <button class="btn btn-sm" onclick="showView('ask')">Library</button>
-    </div>
-    <div id="askPanel" style="display:none;background:#fff;border-bottom:1px solid hsl(var(--border));padding:12px 24px;">
-      <div id="askAnswer" style="font-size:0.85rem;margin-bottom:8px;"></div>
-      <div id="askMeta" style="font-size:0.72rem;color:#64748b;margin-bottom:8px;"></div>
-      <div id="askTableWrap" style="overflow-x:auto;max-height:300px;overflow-y:auto;"></div>
-      <div style="display:flex;gap:8px;margin-top:8px;">
-        <button class="btn btn-sm" onclick="askSaveCurrent()">Save question</button>
-        <button class="btn btn-sm" onclick="askExportCurrent()">Export CSV</button>
-        <button class="btn btn-sm" onclick="document.getElementById('askPanel').style.display='none'">Close</button>
-      </div>
-    </div>
+    <!-- ===== ASK CABOODLE BAR moved into view-dashboard under the greeting ===== -->
 
     <!-- ===== VIEW: DASHBOARD ===== -->
     <div id="view-dashboard" class="view active">
-      <div class="dash-scroll">
-        <div class="qa-grid">
+      <div class="dash-scroll" style="display:flex;flex-direction:column;">
+        <!-- Lovable-style greeting; demo name only, real app pulls from auth -->
+        <section style="padding:20px 24px 0;">
+          <h1 id="dashGreet" style="font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:-0.02em;">Good afternoon, Alex.</h1>
+        </section>
+        <!-- Ask Caboodle search lives on the dashboard under the greeting -->
+        <div id="askBar" style="background:transparent;border-bottom:0;padding:12px 24px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+          <span style="font-weight:700;font-family:'Space Grotesk',sans-serif;">Ask Caboodle</span>
+          <span id="askDataState" style="display:none;"></span>
+          <input id="askInput" placeholder='Try: "What promos are running this month?" or "Reviews due in 60 days?"' onkeydown="if(event.key==='Enter')askRun()" style="flex:1;min-width:240px;height:34px;padding:0 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:0.82rem;">
+          <button class="btn btn-sm btn-default" onclick="askRun()">Ask</button>
+          <button class="btn btn-sm" onclick="showView('ask')">Library</button>
+        </div>
+        <div id="askPanel" style="display:none;background:#fff;border-bottom:1px solid hsl(var(--border));padding:12px 24px;">
+          <div id="askAnswer" style="font-size:0.85rem;margin-bottom:8px;"></div>
+          <div id="askMeta" style="font-size:0.72rem;color:#64748b;margin-bottom:8px;"></div>
+          <div id="askTableWrap" style="overflow-x:auto;max-height:300px;overflow-y:auto;"></div>
+          <div style="display:flex;gap:8px;margin-top:8px;">
+            <button class="btn btn-sm" onclick="askSaveCurrent()">Save question</button>
+            <button class="btn btn-sm" onclick="askExportCurrent()">Export CSV</button>
+            <button class="btn btn-sm" onclick="document.getElementById('askPanel').style.display='none'">Close</button>
+          </div>
+        </div>
+        <div class="qa-grid" style="order:3;">
           <a href="#" class="action-tile" onclick="showView('catreview')"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div><span class="a-label">Category Review</span></a>
           <a href="#" class="action-tile" onclick="showView('promocal')"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></div><span class="a-label">Promotional Management</span></a>
           <a href="#" class="action-tile"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M12 8v12M8 12h8"></path></svg></div><span class="a-label">Market Overview</span></a>
           <a href="#" class="action-tile"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div><span class="a-label">Distributor APL</span></a>
+          <a href="#" class="action-tile"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><span class="a-label">Brand Item Retail Status</span></a>
           <a href="#" class="action-tile" onclick="showView('tasks')"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg></div><span class="a-label">Tasks</span></a>
-          <a href="#" class="action-tile"><div class="a-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></div><span class="a-label">File</span></a>
         </div>
 
-        <div class="kpi-row">
-          <a href="#" class="kpi-card" onclick="showView('catreview')"><div class="kpi-ico purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="kpi-wrap"><div class="kpi-info"><span class="kpi-val">7</span><span class="kpi-lbl">Reviews This Month</span></div><span class="kpi-trend">Next 60 days</span></div><span class="kpi-link">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
-          <a href="#" class="kpi-card" onclick="showView('catreview')"><div class="kpi-ico orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="kpi-wrap"><div class="kpi-info"><span class="kpi-val">2</span><span class="kpi-lbl">Past Due</span></div><span class="kpi-trend" style="color:hsl(var(--destructive));background:hsla(var(--destructive),0.1);">Needs attention</span></div><span class="kpi-link">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
-          <a href="#" class="kpi-card" onclick="showView('promocal')"><div class="kpi-ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div><div class="kpi-wrap"><div class="kpi-info"><span class="kpi-val">8</span><span class="kpi-lbl">Active Promos</span></div></div><span class="kpi-link">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
-          <a href="#" class="kpi-card"><div class="kpi-ico blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div class="kpi-wrap"><div class="kpi-info"><span class="kpi-val">7</span><span class="kpi-lbl">Brands In Review</span></div></div><span class="kpi-link">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+        <div class="kpi-row" style="grid-template-columns:repeat(2,1fr);order:2;">
+          <a href="#" class="kpi-card" onclick="dashGoReviews(event)"><div class="kpi-ico purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="kpi-wrap"><div class="kpi-info"><span class="kpi-val">6</span><span class="kpi-lbl">Category Review Submissions Due</span></div><span class="kpi-trend">Next 30 days</span></div><span class="kpi-link">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+          <a href="#" class="kpi-card" onclick="dashGoPromos(event)"><div class="kpi-ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div><div class="kpi-wrap"><div class="kpi-info"><span class="kpi-val">8</span><span class="kpi-lbl">Active Promos This Month</span></div><span class="kpi-trend" id="dashPromoMonth">Oct</span></div><span class="kpi-link">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
         </div>
 
-        <div class="dash-grid">
+        <!-- Constance Oct 8: dashboard is tiles + 2 KPI cards only for now; Timeline hidden -->
+        <div class="dash-grid" style="display:none;">
           <div class="panel" style="min-height:420px;">
             <div class="p-hdr"><h2 class="p-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> Timeline <span id="dashRangeLabel" style="font-size:0.7rem;font-weight:500;color:hsl(var(--muted-foreground));margin-left:4px;">Next 14 Days</span></h2><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;"><div class="view-toggle" title="Switch between list and calendar"><button id="dashTlBtn" class="active" onclick="setDashView('timeline')">Timeline</button><button id="dashCalBtn" onclick="setDashView('calendar')">Calendar</button></div><div id="dashRangePills" class="pill-g" style="margin-left:4px;"><button class="active" data-range="7" onclick="setDashRange(7,this)">7d</button><button data-range="14" onclick="setDashRange(14,this)">14d</button><button data-range="30" onclick="setDashRange(30,this)">30d</button></div><div class="pill-g"><button class="active" data-tlfilter="cr" onclick="toggleTlFilter(this)">Cat Review</button><button class="active" data-tlfilter="promo" onclick="toggleTlFilter(this)">Promo</button><button class="active" data-tlfilter="task" onclick="toggleTlFilter(this)">Tasks</button></div></div></div>
             <!-- TIMELINE WRAP (list view) -->
@@ -648,10 +653,24 @@
     <!-- ===== VIEW: TASKS / PIPELINE (Fellow-style) ===== -->
     <div id="view-tasks" class="view">
       <div class="cal-top">
-        <div class="cal-top-left"><h1 class="cal-title">Pipeline</h1></div>
-        <div style="display:flex;gap:8px;">
+        <div class="cal-top-left"><h1 class="cal-title">Pipeline</h1>
+          <div class="pill-g" style="margin-left:8px;" title="Personal = my broker tasks. Brands = rollup of brand pipelines.">
+            <button id="wsPersonalBtn" class="active" onclick="setWorkspace('personal')">Personal</button>
+            <button id="wsBrandsBtn" onclick="setWorkspace('brands')">Brands</button>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <button class="btn btn-sm" id="shareProjectBtn" onclick="shareProject()" title="Copy invite link (editor access)">Share</button>
           <button class="btn btn-sm" onclick="showView('dashboard')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Dashboard</button>
         </div>
+      </div>
+      <div style="padding:12px 16px 0;font-size:0.85rem;color:#475569;" id="pipelineGreet">My tasks — Personal workspace. Your own projects and tasks; invite others per project.</div>
+      <div id="pipelineKpiRow" style="display:flex;gap:8px;padding:10px 16px 0;flex-wrap:wrap;">
+        <button class="btn btn-sm" id="kpiDueSoon" onclick="togglePipelineKpi('dueSoon')">Due soon (<span id="kpiDueSoonN">0</span>) · 7d</button>
+        <button class="btn btn-sm" id="kpiOverdue" onclick="togglePipelineKpi('overdue')">Overdue (<span id="kpiOverdueN">0</span>)</button>
+        <button class="btn btn-sm" id="kpiHigh" onclick="togglePipelineKpi('high')">High priority (<span id="kpiHighN">0</span>)</button>
+        <button class="btn btn-sm" id="kpiInProg" onclick="togglePipelineKpi('inProgress')">In progress (<span id="kpiInProgN">0</span>)</button>
+        <span id="pipelineKpiHint" style="font-size:0.7rem;color:#64748b;align-self:center;"></span>
       </div>
       <div class="tasks-layout">
         <!-- LEFT: Projects sidebar (renamed from Plans) -->
@@ -678,9 +697,10 @@
               <div class="pmh-sub" id="planSub">Choose a project from the sidebar to view its tasks</div>
             </div>
             <div class="pmh-actions" style="align-items:center;">
-              <div class="view-toggle" title="Switch between list and calendar">
+              <div class="view-toggle" title="Switch between list, calendar and archive">
                 <button id="pipelineListBtn" class="active" onclick="setPipelineView('list')">List</button>
                 <button id="pipelineCalBtn" onclick="setPipelineView('calendar')">Calendar</button>
+                <button id="pipelineArchiveBtn" onclick="setPipelineView('archive')">Archive</button>
               </div>
               <button onclick="openProjectNotes()" id="projectNotesBtn" disabled title="Project notes">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
@@ -1040,6 +1060,7 @@
             <select class="modal-input" id="taskStatusInput">
               <option value="todo">To Do</option>
               <option value="in_progress">In Progress</option>
+              <option value="blocked">Blocked</option>
               <option value="done">Done</option>
             </select>
           </div>
@@ -1078,6 +1099,8 @@
       </div>
     </div>
   </div>
+
+  <div id="shareModal" class="modal-overlay"><div class="modal-box"><div class="modal-hdr"><h3 id="shareModalTitle">Share project</h3><button class="modal-close" onclick="closeModal('shareModal')">X</button></div><div class="modal-body"><div class="modal-row"><label class="modal-label">Invite link (editor access)</label><div style="display:flex;gap:8px;"><select class="modal-input" id="shareRoleInput" style="max-width:130px;"><option value="editor">Can edit</option><option value="viewer">View only</option></select><button class="btn btn-sm btn-default" onclick="copyShareLink()">Copy link</button></div><div id="shareLinkOut" style="font-size:0.72rem;color:#64748b;margin-top:6px;word-break:break-all;"></div></div><div class="modal-row"><label class="modal-label">Invite person</label><div style="display:flex;gap:8px;"><input class="modal-input" id="shareNameInput" placeholder="Name or email"><button class="btn btn-sm btn-default" onclick="addShareMember()">Add</button></div></div><div class="modal-row"><label class="modal-label">People with access</label><div id="shareMemberList"></div></div></div><div class="modal-foot"><button class="btn btn-sm" onclick="closeModal('shareModal')">Done</button></div></div></div>
 
   <!-- MODAL: Add/Edit Project (renamed from Plan) + Sub-Project support -->
   <div id="planModal" class="modal-overlay">
@@ -1143,7 +1166,9 @@
     let editingPlanId = null;
     let pipelineDoneOpen = false;
     let pipelineCalHideDone = false; // Calendar: hide completed tasks
-    let pipelineView = 'list'; // list | calendar
+    let pipelineView = 'list'; // list | calendar | archive
+    let pipelineWorkspace = 'personal'; // personal = my broker tasks; brands = rollup of brand pipelines
+    let pipelineKpi = null; // dueSoon | overdue | high | inProgress | null
     let pipelineCalDate = new Date(2026, 6, 1); // July 2026 default
     let expandedParents = {}; // parentId -> bool (true = expanded)
     let projectNotesCollapsed = false;
@@ -1234,8 +1259,16 @@
       const q = (document.getElementById('planSearch')?.value || '').toLowerCase();
       const parents = PLANS.filter(p=> !p.parentId);
       let html = '<div class="plan-search-wrap" style="padding:0 12px;"><svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input class="plan-search" id="planSearch" placeholder="Search projects" oninput="renderPlanList()"></div>';
+      if(window._brandContext){
+        html += '<div style="margin:0 12px 8px;padding:8px 10px;background:#eef2ff;border-radius:8px;font-size:0.72rem;color:#4338ca;">Brand: <strong>' + window._brandContext + '</strong> pipeline <span style="cursor:pointer;text-decoration:underline;" onclick="clearBrandContext()">Show all brands</span></div>';
+      }
+      { const scopeIds = window._brandContext ? (BRAND_PLANS[window._brandContext]||[]) : null;
+        const scopeTasks = scopeIds ? tasks.filter(t=> scopeIds.includes(t.planId)) : tasks;
+        const ao = scopeTasks.filter(t=>t.status!=='done').length;
+        html += '<div class="plan-item' + (selectedPlanId==='all'?' active':'') + '" onclick="selectPlan(\'all\')"><div class="p-color" style="background:#0f172a"></div><div class="p-info"><div class="p-name">All tasks' + (window._brandContext ? ' — ' + window._brandContext : '') + '</div><div class="p-meta">' + ao + ' open &middot; ' + scopeTasks.length + ' total</div></div><span class="p-cnt">' + scopeTasks.length + '</span></div>'; }
       parents.forEach(parent=>{
-        const children = getChildren(parent.id);
+        if(window._brandContext && !(BRAND_PLANS[window._brandContext]||[]).includes(parent.id)) return;
+        const children = getChildren(parent.id).filter(c=> !window._brandContext || (BRAND_PLANS[window._brandContext]||[]).includes(c.id));
         const childMatch = children.some(c=> c.name.toLowerCase().includes(q));
         const parentMatch = parent.name.toLowerCase().includes(q);
         if(q && !parentMatch && !childMatch) return;
@@ -1278,15 +1311,155 @@
       pipelineView = 'list';
       renderPlanList();
       renderPlanContent();
-      document.getElementById('addTaskBtn').disabled = false;
-      document.getElementById('projectNotesBtn').disabled = false;
+      updatePipelineKpis();
+      document.getElementById('addTaskBtn').disabled = (id==='all' || !id);
+      document.getElementById('projectNotesBtn').disabled = (id==='all' || !id);
     }
 
     function setPipelineView(mode){
       pipelineView = mode;
       document.getElementById('pipelineListBtn').className = mode==='list'?'active':'';
       document.getElementById('pipelineCalBtn').className = mode==='calendar'?'active':'';
+      const ab = document.getElementById('pipelineArchiveBtn');
+      if(ab) ab.className = mode==='archive'?'active':'';
       renderPlanContent();
+    }
+    // ponytail: workspace + KPI filters mirror Lovable Tracker; brands mode is a rollup list, not task rows.
+    function setWorkspace(ws){
+      pipelineWorkspace = ws;
+      document.getElementById('wsPersonalBtn').className = ws==='personal'?'active':'';
+      document.getElementById('wsBrandsBtn').className = ws==='brands'?'active':'';
+      pipelineKpi = null;
+      if(ws==='brands') window._brandContext = null;
+      renderPipelineKpiHint();
+      renderPlanList();
+      renderPlanContent();
+    }
+    function togglePipelineKpi(k){
+      pipelineKpi = (pipelineKpi===k) ? null : k;
+      renderPipelineKpiHint();
+      renderPlanContent();
+    }
+    function renderPipelineKpiHint(){
+      const el = document.getElementById('pipelineKpiHint');
+      if(!el) return;
+      el.textContent = pipelineKpi ? ('Filtered: ' + pipelineKpi + ' — click again to clear') : '';
+    }
+    function pipelineKpiMatch(t){
+      if(!pipelineKpi) return true;
+      const due = t.due ? new Date(t.due + 'T00:00:00') : null;
+      const now = new Date(); now.setHours(0,0,0,0);
+      const diff = due ? Math.floor((due - now)/86400000) : null;
+      if(pipelineKpi==='dueSoon') return diff!==null && diff>=0 && diff<=7;
+      if(pipelineKpi==='overdue') return diff!==null && diff<0 && t.status!=='done';
+      if(pipelineKpi==='high') return t.priority==='high' && t.status!=='done';
+      if(pipelineKpi==='inProgress') return t.status==='in_progress';
+      return true;
+    }
+    // ponytail: demo brand mapping so the Brands rollup can filter per KPI like Lovable.
+    const BRAND_PLANS = { 'Aqua':[1,2,3,4], 'Be Amazing':[5], 'Bon':[6], 'Dude Wipes':[7,8], 'Mom Bomb':[9] };
+    function taskMatchesKpi(t, k){
+      const due = t.due ? new Date(t.due + 'T00:00:00') : null;
+      const now = new Date(); now.setHours(0,0,0,0);
+      const diff = due ? Math.floor((due - now)/86400000) : null;
+      if(k==='dueSoon') return diff!==null && diff>=0 && diff<=7 && t.status!=='done';
+      if(k==='overdue') return diff!==null && diff<0 && t.status!=='done';
+      if(k==='high') return t.priority==='high' && t.status!=='done';
+      if(k==='inProgress') return t.status==='in_progress';
+      return true;
+    }
+    function brandCountFor(brand, k){
+      return tasks.filter(t=> (BRAND_PLANS[brand]||[]).includes(t.planId) && taskMatchesKpi(t,k)).length;
+    }
+    function updatePipelineKpis(){
+      const set = (id, n)=>{ const el=document.getElementById(id); if(el) el.textContent=n; };
+      const scopeIds = window._brandContext ? (BRAND_PLANS[window._brandContext]||[]) : null;
+      const scope = scopeIds ? tasks.filter(t=> scopeIds.includes(t.planId)) : tasks;
+      const open = scope.filter(t=>t.status!=='done');
+      set('kpiDueSoonN', open.filter(t=>taskMatchesKpi(t,'dueSoon')).length);
+      set('kpiOverdueN', open.filter(t=>taskMatchesKpi(t,'overdue')).length);
+      set('kpiHighN', open.filter(t=>taskMatchesKpi(t,'high')).length);
+      set('kpiInProgN', scope.filter(t=>taskMatchesKpi(t,'inProgress')).length);
+      const g = document.getElementById('pipelineGreet');
+      if(g) g.textContent = pipelineWorkspace==='brands'
+        ? 'Brands workspace — rollup. Pick a KPI, then click a brand to open its pipeline.'
+        : (window._brandContext
+          ? window._brandContext + ' pipeline — its own projects and task list, same as Personal. New projects stay in this brand.'
+          : 'My tasks — Personal workspace. Your own projects and tasks; invite others per project.');
+    }
+    function shareProject(){ openShare(); }
+    function openShare(){
+      const p = PLANS.find(x=>x.id===selectedPlanId);
+      if(!window._projectMembers) window._projectMembers = {};
+      const key = p ? p.id : 'all';
+      if(!window._projectMembers[key]) window._projectMembers[key] = [];
+      document.getElementById('shareModalTitle').textContent = 'Share ' + (p ? p.name : 'All tasks');
+      renderShareList();
+      copyShareLink(true);
+      showModal('shareModal');
+    }
+    function renderShareList(){
+      const p = PLANS.find(x=>x.id===selectedPlanId);
+      const key = p ? p.id : 'all';
+      const members = (window._projectMembers && window._projectMembers[key]) || [];
+      const box = document.getElementById('shareMemberList');
+      if(!members.length){ box.innerHTML = '<div style="font-size:0.8rem;color:#94a3b8;">No one yet</div>'; return; }
+      box.innerHTML = members.map(function(m){
+        return '<div style="display:flex;align-items:center;gap:8px;padding:6px 0;">'
+          + '<span style="flex:1;font-size:0.82rem;">' + m.name + '</span>'
+          + '<select class="modal-input" style="max-width:110px;" onchange="setShareRole(\'' + m.name.replace(/'/g,"\\'") + '\',this.value)">'
+          + '<option value="editor"' + (m.role==='editor'?' selected':'') + '>Can edit</option>'
+          + '<option value="viewer"' + (m.role==='viewer'?' selected':'') + '>View only</option>'
+          + '</select>'
+          + '<button class="btn btn-sm" onclick="removeShareMember(\'' + m.name.replace(/'/g,"\\'") + '\')">Remove</button>'
+          + '</div>';
+      }).join('');
+    }
+    function addShareMember(){
+      const p = PLANS.find(x=>x.id===selectedPlanId);
+      const key = p ? p.id : 'all';
+      const inp = document.getElementById('shareNameInput');
+      const name = (inp.value || '').trim();
+      if(!name) return;
+      window._projectMembers[key].push({ name: name, role: document.getElementById('shareRoleInput').value || 'editor' });
+      inp.value = '';
+      renderShareList();
+    }
+    function setShareRole(name, role){
+      const p = PLANS.find(x=>x.id===selectedPlanId);
+      const key = p ? p.id : 'all';
+      const m = (window._projectMembers[key] || []).find(function(x){ return x.name === name; });
+      if(m) m.role = role;
+      renderShareList();
+    }
+    function removeShareMember(name){
+      const p = PLANS.find(x=>x.id===selectedPlanId);
+      const key = p ? p.id : 'all';
+      window._projectMembers[key] = (window._projectMembers[key] || []).filter(function(x){ return x.name !== name; });
+      renderShareList();
+    }
+    function copyShareLink(silent){
+      const p = PLANS.find(x=>x.id===selectedPlanId);
+      const planId = p ? p.id : 'project';
+      const role = (document.getElementById('shareRoleInput') || {}).value || 'editor';
+      const link = location.origin + location.pathname + '#invite-' + planId + '-' + role;
+      document.getElementById('shareLinkOut').textContent = link;
+      try{ navigator.clipboard.writeText(link); }catch(_){}
+    }
+    function openBrandPipeline(brandName){
+      // Jump into that brand's real pipeline: first project mapped to the brand in BRAND_PLANS.
+      const ids = BRAND_PLANS[brandName] || [];
+      window._brandContext = brandName;
+      setWorkspace('personal');
+      const first = PLANS.find(p=> ids.includes(p.id)) || PLANS[0];
+      selectPlan(first.id);
+    }
+    function clearBrandContext(){
+      window._brandContext = null;
+      selectedPlanId = 'all';
+      renderPlanList();
+      renderPlanContent();
+      updatePipelineKpis();
     }
     function openProjectNotes(){
       const p = PLANS.find(x=>x.id===selectedPlanId);
@@ -1303,22 +1476,63 @@
       renderPlanContent();
     }
 
-    // ===== PROJECT CONTENT (list + calendar + notes) =====
+    // ===== PROJECT CONTENT (list + calendar + archive + brands rollup + notes) =====
     function renderPlanContent() {
-      const p = PLANS.find(x => x.id === selectedPlanId);
       const container = document.getElementById('planContent');
+      if(pipelineWorkspace==='brands'){
+        document.getElementById('planTitle').textContent = 'Brands';
+        document.getElementById('planSub').textContent = pipelineKpi ? ('Brands with ' + pipelineKpi + ' items — click a brand to open its pipeline') : 'Click a KPI above, then click a brand to open its pipeline';
+        updatePipelineKpis();
+        const brands = Object.keys(BRAND_PLANS);
+        container.innerHTML = brands.map(b=>{
+          const n = pipelineKpi ? brandCountFor(b, pipelineKpi) : tasks.filter(t=> (BRAND_PLANS[b]||[]).includes(t.planId) && t.status!=='done').length;
+          return '<div class="task-item" onclick="openBrandPipeline(\'' + b + '\')"><div class="t-body"><div class="t-title">' + b + ' (' + n + ')</div><div class="t-meta">Click brand to go to pipeline</div></div></div>';
+        }).join('');
+        return;
+      }
+      if(selectedPlanId==='all'){
+        const scopeIds = window._brandContext ? (BRAND_PLANS[window._brandContext]||[]) : null;
+        const scopePlans = PLANS.filter(p=> (!scopeIds || scopeIds.includes(p.id)));
+        document.getElementById('planTitle').textContent = window._brandContext ? (window._brandContext + ' — All tasks') : 'All tasks';
+        document.getElementById('planSub').textContent = pipelineKpi ? ('Filtered: ' + pipelineKpi + ' — click KPI again to clear') : 'Grouped by project, like Lovable';
+        updatePipelineKpis();
+        const allItems = tasks.filter(t=> scopePlans.some(p=>p.id===t.planId) && pipelineKpiMatch(t));
+        if(pipelineView==='calendar'){
+          container.innerHTML = renderPipelineCalendar({name: window._brandContext || 'All tasks'}, allItems);
+          return;
+        }
+        if(pipelineView==='archive'){
+          const archived = allItems.filter(t=>t.status==='done');
+          if(!archived.length){ container.innerHTML = '<div class="empty-state" style="padding:20px;"><h3>Nothing archived</h3><p>Completed tasks land here.</p></div>'; return; }
+          container.innerHTML = scopePlans.filter(p=> archived.some(t=>t.planId===p.id)).map(p=>{
+            const items = archived.filter(t=>t.planId===p.id);
+            return '<div class="task-list-header"><span class="tlh-title"><span class="dot" style="background:#16a34a;"></span>' + p.name + ' (' + items.length + ')</span></div>' + renderTaskRows(items);
+          }).join('');
+          return;
+        }
+        const groups = scopePlans.filter(p=> tasks.some(t=>t.planId===p.id && pipelineKpiMatch(t)));
+        if(!groups.length){ container.innerHTML = '<div class="empty-state" style="padding:20px;"><h3>No tasks match</h3><p>Clear the KPI filter.</p></div>'; return; }
+        container.innerHTML = groups.map(p=>{
+          const items = tasks.filter(t=>t.planId===p.id && pipelineKpiMatch(t)).sort((a,b)=> (a.due||'9999').localeCompare(b.due||'9999'));
+          return '<div class="task-list-header"><span class="tlh-title"><span class="dot" style="background:' + p.color + ';"></span>' + p.name + ' (' + items.length + ')</span></div>' + renderTaskRows(items);
+        }).join('');
+        return;
+      }
+      const p = PLANS.find(x => x.id === selectedPlanId);
       if (!p) {
         container.innerHTML = '<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg><h3>No project selected</h3><p>Pick a project from the sidebar or create a new one</p></div>';
         document.getElementById('planTitle').textContent = 'Select a project';
         document.getElementById('planSub').textContent = 'Choose a project from the sidebar to view its tasks';
         return;
       }
-      document.getElementById('planTitle').textContent = getParentLabel(p) + p.name;
+      document.getElementById('planTitle').textContent = (window._brandContext ? window._brandContext + ' — ' : '') + getParentLabel(p) + p.name;
       document.getElementById('planSub').textContent = p.desc || 'No description';
       document.getElementById('pipelineListBtn').className = pipelineView==='list'?'active':'';
       document.getElementById('pipelineCalBtn').className = pipelineView==='calendar'?'active':'';
+      const _ab = document.getElementById('pipelineArchiveBtn');
+      if(_ab) _ab.className = pipelineView==='archive'?'active':'';
 
-      const planTasks = tasks.filter(t => t.planId === p.id);
+      const planTasks = tasks.filter(t => t.planId === p.id).filter(pipelineKpiMatch);
 
       let html = '';
 
@@ -1333,6 +1547,12 @@
         container.innerHTML = html;
         return;
       }
+      if(pipelineView==='archive'){
+        const archived = planTasks.filter(t=>t.status==='done');
+        html += archived.length ? renderTaskRows(archived) : '<div class="empty-state" style="padding:20px;"><h3>Nothing archived</h3><p>Completed tasks land here.</p></div>';
+        container.innerHTML = html;
+        return;
+      }
 
       // Quick-add bar (list view)
       html += '<div class="quick-add">' +
@@ -1341,28 +1561,16 @@
         '<select id="quickPriority"><option value="high">High</option><option value="med" selected>Med</option><option value="low">Low</option></select>' +
         '<button onclick="quickAddTask()">Add</button></div>';
 
-      // Group by date buckets
-      const buckets = [
-        { key:'overdue', label:'Overdue', color:'#ef4444', items: [] },
-        { key:'today', label:'Today', color:'#f59e0b', items: [] },
-        { key:'thisWeek', label:'Next 7 Days', color:'#3b82f6', items: [] },
-        { key:'next30', label:'Next 30 Days', color:'#64748b', items: [] },
-        { key:'later', label:'Later', color:'#94a3b8', items: [] },
-        { key:'noDue', label:'No Due Date', color:'#cbd5e1', items: [] },
-      ];
+      // Flat list sorted by due date (Lovable-style), notes already inline on each row
       const done = [];
-      planTasks.forEach(t => {
-        if (t.status === 'done') { done.push(t); return; }
-        const b = buckets.find(b => b.key === dateBucketKey(t.due));
-        if (b) b.items.push(t);
-      });
+      const openItems = [];
+      planTasks.forEach(t => { if (t.status === 'done') done.push(t); else openItems.push(t); });
+      openItems.sort((a,b)=> (a.due||'9999').localeCompare(b.due||'9999'));
 
       if (!planTasks.length) {
         html += '<div class="empty-state" style="padding:20px;"><h3>No tasks yet</h3><p>Type above and press Enter to add your first task</p></div>';
       } else {
-        buckets.forEach(b => {
-          if (b.items.length) html += renderTaskSection(b.label, b.items, b.color);
-        });
+        if (openItems.length) html += renderTaskRows(openItems);
         // Done section — collapsible to keep the view decluttered
         if (done.length) {
           html += '<div class="task-list-header done-header" onclick="toggleDoneSection()">' +
@@ -1372,6 +1580,7 @@
         }
       }
 
+      updatePipelineKpis();
       container.innerHTML = html;
     }
 
@@ -1404,9 +1613,11 @@
       return items.map(t => {
         const initials = t.assignee ? t.assignee.split(' ').map(w => w[0]).join('').substring(0,2).toUpperCase() : '';
         const dueObj = t.due ? new Date(t.due + 'T00:00:00') : null;
-        const now = new Date();
-        const isOverdue = dueObj && dueObj < now && t.status !== 'done';
-        const dueText = dueObj ? dueObj.toLocaleDateString('en-US',{month:'short',day:'numeric'}) : '';
+        const now = new Date(); now.setHours(0,0,0,0);
+        const diff = dueObj ? Math.floor((dueObj - now)/86400000) : null;
+        const isOverdue = diff!==null && diff<0 && t.status !== 'done';
+        let dueText = 'No deadline';
+        if(diff!==null){ if(diff<0) dueText = 'Overdue · ' + dueObj.toLocaleDateString('en-US',{month:'short',day:'numeric'}); else if(diff===0) dueText = 'Due today'; else if(diff===1) dueText = 'Due tomorrow'; else dueText = 'Deadline ' + dueObj.toLocaleDateString('en-US',{month:'short',day:'numeric'}); }
         const isDone = t.status === 'done';
         const files = t.files && t.files.length ? '<span class="file-indicator" title="' + t.files.map(f => f.name + ' (' + f.size + ')').join(' | ') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>' + t.files.length + '</span>' : '';
         return '<div class="task-item' + (isDone ? ' done' : '') + '">' +
@@ -1415,17 +1626,18 @@
           '<div class="t-title' + (isDone ? ' done' : '') + '">' + t.title + '</div>' +
           '<div class="t-meta">' +
           (t.assignee ? '<span class="assignee"><span class="avatar">' + initials + '</span>' + t.assignee + '</span>' : '') +
-          (t.due ? '<span class="due' + (isOverdue ? ' overdue' : '') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>' + dueText + '</span>' : '') +
+          (t.due ? '<span class="due' + (isOverdue ? ' overdue' : '') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>' + dueText + '</span>' : '<span class="due">No deadline</span>') +
           (!isDone ? '<span class="priority ' + t.priority + '">' + t.priority + '</span>' : '') +
           '<select class="status-select ' + t.status + '" onclick="event.stopPropagation()" onchange="setTaskStatus(' + t.id + ', this.value)">' +
           '<option value="todo"' + (t.status === 'todo' ? ' selected' : '') + '>To Do</option>' +
           '<option value="in_progress"' + (t.status === 'in_progress' ? ' selected' : '') + '>In Progress</option>' +
+          '<option value="blocked"' + (t.status === 'blocked' ? ' selected' : '') + '>Blocked</option>' +
           '<option value="done"' + (t.status === 'done' ? ' selected' : '') + '>Done</option></select>' +
           files +
           '</div></div>' +
           '<button class="t-expand" onclick="event.stopPropagation();toggleTaskNotes(' + t.id + ')" title="Toggle notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"></polyline></svg></button>' +
           '</div>' +
-          '<div class="task-notes" id="taskNotes-' + t.id + '">' + (t.notes || '<span class="tn-empty">No notes</span>') + '</div>';
+          '<div class="task-notes open" id="taskNotes-' + t.id + '">' + (t.notes || '<span class="tn-empty">No notes — click row to edit</span>') + '</div>';
       }).join('');
     }
 
@@ -1579,7 +1791,8 @@
     // ===== PROJECT MODAL (with Sub-Project support) =====
     function populateParentSelect(selectedId){
       const sel = document.getElementById('planParentInput');
-      const parents = PLANS.filter(p=> !p.parentId);
+      const scopeIds = window._brandContext ? (BRAND_PLANS[window._brandContext]||[]) : null;
+      const parents = PLANS.filter(p=> !p.parentId && (!scopeIds || scopeIds.includes(p.id)));
       let html = '<option value=\"\">No parent — top-level project</option>';
       parents.forEach(p=>{
         if(selectedId && p.id===selectedId) return;
@@ -1630,6 +1843,7 @@
       } else {
         const newId = ++planIdCounter;
         PLANS.push({ id:newId, name, desc, color: PLAN_COLORS[newId % PLAN_COLORS.length], notes:'', parentId });
+        if(window._brandContext){ (BRAND_PLANS[window._brandContext] = BRAND_PLANS[window._brandContext]||[]).push(newId); }
         if(parentId) expandedParents[parentId]=true;
         selectedPlanId = newId;
       }
@@ -1637,6 +1851,35 @@
       renderPlanList();
       if (selectedPlanId) renderPlanContent();
       document.getElementById('projectNotesBtn').disabled = !selectedPlanId;
+    }
+
+    // ===== DASHBOARD GREETING (Lovable-style daypart) =====
+    function dashGreet(){
+      const h = new Date().getHours();
+      const daypart = h < 12 ? 'morning' : h < 18 ? 'afternoon' : 'evening';
+      const el = document.getElementById('dashGreet');
+      if(el) el.textContent = 'Good ' + daypart + ', Alex.';
+    }
+
+    // ===== DASHBOARD KPI DEEP LINKS (Constance Oct 8 feedback) =====
+    // ponytail: example counts only; links apply the matching filter on the target view.
+    // Real app fetches broker branding from GET /api/broker/branding.
+    const BROKER_BRANDING={acme:{name:'Acme Brokerage'},jade:{name:'Jade Street'}}; function setBroker(k){ const b=BROKER_BRANDING[k]||BROKER_BRANDING.acme; document.querySelector('.brand-sel label, .brand-sel select'); const h=document.querySelector('.header'); if(h) h.setAttribute('data-broker',k); const logo=document.querySelector('.h-left img'); if(logo) logo.alt=b.name+' logo'; }
+    function dashGoReviews(e){
+      if(e) e.preventDefault();
+      window._brUpcomingOnly = true;
+      showView('cr-report');
+    }
+    function dashGoPromos(e){
+      if(e) e.preventDefault();
+      const mon = new Date().toLocaleString('en-US',{month:'short'});
+      try{
+        pcYear = new Date().getFullYear();
+        pcFilterState = { cat:'all', ret:'all', mon: mon };
+        const lbl = document.getElementById('dashPromoMonth');
+        if(lbl) lbl.textContent = mon;
+      }catch(_){}
+      showView('promocal');
     }
 
     // ===== VIEW SWITCHER =====
@@ -1647,7 +1890,7 @@
       if (name === 'promocal') pcRender();
       if (name === 'cr-report') renderBrandReport();
       if (name === 'cr-brand') bsRender();
-      if (name === 'tasks') { if (!selectedPlanId && PLANS.length) selectedPlanId = PLANS[0].id; if (selectedPlanId) selectPlan(selectedPlanId); else { renderPlanList(); renderPlanContent(); } }
+      if (name === 'tasks') { if (!selectedPlanId && PLANS.length) selectedPlanId = 'all'; if (selectedPlanId && selectedPlanId!=='all') selectPlan(selectedPlanId); else { renderPlanList(); renderPlanContent(); updatePipelineKpis(); } }
       if (name === 'ask') askRenderLibrary();
       if (name === 'askchat') askChatRender();
     }
@@ -2249,6 +2492,12 @@
         for (const field in colFilters) {
           if (colFilters[field] && colFilters[field] !== 'all' && checks[field] !== colFilters[field]) return false;
         }
+        if (window._brUpcomingOnly && e.submissionDue) {
+          const d = new Date(e.submissionDue);
+          const now = new Date(); now.setHours(0,0,0,0);
+          const diff = Math.floor((d - now)/86400000);
+          if (isNaN(diff) || diff < 0 || diff > 30) return false;
+        }
         return true;
       });
 
@@ -2303,9 +2552,9 @@
         filterInfo.style.cssText = 'margin-bottom:8px;font-size:0.72rem;display:flex;gap:8px;align-items:center;';
         document.getElementById('brKpiRow').after(filterInfo);
       }
-      filterInfo.innerHTML = activeFilterCount > 0 ?
+      filterInfo.innerHTML = (window._brUpcomingOnly ? '<span style="color:#6366f1;">Upcoming reviews (Next 30 days) — from Dashboard</span><span style="cursor:pointer;color:#6366f1;text-decoration:underline;" onclick="window._brUpcomingOnly=false;renderBrandReport()">Clear</span>' : '') + (activeFilterCount > 0 ?
         '<span style="color:#6366f1;">' + activeFilterCount + ' filter' + (activeFilterCount > 1 ? 's' : '') + ' active</span>' +
-        '<span style="cursor:pointer;color:#6366f1;text-decoration:underline;" onclick="window._brColFilters={};renderBrandReport()">Clear all</span>' : '';
+        '<span style="cursor:pointer;color:#6366f1;text-decoration:underline;" onclick="window._brColFilters={};renderBrandReport()">Clear all</span>' : '');
 
       // Table
       if (!entries.length) {
@@ -2733,7 +2982,7 @@
       }
     }
     // init dash timeline on load
-    document.addEventListener('DOMContentLoaded', ()=>{ setTimeout(()=>{ try{ renderDashTimeline(); }catch(e){} },300); });
+    document.addEventListener('DOMContentLoaded', ()=>{ try{ dashGreet(); }catch(e){} setTimeout(()=>{ try{ renderDashTimeline(); }catch(e){} },300); });
 
     // Modal helpers
     function showModal(id) { document.getElementById(id).classList.add('show'); }
