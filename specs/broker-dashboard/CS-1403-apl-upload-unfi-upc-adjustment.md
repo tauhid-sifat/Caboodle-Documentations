@@ -1,3 +1,11 @@
+---
+module: broker-dashboard
+jira: [CS-1403]
+status: backlog
+last_verified: 2026-10-14
+related_wiki: ../../wiki/category-review.md
+---
+
 # Broker Dashboard | APL Upload Adjust for UNFI UPC Codes
 
 **CS-1403** | Bug | Priority: High | Status: Backlog  

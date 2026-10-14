@@ -1,4 +1,12 @@
-﻿# Market Overview | Add Text Search to List View
+﻿---
+module: market-overview
+jira: [CS-1609]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
+# Market Overview | Add Text Search to List View
 
 **CS-1609** | New Requirement | User Story | Priority: TBD | Status: New
 

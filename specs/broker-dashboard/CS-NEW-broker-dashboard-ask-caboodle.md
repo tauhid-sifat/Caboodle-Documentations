@@ -1,3 +1,11 @@
+---
+module: broker-dashboard
+jira: []
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/broker-dashboard.md
+---
+
 # Broker Dashboard | Integrate Ask Caboodle
 
 **New Requirement** | User Story | Priority: TBD | Status: New

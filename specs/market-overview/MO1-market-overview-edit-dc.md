@@ -1,4 +1,12 @@
-﻿# Market Overview | Allow Editing DC in Edit Log
+﻿---
+module: market-overview
+jira: [CS-1608]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
+# Market Overview | Allow Editing DC in Edit Log
 
 **CS-1608** | New Requirement | User Story | Priority: TBD | Status: New
 

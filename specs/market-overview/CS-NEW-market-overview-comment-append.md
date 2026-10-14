@@ -1,3 +1,11 @@
+---
+module: market-overview
+jira: [MO8]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
 # Market Overview | Comment Edits Should Append, Not Override
 
 **MO8** | New Requirement | User Story | Priority: TBD | Status: New

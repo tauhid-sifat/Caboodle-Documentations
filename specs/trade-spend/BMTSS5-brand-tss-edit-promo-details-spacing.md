@@ -1,3 +1,11 @@
+---
+module: trade-spend
+jira: [CS-1629]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
 # Brand Modules | TSS | Edit Promo Details - More Space at Bottom for Single Row
 
 **CS-1629** | Bug / Enhancement | User Story | Priority: TBD | Status: New

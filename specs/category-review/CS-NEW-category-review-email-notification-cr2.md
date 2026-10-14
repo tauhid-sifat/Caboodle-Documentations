@@ -1,3 +1,11 @@
+---
+module: category-review
+jira: [CR2]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/category-review.md
+---
+
 # Category Review | Email Notification (Send to Contacts)
 
 **CR2** | New Requirement | User Story | Priority: High | Status: New

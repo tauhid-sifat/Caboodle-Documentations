@@ -1,3 +1,11 @@
+---
+module: category-review
+jira: []
+status: backlog
+last_verified: 2026-10-14
+related_wiki: ../../wiki/category-review.md
+---
+
 # Category Review — Brand Report
 
 **CS-NEW** | User Story | Priority: High | Status: Backlog

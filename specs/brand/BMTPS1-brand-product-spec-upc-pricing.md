@@ -1,3 +1,11 @@
+---
+module: brand
+jira: [CS-1596]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
 # Brand Modules | Product Spec | Add Product UPC to Pricing Module
 
 **CS-1596** | New Requirement | User Story | Priority: TBD | Status: New

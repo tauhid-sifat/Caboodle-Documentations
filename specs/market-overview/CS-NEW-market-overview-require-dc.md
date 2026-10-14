@@ -1,3 +1,11 @@
+---
+module: market-overview
+jira: [MO7]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
 # Market Overview | Require Distribution Center on Log Entry
 
 **MO7** | New Requirement | User Story | Priority: TBD | Status: New

@@ -1,3 +1,11 @@
+---
+module: trade-spend
+jira: [CS-1627]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
 # Brand Modules | TSS | EDLP in Stepper - Clarify Stepper vs Edit Promo Details
 
 **CS-1627** | Question | Priority: TBD | Status: New

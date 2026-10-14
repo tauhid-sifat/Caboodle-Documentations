@@ -1,3 +1,11 @@
+---
+module: market-overview
+jira: [CS-1611]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
 # Market Overview | Fix Misleading Store Count for UNFI Independents / Infra
 
 **CS-1611** | Bug | Priority: High | Status: New

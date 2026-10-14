@@ -1,3 +1,11 @@
+---
+module: reports
+jira: [CS-1619]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
 # Reports | Brand Broker Market Overview | Sort Function - Date/Time Doesn't Work, List Needs a Date
 
 **CS-1619** | Bug | Priority: TBD | Status: New

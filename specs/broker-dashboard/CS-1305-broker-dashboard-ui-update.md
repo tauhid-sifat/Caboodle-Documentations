@@ -1,3 +1,11 @@
+---
+module: broker-dashboard
+jira: [CS-1305]
+status: backlog
+last_verified: 2026-10-14
+related_wiki: ../../wiki/broker-dashboard.md
+---
+
 # Broker Dashboard | Update UI to Match the Rest of the Platform
 
 **CS-1305** | User Story | Priority: High | Status: Backlog  

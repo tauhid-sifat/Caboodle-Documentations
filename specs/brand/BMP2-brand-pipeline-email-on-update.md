@@ -1,3 +1,11 @@
+---
+module: brand
+jira: [CS-1595]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
 # Brand Modules | Pipeline | Option to Not Send Email for Every Update
 
 **CS-1595** | Bug / Enhancement | User Story | Priority: TBD | Status: New

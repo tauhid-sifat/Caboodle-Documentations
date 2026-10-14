@@ -1,3 +1,11 @@
+---
+module: brand
+jira: [CS-1652]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/broker-dashboard.md
+---
+
 # Brand Modules | Pipeline | Rebuild as Fellow-style Plan/Task List (from wireframe)
 
 **CS-1652** | New Requirement | User Story | Priority: Medium | Status: New

@@ -1,3 +1,11 @@
+---
+module: category-review
+jira: [CS-1316]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/category-review.md
+---
+
 # Category Review | Replace Pagination with Infinite Scroll
 
 **CS-1316** | User Story | Priority: High | Status: New  

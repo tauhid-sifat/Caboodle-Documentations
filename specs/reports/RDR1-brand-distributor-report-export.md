@@ -1,3 +1,11 @@
+---
+module: reports
+jira: [CS-1622]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
 # Reports | Brand Distributor Report | Should User Be Able to Export the Data?
 
 **CS-1622** | Question | Priority: TBD | Status: New

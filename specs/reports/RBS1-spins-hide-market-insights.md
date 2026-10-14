@@ -1,3 +1,11 @@
+---
+module: reports
+jira: [CS-1620]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
 # Reports | SPINS | Hide Market Insights
 
 **CS-1620** | New Requirement | User Story | Priority: TBD | Status: New

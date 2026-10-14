@@ -1,3 +1,11 @@
+---
+module: promo-management
+jira: [CS-1614]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/promo-management-status.md
+---
+
 # Promotional Management | Export to Formatted Report
 
 **CS-1614** | New Requirement | User Story | Priority: High | Status: New

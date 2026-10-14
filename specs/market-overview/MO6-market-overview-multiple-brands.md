@@ -1,4 +1,12 @@
-﻿# Market Overview | Allow One Retailer with Multiple Brands Per Log Entry
+﻿---
+module: market-overview
+jira: [CS-1613]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
+# Market Overview | Allow One Retailer with Multiple Brands Per Log Entry
 
 **CS-1613** | New Requirement | User Story | Priority: TBD | Status: New
 

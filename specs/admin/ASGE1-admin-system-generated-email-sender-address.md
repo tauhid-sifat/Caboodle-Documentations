@@ -1,3 +1,11 @@
+---
+module: admin
+jira: [CS-1710]
+status: backlog
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
 # Admin | System Generated Emails | Sender Address
 
 **CS-1710** | Task | Priority: Medium | Status: Backlog (Needs Discussion)

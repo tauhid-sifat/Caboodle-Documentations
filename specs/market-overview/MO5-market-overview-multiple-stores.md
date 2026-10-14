@@ -1,4 +1,12 @@
-﻿# Market Overview | Allow Multiple Stores Per Log Entry
+﻿---
+module: market-overview
+jira: [CS-1612]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
+# Market Overview | Allow Multiple Stores Per Log Entry
 
 **CS-1612** | New Requirement | User Story | Priority: TBD | Status: New
 

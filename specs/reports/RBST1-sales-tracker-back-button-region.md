@@ -1,3 +1,11 @@
+---
+module: reports
+jira: [CS-1621]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
 # Reports | Sales Tracker | Back Button Returns to International Region
 
 **CS-1621** | Bug | Priority: TBD | Status: New

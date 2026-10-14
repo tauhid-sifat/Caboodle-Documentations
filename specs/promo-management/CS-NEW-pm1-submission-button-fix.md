@@ -1,3 +1,11 @@
+---
+module: promo-management
+jira: [PM1]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/promo-management-status.md
+---
+
 # Promotional Management | Fix Submission Button
 
 **PM1** | Bug | Priority: High | Status: New

@@ -1,3 +1,11 @@
+---
+module: broker-dashboard
+jira: [CS-1600]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/broker-dashboard.md
+---
+
 # Broker Dashboard | Dashboard Filter — My Tasks or Contact Name
 
 **CS-1600** | New Requirement | User Story | Priority: TBD | Status: New

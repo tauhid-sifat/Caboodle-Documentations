@@ -1,3 +1,11 @@
+---
+module: promo-management
+jira: [CS-1618]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/promo-management-status.md
+---
+
 # Promotional Management | Allow Event to Span/Move Across Months
 
 **CS-1618** | New Requirement | User Story | Priority: TBD | Status: New

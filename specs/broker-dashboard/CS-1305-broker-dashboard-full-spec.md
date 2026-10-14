@@ -1,3 +1,11 @@
+---
+module: broker-dashboard
+jira: [CS-1305]
+status: ready-for-dev
+last_verified: 2026-10-14
+related_wiki: ../../wiki/broker-dashboard.md
+---
+
 # Broker Dashboard — Full Specification
 
 **CS-1305** | User Story | Priority: High | Status: Ready for Dev

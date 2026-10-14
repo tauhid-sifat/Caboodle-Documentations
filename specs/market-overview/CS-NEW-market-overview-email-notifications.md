@@ -1,3 +1,11 @@
+---
+module: market-overview
+jira: [MO9]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
 # Market Overview | Push Updates to Brands via Email (Summary with Details Link)
 
 **MO9** | New Requirement | User Story | Priority: TBD | Status: New

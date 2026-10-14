@@ -1,3 +1,11 @@
+---
+module: trade-spend
+jira: [CS-1625]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
 # Brand Modules | TSS | Remove or Modify Approved Promotions
 
 **CS-1625** | New Requirement | User Story | Priority: TBD | Status: New

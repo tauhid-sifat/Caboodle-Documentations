@@ -1,3 +1,11 @@
+---
+module: admin
+jira: [CS-1592]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
 # Admin | Single Trade Spend for Basic Subscription
 
 **CS-1592** | New Requirement | User Story | Priority: TBD | Status: New | https://caboodleservices.atlassian.net/browse/CS-1592

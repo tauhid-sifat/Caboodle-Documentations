@@ -1,3 +1,11 @@
+---
+module: category-review
+jira: []
+status: superseded
+last_verified: 2026-10-14
+related_wiki: ../../wiki/category-review.md
+---
+
 # Category Review | Allow User to Increase Rows Per Page
 
 **New Requirement** | User Story | Priority: TBD | Status: **Superseded by CS-1316**

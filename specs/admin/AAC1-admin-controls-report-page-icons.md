@@ -1,3 +1,11 @@
+---
+module: admin
+jira: [CS-1588]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
 # Admin | Admin Controls | Control Icons on Report Page Buttons (e.g., Monthly Report)
 
 **CS-1588** | New Requirement | User Story | Priority: TBD | Status: New

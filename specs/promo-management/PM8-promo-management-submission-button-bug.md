@@ -1,3 +1,11 @@
+---
+module: promo-management
+jira: [PM8]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/promo-management-status.md
+---
+
 # Promo Management | Submission Button Does Not Work
 
 **PM8** | Bug | Priority: TBD | Status: New

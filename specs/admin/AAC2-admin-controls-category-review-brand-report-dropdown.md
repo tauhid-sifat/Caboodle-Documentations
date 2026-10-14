@@ -1,3 +1,11 @@
+---
+module: admin
+jira: [CS-1589]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
 # Admin | Admin Controls | Control Dropdown Options for Broker Category Review Brand Report
 
 **CS-1589** | New Requirement | User Story | Priority: TBD | Status: New

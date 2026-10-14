@@ -1,3 +1,11 @@
+---
+module: category-review
+jira: [CS-1606]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/category-review.md
+---
+
 # Category Review | Calendar Sort by Banner or Category?
 
 **CS-1606** | Question | Priority: TBD | Status: New

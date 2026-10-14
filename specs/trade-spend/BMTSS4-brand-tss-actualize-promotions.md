@@ -1,3 +1,11 @@
+---
+module: trade-spend
+jira: [CS-1628]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
 # Brand Modules | TSS | Actualize Promotions - Best Method and Plan-to-Actual Reports
 
 **CS-1628** | New Requirement | User Story | Priority: TBD | Status: New

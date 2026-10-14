@@ -1,3 +1,11 @@
+---
+module: promo-management
+jira: [CS-1711]
+status: backlog
+last_verified: 2026-10-14
+related_wiki: ../../wiki/promo-management-status.md
+---
+
 # Broker Dashboard | Promotional Management | Revise UI to Match the Category Review Calendar
 
 **CS-1711** | User Story | Priority: Medium | Status: Backlog

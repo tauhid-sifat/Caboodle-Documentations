@@ -1,3 +1,11 @@
+---
+module: brand
+jira: [CS-1594]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
 # Brand Modules | Pipeline | Allow User to Assign to Users
 
 **CS-1594** | Bug / Enhancement | User Story | Priority: TBD | Status: New

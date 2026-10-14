@@ -1,4 +1,12 @@
-﻿# Distributor APL | Infinite Scrolling
+﻿---
+module: broker-dashboard
+jira: [CS-1602]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/broker-dashboard.md
+---
+
+# Distributor APL | Infinite Scrolling
 
 **CS-1602** | New Requirement | User Story | Priority: TBD | Status: New
 

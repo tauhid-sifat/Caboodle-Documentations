@@ -1,3 +1,11 @@
+---
+module: admin
+jira: [CS-1591]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
 # Broker | Dashboard | Prototype with Flags Alerting Upcoming Tasks, Promo Submissions, Category Review Deadlines
 
 **CS-1591** | New Requirement | Prototype | Priority: TBD | Status: New | https://caboodleservices.atlassian.net/browse/CS-1591

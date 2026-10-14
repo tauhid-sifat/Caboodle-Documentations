@@ -1,3 +1,11 @@
+---
+module: promo-management
+jira: [CS-1617]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/promo-management-status.md
+---
+
 # Promotional Management | Format Grid Uniformly
 
 **CS-1617** | Bug | Priority: Low | Status: New

@@ -1,3 +1,11 @@
+---
+module: reports
+jira: [CS-1623]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
 # Reports | Brand Distributor Report | Rolling Latest 12 Months Unless Filtered
 
 **CS-1623** | New Requirement | User Story | Priority: TBD | Status: New

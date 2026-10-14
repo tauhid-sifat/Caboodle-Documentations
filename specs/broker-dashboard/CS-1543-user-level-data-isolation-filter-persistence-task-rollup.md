@@ -1,3 +1,11 @@
+---
+module: broker-dashboard
+jira: [CS-1543]
+status: todo
+last_verified: 2026-10-14
+related_wiki: ../../wiki/broker-dashboard.md
+---
+
 # CS-1543: User-Level Data Isolation, Filter Persistence, and Task Roll-Up
 
 **Status:** To Do | **Priority:** High | **Reporter:** Ms. Constance Wolfe | **Created:** August 17, 2026

@@ -1,3 +1,11 @@
+---
+module: category-review
+jira: [CS-1607]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/category-review.md
+---
+
 # Category Review | Review End Date Added to List — Do We Need to Change the Upload Template?
 
 **CS-1607** | Question | Priority: TBD | Status: New

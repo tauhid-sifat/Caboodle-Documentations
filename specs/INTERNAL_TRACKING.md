@@ -1,3 +1,11 @@
+---
+module: meta
+jira: []
+status: internal
+last_verified: 2026-10-14
+related_wiki: ../wiki/deliverables-index.md
+---
+
 # INTERNAL TICKET TRACKING — Caboodle
 
 > **Purpose:** Internal tracking layer for ticket-spec files in `specs/`.

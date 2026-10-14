@@ -1,3 +1,11 @@
+---
+module: broker-dashboard
+jira: [CS-1599]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/broker-dashboard.md
+---
+
 # Broker Dashboard | Assign Time and Person (Dashboard)
 
 **CS-1599** | New Requirement | User Story | Priority: TBD | Status: New

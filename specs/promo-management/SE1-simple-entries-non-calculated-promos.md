@@ -1,3 +1,11 @@
+---
+module: promo-management
+jira: [CS-1708]
+status: backlog
+last_verified: 2026-10-14
+related_wiki: ../../wiki/promo-management-status.md
+---
+
 # Promotional Planning | Simple Entries (Non-Calculated Promotions)
 
 **CS-1708** | User Story | Priority: High | Status: Backlog

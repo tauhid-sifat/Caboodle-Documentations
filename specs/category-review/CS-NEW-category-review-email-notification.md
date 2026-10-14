@@ -1,3 +1,11 @@
+---
+module: category-review
+jira: []
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/category-review.md
+---
+
 # Category Review | Email Notification
 
 **New Requirement** | User Story | Priority: TBD | Status: New

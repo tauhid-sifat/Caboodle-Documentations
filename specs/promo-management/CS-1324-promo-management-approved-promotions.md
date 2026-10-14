@@ -1,3 +1,11 @@
+---
+module: promo-management
+jira: [CS-1324]
+status: backlog
+last_verified: 2026-10-14
+related_wiki: ../../wiki/promo-management-status.md
+---
+
 # Broker Dashboard | Promotional Management — Only Push Brand Approved Promotions to Promo Management
 
 **CS-1324** | User Story | Priority: High | Status: Backlog

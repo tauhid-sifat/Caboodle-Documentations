@@ -1,3 +1,11 @@
+---
+module: broker-dashboard
+jira: [CS-1305]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/broker-dashboard.md
+---
+
 # Broker Dashboard | Create Dashboard with KPI Cards & Calendar Views
 
 **CS-1305** | User Story | Priority: High | Status: New  

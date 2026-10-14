@@ -1,3 +1,11 @@
+---
+module: admin
+jira: [CS-1593]
+status: resolved
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
 # Admin | Store Report | Eliminate / Merge Store Duplicates
 
 **CS-1593** | New Requirement | User Story | Priority: TBD | Status: New → **Resolved / Awaiting Live Push** (per Bijoy 8/24) | https://caboodleservices.atlassian.net/browse/CS-1593

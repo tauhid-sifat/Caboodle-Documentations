@@ -1,4 +1,12 @@
-﻿# Category Review | Remove All Reviews at Once Rather Than Page by Page
+﻿---
+module: category-review
+jira: [CS-1605]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/category-review.md
+---
+
+# Category Review | Remove All Reviews at Once Rather Than Page by Page
 
 **CS-1605** | New Requirement | User Story | Priority: TBD | Status: New
 

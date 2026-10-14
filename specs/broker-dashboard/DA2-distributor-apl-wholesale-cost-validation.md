@@ -1,4 +1,12 @@
-﻿# Distributor APL | Wholesale Case Cost Required on Edit But Not on Upload
+﻿---
+module: broker-dashboard
+jira: [CS-1603]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/broker-dashboard.md
+---
+
+# Distributor APL | Wholesale Case Cost Required on Edit But Not on Upload
 
 **CS-1603** | New Requirement | Bug | Priority: TBD | Status: New
 

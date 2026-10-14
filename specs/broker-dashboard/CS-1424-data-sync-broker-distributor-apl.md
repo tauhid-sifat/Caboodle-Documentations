@@ -1,3 +1,11 @@
+---
+module: broker-dashboard
+jira: [CS-1424]
+status: backlog
+last_verified: 2026-10-14
+related_wiki: ../../wiki/broker-dashboard.md
+---
+
 # Data Mapping | Broker Dashboard APL | Need Data Sync for Broker Distributor APL
 
 **CS-1424** | User Story | Priority: Highest | Status: Backlog  

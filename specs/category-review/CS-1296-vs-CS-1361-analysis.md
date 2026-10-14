@@ -1,3 +1,11 @@
+---
+module: category-review
+jira: [CS-1296, CS-1361]
+status: draft
+last_verified: 2026-10-14
+related_wiki: ../../wiki/category-review.md
+---
+
 # Analysis: CS-1296 vs CS-1361 — Calendar & Email Ambiguity
 
 ## Current State

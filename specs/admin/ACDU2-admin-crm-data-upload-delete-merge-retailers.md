@@ -1,3 +1,11 @@
+---
+module: admin
+jira: [CS-1709]
+status: backlog
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
 # Admin | CRM Data Upload | Delete or Merge Retailers
 
 **CS-1709** | Task | Priority: Medium | Status: Backlog

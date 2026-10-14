@@ -1,3 +1,11 @@
+---
+module: talking-points
+jira: []
+status: draft
+last_verified: 2026-10-14
+related_wiki: ../../wiki/client-decisions-open-questions.md
+---
+
 # Talking Points — Clarify Unticketed Requirements (for Constance)
 
 **Purpose:** Get details from Constance on the requirements that have **no Jira ticket** so we can create well-scoped tickets.

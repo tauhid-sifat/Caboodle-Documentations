@@ -1,3 +1,11 @@
+---
+module: broker-dashboard
+jira: [CS-1604]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/broker-dashboard.md
+---
+
 # Broker Dashboard | Add Broker Logo to Dashboard Button
 
 **CS-1604** | New Requirement | User Story | Priority: TBD | Status: New

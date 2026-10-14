@@ -1,3 +1,11 @@
+---
+module: category-review
+jira: [CS-1296]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/category-review.md
+---
+
 # Broker Dashboard | Category Review Calendar Rollup
 
 **CS-1296** | User Story | Priority: High | Status: New

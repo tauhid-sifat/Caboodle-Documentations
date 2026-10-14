@@ -1,3 +1,11 @@
+---
+module: brand
+jira: [CS-1597]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
 # Brand Modules | Retailer CRM | Add Store-Level Listing from Banner Page
 
 **CS-1597** | New Requirement | User Story | Priority: TBD | Status: New

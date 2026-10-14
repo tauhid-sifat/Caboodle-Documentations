@@ -1,3 +1,11 @@
+---
+module: reports
+jira: [CS-1624]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
 # Store Report Management (SRM) | House Accounts - Direct-to-Store Program Tracking
 
 **CS-1624** | New Requirement | Concept / Epic | Priority: TBD | Status: New

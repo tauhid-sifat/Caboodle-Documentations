@@ -1,3 +1,11 @@
+---
+module: category-review
+jira: []
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/category-review.md
+---
+
 # Category Review — User Workflow (Mermaid Flow)
 
 Mermaid flowchart capturing the client's Category Review user workflow requirements

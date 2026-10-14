@@ -1,3 +1,11 @@
+---
+module: admin
+jira: [CS-1590]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
 # Admin | CRM Data Upload | Filter Audit - Filter by Any Column
 
 **CS-1590** | New Requirement | User Story | Priority: TBD | Status: New | https://caboodleservices.atlassian.net/browse/CS-1590

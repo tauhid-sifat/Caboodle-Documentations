@@ -1,3 +1,11 @@
+---
+module: market-overview
+jira: [CS-1318]
+status: backlog
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
 # Market Overview | Filter Needs More Field Options (List Too Limited)
 
 **CS-1318** | User Story | Priority: High | Status: Backlog

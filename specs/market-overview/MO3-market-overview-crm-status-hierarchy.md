@@ -1,4 +1,12 @@
-﻿# Market Overview | Document and Define Status Update Hierarchy to Brand CRM
+﻿---
+module: market-overview
+jira: [CS-1610]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
+# Market Overview | Document and Define Status Update Hierarchy to Brand CRM
 
 **CS-1610** | New Requirement | User Story | Priority: High | Status: New
 

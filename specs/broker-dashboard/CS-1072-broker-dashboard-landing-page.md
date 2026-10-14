@@ -1,3 +1,11 @@
+---
+module: broker-dashboard
+jira: [CS-1072]
+status: backlog
+last_verified: 2026-10-14
+related_wiki: ../../wiki/broker-dashboard.md
+---
+
 # Broker Dashboard | [BE] Update Landing Page to Match Brand Environments — Replace Dashboard with Broker Logo
 
 **CS-1072** | [BE] Backend | User Story | Priority: High | Status: Backlog  

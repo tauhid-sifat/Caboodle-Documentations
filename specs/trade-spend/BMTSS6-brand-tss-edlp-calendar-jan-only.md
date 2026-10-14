@@ -1,3 +1,11 @@
+---
+module: trade-spend
+jira: [CS-1630]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
 # Brand Modules | TSS / Promo Calendar | EDLP Shows Only in January - Should Span All Months
 
 **CS-1630** | Bug | Priority: TBD | Status: New

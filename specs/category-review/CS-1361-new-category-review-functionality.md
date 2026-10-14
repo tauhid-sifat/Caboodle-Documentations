@@ -1,3 +1,11 @@
+---
+module: category-review
+jira: [CS-1361]
+status: backlog
+last_verified: 2026-10-14
+related_wiki: ../../wiki/category-review.md
+---
+
 # Broker Dashboard | New Category Review Functionality
 
 **CS-1361** | User Story | Priority: High | Status: Backlog  
