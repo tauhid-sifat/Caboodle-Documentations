@@ -1,3 +1,11 @@
+---
+type: index
+title: Client decisions and open questions
+module: general
+status: current
+last_verified: 2026-10-14
+---
+
 # Client Decisions & Open Questions (Index)
 
 > Migrated from AGENTS.md §17; raw `meetings/transcripts/` remain source of truth.

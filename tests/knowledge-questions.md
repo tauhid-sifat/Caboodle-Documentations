@@ -8,12 +8,12 @@
 
 ## Q1. SkuStatus terminal value + rule
 - **Question:** Which `SkuStatus` value is terminal, and what rule governs Market Overview overwrites of it?
-- **Expected source(s):** `wiki/market-overview.md` (primary); `wiki/promotions.md` (status enum context)
+- **Expected source(s):** `wiki/key-business-flows.md` (primary); `wiki/promo-management-status.md` (status enum context)
 - **Correct cited answer:** Correct file + any accurate line range showing Discontinued is terminal and Market Overview cannot overwrite it (today: AGENTS.md §§6/10).
 
 ## Q2. Brands-assigned-to-brokers phrasing
 - **Question:** What is the correct phrasing for the brand–broker assignment relationship, and which phrasings are wrong?
-- **Expected source(s):** `wiki/terminology.md`
+- **Expected source(s):** `wiki/broker-brand-terminology.md`
 - **Correct cited answer:** Correct file + any accurate line range showing "brands are assigned to brokers" / "broker represents brands" is correct and the "assigned under brand" variants are wrong (today: AGENTS.md §7).
 
 ## Q3. Category Review three interactions + triggers
@@ -28,7 +28,7 @@
 
 ## Q5. Promotion lifecycle steps + TSS push validation
 - **Question:** What are the promotion lifecycle steps from Product Specs through broker Promo Management, and what validation gates the TSS push to Approved?
-- **Expected source(s):** `wiki/flows.md` (or `wiki/promotions.md` if flows live there)
+- **Expected source(s):** `wiki/key-business-flows.md` (or `wiki/promo-management-status.md` if statuses live there)
 - **Correct cited answer:** Correct file + any accurate line range showing the TSS 4-step wizard and the pricing-exists validation before Approved (today: AGENTS.md §6).
 
 ## Q6. Multi-brand sheet-view decision source
