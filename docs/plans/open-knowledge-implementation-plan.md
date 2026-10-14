@@ -2,6 +2,11 @@
 
 > Status: APPROVED at Gate 2 (full ceremony). Untracked (no Jira). Scope: docs repo only. No deadline.
 > Planner wrote this file only; no code changes made. Execution is a separate step.
+>
+> ## Execution status (2026-10-14, branch `restructure`, rollback tag `pre-restructure`)
+> DONE: Waves 1–3 (restructure, security+tests draft, content). Wave 4 BLOCKED on tool version (see below). Waves 5–6 pending.
+> DECISION: wait for okn v0.14.0. Installed v0.13.0 (`~/.local/bin/okn.exe`, telemetry disabled, NOT on PATH) lacks the planned commands: no `check` (use `validate`), no `publish` (use `export`/`automation`), no copy-mode `--mode`, no `--plan`, no top-level `review`. v0.13.0 mapping if ever needed: A=scaffold/setup, B=prompt/agent+setup skill, C=validate+audit+eval, D=search/view/get/query, E=mcp+export+automation. `setup` in v0.13.0 GENERATES new wikis (agent-task-driven) instead of adopting ours — do not run `okn setup --from` without fresh approval. On v0.14.0 release: re-verify every flag against the binary, then resume Wave 4.
+> OPEN: 12 _unsorted items (Ask Caboodle files/data, BUSINESS/CONTEXT/index placement, scratch note); `module` key dropped from jira/notes schema (unsourceable); data/jira.db is local-only rebuild; future jira/tickets/ additions need `git add -f` (path gitignored, existing files stay tracked); fetch-jira.js now requires `--sync` (sync.sh must pass it).
 
 ## 1. Summary
 Standardize this repo's structure (Wave 1, runs alone), then implement all five Open Knowledge capabilities (openknowledge.sh): setup/organize (A), agent collaboration (B), validation (C), search + local viewing (D), publish + MCP + CI (E). Target: opencode answers project questions with a cited file and line range, without crawling the repo.
