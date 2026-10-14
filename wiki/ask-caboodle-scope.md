@@ -2,7 +2,7 @@
 
 > **Goal:** An AI-powered query/chat feature built into Caboodle that lets users ask natural-language questions and get answers pulled directly from their own Caboodle data — an AI assistant layered on top of the existing reports and dashboards.
 > **Prepared by peer review:** Requirements Analyst · Caboodle Analyst · Critic · Product Analyst
-> **Evidence base:** Sep 3 2026 "Ask Caboodle" call; Constance's Sep 4 notes; `docs/Ask Example.md`; `ba-onboarding/` (backend, frontend, and all module analyses); `data/jira-tickets/` (1,654 tickets, CS-1…CS-1651 + GTMS-*); `index.md`.
+> **Evidence base:** Sep 3 2026 "Ask Caboodle" call; Constance's Sep 4 notes; `wiki/ask-example.md`; `docs/onboarding/` (backend, frontend, and all module analyses); `jira/tickets/` (1,780 tickets, CS-1…CS-1777 + GTMS-*); `index.md`.
 > **Status:** Feature ideation for client review.
 
 ---

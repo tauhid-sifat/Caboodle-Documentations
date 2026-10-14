@@ -14,4 +14,4 @@ Caboodle is a **multi-tenant SaaS platform for CPG (Consumer Packaged Goods) bra
 
 **Target users:** Brand owners, brand sub-users, brokers, sub-brokers, internal admins — all in natural/organic CPG.
 
-> New to CPG? Read `BUSINESS.md` (root) for the plain-English business overview: players, modules, and end-to-end flows.
+> New to CPG? Read `wiki/business.md` for the plain-English business overview: players, modules, and end-to-end flows.

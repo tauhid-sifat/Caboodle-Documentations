@@ -10,7 +10,7 @@ related_wiki: ../../wiki/module-catalog.md
 
 **CS-1591** | New Requirement | Prototype | Priority: TBD | Status: New | https://caboodleservices.atlassian.net/browse/CS-1591
 
-> **Synced 2026-09-07 12:48 UTC from live Jira:** Summary changed **Admin → Broker** per your update. Live Jira `summary` is now *"Broker | Dashboard | Prototype …"*. This file synced to match live `data/jira-tickets/CS-1591.md`. Previous local clarification retained below.
+> **Synced 2026-09-07 12:48 UTC from live Jira:** Summary changed **Admin → Broker** per your update. Live Jira `summary` is now *"Broker | Dashboard | Prototype …"*. This file synced to match live `jira/tickets/CS-1591.md`. Previous local clarification retained below.
 > **Original scope clarification (Constance):** *"This is more for Broker & Brands Admin would be secondary"* — now reflected in live Jira summary.
 
 ---
@@ -64,7 +64,7 @@ This mirrors the timeline concept used on the Broker Dashboard (BD1), extended a
 ## Jira Reference (data/jira-tickets)
 - **CS-1281** - Auto Flag New Retailers / Auto Flag Review or Discontinued SKUs (existing flag-concept work, different domain but same 'flag' pattern).
 - Context: **CS-1598** (Broker Dashboard timeline already groups Tasks / Promo / Category Review) - reuse the item-type model.
-- **Live sync:** `data/jira-tickets/CS-1591.md` now exactly mirrors live Jira as of 2026-09-07T12:48:15.717+0600.
+- **Live sync:** `jira/tickets/CS-1591.md` now exactly mirrors live Jira as of 2026-09-07T12:48:15.717+0600.
 
 ---
 

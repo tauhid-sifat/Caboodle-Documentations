@@ -3,7 +3,7 @@
 BA / requirements workspace for the Caboodle multi-tenant SaaS platform (CPG brands & brokers).
 
 ## Quick Start
-- **Knowledge base:** `AGENTS.md`, `CONTEXT.md`, `BUSINESS.md` — project memory, current context, business rules
+- **Knowledge base:** `AGENTS.md`, `CONTEXT.md`, `wiki/business.md` — project memory, current context, business rules
 - **System docs:** `docs/onboarding/` — backend/frontend/module documentation
 
 ## Folder Layout

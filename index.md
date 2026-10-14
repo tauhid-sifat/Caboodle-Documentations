@@ -11,7 +11,7 @@
 
 | Folder / File(s) | Role | Authority |
 |---|---|---|
-| `AGENTS.md`, `CONTEXT.md`, `BUSINESS.md`, `README.md` | Synthesized knowledge base + snapshot + business primer | Knowledge layer (derived from evidence below) |
+| `AGENTS.md`, `CONTEXT.md`, `wiki/business.md`, `README.md` | Synthesized knowledge base + snapshot + business primer | Knowledge layer (derived from evidence below) |
 | `meetings/transcripts/*.txt` (16 transcripts, Jul 13 – Sep 3 2026) | Raw client meeting evidence — primary source for DEC/REQ/STK | **Raw evidence — highest authority for what was decided verbally** |
 | `specs/**` (74 spec files: broker-dashboard/, category-review/, market-overview/, promo-management/, trade-spend/, brand/, reports/, talking-points/) | BA-written ticket specifications | Deliverables (client-reviewed subset); proposals unless marked approved |
 | `docs/onboarding/backend/*`, `docs/onboarding/frontend/*` (incl. `modules/*`) | AI-generated AS-IS codebase analysis | Evidence about the system as built |

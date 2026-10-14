@@ -31,4 +31,4 @@ last_verified: 2026-10-14
 | **IsSubmitted** | Boolean flag on promo events for broker submission |
 | **Brokerage** | The broker's organization — scope for data visibility |
 
-> Plain-English definitions for non-CPG developers: `BUSINESS.md` ("Glossary for Non-CPG Developers").
+> Plain-English definitions for non-CPG developers: `wiki/business.md` ("Glossary for Non-CPG Developers").

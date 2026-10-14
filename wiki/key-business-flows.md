@@ -39,4 +39,4 @@ Distributor (KeHE/UNFI/SPINS) → CSV/Excel upload → DataHub → Unmapped reco
 - Dead-ends: Pending → Declined (never placed), Pending → NotActive (never activated)
 - `MarketOverview.SKUID` ambiguous — unclear if it targets `BannerSKU` or `ProductSpecification`
 
-> End-to-end narrative versions of these flows: `BUSINESS.md` ("Key Business Flows (End to End)").
+> End-to-end narrative versions of these flows: `wiki/business.md` ("Key Business Flows (End to End)").

@@ -15,7 +15,7 @@
 
 | When the task touches… | Read |
 |---|---|
-| What Caboodle is, who uses it | `wiki/project-overview.md` + `BUSINESS.md` |
+| What Caboodle is, who uses it | `wiki/project-overview.md` + `wiki/business.md` |
 | Frontend/backend versions, infra | `wiki/tech-stack.md` |
 | Module layout, CQRS, tenancy | `wiki/architecture.md` |
 | Module purposes and maturity | `wiki/module-catalog.md` |
@@ -35,7 +35,6 @@
 
 ## Root docs (stay at root, linked from wiki)
 
-- `BUSINESS.md` — plain-English CPG primer, module narratives, data-flow diagram.
 - `CONTEXT.md` — session snapshot: evidence inventory, completed work, auth, open items.
 
 ## Evidence sources (read-only, never rewrite)

@@ -56,7 +56,7 @@ Standardize this repo's structure (Wave 1, runs alone), then implement all five 
 AGENTS.md              # ~100-line router: rules + "for X, read Y" table
 README.md
 .env.example           # real .env is gitignored
-wiki/                  # 17 AGENTS.md sections, BUSINESS.md, CONTEXT.md
+wiki/                  # 17 AGENTS.md sections + business.md (CONTEXT.md stays at root)
 specs/                 # 74 files ex-tickets/, same 9 subfolders
 meetings/
   transcripts/         # raw, never edited

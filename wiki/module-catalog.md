@@ -27,4 +27,4 @@ last_verified: 2026-10-14
 
 > **Backlog counts:** figures above are from legacy notes. See `jira-backlog-intelligence.md` for live, evidence-based counts from the 1,780-ticket Jira export.
 
-> Module-by-module business context: `BUSINESS.md` ("What Caboodle Does"). Session/provenance context: `CONTEXT.md`.
+> Module-by-module business context: `wiki/business.md` ("What Caboodle Does"). Session/provenance context: `CONTEXT.md`.
