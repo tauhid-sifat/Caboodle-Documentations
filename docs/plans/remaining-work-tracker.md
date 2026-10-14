@@ -37,7 +37,13 @@
 - Jira MCP configured (official Atlassian remote, OAuth).
 - Contradiction check: CS-1361 vs D18 (blocking), 4 unspecced clauses, D16 clarified.
 
+## Standing instructions
+
+- **Jira statuses:** keep new/unknown statuses as labeled boxes (count + name, no invented workflow semantics). On each sync, diff the status list vs the model in `wiki/jira-backlog-intelligence.md`; record additions/retirements with date. (2026-10-14: In Review added, Resolved retired, GTMS scheme split out.)
+
 ## Jira posting checklist (do NOT post without explicit "post" + format)
+
+- **Jira statuses:** keep new/unknown statuses as labeled boxes (count + name, no invented workflow semantics). On each sync, diff the status list vs the model in `wiki/jira-backlog-intelligence.md`; record additions/retirements with date. (2026-10-14: In Review added, Resolved retired, GTMS scheme split out.)
 
 When confirmed, create one CS ticket per TODO/IN-REVIEW row above (A1–A6 except A6-trivial, B3-split?) with summary + this file's row as description. Suggested subjects:
 - "Docs: review draft specs (corrupt-data report, resend-selected)"
