@@ -1,2 +1,9 @@
 .vercel
 .env*
+
+# Generated / large / local-only data - never commit (tracked files stay tracked)
+data/
+jira/
+.openknowledge/
+site/
+*.db

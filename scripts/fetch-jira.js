@@ -151,6 +151,11 @@ async function fetchAll(base, auth, jql) {
 }
 
 async function main() {
+  const args = process.argv.slice(2);
+  if (args.includes('--help') || args.includes('-h') || !args.includes('--sync')) {
+    console.log('Usage: node fetch-jira.js --sync\nSyncs live Jira (CS, GTMS) to jira/tickets/. Requires scripts/.env.');
+    return;
+  }
   const env = loadEnv();
   const base = env.JIRA_BASE_URL.replace(/\/+$/, '');
   const auth = 'Basic ' + Buffer.from(`${env.JIRA_EMAIL}:${env.JIRA_API_TOKEN}`).toString('base64');
