@@ -29,6 +29,7 @@
 | Tickets missing descriptions (legacy CSV gap list) | `wiki/jira-description-gaps.md` |
 | Tech debt, security risks, EOL items | `wiki/technical-debt-risks.md` |
 | Spec-file inventory, wireframe links | `wiki/deliverables-index.md` |
+| Ask Caboodle scope, constraints (no RAG, multi-agent), client version | `wiki/ask-caboodle-scope.md` + `wiki/ask-caboodle-scope-client.md` + `wiki/ask-caboodle-presentation.md` |
 | SKU/UPC/Banner/APL/EDLP/TPR and 15 more terms | `wiki/glossary.md` |
 | Live backlog stats (1,784 tickets), priority skew | `wiki/jira-backlog-intelligence.md` + `CONTEXT.md` |
 | Client decisions D1–D15, consolidated open questions | `wiki/client-decisions-open-questions.md` |

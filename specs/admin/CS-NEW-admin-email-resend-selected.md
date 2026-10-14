@@ -1,3 +1,13 @@
+---
+type: spec
+title: Admin email resend for selected
+module: admin
+status: draft
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+jira: []
+---
+
 # Admin | Sent Emails | Resend for Selected
 
 **CS-NEW** | New Requirement | Priority: TBD | Status: Draft

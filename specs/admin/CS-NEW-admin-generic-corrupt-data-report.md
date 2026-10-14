@@ -1,3 +1,13 @@
+---
+type: spec
+title: Admin generic corrupt-data report
+module: admin
+status: draft
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+jira: []
+---
+
 # Admin | Uploads | Generic Corrupt-Data Report
 
 **CS-NEW** | New Requirement | Priority: TBD | Status: Draft

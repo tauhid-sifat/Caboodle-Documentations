@@ -1,14 +1,14 @@
 # Project Context — Caboodle BA Deliverables
 
-**Last Updated:** 2026-09-02  
-**Session:** Knowledge-base sync from live Jira (1,654 tickets) + 14 meeting transcripts
+**Last Updated:** 2026-10-14  
+**Session:** Knowledge-base sync from live Jira (1,784 tickets) + 16 meeting transcripts
 
 ---
 
 ## Current Objective
 Maintain the Caboodle BA knowledge base and ticket deliverables, keeping them synchronized with **live evidence**:
-- Live Jira export (`jira/tickets/` — 1,654 tickets, **authoritative**; supersedes the legacy `data/Jira (3).csv`)
-- 14 client meeting transcripts (`meetings/` — raw evidence)
+- Live Jira export (`jira/tickets/` — 1,784 tickets, **authoritative**; supersedes the legacy `data/Jira (3).csv`)
+- 16 client meeting transcripts (`meetings/` — raw evidence)
 - Lovable prototype (`design/prototypes/Daily Delight Calendar/`) — Category Review patterns
 - Curated ticket specs in `specs/` (client-reviewed subset)
 
@@ -20,9 +20,9 @@ Maintain the Caboodle BA knowledge base and ticket deliverables, keeping them sy
 
 | Source | Count | Format | Status as evidence |
 |--------|-------|--------|--------------------|
-| `jira/tickets/` | 1,654 tickets (CS-1…CS-1651 + GTMS-*) | Markdown (Jira export) | **Authoritative** live backlog — generated 2026-09-02 from `caboodleservices.atlassian.net` |
-| `meetings/` | 14 transcripts (Jul 15 – Aug 19, 2026) | Raw text | **Raw evidence** — structured knowledge extracted to AGENTS.md §17; transcripts kept intact |
-| `specs/` | ~50 curated spec files | Markdown | BA deliverables (prioritized, client-reviewed subset) |
+| `jira/tickets/` | 1,784 tickets (CS-1…CS-1781 + GTMS-*) | Markdown (Jira export) | **Authoritative** live backlog — generated 2026-10-14 from `caboodleservices.atlassian.net` |
+| `meetings/` | 16 transcripts (Jul 13 – Sep 3, 2026) | Raw text | **Raw evidence** — structured knowledge extracted to `wiki/decisions.md` + `meetings/notes/`; transcripts kept intact |
+| `specs/` | 76 curated spec files | Markdown | BA deliverables (prioritized, client-reviewed subset; 2 drafts pending review) |
 | `docs/onboarding/`, `design/prototypes/` | docs + Lovable prototype | Mixed | Reference |
 | `data/Jira (3).csv` | legacy 130-issue export | CSV | **Legacy** — superseded by `jira/tickets/`; not source of truth |
 

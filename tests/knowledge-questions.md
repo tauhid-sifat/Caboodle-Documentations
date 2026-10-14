@@ -39,7 +39,7 @@
 ## Q7. Highest Jira ticket number + total count
 - **Question:** What is the highest Jira ticket number and the total ticket count in the export?
 - **Expected source(s):** `jira/` index (e.g. `jira/README.md` or index file)
-- **Correct cited answer:** Correct file + any accurate line range showing the max ticket number and total count (expect CS-1777 / 1,780 per AGENTS.md §16; update if export grows).
+- **Correct cited answer:** Correct file + any accurate line range showing the max ticket number and total count (expect CS-1781 / 1,784 per `jira-backlog-intelligence.md`; update if export grows).
 
 ## Q8. Transcripts lacking §17 coverage
 - **Question:** Which meeting transcripts have no coverage in the consolidated decisions list (§17)?

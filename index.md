@@ -1,6 +1,6 @@
 # Caboodle — Interlinked Project Knowledge Index
 
-> **Generated:** 2026-09-02 · **Maintained by:** BA (per DEC-031 this file is the project "second brain")
+> **Generated:** 2026-09-02 · **Refreshed:** 2026-10-14 · **Maintained by:** BA (per DEC-031 this file is the project "second brain")
 > **Purpose:** Single-file knowledge base. Every entry is self-sufficient (no detail files behind it) and cross-linked both directions. When prompted later, pull relevant rows + their Related IDs — no other file required.
 > **ID scheme:** `REQ-nnn` requirements · `DEC-nnn` decisions/constraints · `STK-nnn` stakeholders · `RISK-nnn` risks · `CON-nn` contradictions (see register at bottom).
 > **Status vocabulary:** REQ: RAISED / SPEC'D / OPEN QUESTION / UNTICKETED / SUPERSEDED / DONE · DEC: APPROVED / VALIDATED / CLARIFIED / PROPOSED / ESTABLISHED / CONSTRAINT / ASSESSED · STK: IDENTIFIED · RISK: OPEN / FLAGGED / CONFIRMED / SUSPECTED / ACCEPTED.
@@ -13,7 +13,7 @@
 |---|---|---|
 | `AGENTS.md`, `CONTEXT.md`, `wiki/business.md`, `README.md` | Synthesized knowledge base + snapshot + business primer | Knowledge layer (derived from evidence below) |
 | `meetings/transcripts/*.txt` (16 transcripts, Jul 13 – Sep 3 2026) | Raw client meeting evidence — primary source for DEC/REQ/STK | **Raw evidence — highest authority for what was decided verbally** |
-| `specs/**` (74 spec files: broker-dashboard/, category-review/, market-overview/, promo-management/, trade-spend/, brand/, reports/, talking-points/) | BA-written ticket specifications | Deliverables (client-reviewed subset); proposals unless marked approved |
+| `specs/**` (76 spec files: broker-dashboard/, category-review/, market-overview/, promo-management/, trade-spend/, brand/, reports/, talking-points/ — incl. 2 drafts pending review) | BA-written ticket specifications | Deliverables (client-reviewed subset); proposals unless marked approved |
 | `docs/onboarding/backend/*`, `docs/onboarding/frontend/*` (incl. `modules/*`) | AI-generated AS-IS codebase analysis | Evidence about the system as built |
 | `docs/architecture/` (Analysis_Part1, Backend Architecture Review, Frontend Architectural Review), `docs/qa/` (Testing Checklist, docs/qa/TSS Feature – QA Test Checklist.md), `docs/handover/` (Product_Reconstruction_Handover) | Reviews, handover, QA baselines | Evidence / assessment |
 | `jira/tickets/` (1,784 files, CS-1…1781 + GTMS-*) | Live Jira export (2026-10-14) | **Authoritative backlog.** Represented here via aggregate stats (AGENTS §16) + the active tickets covered by `specs/`; not read raw individually |

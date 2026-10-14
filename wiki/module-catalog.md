@@ -25,6 +25,6 @@ last_verified: 2026-10-14
 | **TradeSpendSandbox** | TSS — draft promos, what-if scenarios, 4-step wizard | Functional, ongoing QA — 37 tickets |
 | **PromotionalCalendar** | Calendar view of promotions | Partial, untested |
 
-> **Backlog counts:** figures above are from legacy notes. See `jira-backlog-intelligence.md` for live, evidence-based counts from the 1,780-ticket Jira export.
+> **Backlog counts:** figures above are from legacy notes. See `jira-backlog-intelligence.md` for live, evidence-based counts from the 1,784-ticket Jira export.
 
 > Module-by-module business context: `wiki/business.md` ("What Caboodle Does"). Session/provenance context: `CONTEXT.md`.

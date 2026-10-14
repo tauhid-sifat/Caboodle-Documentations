@@ -8,7 +8,7 @@ last_verified: 2026-10-14
 
 # JIRA ISSUES — DESCRIPTION GAPS
 
-> **Legacy:** the gap list below was computed against `data/Jira (3).csv` (130 issues) at kickoff. It should be **re-derived from `jira/tickets/`** (1,780 live tickets) — the CSV is superseded.
+> **Legacy:** the gap list below was computed against `data/Jira (3).csv` (130 issues) at kickoff. It should be **re-derived from `jira/tickets/`** (1,784 live tickets) — the CSV is superseded.
 
 19 issues in `data/Jira (3).csv` lack proper descriptions (under 50 chars or only image):
 
