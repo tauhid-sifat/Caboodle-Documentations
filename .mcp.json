@@ -1,0 +1,34 @@
+{
+  "mcpServers": {
+    "caboodle-wiki": {
+      "command": "okn",
+      "args": ["--no-telemetry", "mcp", "${CLAUDE_PROJECT_DIR:-.}/kb/Wiki"],
+      "env": { "DO_NOT_TRACK": "1" }
+    },
+    "caboodle-specs": {
+      "command": "okn",
+      "args": ["--no-telemetry", "mcp", "${CLAUDE_PROJECT_DIR:-.}/Pilot"],
+      "env": { "DO_NOT_TRACK": "1" }
+    },
+    "caboodle-notes": {
+      "command": "okn",
+      "args": ["--no-telemetry", "mcp", "${CLAUDE_PROJECT_DIR:-.}/kb/Notes"],
+      "env": { "DO_NOT_TRACK": "1" }
+    },
+    "caboodle-transcripts": {
+      "command": "okn",
+      "args": ["--no-telemetry", "mcp", "${CLAUDE_PROJECT_DIR:-.}/kb/Transcripts"],
+      "env": { "DO_NOT_TRACK": "1" }
+    },
+    "caboodle-docs": {
+      "command": "okn",
+      "args": ["--no-telemetry", "mcp", "${CLAUDE_PROJECT_DIR:-.}/kb/Docs"],
+      "env": { "DO_NOT_TRACK": "1" }
+    },
+    "caboodle-jira": {
+      "command": "okn",
+      "args": ["--no-telemetry", "mcp", "${CLAUDE_PROJECT_DIR:-.}/kb/Jira"],
+      "env": { "DO_NOT_TRACK": "1" }
+    }
+  }
+}

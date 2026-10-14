@@ -52,6 +52,9 @@ claude mcp add --scope user caboodle-wiki --env DO_NOT_TRACK=1 -- okn --no-telem
 
 Use `--scope project` instead to share via `.mcp.json` (teammates approve once with `/mcp`).
 
+> Shortcut: this repo already ships a root `.mcp.json` with all six servers using
+> `${CLAUDE_PROJECT_DIR}`-relative paths — clone, install `okn` on PATH, approve in `/mcp`, done.
+
 ### Cursor / VS Code / Windsurf (generic `mcpServers` JSON)
 
 ```json
