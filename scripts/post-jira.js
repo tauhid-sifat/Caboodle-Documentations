@@ -1,7 +1,7 @@
 /**
  * Caboodle — Post internal ticket specs to Jira.
  *
- * Reads spec files from ../tickets (all subfolders, *.md), skips ones that
+ * Reads spec files from ../specs (all subfolders, *.md), skips ones that
  * already exist (matched by existing CS-* ticket number or by summary), and
  * creates the rest via the Jira Cloud REST API v3.
  *
@@ -25,7 +25,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const TICKETS_DIR = path.join(ROOT, 'tickets');
+const TICKETS_DIR = path.join(ROOT, 'specs');
 
 /* JSMap of existing real CS-* tickets and spec tuples that are already in Jira.
    Any spec whose code is in this set is skipped. */
@@ -38,7 +38,7 @@ const ALREADY_IN_JIRA = new Set([
 const EXCLUDED = new Set(['CR3', 'RBMO2']);
 
 /* The exact set of internal codes to post (the user's list minus CR3, RBMO2).
-   Only these specs are considered; everything else in ../tickets is ignored. */
+   Only these specs are considered; everything else in ../specs is ignored. */
 const TO_POST = new Set([
   'BD1', 'BD2', 'BD3', 'BD4', 'PM7',
   'CR1', 'CR4', 'CR5', 'DA1', 'DA2',

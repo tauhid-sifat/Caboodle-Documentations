@@ -4,21 +4,21 @@ BA / requirements workspace for the Caboodle multi-tenant SaaS platform (CPG bra
 
 ## Quick Start
 - **Knowledge base:** `AGENTS.md`, `CONTEXT.md`, `BUSINESS.md` — project memory, current context, business rules
-- **System docs:** `ba-onboarding/` — backend/frontend/module documentation
+- **System docs:** `docs/onboarding/` — backend/frontend/module documentation
 
 ## Folder Layout
 
 | Path | Contents |
 |------|----------|
-| `tickets/` | Ticket spec / user story files, grouped by module (see below) |
+| `specs/` | Ticket spec / user story files, grouped by module (see below) |
 | `meetings/` | Client meeting transcripts (Jul 15 – Aug 10) |
 | `docs/` | Architecture reviews, testing checklists, analysis, handover docs |
 | `data/` | Data files: Jira export CSV, backlog xlsx, sample uploads |
-| `prototypes/` | Lovable / dev prototypes (`Daily Delight Calendar/`) |
-| `Wireframe/` | Deployed broker dashboard wireframe (https://caboodle-broker-dashboard.vercel.app) |
+| `design/prototypes/` | Lovable / dev prototypes (`Daily Delight Calendar/`) |
+| `design/wireframes/` | Deployed broker dashboard wireframe (https://caboodle-broker-dashboard.vercel.app) |
 | `scripts/` | Helper scripts (e.g., `check-descriptions.js`) |
 
-## tickets/ — by module
+## specs/ — by module
 
 | Folder | Covers |
 |--------|--------|

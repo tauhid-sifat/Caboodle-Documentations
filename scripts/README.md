@@ -1,6 +1,6 @@
 # Post internal tickets to Jira
 
-Reads the spec files in `../tickets/` and creates them as Jira tickets in the **CS** project,
+Reads the spec files in `../specs/` and creates them as Jira tickets in the **CS** project,
 skipping any that already exist (matched by real `CS-*` number or by summary).
 
 ## What it posts

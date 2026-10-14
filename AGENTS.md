@@ -2,8 +2,8 @@
 
 > **Generated:** 2026-07-14 · **Last synced with live evidence:** 2026-10-14  
 > **Purpose:** Foundational memory for LLM agents working on this project.  
-> **Source docs:** `ba-onboarding/`, `prototypes/Daily Delight Calendar/`, `data/jira-tickets/` (live Jira export — 1,780 tickets, **authoritative**), `meetings/` (14 raw transcripts — **raw evidence**), Lovable prototype prompts.  
-> **Note:** `data/Jira (3).csv` is **legacy** (130-issue export from kickoff) and superseded by `data/jira-tickets/`. Do not treat the CSV as source of truth.
+> **Source docs:** `docs/onboarding/`, `design/prototypes/Daily Delight Calendar/`, `jira/tickets/` (live Jira export — 1,780 tickets, **authoritative**), `meetings/` (14 raw transcripts — **raw evidence**), Lovable prototype prompts.  
+> **Note:** `data/Jira (3).csv` is **legacy** (130-issue export from kickoff) and superseded by `jira/tickets/`. Do not treat the CSV as source of truth.
 
 ---
 
@@ -178,7 +178,7 @@ Distributor (KeHE/UNFI/SPINS) → CSV/Excel upload → DataHub → Unmapped reco
 
 ## 7. CRITICAL TERMINOLOGY (Broker-Brand Relationship)
 
-**Correct language (from ba-onboarding docs):**
+**Correct language (from docs/onboarding docs):**
 - **Brands are assigned to brokers** (endpoint: `PATCH /Brands/assign-brand-to-broker`)
 - **Broker represents brands** — not "broker assigned under brand"
 - **Admin assigns brands to a broker**, not the broker adding themselves
@@ -298,7 +298,7 @@ Active, Pending, NotActive, Declined, Discontinued, Approved, Commit
 
 ## 12. JIRA ISSUES — DESCRIPTION GAPS
 
-> **Legacy:** the gap list below was computed against `data/Jira (3).csv` (130 issues) at kickoff. It should be **re-derived from `data/jira-tickets/`** (1,780 live tickets) — the CSV is superseded.
+> **Legacy:** the gap list below was computed against `data/Jira (3).csv` (130 issues) at kickoff. It should be **re-derived from `jira/tickets/`** (1,780 live tickets) — the CSV is superseded.
 
 19 issues in `data/Jira (3).csv` lack proper descriptions (under 50 chars or only image):
 
@@ -343,7 +343,7 @@ CS-478, CS-617, CS-725, CS-1090, CS-1092, CS-1150, CS-1177, CS-1178, CS-1185, CS
 
 ## 14. DELIVERABLES CREATED
 
-All ticket-spec files in `tickets/`, grouped by module (broker-dashboard/, category-review/, market-overview/, promo-management/, trade-spend/, brand/, talking-points/):
+All ticket-spec files in `specs/`, grouped by module (broker-dashboard/, category-review/, market-overview/, promo-management/, trade-spend/, brand/, talking-points/):
 
 | File | Description |
 |------|-------------|
@@ -369,8 +369,8 @@ All ticket-spec files in `tickets/`, grouped by module (broker-dashboard/, categ
 | `CS-1403-apl-upload-unfi-upc-adjustment.md` | UNFI UPC truncation fix |
 
 ### Wireframe
-- `Wireframe/index.html` — Deployed at https://caboodle-broker-dashboard.vercel.app
-- `prototypes/Daily Delight Calendar/` — Lovable prototype (SendToContacts, YearlyPlanningTable, infinite scroll)
+- `design/wireframes/index.html` — Deployed at https://caboodle-broker-dashboard.vercel.app
+- `design/prototypes/Daily Delight Calendar/` — Lovable prototype (SendToContacts, YearlyPlanningTable, infinite scroll)
 
 ---
 
@@ -403,7 +403,7 @@ All ticket-spec files in `tickets/`, grouped by module (broker-dashboard/, categ
 
 ## 16. JIRA BACKLOG INTELLIGENCE (Live Export — 1,780 tickets)
 
-> **Source:** `data/jira-tickets/` — full live Jira export (CS-1 … CS-1777 + GTMS-*), generated **2026-10-14** from `caboodleservices.atlassian.net`. This supersedes the legacy `data/Jira (3).csv` (130 issues).  
+> **Source:** `jira/tickets/` — full live Jira export (CS-1 … CS-1777 + GTMS-*), generated **2026-10-14** from `caboodleservices.atlassian.net`. This supersedes the legacy `data/Jira (3).csv` (130 issues).  
 > **Method:** structured metadata + statistics extracted programmatically across all 1,780 files (AI-readable conversion per BA Step 1); individual tickets were not read raw.  
 > **Status model:** Open = Backlog / On Hold / In Progress / In Staging / In Production / Reopened / Demo / Ready for Production / Dev Sprints. Closed = Closed / Won't Do / Resolved.
 
@@ -418,7 +418,7 @@ All ticket-spec files in `tickets/`, grouped by module (broker-dashboard/, categ
 
 **Implications for BA:**
 1. The backlog is **bug/task-heavy and priority-skewed** — the active client-facing workstreams are Broker Dashboard, Category Review, Market Overview, and Promo Management (see §17).
-2. The curated `tickets/` deliverables are a small, **client-reviewed subset (≈40 active tickets, many now posted as CS-1602..1777)** of this 1,780-ticket universe — the prioritized, spec'd slice, not the whole backlog.
+2. The curated `specs/` deliverables are a small, **client-reviewed subset (≈40 active tickets, many now posted as CS-1602..1777)** of this 1,780-ticket universe — the prioritized, spec'd slice, not the whole backlog.
 3. Admin is the **largest maintenance surface** (label `Admin_App` 42; admin keyword dominant in open backlog).
 
 ---

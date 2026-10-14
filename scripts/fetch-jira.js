@@ -1,5 +1,5 @@
 /**
- * Fetch live Jira tickets and sync to data/jira-tickets/
+ * Fetch live Jira tickets and sync to jira/tickets/
  * Uses new Jira Cloud search/jql API (nextPageToken pagination)
  * Converts ADF description to markdown-ish text
  */
@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const OUT_DIR = path.join(ROOT, 'data', 'jira-tickets');
+const OUT_DIR = path.join(ROOT, 'jira', 'tickets');
 
 function loadEnv() {
   const p = path.join(__dirname, '.env');

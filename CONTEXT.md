@@ -7,10 +7,10 @@
 
 ## Current Objective
 Maintain the Caboodle BA knowledge base and ticket deliverables, keeping them synchronized with **live evidence**:
-- Live Jira export (`data/jira-tickets/` — 1,654 tickets, **authoritative**; supersedes the legacy `data/Jira (3).csv`)
+- Live Jira export (`jira/tickets/` — 1,654 tickets, **authoritative**; supersedes the legacy `data/Jira (3).csv`)
 - 14 client meeting transcripts (`meetings/` — raw evidence)
-- Lovable prototype (`prototypes/Daily Delight Calendar/`) — Category Review patterns
-- Curated ticket specs in `tickets/` (client-reviewed subset)
+- Lovable prototype (`design/prototypes/Daily Delight Calendar/`) — Category Review patterns
+- Curated ticket specs in `specs/` (client-reviewed subset)
 
 **This session:** Synthesized the full Jira backlog + all meeting transcripts into `AGENTS.md` (knowledge) and this snapshot, applying the BA workflow (evidence → knowledge → snapshot, with provenance + status model). See "Evidence Inventory" and "This Session" below.
 
@@ -20,16 +20,16 @@ Maintain the Caboodle BA knowledge base and ticket deliverables, keeping them sy
 
 | Source | Count | Format | Status as evidence |
 |--------|-------|--------|--------------------|
-| `data/jira-tickets/` | 1,654 tickets (CS-1…CS-1651 + GTMS-*) | Markdown (Jira export) | **Authoritative** live backlog — generated 2026-09-02 from `caboodleservices.atlassian.net` |
+| `jira/tickets/` | 1,654 tickets (CS-1…CS-1651 + GTMS-*) | Markdown (Jira export) | **Authoritative** live backlog — generated 2026-09-02 from `caboodleservices.atlassian.net` |
 | `meetings/` | 14 transcripts (Jul 15 – Aug 19, 2026) | Raw text | **Raw evidence** — structured knowledge extracted to AGENTS.md §17; transcripts kept intact |
-| `tickets/` | ~50 curated spec files | Markdown | BA deliverables (prioritized, client-reviewed subset) |
-| `ba-onboarding/`, `prototypes/` | docs + Lovable prototype | Mixed | Reference |
-| `data/Jira (3).csv` | legacy 130-issue export | CSV | **Legacy** — superseded by `data/jira-tickets/`; not source of truth |
+| `specs/` | ~50 curated spec files | Markdown | BA deliverables (prioritized, client-reviewed subset) |
+| `docs/onboarding/`, `design/prototypes/` | docs + Lovable prototype | Mixed | Reference |
+| `data/Jira (3).csv` | legacy 130-issue export | CSV | **Legacy** — superseded by `jira/tickets/`; not source of truth |
 
 ## This Session (Sep 02, 2026)
 
 - **Jira backlog sync:** fetched live Jira via `scripts/fetch-jira.js` using new `search/jql` API (nextPageToken) → **1,654 tickets** (1,636 CS + 18 GTMS), max `CS-1651` (was 1,567/CS-1564 on Aug 20). New tickets `CS-1602..1651` posted via `scripts/post-jira.js` now verified in export.
-- **Jira backlog analysis:** programmatically extracted metadata from all 1,654 tickets in `data/jira-tickets/`; aggregated status / type / priority / label distributions (see AGENTS.md §16). No individual tickets read raw — statistics are the AI-readable conversion.
+- **Jira backlog analysis:** programmatically extracted metadata from all 1,654 tickets in `jira/tickets/`; aggregated status / type / priority / label distributions (see AGENTS.md §16). No individual tickets read raw — statistics are the AI-readable conversion.
 - **Meeting structuring:** all 14 `meetings/` transcripts processed; structured knowledge (decisions / requirements / questions / actions) extracted with **provenance** and **knowledge-status tags** (see AGENTS.md §17).
 - **Knowledge base update:** `AGENTS.md` (permanent knowledge) + this `CONTEXT.md` (snapshot) refreshed to reflect live evidence per the BA workflow (evidence → knowledge → snapshot; provenance + status model applied).
 
@@ -37,9 +37,9 @@ Maintain the Caboodle BA knowledge base and ticket deliverables, keeping them sy
 
 ## Completed Work (This Session — Jul 20, 2026)
 
-### Wireframe Updates (Wireframe/index.html)
+### Wireframe Updates (design/wireframes/index.html)
 **Deployed at:** https://caboodle-broker-dashboard.vercel.app  
-**GitHub:** https://github.com/tauhid-sifat/Caboodle-Documentations (Wireframe/ directory)
+**GitHub:** https://github.com/tauhid-sifat/Caboodle-Documentations (design/wireframes/ directory)
 
 | # | Change | Description |
 |---|--------|-------------|
@@ -58,7 +58,7 @@ Maintain the Caboodle BA knowledge base and ticket deliverables, keeping them sy
 - Data: Hardcoded `CONTACTS` (4), `CR_DATA` (10 rows), `PC_DATA` (7 rows)
 - Persistence: `localStorage` for send log only; everything else in-memory
 
-### Ticket Updates (tickets/)
+### Ticket Updates (specs/)
 
 | File | What Changed |
 |------|-------------|
@@ -69,7 +69,7 @@ Maintain the Caboodle BA knowledge base and ticket deliverables, keeping them sy
 
 ## Previous Sessions (Jul 12, 2026 — Deliverables Creation)
 
-### Deliverables Created (Markdown files in `tickets/`)
+### Deliverables Created (Markdown files in `specs/`)
 
 **Category Review / Broker Dashboard**
 - `CS-1316-category-review-infinite-scroll.md` — Replace pagination with infinite scroll (per meeting)
@@ -153,7 +153,7 @@ Maintain the Caboodle BA knowledge base and ticket deliverables, keeping them sy
 
 ## Reference Files (Not Modified)
 
-- `ba-onboarding/` — All backend/frontend/module documentation
-- `prototypes/Daily Delight Calendar/` — Lovable prototype (SendToContacts, YearlyPlanningTable, infinite scroll CSS)
-- `data/jira-tickets/` — **Live Jira export (1,654 tickets)** — authoritative backlog source (supersedes `data/Jira (3).csv`)
+- `docs/onboarding/` — All backend/frontend/module documentation
+- `design/prototypes/Daily Delight Calendar/` — Lovable prototype (SendToContacts, YearlyPlanningTable, infinite scroll CSS)
+- `jira/tickets/` — **Live Jira export (1,654 tickets)** — authoritative backlog source (supersedes `data/Jira (3).csv`)
 - `meetings/` — 14 client meeting transcripts (raw evidence; structured decisions in AGENTS.md §17)

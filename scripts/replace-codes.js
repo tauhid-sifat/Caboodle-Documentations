@@ -1,6 +1,6 @@
 /**
  * Replace internal ticket codes (BD1, MO1, …) with the real Jira codes
- * (CS-1588 … CS-1630) across all MD spec files in ../tickets.
+ * (CS-1588 … CS-1630) across all MD spec files in ../specs.
  *
  * Usage: node replace-codes.js            # dry run (prints changes)
  *        node replace-codes.js --apply    # apply changes in place
@@ -9,7 +9,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const TICKETS_DIR = path.join(__dirname, '..', 'tickets');
+const TICKETS_DIR = path.join(__dirname, '..', 'specs');
 
 const MAP = {
   AAC1:'CS-1588', AAC2:'CS-1589', ACDU1:'CS-1590', AD1:'CS-1591', ANAWT1:'CS-1592',

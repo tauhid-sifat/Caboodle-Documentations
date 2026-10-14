@@ -1,8 +1,8 @@
 # INTERNAL TICKET TRACKING — Caboodle
 
-> **Purpose:** Internal tracking layer for ticket-spec files in `tickets/`.
+> **Purpose:** Internal tracking layer for ticket-spec files in `specs/`.
 > **Important:** These internal codes (BD1, MO1, PM2, …) are **not** Jira tickets.
-> They are our spec documents. Real Jira tickets use the **CS-*** numbering and live in `data/jira-tickets/`.
+> They are our spec documents. Real Jira tickets use the **CS-*** numbering and live in `jira/tickets/`.
 > Where an internal code is a NEW requirement with no Jira ticket yet, the row is marked **To Be Posted → Jira**.
 > Where it builds on an existing real ticket, the real CS-* number is listed in **Upstream/Related**.
 
