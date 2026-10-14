@@ -14,6 +14,36 @@ permissions:
   - action: edit
     resource: "*"
     effect: deny
+  - action: edit
+    resource: "scripts/post-jira.js"
+    effect: allow
+  - action: edit
+    resource: "scripts/fetch-jira.js"
+    effect: allow
+  - action: edit
+    resource: "scripts/replace-codes.js"
+    effect: allow
+  - action: edit
+    resource: "scripts/README.md"
+    effect: allow
+  - action: edit
+    resource: "AGENTS.md"
+    effect: allow
+  - action: edit
+    resource: "CONTEXT.md"
+    effect: allow
+  - action: edit
+    resource: "index.md"
+    effect: allow
+  - action: edit
+    resource: "README.md"
+    effect: allow
+  - action: edit
+    resource: "vercel.json"
+    effect: allow
+  - action: edit
+    resource: "specs/INTERNAL_TRACKING.md"
+    effect: allow
   - action: shell
     resource: "*"
     effect: deny
