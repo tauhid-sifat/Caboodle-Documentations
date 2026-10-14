@@ -1,0 +1,147 @@
+---
+type: Document
+module: admin
+jira: [CS-1590]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/module-catalog.md
+---
+
+# Admin | CRM Data Upload | Filter Audit - Filter by Any Column
+
+**CS-1590** | New Requirement | User Story | Priority: TBD | Status: New | https://caboodleservices.atlassian.net/browse/CS-1590
+
+---
+
+## User Story
+
+**As an** Admin user working in CRM Data Upload,
+**I want** to audit and standardize filtering so users can filter by **any column** across all CRM Data Upload sections,
+**So that** every CRM data table has consistent, complete filtering.
+
+---
+
+## Description
+
+Perform a **filter audit** across all CRM Data Upload screens (Retailers, Banners, Stores, Regions, Categories, Price Lists, Banner SKU, etc.). Ensure each table supports filtering by any column, and that filtering behavior is consistent and reusable (not built per-screen). This consolidates the broader CRM Data Upload improvement effort.
+
+**Update 2026-08-18 / 2026-09-07 — Constance audit (emailed to Keya 8/18/26):** Constance provided a full module-by-module markup (`Admin CRM Notes 7-27-26 (1).csv` — attached to this ticket in Jira) covering Column A = Modules, Columns B-J = table columns. Notes in Column J + General Notes (rows 46-77) detail requested **filter additions**, **column-title / filter-title alignment**, and upload/template inconsistencies. This ticket is updated to capture that audit verbatim so no question remains.
+
+> Constance: *"Regarding the Admin Panel, I made the attached notes regarding the CRM Data Upload Modules. The Modules are listed in Column A. The Columns B-J represent the columns in each Module. The notes in each cell refer to requested changes in the filters. There are General Notes in Column A starting on rows 46-77. Hoping this is helpful."*
+
+---
+
+## Constance Audit — Detailed Findings (source: Admin CRM Notes 7-27-26 (1).csv)
+
+### A. Global — Title
+- Capitalize the word **"upldaod"** in the Title (typo `upldaod` → `Upload`).
+
+### B. Per-Module Filter Gaps + Column/Filter Title Mismatches
+
+| Module | Column | Current Title / Filter | Requested Change |
+|--------|--------|------------------------|------------------|
+| **Banners** | BANNER NAME | — | **Missing from filter → Please Add** |
+| **Banner SKUs** | SKU NAME | SKU NAME | Change filter label to **Sku Name** to match column title |
+| **Banner SKUs** | BRAND NAME | BRAND NAME | Change filter label to **Brand Name** to match column title |
+| **Banner SKUs** | UPC | UPC | **Add to filter** |
+| **Categories** | CATEGORY NAME | CATEGORY NAME | **Missing from filter → Please Add** |
+| **Categories** | BRAND NAME | BRAND NAME | Change to **Brand Name** (case) to match column title |
+| **Contacts** | FIRST NAME | FIRST NAME | **Missing in Filter → Add** |
+| **Contacts** | LAST NAME | LAST NAME | **Missing in Filter → Add** |
+| **Contacts** | EMAIL | EMAIL | **Missing in Filter → Add** |
+| **Contacts** | PHONE NUMBER | PHONE NUMBER | **Missing in Filter → Add** |
+| **Contacts** | BUSINESS NAME | BUSINESS NAME | **Missing in Filter → Add** |
+| **Contacts** | BRAND NAME | BRAND NAME | Change to **Brand Name** to match column title; currently only `Brand & Search Bar` in filter — expand to all columns |
+| **Distributor Delivery** | NAME | NAME | Change column & filter to **Distributor Name**; currently only `Parent Distributor & Search` in filter — audit why |
+| **Distribution Centers** | WAREHOUSE | WAREHOUSE | Change column to **Warehouse Name** |
+| **Distribution Centers** | DISTRIBUTOR NAME | DISTRIBUTOR NAME | **Missing in Filter → Add** (currently only `Region & Search`) |
+| **Distribution Centers** | REGION NAME | REGION NAME | **Missing in Filter → Add** |
+| **Price Lists** | PRODUCT NAME | PRODUCT NAME | Update filter label to **Product Name** |
+| **Price Lists** | DISTRIBUTOR | DISTRIBUTOR | Update column & filter to **Distributor MOD** |
+| **Price Lists** | CATEGORY | CATEGORY | **Missing from Filter → Add** |
+| **Price Lists** | BRAND NAME | BRAND NAME | Update filter to **Brand Name** |
+| **Product Specs** | NAME | NAME | Update column to **Item Name** |
+| **Product Specs** | BRAND NAME | BRAND NAME | Update filter to **Brand Name** to match column title; currently only `Brand & Category & Search` in filter |
+| **Product Specs** | UPC | UPC | **Missing from Filter → Add** |
+| **Product Specs** | KEHE CODE | KEHE CODE | **Missing from Filter → Add** |
+| **Product Specs** | UNFI CODE | UNFI CODE | **Missing from Filter → Add** |
+| **Retailers** | NAME | NAME | Update column title to **Retailer Name**; currently only `Retail Name & Regions` in filter |
+| **Retailers** | BANNERS | BANNERS | Update column to **Banner Name** → **Missing from Filter → Add** |
+| **Regions** | NAME | NAME | Update to **Region Name** |
+| **Regions** | ADDRESS | ADDRESS | Change column title to **State** (and change Action field box from Address to State) → **Missing from Filter → Add** |
+| **Region Retailer** | REGION | REGION | Update column & filter to **Region Name** |
+| **Region Retailer** | RETAILER | RETAILER | Update column & filter to **Retailer Name** |
+| **Region Retailer** | BANNER NAME | BANNER NAME | Update filter to **Banner Name**; note: *Should User be able to Add here? Only option is Upload?* (flag for follow-up) |
+| **Stores** | RETAILER | RETAILER | Update column & filter to **Retailer Name** |
+| **Stores** | BANNER | BANNER | Update column & filter to **Banner Name** |
+
+> Source rows parsed from CSV — trivial typos preserved (`Categoies`, `colomn`). Implement exact requested casing.
+
+### C. General Notes (CSV rows 46-77) — Applicable to this ticket
+
+1. **Inconsistency on Column Titles & Filter Titles → They Should Match** (applies to all modules above).
+2. **Inconsistency in filters:** Sometimes every column has a filter field, sometimes only `Search`. Standard practice for when to use a dedicated filter field vs. `Search` is undefined — **define the standard as part of this ticket: every column gets a filter field + global Search remains.**
+3. Upload-related and template notes are **out of scope for CS-1590** (see §E) but logged here for traceability.
+
+---
+
+## Acceptance Criteria (updated with audit)
+
+### Scenario 1: Filter by Any Column (audit-driven)
+- **Given** any CRM Data Upload section with a data table (see table in §B)
+- **When** the user opens the filter controls
+- **Then** they can filter by **any column** in that table — specifically the "Missing/Add" items above are now present
+
+### Scenario 2: Title Alignment
+- **Given** a column exists (e.g., BANNER NAME, BRAND NAME, WAREHOUSE, ADDRESS)
+- **When** the filter panel renders
+- **Then** the filter label **exactly matches** the column title casing/spelling (e.g., `Sku Name`, `Brand Name`, `Retailer Name`, `Warehouse Name`, `Region Name`, `Distributor Name`, `State`)
+
+### Scenario 3: Consistent Experience
+- **Given** multiple CRM Data Upload sections
+- **When** the user filters/exports
+- **Then** the filter and export behavior is consistent across sections (same UX, same data scope) — every section now offers per-column filters + global Search (resolving General Note #2)
+
+### Scenario 4: Filter Matches Export
+- **Given** a filter is applied
+- **When** the user exports
+- **Then** the exported data matches the filtered view (no mismatch)
+
+### Scenario 5: Search Remains
+- **Given** per-column filters are added
+- **Then** global Search is retained (not removed) per existing pattern
+
+---
+
+## E. Out-of-Scope Notes from Same CSV (logged, not implemented in CS-1590)
+
+These were in Constance's General Notes (rows 46-77) but belong to separate tickets — captured here only so audit is fully traceable:
+
+- **Upload vs Add inconsistency:** User can Upload but can't Add Manually in: Banner SKUs, Categories, Contacts, Price Lists, Product Specs, Region Retailer — needs product decision.
+- **Upload source:** Pros/cons of uploads from Brand environment vs Admin.
+- **Upload reliability:** Ensure all uploads are tested; upload dialog boxes are inconsistent (see screenshots).
+- **ID discovery:** Templates requiring IDs (Store ID, Brand ID, Region ID, Retailer ID, Banner ID, Category ID, Product ID, Distributor ID) — where does user find them?
+- **Templates:** Rename all `Sample` → `Template`; fix per-module names (Region: Address→State, Retailer: Name→Retailer Name, Product Specs: Products→Product Specs, Distributors: Name→Distributor Name, Banner: Name→Banner Name); fix inconsistent capitalization (`retail-region-Sample` vs `PriceList Sample`).
+
+> Recommendation: File or link these to **CS-1443/CS-1444/CS-1445** or new upload/template tickets — do not expand CS-1590 scope to include them.
+
+---
+
+## Jira Reference (data/jira-tickets)
+- **CS-11** - [BE] Global Admin CRM DATA UPLOAD Banner needs Filter/Search function (original filter request).
+- **CS-1442** - CRM Data Upload Improvement: 'Filtering should be available on all applicable CRM data tables' (direct overlap).
+- **CS-1443 / CS-1444 / CS-1445** - CRM Data Upload Improvements (BE/FE/Sections) - filtering + consistent upload/export.
+- **CS-1475** - Sync CRM Data Upload Section Filters with Export Data.
+- **CS-495** - Filtered export data mismatch (bug this audit should resolve).
+
+---
+
+## Related
+- **CS-1589** - Admin controls for dropdown options (complementary filtering/config control).
+
+---
+
+## Notes
+- CS-1590 may be the umbrella/audit ticket for the CS-1442-1445 improvement epic; reconcile scope to avoid duplicate implementation tickets.
+- **Constance audit 7-27-26 attached as `Admin CRM Notes 7-27-26 (1).csv`** (emailed to Keya 8/18/26, acknowledged 2026-09-07). This file is the authoritative filter-gap list — implementation should check off row-by-row against §B.
+- Confirm which columns are currently non-filterable per section — now documented in §B; dev to verify live before coding.

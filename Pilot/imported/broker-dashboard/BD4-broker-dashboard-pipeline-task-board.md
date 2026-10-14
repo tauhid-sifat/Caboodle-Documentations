@@ -1,0 +1,83 @@
+---
+type: Document
+module: broker-dashboard
+jira: [CS-1601]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/broker-dashboard.md
+---
+
+# Broker Dashboard | Pipeline (Task) — from Wireframe
+
+**CS-1601** | New Requirement | User Story | Priority: TBD | Status: New
+
+---
+
+## User Story
+
+**As a** Broker user,  
+**I want** the Pipeline / Task view exactly as shown in the wireframe,  
+**So that** I can track work items (plans and their tasks) with assignee, due date, priority, and status.
+
+---
+
+## Description
+
+Implement the **Pipeline (Task)** view from the wireframe (`Wireframe/index.html`, `view-tasks`). This is a **Fellow-style plan/task list** — **not** a Kanban board.
+
+Layout:
+- A left **sidebar** (`plan-sidebar`, ~320px) listing **Plans** (e.g., buyer-meeting plans). Selecting a plan shows its tasks in the main area.
+- The main area renders the selected plan's **tasks as rows**, grouped, with a collapsible **"Done (n)"** section toggled by a "Show done / Hide done" control.
+- Each task has: **title**, **status** (todo / in-progress / done), **priority** (high / med / low), **assignee** (e.g., "You", "John"), **due date**, **notes**, and **files**.
+
+This view is reached from the dashboard via the **Tasks** quick-action tile, and timeline Task items on the dashboard link here. It is the broker dashboard's lightweight task tracker — **not** the CRM Pipeline (no deal stages, no brand/retailer associations).
+
+---
+
+## Acceptance Criteria
+
+### Scenario 1: Pipeline View Loads
+- **Given** I open the Pipeline/Task view (via the Tasks quick-action tile)
+- **Then** a plan sidebar and a task list render per the wireframe
+- **And** the view is titled "Pipeline"
+
+### Scenario 2: Plans and Tasks
+- **Given** plans exist
+- **When** I select a plan in the sidebar
+- **Then** its tasks display as rows in the main area
+- **And** each task shows title, status, priority, assignee, and due date
+
+### Scenario 3: Task Status & Done Toggle
+- **Given** a plan has tasks in various states
+- **When** I toggle "Show done / Hide done"
+- **Then** completed tasks are revealed or hidden accordingly
+- **And** I can change a task's status (todo / in-progress / done)
+
+### Scenario 4: Task Detail
+- **Given** a task is selected
+- **Then** I can view/edit notes and attached files
+- **And** (with CS-1599) I can set assignee and due date
+
+### Scenario 5: Independent of CRM Pipeline
+- **Given** the view is rendered
+- **Then** it contains only lightweight task/plan data
+- **And** it is not linked to CRM deals, banners, or retailers
+
+---
+
+## Design Reference
+- Wireframe: `Wireframe/index.html` (https://caboodle-broker-dashboard.vercel.app) — `view-tasks` section (Fellow-style list, `tasks-layout`, `plan-sidebar`)
+- Dashboard shell: `CS-1598-broker-dashboard-from-wireframe.md`
+- Assignment fields: `CS-1599-broker-dashboard-assign-time-person.md`
+- Filtering: `CS-1600-broker-dashboard-filter-my-tasks-contact.md`
+
+---
+
+## Related / Conflict
+- The former `CS-NEW-broker-dashboard-task-board.md` (3-column Kanban) has been **removed** as obsolete — it contradicted the wireframe (no Kanban) and is superseded by this ticket (CS-1601).
+
+---
+
+## Notes
+- Keep MVP aligned to the wireframe; enhancements (assignee, time, filtering) live in CS-1599 / CS-1600.
+- Confirm whether "Plans" are user-created or map to existing entities (e.g., buyer-meeting plans).

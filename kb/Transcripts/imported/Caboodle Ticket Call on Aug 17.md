@@ -1,0 +1,776 @@
+---
+type: Document
+title: "Caboodle Ticket Call On Aug 17"
+---
+
+[0:00:01] Constance Wolfe: Going good. Just just getting started. Yeah.
+[0:00:07] Md Mashiul Azam Chowdhury: Let's wait for Bobby.
+[0:00:10] Constance Wolfe: Okay, sounds good. I've got.
+[0:00:14] Md Mashiul Azam Chowdhury: Let's see.
+[0:00:22] Constance Wolfe: Yeah. Okay. Are you at the office?
+[0:00:42] Constance Wolfe: On this, on the Jira storage.
+[0:00:48] Md. Tauhidur Rahman: Sorry?
+[0:00:49] Constance Wolfe: On the Jira, you said our storage. I was noticing that you're saying—
+[0:00:52] Md Mashiul Azam Chowdhury: Yeah, the storage is up.
+[0:00:56] Constance Wolfe: Yeah, yeah. So what do you think is best? Yeah, what's the easiest thing to do?
+[0:01:03] Md Mashiul Azam Chowdhury: Well, the easiest would be to upgrade and increase the storage, but that would— I don't know how much that would cost, but I think we can delete some of the old attachments and Maybe do something up there.
+[0:01:26] Constance Wolfe: Okay. So are you thinking of just going through some of the really old, old stuff?
+[0:01:33] Md Mashiul Azam Chowdhury: Yeah, maybe 1 to 500, something like that.
+[0:01:37] Constance Wolfe: Yeah, yeah, yeah.
+[0:01:38] Constance Wolfe: And I don't know how much— so can you archive those, or do you just have to go in and delete them, or what do we do?
+[0:01:48] Constance Wolfe: With those old ones. I mean, I don't know how much it is either.
+[0:01:52] Constance Wolfe: I don't know if somebody there can guide me through it. Is this where I would go?
+[0:01:57] Constance Wolfe: I'm sharing my screen.
+[0:02:00] Md Mashiul Azam Chowdhury: Yeah. Yeah, I think so. But can you try adding an attachment here? Anything?
+[0:02:11] Constance Wolfe: You can do it right here just to see.
+[0:02:13] Md Mashiul Azam Chowdhury: Right. Yes.
+[0:02:14] Constance Wolfe: Yes. Well, it doesn't look like it will let me.
+[0:02:21] Md Mashiul Azam Chowdhury: So your team contact you admin, but you are the admin.
+[0:02:28] Constance Wolfe: So let's see, maybe in settings, billing.
+[0:02:40] Md Mashiul Azam Chowdhury: Was there any section named storage or something? Or can you click on the storage pool?
+[0:02:56] Constance Wolfe: Yeah.
+[0:02:57] Md Mashiul Azam Chowdhury: Upgrade.
+[0:03:02] Constance Wolfe: Well, it takes you— I wonder what this does. I'm just curious.
+[0:03:06] Md Mashiul Azam Chowdhury: Yeah, this will actually show you all the tickets with the attachments.
+[0:03:12] Constance Wolfe: I see. Okay, but it doesn't show you where to upgrade.
+[0:03:21] Constance Wolfe: I'm surprised there's not a link that takes you to upgrade because that would make them—
+[0:03:24] Md Mashiul Azam Chowdhury: Right, exactly. You are the admin, right?
+[0:03:27] Constance Wolfe: Or—
+[0:03:29] Md Mashiul Azam Chowdhury: yeah, I mean, you are currently in Jira admin settings.
+[0:03:34] Constance Wolfe: Yeah, I can look into it. I don't want to take up all of our time today.
+[0:03:45] Md Mashiul Azam Chowdhury: Yeah, yeah, sure.
+[0:03:46] Constance Wolfe: But I'll— so where is the— you said that she was— you had her sharing in a Google Drive?
+[0:03:58] Md Mashiul Azam Chowdhury: Yeah, I think, uh, I don't know, uh, well, I don't think she, uh, has done that later on because, uh, she was, uh, she started working on the, the brand report.
+[0:04:16] Md Mashiul Azam Chowdhury: So I mean testing the brand report. So—
+[0:04:20] Constance Wolfe: Oh, great. Okay. Okay. Um, so did you guys get the link to this folder?
+[0:04:27] Md Mashiul Azam Chowdhury: Yeah, yeah, I saw that. Okay.
+[0:04:31] Constance Wolfe: So I think it's Caboodle AIT collaboration is where I've got that.
+[0:04:38] Md Mashiul Azam Chowdhury: Okay.
+[0:04:39] Constance Wolfe: So we've got a lot on our call today, and I'll try to move through them as quickly as possible.
+[0:04:44] Constance Wolfe: But let's start with the category review. And by the way, Toheed, are you feeling better?
+[0:04:50] Constance Wolfe: I'm sorry to hear that you weren't feeling very well.
+[0:04:52] Md. Tauhidur Rahman: Yeah. So for last couple of days, I was suffering from Like a huge headache for my sinus.
+[0:04:59] Md. Tauhidur Rahman: So, uh, today, today I was feeling a bit better. That's why I came to office.
+[0:05:05] Md. Tauhidur Rahman: So still I have a little bit of headache, but it's fine now.
+[0:05:10] Constance Wolfe: Oh, I'm sorry to hear that. That's no, that's no fun.
+[0:05:13] Constance Wolfe: You're taking— there's something you can take to feel better?
+[0:05:16] Md. Tauhidur Rahman: Yeah, I have already consulted with my family doctor.
+[0:05:20] Md. Tauhidur Rahman: He have given me some medicines, so I am taking those medicine.
+[0:05:23] Md. Tauhidur Rahman: That's why today I am feeling much better, but Because of the headache, and most of the headache medications are kind of sedative.
+[0:05:30] Constance Wolfe: So I feel—
+[0:05:32] Md. Tauhidur Rahman: yeah, yeah. So like, like, I am just feeling very lightweighted and, uh, very sleepy.
+[0:05:42] Constance Wolfe: Yeah, well, maybe after this, go home and go sleep.
+[0:05:45] Md Mashiul Azam Chowdhury: Yeah.
+[0:05:46] Constance Wolfe: I'm sorry. Well, we'll try to get through this as quickly as possible.
+[0:05:50] Md. Tauhidur Rahman: Yeah, no problem. I'm here.
+[0:05:56] Md Mashiul Azam Chowdhury: Okay, so Constance, I actually sort of having 3— one blocker mainly.
+[0:06:08] Md Mashiul Azam Chowdhury: That is, I wasn't able to deploy that in staging. Kia has been testing it from my local machine.
+[0:06:24] Md Mashiul Azam Chowdhury: I mean, I am sharing my IP with her and she can— she is testing on her PC, but it is running on my local machine.
+[0:06:34] Constance Wolfe: Mm-hmm.
+[0:06:34] Md Mashiul Azam Chowdhury: But currently— okay, let me just— okay.
+[0:06:44] Md Mashiul Azam Chowdhury: So, well, I don't know about BJ and Arno, but I think I might need the $100 package in the cloud because it's quickly burning up.
+[0:07:01] Constance Wolfe: Okay.
+[0:07:04] Md Mashiul Azam Chowdhury: But that would be from the next month, right?
+[0:07:09] Constance Wolfe: I don't know, but I would think so.
+[0:07:14] Constance Wolfe: But can you just— doesn't it say, like, doesn't it give you, like, go ahead and use past year credits or something?
+[0:07:25] Md Mashiul Azam Chowdhury: No, no, no, it doesn't.
+[0:07:29] Md Mashiul Azam Chowdhury: And I don't think that would be wise because that actually costs more than maybe, uh, the $100, I think.
+[0:07:41] Md Mashiul Azam Chowdhury: I mean, okay, yeah, so that's why.
+[0:07:47] Md Mashiul Azam Chowdhury: Okay, so I actually have to do, uh, a small works in here, but I can show you what we have done, uh, so far.
+[0:08:00] Md Mashiul Azam Chowdhury: So this is the brand repo. Right now.
+[0:08:04] Constance Wolfe: Okay, great. Yeah, yeah.
+[0:08:07] Md Mashiul Azam Chowdhury: So most of the tasks here are done, but I just need to enable this one.
+[0:08:16] Md Mashiul Azam Chowdhury: So currently we are thinking of having the brand report populate here in 3 ways.
+[0:08:26] Md Mashiul Azam Chowdhury: One is when Brand is adding it to adding the category view to a calendar.
+[0:08:33] Md Mashiul Azam Chowdhury: So if I go, let's say,
+[0:08:47] Md Mashiul Azam Chowdhury: maybe this one add to calendar. Then what was that?
+[0:08:59] Constance Wolfe: Mom's Organic Market. I didn't catch which category it was, but—
+[0:09:02] Md Mashiul Azam Chowdhury: Okay, what just happened? My browser got closed.
+[0:09:24] Md Mashiul Azam Chowdhury: Yeah, I think it was mom, but yeah, the, uh, zucchini. Yeah, mom organic market. Yeah, yeah.
+[0:09:36] Md Mashiul Azam Chowdhury: So that's one way. Another way is, uh, when the broker themselves add it from the category view.
+[0:09:46] Md Mashiul Azam Chowdhury: So instead of add to calendar, this will say notify to brand. So I just need to work on that a bit.
+[0:09:57] Md Mashiul Azam Chowdhury: And another, the third way is from here, add brand.
+[0:10:07] Md Mashiul Azam Chowdhury: This is adding, this is going to let you add manually.
+[0:10:12] Constance Wolfe: Perfect.
+[0:10:13] Md Mashiul Azam Chowdhury: Okay, so there are 3 ways. This will be soon added here. Okay, 18 minutes.
+[0:10:25] Md Mashiul Azam Chowdhury: Yeah, I'll be able to add them 18 minutes later.
+[0:10:29] Constance Wolfe: Yeah, yeah. Okay.
+[0:10:30] Md Mashiul Azam Chowdhury: Yeah, yeah. Okay, so, so that's that, and the filters are working.
+[0:10:38] Md Mashiul Azam Chowdhury: Right now, I mean, we don't have that much options right now. But okay, let me show you the options.
+[0:10:49] Md Mashiul Azam Chowdhury: So I go to admin station. So there's a new section here, brand report statuses.
+[0:10:58] Constance Wolfe: Okay.
+[0:10:59] Md Mashiul Azam Chowdhury: So from here you will be able to add the options. Under these data types.
+[0:11:06] Constance Wolfe: Okay.
+[0:11:07] Md Mashiul Azam Chowdhury: For example, let's say yeah, if I add an option here, so you can name it.
+[0:11:15] Md Mashiul Azam Chowdhury: For example, brand response maybe not interesting. Color can be of your choice.
+[0:11:25] Md Mashiul Azam Chowdhury: I'll try to add a color picker here, not just a text.
+[0:11:30] Constance Wolfe: Okay, great.
+[0:11:32] Md Mashiul Azam Chowdhury: And display order, this is sort of, I mean, in which serial do you want this to be?
+[0:11:44] Md Mashiul Azam Chowdhury: For example, let's say you want accepted to be at the top spot, so that would be number 1.
+[0:11:54] Md Mashiul Azam Chowdhury: You are not interested in the second spot, then this, that would be 2, and so on.
+[0:12:00] Md Mashiul Azam Chowdhury: And if you just don't leave it blank, it will just order automatically.
+[0:12:08] Constance Wolfe: So, or does it display the options that have already been selected?
+[0:12:15] Constance Wolfe: So like, let's say you've already put in several.
+[0:12:20] Md Mashiul Azam Chowdhury: For example, yeah, submitted, for submission.
+[0:12:25] Constance Wolfe: Like within the same one. So for brand response, there's no—
+[0:12:28] Md Mashiul Azam Chowdhury: so show me.
+[0:12:29] Constance Wolfe: Oh, action needed has 3. So here's—
+[0:12:32] Md Mashiul Azam Chowdhury: Yeah, we haven't added here yet.
+[0:12:35] Constance Wolfe: Okay.
+[0:12:35] Md Mashiul Azam Chowdhury: But action needed, we have it.
+[0:12:37] Constance Wolfe: Yeah. So let me look at that one that already has them. So this is saying order 1, order 2, order 3.
+[0:12:44] Md Mashiul Azam Chowdhury: Right.
+[0:12:44] Constance Wolfe: I would need to know which order the other ones are in order to decide which order the next one is.
+[0:12:52] Constance Wolfe: So I Yeah, this clears it up for me. I got it. Yeah.
+[0:12:57] Md Mashiul Azam Chowdhury: Okay. Okay, so this is how you can add the orders and the options as well.
+[0:13:06] Md Mashiul Azam Chowdhury: Oh, and another thing is, so you know that we can add the brand report in 3 ways.
+[0:13:17] Md Mashiul Azam Chowdhury: So let's say you want this to be, uh, maybe accepted, and you want this to be, uh, by default state for, uh, in way.
+[0:13:32] Md Mashiul Azam Chowdhury: So let's say if you want, uh, it to be set, uh, when a brand pushes to a calendar, then you can select this.
+[0:13:40] Md Mashiul Azam Chowdhury: If you want it to be from when a broker notifies a brand, then you can select this, or you can— I mean, you can select multiple, of course.
+[0:13:52] Md Mashiul Azam Chowdhury: And if you want it to be set when the broker is manually adding a brand, you can select this.
+[0:14:00] Md Mashiul Azam Chowdhury: Okay, so you can set default for— yeah, for 3 as well, for all of them.
+[0:14:07] Constance Wolfe: Yeah, that makes sense. That's great.
+[0:14:11] Md Mashiul Azam Chowdhury: Okay, so, uh, okay, that's fine. Uh, we do have, uh, this one.
+[0:14:23] Md Mashiul Azam Chowdhury: So currently, uh, this— oh, I need to check this.
+[0:14:30] Md Mashiul Azam Chowdhury: Uh, all of them should be expanded at the same time. It's expanding now one at a time.
+[0:14:37] Md Mashiul Azam Chowdhury: But I'll make them expand at the same time.
+[0:14:42] Constance Wolfe: So those aren't quite the right KPI cards yet. Is that known? Yes.
+[0:14:50] Md Mashiul Azam Chowdhury: I mean, not by design, but yeah, they are sort of what— I mean, the functionality is the same.
+[0:15:03] Constance Wolfe: Functionality is the same, but they're just not quite the right, right, right ones yet.
+[0:15:08] Constance Wolfe: Is that known? I just want to see if that was known, but it's fine if it's not done.
+[0:15:13] Md Mashiul Azam Chowdhury: Yeah.
+[0:15:14] Md. Tauhidur Rahman: Okay.
+[0:15:17] Md Mashiul Azam Chowdhury: And also currently here it's showing the last log right now, but once I'm done, it will show a button and Clicking it will show a list of the logs for each of the rows.
+[0:15:35] Md Mashiul Azam Chowdhury: So this was pushed from the calendar. This was by notifying the brand, and so on.
+[0:15:43] Constance Wolfe: Does it— will it tell by the user login and the time or the date or anything like that?
+[0:15:50] Md Mashiul Azam Chowdhury: User login, time, date. I need to check, but I believe so. Let me check one thing.
+[0:16:01] Constance Wolfe: Okay. I think the requirement was to have it logged by the username and date.
+[0:16:09] Md Mashiul Azam Chowdhury: Let me just do one thing. So we have the list. The backend is giving me the internal logs.
+[0:16:21] Md Mashiul Azam Chowdhury: Yeah, we have the created name, who's creating, and when it was created. Yeah, we are having that.
+[0:16:29] Md Mashiul Azam Chowdhury: So I can show that.
+[0:16:32] Constance Wolfe: And then the only other thing I don't see here— this is looking amazing— was the— is there an export option?
+[0:16:39] Md Mashiul Azam Chowdhury: Yes.
+[0:16:40] Constance Wolfe: Oh, perfect. Okay. There it is. Awesome. So that options— okay.
+[0:16:46] Constance Wolfe: So that's the— so what else is in the options?
+[0:16:50] Md Mashiul Azam Chowdhury: Resend emails for the selected. So if you select one, then you can resend the emails for it.
+[0:16:57] Constance Wolfe: Oh, perfect. Okay, so do you create new ones here or no?
+[0:17:04] Md Mashiul Azam Chowdhury: For email, I mean, you can select and email brands here.
+[0:17:09] Constance Wolfe: Oh, there it is. I see. Okay, got you.
+[0:17:11] Md Mashiul Azam Chowdhury: Okay, but you can also resend the email.
+[0:17:15] Constance Wolfe: Oh, okay.
+[0:17:18] Md Mashiul Azam Chowdhury: Okay, and that's great.
+[0:17:20] Constance Wolfe: That's amazing.
+[0:17:22] Md Mashiul Azam Chowdhury: Yeah, and also when you click on this, it will filter by those, and if you click reset filter, then okay, go back.
+[0:17:34] Constance Wolfe: That looks amazing.
+[0:17:35] Md Mashiul Azam Chowdhury: Okay, I think it will give you the count as well. Yeah, it is giving you the count.
+[0:17:43] Md Mashiul Azam Chowdhury: So there are 2 filters currently active right now.
+[0:17:50] Constance Wolfe: And then are there— where are the notes?
+[0:17:56] Md Mashiul Azam Chowdhury: But I mean, these, these are the notes. I mean, I will— you mean the logs or—
+[0:18:02] Constance Wolfe: No, there's, there's 2 notes options. There's internal notes and external notes.
+[0:18:08] Md Mashiul Azam Chowdhury: Oh, right, right, right. Yeah, I think, yeah, I'm not sure. I think it is.
+[0:18:22] Md Mashiul Azam Chowdhury: So these are the internal nodes.
+[0:18:28] Md Mashiul Azam Chowdhury: Oh yeah, we do have, we are getting external nodes, but it's empty right now.
+[0:18:34] Md Mashiul Azam Chowdhury: I need to check that, but hopefully I'll have that fixed by— okay, in a few minutes.
+[0:18:40] Constance Wolfe: Okay, this looks great. Amazing. Very, very good. So on the— let's look at the calendar.
+[0:18:59] Md Mashiul Azam Chowdhury: You mean this one?
+[0:19:00] Constance Wolfe: Yeah, the calendar view.
+[0:19:04] Md Mashiul Azam Chowdhury: Oh, yeah, yeah.
+[0:19:06] Constance Wolfe: Okay, perfect. Okay, so we've got review and reset.
+[0:19:11] Constance Wolfe: Is this what it looks like on the brand side as well?
+[0:19:17] Md Mashiul Azam Chowdhury: Yeah, it should.
+[0:19:42] Constance Wolfe: Okay. Awesome. And so I think they're getting some KPIs as well.
+[0:19:46] Constance Wolfe: So I just want to make sure you have that in your programming.
+[0:19:51] Md Mashiul Azam Chowdhury: Which KPIs?
+[0:19:52] Constance Wolfe: I mean, there's some KPI cards at the top.
+[0:20:01] Md Mashiul Azam Chowdhury: The career review calendar. Oh, right. Yeah, I remember. Yes.
+[0:20:09] Constance Wolfe: I just wanted to see if that was in your programming right now.
+[0:20:14] Md Mashiul Azam Chowdhury: No, actually, I've been focusing on the brand report.
+[0:20:18] Md. Tauhidur Rahman: Okay.
+[0:20:19] Constance Wolfe: And that's fine. We just need to make sure it doesn't get lost.
+[0:20:22] Md Mashiul Azam Chowdhury: Yeah, yeah.
+[0:20:25] Constance Wolfe: Okay. Okay, great. This looks amazing. So, okay, so what's then— what's left, would you say?
+[0:20:36] Md Mashiul Azam Chowdhury: So from my end, I need to Enable this one.
+[0:20:47] Md Mashiul Azam Chowdhury: Currently, it says that it won't let you right now because I'm still working on it.
+[0:20:54] Md Mashiul Azam Chowdhury: So this one, yeah, the manual one. Yes, hiding, hiding the not interested part.
+[0:21:06] Md Mashiul Azam Chowdhury: So actually, let me Let me check one thing.
+[0:21:10] Md Mashiul Azam Chowdhury: If I brand response not interested, just wait and refresh.
+[0:21:35] Md Mashiul Azam Chowdhury: From response, let's set it as not interested.
+[0:21:40] Md Mashiul Azam Chowdhury: So if I toggle this one, then this row should be hidden. That's what I need to do. So that's one.
+[0:21:53] Constance Wolfe: Yep.
+[0:21:53] Md Mashiul Azam Chowdhury: And this one and that one.
+[0:21:56] Md Mashiul Azam Chowdhury: And I just need to enable the Here, instead of add to calendar, it should be notify to brand.
+[0:22:12] Constance Wolfe: Yeah. So the— this is the list, right? This is the basic— the list, right? Okay. The master list.
+[0:22:27] Constance Wolfe: Okay, and so from here, rather than add to calendar, it's going to be notify brand, right? Got you.
+[0:22:34] Md Mashiul Azam Chowdhury: And also, other than this, I will also enable the retail APL export as well.
+[0:22:48] Md Mashiul Azam Chowdhury: Arnab has already done the backend. I just need to To add the API here, and it should—
+[0:22:55] Constance Wolfe: Okay, excellent.
+[0:22:59] Constance Wolfe: I did see, I think I saw a note about the duration of that loading that takes a little while.
+[0:23:08] Md Mashiul Azam Chowdhury: Yeah, yeah, they already added, I think, a big thing.
+[0:23:14] Constance Wolfe: Yeah, and then did the search filter get fixed?
+[0:23:18] Constance Wolfe: If not, we should take— just take it out until it does get fixed.
+[0:23:23] Md Mashiul Azam Chowdhury: I don't think so.
+[0:23:29] Constance Wolfe: Oh, maybe try putting in something else. Maybe like, just put Sprouts. Yeah, it's not fixed.
+[0:23:49] Constance Wolfe: Well, that's interesting because look at the banner name. So I guess it's saying— oh, I was looking.
+[0:23:56] Md Mashiul Azam Chowdhury: I mean, it's actually checking all of the—
+[0:23:59] Constance Wolfe: Oh, yeah, yeah, yeah. You're right.
+[0:24:02] Md Mashiul Azam Chowdhury: It is.
+[0:24:03] Constance Wolfe: It is pulling up. I didn't realize that. Yeah, you're right.
+[0:24:10] Md Mashiul Azam Chowdhury: Interesting. Okay. So do you want it that way, or?
+[0:24:13] Constance Wolfe: No, I think it's actually good. I think that's actually good.
+[0:24:22] Md Mashiul Azam Chowdhury: Okay. Okay, then.
+[0:24:22] Constance Wolfe: Yeah. Will you check the filter?
+[0:24:26] Md Mashiul Azam Chowdhury: Yeah.
+[0:24:28] Constance Wolfe: So what if you have something in search and filters?
+[0:24:32] Md Mashiul Azam Chowdhury: Yeah, it is sticking. Insert. Ah, okay. So this is— Kaya also mentioned this.
+[0:24:43] Md Mashiul Azam Chowdhury: So this is not actually dependent right now.
+[0:24:47] Constance Wolfe: Okay, I see. Okay. Yeah.
+[0:24:50] Md Mashiul Azam Chowdhury: So it's showing all the data from without the search, and maybe it should show only the data that are after the search.
+[0:25:03] Md Mashiul Azam Chowdhury: So BJORN may need to work on, will need to work on this.
+[0:25:09] Constance Wolfe: All right.
+[0:25:09] Constance Wolfe: Is brands and retailers dependent on, are the other filters, not the search, but are the other filters dependent on each other?
+[0:25:18] Md Mashiul Azam Chowdhury: I don't think so.
+[0:25:30] Constance Wolfe: Well, it looks like—
+[0:25:32] Md Mashiul Azam Chowdhury: Oh, maybe it is in— it's not coming up. Yeah, yeah, they are dependent among them, not the search.
+[0:25:46] Constance Wolfe: Well, it was though, because only the sprouts were coming up in your filters.
+[0:25:51] Md Mashiul Azam Chowdhury: Yeah, yeah, because this is Right.
+[0:25:54] Constance Wolfe: That's what I was saying. So I think it is dependent.
+[0:26:06] Md Mashiul Azam Chowdhury: Applejack's thing. That's cool.
+[0:26:12] Constance Wolfe: Oh, wait a minute. Stop. Stop for a minute and just stay with Applejack's.
+[0:26:17] Md Mashiul Azam Chowdhury: Okay.
+[0:26:18] Constance Wolfe: Go ahead and click exit. Get that out of there. Yeah. That's not showing Applejack's.
+[0:26:30] Md Mashiul Azam Chowdhury: Oh, friends.
+[0:26:35] Constance Wolfe: Why is it pulling up Ben's?
+[0:26:36] Md Mashiul Azam Chowdhury: Why is it? Yeah. So all of them are Applejack's.
+[0:26:51] Constance Wolfe: Okay.
+[0:26:52] Md Mashiul Azam Chowdhury: Wait.
+[0:26:52] Constance Wolfe: It's like it's that Sprouts is still stuck, kind of.
+[0:26:57] Md Mashiul Azam Chowdhury: Yeah.
+[0:27:00] Constance Wolfe: Try this track link.
+[0:27:03] Md Mashiul Azam Chowdhury: Yeah. What?
+[0:27:09] Constance Wolfe: Okay.
+[0:27:12] Md Mashiul Azam Chowdhury: Now if I click.
+[0:27:19] Constance Wolfe: Hmm, yeah, it looks like it needed to be cleared.
+[0:27:23] Constance Wolfe: Once it cleared, it was fine, but it was sticking with that search.
+[0:27:27] Md Mashiul Azam Chowdhury: But yeah, there is the glitch here. So yeah, I need to check that. Yeah, all of them are Apple checks.
+[0:27:43] Md Mashiul Azam Chowdhury: So should, should we keep the search for now, or, you know?
+[0:27:49] Constance Wolfe: It seems like it's working. Yeah. So yeah, I think it's okay.
+[0:27:55] Constance Wolfe: I like the search, being able to search anything. We just need the export.
+[0:28:02] Md Mashiul Azam Chowdhury: I think it's getting the search and the filters altogether.
+[0:28:09] Md Mashiul Azam Chowdhury: That's why it was showing those and the apotexes.
+[0:28:13] Constance Wolfe: That's what I was going to say too, I think, but it just needed to be cleared once you—
+[0:28:17] Md Mashiul Azam Chowdhury: Right, right.
+[0:28:19] Md. Tauhidur Rahman: Yeah.
+[0:28:21] Constance Wolfe: Okay, so back to category review then.
+[0:28:28] Constance Wolfe: So what— so there was a couple of things you were saying that needed to be done, but there was a couple of things that were missed.
+[0:28:36] Constance Wolfe: So we— you stopped at hiding not interested.
+[0:28:41] Constance Wolfe: So when you toggle the— when you're on the brand report, when you toggle the not interested, that needs to be implemented then.
+[0:28:49] Md Mashiul Azam Chowdhury: Yes.
+[0:28:50] Constance Wolfe: What about when the review was complete? So that is stat— it's— I think it's status.
+[0:28:59] Md Mashiul Azam Chowdhury: Yeah, actually, that's Uh, I'm not sure what result here.
+[0:29:08] Md Mashiul Azam Chowdhury: Yeah, because, uh, I mean, uh, in that way we can sort of, uh, filter all of them except the closed ones.
+[0:29:27] Md Mashiul Azam Chowdhury: Something like that, but I mean it's this kind of creates that excluding filter thing in the tradespan.
+[0:29:40] Md Mashiul Azam Chowdhury: Remember that we are when we are checking all of them and when we are checking none of them, it was creating the same result.
+[0:29:52] Md Mashiul Azam Chowdhury: So that's. sort of what the issue here also arises. So that's why I am thinking what to do here.
+[0:30:05] Constance Wolfe: You want to treat it the same way as the hide not interested, the global filter?
+[0:30:12] Md Mashiul Azam Chowdhury: Yeah, sure. But in that case, we need to— I mean, We need to know what you would name that status.
+[0:30:27] Constance Wolfe: Right. So is there— we have— do you have a list?
+[0:30:30] Constance Wolfe: I think I have it somewhere of the result, the result options. Are these the only 2 you have?
+[0:30:41] Md Mashiul Azam Chowdhury: Currently, yeah, these are the only 2 we added. Okay.
+[0:30:46] Constance Wolfe: Yeah. So if I added something like accepted or declined, let's say, let's do both of those.
+[0:30:56] Md Mashiul Azam Chowdhury: Declined. Let me get a red color.
+[0:31:16] Md Mashiul Azam Chowdhury: Great option. So decline for that. And another was accept. Yeah.
+[0:31:29] Md Mashiul Azam Chowdhury: Maybe this could be blue. Yeah.
+[0:31:35] Constance Wolfe: Why don't you do green maybe for accept? Sorry.
+[0:31:42] Md Mashiul Azam Chowdhury: No worries.
+[0:31:53] Constance Wolfe: Yeah.
+[0:31:55] Md Mashiul Azam Chowdhury: So if I refresh here, then So the results decline.
+[0:32:11] Md Mashiul Azam Chowdhury: So if I choose maybe this one, yeah, decline, accept, either one.
+[0:32:25] Constance Wolfe: Okay, so then can we do a global filter based on either, you know, Either one of those statuses or just filter by it, I guess.
+[0:32:34] Md Mashiul Azam Chowdhury: I mean, from here you can just select all of them except the accept.
+[0:32:41] Md Mashiul Azam Chowdhury: So yeah, if we do that— oh, interesting. It's not going to show you the empty ones. Okay.
+[0:32:57] Md Mashiul Azam Chowdhury: What to do with the empty?
+[0:32:59] Constance Wolfe: Empty? Which empty ones?
+[0:33:02] Md Mashiul Azam Chowdhury: Uh, there were some of them that we didn't set any aspect.
+[0:33:06] Constance Wolfe: Oh, I see. Yeah, yeah, yeah.
+[0:33:10] Md Mashiul Azam Chowdhury: So since we only selected these 2, so only these 2 were showing.
+[0:33:20] Md Mashiul Azam Chowdhury: In that case, Let me talk to Arnab on how we can fix this.
+[0:33:29] Constance Wolfe: So I guess it kind of comes— it's kind of that same thing as the fixed filters or the sticky filters where they're not going to want to every time they access this page to have to filter those final statuses.
+[0:33:50] Constance Wolfe: So yeah, it would be the same implementation.
+[0:33:55] Constance Wolfe: I don't know if it's the same thing as the not interested.
+[0:34:03] Md Mashiul Azam Chowdhury: Hmm.
+[0:34:04] Constance Wolfe: So I guess that's the question.
+[0:34:07] Md. Tauhidur Rahman: If—
+[0:34:07] Constance Wolfe: how— yeah, can the user access this page And not have to manually—
+[0:34:17] Md Mashiul Azam Chowdhury: Yeah, I mean, I had an idea about doing that sort of based on browser.
+[0:34:26] Md Mashiul Azam Chowdhury: So when you're using this browser, it will save the filter you are setting in that browser.
+[0:34:39] Md Mashiul Azam Chowdhury: So whenever you log in here, it will always populate based on that filter.
+[0:34:48] Md Mashiul Azam Chowdhury: But Bijay said that it would be better if we do it user-wise.
+[0:34:55] Md Mashiul Azam Chowdhury: In that case, we need to do some work in the backend because we are— we need to save the filters in the database.
+[0:35:09] Constance Wolfe: So is that the same thing?
+[0:35:10] Constance Wolfe: Is that the same implementation where when a user logs in and they look at the retailer list, they only want to see the retailers they manage?
+[0:35:21] Md Mashiul Azam Chowdhury: Yes.
+[0:35:23] Constance Wolfe: Okay, because that was on my list today because I have a call with that group today.
+[0:35:29] Constance Wolfe: And that was the request a couple of weeks ago.
+[0:35:31] Constance Wolfe: Do you remember that conversation we had about the fixed filters?
+[0:35:36] Constance Wolfe: I have that on my list to discuss today. So you're saying that that's the same implementation?
+[0:35:44] Md Mashiul Azam Chowdhury: Sort of, yes. But yeah, that would need backend implementation.
+[0:35:52] Constance Wolfe: Yes. Okay.
+[0:35:55] Constance Wolfe: So I think— so Toheed, I had asked him because that came— I think that came up on our October 4th call, and I sent him the notes and I asked him to help me make that ticket or the story.
+[0:36:10] Constance Wolfe: So he— there was some requirements for me, and that was like to outline which modules do you want with this feature.
+[0:36:21] Constance Wolfe: So I was going to ask his help for that.
+[0:36:24] Md Mashiul Azam Chowdhury: Okay.
+[0:36:24] Constance Wolfe: So, Toheed, should we just do— it sounds like this is all related.
+[0:36:29] Md. Tauhidur Rahman: Yeah, yeah, it's all related. So the meeting notes that the— I cannot access the meeting note.
+[0:36:38] Md. Tauhidur Rahman: So already I have downloaded the transcript, so I have went through the transcript and I have already created the ticket.
+[0:36:47] Md. Tauhidur Rahman: But the problem is the thing you have mentioned that how many features we want to have under that umbrella.
+[0:36:55] Md. Tauhidur Rahman: It's the main question of mine, because like in that feature we already have like, like it's more like RBAC, right?
+[0:37:06] Md. Tauhidur Rahman: If the way that different kind of like different people with different role will have different, different kind of view and different kind of permissions.
+[0:37:16] Md. Tauhidur Rahman: So, so my thinking was like.
+[0:37:21] Md. Tauhidur Rahman: For which, which, like, for system-wide we are going to implement it, or like for some of the feature we are going to have that capability, or some of the feature we're not going to have that capability?
+[0:37:31] Md. Tauhidur Rahman: That was my question.
+[0:37:32] Constance Wolfe: Yeah, and that's what I need help thinking through. I just need, I need you guys to ask me questions.
+[0:37:39] Constance Wolfe: Would help, would help.
+[0:37:40] Constance Wolfe: I just don't know exactly how to outline it, so that's why I was like, and maybe we can get together tomorrow, or, you know, not on today's call, but I was hoping we could schedule a call and then we can just work through it together.
+[0:37:52] Constance Wolfe: Yeah, okay.
+[0:37:54] Md. Tauhidur Rahman: In the, in the meantime, I have to check all the, like, features regarding the—
+[0:38:00] Constance Wolfe: I mean, right off the top of my head, it was essentially the— I'll share my screen really quick and then we'll talk more about it tomorrow.
+[0:38:12] Constance Wolfe: But just It was,
+[0:38:33] Constance Wolfe: it was this fixing which filters they want to see in this list.
+[0:38:40] Constance Wolfe: I think it was trade spend. Certain reps only want to see their promotions.
+[0:38:49] Constance Wolfe: And then in the new— by the way, I can't access the broker dashboard anymore.
+[0:38:55] Constance Wolfe: The new one you designed.
+[0:38:58] Md Mashiul Azam Chowdhury: Let's see.
+[0:39:01] Constance Wolfe: New broker dashboard.
+[0:39:02] Constance Wolfe: When I tried to open this the other day, it was giving me— oh, you must have fixed it.
+[0:39:07] Md Mashiul Azam Chowdhury: Yeah, okay.
+[0:39:09] Md. Tauhidur Rahman: It's a free service I'm using, so sometimes it's like it went— it goes down.
+[0:39:14] Md. Tauhidur Rahman: I don't know why, but like it's basically a free service I'm using to host this.
+[0:39:20] Constance Wolfe: Yeah, yeah. And then it was their tasks.
+[0:39:26] Md. Tauhidur Rahman: Yeah.
+[0:39:27] Constance Wolfe: So right off the top of my head, that's what it is.
+[0:39:30] Md. Tauhidur Rahman: Yeah.
+[0:39:31] Constance Wolfe: And so the question would be— the question would be if we only do these Now and we want to add more later, do we have to redo everything or can we just add more later?
+[0:39:44] Constance Wolfe: That's, that's my main question.
+[0:39:47] Md. Tauhidur Rahman: Like, for, like, correct me if I'm wrong, if I'm saying something like totally unrelated to the code, but the thing is, whenever we're planning to have this kind of role-based access control kind of thing, we, from the beginning, we need to think about the रोल सेग्रेगेशन, तो ही द थिंग इज़ शी इज़ नॉट टॉकिंग अबाउट रोल बेस, शी इज़ टॉकिंग अबाउट यूज़र बेस.
+[0:40:10] Md Mashiul Azam Chowdhury: सो व्हेन अ यूज़र इज़ मेकिंग एनी फ़िल्टर चेंजेस, ही और शी विल सी ओनली टैक्स पिल्टर्स.
+[0:40:20] Md. Tauhidur Rahman: ओके. या या.
+[0:40:22] Md Mashiul Azam Chowdhury: सो इट विल बी इट्स नॉट लाइक दे आर रिस्ट्रिक्टेड. या या.
+[0:40:30] Md. Tauhidur Rahman: Okay, got it. And another thing, like you have shown me the pipeline.
+[0:40:35] Md. Tauhidur Rahman: So previously we had the conversation regarding the pipeline for broker dashboard that we wanted to follow the pattern of Fellow, right?
+[0:40:46] Md. Tauhidur Rahman: Like the how the Fellow like creates the task and everything for you in and whenever you like.
+[0:40:55] Md. Tauhidur Rahman: Cross it, or like if mark it done, it's disappear.
+[0:40:58] Md. Tauhidur Rahman: But you can also see it whenever you want to see it.
+[0:41:01] Md. Tauhidur Rahman: So do we want do we want to follow that path, or we are gonna stick to this pipeline?
+[0:41:09] Constance Wolfe: Well, I'd like. Sorry, can you see my screen?
+[0:41:12] Md. Tauhidur Rahman: Yeah, I can see your screen.
+[0:41:14] Md Mashiul Azam Chowdhury: Yes.
+[0:41:16] Constance Wolfe: So here we've got create. We've got the deadline.
+[0:41:20] Md. Tauhidur Rahman: Yeah, yeah.
+[0:41:21] Constance Wolfe: Right. So I'm gonna create this. And then when I— right now, when I check it, it goes away.
+[0:41:29] Constance Wolfe: And the filter here, I can see my completed. I love it.
+[0:41:33] Constance Wolfe: I think this is really nice, but I don't know what this does to our timeline, because otherwise the other option is—
+[0:41:41] Md. Tauhidur Rahman: looks like in this one.
+[0:41:43] Constance Wolfe: Yeah. This one, it looks like it just crosses it out and it stays there.
+[0:41:47] Md. Tauhidur Rahman: Yeah, yeah.
+[0:41:48] Md. Tauhidur Rahman: So my concern was also that like if it crosses down whenever we are reaching 100 or 200 kind of tasks, real hard to look at.
+[0:41:57] Md. Tauhidur Rahman: So I really liked your approach. So it's up to Iftiha.
+[0:42:02] Md. Tauhidur Rahman: I think Iftiha, the thing is the way we are thinking this, it's mostly I think the creation and in progress is kind of same.
+[0:42:09] Md. Tauhidur Rahman: It's just the frontend rendering part, right, bhai?
+[0:42:13] Md Mashiul Azam Chowdhury: Yes. Yeah. Yeah.
+[0:42:18] Md. Tauhidur Rahman: So we are not going to change the backend structure because like we're gonna create tasks, we're gonna add deadlines, and we're gonna like mark it done.
+[0:42:27] Md Mashiul Azam Chowdhury: Oh, yeah, yeah. No, no, no.
+[0:42:30] Md Mashiul Azam Chowdhury: The main core functionality will be the same, but it's just the user experience. Yeah.
+[0:42:38] Md. Tauhidur Rahman: Yeah, so I think you can estimate it.
+[0:42:41] Md. Tauhidur Rahman: I think like I, I can create the wireframe and then you can estimate how many times, how many hours it's gonna take to make it like—
+[0:42:49] Md Mashiul Azam Chowdhury: yeah, sure, sure.
+[0:42:51] Md. Tauhidur Rahman: So, uh, Constance, what I'm gonna do, I'm gonna update the wireframe, okay?
+[0:42:55] Md. Tauhidur Rahman: Then me and Iftikhar, I can have a talk about it and we can give you the estimation how many times, like how much time it will take.
+[0:43:03] Constance Wolfe: Okay, but so back to then, um, The original question, which was for the— I think we were talking about the brand report for category review.
+[0:43:24] Constance Wolfe: And then can— so how can we allow the users to customize their fixed filters?
+[0:43:33] Constance Wolfe: You're saying what you just described It— that's all related because then we kind of went to the pipeline and we're talking about hiding completed items.
+[0:43:47] Constance Wolfe: So, which is great, but back to— we were talking about users versus roles and how they can fix their filters.
+[0:44:00] Md. Tauhidur Rahman: If you do it, It's just a brainstorm.
+[0:44:03] Md. Tauhidur Rahman: So if a user creates any kind of filter or anything, we are not saving— will we save it in our backend or will it be saved in the cache?
+[0:44:14] Md Mashiul Azam Chowdhury: Well, yeah, thing is if we save it in the cache, then it won't be user-specific.
+[0:44:21] Md Mashiul Azam Chowdhury: It will be browser-specific based on browser. So, but We are planning to have it user-based, right?
+[0:44:33] Md Mashiul Azam Chowdhury: So then in that case, we need to save it in the backend. Yeah. So, okay.
+[0:44:44] Constance Wolfe: So that was my question.
+[0:44:47] Constance Wolfe: That was my question there was how specific do we need To be to implement that now, because I think one time when we talked about it, it was a fairly simple thing.
+[0:45:00] Constance Wolfe: It was like yeah, that would take us like a day, or it was maybe I don't know. It wasn't very long.
+[0:45:07] Md. Tauhidur Rahman: If you buy what I am thinking that for currently, yeah, for currently, if we pick the highest priority one and then implement it later on, if we need some.
+[0:45:21] Md. Tauhidur Rahman: Things from other features also, we can also add them, right?
+[0:45:27] Md Mashiul Azam Chowdhury: I mean, yeah, for each of the module, for example, if we want to include this in the brand report, the retailer, so each of the module may take like for backend maybe 2 to 3 hours and frontend 1, 2 hours.
+[0:45:51] Md Mashiul Azam Chowdhury: But this is for each one. So each one takes almost a similar amount of work, I think.
+[0:46:00] Md. Tauhidur Rahman: Yeah. And for the initial setup, we need to do some more work, right? For the initial part.
+[0:46:05] Md Mashiul Azam Chowdhury: For the initial, yeah.
+[0:46:07] Md. Tauhidur Rahman: Yeah.
+[0:46:11] Md. Tauhidur Rahman: So Constance, As per Ifti bhai, what he have mentioned that we can do for all of the features, like, one by one.
+[0:46:21] Md. Tauhidur Rahman: But it will take time for each of the modules.
+[0:46:23] Md. Tauhidur Rahman: But initially, it will take some more time to establish that in the codebase.
+[0:46:30] Md Mashiul Azam Chowdhury: Maybe not that much. Maybe just 1 hour extra.
+[0:46:33] Md. Tauhidur Rahman: Yeah, yeah, yeah.
+[0:46:34] Md Mashiul Azam Chowdhury: Not that much.
+[0:46:36] Md. Tauhidur Rahman: Yeah.
+[0:46:37] Constance Wolfe: Okay, so we're saying— so what I kind of heard was it's 4-ish, a half a day-ish.
+[0:46:41] Constance Wolfe: for front end and back end to implement a user-based filter, right? And that was per module.
+[0:46:50] Md Mashiul Azam Chowdhury: Yes.
+[0:46:51] Constance Wolfe: Okay.
+[0:46:51] Constance Wolfe: So if we're saying we need one in the brand report, and we want one in the— the retail and one in the tasks, because the task, as I understand it, in the broker, I mean, this is for every broker, every user in the brokerage, right?
+[0:47:25] Constance Wolfe: So this would be really ugly if you've got 25 people in here.
+[0:47:32] Md. Tauhidur Rahman: Yeah.
+[0:47:35] Constance Wolfe: So, so the pipeline.
+[0:47:37] Constance Wolfe: But so, and then what we talked about this pipeline is that it's rolling up from each brand.
+[0:47:45] Constance Wolfe: That's kind of what we talked about, that this would.
+[0:47:49] Constance Wolfe: So if they create a task at the brand level, and so it would be— let me do it like this.
+[0:47:56] Constance Wolfe: So here's the brands, and you're in the pipeline here.
+[0:48:00] Constance Wolfe: And you create something, the user's creating something, then that's gonna roll up to here.
+[0:48:06] Constance Wolfe: So that's why that user's critical, because then only that user is seeing their tasks.
+[0:48:23] Md Mashiul Azam Chowdhury: Yeah.
+[0:48:28] Constance Wolfe: So that's part of this whole ticket.
+[0:48:31] Constance Wolfe: So the ticket, I think, is this one right here that we talked about.
+[0:48:36] Constance Wolfe: This is what Toheed and I would, I think, need to work on.
+[0:48:41] Md Mashiul Azam Chowdhury: Yeah.
+[0:48:43] Constance Wolfe: All of that. It's the roll-up and all of that.
+[0:48:47] Md Mashiul Azam Chowdhury: Also, Constance, actually, I wanted to talk. To you about this.
+[0:48:52] Md Mashiul Azam Chowdhury: Uh, maybe Bija already gave you a heads up.
+[0:48:55] Md Mashiul Azam Chowdhury: So, uh, we should actually have a proper documentation of, uh, all the modules in our system because, uh, sometimes when we are making changes, it sometimes affects other modules as well.
+[0:49:15] Md Mashiul Azam Chowdhury: So it's Kind of hard to track those changes or those links. So in this case, what are your thoughts?
+[0:49:34] Constance Wolfe: Well, who's— yeah, I mean, I would have thought that that would have been something we were doing all along, for sure.
+[0:49:42] Md Mashiul Azam Chowdhury: Yeah, but we are making constant changes.
+[0:49:45] Md Mashiul Azam Chowdhury: So, but, uh, the change, uh, for example, uh, do you remember that, uh, we sort of forgot that, uh, uh, oh, I forgot again.
+[0:50:00] Md Mashiul Azam Chowdhury: So, uh, in your last call you said that, uh, there was something in the JSON, but, uh, I think we removed it or we Forgot it or something.
+[0:50:14] Constance Wolfe: So yeah, it was— I mean, broker, it was the broker—
+[0:50:19] Md Mashiul Azam Chowdhury: Broker trade spend?
+[0:50:20] Constance Wolfe: It was the broker trade spend, and there was a flow.
+[0:50:24] Constance Wolfe: There was a stepper in which they didn't have to enter in the store count or low velocity because they weren't calculating it anyway.
+[0:50:34] Constance Wolfe: That's what you're referring to.
+[0:50:36] Md Mashiul Azam Chowdhury: The conversation. Yeah, I think so.
+[0:50:40] Md Mashiul Azam Chowdhury: Yeah, so yeah, so these type of, uh, things, uh, should be properly documented.
+[0:50:47] Md Mashiul Azam Chowdhury: And I don't know, and also, uh, uh, they are asking about, uh, the hierarchy of the statuses, uh, in the, uh, banner SKU.
+[0:51:03] Md Mashiul Azam Chowdhury: And I actually remember you giving it in a ticket, but I actually couldn't find the ticket. So—
+[0:51:11] Constance Wolfe: Yeah, that was something that Toheed found that I just showed him the other day that he created.
+[0:51:16] Constance Wolfe: All right, I think this is what you're talking about. I mean, I'm following what you're saying.
+[0:51:21] Constance Wolfe: It's a bigger— it's a bigger— but who's— who does that? Whose responsibility is that?
+[0:51:27] Constance Wolfe: I mean, I'm not trying to blame anybody. I'm just trying to say where— yeah, I agree. Totally agree.
+[0:51:32] Constance Wolfe: Yeah, I just don't know who's supposed to do it.
+[0:51:36] Md Mashiul Azam Chowdhury: Yeah, the perfect person would be for that is Tohi.
+[0:51:45] Md. Tauhidur Rahman: So yeah, so I think I'll be able to help with that.
+[0:51:51] Md. Tauhidur Rahman: Today I had a discussion with you regarding the codebase and everything, right?
+[0:51:55] Md. Tauhidur Rahman: If I can see everything and check everything, I can create a knowledge base and Create everything so that you do.
+[0:52:03] Md. Tauhidur Rahman: You guys don't have to check the dependencies or anything—a graph and a knowledge graph and everything—so that you guys, like whenever you guys are doing coding or anything, you just have to ask that if I change this, which are the modules are interlinked with this feature?
+[0:52:22] Md Mashiul Azam Chowdhury: Yeah, you can. Yeah, I believe you have already made some progress there, right? Yeah, yeah.
+[0:52:28] Md. Tauhidur Rahman: It's like. Yeah, it's for more like my documentation part. Let me—
+[0:52:34] Constance Wolfe: what is the name of that? I'm trying to find it.
+[0:52:38] Constance Wolfe: The one that you just did with all the tickets where you created all the tickets.
+[0:52:44] Md. Tauhidur Rahman: Let me check. I can't remember the name of it. Okay, okay. Let me share it. Okay. Gmail.
+[0:53:01] Md. Tauhidur Rahman: So I, like, in my previous office, I used to have, like, I used to, like, for my most of my life, I was used to the Microsoft ecosystem.
+[0:53:12] Md. Tauhidur Rahman: Now, like, when I have, like, shifted to Google, it's also, like, really hard for me to find.
+[0:53:19] Constance Wolfe: Yeah, it's so hard. I know, me too.
+[0:53:22] Md. Tauhidur Rahman: Yeah, like in Asta I have shifted to this ecosystem, but previously for my, like, uh, for previous 3, my 3 jobs, I used to use the, uh, Microsoft ecosystem.
+[0:53:33] Md. Tauhidur Rahman: Yeah, Microsoft ecosystem. Yeah, really.
+[0:53:38] Constance Wolfe: I don't, I'm not a big fan of Google, honestly.
+[0:53:41] Md. Tauhidur Rahman: I don't wanna— Yeah, it's okay. It's more like student-friendly, not corporate-friendly.
+[0:53:52] Constance Wolfe: Yeah. So I think it was in here. I just found that the other day. I should— yeah, hierarchy rules.
+[0:54:10] Constance Wolfe: So discontinued.
+[0:54:12] Constance Wolfe: So this is saying Can market over— so I think I'll look at this, but I think can market overview override would be the same as can banner SKU upload override.
+[0:54:26] Md. Tauhidur Rahman: Yeah.
+[0:54:29] Constance Wolfe: And I think the answer is yes.
+[0:54:33] Constance Wolfe: Next step, review with Bajoy what is currently implemented in the background.
+[0:54:37] Constance Wolfe: So this was, this was a task I gave Toheed because We haven't used the market overview in a while, so I just wanted to make sure to review this again.
+[0:54:48] Constance Wolfe: So we do. So he has made a lot of documentation. I just don't know where it lives.
+[0:54:55] Constance Wolfe: Or maybe it just needs to be kind of cataloged somehow.
+[0:54:59] Md Mashiul Azam Chowdhury: Yeah, I think he is centralizing those documents.
+[0:55:03] Md. Tauhidur Rahman: Yeah, so basically everything like in this documentation, everything is related to broker dashboard tasks that had— that might not have any kind of Descriptions or any kind of, and like for the tickets, those those have numbers.
+[0:55:19] Md. Tauhidur Rahman: Those are like the tickets in the Jira who didn't have any kind of descriptions.
+[0:55:24] Md. Tauhidur Rahman: And for the M01, M02, M01, M02, those those are like the in the needs section in our Excel sheet.
+[0:55:32] Md. Tauhidur Rahman: The one constant you have shared with us. Yeah, it's for for the needs section.
+[0:55:36] Md. Tauhidur Rahman: So I'm gonna upload those in the system and also we'll start.
+[0:55:41] Md. Tauhidur Rahman: Like creating the tickets very soon so that like I can take create the roadmap.
+[0:55:47] Md. Tauhidur Rahman: That that is that was my task and I thought that yesterday I could have done it but yesterday I was sick couldn't upload anything in the system so I will try to upload every ticket in the Jira and also for the other rest of the rest of the modules.
+[0:56:06] Md Mashiul Azam Chowdhury: In here.
+[0:56:11] Constance Wolfe: Where'd it go? Where'd it go? Where'd it go? Where'd it go? Come on, Wolf. Oh, I'll put it in there.
+[0:56:27] Constance Wolfe: You guys don't need to watch it, but I'll put that in here as well.
+[0:56:30] Md. Tauhidur Rahman: Okay, I'm putting that in there. Okay, thank you.
+[0:56:35] Constance Wolfe: Okay, so good conversation, but we sidetracked. So I got a call with Jane Street today.
+[0:56:51] Constance Wolfe: We're gonna go over promotional planning.
+[0:56:54] Constance Wolfe: So When we had our call 2 weeks ago, they had requested those things that we're talking about, the user-based fixed filters, for lack of better terms.
+[0:57:13] Constance Wolfe: So back to that, um, uh, I— what I am taking away from that is That it's going to be approximately four hours per module, and we talked about the brand report.
+[0:57:38] Constance Wolfe: We talked about the retail list, and then we got to pipeline.
+[0:57:42] Constance Wolfe: And then when we got to the pipeline, then we started talking about okay, remember at the pipeline that.
+[0:57:51] Constance Wolfe: Well, same thing that, well, not only is it a user-based filter, but did we capture that all of the user's tasks are going to roll up to that broker report?
+[0:58:10] Constance Wolfe: And I don't know if that's captured anywhere. So I'm making a note of that right now in my own notes.
+[0:58:25] Constance Wolfe: And then I think what we said is that Tawhid and I are going to meet tomorrow to review user-based fixed filters, and I just need to make sure to bring that task to that call.
+[0:58:38] Constance Wolfe: Is that correct?
+[0:58:39] Md. Tauhidur Rahman: Yeah.
+[0:58:45] Constance Wolfe: Okay. Okay.
+[0:58:45] Constance Wolfe: So if we had currently 3 modules that are going to have fixed filters, we're talking 12-ish hours.
+[0:58:54] Constance Wolfe: Or are you saying it's not going to take 4 hours for each one if we do?
+[0:58:58] Constance Wolfe: It's only going to— because I thought if you said, well, really would only be 1 extra hour, is it the first one that takes 4 hours and then 1 hour after that, or each one would take 4 Oh, no, no.
+[0:59:09] Md Mashiul Azam Chowdhury: Each one would take 4 hours, but the first one might take 5 hours. That's—
+[0:59:15] Constance Wolfe: Okay, got you. Okay. Okay. Okay.
+[0:59:19] Constance Wolfe: So, and then the piece about rolling it up from the tasks, rolling those tasks up, that's then a different feature altogether, correct?
+[0:59:37] Md Mashiul Azam Chowdhury: So that would— oh, right, that one. Yeah.
+[0:59:42] Constance Wolfe: So that would just— we would just have to figure out what that would entail on tomorrow's call.
+[0:59:47] Md Mashiul Azam Chowdhury: Right.
+[0:59:48] Constance Wolfe: Because I thought we had a call, a post-call about it, and it was pretty— it was— it seemed pretty simple.
+[0:59:56] Constance Wolfe: And then because then I went back to them and said, hey, I talked to my developers and it doesn't sound like it's going to be that big of a deal.
+[1:00:03] Constance Wolfe: I think it was like super straightforward.
+[1:00:06] Md Mashiul Azam Chowdhury: Yeah, the filter one or the pipeline? Oh, I mean the task one. Oh, both.
+[1:00:12] Md Mashiul Azam Chowdhury: I mean, yeah, uh, actually I'm not sure about the, uh, the filter one because, yeah, if Vijay said it's pretty straightforward, maybe he's, uh, he has some other idea in the backend.
+[1:00:28] Md Mashiul Azam Chowdhury: Okay. So maybe it might take less time as well.
+[1:00:33] Constance Wolfe: I'm not sure. Is he back tomorrow? Could he be on that call? Yes.
+[1:00:39] Md Mashiul Azam Chowdhury: Yes, he is back.
+[1:00:39] Md. Tauhidur Rahman: Okay.
+[1:00:40] Md. Tauhidur Rahman: If you— I can somehow clearly remember, although, that Bijoy have said this will not take that much time.
+[1:00:48] Constance Wolfe: Yeah. I walked away from that call with him going, hey, this is straightforward.
+[1:00:53] Md. Tauhidur Rahman: Yeah.
+[1:00:53] Constance Wolfe: Yeah. A couple hours.
+[1:00:54] Constance Wolfe: No big deal, because I remember going back to them and saying, great news, we can get this implemented pretty quickly.
+[1:01:02] Md. Tauhidur Rahman: I see.
+[1:01:03] Md Mashiul Azam Chowdhury: Yeah. Yeah.
+[1:01:04] Md. Tauhidur Rahman: So I also remember, I also have checked the transcript.
+[1:01:08] Md. Tauhidur Rahman: Biju has said that it will not take that much time.
+[1:01:12] Constance Wolfe: Okay. Yeah.
+[1:01:13] Constance Wolfe: Thank you for— so I'm surprised you couldn't open that up because in the, the link and the passcode was in the notes.
+[1:01:24] Constance Wolfe: And you're saying the link and the password didn't work?
+[1:01:27] Md. Tauhidur Rahman: No, the link I clicked said that I don't have any access for that meeting.
+[1:01:34] Constance Wolfe: The passcode is in the email.
+[1:01:37] Md. Tauhidur Rahman: Yeah, yeah. They haven't asked for any kind of passcode or anything.
+[1:01:40] Constance Wolfe: Oh, it just says you can't link it.
+[1:01:42] Md. Tauhidur Rahman: Yeah, yeah. Just kicked me out.
+[1:01:45] Constance Wolfe: That's weird. I don't know. OK. Okay. All right. So we'll meet tomorrow and we'll talk about that.
+[1:01:57] Constance Wolfe: The category review.
+[1:02:05] Constance Wolfe: What is your timeline on the delivery of what we talked about for the category review?
+[1:02:15] Md Mashiul Azam Chowdhury: Well, I am currently working as well while I'm talking, so maybe give me like 1.5 hours.
+[1:02:27] Constance Wolfe: Okay. Okay. Okay, great. We are past time.
+[1:02:35] Constance Wolfe: There was— there's a couple things I wanted to talk to you guys about.
+[1:02:39] Constance Wolfe: Some were some very specific tickets.
+[1:02:42] Constance Wolfe: That Taya had some comments and some tickets, and so I made some notes that I wanted to talk to you guys about.
+[1:02:50] Constance Wolfe: I also wanted to ask you guys if you're familiar with posthog.com.
+[1:02:58] Constance Wolfe: Apparently, one of our guys at Lincoln Labs uses it.
+[1:03:03] Constance Wolfe: It's a free service where it'll track the activity in your In your platform so we can see who's doing it.
+[1:03:12] Constance Wolfe: So that, that was a request that it would be great to have like a tracking system to see who's logging in and how long they're staying and what they're looking at.
+[1:03:21] Constance Wolfe: So I'll type this in. It's posthog.com. It's a free service.
+[1:03:26] Constance Wolfe: They said that you can just give it to your developers.
+[1:03:28] Constance Wolfe: They can put it into your system and you can start tracking.
+[1:03:31] Md Mashiul Azam Chowdhury: Okay.
+[1:03:32] Constance Wolfe: So I just I'll put that in the chat. Do you see that?
+[1:03:38] Md Mashiul Azam Chowdhury: Yeah, yeah.
+[1:03:39] Md. Tauhidur Rahman: It's not free as far as I remember. Let me check.
+[1:03:44] Constance Wolfe: So PostHog, I was just on it. Here's PostHog here. I'm sharing my screen.
+[1:03:52] Constance Wolfe: I— maybe it's like there's certain components of it that are free and then others that you have to ask for, but this is the website.
+[1:04:05] Constance Wolfe: Yeah. So let's look into that.
+[1:04:10] Md. Tauhidur Rahman: Yeah.
+[1:04:11] Md. Tauhidur Rahman: So if the way it's basically something like Google Analytics, it will generate heat maps and everything for you, the user journey where the user have like getting the bottlenecks and everything, we'll be able to see everything.
+[1:04:24] Md. Tauhidur Rahman: I might have worked on similar kind of things.
+[1:04:29] Constance Wolfe: Nice.
+[1:04:29] Md. Tauhidur Rahman: Yeah, so that in that time we also check this PostHog, but I don't think it's free, but I will check it.
+[1:04:37] Constance Wolfe: OK, and if it's not, just let us know how much it is because it might, you know, might be worth it to start understanding since we're getting new users in here what they're looking at.
+[1:04:50] Constance Wolfe: So, and then, so as far as these tickets go, And then I kind of wanted to also kind of— I, Tawheed, I took your bug list and went through it.
+[1:05:06] Constance Wolfe: And then there were a bunch of other tickets since you created that list since—
+[1:05:13] Md. Tauhidur Rahman: Yeah.
+[1:05:13] Constance Wolfe: Kaya is doing the audit. There were several other new tickets that weren't in that.
+[1:05:17] Constance Wolfe: So trying to get that figured out and then trying to separate those from the new features that we're looking at.
+[1:05:26] Constance Wolfe: And I think we're not too far from being able to kind of wrap our arms around, okay, these are the bug tickets, these are the feature tickets, that sort of thing.
+[1:05:37] Constance Wolfe: I was— I spent most of the day on Friday going through everything and feeling like I'm finally starting to get my arms around everything.
+[1:05:45] Md. Tauhidur Rahman: Yeah.
+[1:05:48] Constance Wolfe: What should we do that maybe this week as well, have a separate meeting and then you and I work together And so my main question was on the first— so I'll ask the most basic question first and then we can start wrapping this up.
+[1:06:03] Constance Wolfe: On the bug tickets, are we saying all hands on deck and then there's going to be no work on the features?
+[1:06:10] Constance Wolfe: Because that was going to be about 3 weeks of work.
+[1:06:13] Md Mashiul Azam Chowdhury: Yeah.
+[1:06:13] Constance Wolfe: For just the bugs. For the bugs, just for the bugs. Right, right.
+[1:06:19] Constance Wolfe: So while we're doing the bug tickets for 3 weeks, is there— there's no feature work?
+[1:06:24] Constance Wolfe: Is that everybody working on only bugs?
+[1:06:27] Md. Tauhidur Rahman: Yeah, it's, it's more like one frontend developer, one backend.
+[1:06:31] Md. Tauhidur Rahman: It, it was taken account like, uh, Iftibai and Bjoy are going to work on the bugs.
+[1:06:39] Md. Tauhidur Rahman: So like one, it, it was not everybody, but I didn't count Arnobin.
+[1:06:45] Md. Tauhidur Rahman: So develop the features, but it was mostly for, uh, Bjoy and If they can.
+[1:06:51] Constance Wolfe: Okay, great. Yeah. Okay.
+[1:06:53] Constance Wolfe: And so this may or may not be relevant, but wouldn't we want Warnov working on the bugs and Vishoy working on features?
+[1:07:02] Md. Tauhidur Rahman: Yeah, yeah.
+[1:07:03] Md Mashiul Azam Chowdhury: So yeah, well, yeah, it was sort of vice versa type situation.
+[1:07:07] Md Mashiul Azam Chowdhury: So yeah, where there's a lot of brainstorming or complexity, for example, in the void report or something like that.
+[1:07:19] Md Mashiul Azam Chowdhury: I don't think Arnab would be suited for that because he's— I mean, he has been working, but he's still new a bit.
+[1:07:31] Constance Wolfe: Right. He's capable, but just not as familiar, probably.
+[1:07:35] Md Mashiul Azam Chowdhury: Yeah, that's why in some bugs, Bijo is more suitable. That's okay.
+[1:07:44] Md Mashiul Azam Chowdhury: I mean, it's like if Arnab is suitable for it, then Arnab is looking into that part.
+[1:07:52] Md Mashiul Azam Chowdhury: Other than that, Peter is.
+[1:07:54] Constance Wolfe: Okay, they're gonna flow in and out.
+[1:07:55] Constance Wolfe: So I would like to officially say that we need to get that started.
+[1:08:03] Constance Wolfe: When I was looking at that, so if we, if we got that started this week, if you guys think it's possible to start that this week.
+[1:08:09] Constance Wolfe: So this is the week of the 17th. So 1, 2, 3. So we would be looking at 1 week, 2 weeks, 3 weeks.
+[1:08:24] Constance Wolfe: So that would take us to like the week of the 7th of September, I think, that week.
+[1:08:31] Constance Wolfe: So because this would be if we could start it this week.
+[1:08:33] Constance Wolfe: So 1 week, 2 weeks, 3 weeks, the 4th week would be the week of—
+[1:08:37] Md Mashiul Azam Chowdhury: September 7th.
+[1:08:38] Constance Wolfe: September 7th, correct?
+[1:08:40] Md Mashiul Azam Chowdhury: Right.
+[1:08:41] Constance Wolfe: Okay.
+[1:08:42] Constance Wolfe: So while that is going on, then I think we can still map out the features, but no feature work is going to be able to be implemented in those 3 weeks.
+[1:09:01] Constance Wolfe: Is that correct? If that's what I'm asking.
+[1:09:05] Md Mashiul Azam Chowdhury: I mean, uh, because, uh, one backend developer is going to be focusing on the bugs, right?
+[1:09:15] Md Mashiul Azam Chowdhury: But the other one can focus on the features.
+[1:09:18] Md Mashiul Azam Chowdhury: So, uh, I'm not sure because, uh, uh, it depends on the volume of the bugs.
+[1:09:27] Constance Wolfe: And so where I'm going with this, like, So let's say that the user-based fixed filter situation, like, you know, that and the category review.
+[1:09:41] Constance Wolfe: And then the other one is, you know, the broker dashboard.
+[1:09:43] Constance Wolfe: That's where I'm a little unclear, and that's where we can talk more tomorrow, Toheed.
+[1:09:47] Constance Wolfe: I'm a little unclear then when the new broker dashboard starts getting implemented.
+[1:09:55] Md. Tauhidur Rahman: Yeah.
+[1:09:55] Constance Wolfe: So I'm trying to Think of that as well.
+[1:10:01] Md. Tauhidur Rahman: Yeah, I was thinking the same because like for the broker dashboard to implement, we need to also implement the pipeline, right?
+[1:10:08] Md. Tauhidur Rahman: The task, right? Yeah. So we need to first create the pipeline, then the broker dashboard.
+[1:10:15] Md. Tauhidur Rahman: So it's more like interdependent, right?
+[1:10:19] Constance Wolfe: And also the promotional Management.
+[1:10:24] Constance Wolfe: We don't need a lot of functionality, I don't think, changes, but it needs to be integrated into that new UI look.
+[1:10:31] Md. Tauhidur Rahman: Yeah.
+[1:10:33] Constance Wolfe: So, so I'm just trying to understand if we're saying that none of those new things can be underway while we're working on the tickets, but it sounds like they can be a little bit.
+[1:10:49] Constance Wolfe: Going in the same direction at the same time, because there's only going to be one backend person working on the bugs.
+[1:10:58] Constance Wolfe: Yeah. Yes. Okay. Okay.
+[1:11:01] Constance Wolfe: So today, if I since I do have a call with the Jade Street today, and what we're going to cover is promotional management.
+[1:11:12] Constance Wolfe: If I tell them. Because they're going to ask about the user-based fixed filters.
+[1:11:20] Constance Wolfe: So if we may— are saying that's a priority, but we're starting the bug tickets, what do you think I could tell them as far as a delivery for that?
+[1:11:37] Constance Wolfe: Hard to know, isn't it?
+[1:11:38] Md Mashiul Azam Chowdhury: Yeah.
+[1:11:44] Constance Wolfe: Okay. I'll just have to figure out what to do on that. I'll just tell them it's in progress, I guess.
+[1:11:52] Constance Wolfe: Okay. So then tomorrow, why don't we call a meeting with Tawheed and Bijoy?
+[1:12:02] Md Mashiul Azam Chowdhury: Yeah.
+[1:12:03] Constance Wolfe: And then the main topic is going to be the user-based fixed filters. Right? Yeah. And then, yes.
+[1:12:14] Constance Wolfe: And then Tao, Haid, and I need to get together and work on.
+[1:12:22] Constance Wolfe: We need to work on kind of the the future, the feature and roadmap. Yeah.
+[1:12:29] Constance Wolfe: That would be a separate meeting. Yeah.
+[1:12:31] Md. Tauhidur Rahman: Yeah.
+[1:12:33] Md. Tauhidur Rahman: So I am asking for a— yeah, sorry, it's totally unrelated, but what, uh, if they were told us that about the knowledge and everything.
+[1:12:44] Md. Tauhidur Rahman: So what I have done so far, this one, so this is something I call it my second brain because like for like when I start to first start working on Caboodle, I was lost.
+[1:12:55] Constance Wolfe: Yeah.
+[1:12:56] Md. Tauhidur Rahman: So I didn't know anything and everything.
+[1:12:57] Md. Tauhidur Rahman: So this is something that I have learned throughout my journey in Caboodle.
+[1:13:03] Md. Tauhidur Rahman: So every node is something like it actually says something about the project.
+[1:13:09] Md. Tauhidur Rahman: So if I like, you can also search.
+[1:13:11] Md. Tauhidur Rahman: If I search brand report, so if I go on category review brand report, so this node is brand report and it's connected to what and what kind of documentation I have and what's the source, like what I have.
+[1:13:26] Md. Tauhidur Rahman: Keeping everything so you can see it's more like I have created a full brain of this project.
+[1:13:32] Md. Tauhidur Rahman: Like currently what I know is and what kind of documentation and everything I have because this is my folder.
+[1:13:40] Md. Tauhidur Rahman: Where's my code? So this is my folder.
+[1:13:46] Md. Tauhidur Rahman: So it's it have everything like prototypes, scripts, tickets, wireframes. so many things.
+[1:13:52] Md. Tauhidur Rahman: So it's really hard for me to track.
+[1:13:54] Md. Tauhidur Rahman: So whenever I forget anything, I just have to search here and I can take it.
+[1:13:58] Md. Tauhidur Rahman: It's more like my second brain.
+[1:14:00] Md. Tauhidur Rahman: So if Divya was talking about the same thing that sometimes they forget that which module is depending— dependent on what.
+[1:14:08] Md. Tauhidur Rahman: So I think if Divya was saying some like telling about something similar kind of this so that—
+[1:14:14] Md Mashiul Azam Chowdhury: Yes.
+[1:14:14] Md. Tauhidur Rahman: Anytime they try to like override any kind of module, it creates a flag that Uh, yeah, it's dependent.
+[1:14:22] Md. Tauhidur Rahman: Like, as you can see, like, the dependency, it's like this feature is also dependent on that feature.
+[1:14:28] Md. Tauhidur Rahman: Yeah, yeah. So it's my knowledge base.
+[1:14:30] Md. Tauhidur Rahman: It might not be as accurate as your code base, but it's more, more like what I have experienced throughout my journey.
+[1:14:38] Md. Tauhidur Rahman: And it's something like things I know and my documentation knows is reflected on here.
+[1:14:45] Constance Wolfe: Wow, that's amazing. So is this something that seems like that you— we— you could help us with then?
+[1:14:51] Md. Tauhidur Rahman: Yeah.
+[1:14:52] Constance Wolfe: So where— so I— and I talked to these guys internally. Where, where are we with your hours?
+[1:14:57] Constance Wolfe: Because I know that, uh, originally we hired you for 80 hours. Where are you in your hours right now?
+[1:15:02] Md. Tauhidur Rahman: Yeah. So, so, uh, wait a minute. Let me refresh this page.
+[1:15:11] Md. Tauhidur Rahman: So Yeah, I, I think some function is not working.
+[1:15:21] Md. Tauhidur Rahman: Some— yeah, yeah, I have worked for 55.5 hours, so I have 24.5 hours left.
+[1:15:29] Constance Wolfe: Okay, well, internally we talked, if you're interested, about potentially being able to expand beyond your 80 hours.
+[1:15:36] Constance Wolfe: I don't know if you're If you have the bandwidth or if you're interested.
+[1:15:40] Constance Wolfe: But yeah, like thinking about that.
+[1:15:42] Md. Tauhidur Rahman: Yeah, I'm interested, obviously.
+[1:15:44] Constance Wolfe: Okay.
+[1:15:45] Constance Wolfe: So then one of the things that Bjoer brought up, and I told him we might have to talk to Shahir, he said something to the effect of, hey, when you create a ticket, you probably ought to send it to the QA person because the QA person actually has more knowledge about any of this than any of us.
+[1:16:02] Constance Wolfe: Like, but I was like, wouldn't that have to go In my mind, that would go through the BA, and the, like, BA and I have a conversation about the concept of what needs to be done, and the BA's job is to work with the dev team to assign it to the appropriate person to distill on your side of things.
+[1:16:20] Md. Tauhidur Rahman: Yes.
+[1:16:20] Constance Wolfe: That's your understanding as well, right?
+[1:16:24] Md. Tauhidur Rahman: Yes.
+[1:16:24] Constance Wolfe: Your function would be that.
+[1:16:25] Md. Tauhidur Rahman: Yeah, currently what I'm doing, I'm talking with Iftibai and also Bijoy and also Arunabh regarding any kind of ticket that I have created or You have created, but I have talked with you regarding that ticket.
+[1:16:36] Md. Tauhidur Rahman: So I am coordinating with them also today. Kayapu came to me and understood the like.
+[1:16:43] Md. Tauhidur Rahman: I have shown her the brand report part also, but that I think Sharir bhai what he have told was mostly about.
+[1:16:49] Md. Tauhidur Rahman: Well, like I think the circumstance was different back then. I don't know whether I was in that.
+[1:16:56] Md. Tauhidur Rahman: I was present on that or not. I don't know, but. I think it was, it was something.
+[1:17:02] Md. Tauhidur Rahman: I think currently if you ask him, then he's gonna say that it should go through BA, right?
+[1:17:08] Md. Tauhidur Rahman: If you wait, right? Yes.
+[1:17:12] Md. Tauhidur Rahman: So I think it was a different time or different, because like, uh, previously I am the first technical BA in Asta, so I, I was like, this role didn't exist.
+[1:17:24] Md. Tauhidur Rahman: Feel like One year back, so some it was different time. Yeah.
+[1:17:30] Constance Wolfe: So so are you saying then what should be the flow? I mean, yeah.
+[1:17:35] Constance Wolfe: In my mind, it would be easier for me to have a conversation not so technical, right?
+[1:17:42] Constance Wolfe: Because I'm not a technical person.
+[1:17:43] Md. Tauhidur Rahman: Yeah. So what we can do, so you we and you and I can talk. Okay. So I will create the ticket and.
+[1:17:50] Md. Tauhidur Rahman: For most of my, most of my projects, what I have done so far, so my job is to talk with the developers and make them understand what he wants actually.
+[1:18:00] Md. Tauhidur Rahman: So it's right part of my job.
+[1:18:01] Constance Wolfe: And you document the code side of things, which I could not do, right?
+[1:18:05] Md. Tauhidur Rahman: So yeah, so I don't actually document the code side of things. I write the tickets and everything.
+[1:18:11] Md. Tauhidur Rahman: Also, uh, I was, I was— today we had the discussion that like For a story, we will have the subtask and everything so that everything is documented in Jira, right?
+[1:18:25] Md. Tauhidur Rahman: If the way. So that is the plan.
+[1:18:28] Md. Tauhidur Rahman: And for the document, for the code part documentation, what if the way I have mentioned is nowadays it's easier for me to do the documentation for the code part because like previously I didn't have that.
+[1:18:37] Md. Tauhidur Rahman: Like for Caboodle, I don't have the access for the code base, so I don't know what's In the code or something.
+[1:18:43] Md. Tauhidur Rahman: So what I like, what I am talking like, what kind of things I am saying, it's based on hunch mostly, or I have to validate it from Iftihaq or Bijoy.
+[1:18:55] Constance Wolfe: So that stemmed his comment about needing the documentation.
+[1:18:58] Constance Wolfe: And so are you saying that you can help us create that documentation that's lacking?
+[1:19:02] Constance Wolfe: Yeah, that brain. Yeah, you showed us. Okay, perfect. Yeah, yeah. Okay, so.
+[1:19:07] Constance Wolfe: So for today, so I'll set a call for tomorrow for you, Bijoy, and I to talk about the user-based fixed filters.
+[1:19:16] Constance Wolfe: And then I think a second call would be, would maybe just you and me or whoever else wants to be talking about the feature-based roadmap and timing.
+[1:19:24] Md. Tauhidur Rahman: Yeah.
+[1:19:25] Constance Wolfe: And then tomorrow we already have a call scheduled with Thea, I believe, and Ifti to discuss the brand upload debrief.
+[1:19:36] Constance Wolfe: And that's, I think, 8:00 PM your time.
+[1:19:39] Md Mashiul Azam Chowdhury: Yeah, 8:00.
+[1:19:40] Constance Wolfe: Yeah. So does this same time for tomorrow with you, Bijooy, and I work?
+[1:19:45] Constance Wolfe: This would be 5:00 PM tomorrow for you? Yeah, sure. Okay. So I'll go ahead and set that up.
+[1:19:52] Constance Wolfe: And then the tickets that we did not cover today, do you want me to just put those in an email or— Like, so for example, with Dee, one of them was like, hey, when we do a search in the filters or in the file, she was doing a file search and it was pulling up documents, every document for that brand.
+[1:20:20] Constance Wolfe: And I wasn't quite clear on what— I mean, I was like, well, is the search pulling up documents from other brands or I don't know if you remember that, but there's a bunch— there's like 5 or 6 tickets that she's bringing things up that I think we need to clarify.
+[1:20:35] Constance Wolfe: So I don't know when you want to do those.
+[1:20:37] Constance Wolfe: We could maybe do those tomorrow since she's going to be on that call.
+[1:20:39] Md Mashiul Azam Chowdhury: Yeah, yeah, yeah, we can do that.
+[1:20:43] Constance Wolfe: Okay, so we'll add that to the call. So tickets on Kea call. Okay, that sounds good. Okay.
+[1:20:51] Constance Wolfe: Oh, Constance.
+[1:20:53] Md Mashiul Azam Chowdhury: So while you're here, I just want to show— ask you one thing. I'm sharing my screen.
+[1:21:01] Md Mashiul Azam Chowdhury: So I have changed the not interested thing to this.
+[1:21:08] Md Mashiul Azam Chowdhury: So in this way, you can hide any status you want, so not just not interested.
+[1:21:18] Constance Wolfe: Oh, perfect. That's perfect. Yeah, that's a great way to handle that.
+[1:21:22] Constance Wolfe: Is that user— so will that be user-based, or how will that then fix?
+[1:21:26] Md Mashiul Azam Chowdhury: Oh, that's actually— currently it's not being saved anyway, but once we do the user-based save, then yeah, it will save.
+[1:21:38] Constance Wolfe: Okay.
+[1:21:39] Md Mashiul Azam Chowdhury: And so yeah, one thing I should mention that if a state, let's say the status option here, it only has submitted.
+[1:21:51] Md Mashiul Azam Chowdhury: So the ones that has only one right now, that cannot be hidden right now, not applied, only because it only has one.
+[1:22:02] Md Mashiul Azam Chowdhury: But the others that has multiple, we can hide them.
+[1:22:07] Constance Wolfe: So could— if you can't hide one that's empty, Can you add the option of none or something like that?
+[1:22:17] Md Mashiul Azam Chowdhury: Yeah, I'm going to talk to Vijay or Arnab about that.
+[1:22:22] Constance Wolfe: Okay.
+[1:22:22] Constance Wolfe: Yeah, because that wouldn't quite work right if there's only— although I don't think any of them are ever going to have just one, to be honest.
+[1:22:31] Md Mashiul Azam Chowdhury: True.
+[1:22:31] Constance Wolfe: Maybe we just need to— yeah, maybe we just need to add another option.
+[1:22:34] Md Mashiul Azam Chowdhury: And also, I don't think these will be empty as well because When they, when a notification is added here, it maybe will have a default.
+[1:22:47] Constance Wolfe: Yeah, it has a default. Yeah. So the thing about in general, but yeah. Yeah. Okay. It's great.
+[1:22:54] Constance Wolfe: So you were working on that while we were talking?
+[1:22:56] Md Mashiul Azam Chowdhury: Yeah.
+[1:22:57] Constance Wolfe: Yeah. Nice job. That's looking really good. Really, really good.
+[1:23:01] Constance Wolfe: And so you have the notes, I think, from Lovable for the KPI tickets at the top. The KPI cards.
+[1:23:06] Md Mashiul Azam Chowdhury: Right, right. For the category review, yes.
+[1:23:10] Constance Wolfe: Yeah, okay.
+[1:23:12] Constance Wolfe: Okay, so you're gonna continue to work on this today, it sounds like, and then you're gonna let me know.
+[1:23:21] Md Mashiul Azam Chowdhury: Yeah, maybe for the next 1.5 hours, and it should be fine.
+[1:23:27] Md Mashiul Azam Chowdhury: I do have to mention that we didn't get time to Just to pin that.
+[1:23:36] Md Mashiul Azam Chowdhury: We didn't get time to implement the add feature. So that's actually not done.
+[1:23:43] Md Mashiul Azam Chowdhury: So it's partially done, sort of. It's only going to show you the list.
+[1:23:50] Constance Wolfe: So what is this for?
+[1:23:53] Md Mashiul Azam Chowdhury: The notes, external.
+[1:23:54] Constance Wolfe: Oh, the notes. Okay, got you. Okay. Okay.
+[1:23:57] Md Mashiul Azam Chowdhury: But other than this, I think All the features are there.
+[1:24:04] Constance Wolfe: Okay. So you're— are you going to put this in staging after you're done?
+[1:24:08] Md Mashiul Azam Chowdhury: Yes, I will put this in staging. And I don't think it should be put in live before doing—
+[1:24:15] Constance Wolfe: No, no, no. Yeah. Let's get everything done before we put it in live. Yeah.
+[1:24:19] Md Mashiul Azam Chowdhury: Right. Yeah. Okay.
+[1:24:21] Constance Wolfe: Okay. So you're— are you going to continue to work on that then this week until this is done?
+[1:24:27] Md Mashiul Azam Chowdhury: Yeah, I mean, I'll be working on the bugs and this as well. Yes.
+[1:24:33] Constance Wolfe: Okay.
+[1:24:33] Constance Wolfe: So that would be my only question before we hang up is that I do want to get started on the bug sprint, but I also want to get this completed as well.
+[1:24:43] Constance Wolfe: So I guess, Tawheed, we can talk more about that tomorrow, but let's have them continue to get everything wrapped up on the category review.
+[1:24:53] Constance Wolfe: Report this report. Sure.
+[1:24:57] Constance Wolfe: And then maybe start— and then after we talk tomorrow, maybe they can start after that on the bug sprint.
+[1:25:04] Constance Wolfe: Yeah. Okay. Okay. All right.
+[1:25:07] Constance Wolfe: I'll send you the notes to this, and then I'll send out a meeting invite here shortly for tomorrow.
+[1:25:12] Md Mashiul Azam Chowdhury: Okay.
+[1:25:13] Constance Wolfe: Okay. Thank you so much. Great work. And I hope you feel better, Tawheed.
+[1:25:19] Md Mashiul Azam Chowdhury: Yeah.
+[1:25:20] Constance Wolfe: Okay, talk to you tomorrow.
+[1:25:22] Md. Tauhidur Rahman: Yeah, thank you. Have a nice day.
+[1:25:24] Constance Wolfe: Bye.
+[1:25:24] Md. Tauhidur Rahman: Thank you.
+[1:25:25] Constance Wolfe: You too. Bye-bye.

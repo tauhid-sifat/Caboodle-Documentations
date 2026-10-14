@@ -1,0 +1,85 @@
+---
+type: Document
+module: brand
+jira: [CS-1595]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/key-business-flows.md
+---
+
+# Brand Modules | Pipeline | Option to Not Send Email for Every Update
+
+**CS-1595** | Bug / Enhancement | User Story | Priority: TBD | Status: New
+
+---
+
+## User Story
+
+**As a** Brand user assigned to a pipeline task,  
+**I want** control over when update emails are sent, and a clear reason for each email I receive,  
+**So that** I am not spammed with notifications for trivial edits and understand what actually changed.
+
+---
+
+## Description
+
+Currently, **every** update to a pipeline task sends an email to **everyone** assigned/added — even minor edits such as correcting a spelling mistake and hitting save. Recipients then receive an email that gives no indication of what changed, so it appears "nothing happened," causing noise and confusion.
+
+Two problems to address:
+1. **No control over email frequency** — edits (vs. meaningful status changes) should not necessarily trigger notifications.
+2. **No change context** — the email does not explain *why* the recipient is getting it (no diff / what changed summary).
+
+Proposed direction:
+- Add an option to suppress emails for minor edits, e.g., notify only on status/assignment changes (or a per-task / per-user "notify on every update" toggle, defaulting to off for trivial edits).
+- Include a change summary in the email (fields changed + old → new) so recipients understand the update.
+
+---
+
+## Acceptance Criteria
+
+### Scenario 1: Suppress Email on Trivial Edits
+- **Given** a pipeline task has assigned users
+- **When** a user makes a minor edit (e.g., spelling correction, no status/assignment change)
+- **Then** no email is sent to assignees (or only if the task explicitly enables "notify on every edit")
+- **And** the edit is still saved normally
+
+### Scenario 2: Send Email on Meaningful Change
+- **Given** the control is set to notify on meaningful changes
+- **When** a status or assignment changes
+- **Then** an email is sent to the relevant users
+
+### Scenario 3: Email Explains the Change
+- **Given** an email is sent for an update
+- **When** the recipient opens it
+- **Then** the email states what changed (e.g., "Status: In Progress → Done" or lists edited fields)
+- **And** the recipient can understand why they were notified
+
+### Scenario 4: User/Task-Level Control
+- **Given** the notification setting exists
+- **When** a user or task owner configures it
+- **Then** the preferred frequency (every edit vs. meaningful-only vs. off) is respected
+
+---
+
+## Design Reference
+- Brand Module Pipeline (CRM Pipeline task board) — current behavior sends email on every update
+- Assignment behavior: `CS-1594-brand-pipeline-assign-users.md`
+
+---
+
+## Jira Reference (data/jira-tickets)
+- **CS-530** — "Can we add an email option to Pipeline @teamate to send an email?" Directly related existing request about Pipeline email notifications; reconcile CS-1595's scope (frequency control + change context) with it.
+- Other Pipeline defects for context: **CS-1535** (plan search bar not functioning), **CS-540** (activity URL sharing).
+
+---
+
+## Related
+- **CS-1594** — assignment vs. email-recipient distinction; notification scope should follow true assignments.
+
+---
+
+## Notes
+- Decide the default: recommend **notify on meaningful change only** (status/assignment), not every edit.
+- Clarify whether the suppression applies per-task, per-user, or globally.
+- Ensure any "no email" path still updates the in-app activity/audit log so changes aren't invisible.
+- Watch for overlap with other email-notification tickets (e.g., Category Review "Send to Contacts") — keep module-scoped.

@@ -1,0 +1,697 @@
+---
+type: Document
+title: "Ticket Call On Jul 20"
+---
+
+[0:00:00] Md Mashiul Azam Chowdhury: We are doing well. It's just us two today
+[0:00:06] Constance Wolfe: or.
+[0:00:06] Md Mashiul Azam Chowdhury: No. And care is on leave today. I mean, care is only if you already knew that, but is also on leave.
+[0:00:19] Constance Wolfe: Oh, okay. Is everything okay? I didn't realize they were.
+[0:00:22] Md Mashiul Azam Chowdhury: Yeah, yeah. I mean, yeah. They didn't sleep well last night because of the game.
+[0:00:28] Constance Wolfe: Oh. Yeah. It's an exciting night. Right?
+[0:00:33] Md Mashiul Azam Chowdhury: Right.
+[0:00:33] Constance Wolfe: Yeah, That's. That's cool. Okay, so. So just the two of us today.
+[0:00:40] Md Mashiul Azam Chowdhury: I mean, you, me and.
+[0:00:44] Md. Tauhidur Rahman: Yeah.
+[0:00:44] Constance Wolfe: Oh, good. Yep. Okay. The three of us. Yep. Okay. Hi, Taohee, how are you?
+[0:00:48] Md. Tauhidur Rahman: Hello. I'm fine. How are you?
+[0:00:50] Constance Wolfe: So you guys, did you watch the game as well?
+[0:00:53] Md. Tauhidur Rahman: Yes.
+[0:00:54] Md Mashiul Azam Chowdhury: Yeah.
+[0:00:54] Constance Wolfe: Yeah. You slept better?
+[0:00:58] Md Mashiul Azam Chowdhury: Well, I sort of knew that I wouldn't be able to sleep later on, so I slept from 8 to 12:30 before.
+[0:01:10] Constance Wolfe: Oh, funny. Okay, so you took a nap beforehand.
+[0:01:13] Md. Tauhidur Rahman: I'm surviving with like almost two and a half hour of sleeps today.
+[0:01:18] Md Mashiul Azam Chowdhury: Oh, no. Oh, no.
+[0:01:20] Constance Wolfe: Okay, well, we'll get you through this.
+[0:01:21] Constance Wolfe: I'm talk about the calendar for the rest of the week while we're talking about this then. Did you.
+[0:01:30] Constance Wolfe: We had moved this call till 8pm I think because it was better for you guys.
+[0:01:36] Md Mashiul Azam Chowdhury: Do you.
+[0:01:37] Constance Wolfe: And. And we. And then the last couple weeks, we. With Tohi, we've been having, you know, daily calls.
+[0:01:41] Constance Wolfe: So what do you guys want to do as far as meeting the rest of this week?
+[0:01:46] Constance Wolfe: I've got a call tomorrow with kl. Well, I guess let's talk about our normal Monday call.
+[0:01:52] Constance Wolfe: Do you want to keep it earlier or do you prefer.
+[0:01:56] Md Mashiul Azam Chowdhury: I mean. Yeah, we can keep it on 4:45 or 5:00pm if that's okay with you.
+[0:02:02] Constance Wolfe: It's totally up to you. I mean, I. It gives me time on Monday mornings to get kind of organized, but.
+[0:02:08] Constance Wolfe: So it's not. It's. It's not me requesting it. So like. But I.
+[0:02:12] Constance Wolfe: I know today I thought kind of still in that rhythm of meeting before you guys leave the office.
+[0:02:17] Constance Wolfe: So it's totally up to you guys.
+[0:02:23] Md Mashiul Azam Chowdhury: Yeah, yeah. Five, I think. Works for me.
+[0:02:29] Md. Tauhidur Rahman: Yeah, it works for me.
+[0:02:31] Constance Wolfe: Okay, so keep it at this time frame for. Yeah, right. Okay. So.
+[0:02:38] Constance Wolfe: So I think next week I have it scooted back then to 8pm your time.
+[0:02:43] Constance Wolfe: So should I go ahead and adjust those future meetings?
+[0:02:52] Md Mashiul Azam Chowdhury: Sorry?
+[0:02:53] Constance Wolfe: Should I go ahead and adjust the future meetings?
+[0:02:55] Md Mashiul Azam Chowdhury: Yeah, yeah. Good. Yeah, sure.
+[0:03:02] Constance Wolfe: Okay. And then for today I have. I had.
+[0:03:08] Constance Wolfe: I wanted to talk about the category review, kind of the last items on the category review. 50.
+[0:03:15] Constance Wolfe: I just sent a couple emails just for some things that Kate had Some questions on.
+[0:03:21] Constance Wolfe: There's some issues that she's facing. Then I wanted to talk about the promo day issue.
+[0:03:27] Constance Wolfe: I think that's probably a bijoy issue, but it's. We need to.
+[0:03:33] Constance Wolfe: We need to address it because we've got people. Bubbies in particular is using it. Using the.
+[0:03:42] Constance Wolfe: It's affecting trade spend and the monthly report. It's a ticket I created last week and then.
+[0:03:50] Md Mashiul Azam Chowdhury: Okay.
+[0:03:52] Constance Wolfe: And then the case pack issue. So most of this is Bajoy related, I think.
+[0:03:57] Md Mashiul Azam Chowdhury: Okay, got it. Yeah, I'll ask him about.
+[0:04:02] Constance Wolfe: Okay. Do you want me to demonstrate any of it to you on this call?
+[0:04:06] Constance Wolfe: So we have kind of a recording and a record of it or do you just want to bring it up to him?
+[0:04:12] Md Mashiul Azam Chowdhury: I'll bring up. Bring it up to him. I think he already knows about this.
+[0:04:16] Md Mashiul Azam Chowdhury: But if we have any questions maybe we can discuss that on tomorrow's.
+[0:04:24] Constance Wolfe: Okay. I put it. I put most of the.
+[0:04:29] Constance Wolfe: The like screenshots in the ticket so it should make sense but if not just let me know.
+[0:04:37] Md Mashiul Azam Chowdhury: Okay, sure.
+[0:04:38] Constance Wolfe: Do you want me to tell you what ticket it is?
+[0:04:40] Md Mashiul Azam Chowdhury: Yeah, yeah, sure. That.
+[0:04:43] Constance Wolfe: Yeah. So it's ticket 1447 and it's called discrepancy on promo revenue.
+[0:04:50] Md Mashiul Azam Chowdhury: 1447.
+[0:04:52] Constance Wolfe: 1447. Yeah, yeah. Oh, actually I don't see any pictures on here. I thought I put pictures on here.
+[0:05:02] Constance Wolfe: The description should still probably be pretty self explanatory.
+[0:05:07] Constance Wolfe: I thought I put pictures in here but I don't see them.
+[0:05:15] Constance Wolfe: So yeah, if he could look into that tomorrow that would be great. And then on the category review,
+[0:05:25] Md Mashiul Azam Chowdhury: the
+[0:05:25] Constance Wolfe: latest I think we had was some filtering issues for the retail.
+[0:05:31] Constance Wolfe: It was pulling up retailers that weren't in the list.
+[0:05:35] Md Mashiul Azam Chowdhury: Yeah, well we are currently working on the category review so those will be fixed with this implementation.
+[0:05:43] Constance Wolfe: Okay. I did notice that the select all is in staging.
+[0:05:48] Constance Wolfe: Is there any way for you to push that to live or do you want to wait on that?
+[0:05:56] Md Mashiul Azam Chowdhury: Let me check on that if I can because there might be some related work with the new.
+[0:06:05] Constance Wolfe: Okay. It's working and staging, I think in the live environment. The Select.
+[0:06:14] Md Mashiul Azam Chowdhury: Yeah, I think I'll be able to. Yeah, yeah, I think I'll be able to push that to the live. Should I.
+[0:06:21] Constance Wolfe: It would be great if you could.
+[0:06:23] Md Mashiul Azam Chowdhury: Oh, okay.
+[0:06:27] Constance Wolfe: If it's not going to cause any issues for anybody.
+[0:06:30] Md Mashiul Azam Chowdhury: No, I don't think so because this was a separate work.
+[0:06:35] Constance Wolfe: Okay. And then is there a ticket or is it in the system for the.
+[0:06:45] Constance Wolfe: The last thing I don't know if we captured or not.
+[0:06:48] Constance Wolfe: Was when we're doing the upload it'll tell you that there's failed records but it doesn't give you the report of what the failed records are.
+[0:06:57] Constance Wolfe: The exception report, is that documented that we need that anywhere or was that just in conversation?
+[0:07:04] Md Mashiul Azam Chowdhury: I don't think. I mean there's.
+[0:07:07] Md Mashiul Azam Chowdhury: There should be a generic sort of ticket for that that explains that we need to have that corrupt data report for all of the upload section but not specifically like for category view or other places.
+[0:07:27] Md Mashiul Azam Chowdhury: But yeah, Bijoy was working on that to make it generic so that it flows through all of the areas.
+[0:07:37] Md Mashiul Azam Chowdhury: So yeah, okay.
+[0:07:39] Constance Wolfe: Actually I do see there's.
+[0:07:41] Constance Wolfe: It looks like Ticket 1445 category review error file download for category review upload.
+[0:07:48] Constance Wolfe: Do you think that might be it? Let's see.
+[0:07:51] Constance Wolfe: During the category review upload process if any validation or process processing error occurs or the user should be able to download the error file.
+[0:08:00] Constance Wolfe: Yeah, I guess it is here.
+[0:08:01] Md Mashiul Azam Chowdhury: Right, Sorry, sorry, I didn't see it. Yeah, yeah.
+[0:08:03] Constance Wolfe: Okay. That check. I'll check that then. That's great.
+[0:08:06] Md Mashiul Azam Chowdhury: Okay,
+[0:08:10] Constance Wolfe: so I just sent an email, two emails, kind of back to back on some issues that Kate's one has to do with data mapping.
+[0:08:30] Constance Wolfe: There's one particular retailer that we just cannot get mapped.
+[0:08:37] Constance Wolfe: I don't know if that's something you can look at.
+[0:08:39] Constance Wolfe: It's probably a back end thing but it's called all whole Dale Hayes retailer data mapping issues.
+[0:08:47] Constance Wolfe: I'll share my screen.
+[0:08:49] Md Mashiul Azam Chowdhury: Oh yeah, Arno is looking into that data mapping. Yeah,
+[0:08:56] Constance Wolfe: yeah, we just. You can't. We can't seem to get that one. We don't know if we should.
+[0:09:00] Constance Wolfe: We were going to attempt to try to like merge the entity or something like that but we got scared.
+[0:09:08] Constance Wolfe: We were. We were kind of nervous to do it and then I was like well let's do it in staging.
+[0:09:12] Constance Wolfe: And then we. We just didn't get a chance to do it.
+[0:09:14] Constance Wolfe: So if he could take a look at that that would be great. And then the other one is. We're looking.
+[0:09:26] Constance Wolfe: I'll share my screen really quick. It's called Bobby's Actualization Uploaded or. Yeah, updated.
+[0:09:38] Constance Wolfe: I troubleshooted this one. We're looking for a SKU to add. See if I can share my screen here.
+[0:09:53] Constance Wolfe: We're looking in this particular case.
+[0:09:57] Constance Wolfe: This is the retailer here and we're trying to add a SKU but we can't seem to find it. So if we go to.
+[0:10:14] Constance Wolfe: Let's see, This does. So let's look at their. See which one is she trying to add. She's trying to add.
+[0:10:32] Constance Wolfe: Oh shoot. I can know which one she's trying to add. Well, see here.
+[0:10:56] Constance Wolfe: I'm wondering if it's because it's an edlp only. So this one only has edlps. So we're trying to.
+[0:11:09] Constance Wolfe: I don't know if you saw that on my screen. I'm trying to add. Let's see what's in here.
+[0:11:19] Constance Wolfe: Oh, it's pistachio. I think it's. Well, no, it wouldn't be in here. So if we go to that,
+[0:11:27] Md. Tauhidur Rahman: I
+[0:11:28] Constance Wolfe: think we just added it. Go to their CRM,
+[0:11:51] Constance Wolfe: Remove this one. Dragon fruit. Yep, that's it.
+[0:11:53] Constance Wolfe: Okay, so dragon fruit is coming in as active. So. Let's just make sure Dragon fruit's not in here.
+[0:12:12] Constance Wolfe: Yeah, no dragon fruit, but it won't let us select anything.
+[0:12:18] Constance Wolfe: Can you think off the top of your head what might be preventing that?
+[0:12:25] Md Mashiul Azam Chowdhury: Not right now, but can you please share me that link in this chat?
+[0:12:49] Constance Wolfe: There you go.
+[0:12:53] Md Mashiul Azam Chowdhury: Got it. Thank you.
+[0:12:55] Md. Tauhidur Rahman: Yep.
+[0:12:56] Constance Wolfe: Okay. So that was that.
+[0:13:08] Constance Wolfe: Yeah, the.
+[0:13:09] Constance Wolfe: The only other thing is I think bjoy was going to have Ornov work on that case back issue.
+[0:13:17] Constance Wolfe: When we make an update in product specs that it pushes the case pack number, it pushes the calculation to the distributor report.
+[0:13:27] Constance Wolfe: I don't know if he had had a chance to. He said he was going to have orno look at that.
+[0:13:33] Md Mashiul Azam Chowdhury: Yeah, I think Arnold was focusing on the CRM data upload section for the filters and the next thing was this one.
+[0:13:46] Md Mashiul Azam Chowdhury: Okay.
+[0:13:46] Constance Wolfe: I think when we spoke with him last week, we reorganized his priorities and told him that we needed to have him focus on that.
+[0:13:55] Constance Wolfe: Oh, so maybe.
+[0:13:58] Md Mashiul Azam Chowdhury: Yeah, maybe he switched it then. But before our call he was working on the data CRM data flow.
+[0:14:09] Md Mashiul Azam Chowdhury: I'll check with Bijay and Arnold tomorrow.
+[0:14:13] Md. Tauhidur Rahman: Okay.
+[0:14:13] Constance Wolfe: Okay, that sounds good. So that's all I really had on.
+[0:14:18] Constance Wolfe: I was really interested to see how far we had gotten on the work on the category review.
+[0:14:26] Constance Wolfe: So I don't know if there's any updates on that.
+[0:14:32] Md Mashiul Azam Chowdhury: Well, I've been working on the ui. It is going great. So far no blocker from mine.
+[0:14:42] Md Mashiul Azam Chowdhury: And Hijab is working on the backend.
+[0:14:47] Md Mashiul Azam Chowdhury: He, I think maybe had some clarifications, but other than that he is able to progress.
+[0:14:58] Md Mashiul Azam Chowdhury: Not a blocker sort of clarification, but he might ask some questions tomorrow.
+[0:15:06] Constance Wolfe: Okay, I. I think I owe you a little bit of time on that. Do you have any specific questions for me? I.
+[0:15:14] Constance Wolfe: On Friday I got stuck doing a bunch of really old projects.
+[0:15:19] Constance Wolfe: I Had to clear through with some deadlines. So I don't have any meetings today.
+[0:15:23] Constance Wolfe: So I plan to focus solely on your. The tickets that you wrote up and then anything on the category.
+[0:15:30] Md. Tauhidur Rahman: So the thing is, the thing is yesterday what I did.
+[0:15:34] Md. Tauhidur Rahman: So for Arnob and Bjoy, I have written the calendar for the, for the calendar part I have written the tickets and updated everything.
+[0:15:45] Md. Tauhidur Rahman: So they, they have started working on it.
+[0:15:47] Md. Tauhidur Rahman: And another thing I have, I'm doing currently right now I'm working on the dashboard because, because like last time we talked in Thursday we were.
+[0:15:57] Md. Tauhidur Rahman: We was thinking about how to.
+[0:15:58] Md. Tauhidur Rahman: How can we implement the pipeline in the system and also the how can we make the dashboard mode lucrative and useful.
+[0:16:06] Md. Tauhidur Rahman: So I am doing some like, I have done some ideations and like move things around.
+[0:16:12] Md. Tauhidur Rahman: So that, that was it.
+[0:16:14] Md. Tauhidur Rahman: And after your review of the category reviews tickets, I will also update those.
+[0:16:20] Constance Wolfe: Great.
+[0:16:21] Constance Wolfe: So on the link that I'll share again here, is there anything for me to review on this page that you want me to review?
+[0:16:32] Md. Tauhidur Rahman: So yeah, yeah. So I. Can you, can you just refresh this page? Yeah.
+[0:16:39] Constance Wolfe: Okay.
+[0:16:40] Md. Tauhidur Rahman: So yeah, just I just kept the timeline here and you can see everything and I have moved the task.
+[0:16:47] Md. Tauhidur Rahman: In the top bar you can see there is a, there is a button called task before the file.
+[0:16:54] Md. Tauhidur Rahman: No, no, in the top category. Review, Promotion, management, marketing, overview, distribution.
+[0:16:59] Constance Wolfe: Yeah. Okay, great.
+[0:17:00] Md. Tauhidur Rahman: Yeah. See the pipeline.
+[0:17:02] Md. Tauhidur Rahman: I am just currently, I am thinking about the problems we currently have in the pipeline because there is a problem that if we have hundreds of completed tasks, how we are going to handle it then how can we make the notes more readable?
+[0:17:15] Md. Tauhidur Rahman: Because right now it's more like club.
+[0:17:18] Md. Tauhidur Rahman: It's more like it's stacked in one place but it should be more. It should have some thing to show.
+[0:17:24] Md. Tauhidur Rahman: And another thing that you have mailed us that how can we incorporate AI in our system?
+[0:17:35] Md. Tauhidur Rahman: So I was also thinking about those things.
+[0:17:38] Constance Wolfe: So the email that I just sent just recently, just this morning isn't that interesting?
+[0:17:43] Md. Tauhidur Rahman: Yes, yes.
+[0:17:44] Md. Tauhidur Rahman: Yeah, I was talking with like when Ifti was giving me the overview of Kabodal when I was first joining in this project and I was thinking like as we are predicting things and as we are like, like it's more like predicting the promotions and everything.
+[0:18:04] Md. Tauhidur Rahman: So there should be some AI.
+[0:18:07] Md. Tauhidur Rahman: And the thing is Ask Abodel, Ask Kaboodle is kind of like we can use AI in ask about.
+[0:18:14] Md. Tauhidur Rahman: So those kind of things. I was thinking back in that time.
+[0:18:19] Constance Wolfe: Yeah.
+[0:18:19] Constance Wolfe: So you're saying like, like because I've been talking to Some of our customers, I don't know if you can see this ask boodle, but it could be like, you know, they might just want what tasks are due for me by, you know, at a date or whatever.
+[0:18:38] Constance Wolfe: They might be asking stuff like that or whatever. What, which categories reviews are due.
+[0:18:45] Constance Wolfe: So it would be kind of cool to have that even integrated into this. It's interesting to think about.
+[0:18:54] Constance Wolfe: Like sometimes when I get those types of emails, I initially get worried.
+[0:19:00] Constance Wolfe: Like I initially go, wow, are we going to make this platform obsolete?
+[0:19:06] Constance Wolfe: But even though they have those tools, they're still not putting it together in the way that we're putting this together.
+[0:19:13] Constance Wolfe: So I, I calm myself down by thinking there's still. They still need an actual database. Right.
+[0:19:19] Constance Wolfe: They still need.
+[0:19:21] Constance Wolfe: Even if they have a bunch of AI tools, they're going to be independent of one another and they're going to have to manage all of those independent tools.
+[0:19:28] Constance Wolfe: Right.
+[0:19:28] Md. Tauhidur Rahman: So yeah, there is a saying, saying that your AI is as good as its knowledge base.
+[0:19:34] Md. Tauhidur Rahman: So if you don't give them the data or everything, then it's totally like, it's not kind of useful at all.
+[0:19:42] Md. Tauhidur Rahman: So for Askabodel, for Aska model, you can also check another thing for Jira, they, they have like the Confluence and Jira, they have included something called the Revo.
+[0:19:53] Constance Wolfe: What are they. Oh, what is it called?
+[0:19:55] Md. Tauhidur Rahman: It's okay, I cannot see it in here. I think subscription.
+[0:20:01] Constance Wolfe: It does sound familiar to me. Yeah. What is that?
+[0:20:04] Md Mashiul Azam Chowdhury: Yeah, yeah, it is sort of an AI agent for Jira.
+[0:20:11] Md. Tauhidur Rahman: Yeah, Jira and Confluence. Can I share my screen? I can show you.
+[0:20:14] Constance Wolfe: Yes, please. Yeah, that'd be great.
+[0:20:16] Md Mashiul Azam Chowdhury: Yeah.
+[0:20:16] Constance Wolfe: I think it's important that we stay on top of these things and how other platforms.
+[0:20:21] Md. Tauhidur Rahman: So it's, it's all like, it's almost making my life, I can say five times easier to manage.
+[0:20:27] Md. Tauhidur Rahman: Jira, let me share my screen. Yeah, the screen. Let me move this. Yeah. So if I go to Jira and I'll ask.
+[0:20:44] Md. Tauhidur Rahman: So for example, I have been in a multiple projects.
+[0:20:48] Md. Tauhidur Rahman: So like yesterday I was talking with someone regarding this project, this, this project Talent X with someone.
+[0:20:56] Md. Tauhidur Rahman: And the thing is, I was not having any kind of clarity what kind of things we have in this project and whatnot.
+[0:21:03] Md. Tauhidur Rahman: So what I did, I just here is something called Ask Robo.
+[0:21:06] Md. Tauhidur Rahman: If I click on Ask Robo, if I ask them like if I ask that what kind of problem we are solving doing now.
+[0:21:21] Md. Tauhidur Rahman: So based on these JIRA board and their backlogs and everything, it's gonna read everything Read everything, analyze everything and get back to me with the question with the answer.
+[0:21:33] Md. Tauhidur Rahman: And also you can modify tickets.
+[0:21:35] Md. Tauhidur Rahman: Like if you want to modify a ticket, you know that there is a ticket about suppose category review calendar and you don't know the number.
+[0:21:44] Md. Tauhidur Rahman: If you ask him to find it out, it can find it out.
+[0:21:48] Md. Tauhidur Rahman: And if you tell robot to update the ticket based on your like input, it will update the ticket also.
+[0:21:56] Constance Wolfe: So you could say Modify ticket number 1447. I forgot to add an image or whatever.
+[0:22:02] Md. Tauhidur Rahman: Yeah, yeah, yeah. Okay. Yes.
+[0:22:05] Md. Tauhidur Rahman: So what we are currently doing now is like telling us that we are doing what currently? Everything.
+[0:22:14] Constance Wolfe: So, so in itself you couldn't, you wouldn't just open up Claude AI and start typing in this thing because it doesn't have reference to this particular platform.
+[0:22:24] Constance Wolfe: Right. It doesn't have reference to this information. So it needs to be built inside of it. Yeah, yeah.
+[0:22:30] Md. Tauhidur Rahman: As you, as you can see, there is a context.
+[0:22:34] Md. Tauhidur Rahman: So for this, for this conversation, the context is Talent X Kanban board. Right.
+[0:22:40] Md. Tauhidur Rahman: So like if you can also mention, like, if you mention someone like if you mention bjoy and ask that how many tasks he have left or how many bugs are in there, which is assigned to bj, it will, it's gonna just answer you.
+[0:22:55] Constance Wolfe: Okay. So do you have that for caboodle?
+[0:22:59] Md. Tauhidur Rahman: We don't have. I don't think our subscription doesn't cover this.
+[0:23:04] Constance Wolfe: Okay, I got you.
+[0:23:06] Md. Tauhidur Rahman: Yeah. So I can. But still I'm.
+[0:23:08] Md. Tauhidur Rahman: I'm working like this in Kabodal because like for, because for most of the, for most of the part, the tickets are kind of unknown to me.
+[0:23:17] Md. Tauhidur Rahman: Right. Because like I have recently joined.
+[0:23:19] Md. Tauhidur Rahman: So what I did, I exported these tickets in my local system and I use, as you can see.
+[0:23:25] Md. Tauhidur Rahman: Can you see my screen? The screen?
+[0:23:27] Constance Wolfe: Yes. Yeah.
+[0:23:29] Md. Tauhidur Rahman: So this is basically my local AI, I'm running in my PC and I'm asking him what to do or what not to do.
+[0:23:35] Md. Tauhidur Rahman: It's like answering me based on the tickets.
+[0:23:39] Constance Wolfe: Okay. So it is working a little bit outside of.
+[0:23:45] Constance Wolfe: So you can actually implement it to a certain extent outside of platform.
+[0:23:49] Md. Tauhidur Rahman: Yeah.
+[0:23:50] Md. Tauhidur Rahman: So when I have to like if there is anything change in the tickets or anything, I have to manually do it.
+[0:23:55] Md. Tauhidur Rahman: And if, like, for example, if, if we had Robo, we could have just talked with it and changed some things.
+[0:24:04] Md. Tauhidur Rahman: But also there is a, there is a. I would say there is some constraints about Rovo that it's as.
+[0:24:11] Md. Tauhidur Rahman: It's not fully functional yet.
+[0:24:14] Md. Tauhidur Rahman: I guess for Confluence they have just rolled out for three or four months and it's kind of help.
+[0:24:20] Md. Tauhidur Rahman: It's kind of, kind of hallucinating. But I got their point, what they want to achieve using this one.
+[0:24:26] Md. Tauhidur Rahman: And another thing is also in Asta we also use a paid subscription for Jira.
+[0:24:32] Md. Tauhidur Rahman: Still there is some limitations because like I cannot do more, I think I cannot do more than five to six edits one a day or cannot continue conversation like we can.
+[0:24:45] Md. Tauhidur Rahman: You do it in chat GPT for all day. It it like what that GPD does, it, it downgrades.
+[0:24:52] Md. Tauhidur Rahman: Downgrades your model but still keeps talking to you. Right.
+[0:24:56] Md. Tauhidur Rahman: But here there is, there is no such thing. So once you hit your limit, it's done.
+[0:25:04] Md. Tauhidur Rahman: And yeah, for AI, AI because like we are doing some AI works in like many AI works in Asta.
+[0:25:11] Md. Tauhidur Rahman: So for AI, if we want to implement AI then we have to do the cost analysis first.
+[0:25:18] Md. Tauhidur Rahman: Because like as they will be paying for capital, right? They are not paying for the AI.
+[0:25:23] Md. Tauhidur Rahman: AI is the AI part would be the feature. But there will be token cost.
+[0:25:28] Md. Tauhidur Rahman: So then the pricing will be like that. There is the pricing would vary and everything.
+[0:25:33] Md. Tauhidur Rahman: So we also need to do some R D.
+[0:25:35] Md. Tauhidur Rahman: If we start implementing AI, we need to do R and D based on the tokens and pricing and everything.
+[0:25:41] Constance Wolfe: Yeah, Bijoy had been mentioning that and I think that how do I get started on something like that?
+[0:25:48] Constance Wolfe: Because I think you know my goal would be to just allow the users to subscribe for as much as they want to use.
+[0:25:58] Constance Wolfe: Just like it works with cloud current, right?
+[0:26:01] Md. Tauhidur Rahman: So yeah, yeah. Pays you type of things.
+[0:26:03] Constance Wolfe: Yeah.
+[0:26:04] Md. Tauhidur Rahman: So can I, I can help you with this one.
+[0:26:07] Md. Tauhidur Rahman: So as I have working with like I have worked with two AI projects.
+[0:26:11] Md. Tauhidur Rahman: So what I can do, I can ideate some of the things, the pricing model and everything.
+[0:26:16] Md. Tauhidur Rahman: So how can we like for ask a model if I, if we think, if, if I think about Ask a model I think something like this Robo.
+[0:26:24] Md. Tauhidur Rahman: So if somebody is like for example a broker logs in, there is a Ask Ask model.
+[0:26:31] Md. Tauhidur Rahman: He's asking like what, what I like like what's my pending task for today they're asking the when is the next review for that brand and it's showing those kind of things.
+[0:26:41] Md. Tauhidur Rahman: These are kind of helpful because people nowadays people don't want to navigate to some place and see something.
+[0:26:47] Md. Tauhidur Rahman: They want the answer right away this kind of thing.
+[0:26:50] Md. Tauhidur Rahman: So if I think I like that then if we try to implement some things like that then I can help you with the analysis and everything.
+[0:26:58] Md. Tauhidur Rahman: Then how can be the pricing model vary?
+[0:27:00] Md. Tauhidur Rahman: Because like the main issue Would be that if, if we give them a cap that like you can use as much as you want if you pay us XYZ amount.
+[0:27:10] Md. Tauhidur Rahman: But we cannot accommodate the token cost.
+[0:27:14] Constance Wolfe: I guess we cannot implement a token cost you're saying?
+[0:27:18] Md. Tauhidur Rahman: Or we can like if we want to implement the token cost then then there should be a limit that how much chat they can do in one day.
+[0:27:27] Md. Tauhidur Rahman: Because basically we're using somebody else's API to make the like AI features in Kabutil. Right.
+[0:27:37] Md. Tauhidur Rahman: So we have to pay like for example if you are using open AI then we have to pay open AI.
+[0:27:43] Md. Tauhidur Rahman: So there should be some limit to our clients that how much they can use in one day or one month.
+[0:27:51] Constance Wolfe: I guess I'm asking like when I'm working it'll say you've reached your limit.
+[0:27:56] Constance Wolfe: Either you can wait or you can buy credits.
+[0:27:59] Md. Tauhidur Rahman: I'm just able to show you.
+[0:28:01] Md. Tauhidur Rahman: I'm just about to show you because like I'm using something called open code.
+[0:28:05] Md. Tauhidur Rahman: So for making this guy this wireframe everything I use open code. It's more like. Let me show you.
+[0:28:13] Md. Tauhidur Rahman: Just let me log in first. Okay.
+[0:28:16] Md. Tauhidur Rahman: So as you can see, so for my subscription, this is my subscription, this is my multi users.
+[0:28:24] Md. Tauhidur Rahman: I have already used 10% of my monthly limits.
+[0:28:27] Md. Tauhidur Rahman: Yeah but for the rolling users that refreshes every day it will be reset in 4 hours 37 minutes 1% of it.
+[0:28:37] Md. Tauhidur Rahman: And there is a weekly limit. So there is three kind of filters.
+[0:28:42] Md. Tauhidur Rahman: So if you reach your monthly limit then you cannot use it.
+[0:28:45] Constance Wolfe: If you.
+[0:28:46] Md. Tauhidur Rahman: The first level of filter is that you can use XYZ amount in one day.
+[0:28:52] Md. Tauhidur Rahman: So if you finish it then it's gone.
+[0:28:54] Md. Tauhidur Rahman: And weekly users it like if they like if they like in one day if they used full full of their tokens, weekly tokens then I they will not be able to use any tokens after that day till it's reset.
+[0:29:12] Md. Tauhidur Rahman: Because like if you like if I have used 100 of the tokens today then I would not be able to use these token the tokens for rest of six days.
+[0:29:23] Md. Tauhidur Rahman: Although I have the my monthly users limit.
+[0:29:26] Constance Wolfe: Okay,
+[0:29:28] Md Mashiul Azam Chowdhury: but this goes for plot code as well.
+[0:29:33] Md Mashiul Azam Chowdhury: Yeah, yeah, but I believe, I mean this is when we are using their chat functionality for a plot or open code.
+[0:29:46] Md Mashiul Azam Chowdhury: But I think if for APIs we can remove that boundary.
+[0:29:57] Md. Tauhidur Rahman: We are not trying to remove the boundary, we want to add another boundary.
+[0:30:03] Md. Tauhidur Rahman: So, so that they don't you overuse it and like make our bills go style like rocket. Yeah.
+[0:30:12] Md. Tauhidur Rahman: So we want to add more layers to it.
+[0:30:17] Md Mashiul Azam Chowdhury: Okay, so,
+[0:30:20] Constance Wolfe: so in this particular case that you're showing me now, it's not allowing the user to choose if they want to continue and pay?
+[0:30:36] Md. Tauhidur Rahman: No, no, it doesn't allow user to go continue.
+[0:30:40] Constance Wolfe: So I guess I'm just asking, is there a reason why we wouldn't want to allow that?
+[0:30:46] Md. Tauhidur Rahman: We can, we can all like, we can also allow that because like I was just showing an example that this can be the H case.
+[0:30:53] Md. Tauhidur Rahman: If they have used 100 of the limit, then they can buy tokens just like I can see if the way I can confirm, I think car store and cloth code also provides those kind of thing.
+[0:31:02] Md. Tauhidur Rahman: Pay as you go after using your limits.
+[0:31:05] Md Mashiul Azam Chowdhury: Yes, yes.
+[0:31:07] Constance Wolfe: So they, I can attest to that because I, I, I do that.
+[0:31:11] Constance Wolfe: So it's really interesting because if I'm in the middle of a project, I'll get the warning that'll say you've used your limits, you're going to reset in an hour.
+[0:31:21] Constance Wolfe: And yeah, yeah, I don't want to wait an hour.
+[0:31:24] Constance Wolfe: So I'll just like, yeah, just and so I'll pay, I'll pay the money so I don't have to wait.
+[0:31:31] Constance Wolfe: Which is kind of funny.
+[0:31:34] Constance Wolfe: So I know that's Claude as an example and I know Claude I think is what we have built into caboodle.
+[0:31:40] Md. Tauhidur Rahman: Yeah. So another thing is fun that use your available balance after reaching the usage limit.
+[0:31:46] Md. Tauhidur Rahman: So if, if I turn this on, what will happen?
+[0:31:51] Md. Tauhidur Rahman: I can like there will be no limit for the rolling use or the weekly use.
+[0:31:55] Md. Tauhidur Rahman: We can like, I can use up to my monthly users 100 after that, like I'm using it for only one month, so I don't know what happens after I reach 100 of my monthly use.
+[0:32:06] Md. Tauhidur Rahman: So I haven't seen that path. I don't finish everything in one month.
+[0:32:15] Constance Wolfe: Yeah.
+[0:32:16] Constance Wolfe: My guess is that for most users, like I was going to show you a report that I, that I built that took quite a bit in cloud, but I don't think they're going to be doing a bunch of heavy computing within caboodle.
+[0:32:31] Constance Wolfe: Like I don't think that they're going to like some of the reports I'm doing is requiring, you know, them to review sometimes up to 500,000 rows of data.
+[0:32:40] Constance Wolfe: Right.
+[0:32:41] Constance Wolfe: So I'm uploading files and it might have 500,000 rows and I'm telling it to parse things out into blah, blah, blah.
+[0:32:50] Constance Wolfe: Right.
+[0:32:50] Constance Wolfe: And so when I'm cranking on those, it, it takes a ton and I'm, I'm using some of the Higher models, which, that's an interesting thing too is to understand exactly which models are capable of doing what sorts of computations.
+[0:33:05] Constance Wolfe: Right.
+[0:33:06] Constance Wolfe: Because I think I was probably using a model that was requiring more tokens and I could have used a lesser model.
+[0:33:15] Constance Wolfe: And I'll ask it, I'll say like which model? You know, I'll ask it.
+[0:33:19] Constance Wolfe: I said recommend the model I need for these types of reports and it'll, it'll tell me.
+[0:33:25] Constance Wolfe: But I don't think we're gonna get into that for caboodle.
+[0:33:28] Constance Wolfe: But I think it's going to be mostly like you said, like show me the list of what's due today.
+[0:33:33] Constance Wolfe: Show me when it's reviews.
+[0:33:35] Constance Wolfe: I don't think it's going to be like take this 500,000 row, you know, data model and blah blah.
+[0:33:40] Constance Wolfe: You know, I don't think it's, I don't see that.
+[0:33:43] Md. Tauhidur Rahman: Yeah.
+[0:33:45] Constance Wolfe: Usage probably very often. So hopefully the usage will be somewhat light.
+[0:33:52] Md. Tauhidur Rahman: Yeah.
+[0:33:53] Md. Tauhidur Rahman: I also think that because like whenever that if they try, if they, if we don't give them the option to upload anything and process anything, they're not going to do it.
+[0:34:02] Constance Wolfe: Right.
+[0:34:03] Md. Tauhidur Rahman: We denote it, they're not going to able to be do it.
+[0:34:05] Md. Tauhidur Rahman: But I think what we want to do with AskAboodle is just to give them a space to ask something that's already in our DB.
+[0:34:14] Constance Wolfe: Well the interesting thing though is that that 500 row, 500,000 row document could actually be in caboodle because we upload.
+[0:34:32] Constance Wolfe: So if the.
+[0:34:32] Constance Wolfe: I'm thinking spins like, I'm thinking bubbies and spins like their store insights report, remember that's what used to crash the system.
+[0:34:40] Constance Wolfe: So it, you're right, they're not going to be uploading probably a lot of big data, but actually it might already be in the system which that would be something kind of interesting.
+[0:34:54] Constance Wolfe: So this report is something that, that I created is something I think would be highly beneficial.
+[0:35:02] Constance Wolfe: So what it's doing, if these, it's, it's going through the trade spend and it's actualizing all the promotions, you know how.
+[0:35:11] Constance Wolfe: So we go in there and we say okay, it's going to be a, you know, whatever lift and this is the velocity and all of that kind of stuff.
+[0:35:17] Constance Wolfe: Well this data, this is what we're doing with bubbies right now. They were off on their projections.
+[0:35:23] Constance Wolfe: So their monthly report.
+[0:35:25] Constance Wolfe: So when they're looking at that monthly report they're like oh, our variance is under or over.
+[0:35:31] Constance Wolfe: Why is it under or over? And then they go back to the trade spend.
+[0:35:35] Constance Wolfe: And they look at the trade spend and they say, oh well, we only predicted a 67% lift.
+[0:35:39] Constance Wolfe: It was 150% lift. We need to adjust.
+[0:35:42] Constance Wolfe: So those actualizations are important and it's data that is in the system.
+[0:35:51] Constance Wolfe: So I don't know how much computations that's going to require to actualize those, but that's something that we're going to want to look at.
+[0:35:59] Constance Wolfe: And Toheed, we haven't gotten into trade spend yet, but that's definitely.
+[0:36:03] Md. Tauhidur Rahman: Yeah.
+[0:36:04] Constance Wolfe: Something that we should look at.
+[0:36:05] Constance Wolfe: And I think it's something that Claude would be able to help us with.
+[0:36:11] Md. Tauhidur Rahman: Okay. So tomorrow I'm gonna sit with Iftay and see the placement part. Okay. So that.
+[0:36:18] Md. Tauhidur Rahman: So that I can have some idea about it.
+[0:36:21] Constance Wolfe: Okay.
+[0:36:21] Md. Tauhidur Rahman: Also, he have already shown me the treatment, but I think I have kind of forward some things.
+[0:36:28] Constance Wolfe: So let me just show you something really quick and we can to.
+[0:36:31] Constance Wolfe: Probably you and I should maybe talk before you talk to him.
+[0:36:35] Constance Wolfe: But the data that I uploaded in here, what we're looking at right now, comes from. If you're in.
+[0:36:43] Constance Wolfe: We're kind of getting off on a little side. Side deal. But that's okay. So this is. This is.
+[0:36:52] Constance Wolfe: Let me get to the spins report here. So we upload data into here and it's.
+[0:37:03] Constance Wolfe: It'll take a little while to load. So while it's loading, I'm going to go somewhere else.
+[0:37:07] Constance Wolfe: So then what I did is I took that data and I started creating reports like so for Rise and Puff.
+[0:37:18] Constance Wolfe: As an example, this promotional summary is telling us for the other brands how many weeks they're on promotion versus how many weeks Ryzen Puff is on promotion.
+[0:37:31] Constance Wolfe: And it's telling us what depth, how deep do they go when they're on promotion compared to how much how deep they go to and what's the average lift they're getting.
+[0:37:43] Constance Wolfe: And then it goes into these charts. But this one particular chart I'll show you is.
+[0:37:55] Constance Wolfe: So here what they can do at a glance is see when their competitors are promoting and the Deep Red is telling us how deep they're going on.
+[0:38:04] Constance Wolfe: Promotion versus Rise and Puff.
+[0:38:06] Constance Wolfe: So if you look at Rise and Puff, like they're barely going on promotion at all.
+[0:38:09] Constance Wolfe: But look at their competitors. Their competitors are promoting. This is by week, right?
+[0:38:15] Constance Wolfe: Their competitors are promoting pretty heavily.
+[0:38:18] Constance Wolfe: So there's this one that I love, which I'm not seeing right here. Anyway, we can go through this.
+[0:38:29] Constance Wolfe: But this is something that I developed through Claude and this is the one that was like, okay, you are at your max.
+[0:38:37] Constance Wolfe: And I was like, yeah, keep going. Just, just bill me.
+[0:38:39] Constance Wolfe: It ended up costing me like $75 and tokens because I didn't want to stop.
+[0:38:45] Constance Wolfe: But this information is in here. So.
+[0:38:48] Constance Wolfe: So what we do miss in caboodle is we're really good about building the trade spins.
+[0:38:54] Constance Wolfe: But now bubbies in particular is like they're going to this monthly report.
+[0:39:01] Constance Wolfe: What's happening is they're going, my system's moving really slow.
+[0:39:06] Constance Wolfe: They're going to this monthly report. They're seeing variances, you know, big variances.
+[0:39:12] Constance Wolfe: And the, the way they can figure out why there's a variance in the report is they have to go back to the trade spend and then understand, okay, what was my velocity, what was the store count, what was all those things that I was predicting?
+[0:39:27] Constance Wolfe: And then they need something like this to tell them where they were off. Right.
+[0:39:33] Constance Wolfe: Like what, you know, what was my actual lift, what was my actual store count, that sort of thing.
+[0:39:42] Constance Wolfe: So that's what we're doing with these reports. So it's pretty cool, but it's just not.
+[0:39:48] Constance Wolfe: I'm just doing it outside of doing it outside of. Because we're all at this point,
+[0:39:57] Md Mashiul Azam Chowdhury: so.
+[0:39:58] Constance Wolfe: Yeah, so that would be something to do next but we still need to get through category review for sure.
+[0:40:04] Constance Wolfe: So I would love to share these reports with you. If you want to schedule a time.
+[0:40:07] Constance Wolfe: We can do that together when it comes time to talk about trade spend because I've got.
+[0:40:14] Constance Wolfe: We've got some ideas about what we can do with that.
+[0:40:17] Md. Tauhidur Rahman: Okay, sure. So let me just, just like get the idea of the trace spent in our system first.
+[0:40:27] Constance Wolfe: Yeah.
+[0:40:27] Md. Tauhidur Rahman: Then I think we should, we should talk because I. Otherwise I wouldn't.
+[0:40:31] Md. Tauhidur Rahman: I will not understand anything you will say.
+[0:40:34] Constance Wolfe: Yeah, yeah. Honestly. So. Okay, so back to category review and the dashboard.
+[0:40:43] Constance Wolfe: So today I do have some time.
+[0:40:45] Constance Wolfe: So what would, what would be most helpful for you for me to do today regarding the category review Dashboard.
+[0:40:51] Md. Tauhidur Rahman: Category review dashboard. That the one thing I really want that. What kind of information?
+[0:40:56] Md. Tauhidur Rahman: Because like the things like the excel you have shared with me that what your client actually manages in the things.
+[0:41:05] Md. Tauhidur Rahman: Yeah, we have like I, I have checked everything that the thing is the system we are currently offering covers almost everything.
+[0:41:14] Md. Tauhidur Rahman: But.
+[0:41:14] Constance Wolfe: Yeah, I thought so too. Yeah.
+[0:41:16] Md. Tauhidur Rahman: Yeah. So as you know this like the business and the system I like.
+[0:41:22] Md. Tauhidur Rahman: I just want to know some things for you.
+[0:41:25] Md. Tauhidur Rahman: The thing is that what we can add more or should we add more in the, in the dashboard or not because currently, as I can see it's more like the.
+[0:41:37] Md. Tauhidur Rahman: Everything we are showing is kind of a necessary thing.
+[0:41:40] Md. Tauhidur Rahman: Is there anything that would be sort of good to have in the system in this dashboard?
+[0:41:48] Constance Wolfe: Yeah, so if the sort of part of me is thinking about the market overview and the category review because like in the current market overview we have the status system.
+[0:42:03] Constance Wolfe: Right. And then the whole system we have basically like SKU status. Right.
+[0:42:09] Md Mashiul Azam Chowdhury: So
+[0:42:11] Constance Wolfe: let's write in here. So we have this SKU status system.
+[0:42:16] Constance Wolfe: It seemed like in the broker mock up that they provided that they were wanting to implement the status system as well.
+[0:42:27] Constance Wolfe: Right. They were like, is it pending? Is it. Are we waiting? Are we.
+[0:42:35] Constance Wolfe: So I feel like we have some of that built in that I don't really want to reinvent.
+[0:42:41] Constance Wolfe: So part of me wants to really figure out how to kind of cross pollinate the implementations that we already have.
+[0:42:52] Constance Wolfe: And I think that. Let me see if I can pull up that mock up that she had really, really quick.
+[0:43:02] Constance Wolfe: And I know you guys are probably really tired and I will let you go here pretty soon, but I.
+[0:43:13] Constance Wolfe: This tracker, I'm trying to get it pulled up,
+[0:43:41] Constance Wolfe: She has.
+[0:43:47] Constance Wolfe: Like accepted, decline, not submitted, pending these sorts of kind of statuses.
+[0:43:57] Constance Wolfe: We also have in our system active, pending, not active.
+[0:44:05] Constance Wolfe: This, you know, so this pushes into the brand environment.
+[0:44:09] Constance Wolfe: I think she probably wants, you know, some of this as an internal report for her, like your status right here.
+[0:44:25] Constance Wolfe: But she probably would want to push some of this to her brand as well. Right.
+[0:44:29] Constance Wolfe: So I think some of these notes are for her own internal use and some of it would be good.
+[0:44:34] Md Mashiul Azam Chowdhury: So it will be like there's a different type of status, maybe log status or something like that.
+[0:44:42] Constance Wolfe: Yeah, exactly. Yeah.
+[0:44:44] Md Mashiul Azam Chowdhury: And
+[0:44:47] Constance Wolfe: then I think we need to think about does you want to push that?
+[0:44:51] Constance Wolfe: Wouldn't that be nice to know as a brand?
+[0:44:54] Constance Wolfe: Did you want to push us to the brand or does she only want this internally? Right.
+[0:44:58] Constance Wolfe: Does she just want to use. Here's this next action.
+[0:45:05] Constance Wolfe: So I think I probably need a little bit more clarification from them as well.
+[0:45:10] Constance Wolfe: But I feel like we already have. I mean Togi kind of said it too.
+[0:45:13] Constance Wolfe: Like I think we have a lot of this functionality. It's mostly in this market overview.
+[0:45:20] Constance Wolfe: But as Kate and I were talking, if they're going to be using this to communicate with their brands, this is kind of a market overview because they're telling them what's happening in the market.
+[0:45:36] Constance Wolfe: It's a little different because in this case they're like going into the stores, but it's still an overview.
+[0:45:42] Constance Wolfe: It's still like a status overview of all the work that they're doing.
+[0:45:46] Md Mashiul Azam Chowdhury: So
+[0:45:49] Constance Wolfe: I think there's a lot of cross pollinization here, particularly even with promotions. Right.
+[0:45:56] Constance Wolfe: So they want to know did my promotion get submitted? Right.
+[0:46:00] Constance Wolfe: They want to know did my category review appointment get accepted?
+[0:46:06] Constance Wolfe: Did my products when you went into the store and presented it, did get accepted. Right.
+[0:46:10] Constance Wolfe: So these, these three things right here probably have very similar notification needs and tracking needs.
+[0:46:22] Md Mashiul Azam Chowdhury: I see.
+[0:46:24] Constance Wolfe: So I guess I just say that in a way so that we're not building all of these in isolation that they might just be cross pollinated.
+[0:46:31] Constance Wolfe: So I just, I think. Yeah.
+[0:46:38] Constance Wolfe: So Toheed, you're saying at this point we're kind of getting the ideation, but we need to know like again, like here on this whole tasking bar, I like how you have category review promo.
+[0:46:58] Constance Wolfe: So this timeline that you have right now is for any task essentially.
+[0:47:04] Constance Wolfe: And then you open that up and then it'll take you to that specific thing. Okay.
+[0:47:09] Md. Tauhidur Rahman: Yes.
+[0:47:11] Constance Wolfe: Like one thing I noticed on Fellow. So I use Fellow.
+[0:47:15] Constance Wolfe: Fellow is similar in what you're talking about with that AI ask. Right. So it'll.
+[0:47:20] Constance Wolfe: It has that same thing here and it'll look in all of my things. Right.
+[0:47:25] Constance Wolfe: So the one thing I did notice about the action items here, if I can fill go there.
+[0:47:32] Constance Wolfe: So these are all of my action items.
+[0:47:36] Md. Tauhidur Rahman: It.
+[0:47:37] Constance Wolfe: Even though it has the due date, it doesn't show me on a calendar. And I was looking for that.
+[0:47:45] Constance Wolfe: Like I was like where. So my calendar is.
+[0:47:47] Constance Wolfe: Is the way the calendar works on here is that this is my actual calendar and it's pretty cool because so like if I know I have a call coming up with you guys, these are the things I want to make sure that I talk about.
+[0:48:03] Constance Wolfe: But then after the call it'll actually then the notes that it'll give me the recording and everything and everything that we talked about.
+[0:48:14] Constance Wolfe: So those notes then will go away. But it'll give me maybe some suggested action items.
+[0:48:20] Constance Wolfe: But what it doesn't do is on my action sheet is it doesn't give me the calendar of when those due dates are her going.
+[0:48:28] Constance Wolfe: Does. Are you familiar? Just do most asking if, if you have it on a deadline. Do.
+[0:48:38] Constance Wolfe: Do you normally see that on a calendar view your deadlines?
+[0:48:42] Md. Tauhidur Rahman: Yeah. Yeah.
+[0:48:44] Constance Wolfe: Okay. So does this have that. Do we. Is this the calendar view here? It is, I guess.
+[0:48:53] Constance Wolfe: But not for tasks per se.
+[0:48:57] Md Mashiul Azam Chowdhury: Yeah.
+[0:48:57] Md. Tauhidur Rahman: You can also have task. If you click you have just checked out the task in the right side. Can you.
+[0:49:04] Md. Tauhidur Rahman: No no, no, no. Click on capital on the timeline. On the timeline. You can see there is card card.
+[0:49:11] Md. Tauhidur Rahman: There is category, review, promo and task in the right side corner of the timeline. Right side.
+[0:49:16] Md. Tauhidur Rahman: Yeah, click on the task. Yeah, click on the task. Yes, you can see there is a task in progress.
+[0:49:24] Md. Tauhidur Rahman: If slash U with buyers the number three is the task.
+[0:49:32] Constance Wolfe: I'm sorry, what was point me that to what I'm supposed to be looking at.
+[0:49:36] Md. Tauhidur Rahman: Yes. F slash U with buyer. Yeah, this is a task.
+[0:49:43] Md. Tauhidur Rahman: If you click on this, you'll be direct to the task page.
+[0:49:49] Constance Wolfe: Yeah. And then is there a calendar? I guess was my question.
+[0:49:52] Constance Wolfe: Do we want to have this all these tasks on a calendar.
+[0:49:56] Constance Wolfe: If these all had due like to do would these have due dates?
+[0:50:00] Md. Tauhidur Rahman: Yeah, I was thinking about that because like you have shown me fellow and I I have also like installed fellow the beat the the free options Free option.
+[0:50:12] Md. Tauhidur Rahman: And if I can see like I can the connect. What's your thinking that to do? And also I have like.
+[0:50:20] Md. Tauhidur Rahman: I have also went through Microsoft to do and Google's to do everything. It's most like flat.
+[0:50:26] Md. Tauhidur Rahman: Those are most like flat.
+[0:50:28] Md. Tauhidur Rahman: If you go back if you can go back to fellow and as if there is no like we have implemented in the pipeline.
+[0:50:35] Md. Tauhidur Rahman: There is more like Kanban thing. There is a three. Three columns.
+[0:50:40] Md. Tauhidur Rahman: One is like to do one is in progress and it's done.
+[0:50:44] Md. Tauhidur Rahman: But in most of the to do app I have seen in in Microsoft and also Google and in this they are most like flat things.
+[0:50:53] Md. Tauhidur Rahman: Either you have done it or listen to do. There is no in progress state.
+[0:50:58] Md. Tauhidur Rahman: So I was also thinking about that. So let me create something to do. To do. Let me create something.
+[0:51:11] Constance Wolfe: Where is their tasks? This is their tasks.
+[0:51:15] Md. Tauhidur Rahman: Yeah, Google tasks. So if I add any task and if I add a deadline like today.
+[0:51:27] Md. Tauhidur Rahman: Yeah, it's gonna show today. It's like it's not as intuitive intuitive as the fellow one.
+[0:51:36] Md. Tauhidur Rahman: But still for pre subscription it gets the job done. And if you just click on it's done.
+[0:51:43] Md. Tauhidur Rahman: It's it will go to the completed list.
+[0:51:46] Constance Wolfe: Yep yep. Which is not bad. I just think like Asana I think gives you.
+[0:51:52] Constance Wolfe: I think Asana gives you the option to.
+[0:51:55] Md. Tauhidur Rahman: Yeah, yeah yeah.
+[0:51:56] Constance Wolfe: Put it on a calendar.
+[0:51:58] Constance Wolfe: So we talked about that that there's not really in caboodle anywhere except for.
+[0:52:03] Constance Wolfe: Well we have calendars obviously.
+[0:52:07] Md. Tauhidur Rahman: But don't you think if we include calendar everywhere it will it like people will get confused more because like we have a calendar in category review.
+[0:52:15] Md. Tauhidur Rahman: We have a calendar in promotion management. So too Much calendars would be. Yeah, I think.
+[0:52:23] Md. Tauhidur Rahman: Yeah, there would be like then if we added to the task section also then we will have three calendars.
+[0:52:32] Md. Tauhidur Rahman: That was also my concern.
+[0:52:36] Constance Wolfe: So here. You said you had some notes about. Or some ideas about how to keep this from getting.
+[0:52:48] Md. Tauhidur Rahman: Yeah, I was. Yeah. Yeah.
+[0:52:51] Md. Tauhidur Rahman: I was thinking as you have mentioned Phyllo, can we follow the structure of Fellow or the structure of Google Docs?
+[0:52:59] Md. Tauhidur Rahman: Because like there is if like in. Although in our. In your line of work there is a actual thing in.
+[0:53:07] Md. Tauhidur Rahman: Is in progress to be honest. Because like there are some things that are not in your hand.
+[0:53:13] Md. Tauhidur Rahman: We have already done your part but the.
+[0:53:15] Md. Tauhidur Rahman: You are waiting for the brand's reply or anything then the task is in. In progress.
+[0:53:19] Md. Tauhidur Rahman: So we need a state as in progress. But how should we manage it?
+[0:53:26] Md. Tauhidur Rahman: I was thinking about that because like we need. Like for.
+[0:53:31] Md. Tauhidur Rahman: In my point of view we actually need a state in progress which is not present in Fellow or in Google Doc.
+[0:53:38] Md. Tauhidur Rahman: So that's. That's one problem.
+[0:53:41] Constance Wolfe: Well, is it. Is it the status of. Is it the status that you know that she's. The.
+[0:53:49] Constance Wolfe: You know these sorts of very specific statuses.
+[0:53:55] Md. Tauhidur Rahman: Yeah. Don't. Don't you think these are bit more general, like generalized.
+[0:54:01] Md. Tauhidur Rahman: Can you go to my wireframe and please like refresh it. I have made some changes.
+[0:54:09] Md. Tauhidur Rahman: I don't know why it's not showing in your space.
+[0:54:14] Constance Wolfe: Go back to task.
+[0:54:15] Md. Tauhidur Rahman: Yeah, go back to task. From the top. There is no. Not from there. From the category review promotional.
+[0:54:25] Md. Tauhidur Rahman: Yeah, from that menu. Yeah. So what I have done that for. For the notes section in the. For the brand.
+[0:54:36] Md. Tauhidur Rahman: In the brand sections pipeline. As you can see, the notes is not. Doesn't look like notes. It.
+[0:54:41] Md. Tauhidur Rahman: It looks like more like a. Another task. Right.
+[0:54:44] Md. Tauhidur Rahman: So I've just kind of given the look of a notes in the notes and if. If you like.
+[0:54:51] Md. Tauhidur Rahman: There was another problem.
+[0:54:52] Md. Tauhidur Rahman: We have discussed that if there is too many tasks that are completed and things will be cluttered.
+[0:54:58] Md. Tauhidur Rahman: Right. So we are showing only the most recent ones in the completed list.
+[0:55:02] Md. Tauhidur Rahman: If you see at the bottom of the completed list there is a show all completed.
+[0:55:07] Md. Tauhidur Rahman: If you click on that we will be able to see all the completed list but for the time being we'll only show the recent completed one.
+[0:55:17] Constance Wolfe: I do like that I. I think that you could just.
+[0:55:20] Constance Wolfe: I like the way they do it here where it just goes away and then you can filter if you want to see it.
+[0:55:25] Md Mashiul Azam Chowdhury: Yeah.
+[0:55:26] Md. Tauhidur Rahman: So. Yeah. Yeah. So the thing is this is more like a flat version, right.
+[0:55:31] Md. Tauhidur Rahman: It's More like there is no column or anything. But if we want to do it, we have to hide one column.
+[0:55:37] Md. Tauhidur Rahman: And if, and then again if they want to see it, then we have to reappear the column.
+[0:55:44] Md. Tauhidur Rahman: I think that then the design will be more the design then.
+[0:55:50] Md. Tauhidur Rahman: Then we have to hide the completed column, right?
+[0:55:52] Md. Tauhidur Rahman: Then if they want to see the completed column, then we have to again get back the completed column and like as we are following most more likely the Kanban board kind of view, then I think we should keep the completed column.
+[0:56:08] Md. Tauhidur Rahman: If divide. What do you think about this?
+[0:56:12] Md. Tauhidur Rahman: Because like, if we like, like repeat it, like if we have the option to like hide the column and then again get back the column, then the view.
+[0:56:21] Md. Tauhidur Rahman: I think that view would be more confusing.
+[0:56:25] Constance Wolfe: The one thing I have a question, I think before Ifti, really, really fast because I think this is probably a front end thing is that this is super static, right?
+[0:56:35] Constance Wolfe: So in. In fellow you create your own, you move your own, you can do whatever you want.
+[0:56:39] Md. Tauhidur Rahman: Yeah.
+[0:56:40] Constance Wolfe: Here it's. It's set like there's no moving around. Is that because we're a multi tenant?
+[0:56:49] Constance Wolfe: Is that the kind of the difference between a, A multi tenant architecture and a container architecture?
+[0:56:56] Constance Wolfe: Because that has to be the same for everybody?
+[0:56:59] Md. Tauhidur Rahman: Yeah, kind of. Yes. Because like we are making something generalized for everyone.
+[0:57:07] Constance Wolfe: Right?
+[0:57:07] Constance Wolfe: So in this particular case, this is probably a container because they can move things, they can do anything they want with these.
+[0:57:14] Md. Tauhidur Rahman: I think I. I think you can also. I. Okay, so you're saying it's.
+[0:57:19] Md. Tauhidur Rahman: Okay, let me get like, I think I have confused. I have been confused.
+[0:57:23] Md. Tauhidur Rahman: So you are saying that we, for example, one task is at the end. You can drag it to the top, right?
+[0:57:32] Constance Wolfe: They can create as many groups as they want. Yeah.
+[0:57:35] Md. Tauhidur Rahman: Yes. Yes. We also can create groups, right? In the left side. We can create groups.
+[0:57:43] Md. Tauhidur Rahman: Yeah, in the left side as we can like we can create plans in the pipeline.
+[0:57:49] Md. Tauhidur Rahman: This is like I have copied the. Of the pipeline.
+[0:57:53] Md. Tauhidur Rahman: So in this thing you can create as many groups as you can as you.
+[0:57:58] Constance Wolfe: All right, that's right. That's right. Yeah, you're right. Yeah, you can. You're right.
+[0:58:07] Constance Wolfe: We don't have an archive. I do think we need an archive.
+[0:58:10] Md. Tauhidur Rahman: Yeah. Yes, this is also right that.
+[0:58:15] Md. Tauhidur Rahman: What if we have already completed everything from that list or it's not like it's not.
+[0:58:21] Md. Tauhidur Rahman: We don't need that group anymore. What should we do with it? So yes, we can also add the archive.
+[0:58:28] Md. Tauhidur Rahman: We can now we can implement the filter part here so there will be filters show all.
+[0:58:33] Md. Tauhidur Rahman: Then you are going to show them everything. Show only, only the active ones.
+[0:58:38] Md. Tauhidur Rahman: So we're going to show them the only active ones or show the archived.
+[0:58:41] Md. Tauhidur Rahman: Then they're going to show only the archived ones. That, that's a good approach.
+[0:58:48] Constance Wolfe: And then I do think what about like, so if these have dates, are we going to implement due dates on here?
+[0:58:56] Md. Tauhidur Rahman: Yeah, yeah, we're gonna implement due this on here.
+[0:59:00] Constance Wolfe: So if we do due dates, I think that would help too. Like you could filter kind of like what you have.
+[0:59:07] Md. Tauhidur Rahman: Yeah. So we can show it like this. Yes, yes.
+[0:59:11] Constance Wolfe: Yeah, I think that would definitely help. To your point. Complete is kind of interesting because.
+[0:59:23] Constance Wolfe: Yeah, it's like once you complete it, it's complete. So you. Do you really need a list of complete.
+[0:59:31] Constance Wolfe: I think it's just more of a fun thing to do to move something.
+[0:59:35] Md Mashiul Azam Chowdhury: Yeah. Last, on our last call you asked that if we could sort of hide the complete pipeline or task.
+[0:59:48] Md Mashiul Azam Chowdhury: Yeah.
+[0:59:49] Md Mashiul Azam Chowdhury: Kind of thinking about something like by default they will, they will be hidden, but there will be sort of a filter.
+[1:00:01] Md Mashiul Azam Chowdhury: I mean currently we have a search for the task, right.
+[1:00:06] Md Mashiul Azam Chowdhury: So we will have something like show the completed tickets or something like that.
+[1:00:13] Md Mashiul Azam Chowdhury: Then it will appear. So yeah, we can have that kind of filter functionality.
+[1:00:23] Constance Wolfe: I guess the question is, is that do we need to maintain this architecture?
+[1:00:30] Constance Wolfe: If we need to maintain this architecture, then we can just think about and I assume that these tasks are more like, more like things that the administrative team needs to do.
+[1:00:49] Constance Wolfe: That would be outside of. So in category review, your. Your tasks are.
+[1:00:59] Constance Wolfe: Oh, let me think about this for a minute. Like what are the tasks within category review?
+[1:01:08] Constance Wolfe: I guess they would be.
+[1:01:09] Constance Wolfe: You would be putting in tasks according to the brand, probably like I'm looking here.
+[1:01:18] Constance Wolfe: So category review to be determined.
+[1:01:25] Constance Wolfe: Well, I guess my, my question was is, do in this task, do we need to kind of keep this architecture as it is right now, essentially, and then just modify it so that it's got some, some user dates, some filters for users.
+[1:01:39] Constance Wolfe: I mean some filters for the deadline dates. Now we can archive, we can create new projects. Is there.
+[1:01:47] Constance Wolfe: If we put timelines on it, does it create like a tickler?
+[1:01:52] Constance Wolfe: And that's when it comes back up here and it tells you, okay, these things are due on these dates.
+[1:01:57] Constance Wolfe: Yes, it's going to do that.
+[1:02:03] Md Mashiul Azam Chowdhury: Yeah, because I mean we are going to show the recent ones by, by using the dates, for example, we will have the due date field, right?
+[1:02:21] Md. Tauhidur Rahman: Yes.
+[1:02:21] Md Mashiul Azam Chowdhury: For the tasks.
+[1:02:23] Md Mashiul Azam Chowdhury: So based on that we will filter, for example, what, what are the tasks that has the due date in the next seven days or something like that.
+[1:02:38] Md Mashiul Azam Chowdhury: So.
+[1:02:40] Constance Wolfe: Yeah. Okay. I mean, I think we're almost there. With what we have.
+[1:02:52] Constance Wolfe: So let me look at this and put some thoughts to it. We're awfully close.
+[1:03:03] Constance Wolfe: Is there any other big thoughts you guys had about some changes you wanted to make?
+[1:03:08] Md Mashiul Azam Chowdhury: Not from mine, but I think may or. I mean, maybe not now, but we'll have some thoughts on it.
+[1:03:17] Constance Wolfe: Okay. So last time we spoke, we were trying to get to. We have a call with this.
+[1:03:23] Constance Wolfe: These particular brokers that we're talking about right now, the Nobles, we have a call with them on Friday.
+[1:03:27] Constance Wolfe: And I think we were trying to implement just a couple. We weren't.
+[1:03:30] Constance Wolfe: We knew we weren't going to be able to implement this whole thing, but we were going to try to get the calendar looking a little bit better so that it wasn't like, didn't.
+[1:03:43] Constance Wolfe: Oh, I'm not in the right one right now, but we'll see.
+[1:03:47] Constance Wolfe: We were trying to just get a few things accomplished before that call.
+[1:03:53] Constance Wolfe: Do you know, are we going to be able to meet that deadline, do you think?
+[1:03:58] Md Mashiul Azam Chowdhury: I believe so, but I think I'll have a clear idea once the BJ comes back tomorrow. Okay.
+[1:04:07] Constance Wolfe: So I think it was just kind of cleaning this up a little bit. I think we had. We had a list. Yeah.
+[1:04:13] Constance Wolfe: Do you need me to. Did I send that list to you guys? Like the primary?
+[1:04:17] Md Mashiul Azam Chowdhury: I think. Yeah, I saw I. In the last.
+[1:04:24] Constance Wolfe: Think of the last notes, maybe I want to say.
+[1:04:27] Md Mashiul Azam Chowdhury: Right, Right.
+[1:04:38] Constance Wolfe: I'm looking at mine.
+[1:04:54] Md Mashiul Azam Chowdhury: Yeah.
+[1:04:55] Constance Wolfe: We talked about like just having some colors in the calendar so that it wasn't.
+[1:05:01] Md Mashiul Azam Chowdhury: Yeah,
+[1:05:08] Constance Wolfe: I'll take a look and resend those today just to make sure. But if we could get. Yeah.
+[1:05:15] Md Mashiul Azam Chowdhury: And if you want to include any thoughts on this, then. Yeah, please do. And then reset it.
+[1:05:24] Constance Wolfe: Okay.
+[1:05:26] Constance Wolfe: Yeah, that would be the big goal for this week, to get as much of that done as possible for that call.
+[1:05:36] Constance Wolfe: I'll resend that list when I get it. And so if we could get an update on that and then.
+[1:05:44] Constance Wolfe: And then Tohi did you said you were going to look at the trade spend, I think this week?
+[1:05:49] Md. Tauhidur Rahman: Yeah. Yeah.
+[1:05:50] Constance Wolfe: Okay. Okay.
+[1:05:51] Constance Wolfe: And then I'll take a look at this a little bit more today and see if I have any other thoughts and I'll outline those and then we can talk about those tomorrow as well.
+[1:06:00] Md. Tauhidur Rahman: Are.
+[1:06:00] Constance Wolfe: Do you want to meet tomorrow, Toby?
+[1:06:03] Md. Tauhidur Rahman: Yeah, we can have a meeting tomorrow.
+[1:06:05] Constance Wolfe: Okay. Okay. So.
+[1:06:08] Md Mashiul Azam Chowdhury: So when do you have your call with care. Maybe we can Have a. Yeah, right after that one.
+[1:06:16] Constance Wolfe: Well, I think that one's a little bit later. So that one is right at seven or eight?
+[1:06:24] Constance Wolfe: I think it's at eight. Yeah, it's at eight your time.
+[1:06:27] Md Mashiul Azam Chowdhury: Then we. We can have our call at five.
+[1:06:31] Constance Wolfe: At five. Okay. Five your time. Okay. So let's. If you could just at that call, let me know where we are.
+[1:06:38] Constance Wolfe: For the call for Friday to have the category review, there were just a few minor things that we were going to try to get updated.
+[1:06:49] Constance Wolfe: It's like.
+[1:06:49] Constance Wolfe: It's kind of like some of those things with the filters that we talked about earlier today.
+[1:06:55] Constance Wolfe: Select all, have some. You know, can we reduce the multiple lines on the.
+[1:07:01] Constance Wolfe: On the calendar itself and have it look more like where we're heading?
+[1:07:07] Constance Wolfe: Last time we talked, it sounded like that that was going to be achievable, but I.
+[1:07:11] Constance Wolfe: I don't know, now that we've missed a day, I don't know if it is or not. So I'll.
+[1:07:18] Constance Wolfe: I'll find that list and resend it to you. Unless you want me to try to track it down right now.
+[1:07:25] Md Mashiul Azam Chowdhury: Yeah, no worries. You can do that whenever.
+[1:07:29] Constance Wolfe: Okay. That's gonna drive me crazy, actually. I thought it was pretty, Pretty clear what we were gonna.
+[1:07:51] Constance Wolfe: I'll just. I'll have to look for it and I'll. I'll send it to you guys.
+[1:07:55] Constance Wolfe: But if you can look at that when you get in tomorrow morning, that would be great.
+[1:07:58] Constance Wolfe: And then that way when we talk, you can give me an update and have them start working on it.
+[1:08:02] Constance Wolfe: So I'll just send an email.
+[1:08:05] Md Mashiul Azam Chowdhury: Yeah. Okay.
+[1:08:06] Constance Wolfe: Okay. Okay. Anything else
+[1:08:13] Md Mashiul Azam Chowdhury: not from mind? No, also not.
+[1:08:17] Md. Tauhidur Rahman: I don't have, like, anything right now.
+[1:08:19] Constance Wolfe: Okay. Yeah, I have my assignments.
+[1:08:22] Constance Wolfe: I'll work on this really closely today and then let's talk tomorrow.
+[1:08:25] Constance Wolfe: Everybody will be nice and rested and. And then we'll see where we are.
+[1:08:30] Constance Wolfe: So if we can get to the call on Friday, that'd be great.
+[1:08:33] Md Mashiul Azam Chowdhury: Sure.
+[1:08:34] Md. Tauhidur Rahman: Okay.
+[1:08:34] Md Mashiul Azam Chowdhury: By the way, Constance, I think you spent. I don't know, is it an invitation or something?
+[1:08:42] Md Mashiul Azam Chowdhury: For event, Right. Or Claude and CPG 101.
+[1:08:50] Constance Wolfe: Yeah.
+[1:08:50] Constance Wolfe: So that's what we were talking about on the first of the call that I just wanted you guys to see what the brands are getting.
+[1:08:58] Constance Wolfe: So the brands are getting invitations to these webinars on how to best use Claude.
+[1:09:06] Constance Wolfe: And that's kind of what we were talking about. Like, we just need to be thinking about.
+[1:09:11] Constance Wolfe: I mean, so they're learning how to use Claud to improve their workflow.
+[1:09:18] Constance Wolfe: So Kaboodle was designed to help with workflow.
+[1:09:21] Constance Wolfe: So I want to understand what it is that they are going to utilize Claude for outside of caboodle.
+[1:09:27] Constance Wolfe: So I just think it's good for us to always be thinking about how people are utilizing Claude to make sure that we're relevant within caboodle, you know what I mean?
+[1:09:37] Constance Wolfe: So it was just kind of more of a discussion point which we talked about earlier.
+[1:09:41] Constance Wolfe: Oh, that's when Tavi was showing us Robo within jira that it's nice to have cloud within our own application essentially.
+[1:09:52] Constance Wolfe: But we do tell you we, we probably ought to have like at some point a high level conversation about that, you know, about how we're, how we're going to best utilize.
+[1:10:03] Constance Wolfe: I mean we looked at it a little bit, but I think we need like a, you know, a dedicated conversation to that.
+[1:10:09] Md. Tauhidur Rahman: Yes, yes.
+[1:10:12] Constance Wolfe: So, okay, why don't you guys, let's call it a day for today. I'm gonna do a bunch, I'm gonna spend.
+[1:10:18] Constance Wolfe: I don't have any meetings today, so I'll be looking at that dashboard, I'll be looking at your tickets, I'll be coming up with the priorities to get us to our call that I have on Friday with the broker and see how far we can get with category review.
+[1:10:33] Constance Wolfe: That's what's on my list today. Yeah. And then we'll talk to, I'll send an invite for 5:00 your time.
+[1:10:40] Constance Wolfe: Is that right? Yeah, yeah. Okay, I'll do that right now and I'll send you the notes.
+[1:10:46] Md Mashiul Azam Chowdhury: Okay. Okay, thank you.
+[1:10:47] Constance Wolfe: Okay, have a great night. Take care.
+[1:10:50] Md Mashiul Azam Chowdhury: Bye.
+[1:10:50] Constance Wolfe: Bye.

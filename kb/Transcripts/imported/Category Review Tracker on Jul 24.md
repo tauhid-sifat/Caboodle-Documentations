@@ -1,0 +1,1170 @@
+---
+type: Document
+title: "Category Review Tracker On Jul 24"
+---
+
+[00:25] Md. Tauhidur Rahman: Sa.
+[01:25] Md Mashiul Azam Chowdhury: Hi, Constance.
+[01:27] Bijoy Nath: Hi.
+[01:27] Constance Wolfe: Ifd how are you? Good. Thanks for joining me today. Ijoy. I hope I didn't ruin your party. That's true.
+[01:40] Bijoy Nath: Oh, no, nothing.
+[01:41] Constance Wolfe: What a bummer to be at a party and be like, I.
+[01:52] Md Mashiul Azam Chowdhury: Noise.
+[01:57] Constance Wolfe: Hopefully we can make this pretty quick. I. I know it's your day off.
+[02:02] Constance Wolfe: Before we jump into the category review calendar, just wanted to get a few updates just on a few of the little tickets that we were working on, the promo revenue discrepancy.
+[02:21] Constance Wolfe: So, yeah, thanks for getting that done. I was able to create a report and get that to them.
+[02:27] Constance Wolfe: So thanks for doing that. Report looks good. So that's that. And then there were just.
+[02:35] Constance Wolfe: There was the case pack changes. Do you know if one of them got a chance to.
+[02:41] Constance Wolfe: So is case pack changes pushing to distributor? Does anybody have an update on that?
+[02:54] Bijoy Nath: Yes. Right. Concerns that piece should also be deployed into production by now.
+[03:01] Md. Tauhidur Rahman: Okay.
+[03:02] Constance Wolfe: I haven't tested it, so I'll test that today. Okay, awesome.
+[03:10] Constance Wolfe: And then the other thing just on before we kind of jumped into more of the conceptual workflow of the category review, there was an issue with the retail filters, I think that went to staging yesterday and still needed a little bit of testing.
+[03:31] Constance Wolfe: Do you know if that got pushed as well in that deployment?
+[03:37] Bijoy Nath: Oh, yes, we were aware of the situation.
+[03:39] Bijoy Nath: You know that retailer filter, and I'm working on that right now.
+[03:43] Constance Wolfe: Okay, so that's still in progress.
+[03:45] Bijoy Nath: Yes. Yeah.
+[03:46] Constance Wolfe: Okay.
+[03:50] Md Mashiul Azam Chowdhury: So. So yeah, Constance is talking about that issue, Right. Or is it something else?
+[03:57] Md Mashiul Azam Chowdhury: The asteric issue or.
+[04:01] Bijoy Nath: I'm thinking about the statics one. Yes. Right. So also.
+[04:04] Bijoy Nath: So in the retailer filter for the calendar and for the category view list, so if you select a retailer, there's no data in the list or in the calendar.
+[04:15] Bijoy Nath: Right. That sort of issue.
+[04:16] Constance Wolfe: Yeah. So I think here. Can you see my screen?
+[04:23] Bijoy Nath: Yes, I can see your screen. Yes.
+[04:25] Constance Wolfe: So if I type in Gelson's, which is in the filter, when I select it, nothing shows up.
+[04:30] Bijoy Nath: Exactly. Right. This is what I'm talking about. Right.
+[04:32] Constance Wolfe: So Gelson's is in this list or not?
+[04:35] Constance Wolfe: There's no way for me to know if it's in the list and it's just not pulling up.
+[04:38] Constance Wolfe: Or if it's not in the list, if I. Unless I want to go through 378 pages.
+[04:43] Bijoy Nath: Oh, no, you don't have to. So can you go to the filter again?
+[04:51] Bijoy Nath: And in the retailer, can you choose something without an aesthetics or any sort of special character?
+[04:57] Bijoy Nath: For example, bashless, maybe. Okay. And the CVS as well, can you select the cvs.
+[05:04] Bijoy Nath: Yes, the CVS is working as well. Yeah.
+[05:07] Constance Wolfe: So you think it's an apostrophe thing?
+[05:09] Bijoy Nath: Yes, it's an apostrophe. Yeah. Right. So for example.
+[05:15] Md Mashiul Azam Chowdhury: Yeah. Remember that Peter showed you that there are two types of apostrophe? So.
+[05:22] Constance Wolfe: Yeah. And then I think we said that we were able to not.
+[05:26] Constance Wolfe: I mean, I know what the rule was coming in because you guys were trying to normalize, but I think were you able to find a workaround on that so that like key and W could be.
+[05:38] Bijoy Nath: Yeah, right. They all. They all were. Got fixed, if I'm not wrong.
+[05:45] Constance Wolfe: Okay, so they're. Are they in staging maybe?
+[05:50] Bijoy Nath: No, this would be. They should be working in the production as well.
+[05:54] Constance Wolfe: That is Production. We were in production.
+[05:56] Bijoy Nath: Yeah, that is why I'm surprised.
+[06:01] Constance Wolfe: Let me see in staging.
+[06:11] Md Mashiul Azam Chowdhury: See.
+[06:11] Constance Wolfe: Oh yeah, that looks better. I don't know if Rayleigh's is in this. In your staging.
+[06:22] Constance Wolfe: Well, I guess if it's in the filter, it needs to be.
+[06:24] Constance Wolfe: It shouldn't be in the filter if it's not in the. So it looks like in staging. Let me go back.
+[06:28] Constance Wolfe: What was the other one? Gelson's. Yeah. So in staging, that issue is not fixed. But I.
+[06:37] Constance Wolfe: But it does look like. Like CVS was in all caps here.
+[06:43] Bijoy Nath: Do you have the file with you?
+[06:48] Constance Wolfe: Which file?
+[06:50] Bijoy Nath: The category view file.
+[06:52] Constance Wolfe: You mean?
+[06:56] Bijoy Nath: Yeah. Can I upload the same thing in the production again?
+[07:00] Constance Wolfe: Do you want me just to export this and re upload it or do I use a different one?
+[07:06] Bijoy Nath: Use a different one. Maybe just to check. Or it would be better if we delete all the category views.
+[07:14] Constance Wolfe: Okay, just delete it.
+[07:16] Bijoy Nath: Not in the staging, in the production, I. I suppose.
+[07:20] Constance Wolfe: Oh, you want me to do it in production.
+[07:23] Bijoy Nath: Yes. Right. Because we are having that CVS issue in the production, so.
+[07:32] Constance Wolfe: All right, let me see if the one I'm going to upload has the right.
+[07:44] Constance Wolfe: Let me just open it and look at it really quick. Make sure it's going to work.
+[08:06] Constance Wolfe: It's opening. I just.
+[08:08] Constance Wolfe: Before I try to upload it, I want to make sure. I must have thrown a filter on it.
+[08:27] Constance Wolfe: Let me just copy and paste that without filter. Looks like it's still filtered by something.
+[08:48] Md. Tauhidur Rahman: It.
+[09:22] Bijoy Nath: Can you make sure about the column names here?
+[09:29] Constance Wolfe: I think that's right.
+[09:31] Bijoy Nath: I think I changed a bit on the.
+[09:34] Constance Wolfe: Oh, you did? Okay, so let me go back and see.
+[09:38] Bijoy Nath: I have added an extra end word in the review dates or reset dates, most probably according to the column.
+[10:05] Bijoy Nath: Right.
+[10:38] Constance Wolfe: What is today? 24.
+[11:27] Constance Wolfe: Oh, that came in small. Looks like. Doesn't like it. Yeah.
+[11:45] Bijoy Nath: Can you. Can you go to the region and. Oh, there. The pnw. So big as well.
+[11:54] Bijoy Nath: I pushed everything from staging into production. It's not working.
+[12:01] Constance Wolfe: Do you want me to upload the same file to staging? I don't know if that'll do any good.
+[12:12] Bijoy Nath: Yes, I was thinking. Staging to master. So I.
+[12:30] Bijoy Nath: I will look into the thing, Constance, about the normalization, because it's okay.
+[12:35] Bijoy Nath: It was done before and I've pushed this implementation into production and both staging.
+[12:41] Bijoy Nath: Because you have seen the data in staging. So I have to look.
+[12:44] Bijoy Nath: I have to check why the implementation is not there right now.
+[12:47] Md. Tauhidur Rahman: So.
+[12:48] Constance Wolfe: Okay.
+[12:48] Constance Wolfe: Yeah, that'd be great if you can find it and push it because it would be nice to have that working on our call today.
+[12:55] Bijoy Nath: Yeah.
+[12:56] Constance Wolfe: But. Yeah, just keep me posted.
+[12:58] Bijoy Nath: Sure.
+[13:00] Constance Wolfe: Okay. So I've had.
+[13:02] Constance Wolfe: I had two calls with the broker, with two different brokers, which was really good to get two different perspectives on.
+[13:09] Constance Wolfe: On what we're working on.
+[13:12] Constance Wolfe: And so I, I see where we are in staging, so we're making some good progress here.
+[13:26] Constance Wolfe: This is looking good. Oh, okay, good. I was hoping that was going to look a little different. Yeah.
+[13:35] Constance Wolfe: Okay.
+[13:36] Constance Wolfe: When I looked earlier today, all the brands were over here, but I think it's better nestled in here.
+[13:44] Constance Wolfe: Yeah, I do kind of like if it's possible, but maybe not. We don't.
+[13:52] Constance Wolfe: We don't need to worry too much about it. But in.
+[13:54] Constance Wolfe: In this view, They're more stacked and I realize there's more information on that
+[14:04] Md Mashiul Azam Chowdhury: one,
+[14:07] Constance Wolfe: but either way, I. I think we can. We can worry about that later.
+[14:12] Constance Wolfe: I think I got some clarity, some really good clarity from the brokers. And so I.
+[14:23] Md Mashiul Azam Chowdhury: I'm a bit confused here. What do you want here? Because we are showing the.
+[14:30] Md Mashiul Azam Chowdhury: The username and the brand, though the brand name is the. In the second.
+[14:37] Constance Wolfe: It is.
+[14:38] Bijoy Nath: I.
+[14:43] Constance Wolfe: Let me see here. I think this is not staging. Yeah,
+[14:51] Md Mashiul Azam Chowdhury: it'd be better if you check in staging.
+[14:53] Md. Tauhidur Rahman: Okay.
+[14:54] Constance Wolfe: Okay, great.
+[14:55] Md Mashiul Azam Chowdhury: Deploying something in the.
+[14:57] Constance Wolfe: Yeah, I was just saying. So I think some of the clarity I got.
+[15:03] Constance Wolfe: I want to have a conversation about these dates because it's causing a lot of problems with everybody.
+[15:09] Constance Wolfe: And I'll. I'll explain to you what that is. I do see the brands here and I think this is good.
+[15:14] Constance Wolfe: I didn't know if the brands could be listed on top of each other or.
+[15:20] Constance Wolfe: But then I realized that this is gonna get long.
+[15:23] Constance Wolfe: So rather than having them side by side, I was wondering if you could Go on a. On top of each other?
+[15:29] Constance Wolfe: That's what I was asking.
+[15:31] Md Mashiul Azam Chowdhury: Yeah, yeah, sure, I can do that. No worries. Okay.
+[15:34] Constance Wolfe: And we'll, we'll want to look at all of this together. So assigned to means that.
+[15:42] Constance Wolfe: What does this refer to?
+[15:46] Md Mashiul Azam Chowdhury: Yeah, who is assigned to this particular review?
+[15:52] Constance Wolfe: So you mean the brands or this is the. The contact from the brand, so. Oh, he's Apple.
+[15:58] Constance Wolfe: I see what you're saying. Bubbies is. Okay, got you, got you. Okay. That's the actual contact name.
+[16:03] Constance Wolfe: Okay, this is looking really good. Okay.
+[16:06] Md Mashiul Azam Chowdhury: By the way, do you name the. Sorry, do you need the username beside the.
+[16:12] Constance Wolfe: I think that's good to have it. I think it's smart to have that there. Yeah.
+[16:17] Md Mashiul Azam Chowdhury: Okay. Okay.
+[16:20] Constance Wolfe: Okay.
+[16:22] Bijoy Nath: So
+[16:24] Constance Wolfe: some of the takeaways we got was trying to understand the workflow and these.
+[16:31] Constance Wolfe: So these dates are causing issues with everybody. And I'll show you why.
+[16:36] Constance Wolfe: So there's submission date, there's review end date, and then there's this reset date and issue.
+[16:44] Constance Wolfe: I'll give you some examples. The issue is that, okay, this is an example of one of the retailers.
+[16:49] Constance Wolfe: So what happens is the retailers dictate when these dates are.
+[16:55] Constance Wolfe: So if you look at this grid for mothers, so you gotta kind of interpret everything.
+[17:03] Constance Wolfe: So basically this is saying for refrigerated deli meat, or let's say refrigerator, dinner, sausage, the full review.
+[17:12] Constance Wolfe: Oh, let's do this. Let's go to the top. Actually, I take that back. Okay. Beer, full review March.
+[17:25] Constance Wolfe: So that would be the review month.
+[17:29] Constance Wolfe: And then if you look up at here, it says supplier, broker, presentation start, 11 14.
+[17:36] Constance Wolfe: So that would probably be submission due date.
+[17:44] Constance Wolfe: And then here it says supplier, broker, presentation end. So that's probably review end.
+[17:52] Constance Wolfe: There's nothing here that really says submission due date, submission end date.
+[17:58] Constance Wolfe: It technically doesn't really say anything about when the review starts.
+[18:04] Constance Wolfe: It says broker presentation start. So we're interpreting that to be review start.
+[18:10] Constance Wolfe: Does that mean that's when the submission due date is due?
+[18:13] Constance Wolfe: And so we keep having these conversations with a broker and we keep having.
+[18:19] Constance Wolfe: We keep kind of butting heads about. They were like, well, if it's.
+[18:22] Constance Wolfe: They'll say, if this is my start date, then it really needs to be two months before that because I need to start reaching out to the brands.
+[18:29] Constance Wolfe: And I'm like, okay, so change that date. It shouldn't be 11, it should be this.
+[18:33] Constance Wolfe: And I'm like, well, okay. And then you look at. And then you look at these guys.
+[18:39] Constance Wolfe: So this is another store called Jimbo's this is their calendar review.
+[18:43] Constance Wolfe: And so you look at it and you're like, okay, so when's the start, when's the end?
+[18:51] Constance Wolfe: Like, what is this really even telling us?
+[18:53] Constance Wolfe: So it's like, I'm interpreting this to be that that's when this review is happening.
+[18:59] Constance Wolfe: So are we saying that olive oils happen in January? Right?
+[19:05] Constance Wolfe: I guess you would say then the review month is January. When's the submission date?
+[19:09] Constance Wolfe: When's the end date?
+[19:09] Md Mashiul Azam Chowdhury: I don't know.
+[19:10] Constance Wolfe: Yeah, I mean, there's another one here that's like another brand. And here's Hagan.
+[19:16] Constance Wolfe: And Hagan is like, okay, for serial vendor item presentations, no later than September 1st.
+[19:27] Constance Wolfe: So, okay, so what's the submission date with. See what I'm. See where I'm going with this?
+[19:32] Constance Wolfe: So every broker then has their way that they interpret these things. And so we, we.
+[19:40] Constance Wolfe: There's no way Kaboodle, I don't think can standardize this.
+[19:44] Constance Wolfe: What we could probably standardize is simply review month. I think that's pretty standard.
+[19:50] Constance Wolfe: We can do review month and we could probably figure out a review in.
+[19:56] Constance Wolfe: Right, so here's where I'm going with that.
+[19:59] Constance Wolfe: So my thought is that for the calendar dates, okay, so for brand face, let's just say let's go on the brand side of things.
+[20:15] Constance Wolfe: I think all we need to really do is put in the review time and the reset time.
+[20:23] Constance Wolfe: Review and reset, that's really all the brand needs to worry about.
+[20:27] Constance Wolfe: The broker can take care of the details and the broker can guide the brand. Right.
+[20:32] Constance Wolfe: So if that's the case, then we're going to go.
+[20:36] Constance Wolfe: Then the broker report is where they're going to handle the nuances of the.
+[20:43] Constance Wolfe: When the review starts, when the review ends, they can handle that on a tracker.
+[20:50] Constance Wolfe: So if this is where they really work, then we can create a column for them that says submission, because they need to go by when they do need to submit.
+[21:01] Constance Wolfe: And if they're.
+[21:03] Constance Wolfe: They've got their own way of doing this, then we give them the flexibility to put in that date as they.
+[21:10] Constance Wolfe: As they need to. Right.
+[21:13] Constance Wolfe: So if they look at this report here and see, you know, that one that we looked at that was.
+[21:19] Constance Wolfe: I don't know, I think it was mothers, right, Jimbos. Yeah, I was looking for the Jimbos. Yeah, so.
+[21:26] Constance Wolfe: So, exactly. So Jimbos, this one.
+[21:31] Constance Wolfe: So if the broker's like, okay, I know the buyer here and I know if that the review is happening in January, the submission date is, you know, 15 days before that, then they can handle that here, right?
+[21:46] Constance Wolfe: Let them worry about that and then they can put that date in here and then maybe the same thing with these very specific dates.
+[21:58] Constance Wolfe: So maybe all we do on the calendar is provide review, store and review end and then in the tracker let the brands deal with these more nuanced dates and I'll just stop there and see if that makes sense.
+[22:16] Md Mashiul Azam Chowdhury: Yeah, yeah.
+[22:21] Constance Wolfe: So then my next question goes to. So if this is the review, Are they selecting?
+[22:35] Constance Wolfe: I need to understand the flow of what the current flow is of the of.
+[22:42] Constance Wolfe: So the step one is determining which brands need to be included in this review. That's step one.
+[22:54] Constance Wolfe: So in staging it looks like by
+[22:58] Md Mashiul Azam Chowdhury: the way at first they are entering category from the list. Right? Yeah.
+[23:07] Constance Wolfe: Right. And I was trying to figure that out too. Right. So does the new upload.
+[23:12] Constance Wolfe: Do we just do review month and reset month?
+[23:18] Constance Wolfe: It's almost like we can leave this because for the brand that's all they really care about anyway.
+[23:27] Constance Wolfe: They're not really.
+[23:28] Constance Wolfe: Their broker is going to handle all the nuances of when things need to be submitted.
+[23:32] Constance Wolfe: That's why they have a broker. That broker handles that.
+[23:38] Constance Wolfe: So keep asking me questions because I'm trying to think this through but I think that if, if the list now just has all of this information and only review month and reset month, we exclude these things.
+[23:57] Md Mashiul Azam Chowdhury: Nicers, could you sort of give us the user journey?
+[24:05] Md Mashiul Azam Chowdhury: You're thinking, for example, let's say we are adding a category view for Gymbost because they actually don't have that sort of date or anything.
+[24:21] Md Mashiul Azam Chowdhury: So let's say we want to add an entry for Jimbo maybe in January or February.
+[24:32] Md Mashiul Azam Chowdhury: So in February they are going to add something, a review date for maybe pasta category.
+[24:44] Md Mashiul Azam Chowdhury: So in that case, how are you thinking that they will do the do that in our system?
+[24:54] Constance Wolfe: Right. So if this was the new. So this is the template upload. Right. And this now says reset month.
+[25:10] Constance Wolfe: So this could still be uploaded.
+[25:14] Md Mashiul Azam Chowdhury: Okay. Yeah. So okay.
+[25:18] Constance Wolfe: Okay. So then that now looks more like this. And then let's go to the wires
+[25:25] Bijoy Nath: main
+[25:29] Constance Wolfe: looks more like this, which all we see really is reset and review.
+[25:34] Md Mashiul Azam Chowdhury: Okay.
+[25:35] Constance Wolfe: The grid, I love this grid by the way. It looks really nice and clean.
+[25:41] Constance Wolfe: So the grid is here, review month, reset month,
+[25:53] Bijoy Nath: notes.
+[25:56] Constance Wolfe: Then right now the way it works I believe is the brand or the broker selects what goes on the calendar.
+[26:07] Constance Wolfe: Right. Don't they select this and then they put that pushes to the calendar?
+[26:11] Constance Wolfe: I think the way it currently works.
+[26:13] Md Mashiul Azam Chowdhury: Yeah, yeah, there's two.
+[26:15] Constance Wolfe: Right.
+[26:16] Constance Wolfe: We could think because now it's going to be so streamlined, we could think about it automatically populating a calendar like this.
+[26:28] Constance Wolfe: And then when the broker wants to add brands, they would do that here. Right.
+[26:40] Constance Wolfe: And then when they do that.
+[26:41] Md Mashiul Azam Chowdhury: Oh, wait, when they're. Right now, when they're.
+[26:46] Md Mashiul Azam Chowdhury: When, when they're adding it to the calendar, the system is asking for brand beforehand and then it's moving to the calendar.
+[27:00] Constance Wolfe: So the current journey is. Starts here. Right. And then you hit. Right, right, right.
+[27:05] Constance Wolfe: So the current journey starts here and then when you select that, it says add the count.
+[27:09] Constance Wolfe: You add it to calendar from here.
+[27:12] Md Mashiul Azam Chowdhury: Yeah. But before adding. Currently it's asking for the brand also.
+[27:18] Constance Wolfe: Right, it does. You're. You're correct.
+[27:20] Constance Wolfe: So you're, you're selecting it and then you're adding the brand. Correct, correct, correct.
+[27:28] Constance Wolfe: So it could be. Well, and we could probably still do that.
+[27:33] Constance Wolfe: But let's just walk through this for a minute.
+[27:35] Constance Wolfe: So if we upload the template and it goes ahead, it goes ahead and populates it here.
+[27:46] Constance Wolfe: Maybe it's here that you could add the best.
+[27:53] Constance Wolfe: Yeah, let's just, just hear me out for a second and then we'll decide like what, what we think is best.
+[27:58] Constance Wolfe: I'm just trying to simplify this a little bit. So from here the current journey would be.
+[28:06] Constance Wolfe: This is your email group. Right. That you could email from here. The current.
+[28:14] Constance Wolfe: I think the current is you're not going to be on that calendar unless you push into that calendar.
+[28:18] Constance Wolfe: So let's just. I know, I'm confusing you.
+[28:23] Md Mashiul Azam Chowdhury: That's correct.
+[28:23] Bijoy Nath: Yeah.
+[28:24] Constance Wolfe: Okay, so let's just start with the current journey. So the current journey is here.
+[28:27] Constance Wolfe: If the brand wants to be included, they get pushed to here.
+[28:32] Constance Wolfe: So now the only brands that are here were the ones that were pushed from the grid. That's correct.
+[28:41] Constance Wolfe: Right. That's how they get here.
+[28:44] Md Mashiul Azam Chowdhury: Right.
+[28:44] Bijoy Nath: Okay.
+[28:45] Constance Wolfe: So that's fine. Let's just keep that as it is.
+[28:49] Constance Wolfe: Now that they're here, The broker is going to manage the process from here.
+[29:02] Constance Wolfe: So they have all the brands go ahead.
+[29:05] Md Mashiul Azam Chowdhury: Okay.
+[29:08] Md Mashiul Azam Chowdhury: The brand is the entering the category review and then the broker is going to streamline that here.
+[29:20] Md Mashiul Azam Chowdhury: Am I?
+[29:21] Constance Wolfe: Yeah. So from the brand side. So the brand and the broker are populating that calendar.
+[29:27] Constance Wolfe: Is that what you're trying to determine right now? Because you could be in the brand environment and.
+[29:35] Constance Wolfe: Right, right. Yeah. So a couple things I think about that. One is if we're in the.
+[29:41] Constance Wolfe: If we are in the brand, if this is the brand environment, same thing.
+[29:46] Constance Wolfe: They could either go from here and say, yes, I want to do that and then that pushes to the broker calendar.
+[29:55] Constance Wolfe: Or if we start with this calendar view from the brand side, maybe they just click it and go.
+[30:01] Constance Wolfe: Yep, include me. And then when the brand clicks it, it automatically populates the broker.
+[30:10] Constance Wolfe: It would go into this program.
+[30:13] Md Mashiul Azam Chowdhury: But I mean they will able to, they will be able to see that only after they are included in that.
+[30:23] Constance Wolfe: The broker will only be able to see it after the brand.
+[30:25] Md Mashiul Azam Chowdhury: No, no, no, I, I, I'm, I'm talking about the brand.
+[30:29] Constance Wolfe: Okay, what did you say?
+[30:32] Md Mashiul Azam Chowdhury: Are you, are you talking about the brand selecting that? Yeah, assign it to me. Something like that.
+[30:39] Md Mashiul Azam Chowdhury: Or are you saying that broker will assign the brand?
+[30:43] Constance Wolfe: Well, right now there's the brand.
+[30:45] Constance Wolfe: Right now if you're in the brand environment and you push it to your calendar.
+[30:50] Md Mashiul Azam Chowdhury: Yeah.
+[30:51] Constance Wolfe: That rolls up to the broker, correct?
+[30:54] Md Mashiul Azam Chowdhury: Right? Yes.
+[30:55] Constance Wolfe: So that doesn't change.
+[30:57] Md Mashiul Azam Chowdhury: Yeah, that doesn't change. Okay, got it. Right.
+[31:02] Constance Wolfe: Okay.
+[31:03] Constance Wolfe: So now we're on the broker side and now this is their calendar and then they're going to manage the process from here.
+[31:15] Constance Wolfe: So if it's on the calendar.
+[31:20] Md Mashiul Azam Chowdhury: Yeah.
+[31:20] Constance Wolfe: And the brands are listed, those brands get included here.
+[31:29] Md Mashiul Azam Chowdhury: Okay, got it.
+[31:32] Constance Wolfe: And then from here they can interpret what the submission start date is. Right.
+[31:39] Constance Wolfe: Because when you're looking at Jimbos, they're going to have to figure out on their own when that.
+[31:47] Constance Wolfe: Currently we have missions.
+[31:50] Md Mashiul Azam Chowdhury: Yeah, yeah, currently we have the submission date in the category review.
+[31:55] Md Mashiul Azam Chowdhury: But you're saying that this, where this will only have the review month and the review date and the reset date.
+[32:07] Constance Wolfe: It's probably just going to be the review month and the review date is all we're going to have on this grid right here.
+[32:13] Md Mashiul Azam Chowdhury: Okay. So not the date. When, when it goes to the tracker.
+[32:24] Md Mashiul Azam Chowdhury: When the user goes to the tracker, then they will enter the submission date.
+[32:34] Constance Wolfe: I don't think caboodle should be trying to figure that out for them.
+[32:38] Constance Wolfe: And it sounds like every broker has their own process as to when they need to start.
+[32:45] Constance Wolfe: Start the process.
+[32:47] Md Mashiul Azam Chowdhury: I see.
+[32:49] Constance Wolfe: And that would simplify things for us greatly, I think.
+[32:56] Constance Wolfe: So once it gets here, then their flow is going to, so the flow for the broker would be.
+[33:06] Constance Wolfe: Okay, these brands want to be a part of the March review.
+[33:14] Constance Wolfe: Scott and John, Brand B and brand C want to be involved in sprouts.
+[33:21] Constance Wolfe: So the flow for them is like okay, boom, it hits here. Okay, so they can go, let's do sprouts.
+[33:32] Constance Wolfe: So they can go, okay, for sprouts I need to worry about brand C and brand D.
+[33:39] Constance Wolfe: And I'm going to say that the submission date for this is August 11th. I did that. August 11th.
+[33:54] Constance Wolfe: And the review starts. They can adjust these dates. And the status is that it's actually in progress.
+[34:03] Constance Wolfe: So because they're here, it's in progress.
+[34:08] Constance Wolfe: And so the brand told me when I reached out to all of the brands, you know, Scott said, yes, submit, and then this part I need to.
+[34:18] Constance Wolfe: We need to think about. But brand B said, I need. I'll let you know. To be determined.
+[34:25] Constance Wolfe: I'll let you know. So once they get the response from the brand, are you going to participate?
+[34:31] Constance Wolfe: Yes or no? Then it's like, okay, well, what's my next action?
+[34:36] Constance Wolfe: Okay, the next thing I need to do is request samples, and I need to do that by this date and then for this brand, the next.
+[34:45] Constance Wolfe: Because they're saying, I don't know, maybe they need to follow up with the brand by next week.
+[34:54] Constance Wolfe: Right. And so this is what they're wanting to do.
+[34:58] Constance Wolfe: So they're waiting on, in this case, the brand, and here they're waiting on the brand and then so on.
+[35:05] Constance Wolfe: And so what that does is that then pushes. They want to know what my urgent items are and so on.
+[35:11] Constance Wolfe: And so they can go up here and. No, they don't. It's. It just acts as a filter.
+[35:17] Constance Wolfe: It's pretty cool, actually. So get rid of sprouts, I'll get rid of. What else did I have on here? Keep.
+[35:25] Constance Wolfe: Remember what else I have? But it's kind of cool. Just acts as a. So what's my prep zone?
+[35:29] Constance Wolfe: And then you can just kind of access a filter. They really liked that. So here, when they.
+[35:36] Constance Wolfe: When they first get to their tracker, they can go, okay, what are my urgent items?
+[35:40] Bijoy Nath: Boom.
+[35:40] Constance Wolfe: Okay, so I need to do that.
+[35:41] Constance Wolfe: Or they can go, okay, I'm prepping, I'm in the prep zone, you know, type of thing. So it just.
+[35:46] Constance Wolfe: If they click that, it'll take it right, right there.
+[35:51] Constance Wolfe: So all of these things up here are essentially act as a filter.
+[35:57] Constance Wolfe: You can see that when I click them, they act as a filter.
+[36:01] Md Mashiul Azam Chowdhury: Right?
+[36:03] Constance Wolfe: So this is after. And then I showed this to both and they were like, yes, that's what we need.
+[36:11] Constance Wolfe: That's what we're looking for. So then I wonder.
+[36:16] Constance Wolfe: So then last, right before this fall, I was thinking, sorry, wrong one. I was thinking just.
+[36:26] Constance Wolfe: I was trying to walk myself through the flow and trying to decide where the email should flow in and out of.
+[36:36] Constance Wolfe: And maybe we might even want to think about having the email flow in and out of here. But we can.
+[36:47] Constance Wolfe: I think the Journey still starts here. I think this is the easiest place to do that.
+[36:54] Constance Wolfe: So there's a couple things to think about, but that's. This is where we're heading.
+[36:59] Constance Wolfe: And so I just wanted to get your feedback on that.
+[37:04] Md Mashiul Azam Chowdhury: Yeah, yeah, I. I get what you're trying to
+[37:12] Constance Wolfe: do here. Tohi. Do you have any thoughts or suggestions?
+[37:23] Md. Tauhidur Rahman: I'm still thinking about it.
+[37:25] Constance Wolfe: Yeah. Yeah, it takes a little while. You gotta kind of play with it, I think a little bit.
+[37:31] Constance Wolfe: And so the flow. And I think this is what I need to kind of document.
+[37:35] Constance Wolfe: The flow for the broker is this is their.
+[37:38] Constance Wolfe: Their responsibility is to say, my job is to manage the submission process and a lot.
+[37:47] Constance Wolfe: I had to kind of walk them through, like some of the statuses on here because I was like, you know, status of what exactly?
+[37:56] Constance Wolfe: Like, status of you trying to get a meeting.
+[38:04] Md Mashiul Azam Chowdhury: Oh, okay. I actually thought it was about reviewing this one.
+[38:10] Constance Wolfe: Yeah. So this is what I had to walk them through because.
+[38:13] Constance Wolfe: Because they had tohig may recall, I should have pulled that up before that grid that they created, you know.
+[38:23] Constance Wolfe: Yeah, I'm gonna pull that up really quick.
+[38:35] Constance Wolfe: And I had to really, like, we had to sit with them and say, you've got way too much going on here.
+[38:39] Constance Wolfe: Like, we need to pare this down. We didn't say it like that to them, but we.
+[38:43] Constance Wolfe: We kind of made them sit and think about, what do you mean by status? Like.
+[38:49] Constance Wolfe: So we would need to, you know, define like, what does in progress mean? Does it mean the user.
+[38:58] Constance Wolfe: It's in progress. The user being the broker.
+[39:01] Constance Wolfe: Broker is working on submitting a meeting request for the buyer in the brand.
+[39:06] Constance Wolfe: That's what's in progress.
+[39:08] Constance Wolfe: I am working on getting a meeting for my brands to the buyer if that's in progress.
+[39:15] Constance Wolfe: So we're trying to kind of get them to like, pare down and understand. Exactly.
+[39:20] Constance Wolfe: Because when you look at this thing here, like they had all of these actions and all of this stuff and we're like, wait a minute, wait a minute.
+[39:28] Constance Wolfe: Like, let's.
+[39:29] Constance Wolfe: Let's try to get this narrowed down and really focus on what you're trying to accomplish here.
+[39:38] Constance Wolfe: So status means. See how it says, like submitted pending. And so submitted is not a status.
+[39:49] Constance Wolfe: Submitted is probably a result. Right.
+[39:53] Constance Wolfe: So we kind of had to walk through all those things and that's what we're working on right now.
+[39:57] Constance Wolfe: But the definition of status would be my job is to get a meeting.
+[40:02] Constance Wolfe: So what's the status of me getting that meeting for my brand right now? It's in Progress.
+[40:07] Md Mashiul Azam Chowdhury: And then the column name should be like a meeting status or something like that.
+[40:12] Constance Wolfe: Exactly. We would define it. That's exactly right.
+[40:14] Constance Wolfe: So let's get clear clarity on what do you mean by status and what do you mean by result?
+[40:20] Constance Wolfe: Do you mean result of the meeting? Did you get a meeting? Is that what result means?
+[40:25] Constance Wolfe: And they're like, no, no, no. Result means after the meeting, did they get the placement?
+[40:29] Constance Wolfe: And I was like, okay, well, that's.
+[40:30] Constance Wolfe: Then we need to say, you know, review results, you know, not like the result of getting the meeting, because it's really, it's.
+[40:38] Constance Wolfe: It's like accepted for what you got accepted for the meeting or your products got accepted to be, you know, to go on shelf.
+[40:47] Constance Wolfe: So we're getting more clarity on that. And we will get more clarity on that before we build this out.
+[40:53] Constance Wolfe: Like, we'll have a final, like, kind of like, okay, definition of status. Definition of in progress.
+[40:59] Constance Wolfe: Like, we got. We need to define all of these things to make sure that everybody's on board.
+[41:05] Constance Wolfe: Or like, you know, brand response. Or wait, like, when does brand response come in?
+[41:10] Constance Wolfe: Like, if you're saying that on the calendar, you're asking the brands, do you want to be included in this?
+[41:19] Constance Wolfe: And you're only checking the ones that say yes. Then on here, your brand response should be yes.
+[41:29] Constance Wolfe: It shouldn't be. I need more information.
+[41:31] Constance Wolfe: Because you wouldn't have gotten selected to be on the screen in the first place. Right?
+[41:35] Constance Wolfe: Because we're only putting you on the grid because you said yes. You didn't tell me I need to wait.
+[41:45] Constance Wolfe: If you told me I need to wait, I wouldn't have added your name. I wouldn't have added your name here.
+[41:54] Constance Wolfe: So these are a few of the. Does that make sense?
+[41:59] Md Mashiul Azam Chowdhury: Yeah, I get the scenario. Yes.
+[42:03] Constance Wolfe: Yeah. So we're trying to put the columns in the order of how they work.
+[42:10] Constance Wolfe: So if they say yes, I don't think they should go on this until they say yes.
+[42:16] Constance Wolfe: And they say yes from here,
+[42:20] Md Mashiul Azam Chowdhury: then
+[42:21] Constance Wolfe: that automatically populates and they're automatically in progress.
+[42:24] Constance Wolfe: And this really should be automatically yes.
+[42:28] Constance Wolfe: And if they say yes, then what is the broker's next step?
+[42:34] Constance Wolfe: Well, their next step is probably they need to start preparing for the submission.
+[42:38] Constance Wolfe: And when is that due? When do I need to have my submission complete?
+[42:43] Constance Wolfe: And then after they do that, then they're going to submit it to the buyer.
+[42:48] Constance Wolfe: So this is going to be constantly changing. And I asked them, are you okay with that?
+[42:51] Constance Wolfe: Like, this is going to.
+[42:52] Constance Wolfe: You don't need record of stages, and they're like, no, I just need to know what I need to do next.
+[42:58] Constance Wolfe: And I'm not sure if they really need. I'm going to challenge them on this.
+[43:04] Constance Wolfe: I'm like, well, if you know that you're going to submit that to the buyer, don't you know who you're waiting on?
+[43:14] Constance Wolfe: So we'll think about this. This. I just took all of this from her grid.
+[43:18] Constance Wolfe: Like, I was trying to basically put her. Her workflow.
+[43:24] Constance Wolfe: I was taking her workflow and putting it in a workable grid to see how it felt like just playing with it.
+[43:31] Constance Wolfe: And I was like, how does this feel? And at first, I had. At first I had like 10 columns across.
+[43:37] Constance Wolfe: And I was like, there's no way anybody's going to want to click 10 columns.
+[43:41] Constance Wolfe: Like, it's just way too much. You're going to have to sit there and go, what does this mean?
+[43:45] Constance Wolfe: What does this mean? What does this mean? Like, I was like, we're going to have to pair that down.
+[43:48] Constance Wolfe: So I just got. I got it paired down to, like, these. And I was.
+[43:52] Constance Wolfe: And so then she was like, yeah, yeah, that makes sense.
+[43:55] Constance Wolfe: And then I showed it to another broker, and they're like, yeah, that was what. Yeah, just.
+[43:58] Constance Wolfe: We just need to know.
+[43:59] Bijoy Nath: Boom, boom, boom.
+[44:00] Constance Wolfe: I was like, that's what I was thinking. So. So flow right now would be like, okay, they said, yes.
+[44:07] Constance Wolfe: The next action is to prepare the submission in this case, then they're waiting on maybe the sales rep.
+[44:17] Constance Wolfe: And then the result is what?
+[44:20] Constance Wolfe: Like, again, the result is that we got the meeting or the result is what happened.
+[44:25] Constance Wolfe: So maybe it's like meeting results and then, you know, review results. I don't know.
+[44:30] Constance Wolfe: I'm still working that out a little bit. And then there's internal nodes.
+[44:33] Constance Wolfe: And that would be like, we were teasing that.
+[44:36] Constance Wolfe: We were like, buyer tasted product and thought it tasted like Hippocon board.
+[44:40] Constance Wolfe: You know, like, that would be an internal node. You wouldn't want that to push to the brand.
+[44:44] Constance Wolfe: You might just push to the brand.
+[44:45] Constance Wolfe: Like, hey, buyer is in the process of blah, blah, blah, so that when the brand up from the brand.
+[44:52] Constance Wolfe: So this would push to the brand so the brand could see, okay, these are the results that the, you know, the submission is being prepared and they need samples for me or whatever, you know, they need to enter in here.
+[45:06] Constance Wolfe: So we would say that this would be pushing to the brand. This would not push to the brand.
+[45:10] Constance Wolfe: So we'll kind of define, like, maybe status pushes to the brand. Right.
+[45:20] Constance Wolfe: And then not all of this needs to push to the brand. But we can define.
+[45:24] Constance Wolfe: Maybe there's three of these columns that are going to push to the brand side to let them know what, where the status is.
+[45:45] Constance Wolfe: So what I could do is work on like, you know, which columns exactly and then identify, you know, internally.
+[45:57] Constance Wolfe: I can put these in here that need to be in here at all the columns that need to be in there and then determine what pushes the brand and what pushes to.
+[46:07] Constance Wolfe: Because right now on the brand side, where do we have one on the brand side?
+[46:15] Constance Wolfe: Is there anything in here?
+[46:30] Constance Wolfe: Maybe notes are in here or something like that.
+[46:36] Md Mashiul Azam Chowdhury: Sorry, no user.
+[46:40] Constance Wolfe: What?
+[46:42] Md Mashiul Azam Chowdhury: What did you say?
+[46:43] Constance Wolfe: I said maybe notes go into here.
+[46:45] Md Mashiul Azam Chowdhury: Oh, notes. Okay.
+[46:47] Bijoy Nath: Okay.
+[46:47] Constance Wolfe: Those notes that we were talking about, Brandon.
+[46:51] Md Mashiul Azam Chowdhury: Got it.
+[46:51] Bijoy Nath: Good.
+[46:52] Constance Wolfe: Yeah, yeah.
+[46:53] Constance Wolfe: So I need to define what needs to be in this box because if we decide that, hey, we're not, we're not going to deal with the submission due dates.
+[47:02] Constance Wolfe: Like we can, I can redefine what this box is. So this is doing what.
+[47:11] Constance Wolfe: So this is doing from the brand side assigned.
+[47:15] Constance Wolfe: The brand is saying that this is who needs to be contacted essentially.
+[47:19] Md Mashiul Azam Chowdhury: Right, right.
+[47:20] Constance Wolfe: Okay, got you. This is great. That's awesome.
+[47:23] Md Mashiul Azam Chowdhury: Actually this is also sending that particular user an email with this information.
+[47:30] Constance Wolfe: Yeah, that's great. That's awesome. This is really cool. So that was what I got after talking to them.
+[47:42] Constance Wolfe: So what can I do to.
+[47:47] Constance Wolfe: I'm just thinking if I build this out and then we define kind of a few things like what's on the pop up box and the flow.
+[47:59] Constance Wolfe: If I could get it to basically do it in here, would that be enough for you guys? Yeah,
+[48:08] Md Mashiul Azam Chowdhury: yeah, yeah. It's actually quite the progress we already have here. So, you know, I don't think it's
+[48:17] Constance Wolfe: a big, A big change from what we're working on. Right. Is it or is it.
+[48:21] Md. Tauhidur Rahman: Yeah.
+[48:21] Constance Wolfe: Does it feel like it's you?
+[48:23] Md. Tauhidur Rahman: It's kind of a big change. But what I think is that. Do we need to like.
+[48:28] Md. Tauhidur Rahman: Can you go to the brand report again? Yeah. So what I was thinking that there is too many data. Right.
+[48:41] Md. Tauhidur Rahman: Can we simplify it? It was my like, I was thinking if we can simplify it.
+[48:48] Md. Tauhidur Rahman: Because this looks really overwhelming. Like at least for me.
+[48:59] Constance Wolfe: Yeah, I mean if we.
+[49:00] Constance Wolfe: So do you have some thoughts about how we can still have what they need and simplify it?
+[49:12] Constance Wolfe: Like what do you mean by simplifying?
+[49:15] Md. Tauhidur Rahman: Is just that if we implement this, they also.
+[49:19] Md Mashiul Azam Chowdhury: Maybe it's showing too much data in one screen.
+[49:23] Md. Tauhidur Rahman: Yeah.
+[49:24] Md. Tauhidur Rahman: And another thing is they have to like scroll horizontally if we Want to see show this much amount of data.
+[49:31] Md. Tauhidur Rahman: Right, Right.
+[49:35] Constance Wolfe: Well, I guess one thing I was thinking is that they would probably be working.
+[49:39] Constance Wolfe: Like, what they'll probably do or what they say they do is they're like, okay, what's going on with Sprouts?
+[49:46] Constance Wolfe: Okay, these are the brands at Sprouts. Or they'll be like, okay, what's going on with brand B?
+[49:53] Constance Wolfe: What, what's brand B doing? Okay, this is what I need to worry about for brand B.
+[49:59] Constance Wolfe: So they think about it in both ways.
+[50:01] Constance Wolfe: They worry about okay at the retailer, which brands are going after the retailer, and then they're thinking, okay, for the brand.
+[50:07] Constance Wolfe: What do I do for the brand? So I don't know if that helps at all.
+[50:11] Md. Tauhidur Rahman: Yeah, yeah.
+[50:12] Md Mashiul Azam Chowdhury: By the way.
+[50:14] Md. Tauhidur Rahman: Yeah.
+[50:15] Md Mashiul Azam Chowdhury: Since the, the broker user are already used to using Excel files and that, I don't think it will be overwhelming for them.
+[50:29] Constance Wolfe: Yeah, Rather.
+[50:31] Md. Tauhidur Rahman: That is also. Right.
+[50:33] Md Mashiul Azam Chowdhury: Well.
+[50:33] Constance Wolfe: And I asked them that. I said the same thing. I, I toheet. I had the exact same response you did.
+[50:38] Constance Wolfe: I was like, this is a lot. And they're like, but that's what we do. Like, that's, that's what we do.
+[50:43] Constance Wolfe: So if we give them layers, I think, like, what we're doing is we're, let's go back to even this.
+[50:51] Constance Wolfe: Like, we're giving them like, here's 50,000ft up. Like, here's the big picture.
+[50:57] Constance Wolfe: And then the next level is this. And they're like, okay, here's the next level.
+[51:03] Constance Wolfe: And then you go one level down and you get into, you really get into the weed weeds. Right?
+[51:08] Constance Wolfe: And so as long as we give them the capability to, if they get too overwhelmed, they can come back out.
+[51:14] Constance Wolfe: They can go to the next to the middle level and go, okay, wait. Oh, okay, here's what's going on.
+[51:20] Constance Wolfe: Now I need to get back into the weeds. Because they do have to get into the weeds.
+[51:24] Constance Wolfe: That's just what they do. So I was worried about the same thing.
+[51:31] Constance Wolfe: But if you're saying even at this level, if we could clarify things, like, what can you give me kind of like what your thoughts are, like, how you would take this and simplify it.
+[51:46] Constance Wolfe: Do you know yet?
+[51:48] Md. Tauhidur Rahman: I'm still thinking about this.
+[51:50] Md. Tauhidur Rahman: Can I show it on, like, we're, we're gonna have the next meeting on Monday.
+[51:56] Md. Tauhidur Rahman: Can we, can we, can I show what I am thinking on Monday?
+[52:00] Md. Tauhidur Rahman: Because the, also the status, the review stat, the KPI cards on top, it's like, looks too big.
+[52:10] Md. Tauhidur Rahman: Like, do you need to show this amount of data. That is also a question because.
+[52:15] Constance Wolfe: Well, you could do a rollup like this one is like you could just do result six and then, and then you click it.
+[52:21] Constance Wolfe: You're like, what are the results? So maybe like a roll up is what you're thinking. Ugly. I agree.
+[52:26] Constance Wolfe: Yeah, yeah. And I do. But I do like this. Like I like the colors, but go ahead.
+[52:32] Md. Tauhidur Rahman: Yeah, so I was thinking about the same that if we can make it roll up so that it doesn't take too many much area of the.
+[52:39] Md. Tauhidur Rahman: Because the main thing in this page is the tracker.
+[52:44] Bijoy Nath: The.
+[52:45] Md. Tauhidur Rahman: The table below is the main purpose of this page.
+[52:48] Md. Tauhidur Rahman: But like if that KPI cards took too many space in this like space here, then it would be a.
+[52:55] Md. Tauhidur Rahman: Like it would not look user friendly. So.
+[52:58] Constance Wolfe: I agree.
+[52:58] Md Mashiul Azam Chowdhury: Currently. Yeah, currently it already has 40 of the screen, I think.
+[53:03] Md. Tauhidur Rahman: Yeah, yeah, yeah.
+[53:04] Constance Wolfe: Which is not. Yeah. Ideal. Yeah, I like what you did here. Like this, like that looks really nice.
+[53:10] Constance Wolfe: And so you could do this and then you could have it kind of roll out a little bit. Yeah, that looks.
+[53:18] Md. Tauhidur Rahman: Yeah, I did.
+[53:18] Constance Wolfe: Yeah.
+[53:18] Md. Tauhidur Rahman: Yeah. I didn't populate the rest of the thing because like I was still ideating.
+[53:22] Md. Tauhidur Rahman: That's why it's not here.
+[53:24] Constance Wolfe: Yeah, yeah. But I do, I do like that a lot. And then they can get into. And maybe you do that here.
+[53:30] Constance Wolfe: Like maybe it's like there's a button that says status and then you see all of the statuses.
+[53:35] Constance Wolfe: You know, I'm sure you have ideas.
+[53:39] Constance Wolfe: So what I, what the main thing I realized when I was working with them was that just being able to select the brands and email them was not enough for them.
+[53:58] Constance Wolfe: They're like, yeah, that's part of it.
+[54:00] Constance Wolfe: But there's so much more to the process and why what we don't want them to do is do half and caboodle and half on a spreadsheet.
+[54:12] Constance Wolfe: Right. Because they, that's the only way they know how to do a tracker is on, on a spreadsheet.
+[54:18] Constance Wolfe: So if they're doing a tracker on a spreadsheet, we need to get that process and workflow integrated into caboodle.
+[54:26] Constance Wolfe: So they never come out of caboodle. Like ultimately that's our goal. They're working in caboodle.
+[54:32] Md. Tauhidur Rahman: Yeah.
+[54:34] Constance Wolfe: So we.
+[54:34] Constance Wolfe: So the flow, which what I could do between now and then is today is maybe kind of step one, step, identify their flow.
+[54:46] Constance Wolfe: Like let's, let's whiteboard their flow. The flow is step one, step two, step three, step four.
+[54:53] Constance Wolfe: Would that be helpful to you as you kind of look at this tracker.
+[54:57] Md. Tauhidur Rahman: Yeah, that would be helpful.
+[54:59] Bijoy Nath: Okay. Okay.
+[55:03] Constance Wolfe: I agree this is way hard to look at, but to Ifti's point, like, I think I have one of their trackers which I could send to you.
+[55:12] Constance Wolfe: Well, you saw the tracker.
+[55:14] Md. Tauhidur Rahman: Yeah.
+[55:14] Constance Wolfe: You saw one of their trackers. Like, that's what. That. That's just what they do.
+[55:18] Constance Wolfe: Like, that's kind of what they're used to.
+[55:22] Constance Wolfe: And at some point, it's like you got to get into the weeds at some point.
+[55:25] Constance Wolfe: But anything we can do to, like, you know, simplify the process, of course they're going to be so excited.
+[55:34] Md. Tauhidur Rahman: Yeah.
+[55:35] Constance Wolfe: Okay, so you've got a link to this, right? You can get into here?
+[55:44] Md. Tauhidur Rahman: Yeah.
+[55:45] Constance Wolfe: Okay. So feel free. Like, I don't know if you could even make a copy of it if you wanted to.
+[55:49] Constance Wolfe: Feel free to whatever. However, it's easiest for you to come up with your concept.
+[55:57] Md. Tauhidur Rahman: So I already have the access of this. And also when I was. Like, when I try to make my.
+[56:05] Md. Tauhidur Rahman: My wireframe, I also feed these in my wireframe so that it also, like, that's how I generate the wireframes.
+[56:13] Constance Wolfe: Okay, great. Okay. Yeah, yeah. So. So I'll do a workflow.
+[56:22] Constance Wolfe: Do you want me to also kind of identify, like we said, like, at this point for the.
+[56:35] Constance Wolfe: This one doesn't have as populated. Sorry. This one. Talk about what needs to be shown here.
+[56:44] Constance Wolfe: And then also tohy think about, like, think about where you think the best place is.
+[56:50] Constance Wolfe: If you think it's different than here to add the brands.
+[57:01] Constance Wolfe: I think it's still here, but you can think about that.
+[57:04] Constance Wolfe: I'll just give you the workflow and you can decide where you think brand population should flow.
+[57:14] Constance Wolfe: And then. Yeah. So then you and I still. I mean, I know we've been talking about this.
+[57:22] Constance Wolfe: I think it would probably be a little similar for the. Promotional calendar.
+[57:37] Constance Wolfe: We have two calendars on here, don't we? Yeah. Here's the promo calendar.
+[57:43] Constance Wolfe: They might need a tracker for this as well, so that might be a good model.
+[57:49] Bijoy Nath: So
+[57:52] Constance Wolfe: you and I still need to figure out the roadmap. Yeah, but I don't want to do that until we get this.
+[57:58] Constance Wolfe: Like, this process has changed our way of kind of thinking what needs to be done, I realize, which is good.
+[58:06] Constance Wolfe: This is part of the process. So are you still working on ticket creations?
+[58:15] Md. Tauhidur Rahman: No. Like, based on your email, I have updated those things in the doc file.
+[58:23] Md. Tauhidur Rahman: And also you wanted to talk about some of the things.
+[58:29] Constance Wolfe: Yeah.
+[58:30] Md. Tauhidur Rahman: Pull it up.
+[58:31] Bijoy Nath: Yeah.
+[58:32] Constance Wolfe: And we can either do that now. We can do that. Next week.
+[58:34] Constance Wolfe: But I, Yeah, I'm trying to figure out how we're going to wrap our arms around this and put it all together in a roommate.
+[58:44] Bijoy Nath: Yeah.
+[58:44] Md. Tauhidur Rahman: So you, you wanted to talk about brand modules, products, Products pick add UPC to pricing module.
+[58:52] Constance Wolfe: Yeah, that's a, that's a simple one. Yeah. So that's just.
+[58:56] Constance Wolfe: That one is saying that 50 when we're, when we're in the weeds of doing pricing here.
+[59:07] Constance Wolfe: This is not going to be a great example, but. Well, this is a good example.
+[59:12] Constance Wolfe: Having the UPC code right here would be helpful because see how there's so many, how close these are.
+[59:21] Constance Wolfe: I find myself having to go back and go wait, is that the right one? I need to check the UPC code.
+[59:25] Constance Wolfe: So that's just a simple thing, I think. But yeah, that's what that one is.
+[59:30] Md. Tauhidur Rahman: Yes. And then I'm gonna update the tickets of this.
+[59:34] Bijoy Nath: It's simple.
+[59:35] Md. Tauhidur Rahman: And another thing, brand module trade spin sandbox. No way to remove or modify approved promotion.
+[59:43] Constance Wolfe: Yeah, yeah.
+[59:45] Md. Tauhidur Rahman: And you added the description in the top of 1324 ticket.
+[59:51] Constance Wolfe: Yeah. Have you.
+[59:52] Constance Wolfe: I don't know if you guys have thought about that, but it's kind of an interesting situation.
+[59:55] Constance Wolfe: So we go to bubbies and we're in approved.
+[1:00:08] Constance Wolfe: What we think we need to do to remove this is find it in trade spend and then make a copy of it and then delete the other one.
+[1:00:22] Constance Wolfe: There's really no other way to do that. So we need to think about how to remove.
+[1:00:29] Md Mashiul Azam Chowdhury: Oh, so you sort of need mechanism to unpublish.
+[1:00:36] Constance Wolfe: Yeah, unpublish would be a good way to do it. Yeah, because do you see what I'm saying?
+[1:00:40] Md Mashiul Azam Chowdhury: Like yeah, yeah, I, I get it.
+[1:00:43] Constance Wolfe: Yeah, yeah.
+[1:00:44] Md Mashiul Azam Chowdhury: I don't want it to be in the tracement. But you just want it to remove it from their promotion.
+[1:00:52] Constance Wolfe: I kind of like the idea of publish and unpublish. I do think we. What? Yeah, I.
+[1:01:04] Constance Wolfe: So what if we say this guy got discontinued? Like they're no longer going to sell bubbies and how.
+[1:01:13] Constance Wolfe: What would be the best way to remove that?
+[1:01:19] Constance Wolfe: So right now the only thing we know to do is go back to trade spend. We don't want to get rid of it.
+[1:01:25] Constance Wolfe: We. Yeah, but we make a copy of it. We. Yeah, we make a copy of it and then we delete this one.
+[1:01:31] Constance Wolfe: But I don't know if it seems a little clunky.
+[1:01:34] Md Mashiul Azam Chowdhury: No, I think we can have a functionality in the approved promotion part where you can select any of them and maybe from here or maybe you can just go into it and we'll have a unpublished button there or unapprove or I don't know, something.
+[1:01:56] Constance Wolfe: Yeah.
+[1:01:58] Md Mashiul Azam Chowdhury: And it will keep in the. The tracement data will still be there.
+[1:02:04] Constance Wolfe: Yeah.
+[1:02:04] Constance Wolfe: So that was kind of the other thing we were trying to figure out is so right now bubbies is going in and actualizing.
+[1:02:14] Constance Wolfe: Right. So they're looking at this and they're saying we thought this was going to be a 24% lift.
+[1:02:21] Constance Wolfe: It was a different lift. Do we need to adjust based on this information? Do we need to adjust these?
+[1:02:28] Constance Wolfe: And they don't want to lose record of the original.
+[1:02:31] Constance Wolfe: So what we're doing is we're saying, okay, just make a copy of this, call it original, call the new one adjusted and put in the date and then you push the new one to approved to reflect your changes.
+[1:02:47] Constance Wolfe: So I don't know if that's the right process or not. So I could document what the current way.
+[1:02:52] Constance Wolfe: I think it's a. It feels like a workaround. I mean it feels like when we're doing it.
+[1:02:56] Constance Wolfe: Yeah, I mean it feels like it's a little like we're kind of rigging it a little bit.
+[1:03:02] Md Mashiul Azam Chowdhury: Can you, I don't know, maybe create a ticket or at first just documents some acceptance criteria, for example, I mean, what you are trying to achieve.
+[1:03:14] Md Mashiul Azam Chowdhury: And maybe we can come up with the. The user journey.
+[1:03:18] Constance Wolfe: Okay, that sounds good. Cheeria for approved modifications. I also just.
+[1:03:27] Constance Wolfe: While we're on here, and we don't need to go into it too much, but we're trying to figure out actualizations and.
+[1:03:41] Constance Wolfe: Do this project. How do I get back to where my projects are? Do you guys know from here?
+[1:03:50] Constance Wolfe: How do I get to my list of projects
+[1:03:58] Bijoy Nath: files?
+[1:04:05] Constance Wolfe: Where do I go?
+[1:04:09] Md Mashiul Azam Chowdhury: I'm seeing project connectors, but.
+[1:04:13] Constance Wolfe: Oh, here we go. Okay. I think this is it. Oh, no. Oh, my goodness.
+[1:04:34] Constance Wolfe: Now it's all. Let's see.
+[1:04:49] Constance Wolfe: Shouldn't there be a place where all my projects are? You know, we can get there. Go to dashboard.
+[1:04:54] Bijoy Nath: Here we go.
+[1:04:55] Constance Wolfe: That was not intuitive. This will be a whole nother conversation.
+[1:05:03] Constance Wolfe: But just while we're on tradespend that we're trying to figure out a way to do some actualizations and the data is in the system when we.
+[1:05:18] Constance Wolfe: If they have spins and so could we have it just. So here was the projected number of stores.
+[1:05:26] Constance Wolfe: Here's actual number of stores. Here was the projected lift. Here was the actual lift. It would be.
+[1:05:32] Constance Wolfe: It would be. Of course we're going to want some reporting around this.
+[1:05:36] Constance Wolfe: This is totally Not a report like this is not like insights, data insights from.
+[1:05:41] Constance Wolfe: Hey, you know, I've got some ideas about like some cool graphs we could show.
+[1:05:45] Constance Wolfe: This is more like, oh, wow, these are a lot different than I thought it was going to be.
+[1:05:52] Constance Wolfe: I need to make some adjustments and so if you had it side by side, it would be a lot easier to, to do that rather than having to look at a report.
+[1:06:03] Constance Wolfe: Like right now, I create an external report for them, which is what I'm doing right now.
+[1:06:09] Constance Wolfe: So I've created an external report.
+[1:06:11] Constance Wolfe: I'm going to be looking at a spreadsheet on one screen and then I'm going to be making updates in here.
+[1:06:17] Constance Wolfe: So someday it would be cool to have the actual just come in right by it and then you could just evaluate.
+[1:06:24] Constance Wolfe: So I'll create a ticket for it. Yeah, yeah. Okay. So was there another one Toheed?
+[1:06:38] Md. Tauhidur Rahman: Okay, there was another one. Brand modules, Trade spend and actualized promotion.
+[1:06:45] Constance Wolfe: Yeah, that's this. Yeah, this is the concept for it. So we'll talk about that.
+[1:06:53] Constance Wolfe: I think we'll have like a whole trade spend, probably Sprint, so we can identify what tickets need to go with that.
+[1:07:02] Constance Wolfe: Okay, so that's it for me. Unless you guys have anything else.
+[1:07:11] Md Mashiul Azam Chowdhury: Not from my end.
+[1:07:14] Constance Wolfe: Joy, was. Were you able to push anything on that retailer while we were talking?
+[1:07:26] Bijoy Nath: Yes, I was looking into it.
+[1:07:28] Bijoy Nath: Can you tell me questions like for which broker you uploaded the data, the category of your data?
+[1:07:34] Constance Wolfe: Oh yeah, what do we do?
+[1:07:36] Bijoy Nath: Was it for Noble?
+[1:07:39] Constance Wolfe: I think so. Let me see here. And yeah, I'm pretty sure it was. I. Can, can you please?
+[1:07:52] Bijoy Nath: Yeah, So, so can you now go to the filter and if you look at the retailers.
+[1:08:11] Bijoy Nath: So yeah, I'm, I'm working on that special character thing, but I was working on that normalization.
+[1:08:20] Constance Wolfe: Oh yeah, I see CBS looks good, you're right. But yeah, PNW looks good.
+[1:08:29] Bijoy Nath: But you know, the surprising thing is I did not do anything, honestly. So.
+[1:08:37] Constance Wolfe: What do you mean?
+[1:08:38] Bijoy Nath: Yeah, that's what I mean. I, I did not do anything. So it, it's.
+[1:08:44] Bijoy Nath: I'm still in kind of, you know, confusing.
+[1:08:46] Bijoy Nath: Like while uploading, after uploading, we saw something like C, small letter V and small letters.
+[1:08:53] Bijoy Nath: But, but while I, I was checking on my end, I, I see that it's all gets gaps and everything's getting, everything's like fixed.
+[1:09:04] Bijoy Nath: The names.
+[1:09:05] Constance Wolfe: You think it's because it refreshed since I got out of the page and came back.
+[1:09:09] Bijoy Nath: I mean, it's. I don't know exactly why we. I have to look into it again. Maybe probably front end is.
+[1:09:19] Bijoy Nath: Front end. Is saving any sorts of caching?
+[1:09:25] Md Mashiul Azam Chowdhury: No, I don't think so. No.
+[1:09:28] Bijoy Nath: Oh anyways. Yeah.
+[1:09:31] Constance Wolfe: So right now I can't filter by by some of these retailers that have.
+[1:09:36] Bijoy Nath: Yeah, it's fixed as well. I'm. I will push that change.
+[1:09:40] Constance Wolfe: Oh okay. You got that? Okay great.
+[1:09:44] Bijoy Nath: So for today concerns or what we need to do about the categorical and review calendar. I mean.
+[1:09:52] Constance Wolfe: Well, we're good for now. I mean I don't. Yeah, we're good for now. I think that.
+[1:09:58] Constance Wolfe: So let me just add something here. Let me just add the hates.
+[1:10:02] Constance Wolfe: By the way, there's no way to sort these that drives them crazy. Get.
+[1:10:07] Md Mashiul Azam Chowdhury: I'll get.
+[1:10:07] Constance Wolfe: Let's do. Let's do. That probably has an issue too. Yes. Who was another one of those mothers.
+[1:10:26] Constance Wolfe: Is mothers in here. That probably has an issue too. Mother's Market. Ah everyone.
+[1:10:32] Constance Wolfe: I'm choosing all of their. All of their.
+[1:10:35] Constance Wolfe: That's not going to be good because we're going to be on the call today. None of the all.
+[1:10:38] Constance Wolfe: It looks like all of their. The ones in their region are going to have this problem.
+[1:10:43] Md Mashiul Azam Chowdhury: Are you already in deploying or maybe it will take five or ten minutes.
+[1:10:56] Constance Wolfe: Media couple. This looks great for today. Oh, that's weird. Did you guys see this?
+[1:11:09] Bijoy Nath: Oh, there's a. There's a deployment in progress, so.
+[1:11:12] Constance Wolfe: Oh, is that why maybe.
+[1:11:14] Bijoy Nath: Yeah.
+[1:11:16] Md Mashiul Azam Chowdhury: How much time would it take? Five minutes.
+[1:11:19] Bijoy Nath: It's done. If you like do it right now again.
+[1:11:23] Md Mashiul Azam Chowdhury: Oh, could you refresh Office.
+[1:11:31] Constance Wolfe: That looks great. That looks really good. So this. I mean we're not gonna. This will.
+[1:11:35] Constance Wolfe: We'll still be implementing this. We may adjust a few of these dates and stuff.
+[1:11:39] Bijoy Nath: But yes.
+[1:11:40] Constance Wolfe: Great.
+[1:11:40] Bijoy Nath: Right. By the way consistent. So can you click on the model again? Yeah, open the model again. Right. So.
+[1:11:47] Bijoy Nath: So click on the assigned field. Right. See there is no brand user for these brands.
+[1:11:56] Md Mashiul Azam Chowdhury: Right.
+[1:11:57] Bijoy Nath: For the miracle for the Cosmos. So in this case if user selects.
+[1:12:03] Bijoy Nath: I think that button should be disabled. The send email button.
+[1:12:13] Md Mashiul Azam Chowdhury: Yeah, I think things so too because there's no email to send to.
+[1:12:19] Bijoy Nath: Exactly Right. So that's one.
+[1:12:22] Bijoy Nath: And another thing is let's say there are valid users like let's say for Miracle Neural Cosmos and Global Healing and Inner Life there are four different users as a brand owner.
+[1:12:36] Bijoy Nath: So in the assigned section if you choose three of them, let's say or four of them and send email.
+[1:12:45] Bijoy Nath: So the email should be sent like separately to their inboxes or there should be like one email where the two Will be all of them.
+[1:12:58] Constance Wolfe: Well, so where do we go from here? Don't we need to compose from here?
+[1:13:06] Constance Wolfe: We would need to compose the email.
+[1:13:08] Bijoy Nath: Right?
+[1:13:12] Md Mashiul Azam Chowdhury: You mean you want to add information or what?
+[1:13:15] Constance Wolfe: Right.
+[1:13:16] Bijoy Nath: What all.
+[1:13:17] Constance Wolfe: What is it sending exactly? What's happening on the email?
+[1:13:22] Bijoy Nath: Yeah, it's currently sending the details of the category you have selected.
+[1:13:27] Constance Wolfe: Oh yeah, it needs to like, it needs to. Oh, Jesus. I don't want to do this again. It there.
+[1:13:35] Constance Wolfe: Well, you guys had it. I thought I saw. You did have it at one point where you would.
+[1:13:41] Bijoy Nath: Yes.
+[1:13:41] Constance Wolfe: Right.
+[1:13:41] Bijoy Nath: So yeah, if you go to the current implementation. Not in here. We have it actually.
+[1:13:47] Constance Wolfe: Yeah, you did. You had send email. Then it goes. Yeah, yeah, that's what you need the next step. So.
+[1:13:56] Constance Wolfe: So wait a minute. Where. Where were we? Just. Oh, we were in the real one. Okay. We were in live.
+[1:14:03] Constance Wolfe: Yeah, yeah.
+[1:14:04] Bijoy Nath: Okay, so from here, send to contacts. Not here, just click. Close the model just for a second.
+[1:14:12] Bijoy Nath: Yeah, Click on the button. Send to context here. Yeah. So you will just select any brand maybe.
+[1:14:19] Bijoy Nath: Right, so you will have this.
+[1:14:22] Constance Wolfe: Right, right, right.
+[1:14:25] Md Mashiul Azam Chowdhury: And Bija, could you share your screen and show her the email that.
+[1:14:36] Md Mashiul Azam Chowdhury: So Constance, when you're clicking the review and assigning someone and sending an email, you will.
+[1:14:44] Md Mashiul Azam Chowdhury: They will get this email, which I will show it right now.
+[1:14:49] Constance Wolfe: Okay, that's really cool. I can't wait to show that. That's. So that'll essentially be step one.
+[1:14:56] Md Mashiul Azam Chowdhury: And then.
+[1:14:57] Constance Wolfe: And then we can build.
+[1:14:59] Md Mashiul Azam Chowdhury: Yeah, then we can build the tracker.
+[1:15:01] Constance Wolfe: Yeah, exactly, exactly.
+[1:15:04] Constance Wolfe: I think there might still be a few teeny tiny modifications, but for right now it's great.
+[1:15:11] Bijoy Nath: So. Yeah, yeah, right.
+[1:15:17] Md Mashiul Azam Chowdhury: So there's no compost there, but it's sending these information.
+[1:15:23] Constance Wolfe: As far as the. That's the subject line.
+[1:15:29] Bijoy Nath: Yeah, it's the retailer name. Most probably it's the category name.
+[1:15:33] Constance Wolfe: Yeah, that's great.
+[1:15:34] Bijoy Nath: And it's saying.
+[1:15:35] Constance Wolfe: I want to take a screenshot of that. Hang on one second. So this is.
+[1:15:40] Constance Wolfe: You're saying this is what the user is going to get the. Yeah, that's great.
+[1:15:46] Bijoy Nath: Sorry.
+[1:15:46] Constance Wolfe: So type review banner. Okay. So they're going to want to. So you're saying.
+[1:15:53] Constance Wolfe: When I was like, hey, you're going to need to go to compose. You're saying. No, that's what this is.
+[1:16:00] Constance Wolfe: Right, okay. They, they. I think what they're going to do is they're going to still want to.
+[1:16:06] Constance Wolfe: There's all of these. They have like a whole bunch of information they need to give them.
+[1:16:13] Constance Wolfe: So they could just use this to say this could just Be the initial one that says please reply if you want to be included.
+[1:16:21] Constance Wolfe: So I'll ask them and then if they want to be included, then maybe that's when they send them.
+[1:16:26] Constance Wolfe: Here's everything you need to do. Like here's all the information.
+[1:16:31] Bijoy Nath: Okay, so you know the retailers category and blah blah, blah from till created this information related to category from category review.
+[1:16:42] Bijoy Nath: But the notes, what I, I suppose if it is also going to say is that the note is the property where we are adding our, you know, the composed input, what a user wants to add with the email.
+[1:16:57] Bijoy Nath: So I mentioned like if they go in here so this section.
+[1:17:04] Constance Wolfe: So yeah, so yeah, that's where they. Yeah, that's where they would put in all of the details. Yeah.
+[1:17:09] Bijoy Nath: So this message will be added in the note section of the email part of the email body. So.
+[1:17:17] Constance Wolfe: Oh wait, go back to where you were. So okay, so.
+[1:17:26] Constance Wolfe: This, these notes down here are in that email notes where it says notes now. Okay, got you.
+[1:17:34] Bijoy Nath: Right. This information. We are adding this information in the note property.
+[1:17:40] Bijoy Nath: So but like if you want to highlight these specific information separately in somewhere else in the email body.
+[1:17:47] Bijoy Nath: Yes, we can do that as well.
+[1:17:49] Bijoy Nath: But that's how we kind of designed our, designed the whole event body right now for category.
+[1:17:55] Bijoy Nath: Of course you can share your inputs here.
+[1:17:58] Constance Wolfe: Okay, so if we decide to take out submission date and review date end, we would just basically say review month and review end.
+[1:18:06] Constance Wolfe: Right.
+[1:18:07] Bijoy Nath: Maybe.
+[1:18:08] Constance Wolfe: And then they could put in the notes, hey, submissions are due on this date.
+[1:18:12] Constance Wolfe: Like let them handle that. So I told you about the complexities of how that works.
+[1:18:17] Constance Wolfe: So they could say, hey, if you want to do this submission, I need to know by this date because submission due dates are then like I think that's perfect.
+[1:18:23] Constance Wolfe: Like this looks. This is really cool. So okay, can you go back to the calendar really quick?
+[1:18:34] Constance Wolfe: Okay, so yeah, click out of there. So there's two things going on here.
+[1:18:43] Constance Wolfe: One is if I click the submission. Yep. And I hit send email. What's that gonna do?
+[1:18:49] Constance Wolfe: It's just gonna, it's just sending an
+[1:18:51] Bijoy Nath: email with this information only. Yes.
+[1:18:55] Constance Wolfe: Okay. But no notes options here.
+[1:18:59] Bijoy Nath: Yeah, yeah.
+[1:19:00] Bijoy Nath: As you have mentioned, I think we should also add another field text field may most probably to.
+[1:19:06] Bijoy Nath: So that user can add the notes in here as well.
+[1:19:09] Md Mashiul Azam Chowdhury: Let me check if I can do that right now.
+[1:19:12] Constance Wolfe: So what's the difference between this and when I hit the button send to contacts.
+[1:19:18] Bijoy Nath: Yeah, yeah, exactly. I'm confused too with this. Honestly.
+[1:19:24] Constance Wolfe: This could be more of a generic which.
+[1:19:27] Constance Wolfe: Okay, now hit compose this could just be more generic like the one. The one was very specific.
+[1:19:35] Md Mashiul Azam Chowdhury: Other information.
+[1:19:37] Bijoy Nath: Yeah, it's just like this email. So for example, if you compose from here.
+[1:19:42] Constance Wolfe: Yeah.
+[1:19:42] Bijoy Nath: And whenever you like do.
+[1:19:44] Constance Wolfe: Which is not a bad thing because we need to give them some. Some flexibility. Right.
+[1:19:50] Md Mashiul Azam Chowdhury: So unhide the metric.
+[1:19:54] Constance Wolfe: I mean to me it's pretty intuitive. It's saying go ahead and click out of there.
+[1:19:58] Constance Wolfe: It's pretty intuitive.
+[1:19:59] Constance Wolfe: It's saying, hey, if I need to say something about the reset or Hey, I need to say something about the submission or.
+[1:20:04] Constance Wolfe: Or hey, I need to say something about the review.
+[1:20:10] Bijoy Nath: It.
+[1:20:11] Constance Wolfe: It's. That's the subject. Whereas you could from here just say, hey, reviews. I don't know.
+[1:20:19] Constance Wolfe: Like you might. I think it's good to give them the ability to. Yeah.
+[1:20:27] Bijoy Nath: And generic email.
+[1:20:29] Constance Wolfe: Regarding a generic email from there. Yeah, I do.
+[1:20:34] Bijoy Nath: Yeah. Then we can, we can keep it here then.
+[1:20:37] Constance Wolfe: Okay, so two, two other questions then. SYN log, does that work?
+[1:20:42] Bijoy Nath: Yeah, it works but right now there's nothing.
+[1:20:46] Constance Wolfe: Can we do we. Can we test. Can we test this by adding me to the contacts or something? Maybe.
+[1:20:54] Constance Wolfe: Is it based on.
+[1:20:56] Bijoy Nath: Oh, I can do something though.
+[1:20:59] Constance Wolfe: Is it based on. It's based on the. You in the admin. The user and the admin. The users.
+[1:21:05] Bijoy Nath: The admin based on the brands. Right now we are considering owner. Yeah. Especially the owners.
+[1:21:15] Bijoy Nath: So right now for these, you might
+[1:21:18] Constance Wolfe: want to put sub users in there as well.
+[1:21:20] Bijoy Nath: I don't know.
+[1:21:20] Constance Wolfe: We can. I'm assuming we're probably going to want some users as well because I can.
+[1:21:27] Bijoy Nath: What I can do.
+[1:21:28] Constance Wolfe: I think we're definitely going to want to have sub users because like the boss, you know, the boss oversees national.
+[1:21:35] Constance Wolfe: I'm. I'm only overseeing one territory, so.
+[1:21:39] Bijoy Nath: Yeah, all right. Yeah, that's understand also. So yeah, there's.
+[1:21:51] Constance Wolfe: Oh, and what if the BCC is not in the system?
+[1:21:55] Constance Wolfe: The everybody who gets an email, do they have to be in the system?
+[1:22:01] Bijoy Nath: Oh, that's another. Okay, so that means that CC and bcc, they are just redundant in that case.
+[1:22:11] Constance Wolfe: Now the BCC would be from the sender. The BCC is going to probably be the sender.
+[1:22:15] Constance Wolfe: So if I am the admin person, the reason I want to BCC myself is. So I have this in my email box.
+[1:22:26] Bijoy Nath: Yeah, that's fine. Okay, so that means user shouldn't.
+[1:22:30] Bijoy Nath: User can type, but that email should be in the system anyhow.
+[1:22:34] Constance Wolfe: Yeah, I'm just wondering right now. That's the way it's set up, right.
+[1:22:37] Constance Wolfe: You have to be in the system to get an email.
+[1:22:41] Bijoy Nath: Not for this one.
+[1:22:42] Md Mashiul Azam Chowdhury: So. So cc, we will remove the cc, but in the BCC the current user email will be set. Right.
+[1:22:53] Constance Wolfe: Well you could keep both. You could keep both CC and bcc. I think it's okay.
+[1:22:58] Md Mashiul Azam Chowdhury: Well if we are keeping it, then you can write any other email here if you want. Do you want that?
+[1:23:11] Constance Wolfe: Can you give me the criteria again? What, what are we saying? So B, you're saying want. Yeah.
+[1:23:19] Constance Wolfe: You're saying that if I put in BCC you can go
+[1:23:24] Md Mashiul Azam Chowdhury: to anyone. Yeah, currently you can put any email here if you want and they send it.
+[1:23:34] Md Mashiul Azam Chowdhury: But do you want that? Because I think you want only the system user to be in CCR bcc.
+[1:23:45] Constance Wolfe: No, I actually would like some flexibility to not have to be in the system.
+[1:23:51] Constance Wolfe: But are you saying one or the other has to be or both?
+[1:23:56] Md Mashiul Azam Chowdhury: I mean not. It's actually your call, whichever you want.
+[1:24:06] Constance Wolfe: Okay, so let me see if I understand this. Right now it's to interlife. Right.
+[1:24:10] Constance Wolfe: So that is already logged into the system because they're right.
+[1:24:15] Constance Wolfe: And it's the brand owner you're saying. Yes, I think we definitely need to allow brand sub Users.
+[1:24:23] Md. Tauhidur Rahman: Users.
+[1:24:24] Bijoy Nath: Okay.
+[1:24:24] Constance Wolfe: Yeah. And then. I think, I'm thinking BCC should be not required
+[1:24:40] Bijoy Nath: to be in the system.
+[1:24:41] Constance Wolfe: Yeah, CC should not be required to be in the system.
+[1:24:45] Bijoy Nath: And we are not even like checking if those emails do exist in the system or not right now.
+[1:24:53] Constance Wolfe: Yeah, so correct.
+[1:24:54] Bijoy Nath: Okay, good.
+[1:24:55] Constance Wolfe: That's fine, that's fine.
+[1:24:57] Constance Wolfe: But do they give you the list of people as an option or do you just have to type it in?
+[1:25:02] Bijoy Nath: You just have to type it in.
+[1:25:05] Constance Wolfe: So you know how like when you compose an email now and you've already emailed them before, it kind of pre fills.
+[1:25:12] Constance Wolfe: Does it do that?
+[1:25:15] Bijoy Nath: No, no it doesn't do that.
+[1:25:20] Constance Wolfe: Can it?
+[1:25:21] Bijoy Nath: But oh but your browser will save this information. But browser will have.
+[1:25:25] Constance Wolfe: Oh the browser does that. Okay, got you.
+[1:25:27] Md. Tauhidur Rahman: Okay.
+[1:25:28] Constance Wolfe: Okay,
+[1:25:43] Constance Wolfe: So if you select the brand, will it automatically do the sub user and this on the owner will automatically do everybody in there or do with the user select?
+[1:25:57] Bijoy Nath: I think user select.
+[1:25:59] Constance Wolfe: Yeah. Okay, got you. Perfect.
+[1:26:00] Md Mashiul Azam Chowdhury: Okay
+[1:26:03] Bijoy Nath: and if you want to see the log Constance we have 30 already implemented actually and it's in staging.
+[1:26:11] Bijoy Nath: We checked it totally and I can show it to you right now. So there is a log.
+[1:26:19] Constance Wolfe: Oh sweet. So wait a minute. Okay.
+[1:26:24] Bijoy Nath: And by the way it's Orno's email. So he was doing all the work sentencing.
+[1:26:30] Constance Wolfe: So these were just all the testing so we can filter because boy. Yeah, okay. Yeah, that's good.
+[1:26:36] Constance Wolfe: Okay, so. So that's just in staging right now.
+[1:26:41] Bijoy Nath: No, that's in the production.
+[1:26:46] Constance Wolfe: This is awesome. So did you. Were you able to test it to see if I. If I got it?
+[1:26:54] Bijoy Nath: Yes.
+[1:26:55] Constance Wolfe: So I am. I should be. Shouldn't I be in the Noble? Can you test it in Noble?
+[1:27:02] Bijoy Nath: But the Noble brand. So for example, these brands, they don't have any owner. See? No user. No user.
+[1:27:10] Constance Wolfe: Yeah, I guess I could test it in the send contacts though, right? Because did can't I.
+[1:27:17] Constance Wolfe: Because you said it doesn't.
+[1:27:18] Bijoy Nath: Right. Yeah, right now it does.
+[1:27:20] Constance Wolfe: Let's do it from there. So do it. Are you in Noble?
+[1:27:23] Bijoy Nath: Yeah, I'm in Noble.
+[1:27:24] Constance Wolfe: Yeah. Go to send contacts and try to send one to me but.
+[1:27:29] Bijoy Nath: Oh, work as well. So why don't we go to admin and do you have an test account?
+[1:27:38] Bijoy Nath: Oh by the way, can we go to the headers account? Let's see. Because they also have the dart data.
+[1:27:47] Bijoy Nath: Yeah, we have it in here. And what you can do Zucchini maybe brand owner of zucchini. Yeah.
+[1:27:55] Constance Wolfe: Well go to admin
+[1:28:00] Bijoy Nath: and let's go back.
+[1:28:13] Constance Wolfe: I think you need brand owners or. Yeah, try this one.
+[1:28:16] Bijoy Nath: Yeah, role is brand owner and oops.
+[1:28:25] Constance Wolfe: Search.
+[1:28:27] Bijoy Nath: Oh,
+[1:28:38] Bijoy Nath: There's no brand owner for Zucchini. Sub brand sub user. Brand subuser. Brand subuser.
+[1:28:47] Bijoy Nath: Oh, everyone is brand sub user. There's no brand owner.
+[1:28:51] Constance Wolfe: So type in my name or am I. Who am I an owner of? I can't remember.
+[1:29:00] Bijoy Nath: So. Oh yes, you are the brand owner. Do Sunflower account has that brand owner
+[1:29:08] Constance Wolfe: for which brand for which it doesn't tell us the brand. Actually I was. Yeah.
+[1:29:16] Bijoy Nath: Abc.
+[1:29:16] Constance Wolfe: I don't even. Okay, so. So who's the. We don't have an owner for. And then I have caboodle services.
+[1:29:28] Constance Wolfe: Who's that too? Who's Caboodle? Which brand is the top one? Am I the sub user to.
+[1:29:36] Constance Wolfe: Oh, we need a brand owner.
+[1:29:38] Bijoy Nath: Yeah, we need a brand owner. So a couple new services. How. What. What they're doing here?
+[1:29:47] Bijoy Nath: Oh, brand sub user brands are using.
+[1:29:50] Constance Wolfe: Oh, I added. I wanted them. I did because I wanted them to be in the pipeline.
+[1:30:01] Bijoy Nath: But I can do one thing though just to show you the whole works whole email thing.
+[1:30:07] Bijoy Nath: So let's say if I send this to most probably maybe topic again just to check and.
+[1:30:17] Bijoy Nath: Oh, I cannot add the CC and decision here. Sorry.
+[1:30:25] Constance Wolfe: So the issue right now is that we are in whose brand. So we are in. Okay, now that's live.
+[1:30:36] Constance Wolfe: Can you go to try the brand New Zealand who's the owner for that? Okay, that you need to go to admin.
+[1:30:53] Md Mashiul Azam Chowdhury: By the way, Constance, do we need for this or.
+[1:30:58] Constance Wolfe: No, probably not. No.
+[1:31:00] Md Mashiul Azam Chowdhury: Oh, so in that case you can.
+[1:31:03] Md. Tauhidur Rahman: Okay, so I'm leaving.
+[1:31:05] Constance Wolfe: Okay.
+[1:31:06] Md. Tauhidur Rahman: Nice day, Constance.
+[1:31:07] Constance Wolfe: Thank you. I'll see you. So are you going to be on Monday?
+[1:31:11] Md. Tauhidur Rahman: Yeah, yeah, I'm going to be on Monday. Okay.
+[1:31:13] Constance Wolfe: Okay, sounds good. Thank you for your time today. Okay, bye. Take care.
+[1:31:20] Bijoy Nath: So New Zealand, they don't have any brand owner or any zoo user.
+[1:31:32] Constance Wolfe: Can you type in my name again? Because I could make it a brand owner with an email that I have.
+[1:31:38] Constance Wolfe: I want to see how many emails I have in here.
+[1:31:47] Bijoy Nath: You have two emails.
+[1:31:49] Constance Wolfe: Okay, so I've got another email, seawolf68mail. So why don't you make me an owner of maybe like.
+[1:31:56] Bijoy Nath: Okay, so let's just go to.
+[1:32:25] Bijoy Nath: So we have the Coveral services brand which don't have any brand owner.
+[1:32:31] Constance Wolfe: Yeah, I would go to maybe zoo if. If New Zealand doesn't have one. We could do New Zealand.
+[1:32:36] Bijoy Nath: New Zealand. So what's your email by the way?
+[1:32:40] Constance Wolfe: Oh, do I need to not be a brand owner of if Can I be to Brandon?
+[1:32:44] Constance Wolfe: Well, Brandon will be a different email address so that works. Okay, go ahead.
+[1:32:48] Bijoy Nath: Oh by the way, we can. Sorry.
+[1:32:53] Constance Wolfe: Oh, go ahead and make me the brand owner of New Zealand.
+[1:32:56] Bijoy Nath: Yeah, for Sunflower one.
+[1:32:59] Constance Wolfe: Either one. I've got another email we could use.
+[1:33:04] Bijoy Nath: Yeah, that's what I'm. I was saying. So if you have another email then I think we can.
+[1:33:12] Constance Wolfe: You just can call me Stacy. That's my nickname. Oh, with a different email.
+[1:33:20] Constance Wolfe: Yeah, so we can make a new user. Stacy might even be in there.
+[1:33:27] Bijoy Nath: Yeah, this one.
+[1:33:28] Constance Wolfe: Sdaci. Yeah, that's me. That's me. Yeah. So that email actually. Okay, yeah. Who's that for?
+[1:33:40] Constance Wolfe: Which brand is that?
+[1:33:41] Bijoy Nath: For this one Brand owner Erica one.
+[1:33:46] Constance Wolfe: No, the Stacy Wolf says.
+[1:33:49] Bijoy Nath: Oh sorry, this one. That's brands abuse of zucchini.
+[1:33:56] Constance Wolfe: Okay, so let's do that. Okay, I can. I have access to that email.
+[1:34:00] Constance Wolfe: So that's the brand that I'm a brand sub user. Do you want to change that to owner?
+[1:34:06] Bijoy Nath: Yeah, I can. So I have to first assign role. Most probably brand owner. Can I do that?
+[1:34:24] Bijoy Nath: Brand must be selected for brand owner of the world.
+[1:34:33] Constance Wolfe: 5:10.
+[1:35:04] Bijoy Nath: But it's still adding as a sub user. We need to work on this flow.
+[1:35:11] Constance Wolfe: There is no owner there. When we look up zucchini. There's no owner.
+[1:35:18] Bijoy Nath: Yeah, there is no owner for the zucchini. So
+[1:35:25] Constance Wolfe: do you have Some letters up in the top name where it's at the very top. Yeah.
+[1:35:34] Bijoy Nath: So zucchini brand subuser, brand sub user, brand subuser, everyone's abuser.
+[1:35:41] Bijoy Nath: So why don't we like I make any of the brand. It's a brand owner. So if I log out.
+[1:35:53] Bijoy Nath: Oh no, the email should be there. Right. So.
+[1:36:05] Md Mashiul Azam Chowdhury: Okay. It.
+[1:36:50] Bijoy Nath: Yes,
+[1:37:06] Bijoy Nath: I have to do a bit, you know, some.
+[1:37:12] Bijoy Nath: Something weird just to make this whole thing work, you know, so that you can see the same look.
+[1:37:18] Bijoy Nath: Should I do it right now?
+[1:37:20] Constance Wolfe: Well, I need to give a demonstration today. So what. What is.
+[1:37:25] Constance Wolfe: You don't need to do it with me on there on here. If that's so what are you trying to.
+[1:37:29] Constance Wolfe: You're trying to case.
+[1:37:32] Bijoy Nath: Yeah, I was trying to. Like right now they don't have any source of owner. Right.
+[1:37:37] Bijoy Nath: For Miracle Noodle and the global. All of them. So why don't we add an owner for each of them?
+[1:37:48] Constance Wolfe: I don't want to do that yet because. What are you saying? So with somebody else's email.
+[1:37:53] Constance Wolfe: With my email or.
+[1:37:58] Bijoy Nath: Or yeah, most probably yes. So the miracle model admin just staging.
+[1:38:35] Bijoy Nath: So there's so many brand owners where Angel Bakers. Yeah they don't have.
+[1:38:42] Bijoy Nath: We don't use their data anymore.
+[1:38:47] Constance Wolfe: So what are you trying to do still?
+[1:38:49] Bijoy Nath: I was trying to figure out the way so that the mail goes to in your inbox somehow because all of the data or user we have in the production alive there.
+[1:39:03] Bijoy Nath: The emails are valid emails.
+[1:39:05] Constance Wolfe: Can you. Can you make it to where a sub user can.
+[1:39:10] Constance Wolfe: Is that the problem that we have to find a brand owner? Can you enable subuser.
+[1:39:16] Constance Wolfe: What is it going to take for a sub for you to implement a sub user?
+[1:39:21] Bijoy Nath: So assigning to the sub user. Right. So.
+[1:39:30] Constance Wolfe: So I think that would be the easiest thing. We need to implement that anyway.
+[1:39:34] Constance Wolfe: And then that way I could be a sub user of one of these, you know, brands.
+[1:39:39] Bijoy Nath: Right.
+[1:39:39] Constance Wolfe: Because can a sub you can you have. Can a sub user be more than.
+[1:39:43] Constance Wolfe: Can I be a sub user of more than one brand right now?
+[1:39:47] Bijoy Nath: Maybe no. Maybe. No, you can't probably.
+[1:39:52] Constance Wolfe: Oh well, that won't work either. Then how am I sub user out? I think you can keep looking.
+[1:39:58] Md Mashiul Azam Chowdhury: I'll.
+[1:39:58] Constance Wolfe: I'll look at it admin users. But I think okay,
+[1:40:18] Md Mashiul Azam Chowdhury: I have opened up the compost section for sending an email for the review.
+[1:40:28] Md Mashiul Azam Chowdhury: Just deployed it and maybe it will take five minutes. No, it will take five minutes.
+[1:40:35] Constance Wolfe: Okay.
+[1:40:36] Md Mashiul Azam Chowdhury: Yeah, it's deploying.
+[1:40:39] Constance Wolfe: Oh, I see what I do. Okay. So as a broker sub user do you want to see my screen?
+[1:40:51] Bijoy Nath: Yeah, sure.
+[1:40:52] Constance Wolfe: So, okay, while he's doing that. So as a broker sub user. So I typed in my name as a user, right.
+[1:41:02] Constance Wolfe: So I'm a broker sub user for all of these brands, which is. Right.
+[1:41:11] Constance Wolfe: That way I get access, I can get access to anybody, as I should.
+[1:41:18] Constance Wolfe: So why don't I just add one of those? Are you going to enable an email to go to a sub user?
+[1:41:32] Constance Wolfe: Because what I could do is select. These are. These are J brands.
+[1:41:39] Bijoy Nath: Broker sub user. Right.
+[1:41:41] Constance Wolfe: I'm a broker sub user, but we
+[1:41:44] Bijoy Nath: are talking about the brand sub user.
+[1:41:50] Constance Wolfe: Yeah, but if I'm a broker sub user, shouldn't you be able, Shouldn't I be able to be on part of that email?
+[1:41:56] Constance Wolfe: I should be. If not, we need to do that too.
+[1:42:01] Constance Wolfe: So broker sub users should be able to be a part of that email.
+[1:42:07] Constance Wolfe: Oh, they can in the bcc, I guess, and just not
+[1:42:15] Md Mashiul Azam Chowdhury: Constance. I have opened up that part.
+[1:42:21] Md Mashiul Azam Chowdhury: So after the deployment is done, what will happen is when someone is sending a mail, let's say.
+[1:42:30] Md Mashiul Azam Chowdhury: Yeah, you have assigned someone and then you are sending a mail.
+[1:42:35] Md Mashiul Azam Chowdhury: Even if you don't include your current, I mean the one who, who is currently logged in right now, even if they don't enter an email, the system will automatically add their email in the bc.
+[1:42:56] Constance Wolfe: So you're saying I'm logged in right now as.
+[1:42:59] Constance Wolfe: Whoever I'm logged in as, which is Amlog and Seawolf, that's going to be who it's from, right?
+[1:43:06] Md Mashiul Azam Chowdhury: No, no, no, not from, but they, their email will be in the bcc.
+[1:43:13] Md Mashiul Azam Chowdhury: So they will receive the email as well.
+[1:43:15] Md Mashiul Azam Chowdhury: But it, if you're talking about for from then it is coming from the Caboodle system.
+[1:43:24] Constance Wolfe: Okay. Yeah, I need to write all this down because I'll need to explain it to them.
+[1:43:29] Constance Wolfe: So if I compose this right now it's coming from Caboodle, but I'm going to be bcc,
+[1:43:38] Md Mashiul Azam Chowdhury: Right? I mean the one who is logged in. Yes.
+[1:43:43] Constance Wolfe: And right now would it be Heather? Essentially, yes.
+[1:43:48] Md Mashiul Azam Chowdhury: This email. Yeah,
+[1:43:53] Constance Wolfe: which we don't have access to that email anymore. Should I change that if it's.
+[1:44:01] Md Mashiul Azam Chowdhury: Yeah, I think it'd be better if you change it. Well, should you change it right now before the demo?
+[1:44:09] Md Mashiul Azam Chowdhury: Because I don't know. Yeah, if there's going to be a problem with the login or something.
+[1:44:16] Md Mashiul Azam Chowdhury: But when you're sending a mail, I mean the.
+[1:44:22] Md Mashiul Azam Chowdhury: Heather's email is getting included by default, but you can also add yours one too if you want.
+[1:44:31] Constance Wolfe: Okay, so now I'M in Sarah's. So if she just sends a quick email from here, it's.
+[1:44:38] Constance Wolfe: She's going to be BCC'd automatically.
+[1:44:41] Md Mashiul Azam Chowdhury: Yes.
+[1:44:41] Constance Wolfe: Yeah. Okay, got it. That's good. Okay, so right now this has to be a brand owner.
+[1:44:52] Md Mashiul Azam Chowdhury: Yeah, yeah, right now.
+[1:44:55] Constance Wolfe: But we're going to add sub users.
+[1:44:59] Md Mashiul Azam Chowdhury: Yes, yes.
+[1:45:00] Md Mashiul Azam Chowdhury: And also I've also did a condition sort of where if there's the ones you selected, if they don't, if the brands don't have any user, then you won't be able to send email.
+[1:45:16] Md Mashiul Azam Chowdhury: I mean, the send email button will. Will stay disabled because will or will want to send to.
+[1:45:25] Constance Wolfe: Yeah, okay, got you. Okay. Okay, now here.
+[1:45:31] Md Mashiul Azam Chowdhury: Can you refresh now? I think it's deployed. Yeah. Click on review or something.
+[1:45:46] Md Mashiul Azam Chowdhury: Yeah, there's a button called compose.
+[1:45:50] Constance Wolfe: Oh, oh, okay. Okay, now. Now I am a little confused because we'll be.
+[1:46:00] Constance Wolfe: Because before BCC was going to be already populated.
+[1:46:07] Md Mashiul Azam Chowdhury: Not already populated. The system will automatically do that because.
+[1:46:11] Constance Wolfe: Will it do that now? So if she doesn't fill anything out, will it go to sarah?
+[1:46:17] Md Mashiul Azam Chowdhury: Yeah, it will still go to Sarah.
+[1:46:19] Constance Wolfe: What if I put in something else in here, like a different.
+[1:46:21] Constance Wolfe: But what if I put it in two or three of them?
+[1:46:25] Md Mashiul Azam Chowdhury: If you put them, the system will still include Sarah in this.
+[1:46:29] Constance Wolfe: Okay. Okay, got you. Okay, perfect.
+[1:46:31] Bijoy Nath: Okay.
+[1:46:32] Constance Wolfe: And then this is great. This looks really good. This is super duper cool.
+[1:46:43] Md Mashiul Azam Chowdhury: Can you go to the staging?
+[1:46:44] Md Mashiul Azam Chowdhury: And we do have Arno as a brand owner in there, so you can send an email from there if you want.
+[1:46:55] Constance Wolfe: Okay, so. Oh, now it doesn't have that in staging.
+[1:47:06] Md Mashiul Azam Chowdhury: Oh, it's taking a bit time in staging, I think. Let me check.
+[1:47:10] Constance Wolfe: I could refresh maybe.
+[1:47:17] Md Mashiul Azam Chowdhury: Yeah, it should be. There it goes now. Yeah.
+[1:47:21] Constance Wolfe: Okay, so where's his name?
+[1:47:27] Md Mashiul Azam Chowdhury: Can you include a category view with applejacks?
+[1:47:34] Constance Wolfe: Sure.
+[1:47:44] Constance Wolfe: Let me just do something here really quick. Okay, let's do this one. Wait a minute.
+[1:48:03] Constance Wolfe: Wasn't it supposed to ask me which brand?
+[1:48:07] Md Mashiul Azam Chowdhury: Oh, no. You are actually in zucchini.
+[1:48:09] Constance Wolfe: Oh, I'm in Zucchini.
+[1:48:11] Bijoy Nath: Okay.
+[1:48:11] Md Mashiul Azam Chowdhury: Yeah, it went as zucchini.
+[1:48:15] Constance Wolfe: I guess it's there now though, because I pushed it. No, but I need to do Apple Jacks.
+[1:48:18] Constance Wolfe: Okay, so I'll do Apple Jacks.
+[1:48:19] Md. Tauhidur Rahman: Okay.
+[1:48:20] Constance Wolfe: Yeah, yeah,
+[1:48:44] Md Mashiul Azam Chowdhury: Yeah.
+[1:48:45] Md Mashiul Azam Chowdhury: So click on compose and maybe in the CC or BCC you can add your email and write something in the message.
+[1:49:09] Md Mashiul Azam Chowdhury: You check your email?
+[1:49:25] Constance Wolfe: Sometimes my email is a little slow. I could check it here. Thank you. There it is. Okay.
+[1:49:37] Md Mashiul Azam Chowdhury: Yay. Yeah, that's it.
+[1:49:42] Constance Wolfe: So cool. View Work item. What's this do?
+[1:49:47] Md Mashiul Azam Chowdhury: Well, it's still in progress, but it should actually redirect to that. The category review page.
+[1:49:56] Bijoy Nath: Yep.
+[1:49:57] Constance Wolfe: Okay, that's so cool. Okay, so if I. Then let me just do one more test on that. So if I did. Oh, we.
+[1:50:14] Constance Wolfe: Did we do that from staging?
+[1:50:18] Md Mashiul Azam Chowdhury: Yes, because. Yeah.
+[1:50:21] Constance Wolfe: Okay, so.
+[1:50:46] Constance Wolfe: We am going to cut. I could put links and I can put images in here.
+[1:50:54] Constance Wolfe: Can I put an image in there?
+[1:51:02] Md Mashiul Azam Chowdhury: There are some limitations, but let me
+[1:51:06] Constance Wolfe: see if I can put it. Because sometimes they do a copy and paste with images.
+[1:51:10] Constance Wolfe: I was just going to see if I've got an image.
+[1:51:11] Md Mashiul Azam Chowdhury: I think I see.
+[1:51:17] Constance Wolfe: Yeah, here's one.
+[1:51:24] Md Mashiul Azam Chowdhury: I'm not sure an email will support that. That's why it might not be there.
+[1:51:34] Constance Wolfe: Yeah, there is.
+[1:51:35] Md Mashiul Azam Chowdhury: There's not a. Yeah, you can add link, but. Oh, embed is sort of coding.
+[1:51:49] Constance Wolfe: Let me just do a copy and a paste. Let me just see if it works. So copy. Okay, here's one.
+[1:51:56] Constance Wolfe: Let me just do something really quick.
+[1:51:59] Md Mashiul Azam Chowdhury: It can, I mean you can add links in there, but I don't think you can add any image in there. But.
+[1:52:14] Constance Wolfe: No, I'm trying. Is that a restriction of this particular tool we're using?
+[1:52:28] Md Mashiul Azam Chowdhury: Actually, I'm not sure yet because we.
+[1:52:32] Md Mashiul Azam Chowdhury: When you send an email through, let's say Gmail or something, that email gets stored somewhere.
+[1:52:43] Md Mashiul Azam Chowdhury: It sort of goes as an attachment, but currently we don't have storage for our. This email section.
+[1:52:55] Md Mashiul Azam Chowdhury: So that's why it won't go.
+[1:53:01] Constance Wolfe: Okay. Did you say it was a storage issue?
+[1:53:08] Md Mashiul Azam Chowdhury: Yeah, because Gmail, when you're sending an image or something in Gmail, it stores it
+[1:53:20] Constance Wolfe: in.
+[1:53:21] Md Mashiul Azam Chowdhury: Maybe if the file is too big, it stores it in your drive or somewhere.
+[1:53:29] Md Mashiul Azam Chowdhury: But in this case we don't have. Currently we don't have storage for. In this.
+[1:53:36] Md Mashiul Azam Chowdhury: So that's why it won't take image right now.
+[1:53:41] Constance Wolfe: Do you know if it. If we could.
+[1:53:43] Constance Wolfe: So the reason why I'm asking is because what they're going to do is they're going to have probably like a pretty, pretty big.
+[1:53:50] Constance Wolfe: I don't know if I can find a sample but usually they do a pretty big copy and paste from like I was just trying to put in.
+[1:53:59] Constance Wolfe: I'm making a copy of a spreadsheet I'm making. I'm trying to copy this.
+[1:54:06] Md Mashiul Azam Chowdhury: Ah, I see.
+[1:54:10] Constance Wolfe: Oh, and that's how it comes in. I could see them wanting to do a lot of copying and pasting in here.
+[1:54:23] Md Mashiul Azam Chowdhury: So I need to check.
+[1:54:27] Constance Wolfe: Okay. Okay, you put that on your list. I'LL I'll. I'll get it. I can get in front of it with them today.
+[1:54:34] Constance Wolfe: I'm going to ask them for a sample of what they send. But if I just do copy.
+[1:54:39] Constance Wolfe: So if I had it on a, on a text, if I just try to do this. Let me try something else.
+[1:54:44] Constance Wolfe: So I'm doing a copy and a paste from a word doc right now and that's not too bad.
+[1:54:51] Constance Wolfe: It would be nice if it could hold format. You know how like when in here. Let me see what this.
+[1:54:56] Md Mashiul Azam Chowdhury: Yeah, it might be, might not be holding all the formats.
+[1:55:01] Constance Wolfe: Yeah, exactly. Like, see how you have these options here.
+[1:55:07] Md Mashiul Azam Chowdhury: Right.
+[1:55:09] Constance Wolfe: If there was a tool that would allow us to do those options and you're saying that, hey, that's going to be storage.
+[1:55:19] Constance Wolfe: There might be an extra fee or something like that. Let me know.
+[1:55:22] Md Mashiul Azam Chowdhury: Yeah, I think the same tool has that feature, but it might be paid. But I need to check that.
+[1:55:32] Constance Wolfe: If you could do some research and just let me know because I'm pretty sure they're going to be wanting to do some cutting and pasting and not having to just.
+[1:55:40] Constance Wolfe: And for. They probably want the formatting to stick.
+[1:55:44] Md Mashiul Azam Chowdhury: I see. Yeah.
+[1:55:45] Constance Wolfe: So just let me know if you could do some research on that and let me know what that would look like.
+[1:55:52] Constance Wolfe: Yeah. Okay. So I think this is great. Yeah, super duper cool, you guys. Great work. I'm really excited.
+[1:56:02] Constance Wolfe: So this is basically going to be stage one and this was a big step.
+[1:56:07] Constance Wolfe: This is so much improved than what it was, you know, before.
+[1:56:11] Constance Wolfe: And I think that the grid looks, looks good. Are we going to be able to.
+[1:56:18] Constance Wolfe: I guess this is basically the same thing.
+[1:56:19] Constance Wolfe: We, we're going to do some different things on the list, but I might.
+[1:56:23] Md Mashiul Azam Chowdhury: Yeah, we need to, I believe, improve the UI a bit so that it looks more, a bit like the ones in the wireframe, so.
+[1:56:34] Constance Wolfe: Yeah, exactly.
+[1:56:36] Constance Wolfe: I think we might want to even have it open to the calendar first because it just looks so much nicer.
+[1:56:43] Constance Wolfe: And then if you want to go to the area. But I think that's an easy thing to do in this case.
+[1:56:53] Md Mashiul Azam Chowdhury: Yeah, we can talk about that later.
+[1:56:55] Constance Wolfe: Yeah, I mean, I think, I just think if the idea is to kind of stop, start very broad, like you start very high level here and then this is the next level and then you get to the grid.
+[1:57:07] Constance Wolfe: I think it's just a better experience. Yeah.
+[1:57:10] Constance Wolfe: So if there's any way to implement that sooner versus later grade. If not, we can do it later.
+[1:57:15] Constance Wolfe: I'm not, I'm not worried about it right now. Okay, cool. Well, nice work, you guys.
+[1:57:23] Constance Wolfe: Bijoy, are you working on something right now? And then that tracker. Do you.
+[1:57:32] Constance Wolfe: Does that look intimidating to you as far as building that out?
+[1:57:39] Md Mashiul Azam Chowdhury: I mean, I wouldn't say that much because we sort of already created the tradespin creation steps, so nothing.
+[1:57:55] Constance Wolfe: Nothing intimidates you after that. I get it. Okay, cool. So that's great news. So we'll just.
+[1:58:06] Constance Wolfe: I think we still. I'm still having to.
+[1:58:08] Constance Wolfe: We're still making so many ideas and changes that getting to that road map is taking obviously longer than what we thought, because I really, like, the path were going down.
+[1:58:19] Constance Wolfe: Like, we were just going to kind of make sure all the backlogs are fixed, but now we're.
+[1:58:24] Constance Wolfe: Yeah, we're getting into some kind of cool stuff.
+[1:58:27] Constance Wolfe: And so it's like, oh, that might be changing, you know, so I'll continue to work with Toheed on that.
+[1:58:34] Constance Wolfe: We'll try to get things.
+[1:58:36] Md Mashiul Azam Chowdhury: Yeah, sure. Also, I'm thinking that Bijoy and I. I mean, we've already talked about this.
+[1:58:44] Md Mashiul Azam Chowdhury: Bijoy and I will be working on the new stuff while Arnold will be working on the backlog things because we already have a clear picture of those.
+[1:58:56] Constance Wolfe: Yeah, that makes sense.
+[1:58:58] Md Mashiul Azam Chowdhury: Yeah.
+[1:58:59] Constance Wolfe: So he can kind of work on all the backlogs while we put together kind of the new.
+[1:59:05] Constance Wolfe: The new implementations. So that makes a lot of sense. I like that. Okay. Okay. Sounds great.
+[1:59:12] Constance Wolfe: Well, I know it's your weekend. I'm really appreciative that you. Yeah.
+[1:59:17] Constance Wolfe: I was gonna ask, do you have something.
+[1:59:21] Bijoy Nath: Yeah. Yes. Right. I push the retailer filter issue thing.
+[1:59:27] Bijoy Nath: So if you now check on the production, I think.
+[1:59:29] Constance Wolfe: Yeah, let me look. Okay, great. Let me just do that right now. Okay. So quick review. Taylor to Gilson.
+[1:59:49] Constance Wolfe: Gilson is showing up. Yay. Let me try.
+[1:59:54] Md Mashiul Azam Chowdhury: Great.
+[1:59:56] Constance Wolfe: That's. That's great.
+[1:59:57] Constance Wolfe: Because it's hard, especially when you're working with that broker in that region.
+[2:00:00] Constance Wolfe: And I was like, yeah, you just gotta filter Gilson's. Oh, Gilson is not. Okay. Yep, this looks great.
+[2:00:07] Constance Wolfe: It's working.
+[2:00:08] Constance Wolfe: And so if we wanted to test Noble on the call, we would need to assign a brand owner and give that brand owner an email.
+[2:00:23] Constance Wolfe: Is there any way to. There's no other way to test that with them today, is there?
+[2:00:33] Constance Wolfe: Unless they want to get their brand. Okay, so I'll just have to show them.
+[2:00:39] Constance Wolfe: I'll just show them in staging what that looks like with. Okay. Without checks. Okay, I'll do that.
+[2:00:47] Constance Wolfe: Cool. All right, guys. Thank you. Thank you. Thank you.
+[2:00:49] Constance Wolfe: And so you've got your notes about implementing the sub user. I think I saw him write that down.
+[2:00:54] Md Mashiul Azam Chowdhury: Yeah. Wrote that up.
+[2:00:57] Constance Wolfe: Yes.
+[2:00:57] Md Mashiul Azam Chowdhury: Okay.
+[2:00:58] Constance Wolfe: Okay. I'll send you guys these notes when. When I get them.
+[2:01:02] Md Mashiul Azam Chowdhury: Yeah. Thank you.
+[2:01:03] Constance Wolfe: Have a great rest of your weekend. Have a great night. Thank you.
+[2:01:09] Bijoy Nath: Bye.
+[2:01:09] Constance Wolfe: Bye.

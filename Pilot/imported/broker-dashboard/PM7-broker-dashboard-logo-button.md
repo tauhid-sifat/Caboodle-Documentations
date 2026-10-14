@@ -1,0 +1,60 @@
+---
+type: Document
+module: broker-dashboard
+jira: [CS-1604]
+status: new
+last_verified: 2026-10-14
+related_wiki: ../../wiki/broker-dashboard.md
+---
+
+# Broker Dashboard | Add Broker Logo to Dashboard Button
+
+**CS-1604** | New Requirement | User Story | Priority: TBD | Status: New
+
+---
+
+## User Story
+
+**As a** Broker user,  
+**I want** the Broker Dashboard button/tile to display the broker's logo,  
+**So that** the dashboard navigation reflects my broker's branding.
+
+---
+
+## Description
+
+The broker dashboard landing page has a tile grid of navigation buttons (Market Overview, Category Review, Promotional Management, etc.). The dashboard header or primary navigation button area currently lacks the broker's logo. Adding the broker logo to the dashboard button area (e.g., the top navigation bar or the dashboard tile itself) reinforces brand identity.
+
+Note: This differs from CS-1072, which covers the landing page hero/header logo. CS-1604 specifically targets the dashboard navigation button/badge showing the broker logo.
+
+---
+
+## Acceptance Criteria
+
+### Scenario 1: Broker Logo on Dashboard Navigation
+- **Given** I am on the broker dashboard
+- **Then** the broker's logo is displayed in a prominent dashboard button/badge area
+- **And** the logo matches the broker's branding configured in the system
+
+### Scenario 2: Fallback
+- **Given** no broker logo is configured
+- **Then** a default icon or the broker's name initials are shown instead
+
+### Scenario 3: Consistent Placement
+- **Given** I navigate to any broker page (Market Overview, etc.)
+- **Then** the broker logo remains visible in the top navigation bar or sidebar
+- **And** clicking the logo returns me to the broker dashboard
+
+---
+
+## Design Notes
+- Coordinate with CS-1072 (broker landing page branding) to avoid duplication
+- The logo likely comes from broker profile settings (admin-configurable)
+- If the broker branding endpoint from CS-1072 is implemented, reuse it for this button/badge
+- Consider using the same logo URL but in a smaller format for the navigation button
+
+---
+
+## Related
+- **CS-1072** — Broker Dashboard landing page logo/branding (hero section)
+- Broker logo source: broker profile or user settings

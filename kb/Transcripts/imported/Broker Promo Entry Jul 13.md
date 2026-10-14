@@ -1,0 +1,851 @@
+---
+type: Document
+title: "Broker Promo Entry Jul 13"
+---
+
+[0:01:54] Md Mashiul Azam Chowdhury: Hi, Constance.
+[0:01:56] Constance Wolfe: Hey, FD, how's it going?
+[0:01:58] Md Mashiul Azam Chowdhury: Yeah, it's going well. How about you?
+[0:02:00] Constance Wolfe: I'm good. Yeah, late last— late night last night, early morning this morning.
+[0:02:06] Md Mashiul Azam Chowdhury: Oh, okay. Do you have any nice plans?
+[0:02:10] Constance Wolfe: Yeah.
+[0:02:11] Md Mashiul Azam Chowdhury: Yes. Yeah.
+[0:02:15] Constance Wolfe: Sorry.
+[0:02:18] Md Mashiul Azam Chowdhury: Hello.
+[0:02:19] Constance Wolfe: For the weekend?
+[0:02:21] Md Mashiul Azam Chowdhury: Oh, you actually break up a little bit.
+[0:02:25] Constance Wolfe: Oh, can you hear me okay?
+[0:02:27] Md Mashiul Azam Chowdhury: Oh, yeah.
+[0:02:28] Constance Wolfe: Let me switch. I might. Let me just check something. We just got a new internet.
+[0:02:35] Constance Wolfe: We got 2 new internets now. We just— oh, the other one's not available.
+[0:02:43] Constance Wolfe: Am I— can you hear me okay right now?
+[0:02:46] Md Mashiul Azam Chowdhury: Yes.
+[0:02:48] Constance Wolfe: Okay. The other one doesn't look like it's available.
+[0:02:51] Constance Wolfe: So if it keeps— if I keep cutting out, keep me posted. Okay.
+[0:03:00] Constance Wolfe: Let me— I'm just gonna jump in if that's okay with you guys. I'll share screen really quick.
+[0:03:04] Constance Wolfe: It might be easier. I was just trying to recall—
+[0:03:06] Md Mashiul Azam Chowdhury: Sure thing.
+[0:03:10] Constance Wolfe: I was trying to recall how we used to do promotional entries with the— remember when we did that a little bit?
+[0:03:19] Constance Wolfe: Sorry, wrong one.
+[0:03:20] Constance Wolfe: When we did that with Yin Yang, how they, they didn't really care about calculations for the trade spin, so they just wanted to Quick, easy way to get the promotions in their promotional management.
+[0:03:33] Constance Wolfe: Do you remember that?
+[0:03:37] Md Mashiul Azam Chowdhury: Yeah, yeah, yeah.
+[0:03:39] Constance Wolfe: Did we disable that whole implementation?
+[0:03:43] Md Mashiul Azam Chowdhury: Yes.
+[0:03:43] Constance Wolfe: Oh, shit. Okay. All right. So can you see my screen? Yeah.
+[0:03:52] Md Mashiul Azam Chowdhury: Okay.
+[0:03:53] Constance Wolfe: So this is for Jade Street is the brokerage firm.
+[0:03:57] Constance Wolfe: And we have a call with them on Monday to go over promotional planning.
+[0:04:03] Constance Wolfe: So the kind of the agreement that we have with them is that here in promotions, so they have 25 brands.
+[0:04:16] Constance Wolfe: We are going to give them unlimited retail promotion.
+[0:04:18] Constance Wolfe: So the same way that it is today, but then they want to go out and sell Upsell the features of the, you know, the calculations, like the what it really does, right?
+[0:04:34] Constance Wolfe: So they need to, they need to do it.
+[0:04:36] Constance Wolfe: They're gonna sell that to the brands as a value add, essentially.
+[0:04:41] Constance Wolfe: So then after 90 days, we're gonna turn, turn that off so that the brands don't have access to it unless they pay for it, right?
+[0:04:52] Md Mashiul Azam Chowdhury: I see.
+[0:04:53] Constance Wolfe: And then we can— yes, exactly. Exactly. So it occurred to me that— so here's an example.
+[0:05:04] Constance Wolfe: This is currently how they do their promotions.
+[0:05:09] Constance Wolfe: So see down here how there's like a tab for every one of their brands.
+[0:05:15] Constance Wolfe: And each brand, it looks like they— so you might recognize here's the national— oh, this looks almost identical to the notes section in our promo planning.
+[0:05:28] Constance Wolfe: And then that looks like that they have by retailer going across the month.
+[0:05:34] Constance Wolfe: And then so here's the retailer, and then these are the details, right?
+[0:05:38] Constance Wolfe: So I had Claude— I call Claudia because she's a girl to me. I had Claudia.
+[0:05:46] Constance Wolfe: Second, I had Claudia Summarize these. So by brand. So here's Aqua Copetica. There's this, all of hers.
+[0:06:01] Constance Wolfe: I must just have her highlighted. I don't have that one highlighted. So this is all of them.
+[0:06:06] Constance Wolfe: So what I did is I went through these and converted it to this.
+[0:06:17] Constance Wolfe: With the idea that it would be a lot easier.
+[0:06:23] Constance Wolfe: So when you're entering in a promotion, I'll just do this one.
+[0:06:30] Constance Wolfe: So when you're entering in a promotion, when you get to that one section, when you're entering in the— let's just do this one.
+[0:06:52] Constance Wolfe: We get to here.
+[0:06:55] Constance Wolfe: So my thought would be that I at least could make it easier for the brand, for the— so these— so Jade Street has all these reps, just like Yin Yang had all the reps.
+[0:07:08] Constance Wolfe: So my thought was that Now they could just kind of copy and paste this.
+[0:07:14] Constance Wolfe: Copy, go here, and then paste it right there and make it really easy, right?
+[0:07:20] Constance Wolfe: So, um, so that's essentially— what were you gonna say?
+[0:07:28] Md Mashiul Azam Chowdhury: Oh yeah, sorry about that. There's, there's too much noise here.
+[0:07:31] Constance Wolfe: Oh, um.
+[0:07:36] Constance Wolfe: So I thought, okay, that's gonna make it, you know, that's gonna make it a lot easier than them having to go through here, you know, and like, do, you know, so at least it's like essentially all they're gonna have to do is copy and paste into this, right?
+[0:07:56] Constance Wolfe: But then as you still kind of keep going with this, there are There's 200.
+[0:08:07] Constance Wolfe: There's going to be 200 of these entries, 200 promotions.
+[0:08:12] Constance Wolfe: Like if we took— if we take each brand and do each—
+[0:08:17] Md Mashiul Azam Chowdhury: Promotions or events?
+[0:08:21] Constance Wolfe: 200 promotions. Oh, because if they— so Hang on a second. Let me show you. I broke it down.
+[0:08:37] Constance Wolfe: They have it right here. Where did I put the place? This one. Oh, I, I thought I had that up already.
+[0:08:57] Constance Wolfe: Let me see. Something's opening up right now, but I think it's— oh, it's the same thing.
+[0:09:17] Md Mashiul Azam Chowdhury: Shoot.
+[0:09:18] Constance Wolfe: Anyway, there's Between all the brands. So see, here's brand Aqua, and then Bristol Aqua Earwax.
+[0:09:27] Constance Wolfe: So each one of these is one retailer.
+[0:09:30] Constance Wolfe: So if you were to add up all the brands and a promotion for each retailer per brand, there's 200 of them.
+[0:09:38] Constance Wolfe: I broke it down into a summary somewhere, but I lost it.
+[0:09:43] Constance Wolfe: So I am just— as I started entering these in yesterday, and It's gonna— it's a fairly tedious process, as we know, which is okay if the brand is gonna end up paying for it.
+[0:10:02] Constance Wolfe: But I just was wondering where— I couldn't remember how we used to do this to make it as easy as possible for the reps who are moving really fast, because if they're used to just putting in You know, very limited information.
+[0:10:20] Constance Wolfe: I couldn't remember, so that's why I wanted to ask you guys.
+[0:10:22] Constance Wolfe: I don't know if you had a chance to look at that before today's call or not.
+[0:10:31] Md Mashiul Azam Chowdhury: No, actually, but yeah, I guess I sort of understand where you're going.
+[0:10:39] Md Mashiul Azam Chowdhury: Um, well, in that case, Yeah.
+[0:10:44] Constance Wolfe: I was just gonna say the main thing I was just trying to ask is how we used to do it last time.
+[0:10:49] Constance Wolfe: And it sounds like we've completely disabled because remember, like, we used to have like the brands, the brokers had access, the brands didn't when we were with Ying Yang.
+[0:11:01] Constance Wolfe: And so I didn't know if you had those records anywhere. Bijoy, do you remember that?
+[0:11:10] Constance Wolfe: When we used to do that for yin yang.
+[0:11:18] Bijoy Nath: Yeah, I was, I was trying to remember, but it seems like I couldn't find any.
+[0:11:26] Constance Wolfe: Okay. So we used to have—
+[0:11:30] Bijoy Nath: yeah, yeah, go ahead.
+[0:11:33] Constance Wolfe: Go ahead.
+[0:11:34] Bijoy Nath: No, no, no, you go ahead.
+[0:11:35] Constance Wolfe: I was just gonna say we used to have some sort of implementation for yin yang to where I think like, I don't think they had to fill this part out.
+[0:11:48] Constance Wolfe: Or one of the things was like, well, we just need to make it so they can just zip through it and it's not going to calculate it.
+[0:11:56] Constance Wolfe: So we don't really need lift, we don't really need velocity, we don't really need to enter in, we don't need to enter in store count.
+[0:12:05] Constance Wolfe: It was like store counts, all of that kind of stuff because Ultimately, all we really needed to do was get the information into the planner, right?
+[0:12:14] Constance Wolfe: Like ultimately, we just were trying to get the information here.
+[0:12:22] Constance Wolfe: So if we go to the broker dashboard, we need to get the information in here as quick as possible with all of these details.
+[0:12:33] Constance Wolfe: But Since they weren't selling the services to the brands, the broker still needed all of this information in here.
+[0:12:44] Constance Wolfe: So we were we were trying to figure out a quick way to get this information in here without worrying about lift and store count and all that other stuff.
+[0:12:53] Constance Wolfe: And so we used to have this implemented.
+[0:12:54] Constance Wolfe: So that's why I called you this morning to see how we how we used to do that, and if those If that implementation could still be available.
+[0:13:04] Constance Wolfe: That's what I'm trying to find out today.
+[0:13:06] Bijoy Nath: Yeah.
+[0:13:07] Bijoy Nath: So about union actuals, that implementation, what I can remember is we talked about it for sure.
+[0:13:15] Bijoy Nath: That's what I can remember.
+[0:13:17] Bijoy Nath: But now just I checked our full module, you know, the emotional management module, and there's no such implementation right now.
+[0:13:26] Constance Wolfe: Okay. So we must have gotten rid of it. Okay.
+[0:13:28] Bijoy Nath: Yeah, most probably. But, and another thing is maybe we didn't even do that.
+[0:13:35] Constance Wolfe: Well, there were 2 things.
+[0:13:37] Constance Wolfe: We designed a whole new, we designed a whole new section for them, but we never built it because I found the old Figma.
+[0:13:49] Constance Wolfe: We were looking at Figma.
+[0:13:50] Constance Wolfe: We had all sorts of renderings done and essentially we were trying to recreate how they did it and we never did do that, but we did have an implementation for the brokers to where when they were going through the stepper, they didn't actually have to enter and store count velocities or lift because they weren't calculating for those things.
+[0:14:10] Constance Wolfe: So it made the stepper go a lot faster. That's what we did have.
+[0:14:15] Constance Wolfe: But then when we parted ways with them, I think we got rid of that implementation.
+[0:14:20] Constance Wolfe: It sounds like, because it sounds like you, you can't find it anymore.
+[0:14:24] Constance Wolfe: Because there was a brand trade spend. I don't know if you remember this.
+[0:14:28] Constance Wolfe: There was a brand trade spend, and then there was a broker trade spend.
+[0:14:32] Bijoy Nath: Oh, no.
+[0:14:34] Constance Wolfe: Okay, so we don't still have that.
+[0:14:37] Bijoy Nath: We planned about it, most probably designed it, but no, we don't have any.
+[0:14:41] Constance Wolfe: Well, we implemented it, but it sounds like we must have gotten rid of it because I definitely know that we implemented it.
+[0:14:48] Constance Wolfe: Yeah. Okay. Yeah, that's not an option anymore. Okay.
+[0:14:52] Constance Wolfe: So then the next question I have then is if I'm able to essentially, if I could break down, is there any way to upload promotions in your opinion without going through the step, or if we provide all the information?
+[0:15:11] Constance Wolfe: That would be another question.
+[0:15:14] Bijoy Nath: Right.
+[0:15:16] Bijoy Nath: So first thing first, what if there are calculated promotions and those non-calculated promotions both present for a specific brand.
+[0:15:27] Bijoy Nath: So in that case, like, how should we generate this report? Like, should there be 2 sections?
+[0:15:34] Constance Wolfe: Well, okay, so I'm in the promotional section right now for the broker.
+[0:15:41] Constance Wolfe: And this is the information that's coming through.
+[0:15:45] Bijoy Nath: Right, from different brands promotion, right?
+[0:15:47] Constance Wolfe: Exactly. So if you look here in the filter, we have all of this.
+[0:15:52] Constance Wolfe: This is the roll-up from all of the brands. So all of the brands promotions roll up into this module.
+[0:15:58] Constance Wolfe: That works great. There's no— yeah. So we already have this implementation. Yeah.
+[0:16:05] Bijoy Nath: Yeah. So, right.
+[0:16:13] Constance Wolfe: Oh, you put yourself on mute.
+[0:16:16] Md Mashiul Azam Chowdhury: There's a bit noise here.
+[0:16:18] Constance Wolfe: Oh, sorry. Okay.
+[0:16:20] Bijoy Nath: We're having a farewell party.
+[0:16:23] Constance Wolfe: Oh, I'm so sorry, you guys. I'll get you, I'll get you out of here quick. No, it's okay.
+[0:16:30] Bijoy Nath: So yeah, so now that we have our We have a new way of entering promotion in our system.
+[0:16:41] Bijoy Nath: So that means, uh, we will have 2 types of promotion, just for the sake of, you know, explanation of what I'm saying.
+[0:16:50] Bijoy Nath: So one type is, uh, where there will be calculation, and in another tab there won't be any calculation.
+[0:16:58] Constance Wolfe: Mm-hmm.
+[0:16:59] Bijoy Nath: So right now in our promotional management report.
+[0:17:03] Bijoy Nath: So we are showing the calculated ones by month because they have month start date and end date attached with each one of the events, right?
+[0:17:15] Bijoy Nath: And if you click on them, you will get the details of, of the events, right?
+[0:17:19] Constance Wolfe: Mm-hmm.
+[0:17:20] Bijoy Nath: But now that we also have another type of, uh, promotions where there will be no calculations at all, then Should we show those events month-wise in the same report, or should there, should there be like any different report for those types of promotion?
+[0:17:41] Constance Wolfe: So for in, in the promotional management, it doesn't— there's no calculation here, right, at all.
+[0:17:53] Constance Wolfe: It's just a report. It's just telling us Well, there's a little bit of a calculation.
+[0:17:58] Bijoy Nath: Yeah, a couple of columns, like, right, couple of columns are there which are calculated columns.
+[0:18:03] Bijoy Nath: For example, total case allowance, that's calculated.
+[0:18:06] Constance Wolfe: Yeah, you're right. Yeah, yeah, yeah, there is. Yeah, but it's not calculating a revenue.
+[0:18:14] Bijoy Nath: Revenue, right, exactly.
+[0:18:16] Constance Wolfe: It's, it's not calculating what's— so let's go ahead and open up this.
+[0:18:26] Bijoy Nath: Because I was thinking, you know, not calculating any of that. Yeah, yeah, right.
+[0:18:35] Bijoy Nath: So I was thinking that while creating the promotion itself, we should have a bypass way so that user won't have to enter anything.
+[0:18:48] Bijoy Nath: So they will just enter the promotion names, and they will, of course, select the banners and the retailers on that previous step.
+[0:18:56] Bijoy Nath: So that we offer all the columns in here.
+[0:19:00] Bijoy Nath: The values will be like 0 or empty, but the whole thing will look like exactly— the whole thing will look like this.
+[0:19:07] Bijoy Nath: So that's what I'm thinking.
+[0:19:08] Bijoy Nath: So if we do that, then we can incorporate those 2 tabs, promotion, into one.
+[0:19:12] Constance Wolfe: OK.
+[0:19:13] Bijoy Nath: The flow will be as it is. That's what I'm thinking.
+[0:19:16] Constance Wolfe: You're thinking keep the flow, keep the stepper, but bypass where you would enter in non-calculated promotions.
+[0:19:25] Bijoy Nath: That's it.
+[0:19:26] Md Mashiul Azam Chowdhury: Right.
+[0:19:26] Constance Wolfe: So that would be like, I'll go to zucchini.
+[0:19:34] Bijoy Nath: Okay. Well, that's production. Yeah, you should go.
+[0:19:38] Constance Wolfe: Yeah. So that would be Oops.
+[0:19:42] Bijoy Nath: Create. Yeah.
+[0:19:44] Constance Wolfe: Okay.
+[0:19:45] Bijoy Nath: So you'll give a name, right? User will select the retailer and vendor.
+[0:19:58] Constance Wolfe: This part is now pre-populated from distributor, but let's just So would I just do this, you know, this right here?
+[0:20:14] Constance Wolfe: Or would we need this? We don't. This is one piece we don't. So this part gives us this details.
+[0:20:23] Constance Wolfe: What would we do here? Anything different here?
+[0:20:26] Bijoy Nath: No. So now that we will use the calculation like for the non-calculated way.
+[0:20:34] Bijoy Nath: Then I think after selecting the retailers, there should be something, an indicator, which let the user only select the products without entering—
+[0:20:47] Constance Wolfe: Select the products, but they don't have to worry about these 2 things.
+[0:20:50] Bijoy Nath: Yeah, right.
+[0:20:51] Constance Wolfe: So they would just go boom, boom, boom, boom, boom.
+[0:20:54] Bijoy Nath: Right.
+[0:20:55] Constance Wolfe: Okay.
+[0:20:56] Md Mashiul Azam Chowdhury: Yeah.
+[0:20:56] Constance Wolfe: I'll just do this just to get us through this one.
+[0:21:02] Constance Wolfe: Okay, this is what takes— this takes quite a while.
+[0:21:08] Constance Wolfe: This one and the next step is what takes the longest.
+[0:21:10] Constance Wolfe: So here we would still need to put— go ahead, I'll let you talk.
+[0:21:16] Bijoy Nath: So in this case, what we can do is, for example, the whole UI for this specific thing will be different because we are not having any sorts of event lift.
+[0:21:28] Bijoy Nath: We are not having any sorts of a specific date.
+[0:21:30] Bijoy Nath: I think what we will have is most probably months because I have seen in your doc.
+[0:21:35] Bijoy Nath: Can you open your Excel sheet?
+[0:21:36] Bijoy Nath: Like there is this column like all months, January, February or something. There is this column.
+[0:21:42] Bijoy Nath: Yeah, run dates, for example.
+[0:21:45] Constance Wolfe: Run date. Yeah. I think they will need dates. I do think dates they probably do need.
+[0:21:51] Bijoy Nath: So start date and end date, right?
+[0:21:55] Bijoy Nath: So they will enter the event name and then they will— oh, they can add different, like, couple of dates in there.
+[0:22:05] Bijoy Nath: So for example, let's say the event name is Event 1, most probably.
+[0:22:10] Bijoy Nath: And right now in here we can only add one start date and end date with one event name.
+[0:22:19] Bijoy Nath: But in your situation, if there is the If like for a specific event, if we need multiple dates, for example, then we should let them— we should let the user do that as well in here.
+[0:22:33] Bijoy Nath: So if we— if you open the Excel again.
+[0:22:38] Md Mashiul Azam Chowdhury: Bijay, so is it going to be like one event will have multiple dates?
+[0:22:45] Bijoy Nath: Yeah. So for example, this one, 15% Y Unified plus You know, $0.10 per unit.
+[0:22:51] Bijoy Nath: See, these are the 2 same even names.
+[0:22:54] Constance Wolfe: Yeah, that does take a long time. Yeah, you're right. Yeah, yeah, yeah.
+[0:22:59] Constance Wolfe: This is the same with the— yeah, yeah, yeah, yeah. Okay.
+[0:23:02] Bijoy Nath: Because right now, as I've mentioned, there's no calculation involved.
+[0:23:06] Bijoy Nath: That means we can manage all the months and the dates on, like, on our own.
+[0:23:12] Md Mashiul Azam Chowdhury: So in that case, I have to select— yeah. What if I implement sort of like duplicate this date?
+[0:23:22] Constance Wolfe: Yeah, yeah, you could just— you could do this and go boom, boom, boom 3 times and then change the date, you're saying?
+[0:23:28] Md Mashiul Azam Chowdhury: Right, right, exactly. So duplicate this event and just change the user.
+[0:23:33] Constance Wolfe: That would be good for the other one too, honestly, because that, that would happen either way.
+[0:23:41] Constance Wolfe: Because what we end up having to do now is copy and paste, copy and paste, copy and paste.
+[0:23:44] Constance Wolfe: If I could just duplicate. Yeah.
+[0:23:48] Md Mashiul Azam Chowdhury: Anyway, then— Yeah, I'll—
+[0:23:49] Constance Wolfe: Don't worry about that now. Don't worry about— I don't want— don't worry.
+[0:23:52] Constance Wolfe: No, don't worry about that for now for this one unless you're— I'm trying to get— anyway, I didn't want to complicate things, but you're saying IFTTT.
+[0:24:05] Constance Wolfe: So this event, like he said, 15% OI plus 5% MCB is happening in February, and it's happening in August, and it might happen in December.
+[0:24:15] Constance Wolfe: No. And then here is a 25% MCB in June and the same one in September.
+[0:24:22] Constance Wolfe: So you would enter this for February 1st. It says all months.
+[0:24:28] Constance Wolfe: So this would be— yeah, so this would be 2/1 to 2/28, and then you would duplicate it again and then just change the dates.
+[0:24:35] Constance Wolfe: Okay.
+[0:24:36] Md Mashiul Azam Chowdhury: Yes, exactly.
+[0:24:37] Md Mashiul Azam Chowdhury: Okay, you just have to enter the first time, and then you can duplicate and then change the dates.
+[0:24:43] Constance Wolfe: And then the 25% MCB, there's 2 of those.
+[0:24:46] Constance Wolfe: You'd enter 25% MCB, and then would, would you— and then you would, and then you would hit duplicate.
+[0:24:53] Constance Wolfe: You would put in the dates maybe first, like August, and then hit duplicate, and then just change the dates, or either way.
+[0:25:00] Constance Wolfe: Yeah, OK, gotcha. OK, OK, OK, continue then.
+[0:25:06] Bijoy Nath: Yeah, so after entering all the events, so then I think that's it, right?
+[0:25:10] Bijoy Nath: There's no— there's no extra steps involved in here after entering all the name and date. OK.
+[0:25:22] Bijoy Nath: And by the way, for the EDLP types or the all years types or all months types, so we can have another like tick mark or something so that you don't have to enter duplicate months, like 12 times.
+[0:25:37] Bijoy Nath: I think that's why I don't like—
+[0:25:40] Constance Wolfe: You're talking about the duplicate?
+[0:25:42] Bijoy Nath: I mean, in the file, I have seen that for some event name, those events running actually for 12 months.
+[0:25:53] Constance Wolfe: Oh, the EDLPs?
+[0:25:54] Bijoy Nath: Yeah, all years, all months, or something like this. EDLPs, most probably.
+[0:25:58] Bijoy Nath: So we should have this some sort so that user can enter them as quickly as possible.
+[0:26:08] Constance Wolfe: Yeah, the EDLPs right now, if there's a high-low plus an EDLP, we have to do that after the trade spin is built.
+[0:26:16] Constance Wolfe: We can't— I don't think we can do an EDLP plus high-lows right now in this.
+[0:26:21] Bijoy Nath: But in this way, As we don't have to worry about any sorts of calculation, then why can't we enter the EDLP in here?
+[0:26:30] Constance Wolfe: Okay, okay, okay. Yeah, yeah, okay, I'm with you.
+[0:26:34] Constance Wolfe: Yeah, so if there's an EDLP, then you would just toggle this and then put that right there and still be able to add promotions below.
+[0:26:43] Bijoy Nath: Yeah, right.
+[0:26:44] Constance Wolfe: Yeah, yeah, I'm with you. Okay, yeah, okay.
+[0:26:46] Bijoy Nath: So after entering all the promotion names, then this is the next step. Just submit?
+[0:26:51] Bijoy Nath: Because is there any sorts of percentage values involved? Because I—
+[0:26:57] Constance Wolfe: Well, we need to enter in.
+[0:26:59] Constance Wolfe: Okay, so are you saying because we're putting— so this is outlining by item how much the discount is.
+[0:27:14] Constance Wolfe: So how do we indicate Are you saying here's where we would indicate that this is an MCB?
+[0:27:21] Constance Wolfe: So since we're saying it's an MCB here, we don't need to enter in the MCB?
+[0:27:31] Bijoy Nath: In the metrics page, actually, we don't need to enter any source of values because we need these values to calculate the promotions data properly.
+[0:27:43] Bijoy Nath: If you think that in the name you will mention, or the user will mention those indicators, then it's okay as well.
+[0:27:53] Constance Wolfe: I mean, this is the hardest part. This is definitely the thing that they're gonna sit on the longest.
+[0:27:58] Constance Wolfe: This is definitely the hardest part for them.
+[0:28:01] Bijoy Nath: Let's go to, let's go to the Excel sheet then. Let's see how they do it in there.
+[0:28:06] Bijoy Nath: So for an event in February, most probably, so approved Submission date. So ad fees, right?
+[0:28:16] Bijoy Nath: These ad fees, they will add ad fees? Well, or is it just for display purpose as well?
+[0:28:24] Constance Wolfe: I mean, they could just put ad fees in here because that's what they typically do.
+[0:28:30] Constance Wolfe: So it would be plus $400 TPR fee, right?
+[0:28:35] Bijoy Nath: So that's it. I mean, that's just for display purpose, right? There's no calculation involved.
+[0:28:39] Constance Wolfe: There's no calculation on that.
+[0:28:40] Bijoy Nath: So in that case, I think the next step would be just submit.
+[0:28:45] Constance Wolfe: Okay, so would that then, if we did it like this, would that produce the same thing here?
+[0:28:53] Constance Wolfe: Yeah, except for now let's—
+[0:28:54] Bijoy Nath: yeah, yeah, before coming into that, let's talk about what should be in the promotion details.
+[0:28:58] Bijoy Nath: Like if we now go to the details of any sorts of— from any one of the promotions.
+[0:29:05] Constance Wolfe: Oh wait, what do you want me to do?
+[0:29:07] Bijoy Nath: Promotion detail, like already created promotions. Let's go to the list.
+[0:29:11] Constance Wolfe: This one you're saying? Where do you want me to go? Sorry, I'm not clear.
+[0:29:17] Bijoy Nath: In the promotional planning list page.
+[0:29:22] Constance Wolfe: You mean where the sandbox where they're already created?
+[0:29:25] Bijoy Nath: Yeah.
+[0:29:26] Md Mashiul Azam Chowdhury: Yes.
+[0:29:27] Bijoy Nath: The promotions that are already created.
+[0:29:29] Constance Wolfe: Okay. Even here?
+[0:29:35] Bijoy Nath: Exactly.
+[0:29:36] Constance Wolfe: Right.
+[0:29:37] Bijoy Nath: Okay, so let's say we created one non-calculated, you know, promotions.
+[0:29:46] Bijoy Nath: So what should be in the details?
+[0:29:48] Constance Wolfe: Well, I don't think we need. So what that I can show you what one looks like. So let's do an.
+[0:29:55] Constance Wolfe: There is one in here that's just an EDLP, and I'll show you what it looks like.
+[0:30:02] Constance Wolfe: Who just has an EDLP, and that's O trader.
+[0:30:05] Md Mashiul Azam Chowdhury: Instruct Trader.
+[0:30:11] Constance Wolfe: So this is what it looks like without any calculation right now.
+[0:30:17] Constance Wolfe: It does calculate this because we put it in ADLP, but, um, I don't think we need this.
+[0:30:32] Bijoy Nath: Yeah, because it doesn't make sense because we want to actually—
+[0:30:35] Constance Wolfe: because we're not— yeah, there's no value, there's no purpose for it anymore.
+[0:30:39] Constance Wolfe: Purpose is really just to get the promos in here so that the brokers can still utilize this promotional management system.
+[0:30:48] Bijoy Nath: Yeah, I mean, yes, I mean, we can add those even name here. It's— that's not—
+[0:30:54] Md Mashiul Azam Chowdhury: that's so—
+[0:30:54] Bijoy Nath: that's not a big deal because As we are now creating the promotions with event name and with the proper start date and end date, so that means yes, we can add them into the promotional management calendar without any sorts of issues.
+[0:31:10] Constance Wolfe: But— And then the only other question I have is if they're manually entering it, is there an upload option as well?
+[0:31:16] Constance Wolfe: So the upload would be— so the template would be— I can see this is column A and column B and column C.
+[0:31:24] Bijoy Nath: Yeah, upload options. That would be another way to— you can do uploads as well.
+[0:31:32] Bijoy Nath: So, uh, what should— what the template would look like in that case?
+[0:31:36] Constance Wolfe: That's what I was saying. It seems like it would just be— yeah, this would be column A, event name.
+[0:31:42] Constance Wolfe: Column B would be start date. Column C would be end date.
+[0:31:48] Bijoy Nath: What about the retailer and the banner?
+[0:31:52] Constance Wolfe: Well, we've already done— oh, oh, I see what you're saying. Yeah, yeah, yeah, yeah.
+[0:31:56] Constance Wolfe: So yeah, we would just need to figure out now, because if we did banner name, but would you have to enter in all the SKUs?
+[0:32:17] Constance Wolfe: On an upload?
+[0:32:19] Constance Wolfe: I'm asking if we did an upload, you would do banner name and then would you do— would you have to—
+[0:32:27] Bijoy Nath: Product name as well? Or the UPC only would work? UPC would work better instead of product.
+[0:32:35] Bijoy Nath: But we can do with the product name as well because if you upload banner, then we have the retailer by default.
+[0:32:41] Bijoy Nath: Because once a banner is connected with only one retailer, and then you have to tell us the product for which product you're running promotions, right?
+[0:32:51] Constance Wolfe: Yeah, I wonder if they could do something like, they could do, they could go in here.
+[0:33:12] Constance Wolfe: What happens when they export? Oh, I wonder if they could— let's see what this looks like.
+[0:33:27] Constance Wolfe: Yeah, here they have everything. Oh, we would maybe have this be a UPC. They could export this UPC.
+[0:33:37] Constance Wolfe: Oops, sorry. ABC, and then they would have event. How would they do that? Event name.
+[0:33:46] Bijoy Nath: If you open your Excel sheet, you know, the one that you are using, I think they have a great example.
+[0:33:54] Bijoy Nath: Like, I've seen the list page. So if you go to the summary, I think, right on the template.
+[0:34:00] Md Mashiul Azam Chowdhury: Yeah.
+[0:34:01] Bijoy Nath: See? So we don't need the brand name because it's already in there. We're using brand-specific.
+[0:34:06] Bijoy Nath: So instead of retailer, if you get us the banner, that would be awesome.
+[0:34:09] Bijoy Nath: So banner month, instead of month, there could be a start date or end date, and then event name.
+[0:34:16] Bijoy Nath: And if you have the TPR fees, they can— we can combine the event name.
+[0:34:22] Bijoy Nath: Yeah, yeah, TPR fees with one another, and then we can use the whole sentence as event name.
+[0:34:29] Bijoy Nath: And then the run dates in there, that means started and the original notes. That's it.
+[0:34:33] Constance Wolfe: But this doesn't have the items.
+[0:34:35] Bijoy Nath: Oh, items.
+[0:34:36] Constance Wolfe: Yeah. That's why I was like it would be easy for them just to export from here.
+[0:34:44] Bijoy Nath: Yeah, there should be another column.
+[0:34:47] Constance Wolfe: They're not gonna want to have to chase down the each product.
+[0:34:50] Constance Wolfe: That's why I was wondering if this export is was kind of handy, right?
+[0:34:55] Constance Wolfe: Because when they go in here and export, it already gives them that information.
+[0:34:58] Bijoy Nath: So which export is this export?
+[0:35:01] Constance Wolfe: That was from retail.
+[0:35:04] Bijoy Nath: Retail. Retail APL, or—
+[0:35:08] Constance Wolfe: Yeah, it was in here is where I did it, right? I think I did it.
+[0:35:12] Md Mashiul Azam Chowdhury: Oh, for—
+[0:35:14] Bijoy Nath: oh, it's not killed behind the surface yet.
+[0:35:16] Constance Wolfe: Where did I get that though? I didn't export everything. I just exported—
+[0:35:22] Bijoy Nath: I think you exported everything.
+[0:35:24] Constance Wolfe: Did I export everything?
+[0:35:25] Bijoy Nath: Oh, I did.
+[0:35:29] Constance Wolfe: Yeah, you're right.
+[0:35:34] Constance Wolfe: Well, that could still be a way they could do it though, because they're— if this came from my retailer, so here they could export this, this would pre-fill that, and then they would just have to add, you know, those other event things.
+[0:35:49] Constance Wolfe: Yeah, they might want to delete this or what. Oh, I guess you could keep those in there.
+[0:35:58] Constance Wolfe: Or we don't need— we definitely don't need door count. But yeah, I mean, you could just ignore it.
+[0:36:05] Bijoy Nath: So we could have another option in the export, like export it for promotional.
+[0:36:10] Constance Wolfe: Yeah, export. Yeah, exactly. Yeah.
+[0:36:13] Bijoy Nath: So if you go back to the event list, right?
+[0:36:18] Constance Wolfe: Go back to the event list.
+[0:36:19] Bijoy Nath: Yeah, you know, in here. So in here it says just export.
+[0:36:23] Bijoy Nath: So instead of just export, you can— we can have another button which we'll call Export for Commercial Planning.
+[0:36:29] Constance Wolfe: Mm-hmm.
+[0:36:30] Bijoy Nath: So if we do that, then instead of product name, we'll have the UPC, and the door count won't be there.
+[0:36:36] Bijoy Nath: And we'll have the banners, retailers, product UPC, and other 3 columns as well with the header, but the value will be empty.
+[0:36:46] Bijoy Nath: So user will just enter in the value and give me this.
+[0:36:49] Constance Wolfe: And then after finishing, So you're saying that export, you would include the UPC number here? Yeah.
+[0:36:55] Bijoy Nath: Yeah.
+[0:36:56] Constance Wolfe: Yeah.
+[0:36:56] Bijoy Nath: Okay.
+[0:36:58] Constance Wolfe: That's pretty slick.
+[0:37:00] Constance Wolfe: So the process would be they'd go in here, click export, fill out this information, and then—
+[0:37:11] Bijoy Nath: And then put the data into the promotional plan page.
+[0:37:14] Constance Wolfe: Yeah. And then— Would they just do it and do the import here?
+[0:37:23] Bijoy Nath: I would suggest, you know, let's keep them into the promotional plan.
+[0:37:27] Md Mashiul Azam Chowdhury: Okay.
+[0:37:28] Constance Wolfe: Okay. Because then they would go here and do the upload automatically.
+[0:37:33] Md Mashiul Azam Chowdhury: Yeah.
+[0:37:33] Bijoy Nath: We'll have them automatically.
+[0:37:34] Constance Wolfe: So if they do it here though, what would it—
+[0:37:38] Md Mashiul Azam Chowdhury: would they have to import them by the brands? Or would the brand details already be in the file?
+[0:37:52] Constance Wolfe: You're saying because we're in the brand now, Ifti?
+[0:37:56] Md Mashiul Azam Chowdhury: Yeah, exactly.
+[0:37:57] Constance Wolfe: Yeah, I think we keep it at the brand level, but I, I think we just said that we're not going to create this.
+[0:38:10] Constance Wolfe: I'm sorry, I'm in the wrong place. I thought I was in promos. Sorry, my bad. Okay, here.
+[0:38:18] Md Mashiul Azam Chowdhury: Yeah, they don't need to— I mean, not create, but there will be an import maybe here.
+[0:38:29] Md Mashiul Azam Chowdhury: And here they will import that file.
+[0:38:34] Constance Wolfe: What about What about— so I'm in brand, right? What about here?
+[0:38:42] Constance Wolfe: Because this is ultimately what we're trying to populate at the brand.
+[0:38:48] Md Mashiul Azam Chowdhury: Yeah.
+[0:38:48] Bijoy Nath: So, right. I can tell you why. I think if you can explain it, I'll suggest it to us. Yeah.
+[0:38:59] Bijoy Nath: You're saying something?
+[0:39:01] Md Mashiul Azam Chowdhury: Yeah, uh, what, uh, I was trying to say is that, I mean, there are 2 types of promos, right?
+[0:39:09] Md Mashiul Azam Chowdhury: One is, uh, sandbox and one is, uh, approved ones.
+[0:39:14] Md Mashiul Azam Chowdhury: So are they going to be, uh, approved from the get-go, or— Uh, because we are—
+[0:39:23] Constance Wolfe: yeah, I think they would be approved from the get-go because there's no sandboxing for these Promos, right?
+[0:39:29] Constance Wolfe: We're not testing to see do they fit into my budget.
+[0:39:34] Md Mashiul Azam Chowdhury: Okay, then there's another issue here.
+[0:39:36] Md Mashiul Azam Chowdhury: So if they are in the in the approved promotions in the get-go, would I mean if and if they try to edit them or something, they won't be able to because there is.
+[0:39:55] Md Mashiul Azam Chowdhury: sandbox related to them. So, and I mean, so on.
+[0:40:02] Md Mashiul Azam Chowdhury: So that's why I think Bijoy is also saying that we should let them add here and maybe from here we can approve them or I don't know.
+[0:40:15] Bijoy Nath: Okay.
+[0:40:15] Md Mashiul Azam Chowdhury: But approving them might be tedious work here.
+[0:40:21] Md Mashiul Azam Chowdhury: But what we can do is While they're importing them, we would have a model that, do you want to approve them also?
+[0:40:36] Md Mashiul Azam Chowdhury: So they will be added in the sandbox and in the approved section as well.
+[0:40:42] Constance Wolfe: Well, and what if you— what if they landed here and you could select all and approve all at once?
+[0:40:50] Md Mashiul Azam Chowdhury: Yeah, that is possible.
+[0:40:52] Md Mashiul Azam Chowdhury: But I mean, it's like they would have to select— I mean, let's say here, if they import it here, there are some items that you don't want to be approved from here.
+[0:41:09] Md Mashiul Azam Chowdhury: So once they mix, what if they get mixed up with the old ones?
+[0:41:16] Md Mashiul Azam Chowdhury: So that's why, uh, you wanted to say something.
+[0:41:26] Bijoy Nath: Yeah, right. So what I was going to say is, uh, about the promotional management report functions.
+[0:41:35] Bijoy Nath: We have, we have a beautiful flow right now.
+[0:41:39] Bijoy Nath: So for example, but the flow is So you first enter the promotion into sandbox and some people approve that promotion, then the promotion goes into a brand-approved.
+[0:41:51] Bijoy Nath: And if a promotion exists in the brand-approved and we can— so then we can see those events in the promotional management.
+[0:41:59] Constance Wolfe: Okay, got you. That's the way. Yep.
+[0:42:01] Bijoy Nath: So what we can do in this situation is instead of having the upload in the sandbox, we can have the upload in the brand network directly.
+[0:42:13] Bijoy Nath: And also, now that we know there's 2 types of promotions, so one will have calculations and another won't have calculations.
+[0:42:22] Bijoy Nath: So in the brand network promotion, depending on the type, we can make promotions editable.
+[0:42:28] Bijoy Nath: So for example, if there— so for example, if you click in there, you know, the first promotion, if you click in there, So that's a promotion which have calculation.
+[0:42:36] Bijoy Nath: That means user won't be able to edit this.
+[0:42:39] Bijoy Nath: Now if you go back to the list again, and let's say the second one is a non-calculated event list, that promotion, and then user can change the event name.
+[0:42:50] Bijoy Nath: And yeah, and they started and ended if they want.
+[0:42:54] Bijoy Nath: And that changes will reflect onto the promotional management automatically.
+[0:43:00] Bijoy Nath: So that's the easiest solution, like, I can think of right now.
+[0:43:06] Bijoy Nath: But I think we should add the promotions in here.
+[0:43:11] Constance Wolfe: Okay, that makes sense.
+[0:43:14] Constance Wolfe: And so the ones that don't have calculations, they— for the UI, we probably don't need all of this, right?
+[0:43:23] Constance Wolfe: We probably just need— you'll just see this right here.
+[0:43:27] Bijoy Nath: Exactly, exactly.
+[0:43:28] Constance Wolfe: So that way, at least when you look at it, you'll know instantly that it's calculated or not calculated, right?
+[0:43:35] Bijoy Nath: Right, right. So we can have a small flag in here which says either it's editable or not editable.
+[0:43:42] Bijoy Nath: And user will know eventually because—
+[0:43:44] Md Mashiul Azam Chowdhury: well, in that case, what if we just add another section in the promotional planning?
+[0:43:55] Md Mashiul Azam Chowdhury: I mean, currently we have— Constance, could you please click on the promotional playing on the header?
+[0:44:03] Md Mashiul Azam Chowdhury: Yeah, yeah. So we have approved promotions, trade sprint sandbox, and promotional calendar.
+[0:44:09] Md Mashiul Azam Chowdhury: What if right after trade sprint sandbox or right above a trade sprint sandbox we add something non-calculative approved promotions?
+[0:44:21] Md Mashiul Azam Chowdhury: Only that will have the list of the non-calculated.
+[0:44:25] Bijoy Nath: That will separate the things, right?
+[0:44:28] Constance Wolfe: And then you would have something like this, and then when they open it, they'll just see this, right?
+[0:44:34] Bijoy Nath: That's right. And they can edit the events in here.
+[0:44:37] Md Mashiul Azam Chowdhury: Yeah. And it will also push to the promotional calendar.
+[0:44:42] Bijoy Nath: Yeah, right.
+[0:44:45] Constance Wolfe: All right, so the brand Would look— see this, they'll see approved, sandbox, and just entries, or I'll think of the word, but let's just call it like simple entries.
+[0:45:03] Md Mashiul Azam Chowdhury: Yeah.
+[0:45:03] Constance Wolfe: Yeah.
+[0:45:04] Constance Wolfe: And so then when they— if they most likely, if they have simple entries, they wouldn't have the other 2.
+[0:45:09] Constance Wolfe: Yeah, I think that works. That's a really good idea. Okay, I like it.
+[0:45:26] Bijoy Nath: So what will happen, you know, right now we are getting the data from the promotion in the promotional management report from two sources.
+[0:45:34] Bijoy Nath: One is either sandbox and one is brand approved. So on my end, you know, I will.
+[0:45:40] Bijoy Nath: save the same info, save all the information in the same table so that in the promotional management report, data will get populated properly.
+[0:45:52] Bijoy Nath: There won't be any sorts of query issues or any sorts of event issues at all here.
+[0:46:00] Constance Wolfe: If at some point we do this simple entry, And they decide that, oh, we do want to make calculations, would they have to start all over, or would they take that then and then transfer it to the sandbox?
+[0:46:18] Constance Wolfe: Or they probably— they could make a copy of it maybe or something, or would they just start all over, do you think?
+[0:46:25] Constance Wolfe: Or could they utilize some of the data that's already been entered?
+[0:46:29] Bijoy Nath: Right.
+[0:46:30] Md Mashiul Azam Chowdhury: I mean, we might be able to implement, for example, Copy to sandbox or something like that feature.
+[0:46:38] Bijoy Nath: I can think of something. For example, you know, before copy to sandbox, we need the values, right?
+[0:46:44] Bijoy Nath: That's important because without the values, what we'll do in the sandbox, it will get error or something because there's calculation involved.
+[0:46:51] Bijoy Nath: So let's say this page, it's the list of our entries, right?
+[0:46:54] Bijoy Nath: So let's say the first one, we go to the first one, then we will have Then all they see is this.
+[0:47:02] Bijoy Nath: Right.
+[0:47:02] Constance Wolfe: Yeah.
+[0:47:02] Bijoy Nath: And in here, we'll have a button like—
+[0:47:07] Md Mashiul Azam Chowdhury: Use it to create new—
+[0:47:09] Bijoy Nath: Exactly. Add calculations or something.
+[0:47:11] Md Mashiul Azam Chowdhury: Yeah.
+[0:47:11] Bijoy Nath: So if we click on Add Calculations, then all the 4 steppers will be automatically populated, or at least 3 steppers, because we have the products.
+[0:47:19] Bijoy Nath: We have—
+[0:47:20] Md Mashiul Azam Chowdhury: Yeah. Except for the 4th step, you'd just have to enter them.
+[0:47:25] Constance Wolfe: It would just be the metric step. It would just be the last step, I think. Yeah.
+[0:47:29] Md Mashiul Azam Chowdhury: Right.
+[0:47:29] Constance Wolfe: Yeah, well, we don't have lift though. We don't have store count.
+[0:47:33] Constance Wolfe: I think we skipped store count and lift. Yeah, I was—
+[0:47:36] Md Mashiul Azam Chowdhury: I mean, uh, I think we will have all the 4 steps there, but, uh, uh, some of the data we have— yeah, the data we, we already have will be selected or populated, and the lift and the other stuff will be empty, and user can enter.
+[0:47:58] Constance Wolfe: Okay, that makes sense.
+[0:48:03] Constance Wolfe: So, um, just be— just because we're right here and we're talking about all of this, because in the roadmap there are some things.
+[0:48:14] Constance Wolfe: So from— since we're— so I'm gonna stop there and say this sounds like a great plan.
+[0:48:22] Constance Wolfe: for the E's, the 2 options to calculate or not calculate. So full stop there.
+[0:48:32] Constance Wolfe: But because we're talking about this and it's coming up in the roadmap, the other thing that we're talking about doing here eventually is actualizing And so see how this event lift is right here?
+[0:48:55] Md Mashiul Azam Chowdhury: Mm-hmm.
+[0:48:56] Constance Wolfe: Right now what I'm doing to actualize for Bubbies— so if I go to Bubbies, see how this says actual through June?
+[0:49:09] Bijoy Nath: Mm-hmm.
+[0:49:11] Constance Wolfe: So what we're doing— see, there's Denver. Here's the original Denver.
+[0:49:16] Constance Wolfe: And then, and then we copied that so that we have record of the original.
+[0:49:24] Constance Wolfe: We copied that, and then we said we're going to actualize this through June.
+[0:49:28] Constance Wolfe: And what we did is we went down in here, and from a different data source, it was spends.
+[0:49:35] Md Mashiul Azam Chowdhury: Yeah.
+[0:49:36] Constance Wolfe: We, we entered in The actual lift and the actual velocity and the actual store count.
+[0:49:47] Constance Wolfe: So these are slightly different than the original.
+[0:49:51] Constance Wolfe: So eventually what we're going to have to do is figure out how we can— My thought was I made a mockup is that, yeah, I had like the original and then Anyway, I— we can talk about that at another time.
+[0:50:11] Constance Wolfe: But since we're talking about making some changes in TradeSpin, you know how I don't want— I just want you to be aware that we may want to figure out how we can— you might want to have that in your head now as you build.
+[0:50:26] Bijoy Nath: Yes.
+[0:50:27] Constance Wolfe: As we work on new implementations.
+[0:50:30] Bijoy Nath: Okay.
+[0:50:31] Constance Wolfe: So that's what we're doing for right now.
+[0:50:33] Bijoy Nath: The lift will come from syndicated data screens, right?
+[0:50:36] Constance Wolfe: It is, but we have to calculate it. So I had Claude calculate it for me.
+[0:50:44] Bijoy Nath: So let me show you.
+[0:50:44] Constance Wolfe: Yeah, I'll show you how we did it.
+[0:50:49] Constance Wolfe: But I had— what I did is I took the spins, I took this data here, the data from here, and I put it in Claude.
+[0:51:01] Bijoy Nath: For each product, we have the item ranking report.
+[0:51:07] Constance Wolfe: Yeah, we have, we, we have the data in here.
+[0:51:13] Constance Wolfe: So I don't know if we want to go down that rabbit hole, but the only reason why I bring it up is just because whenever you're working on that module, I just wanted you to be aware of there's a couple things.
+[0:51:25] Constance Wolfe: There's going to be things exactly you have to be aware of in case you close the loop on something and it makes it harder to go back later.
+[0:51:32] Constance Wolfe: So that's the only reason why I say that.
+[0:51:34] Bijoy Nath: And another thing I, I really want to mention it because what you just did, you know, there is the actual promotion was Denver 2026 DC, the first one, and you created the second one and just changed the event lift, right?
+[0:51:51] Constance Wolfe: That story I staged, there are 3 things I changed. I changed, um, Store count, stores.
+[0:52:00] Constance Wolfe: Oh yeah, event lift and weekly sales. These 3 things right here is what—
+[0:52:04] Bijoy Nath: honestly, we should maintain these sorts of edits by, you know, like version-wise.
+[0:52:14] Bijoy Nath: For example, we have the Apps Code Denver 2026 DC. That's the— yeah, that's the original version.
+[0:52:21] Bijoy Nath: And we should be able to actually create another version from the existing one, just so that you can change the stores and all the other things you want to change.
+[0:52:33] Bijoy Nath: And that version will be maintained separately under the same promotion.
+[0:52:37] Bijoy Nath: You know, I'm talking about versioning.
+[0:52:39] Bijoy Nath: So you can work with any one of the versions whenever you want.
+[0:52:43] Bijoy Nath: And while pushing into the app, you can choose which version you want to push to the app.
+[0:52:49] Constance Wolfe: Yeah.
+[0:52:49] Bijoy Nath: So that's how it should work.
+[0:52:51] Constance Wolfe: Yeah.
+[0:52:51] Bijoy Nath: Yeah, yeah.
+[0:52:52] Constance Wolfe: I mean, I think eventually, I think eventually then the next step after we actualize it then is to have, and I've got some mockups reporting on planned versus actual.
+[0:53:08] Constance Wolfe: Like I've got, you know, a few mockups.
+[0:53:10] Constance Wolfe: We won't go into that right now, but yeah, eventually that's what we're going to need to have.
+[0:53:14] Constance Wolfe: So Okay.
+[0:53:18] Constance Wolfe: Well, so it doesn't feel like we're talking about a lot of huge modifications with the simple promo entry.
+[0:53:30] Constance Wolfe: I'm just going to call it that for now.
+[0:53:33] Bijoy Nath: Yeah, right.
+[0:53:34] Constance Wolfe: Is that a huge lift or medium lift or what? Like, what are your thoughts?
+[0:53:46] Bijoy Nath: Yeah, my thoughts backend-wise is medium lift because we are doing just an import, that's it.
+[0:53:55] Bijoy Nath: And another thing we're doing is we are entering some of the promotional events which already we have the implementation of the existing ones, so I have to modify it for the new ones.
+[0:54:05] Bijoy Nath: So these 2, and I don't have to work on the promotional management, I'm guessing, because The whole thing will eventually flow to the promotional management on its own.
+[0:54:15] Bijoy Nath: So it's a medium sort of work.
+[0:54:18] Constance Wolfe: Okay, so let's just recap really quick. So the manually— the manual entry is going to—
+[0:54:30] Bijoy Nath: I'm in Bubbies.
+[0:54:33] Constance Wolfe: Let me get out of Bubbies.
+[0:54:41] Bijoy Nath: And by the way, Constance, one more thing I think I should mention before rather than after, which is when you are entering manual entries, you are entering the event names, right?
+[0:54:53] Bijoy Nath: So for a group of events, there should be a promotion name as well.
+[0:55:00] Constance Wolfe: Yes.
+[0:55:01] Bijoy Nath: Right.
+[0:55:02] Constance Wolfe: This, you mean this right here?
+[0:55:03] Bijoy Nath: Yeah, right, right.
+[0:55:04] Constance Wolfe: Yeah.
+[0:55:05] Bijoy Nath: So in the new entry section, there will be something to create a promotion name and name.
+[0:55:12] Bijoy Nath: Yeah, right.
+[0:55:13] Md Mashiul Azam Chowdhury: Yeah, it will ask for a name and then upload.
+[0:55:16] Bijoy Nath: And then you can upload the data. Yeah, just, just, yeah. And the information.
+[0:55:21] Constance Wolfe: Okay, so one way we talked about doing this is going to retailers.
+[0:55:30] Constance Wolfe: Doing an export, updating the template with the event name. We talked about— let's see.
+[0:55:44] Constance Wolfe: So it'll do something like this, and then we enter event name, start date and end date, start and end.
+[0:55:55] Constance Wolfe: Right. And then that's going to get uploaded to the sandbox, I think we said, right?
+[0:56:05] Constance Wolfe: Or is this— where do we upload it?
+[0:56:07] Bijoy Nath: Yeah, in our new section, you know, the simple entry section.
+[0:56:14] Bijoy Nath: So if you go to the promotional planning page in the sandbox, maybe. This list page. Yeah.
+[0:56:25] Bijoy Nath: So if you just click on the—
+[0:56:26] Constance Wolfe: oh, I keep thinking this is the same thing. Sorry, I keep— I'm in the wrong place.
+[0:56:30] Md Mashiul Azam Chowdhury: Yeah.
+[0:56:31] Constance Wolfe: Here.
+[0:56:32] Md Mashiul Azam Chowdhury: OK.
+[0:56:32] Bijoy Nath: So right. Yeah. So it will be called as what I've mentioned, like simple entries or something.
+[0:56:37] Constance Wolfe: And we upload here.
+[0:56:40] Bijoy Nath: Yeah. If you click on the new promotion, add new promotion. Add new promotion.
+[0:56:48] Bijoy Nath: So now it's just saying you to enter the promotion title.
+[0:56:53] Bijoy Nath: So for the simple entries, with the promotion title, there will be another section where you can upload the file as well.
+[0:57:01] Bijoy Nath: OK, so either you can upload the file or you can go ahead without uploading the file.
+[0:57:06] Bijoy Nath: That means you will create manually, like select the banners, trailers, and entering the event names.
+[0:57:12] Constance Wolfe: Okay. And then uploader manual. And then if it's manual, then it's gonna look like—
+[0:57:18] Bijoy Nath: Yeah, you can go in. Yeah, right. This. Yeah, right. And then it'll go choose the retailer.
+[0:57:29] Constance Wolfe: Yeah, it'll go here, here.
+[0:57:35] Bijoy Nath: And you don't have to—
+[0:57:36] Constance Wolfe: they're just gonna select. Yeah, they're just gonna select.
+[0:57:39] Bijoy Nath: The product list.
+[0:57:41] Constance Wolfe: We're in step 2. Click products. And then—
+[0:57:54] Bijoy Nath: They only have to enter—
+[0:57:55] Constance Wolfe: I know they don't have to do that, but I'm just trying to get to the next step.
+[0:57:59] Constance Wolfe: And then they'll go to events.
+[0:58:00] Bijoy Nath: Events, right.
+[0:58:04] Constance Wolfe: And then that's it, right? So they enter event name and They'll just have to create.
+[0:58:11] Bijoy Nath: Yeah. And we will have some tricks in here so that you don't have to write again and again. Yeah.
+[0:58:18] Bijoy Nath: You know, that's totally a front-end thing. So I think it feels very good. So yeah. OK.
+[0:58:23] Bijoy Nath: After entering all the events, then just click results— or sorry, submit. And then done.
+[0:58:29] Bijoy Nath: The promotion will be created, and it will be pushed into the promotional management on its own.
+[0:58:32] Constance Wolfe: Yeah, that's great. That's great. Okay, um, so, um, medium lift means what as far as hours?
+[0:58:46] Constance Wolfe: Would you just kind of give me a ballpark? Can you give me a ballpark hours? Yeah, anyway.
+[0:59:00] Constance Wolfe: Is this a week? Is this a half a week?
+[0:59:05] Bijoy Nath: Yeah, I was thinking so. There will be a call with filters.
+[0:59:25] Bijoy Nath: Like 2 or 3 days, maybe a week most.
+[0:59:31] Bijoy Nath: I mean, if I say like maximum a week, maybe not more than a week.
+[0:59:37] Bijoy Nath: Honestly, it shouldn't, it shouldn't take a whole week. It should take like—
+[0:59:41] Constance Wolfe: Oh, and you've got Ornov too. Is this between you and Ornov working on it?
+[0:59:47] Md Mashiul Azam Chowdhury: I was, I was thinking, actually, I don't think 2, yeah, 2 backend developers can work at it at a time.
+[0:59:56] Bijoy Nath: Yeah, because it's really simple.
+[0:59:58] Bijoy Nath: There's just one GET API to get the list, and another API is for get the details, and 2 APIs for create and update.
+[1:00:09] Bijoy Nath: That's it. So 4 APIs. So most, most probably it will take like 2 and a half or 3 days.
+[1:00:17] Bijoy Nath: But I was saying a week just to be safe, nothing else.
+[1:00:21] Constance Wolfe: What about the front end and testing?
+[1:00:25] Md Mashiul Azam Chowdhury: Well, after the backend is done, uh, I think in the front end it will take like 2 or 2 and a half days.
+[1:00:36] Md Mashiul Azam Chowdhury: And testing, I don't think it will take, uh, more than 1 day, maybe half a They should surprise.
+[1:00:46] Md Mashiul Azam Chowdhury: Not sure.
+[1:00:48] Constance Wolfe: Okay, so a week it sounds like.
+[1:00:53] Md Mashiul Azam Chowdhury: Yeah.
+[1:00:53] Bijoy Nath: Okay.
+[1:00:55] Constance Wolfe: Okay. Good to know. Thank you. All right. Let me.
+[1:01:04] Constance Wolfe: I'm trying to figure out how I'm gonna handle that call on Monday.
+[1:01:10] Constance Wolfe: So I I just need to figure that out on my own. So I'll. I'll think about that. Yeah, all good.
+[1:01:18] Constance Wolfe: Okay, awesome. Thank you guys.
+[1:01:23] Constance Wolfe: Is there anything else while you have me on any of the other projects you're working on?
+[1:01:28] Md Mashiul Azam Chowdhury: Constance? Yeah, so currently we are working on the brand report.
+[1:01:34] Md Mashiul Azam Chowdhury: So as I've mentioned in the mail, we might not be able to completely finish that by Monday, but, uh, we'll try to make it so that, uh, you are able to present it to the client.
+[1:01:51] Constance Wolfe: Okay.
+[1:01:52] Md Mashiul Azam Chowdhury: So yeah, I, uh, I'll give you, uh, an, uh, an email, uh, on what you can show and what are upcoming and so on.
+[1:02:03] Constance Wolfe: Okay, that would be great. And on that, go ahead.
+[1:02:07] Md Mashiul Azam Chowdhury: Yeah. And also, yeah, go ahead.
+[1:02:10] Constance Wolfe: Well, before you move on from brand report, I was talking to one of our clients yesterday and is there, do you know, and I can show it to you if you don't know from the memory, is there, can we export that, the brand report?
+[1:02:25] Constance Wolfe: Is there any export option on that?
+[1:02:30] Md Mashiul Azam Chowdhury: Brand report.
+[1:02:32] Constance Wolfe: Yeah, so I can share. Yeah, I can share my screen if it's easier to look at.
+[1:02:40] Constance Wolfe: Do you want to share my screen?
+[1:02:43] Md Mashiul Azam Chowdhury: Uh, yeah, yeah.
+[1:02:45] Constance Wolfe: Let me pull it up. Here it is. I'll share.
+[1:02:57] Constance Wolfe: Okay, so
+[1:03:08] Constance Wolfe: Here, if they for whatever reason wanted to export this, is that gonna be an option?
+[1:03:13] Constance Wolfe: Is that in your—
+[1:03:16] Md Mashiul Azam Chowdhury: Oh, yeah. Okay.
+[1:03:20] Bijoy Nath: So, yeah, exporting the brand report wasn't in our Okay, task list.
+[1:03:28] Bijoy Nath: But if you are saying that
+[1:03:30] Bijoy Nath: we'll inform Arnab to add
+[1:03:34] Md. Tauhidur Rahman: task
+[1:03:34] Bijoy Nath: list of
+[1:03:35] Bijoy Nath: the
+[1:03:36] Md. Tauhidur Rahman: brand.
+[1:03:38] Bijoy Nath: And
+[1:03:39] Bijoy Nath: by the way,
+[1:03:40] Bijoy Nath: by
+[1:03:41] Bijoy Nath: export, you mean exporting the existing columns, like, right? What we are seeing?
+[1:03:46] Constance Wolfe: Yeah, they would just basically— this would just go to a spreadsheet with whatever's on it. Yeah.
+[1:03:52] Constance Wolfe: Okay.
+[1:03:52] Bijoy Nath: Yeah.
+[1:03:52] Constance Wolfe: Okay.
+[1:03:52] Bijoy Nath: This can be done. That's not a big deal. We just have to create a ticket and implement it.
+[1:04:00] Constance Wolfe: And then they also asked for an activity log. So I'm assuming it might be similar.
+[1:04:10] Constance Wolfe: There was a SYN log. See the SYN log?
+[1:04:14] Constance Wolfe: They were saying that like when you go to a lot of websites or they have like these other websites, Places that they go, and anytime there's like a change made, it logs it.
+[1:04:25] Constance Wolfe: And I was like, are you sure you want that?
+[1:04:26] Constance Wolfe: And they're like, yeah, we could have a log sheet of updates.
+[1:04:32] Constance Wolfe: Then I think they wanted— yeah, I— anyway, because they were like, I don't want to have to go in here and update the date every time I make a change.
+[1:04:39] Constance Wolfe: It'd be nice if there was a log sheet. And I was like, oh dear Lord. But I told them I would ask you.
+[1:04:46] Bijoy Nath: Okay. So that—
+[1:04:48] Constance Wolfe: I guess it would be similar to this.
+[1:04:50] Constance Wolfe: I didn't know if there was an off-the-shelf activity log implementation that was easy or that had to be built or what that looked like.
+[1:04:58] Bijoy Nath: Right. So the whole category section is huge. Exactly for which part you need the activity logs? Like—
+[1:05:07] Constance Wolfe: It would be the brand. Who is uploading?
+[1:05:12] Bijoy Nath: Oh, just for the brand records.
+[1:05:15] Constance Wolfe: I think they were saying, like, when I make a change here to here, that it logs that whoever was logged in and made that change, it'll say it would be based on the login.
+[1:05:24] Constance Wolfe: If they did this, it would just log that brand response was changed by Melody on this date or whatever.
+[1:05:29] Constance Wolfe: It's like anything that's updated here. I was in my mind, I was like, oh my God.
+[1:05:33] Constance Wolfe: But then they were like telling me all these examples of all these portals that they go to and they like that.
+[1:05:39] Constance Wolfe: They can see who made changes and when.
+[1:05:42] Bijoy Nath: Right.
+[1:05:42] Constance Wolfe: And I could see actually if multiple, if multiple users are in a single, you know, like if Jade Street has 15 reps that are in here moving things around.
+[1:05:54] Bijoy Nath: Yeah, we need, we need to know.
+[1:05:55] Constance Wolfe: Yeah, it would be nice to see who's making changes. Yeah. So I was like, oh, I get it now.
+[1:06:00] Constance Wolfe: At first I was like, no. And then I was like, okay, yeah, you're right. It probably would be good.
+[1:06:05] Bijoy Nath: So if we hit log, should this be row-wise?
+[1:06:10] Constance Wolfe: Yeah, I mean, I think so. Like, if I went in here and changed the status, yeah, it seems like—
+[1:06:18] Md Mashiul Azam Chowdhury: Which brand, which retailer.
+[1:06:21] Bijoy Nath: We'll have another column which will have the logs for specific row.
+[1:06:29] Constance Wolfe: So you're saying at the end here, it would have a log like each—
+[1:06:33] Md Mashiul Azam Chowdhury: No, no, no, Bijoy. I think we can have— yeah, history.
+[1:06:38] Md Mashiul Azam Chowdhury: Just it will say that this brand's— this was changed or something.
+[1:06:47] Constance Wolfe: Sort of like what we have based on their login, I think.
+[1:06:50] Md Mashiul Azam Chowdhury: Right, right.
+[1:06:51] Bijoy Nath: A notification bar type, right?
+[1:06:54] Md Mashiul Azam Chowdhury: No, not notification, just log. For example, what we have in the Google Sheet.
+[1:07:00] Md Mashiul Azam Chowdhury: So whenever you change any of the sales, it holds a story, right?
+[1:07:06] Bijoy Nath: I mean, where are you going to show the story? That's what I'm asking.
+[1:07:10] Md Mashiul Azam Chowdhury: Oh, just there will be a button, history or log.
+[1:07:15] Bijoy Nath: Clicking it will show the list of logs. That's it?
+[1:07:20] Md Mashiul Azam Chowdhury: Right, right. That's it. I think so. Right, Constance?
+[1:07:23] Constance Wolfe: That's what I was asking. Yeah. Would it be like this? Like this log?
+[1:07:28] Bijoy Nath: I mean, if that's the case, then how they will know which category column has been updated?
+[1:07:35] Md Mashiul Azam Chowdhury: Yeah, I mean, that will be saved in the log.
+[1:07:40] Bijoy Nath: For example, there are so many properties they have to know.
+[1:07:42] Bijoy Nath: Okay, for which retailer, for which brand.
+[1:07:47] Constance Wolfe: I think it just, I think it just says, I think it just says, um, I wish I, I probably should They have an example, but would it just be Brand A, status updated, progress, username, date?
+[1:08:02] Constance Wolfe: And it just— is that what it does?
+[1:08:06] Md Mashiul Azam Chowdhury: Yeah.
+[1:08:06] Bijoy Nath: I mean, yeah, we can create those system-generated nice messages. That's— that can be done.
+[1:08:15] Bijoy Nath: But how we'll do the implementation will depend on how we were going to show it to the user.
+[1:08:20] Bijoy Nath: So if you are going to show it to the user, like the email log, that means list of history, like, you know, edits done by whom and when in which brand.
+[1:08:29] Bijoy Nath: That's, that's pretty straightforward.
+[1:08:31] Bijoy Nath: But if we need that log, like, for each row, you know, for each row, you will have the history.
+[1:08:35] Bijoy Nath: Okay, who changed the brand response for this row?
+[1:08:39] Bijoy Nath: Then we'll have to another column with in the report so that you have the row-wise history.
+[1:08:45] Bijoy Nath: So, so there's 2 ways of doing this.
+[1:08:47] Bijoy Nath: One is like a central history and another one is row-wise history, right?
+[1:08:54] Md Mashiul Azam Chowdhury: So I was saying to not make it row-wise.
+[1:08:58] Md Mashiul Azam Chowdhury: I mean, you're saying like we will have something like the notes here, right?
+[1:09:02] Md Mashiul Azam Chowdhury: So there will be another maybe button log right beside for each of them. Yeah, yeah.
+[1:09:09] Md Mashiul Azam Chowdhury: But the thing is, well, I'm not sure if we will have it or not, but What if a role got removed?
+[1:09:18] Md Mashiul Azam Chowdhury: So the history and the log will get—
+[1:09:21] Bijoy Nath: Yeah, I was thinking that as well.
+[1:09:23] Md Mashiul Azam Chowdhury: So that's why I'm saying to have a log button right beside maybe the add friend button or there.
+[1:09:34] Md Mashiul Azam Chowdhury: So yeah.
+[1:09:38] Constance Wolfe: You know, The only thing about that log button, yeah, the only thing about having this right here is that you'd have to really go through it to find—
+[1:09:55] Bijoy Nath: For each, for a specific post update.
+[1:09:57] Constance Wolfe: Yeah, I mean, it's gonna be huge, and I, it seems like you just want the notes here, and if it goes away, if this row goes away, are we deleting—
+[1:10:06] Bijoy Nath: We don't care about the data.
+[1:10:08] Constance Wolfe: They don't care exactly. Yeah. About the history.
+[1:10:12] Constance Wolfe: Most of it, I don't think they're going to do a lot of deleting.
+[1:10:15] Constance Wolfe: I think they're going to do a lot of hiding. Right?
+[1:10:19] Bijoy Nath: Yeah.
+[1:10:20] Constance Wolfe: So if they pull it back, it'll still be there. So it seems like by the row makes the most sense.
+[1:10:29] Md Mashiul Azam Chowdhury: Okay. Then that would be pretty easy. Yeah, I think.
+[1:10:34] Constance Wolfe: Okay, because my— in my opinion, if they delete it, so when the review is over, I think we— correct me if I'm wrong, but they're gonna be able to hide this like once.
+[1:10:46] Constance Wolfe: I think we decided like kind of once.
+[1:10:48] Md Mashiul Azam Chowdhury: Yeah, not interested. If we said it not interested, then yeah, it will be—
+[1:10:53] Constance Wolfe: It's gonna hide. Yeah. So, but I'm talking about the results.
+[1:10:56] Constance Wolfe: So this is while the items are in progress, and then once the result is over, like it's accepted or rejected, then that row will be hidden, or at least they'll have the option to hide it, correct?
+[1:11:11] Constance Wolfe: Do they have the option to hide rows as desired, or is it only this global?
+[1:11:19] Md Mashiul Azam Chowdhury: Only that one right now, at least.
+[1:11:22] Constance Wolfe: Okay, so we do need to say that once the, once the review is over, we need to get it off of this sheet.
+[1:11:30] Constance Wolfe: Right? So it's going to be on here until it's over.
+[1:11:33] Constance Wolfe: So we do need a way to get it off the sheet once it's either accepted or, you know, or rejected.
+[1:11:41] Constance Wolfe: So do we automate that, or do we make it so that the user can say, please hide, you know, please hide this row, hide this row?
+[1:11:49] Md Mashiul Azam Chowdhury: Well, in that case, we can have like I mean, on this list, it will only show the opened rows only.
+[1:12:03] Md Mashiul Azam Chowdhury: And we can have another tab that will only have the result with the results closed or rejected or something like that.
+[1:12:13] Bijoy Nath: That's—
+[1:12:14] Constance Wolfe: yeah, OK. What were you going to say?
+[1:12:16] Bijoy Nath: There's a concern, actually, because right now, all of the statuses are dynamic, right?
+[1:12:23] Bijoy Nath: So we don't know the values of them.
+[1:12:25] Bijoy Nath: So in the admin section, you have to add some sort of properties like while showing the brand report, don't show this status as data at first or something like this because we don't know the names, you know, because in the result column there could be some other text, you know, the name of the values could be Or because it's the whole thing is dynamic.
+[1:12:54] Md Mashiul Azam Chowdhury: Okay, uh, Vijay, in that case, so we, uh, we can do something like what Jira does.
+[1:13:00] Md Mashiul Azam Chowdhury: So they show all the closed items and, uh, everything.
+[1:13:06] Md Mashiul Azam Chowdhury: Uh, yeah, Constance, could you please go to the CS board on the left here and go to the list?
+[1:13:15] Md Mashiul Azam Chowdhury: Uh, No, no, this. Yeah, yeah, this one. So, here it shows all the ones with closed status as well.
+[1:13:29] Md Mashiul Azam Chowdhury: But in the— if you go to the filter, select status, right?
+[1:13:36] Md Mashiul Azam Chowdhury: And then you can select all of them but the closed.
+[1:13:41] Constance Wolfe: So, yeah, yeah.
+[1:13:42] Bijoy Nath: So, that can be done. Yes. But we cannot do any sorts of hard coding, you know.
+[1:13:47] Constance Wolfe: Okay, I think this, this gives the user most, most flexibility anyway. Does this, does this stick?
+[1:13:57] Bijoy Nath: It depends. If you save it, then it will stick.
+[1:13:59] Constance Wolfe: Okay, because I think we need to be able to— they're not going to want to do this every time they open up the report.
+[1:14:05] Bijoy Nath: And yeah, we are going to implement that filter saving thing, right? That's another feature.
+[1:14:10] Constance Wolfe: That's yeah. Where am I? Here.
+[1:14:14] Md Mashiul Azam Chowdhury: This one. No, no.
+[1:14:17] Constance Wolfe: Okay, it's different.
+[1:14:18] Bijoy Nath: In the saving the filter. Saving the filter.
+[1:14:21] Constance Wolfe: Yeah.
+[1:14:24] Bijoy Nath: So that user won't have.
+[1:14:25] Md Mashiul Azam Chowdhury: No, no, no, not different sections, Vijay, because that would be sort of tedious and will introduce a lot of bugs.
+[1:14:33] Md Mashiul Azam Chowdhury: But for brand report, I can we I. I think we can save it, uh, maybe on the frontend side.
+[1:14:42] Md Mashiul Azam Chowdhury: I mean, that will be browser dependent.
+[1:14:46] Bijoy Nath: No, no, no, don't say— we won't save the filters on the browser, we'll save it on our backend.
+[1:14:52] Bijoy Nath: So backend, each time, yeah, each time we are serving data, we'll pick user-specific, get the filters based on user.
+[1:15:00] Bijoy Nath: Okay, yeah. And then we'll get the data according to the saved return. That's how it should work.
+[1:15:07] Md Mashiul Azam Chowdhury: Yeah, but for now, do it only for the brand report, not the other ones, because that will introduce bugs a lot.
+[1:15:14] Bijoy Nath: But we will do the implementation like for— even had that, okay, we need to do it in future for other sections as well.
+[1:15:24] Md Mashiul Azam Chowdhury: Okay.
+[1:15:24] Bijoy Nath: Yeah, because in the My Retailer section, that was our first, uh, you know, interactions with the filter saving thing where each time a rep enters, they want to see their associated retailers.
+[1:15:40] Bijoy Nath: So they want to save filters so that they don't have to filter every time.
+[1:15:45] Bijoy Nath: Well, go to the My Retailer section. Constance have mentioned about it in one of the meetings.
+[1:15:51] Bijoy Nath: That's why I've mentioned anyways.
+[1:15:55] Constance Wolfe: Yeah, these, these KPI cards are changing, I think, right? These aren't quite the right ones.
+[1:15:59] Bijoy Nath: Yeah, we are following Lovable here for the KPIs.
+[1:16:04] Constance Wolfe: Okay. Okay.
+[1:16:07] Md Mashiul Azam Chowdhury: Okay.
+[1:16:07] Constance Wolfe: Great.
+[1:16:08] Constance Wolfe: So you're saying by Monday you're going to be able to deliver some of this, but probably not all of it, and you're going to let me know what I can demonstrate?
+[1:16:16] Bijoy Nath: Yes, of course. Yeah.
+[1:16:17] Constance Wolfe: Great. Okay. That sounds great. Thank you. Okay. So you were saying something about Kaya?
+[1:16:24] Md Mashiul Azam Chowdhury: Yeah. She actually already sent you a message in WhatsApp.
+[1:16:30] Constance Wolfe: In WhatsApp. Oh, okay.
+[1:16:32] Md Mashiul Azam Chowdhury: Yep.
+[1:16:36] Constance Wolfe: Okay, so promotional TSS promotional count has been completed.
+[1:16:41] Constance Wolfe: She's given the green signal for these.
+[1:16:43] Constance Wolfe: I can complete category review and brand report section testing before the 24th. Okay, great. Okay.
+[1:16:56] Constance Wolfe: However, do you want the full bug audit to be complete by the 24th?
+[1:17:01] Constance Wolfe: If yes, I need to plan accordingly and working over the weekend. Can I, can I respond to her soon?
+[1:17:14] Constance Wolfe: I, I don't think so. Yeah, you can.
+[1:17:17] Bijoy Nath: Yeah, you can.
+[1:17:18] Md Mashiul Azam Chowdhury: Yeah.
+[1:17:20] Constance Wolfe: Yeah, because that's, that's not until the Monday after next, right?
+[1:17:24] Constance Wolfe: So she just needs to know about next weekend.
+[1:17:27] Md Mashiul Azam Chowdhury: Yeah, yeah. No, no, no, this weekend. She was talking about this weekend.
+[1:17:34] Constance Wolfe: Oh, this weekend. Okay.
+[1:17:35] Md Mashiul Azam Chowdhury: Yeah.
+[1:17:35] Bijoy Nath: Okay.
+[1:17:36] Constance Wolfe: I don't, I don't think so.
+[1:17:39] Constance Wolfe: Um, but I, um, let me— if you could just give me a little second to think about that, I can let you know.
+[1:17:47] Md Mashiul Azam Chowdhury: Yeah, yeah, sure, sure.
+[1:17:48] Constance Wolfe: Okay. Let me see. Okay. Do you have anything else while you have me?
+[1:18:06] Md Mashiul Azam Chowdhury: No, that's it from my side.
+[1:18:11] Constance Wolfe: Toheed, I did get your email yesterday, so I just haven't had a chance to I mean, I kind of briefly went through it, so thank you for pulling all that together.
+[1:18:23] Md Mashiul Azam Chowdhury: Yeah.
+[1:18:26] Constance Wolfe: So I'll— I will take a closer look at that today.
+[1:18:28] Constance Wolfe: I've been— I've been sitting at my desk for like 14 hours a day the last 3 days. So—
+[1:18:34] Md. Tauhidur Rahman: Yeah, I kind of got it because like I have sent you that email very late at night.
+[1:18:42] Constance Wolfe: I saw that.
+[1:18:44] Bijoy Nath: Yeah.
+[1:18:44] Constance Wolfe: I saw that. I was surprised when I came in. Okay, great.
+[1:18:55] Constance Wolfe: So I think there's a couple— yesterday when I was doing some category, I think there's a ticket for this, but yesterday I was doing a category review upload and it would say partially Partially updated, and then it wouldn't update, it wouldn't upload anything.
+[1:19:16] Constance Wolfe: So it didn't give us the exception file as to why it wasn't uploading anything.
+[1:19:20] Constance Wolfe: It would flash, you could tell it kind of flashed a little something, but it didn't, then it never did load.
+[1:19:28] Constance Wolfe: So we troubleshooted it and were able to figure it out.
+[1:19:31] Constance Wolfe: But I think I, I think I already created a ticket for that. So I'll give that to—
+[1:19:38] Md Mashiul Azam Chowdhury: Okay.
+[1:19:38] Constance Wolfe: And then I can't remember if we tracked the ticket. Do you remember when we talked about setting?
+[1:19:44] Constance Wolfe: So if a user wanted to only see their retailer, so if a broker only, a broker rep only wanted to see the retailers for that brand that they were responsible for, they could hard— I think we called it, what did we call it, like permanent filters?
+[1:20:04] Constance Wolfe: Did we get that ticketed?
+[1:20:06] Constance Wolfe: Do you remember that conversation we were talking about hard filters, like sticky filters?
+[1:20:10] Bijoy Nath: Yeah, that's what we just talked about in the branch section, right? With the safety filters.
+[1:20:15] Constance Wolfe: Yes, sticky filters.
+[1:20:17] Bijoy Nath: In the other sections as well, right?
+[1:20:19] Md Mashiul Azam Chowdhury: Yeah.
+[1:20:19] Constance Wolfe: Okay. I didn't remember if that got a ticket or if that needed to be created.
+[1:20:24] Bijoy Nath: I'm not sure as well. Like, it's got ticketed on my Okay, I'll look and see.
+[1:20:29] Constance Wolfe: Um, I'm gonna call those sticky filters.
+[1:20:32] Constance Wolfe: Um, okay, well, um, so then we— for the implementation that we just talked about, we— so, and I guess, Toheed, the, the roadmap that you created was simply the bug tickets, correct?
+[1:20:49] Md. Tauhidur Rahman: Yeah, yeah, it was simply the bug tickets. So I'm
+[1:20:51] Md. Tauhidur Rahman: now currently going through those, uh, like the things we have in the backlog plus the things we have in the needs section on the Excel.
+[1:21:03] Md. Tauhidur Rahman: So I'll be preparing a list of things that I need
+[1:21:09] Bijoy Nath: clarification
+[1:21:09] Md. Tauhidur Rahman: from you, then we're gonna talk on that.
+[1:21:12] Md. Tauhidur Rahman: And after that, I'll be able to create all the tickets and get, uh, I think I will be— I would be able to get The estimation from both PJ and IFTBA.
+[1:21:22] Constance Wolfe: Okay, that sounds good.
+[1:21:23] Constance Wolfe: So what we talked about today is not documented anywhere except for this conversation.
+[1:21:30] Constance Wolfe: So I can put this together and we'll have to put that in the— in that sheet that you're talking about and decide, you know, we need to decide when we're going to do which implementations, right?
+[1:21:43] Constance Wolfe: Get it on the calendar. So, okay, that sounds good.
+[1:21:48] Md Mashiul Azam Chowdhury: So when you're creating a document for this requirement, could you please add this recording link as well in that?
+[1:21:58] Constance Wolfe: Yes.
+[1:21:58] Md Mashiul Azam Chowdhury: So we would have a reference. Thank you.
+[1:22:01] Constance Wolfe: Yes. Will do. Okay. Okay. Well, I'll answer Kea and let her know here in the next few minutes.
+[1:22:14] Constance Wolfe: And then we'll resume on Monday.
+[1:22:20] Md Mashiul Azam Chowdhury: Okay.
+[1:22:21] Md Mashiul Azam Chowdhury: Oh, by the way, I think you already saw it in the mail, but Bijoy will be on leave on Sunday and Monday.
+[1:22:31] Md Mashiul Azam Chowdhury: So, okay. Yeah, Arnab is going to work on the brand repo.
+[1:22:38] Constance Wolfe: Yeah. Yeah, I got that. Yeah. Okay.
+[1:22:41] Constance Wolfe: And then on Monday, we'll know what we're going to be able to present.
+[1:22:45] Md Mashiul Azam Chowdhury: Yes.
+[1:22:46] Constance Wolfe: Okay, that sounds great.
+[1:22:48] Constance Wolfe: Um, you guys picked up— did you get the details on the brand report we discussed today about the activity logs?
+[1:22:57] Constance Wolfe: Do I need to document that, or did you guys take notes?
+[1:23:01] Md Mashiul Azam Chowdhury: Uh, yeah, we did take notes. Uh, so Yeah, I think what we have should suffice.
+[1:23:10] Md Mashiul Azam Chowdhury: But when we start working, we will— I mean, before starting, we will give a brief on what we are going to do.
+[1:23:20] Constance Wolfe: Okay. To me or to Ornov, you're saying?
+[1:23:25] Md Mashiul Azam Chowdhury: To you.
+[1:23:26] Bijoy Nath: Okay.
+[1:23:27] Constance Wolfe: Okay, sounds good.
+[1:23:28] Md Mashiul Azam Chowdhury: So that we are aligned. Yeah.
+[1:23:29] Constance Wolfe: Okay, awesome.
+[1:23:31] Constance Wolfe: So then if that's the case, then those implementations will Clearly not be happening by Monday, but we could yeah cover it on Monday.
+[1:23:40] Constance Wolfe: Okay, that sounds good. Okay, all right.
+[1:23:43] Constance Wolfe: I'll send you the meeting notes from today and the recording as well.
+[1:23:47] Md Mashiul Azam Chowdhury: Yeah, thank you.
+[1:23:48] Constance Wolfe: And then I'll see you guys not Bijoy. Bijoy, I hope you have a good leave. Enjoy your time.
+[1:23:57] Bijoy Nath: Yeah, thank you. I will. Actually, I'm going on a tour, so I will.
+[1:24:01] Constance Wolfe: Oh, where are you going?
+[1:24:03] Md Mashiul Azam Chowdhury: Mountains.
+[1:24:04] Bijoy Nath: Mountains, waterfalls.
+[1:24:07] Constance Wolfe: Oh, that sounds lovely. Well, enjoy some time in the nature. Yeah, I will.
+[1:24:13] Bijoy Nath: Thank you.
+[1:24:14] Constance Wolfe: Okay. All right, guys, I'll see the rest of you on Monday. All right, take care.
+[1:24:18] Md Mashiul Azam Chowdhury: Thank you.
+[1:24:19] Constance Wolfe: Thanks for joining today.
+[1:24:20] Md Mashiul Azam Chowdhury: You too.
+[1:24:20] Md. Tauhidur Rahman: Okay.
+[1:24:21] Constance Wolfe: Bye.
