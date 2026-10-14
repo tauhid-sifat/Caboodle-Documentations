@@ -22,7 +22,7 @@ Standardize this repo's structure (Wave 1, runs alone), then implement all five 
 - Test questions: 10 approved (see §9). Branch: plain branch off master. Phasing: Waves 1–6.
 
 ## 3. Context & findings (all re-verified)
-- 2,049 files / ~47.7MB. `data/jira-tickets/` 1,780 (CS-1…CS-1777 + 18 GTMS). `tickets/` 74 (73 specs + INTERNAL_TRACKING.md). `meetings/` 16 transcripts; §17 covers 10, uncovered: Jul 20, Jul 27, Aug 10, Aug 19, Aug 24, Sep 3 (`AGENTS.md:5,428` "14 transcripts" claim stale).
+- 2,049 files / ~47.7MB. `jira/tickets/` 1,780 (CS-1…CS-1777 + 18 GTMS). `specs/` 74 (73 specs + INTERNAL_TRACKING.md). `meetings/` 16 transcripts; §17 covers 10, uncovered: Jul 20, Jul 27, Aug 10, Aug 19, Aug 24, Sep 3 (`AGENTS.md:5,428` "14 transcripts" claim stale).
 - Specs contain ~427 `---` markers (frontmatter likely; wiki-agent confirms vs horizontal rules).
 - Move-breakers: `scripts/post-jira.js:28` (TICKETS_DIR), `scripts/fetch-jira.js:10` (OUT_DIR), `scripts/replace-codes.js:12`, `scripts/README.md:3`, `AGENTS.md:5,6,301,346,406,421,428`, `CONTEXT.md`, `index.md:14-20`, `vercel.json:3`, `tickets/INTERNAL_TRACKING.md:5`, per-spec `## Jira Reference` lines.
 - Root `.gitignore` (2 lines: `.vercel`, `.env*`) covers neither `data/` nor generated dirs. Secrets by filename only: `scripts/.env`, `api/ask.js:10-11`.
