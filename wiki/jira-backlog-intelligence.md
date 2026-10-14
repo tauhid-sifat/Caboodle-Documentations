@@ -10,11 +10,11 @@ last_verified: 2026-10-14
 
 > **Source:** `jira/tickets/` — full live Jira export (CS-1 … CS-1781 + GTMS-*), generated **2026-10-14** from `caboodleservices.atlassian.net`. This supersedes the legacy `data/Jira (3).csv` (130 issues).  
 > **Method:** structured metadata + statistics extracted programmatically across all 1,784 files (AI-readable conversion per BA Step 1); individual tickets were not read raw.  
-> **Status model:** Open = Backlog / On Hold / In Progress / In Staging / In Production / In Review / Reopened / Demo / Ready for Production / Dev Sprints. Closed = Closed / Won't Do / Resolved.
+> **Status model:** CS project, Open = Backlog / On Hold / In Progress / In Staging / In Production / In Review / Reopened / Demo / Ready for Production / Dev Sprints; Closed = Closed / Won't Do. Team migrated to a new Jira workflow on ~2026-10-14: **In Review** appeared (32 tickets, ex-Resolved — Resolved is retired). GTMS uses a separate status scheme (Critical Issues, In Proress Enhanced Features [sic], Strategic Partnerships, Prospects) — counted as Ambiguous below.
 
 - **Total tickets:** 1,784 (1,766 CS + 18 GTMS)
 - **Created range:** 2023-09-11 → 2026-10-14 (backlog spans ~3 years; actively maintained through today)
-- **Open:** 491 (Backlog 309 + active states, incl. new In Review 32) · **Closed / Won't-Do:** 1,286 · **Ambiguous status:** 7
+- **Open:** 491 (Backlog 309 + active states, incl. new In Review 32) · **Closed / Won't-Do:** 1,286 · **Ambiguous status:** 7 (all GTMS-scheme, see model)
 - **By type:** Task 778 · Bug 506 · Sub-task 371 · Story 119 · Epic 10
 - **By priority:** High 685 · Highest 479 · Medium 358 · Low 262 (≈65% High/Highest — backlog skews urgent)
 - **Top labels:** Front_end 258 · Backend 230 · Admin_App 42
