@@ -1,0 +1,392 @@
+Distribution Center Name,Distributor Item Code,Region Name,Unit UPC,Brand Name,Product Description,Category,Case Pack,Size,UOM,Wholesale Case Cost,Wholesale Unit Cost
+Charlie's,123456,PNW,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,12,65
+KEHE DIST - AURORA (12),2318462,Rocky Mountain,60000000000,Zucchini Beanie Demo Brand,Cherry Bomb Popsss,Organic Bomb Popsssss,8,3.22,OZ,0,8.96
+KEHE DIST - AURORA (12),2301350,Rocky Mountain,15000000000,Zucchini Beanie Demo Brand,Chocolate Chip Ice Cream 16oz,Ice Cream 16oz,8,2.1,OZ,0,1.83
+KEHE DIST - AURORA (12),2301370,Rocky Mountain,95000000,Zucchini Beanie Demo Brand,Chocolate Ice Cream 16oz,Ice Cream 16oz,8,0,,0,2.28
+KEHE DIST - AURORA (12),2318456,Rocky Mountain,17000000000,Zucchini Beanie Demo Brand,Chocolate Ice Cream Sandwich,Ice Cream Sandwiches,8,3.2,OZ,0,8.9
+KEHE DIST - AURORA (12),2318459,Rocky Mountain,14000000000,Zucchini Beanie Demo Brand,Double Chocolate Sandwich,Ice Cream Sandwiches,8,2.44,OZ,0,8.49
+KEHE DIST - AURORA (12),2301366,Rocky Mountain,90000000000,Zucchini Beanie Demo Brand,Fudge Brownie Sandwich,Ice Cream Sandwiches,8,3.22,OZ,0,1.83
+KEHE DIST - AURORA (12),2318440,Rocky Mountain,11000000000,Zucchini Beanie Demo Brand,Maple Vanilla Sandwich,Ice Cream Sandwiches,8,3.22,OZ,0,7.84
+KEHE DIST - AURORA (12),2301368,Rocky Mountain,50000000000,Zucchini Beanie Demo Brand,Mint Chip Ice Cream 16oz,Ice Cream 16oz,8,3.95,OZ,0,2.28
+KEHE DIST - AURORA (12),test 2,Rocky Mountain,60000000000,Zucchini Beanie Demo Brand,Cherry Bomb Popsss,Organic Bomb Popsssss,8,3.22,OZ,3,1
+KEHE DIST - BLOOMINGTON (16),169292,Midwest,019373732319,Dr. Tung's,Perio SticksTM - XThin,Perio Sticks,6,0.5,,15.30,2.55
+KEHE DIST - BLOOMINGTON (16),169367,Midwest,019373952557,Dr. Tung's,Kids Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.42,4.07
+KEHE DIST - BLOOMINGTON (16),1266410,Midwest,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.42,4.07
+KEHE DIST - BLOOMINGTON (16),2208228,Midwest,019373925209,Dr. Tung's,Herbal Toothpowder Tabs - Spearmint,Toothpowder Tabs,3,4.5,,26.91,8.97
+KEHE DIST - BLOOMINGTON (16),2208231,Midwest,019373925100,Dr. Tung's,Herbal Toothpowder Tabs - Mint-Free,Toothpowder Tabs,3,4.5,,26.91,8.97
+KEHE DIST - BLOOMINGTON (16),128081,Midwest,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,32.22,5.37
+KEHE DIST - BLOOMINGTON (16),281800,Midwest,019373840007,Dr. Tung's,DrTung's Oil Pulling Concentrate,Oil Pulling | Gums,12,4,,12.10,12.10
+KEHE DIST - BLOOMINGTON (16),326296,Midwest,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.42,3.57
+KEHE DIST - BLOOMINGTON (16),393916,Mid-Atlantic,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),258420,South,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,72.72,6.06
+KEHE DIST - BLOOMINGTON (16),258419,South,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,72.72,6.06
+KEHE DIST - BLOOMINGTON (16),1373992,South,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,72.72,6.06
+KEHE DIST - BLOOMINGTON (16),393915,South,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),393916,South,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),393910,South,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),393914,South,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),393912,South,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),393913,South,851499006895,Zen Sauce,Strawberry Lemon Shortbread,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),294473,South,851499006130,Zen Sauce,Dark Chocolate Cookie Sandwich,Novelties,8,5.25,oz,55.08,4.59
+KEHE DIST - BLOOMINGTON (16),294472,South,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,55.08,4.59
+KEHE DIST - BLOOMINGTON (16),258420,Mid-Atlantic,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,72.72,6.06
+KEHE DIST - BLOOMINGTON (16),258419,Mid-Atlantic,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,72.72,6.06
+KEHE DIST - BLOOMINGTON (16),1373992,Mid-Atlantic,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,72.72,6.06
+KEHE DIST - BLOOMINGTON (16),393915,Mid-Atlantic,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),294472,Mid-Atlantic,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,55.08,4.59
+KEHE DIST - BLOOMINGTON (16),294473,Mid-Atlantic,851499006130,Zen Sauce,Dark Chocolate Cookie Sandwich,Novelties,8,5.25,oz,55.08,4.59
+KEHE DIST - BLOOMINGTON (16),393913,Mid-Atlantic,851499006895,Zen Sauce,Strawberry Lemon Shortbread,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),393912,Mid-Atlantic,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),393914,Mid-Atlantic,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),393910,Mid-Atlantic,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),169250,Midwest,019373731213,Dr. Tung's,Perio SticksTM - Thin,Perio Sticks,6,0.5,,15.30,2.55
+KEHE DIST - BLOOMINGTON (16),1266428,Midwest,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,20.10,3.35
+KEHE DIST - BLOOMINGTON (16),258420,Midwest,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,72.72,6.06
+KEHE DIST - BLOOMINGTON (16),258419,Midwest,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,72.72,6.06
+KEHE DIST - BLOOMINGTON (16),1373992,Midwest,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,72.72,6.06
+KEHE DIST - BLOOMINGTON (16),393915,Midwest,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),393916,Midwest,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),393910,Midwest,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),393914,Midwest,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),393912,Midwest,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),393913,Midwest,851499006895,Zen Sauce,Strawberry Lemon Shortbread,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - BLOOMINGTON (16),294473,Midwest,851499006130,Zen Sauce,Dark Chocolate Cookie Sandwich,Novelties,8,5.25,oz,55.08,4.59
+KEHE DIST - BLOOMINGTON (16),294472,Midwest,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,55.08,4.59
+KEHE DIST - CHINO (41),393910,SoPac,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,51.84,6.48
+KEHE DIST - CHINO (41),393912,SoPac,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,51.84,6.48
+KEHE DIST - CHINO (41),393913,SoPac,851499006895,Zen Sauce,Strawberry Lemon Shortbread,GF Dairy Ice Cream,8,14,oz,51.84,6.48
+KEHE DIST - CHINO (41),393914,SoPac,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,51.84,6.48
+KEHE DIST - CHINO (41),393915,SoPac,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,51.84,6.48
+KEHE DIST - CHINO (41),393916,SoPac,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,51.84,6.48
+KEHE DIST - CHINO (41),294472,SoPac,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,54.84,4.57
+KEHE DIST - CHINO (41),294473,SoPac,851499006130,Zen Sauce,Dark Chocolate Cookie Sandwich,Novelties,8,5.25,oz,54.84,4.57
+KEHE DIST - CHINO (41),404244,SoPac,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,69.24,5.77
+KEHE DIST - CHINO (41),405001,SoPac,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,69.24,5.77
+KEHE DIST - CHINO (41),633339,SoPac,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,69.24,5.77
+KEHE DIST - CHINO (41),817247,SoPac,019373840007,Dr. Tung's,DrTung's Oil Pulling Concentrate,Oil Pulling | Gums,12,4,,11.53,11.53
+KEHE DIST - CHINO (41),2208228,SoPac,019373925209,Dr. Tung's,Herbal Toothpowder Tabs - Spearmint,Toothpowder Tabs,3,4.5,,26.91,8.97
+KEHE DIST - CHINO (41),2208231,SoPac,019373925100,Dr. Tung's,Herbal Toothpowder Tabs - Mint-Free,Toothpowder Tabs,3,4.5,,26.91,8.97
+KEHE DIST - CHINO (41),330654,SoPac,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,20.34,3.39
+KEHE DIST - CHINO (41),330829,SoPac,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.72,4.12
+KEHE DIST - CHINO (41),446369,SoPac,019373952557,Dr. Tung's,Kids Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.72,4.12
+KEHE DIST - CHINO (41),326296,SoPac,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.72,3.62
+KEHE DIST - CHINO (41),235556,SoPac,019373731213,Dr. Tung's,Perio SticksTM - Thin,Perio Sticks,6,0.5,,15.48,2.58
+KEHE DIST - CHINO (41),235564,SoPac,019373732319,Dr. Tung's,Perio SticksTM - XThin,Perio Sticks,6,0.5,,15.48,2.58
+KEHE DIST - CHINO (41),330126,SoPac,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,65.40,5.45
+KEHE DIST - DALLAS/FORT WORTH (19),405001,Southwest,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,72,6
+KEHE DIST - DALLAS/FORT WORTH (19),330654,Midwest,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,19.86,3.31
+KEHE DIST - DALLAS/FORT WORTH (19),235556,Midwest,019373731213,Dr. Tung's,Perio SticksTM - Thin,Perio Sticks,6,0.5,,15.3,2.55
+KEHE DIST - DALLAS/FORT WORTH (19),235564,Midwest,019373732319,Dr. Tung's,Perio SticksTM - XThin,Perio Sticks,6,0.5,,15.3,2.55
+KEHE DIST - DALLAS/FORT WORTH (19),326296,Midwest,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.42,3.57
+KEHE DIST - DALLAS/FORT WORTH (19),281800,Midwest,019373840007,Dr. Tung's,DrTung's Oil Pulling Concentrate,Oil Pulling | Gums,12,4,,11.42,11.42
+KEHE DIST - DALLAS/FORT WORTH (19),330126,Midwest,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,32.22,5.37
+KEHE DIST - DALLAS/FORT WORTH (19),2208231,Midwest,019373925100,Dr. Tung's,Herbal Toothpowder Tabs - Mint-Free,Toothpowder Tabs,3,4.5,,26.91,8.97
+KEHE DIST - DALLAS/FORT WORTH (19),2208228,Midwest,019373925209,Dr. Tung's,Herbal Toothpowder Tabs - Spearmint,Toothpowder Tabs,3,4.5,,26.91,8.97
+KEHE DIST - DALLAS/FORT WORTH (19),330829,Midwest,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.42,4.07
+KEHE DIST - DALLAS/FORT WORTH (19),446369,Midwest,019373952557,Dr. Tung's,Kids Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.42,4.07
+KEHE DIST - DALLAS/FORT WORTH (19),389562,Midwest,850010098012,All Clean Food,Taco Pasta,Pasta,6,,,32.22,5.37
+KEHE DIST - DALLAS/FORT WORTH (19),406125,Midwest,850010098029,All Clean Food,Creamy Mac,Pasta,6,0,,32.22,5.37
+KEHE DIST - DALLAS/FORT WORTH (19),389564,Midwest,850010098081,All Clean Food,Porcini Mushroom Pasta,Pasta,6,,,32.22,5.37
+KEHE DIST - DALLAS/FORT WORTH (19),393913,Midwest,851499006895,Zen Sauce,Strawberry Lemon Shortbread,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - DALLAS/FORT WORTH (19),393912,Midwest,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - DALLAS/FORT WORTH (19),393914,Midwest,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - DALLAS/FORT WORTH (19),393910,Midwest,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - DALLAS/FORT WORTH (19),393916,Midwest,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - DALLAS/FORT WORTH (19),393915,Midwest,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - DALLAS/FORT WORTH (19),404244,Midwest,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,72.00,6
+KEHE DIST - DALLAS/FORT WORTH (19),405001,Midwest,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,72.00,6
+KEHE DIST - DALLAS/FORT WORTH (19),389562,Southwest,850010098012,All Clean Food,Taco Pasta,Pasta,6,,,32.22,5.37
+KEHE DIST - DALLAS/FORT WORTH (19),406125,Southwest,850010098029,All Clean Food,Creamy Mac,Pasta,6,0,,32.22,5.37
+KEHE DIST - DALLAS/FORT WORTH (19),389564,Southwest,850010098081,All Clean Food,Porcini Mushroom Pasta,Pasta,6,,,32.22,5.37
+KEHE DIST - DALLAS/FORT WORTH (19),393913,Southwest,851499006895,Zen Sauce,Strawberry Lemon Shortbread,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - DALLAS/FORT WORTH (19),393912,Southwest,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - DALLAS/FORT WORTH (19),393914,Southwest,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - DALLAS/FORT WORTH (19),393910,Southwest,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - DALLAS/FORT WORTH (19),393916,Southwest,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - DALLAS/FORT WORTH (19),393915,Southwest,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - DALLAS/FORT WORTH (19),404244,Southwest,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,72,6
+KEHE DIST - LEHIGH VALLEY (15),169367,Mid-Atlantic,019373952557,Dr. Tung's,Kids Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.42,4.07
+KEHE DIST - LEHIGH VALLEY (15),169250,Mid-Atlantic,019373731213,Dr. Tung's,Perio SticksTM - Thin,Perio Sticks,6,0.5,,15.3,2.55
+KEHE DIST - LEHIGH VALLEY (15),169292,Mid-Atlantic,019373732319,Dr. Tung's,Perio SticksTM - XThin,Perio Sticks,6,0.5,,15.3,2.55
+KEHE DIST - LEHIGH VALLEY (15),326296,Mid-Atlantic,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.42,3.57
+KEHE DIST - LEHIGH VALLEY (15),281800,Mid-Atlantic,019373840007,Dr. Tung's,DrTung's Oil Pulling Concentrate,Oil Pulling | Gums,12,4,,12.1,12.1
+KEHE DIST - LEHIGH VALLEY (15),836098,Mid-Atlantic,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,32.22,5.37
+KEHE DIST - LEHIGH VALLEY (15),1266410,Mid-Atlantic,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.42,4.07
+KEHE DIST - LEHIGH VALLEY (15),294472,Mid-Atlantic,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,54.36,4.53
+KEHE DIST - LEHIGH VALLEY (15),294473,Mid-Atlantic,851499006130,Zen Sauce,Dark Chocolate Cookie Sandwich,Novelties,8,5.25,oz,54.36,4.53
+KEHE DIST - LEHIGH VALLEY (15),393913,Mid-Atlantic,851499006895,Zen Sauce,Strawberry Lemon Shortbread,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - LEHIGH VALLEY (15),393912,Mid-Atlantic,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - LEHIGH VALLEY (15),393914,Mid-Atlantic,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - LEHIGH VALLEY (15),393910,Mid-Atlantic,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - LEHIGH VALLEY (15),393916,Mid-Atlantic,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - LEHIGH VALLEY (15),393915,Mid-Atlantic,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - LEHIGH VALLEY (15),1373992,Mid-Atlantic,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,70.68,5.89
+KEHE DIST - LEHIGH VALLEY (15),258419,Mid-Atlantic,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,70.68,5.89
+KEHE DIST - LEHIGH VALLEY (15),258420,Mid-Atlantic,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,70.68,5.89
+KEHE DIST - LEHIGH VALLEY (15),1266428,Mid-Atlantic,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,20.1,3.35
+KEHE DIST - MIAMI(31),393912,South,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - MIAMI(31),393910,South,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - MIAMI(31),393916,South,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - MIAMI(31),393913,South,851499006895,Zen Sauce,Strawberry Lemon Shortbread,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - MIAMI(31),393915,South,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - MIAMI(31),393914,South,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - NOR CAL(33),294473,NorCal,851499006895,Zen Sauce,Strawberry Lemon Shortbread,GF Dairy Ice Cream,8,14,oz,54.84,4.57
+KEHE DIST - NOR CAL(33),1575265,NorCal,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,16.15,16.15
+KEHE DIST - NOR CAL(33),258419,NorCal,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,69.24,5.77
+KEHE DIST - NOR CAL(33),1731215,NorCal,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,44.88,5.61
+KEHE DIST - NOR CAL(33),395123,NorCal,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,19.71,6.57
+KEHE DIST - NOR CAL(33),393916,NorCal,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,52.96,6.62
+KEHE DIST - NOR CAL(33),393910,NorCal,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,52.96,6.62
+KEHE DIST - NOR CAL(33),393914,NorCal,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,52.96,6.62
+KEHE DIST - NOR CAL(33),393911,NorCal,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,52.96,6.62
+KEHE DIST - NOR CAL(33),393913,NorCal,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,52.96,6.62
+KEHE DIST - NOR CAL(33),294472,NorCal,851499006130,Zen Sauce,Dark Chocolate Cookie Sandwich,Novelties,8,5.25,oz,54.84,4.57
+KEHE DIST - NORTH EAST MARYLAND (27),294472,Northeast,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,54.36,4.53
+KEHE DIST - NORTH EAST MARYLAND (27),294473,Northeast,851499006130,Zen Sauce,Dark Chocolate Cookie Sandwich,Novelties,8,5.25,oz,54.36,4.53
+KEHE DIST - NORTH EAST MARYLAND (27),393913,Northeast,851499006895,Zen Sauce,Strawberry Lemon Shortbread,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - NORTH EAST MARYLAND (27),393912,Northeast,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - NORTH EAST MARYLAND (27),393914,Northeast,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - NORTH EAST MARYLAND (27),393910,Northeast,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - NORTH EAST MARYLAND (27),393916,Northeast,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - NORTH EAST MARYLAND (27),393915,Northeast,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - NORTH EAST MARYLAND (27),1373992,Northeast,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,72.72,6.06
+KEHE DIST - NORTH EAST MARYLAND (27),258419,Northeast,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,72.72,6.06
+KEHE DIST - NORTH EAST MARYLAND (27),258420,Northeast,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,72.72,6.06
+KEHE DIST - NORTH EAST MARYLAND (27),294473,Mid-Atlantic,851499006130,Zen Sauce,Dark Chocolate Cookie Sandwich,Novelties,8,5.25,oz,54.36,4.53
+KEHE DIST - NORTH EAST MARYLAND (27),294472,Mid-Atlantic,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,54.36,4.53
+KEHE DIST - NORTH EAST MARYLAND (27),393913,Mid-Atlantic,851499006895,Zen Sauce,Strawberry Lemon Shortbread,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - NORTH EAST MARYLAND (27),393912,Mid-Atlantic,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - NORTH EAST MARYLAND (27),393914,Mid-Atlantic,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - NORTH EAST MARYLAND (27),393910,Mid-Atlantic,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - NORTH EAST MARYLAND (27),393916,Mid-Atlantic,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - NORTH EAST MARYLAND (27),393915,Mid-Atlantic,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - NORTH EAST MARYLAND (27),1373992,Mid-Atlantic,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,72.72,6.06
+KEHE DIST - NORTH EAST MARYLAND (27),258419,Mid-Atlantic,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,72.72,6.06
+KEHE DIST - NORTH EAST MARYLAND (27),258420,Mid-Atlantic,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,72.72,6.06
+KEHE DIST - PORTLAND (25),393910,PNW,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,53.28,6.66
+KEHE DIST - PORTLAND (25),294473,PNW,851499006130,Zen Sauce,Dark Chocolate Cookie Sandwich,Novelties,8,5.25,oz,54.84,4.57
+KEHE DIST - PORTLAND (25),393913,PNW,851499006895,Zen Sauce,Strawberry Lemon Shortbread,GF Dairy Ice Cream,8,14,oz,53.28,6.66
+KEHE DIST - PORTLAND (25),393912,PNW,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,53.28,6.66
+KEHE DIST - PORTLAND (25),393914,PNW,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,53.28,6.66
+KEHE DIST - PORTLAND (25),393916,PNW,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,53.28,6.66
+KEHE DIST - PORTLAND (25),393915,PNW,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,53.28,6.66
+KEHE DIST - PORTLAND (25),1373992,PNW,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,69.24,5.77
+KEHE DIST - PORTLAND (25),258419,PNW,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,69.24,5.77
+KEHE DIST - PORTLAND (25),258420,PNW,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,69.24,5.77
+KEHE DIST - PORTLAND (25),294472,PNW,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,54.84,4.57
+KEHE DIST - ROMEOVILLE (18),258420,Mid-Atlantic,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,72.72,6.06
+KEHE DIST - ROMEOVILLE (18),258419,Mid-Atlantic,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,72.72,6.06
+KEHE DIST - ROMEOVILLE (18),1373992,Mid-Atlantic,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,70.68,5.89
+KEHE DIST - ROMEOVILLE (18),393915,Mid-Atlantic,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ROMEOVILLE (18),393910,Midwest,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ROMEOVILLE (18),393914,Midwest,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ROMEOVILLE (18),393912,Midwest,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ROMEOVILLE (18),393913,Midwest,851499006895,Zen Sauce,Strawberry Lemon Shortbread,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ROMEOVILLE (18),294473,Midwest,851499006130,Zen Sauce,Dark Chocolate Cookie Sandwich,Novelties,8,5.25,oz,55.08,4.59
+KEHE DIST - ROMEOVILLE (18),294472,Midwest,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,55.08,4.59
+KEHE DIST - ROMEOVILLE (18),389564,Midwest,850010098081,All Clean Food,Porcini Mushroom Pasta,Pasta,6,,,32.22,5.37
+KEHE DIST - ROMEOVILLE (18),406125,Midwest,850010098029,All Clean Food,Creamy Mac,Pasta,6,0,,32.22,5.37
+KEHE DIST - ROMEOVILLE (18),389562,Midwest,850010098012,All Clean Food,Taco Pasta,Pasta,6,,,34.44,5.74
+KEHE DIST - ROMEOVILLE (18),393915,Midwest,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ROMEOVILLE (18),393916,Mid-Atlantic,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ROMEOVILLE (18),393910,Mid-Atlantic,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ROMEOVILLE (18),393914,Mid-Atlantic,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ROMEOVILLE (18),393912,Mid-Atlantic,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ROMEOVILLE (18),393913,Mid-Atlantic,851499006895,Zen Sauce,Strawberry Lemon Shortbread,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ROMEOVILLE (18),294473,Mid-Atlantic,851499006130,Zen Sauce,Dark Chocolate Cookie Sandwich,Novelties,8,5.25,oz,55.08,4.59
+KEHE DIST - ROMEOVILLE (18),294472,Mid-Atlantic,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,55.08,4.59
+KEHE DIST - ROMEOVILLE (18),950426,Midwest,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,70.68,5.89
+KEHE DIST - ROMEOVILLE (18),258419,Midwest,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,72.72,6.06
+KEHE DIST - ROMEOVILLE (18),258420,Midwest,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,72.72,6.06
+KEHE DIST - ROMEOVILLE (18),239387,Midwest,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,26.16,4.36
+KEHE DIST - ROMEOVILLE (18),239388,Midwest,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,21.54,3.59
+KEHE DIST - ROMEOVILLE (18),169250,Midwest,019373731213,Dr. Tung's,Perio SticksTM - Thin,Perio Sticks,6,0.5,,15.66,2.61
+KEHE DIST - ROMEOVILLE (18),169292,Midwest,019373732319,Dr. Tung's,Perio SticksTM - XThin,Perio Sticks,6,0.5,,15.66,2.61
+KEHE DIST - ROMEOVILLE (18),326296,Midwest,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.42,3.57
+KEHE DIST - ROMEOVILLE (18),189263,Midwest,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,32.22,5.37
+KEHE DIST - ROMEOVILLE (18),393916,Midwest,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ST. AUGUSTINE (01),258420,South,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,72.72,6.06
+KEHE DIST - ST. AUGUSTINE (01),294472,South,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,54,4.5
+KEHE DIST - ST. AUGUSTINE (01),294473,South,851499006130,Zen Sauce,Dark Chocolate Cookie Sandwich,Novelties,8,5.25,oz,54,4.5
+KEHE DIST - ST. AUGUSTINE (01),393913,South,851499006895,Zen Sauce,Strawberry Lemon Shortbread,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ST. AUGUSTINE (01),393912,South,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ST. AUGUSTINE (01),393914,South,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ST. AUGUSTINE (01),393910,South,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ST. AUGUSTINE (01),393916,South,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ST. AUGUSTINE (01),393915,South,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,54.72,6.84
+KEHE DIST - ST. AUGUSTINE (01),1373992,South,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,72.72,6.06
+KEHE DIST - ST. AUGUSTINE (01),258419,South,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,72.72,6.06
+UNFI Atlanta,2817583,South,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,57.44,7.18
+UNFI Atlanta,2817633,South,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,57.44,7.18
+UNFI Atlanta,2817609,South,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,57.44,7.18
+UNFI Atlanta,2844348,South,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,57.82,4.82
+UNFI Atlanta,2817591,South,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,57.44,7.18
+UNFI Chesterfield,2279800,North Atlantic,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.79,3.63
+UNFI Chesterfield,564716,North Atlantic,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,20.42,3.40
+UNFI Chesterfield,2844348,North Atlantic,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,57.82,4.82
+UNFI Chesterfield,0624221,North Atlantic,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,74.50,6.21
+UNFI Chesterfield,1684679,North Atlantic,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,74.50,6.21
+UNFI Chesterfield,2978435,North Atlantic,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,32.78,5.46
+UNFI Chesterfield,1630623,North Atlantic,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.81,4.14
+UNFI Dayville,1684679,North Atlantic,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,74.50,6.21
+UNFI Dayville,624221,North Atlantic,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,74.50,6.21
+UNFI Dayville,564716,North Atlantic,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,20.42,3.40
+UNFI Dayville,2279800,North Atlantic,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.79,3.63
+UNFI Dayville,2978435,North Atlantic,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,32.78,5.46
+UNFI Dayville,1630623,North Atlantic,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.81,4.14
+UNFI Greenwood,1684679,Midwest,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,74.50,0.00
+UNFI Greenwood,1684679,Mid-Atlantic,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,74.50,6.21
+UNFI Greenwood,1684711,Mid-Atlantic,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,74.50,6.21
+UNFI Greenwood,2817609,Mid-Atlantic,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,57.44,7.18
+UNFI Greenwood,2817633,Mid-Atlantic,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,57.44,7.18
+UNFI Greenwood,2817617,Mid-Atlantic,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,57.44,7.18
+UNFI Greenwood,2817583,Mid-Atlantic,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,57.44,7.18
+UNFI Greenwood,2978435,Midwest,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,32.78,0.00
+UNFI Greenwood,2279800,Midwest,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.79,0.00
+UNFI Greenwood,1630623,Midwest,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.81,0.00
+UNFI Greenwood,564716,Midwest,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,20.42,0.00
+UNFI Greenwood,2817609,Midwest,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,57.44,0.00
+UNFI Greenwood,2817583,Midwest,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,57.44,0.00
+UNFI Greenwood,1684711,Midwest,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,74.50,0.00
+UNFI Greenwood,2754299,Midwest,850010098081,All Clean Food,Porcini Mushroom Pasta,Pasta,6,,,27.78,0.00
+UNFI Greenwood,2754281,Midwest,850010098012,All Clean Food,Taco Pasta,Pasta,6,,,27.89,0.00
+UNFI Hudson Valley,1630623,Northeast,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.81,4.14
+UNFI Hudson Valley,2279800,Northeast,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.79,3.63
+UNFI Hudson Valley,2978435,Northeast,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,32.78,5.46
+UNFI Hudson Valley,564716,Northeast,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,20.42,3.40
+UNFI Hudson Valley,2817609,Northeast,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,57.44,7.18
+UNFI Hudson Valley,2817591,Northeast,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,57.44,7.18
+UNFI Hudson Valley,624221,Northeast,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,74.50,6.21
+UNFI Hudson Valley,1684711,Northeast,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,74.50,6.21
+UNFI Hudson Valley,1684679,Northeast,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,74.50,6.21
+UNFI Iowa City,2932788,Midwest,019373925100,Dr. Tung's,Herbal Toothpowder Tabs - Mint-Free,Toothpowder Tabs,3,4.5,,27.37,9.12
+UNFI Iowa City,2932846,Midwest,019373925209,Dr. Tung's,Herbal Toothpowder Tabs - Spearmint,Toothpowder Tabs,3,4.5,,27.37,9.12
+UNFI Iowa City,2978435,Midwest,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,32.78,5.56
+UNFI Iowa City,2742575,Midwest,019373731213,Dr. Tung's,Perio SticksTM - Thin,Perio Sticks,6,0.5,,15.54,2.59
+UNFI Iowa City,1684711,Midwest,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,74.50,6.21
+UNFI Iowa City,2817583,Midwest,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,57.44,7.18
+UNFI Iowa City,2817609,Midwest,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,57.44,7.18
+UNFI Iowa City,564716,Midwest,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,20.42,3.40
+UNFI Iowa City,1136936,Midwest,019373732319,Dr. Tung's,Perio SticksTM - XThin,Perio Sticks,6,0.5,,15.54,2.59
+UNFI Iowa City,1630623,Midwest,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.81,4.14
+UNFI Iowa City,1826783,Midwest,019373840007,Dr. Tung's,DrTung's Oil Pulling Concentrate,Oil Pulling | Gums,12,4,,13.88,1.16
+UNFI Iowa City,2279800,Midwest,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.79,3.63
+UNFI Lancaster,10581,Southwest,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,53.91,4.49
+UNFI Lancaster,86064,Southwest,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,51.76,6.47
+UNFI Moreno Valley,10581,SoPac,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,52.73,4.39
+UNFI Moreno Valley,89698,SoPac,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,20.08,3.35
+UNFI Moreno Valley,40504,SoPac,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.43,3.57
+UNFI Moreno Valley,82245,SoPac,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.40,4.07
+UNFI Moreno Valley,78471,SoPac,019373952557,Dr. Tung's,Kids Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.40,4.07
+UNFI Moreno Valley,50993,SoPac,019373732319,Dr. Tung's,Perio SticksTM - XThin,Perio Sticks,6,0.5,,15.28,2.55
+UNFI Moreno Valley,11008,SoPac,019373731213,Dr. Tung's,Perio SticksTM - Thin,Perio Sticks,6,0.5,,15.28,2.55
+UNFI Moreno Valley,87760,SoPac,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,32.24,5.37
+UNFI Moreno Valley,40508,SoPac,019373925209,Dr. Tung's,Herbal Toothpowder Tabs - Spearmint,Toothpowder Tabs,3,4.5,,27.92,9.31
+UNFI Moreno Valley,40505,SoPac,019373925100,Dr. Tung's,Herbal Toothpowder Tabs - Mint-Free,Toothpowder Tabs,3,4.5,,26.92,8.97
+UNFI Moreno Valley,89449,SoPac,019373840007,Dr. Tung's,DrTung's Oil Pulling Concentrate,Oil Pulling | Gums,12,4,,11.38,11.38
+UNFI Moreno Valley,27564,SoPac,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,65.96,5.50
+UNFI Moreno Valley,27563,SoPac,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,65.96,5.50
+UNFI Moreno Valley,72447,SoPac,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,65.96,5.50
+UNFI Moreno Valley,86053,SoPac,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,50.92,6.37
+UNFI Moreno Valley,86051,SoPac,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,50.92,6.37
+UNFI Moreno Valley,86064,SoPac,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,50.92,6.37
+UNFI Moreno Valley,86121,SoPac,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,50.92,6.37
+UNFI Moreno Valley,10594,SoPac,851499006130,Zen Sauce,Dark Chocolate Cookie Sandwich,Novelties,8,5.25,oz,52.73,4.39
+UNFI Richburg,1684711,South,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,74.50,6.21
+UNFI Ridgefield,27564,PNW,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,67.05,5.59
+UNFI Ridgefield,72447,PNW,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,67.05,5.59
+UNFI Ridgefield,86051,PNW,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,51.76,6.47
+UNFI Ridgefield,10581,PNW,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,53.91,4.49
+UNFI Ridgefield,86053,PNW,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,51.76,6.47
+UNFI Ridgefield,86064,PNW,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,51.76,6.47
+UNFI Ridgefield,86104,PNW,851499006932,Zen Sauce,Peanut Butter Blitz,GF Dairy Ice Cream,8,14,oz,51.76,6.47
+UNFI Ridgefield,86119,PNW,851499006895,Zen Sauce,Strawberry Lemon Shortbread,GF Dairy Ice Cream,8,14,oz,51.76,6.47
+UNFI Ridgefield,86121,PNW,851499006901,Zen Sauce,Hazelnut Fudge Crunch,GF Dairy Ice Cream,8,14,oz,51.76,6.47
+UNFI Ridgefield,27563,PNW,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,67.05,5.59
+UNFI Ridgefield,10594,PNW,851499006130,Zen Sauce,Dark Chocolate Cookie Sandwich,Novelties,8,5.25,oz,53.91,4.49
+UNFI Rocklin,27564,NorCal,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,67.05,5.59
+UNFI Rocklin,86053,NorCal,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,51.76,6.47
+UNFI Rocklin,86051,NorCal,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,51.76,6.47
+UNFI Rocklin,10581,NorCal,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,53.91,4.49
+UNFI Rocklin,72447,NorCal,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,67.05,5.59
+UNFI Rocklin,27563,NorCal,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,67.05,5.59
+UNFI Sarasota,1684711,South,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,74.50,6.21
+UNFI Sarasota,624221,South,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,74.50,6.21
+UNFI Sarasota,2817591,South,851499006956,Zen Sauce,Chocolate Euphoria,GF Dairy Ice Cream,8,14,oz,57.44,7.18
+UNFI Sarasota,1684679,South,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,74.50,6.21
+UNFI Twin Cities,1854405,Midwest,019373840007,Dr. Tung's,DrTung's Oil Pulling Concentrate,Oil Pulling | Gums,12,4,,11.69,11.69
+UNFI Twin Cities,2817583,Midwest,851499006949,Zen Sauce,Vanilla Bean Nirvana,GF Dairy Ice Cream,8,14,oz,57.44,7.18
+UNFI Twin Cities,1684711,Midwest,896767001844,Zen Sauce,Sea Salt Caramel Swirl Bar,Novelties,8,4.5,oz,74.50,6.21
+UNFI Twin Cities,1684679,Midwest,896767001837,Zen Sauce,Coconut Almond Crunch Bars,Novelties,8,4.5,oz,74.50,6.21
+UNFI Twin Cities,624221,Midwest,896767001233,Zen Sauce,Dark Chocolate Bar,Novelties,8,6,oz,74.50,6.21
+UNFI Twin Cities,2842789,Midwest,850010098029,All Clean Food,Creamy Mac,Pasta,6,0,,27.55,4.59
+UNFI Twin Cities,2978435,Midwest,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,32.78,5.46
+UNFI Twin Cities,2932846,Midwest,019373925209,Dr. Tung's,Herbal Toothpowder Tabs - Spearmint,Toothpowder Tabs,3,4.5,,27.37,9.12
+UNFI Twin Cities,2932788,Midwest,019373925100,Dr. Tung's,Herbal Toothpowder Tabs - Mint-Free,Toothpowder Tabs,3,4.5,,27.37,9.12
+UNFI Twin Cities,2742575,Midwest,019373731213,Dr. Tung's,Perio SticksTM - Thin,Perio Sticks,6,0.5,,15.54,2.59
+UNFI Twin Cities,2279800,Midwest,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.79,3.63
+UNFI Twin Cities,2817609,Midwest,851499006925,Zen Sauce,Twisted Cookie Dough,GF Dairy Ice Cream,8,14,oz,57.44,7.18
+UNFI Twin Cities,2844348,Midwest,851499006123,Zen Sauce,Madagascan Vanilla Cookie Sandwich,Novelties,8,5.25,oz,57.82,4.82
+UNFI Twin Cities,1136936,Midwest,019373732319,Dr. Tung's,Perio SticksTM - XThin,Perio Sticks,6,0.5,,15.54,2.59
+UNFI Twin Cities,1630623,Midwest,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.81,4.14
+UNFI Twin Cities,2754299,Midwest,850010098081,All Clean Food,Porcini Mushroom Pasta,Pasta,6,,,27.78,4.63
+UNFI Wellness DC East Philadelphia,1830280,South,019373822508,Dr. Tung's,REJUV for gums,Oil Pulling | Gums,16,4,,11.56,11.56
+UNFI Wellness DC East Philadelphia,1822204,South,019373952557,Dr. Tung's,Kids Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.81,4.14
+UNFI Wellness DC East Philadelphia,2978435,South,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,32.78,5.46
+UNFI Wellness DC East Philadelphia,2932788,South,019373925100,Dr. Tung's,Herbal Toothpowder Tabs - Mint-Free,Toothpowder Tabs,3,4.5,,27.37,9.12
+UNFI Wellness DC East Philadelphia,2932846,South,019373925209,Dr. Tung's,Herbal Toothpowder Tabs - Spearmint,Toothpowder Tabs,3,4.5,,27.37,9.12
+UNFI Wellness DC East Philadelphia,564716,Midwest,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,20.08,20.08
+UNFI Wellness DC East Philadelphia,2932846,Mid-Atlantic,019373925209,Dr. Tung's,Herbal Toothpowder Tabs - Spearmint,Toothpowder Tabs,3,4.5,,27.37,9.12
+UNFI Wellness DC East Philadelphia,2932788,Mid-Atlantic,019373925100,Dr. Tung's,Herbal Toothpowder Tabs - Mint-Free,Toothpowder Tabs,3,4.5,,27.37,9.12
+UNFI Wellness DC East Philadelphia,2978435,Mid-Atlantic,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,32.78,5.46
+UNFI Wellness DC East Philadelphia,1822204,Mid-Atlantic,019373952557,Dr. Tung's,Kids Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.81,4.14
+UNFI Wellness DC East Philadelphia,1630623,Mid-Atlantic,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.81,4.14
+UNFI Wellness DC East Philadelphia,1830280,Mid-Atlantic,019373822508,Dr. Tung's,REJUV for gums,Oil Pulling | Gums,16,4,,11.56,11.56
+UNFI Wellness DC East Philadelphia,1136936,Mid-Atlantic,019373732319,Dr. Tung's,Perio SticksTM - XThin,Perio Sticks,6,0.5,,15.54,2.59
+UNFI Wellness DC East Philadelphia,2742575,Mid-Atlantic,019373731213,Dr. Tung's,Perio SticksTM - Thin,Perio Sticks,6,0.5,,15.54,2.59
+UNFI Wellness DC East Philadelphia,1826783,Mid-Atlantic,019373840007,Dr. Tung's,DrTung's Oil Pulling Concentrate,Oil Pulling | Gums,12,4,,138.78,11.57
+UNFI Wellness DC East Philadelphia,2279800,Mid-Atlantic,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.79,3.63
+UNFI Wellness DC East Philadelphia,564716,Mid-Atlantic,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,20.42,3.40
+UNFI Wellness DC East Philadelphia,1630623,South,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.81,4.14
+UNFI Wellness DC East Philadelphia,564716,North Atlantic,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,20.42,3.40
+UNFI Wellness DC East Philadelphia,2279800,North Atlantic,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.79,3.63
+UNFI Wellness DC East Philadelphia,1826783,North Atlantic,019373840007,Dr. Tung's,DrTung's Oil Pulling Concentrate,Oil Pulling | Gums,12,4,,138.78,11.57
+UNFI Wellness DC East Philadelphia,2742575,North Atlantic,019373731213,Dr. Tung's,Perio SticksTM - Thin,Perio Sticks,6,0.5,,15.54,2.59
+UNFI Wellness DC East Philadelphia,1136936,North Atlantic,019373732319,Dr. Tung's,Perio SticksTM - XThin,Perio Sticks,6,0.5,,15.54,2.59
+UNFI Wellness DC East Philadelphia,1830280,North Atlantic,019373822508,Dr. Tung's,REJUV for gums,Oil Pulling | Gums,16,4,,11.56,11.56
+UNFI Wellness DC East Philadelphia,1630623,North Atlantic,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.81,4.14
+UNFI Wellness DC East Philadelphia,1822204,North Atlantic,019373952557,Dr. Tung's,Kids Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.81,4.14
+UNFI Wellness DC East Philadelphia,2978435,North Atlantic,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,32.78,5.46
+UNFI Wellness DC East Philadelphia,2932788,North Atlantic,019373925100,Dr. Tung's,Herbal Toothpowder Tabs - Mint-Free,Toothpowder Tabs,3,4.5,,27.37,9.12
+UNFI Wellness DC East Philadelphia,2932846,North Atlantic,019373925209,Dr. Tung's,Herbal Toothpowder Tabs - Spearmint,Toothpowder Tabs,3,4.5,,27.37,9.12
+UNFI Wellness DC East Philadelphia,2932846,Midwest,019373925209,Dr. Tung's,Herbal Toothpowder Tabs - Spearmint,Toothpowder Tabs,3,4.5,,26.92,26.92
+UNFI Wellness DC East Philadelphia,564716,Northeast,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,20.42,3.40
+UNFI Wellness DC East Philadelphia,2279800,Northeast,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.79,3.63
+UNFI Wellness DC East Philadelphia,1826783,Northeast,019373840007,Dr. Tung's,DrTung's Oil Pulling Concentrate,Oil Pulling | Gums,12,4,,138.78,11.57
+UNFI Wellness DC East Philadelphia,2742575,Northeast,019373731213,Dr. Tung's,Perio SticksTM - Thin,Perio Sticks,6,0.5,,15.54,2.59
+UNFI Wellness DC East Philadelphia,1136936,Northeast,019373732319,Dr. Tung's,Perio SticksTM - XThin,Perio Sticks,6,0.5,,15.54,2.59
+UNFI Wellness DC East Philadelphia,1830280,Northeast,019373822508,Dr. Tung's,REJUV for gums,Oil Pulling | Gums,16,4,,11.56,11.56
+UNFI Wellness DC East Philadelphia,1630623,Northeast,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.81,4.14
+UNFI Wellness DC East Philadelphia,1822204,Northeast,019373952557,Dr. Tung's,Kids Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.81,4.14
+UNFI Wellness DC East Philadelphia,2978435,Northeast,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,32.78,5.46
+UNFI Wellness DC East Philadelphia,2932788,Northeast,019373925100,Dr. Tung's,Herbal Toothpowder Tabs - Mint-Free,Toothpowder Tabs,3,4.5,,27.37,9.12
+UNFI Wellness DC East Philadelphia,2932846,Northeast,019373925209,Dr. Tung's,Herbal Toothpowder Tabs - Spearmint,Toothpowder Tabs,3,4.5,,27.37,9.12
+UNFI Wellness DC East Philadelphia,2932788,Midwest,019373925100,Dr. Tung's,Herbal Toothpowder Tabs - Mint-Free,Toothpowder Tabs,3,4.5,,26.92,26.92
+UNFI Wellness DC East Philadelphia,177295,Midwest,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,64.48,64.48
+UNFI Wellness DC East Philadelphia,1822204,Midwest,019373952557,Dr. Tung's,Kids Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.40,24.40
+UNFI Wellness DC East Philadelphia,1830280,Midwest,019373822508,Dr. Tung's,REJUV for gums,Oil Pulling | Gums,16,4,,11.39,11.39
+UNFI Wellness DC East Philadelphia,1136936,Midwest,019373732319,Dr. Tung's,Perio SticksTM - XThin,Perio Sticks,6,0.5,,15.28,15.28
+UNFI Wellness DC East Philadelphia,2742575,Midwest,019373731213,Dr. Tung's,Perio SticksTM - Thin,Perio Sticks,6,0.5,,15.28,15.28
+UNFI Wellness DC East Philadelphia,1854405,Midwest,019373840007,Dr. Tung's,DrTung's Oil Pulling Concentrate,Oil Pulling | Gums,12,4,,11.50,11.50
+UNFI Wellness DC East Philadelphia,2279800,Midwest,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.43,21.43
+UNFI Wellness DC East Philadelphia,1630623,Midwest,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.40,24.40
+UNFI Wellness DC East Philadelphia,564716,South,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,20.42,3.40
+UNFI Wellness DC East Philadelphia,2279800,South,019373755912,Dr. Tung's,Activated Charcoal              VEGAN Floss,Floss,6,1,oz,21.79,3.63
+UNFI Wellness DC East Philadelphia,1826783,South,019373840007,Dr. Tung's,DrTung's Oil Pulling Concentrate,Oil Pulling | Gums,12,4,,138.78,11.57
+UNFI Wellness DC East Philadelphia,2742575,South,019373731213,Dr. Tung's,Perio SticksTM - Thin,Perio Sticks,6,0.5,,15.54,2.59
+UNFI Wellness DC East Philadelphia,1136936,South,019373732319,Dr. Tung's,Perio SticksTM - XThin,Perio Sticks,6,0.5,,15.54,2.59
+UNFI York,564716,Mid-Atlantic,019373711215,Dr. Tung's,Smart Floss,Floss,6,1,oz,20.42,3.40
+UNFI York,1630623,Mid-Atlantic,019373951154,Dr. Tung's,Adult Snap-on Toothbrush Protection,Toothbrush Protection,6,0.7,,24.81,4.14
+UNFI York,2978435,Mid-Atlantic,019373911219,Dr. Tung's,DrTung's Tongue Cleaner,Tongue Cleaner,6,1,oz,32.78,5.46
+UNFI York,2932788,Mid-Atlantic,019373925100,Dr. Tung's,Herbal Toothpowder Tabs - Mint-Free,Toothpowder Tabs,3,4.5,,27.37,9.12
+UNFI York,2932846,Mid-Atlantic,019373925209,Dr. Tung's,Herbal Toothpowder Tabs - Spearmint,Toothpowder Tabs,3,4.5,,27.37,9.12

@@ -47,6 +47,16 @@ node post-jira.js --yes
 
 You'll see one line per ticket: `OK  code -> CS-xxxx`, or `SKIP` / `FAIL` as appropriate.
 
+### Posting a single spec
+
+Use `--code` to limit the run to one spec, which bypasses the standard list and honors
+the priority written in the spec file:
+
+```powershell
+node post-jira.js --code SE1          # dry run for just SE1
+node post-jira.js --code SE1 --yes    # create just SE1
+```
+
 ---
 
 ## Troubleshooting

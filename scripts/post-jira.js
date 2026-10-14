@@ -12,9 +12,11 @@
  *   JIRA_PROJECT    the project key, e.g. CS
  *
  * Usage:
- *   node post-jira.js            # dry run — prints what WOULD be created
- *   node post-jira.js --yes      # actually create tickets
- *   node post-jira.js --list     # print all spec codes found
+ *   node post-jira.js                      # dry run — prints what WOULD be created
+ *   node post-jira.js --yes                # actually create tickets
+ *   node post-jira.js --list               # print all spec codes found
+ *   node post-jira.js --code SE1           # limit to a single spec code (dry run)
+ *   node post-jira.js --code SE1 --yes     # create just that one ticket
  *
  * Zero-dependency: uses Node's global fetch (Node 18+).
  */
@@ -41,12 +43,12 @@ const TO_POST = new Set([
   'BD1', 'BD2', 'BD3', 'BD4', 'PM7',
   'CR1', 'CR4', 'CR5', 'DA1', 'DA2',
   'MO1', 'MO2', 'MO3', 'MO4', 'MO5', 'MO6',
-  'PM2', 'PM3', 'PM4', 'PM5', 'PM6',
+  'PM2', 'PM3', 'PM4', 'PM5', 'PM6', 'PM9',
   'BMP1', 'BMP2',
   'BMTSS1', 'BMTSS2', 'BMTSS3', 'BMTSS4', 'BMTSS5', 'BMTSS6',
   'BMTPS1', 'BMTRC1', 'SRM1',
   'RDR1', 'RDR2', 'RBMO1', 'RBS1', 'RBST1',
-  'ACDU1', 'AD1', 'AAC1', 'AAC2', 'ANAWT1', 'ASR1',
+  'ACDU1', 'ACDU2', 'AD1', 'AAC1', 'AAC2', 'ANAWT1', 'ASGE1', 'ASR1',
 ]);
 
 /* Every spec is posted as a Story, Medium priority (per request). */
@@ -185,7 +187,10 @@ async function createIssue(baseUrl, email, token, project, spec, issueTypes) {
     id = issueTypes.find((n) => /story|task|bug/i.test(n)) || issueTypes[0];
   }
 
-  const priority = DEFAULT_PRIORITY;
+  const VALID_PRIORITIES = ['Highest', 'High', 'Medium', 'Low', 'Lowest'];
+  const specPriority = (spec.priority || '').trim();
+  const priority =
+    VALID_PRIORITIES.find((p) => p.toLowerCase() === specPriority.toLowerCase()) || DEFAULT_PRIORITY;
 
   const payload = {
     fields: {
@@ -218,15 +223,21 @@ async function main() {
   const args = process.argv.slice(2);
   const dryRun = !args.includes('--yes');
   const listOnly = args.includes('--list');
+  const codeIdx = args.indexOf('--code');
+  const codeFilter = codeIdx >= 0 ? (args[codeIdx + 1] || '').trim().toUpperCase() : '';
 
   const env = loadEnv();
   const { JIRA_BASE_URL, JIRA_EMAIL, JIRA_API_TOKEN, JIRA_PROJECT } = env;
   if (listOnly) {
     for (const f of walk(TICKETS_DIR)) {
       const s = parseSpec(f);
-      if (s.code && TO_POST.has(s.code)) {
-        console.log(`${s.code.padEnd(8)} ${s.title}`);
+      if (!s.code) continue;
+      if (codeFilter) {
+        if (s.code.toUpperCase() !== codeFilter) continue;
+      } else if (!TO_POST.has(s.code)) {
+        continue;
       }
+      console.log(`${s.code.padEnd(8)} ${s.title}`);
     }
     return;
   }
@@ -244,9 +255,13 @@ async function main() {
   for (const f of walk(TICKETS_DIR)) {
     const s = parseSpec(f);
     if (!s.code) continue;
-    if (!TO_POST.has(s.code)) continue;
-    if (EXCLUDED.has(s.code)) continue;
-    if (ALREADY_IN_JIRA.has(s.code)) continue;
+    if (codeFilter) {
+      if (s.code.toUpperCase() !== codeFilter) continue;
+    } else {
+      if (!TO_POST.has(s.code)) continue;
+      if (EXCLUDED.has(s.code)) continue;
+      if (ALREADY_IN_JIRA.has(s.code)) continue;
+    }
     specs.push(s);
   }
 

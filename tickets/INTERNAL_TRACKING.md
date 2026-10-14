@@ -29,6 +29,8 @@
 | PM4 | Pin/freeze filter options | User Story | — |
 | PM5 | Uniform grid format | Bug | — |
 | PM6 | Event span/move across months | User Story | — |
+| PM9 | Promo Management UI to match CR calendar | User Story | CS-1711 |
+| SE1 | Simple Entries (non-calculated promos) | User Story | CS-1708 |
 | BMP1 | Pipeline assign users | User Story | — |
 | BMP2 | Pipeline email on update | User Story | — |
 | BMTSS1 | Remove/modify approved promos | User Story | CS-1098 / CS-1108 |
@@ -47,11 +49,13 @@
 | RBS1 | SPINS hide market insights | User Story | — |
 | RBST1 | Sales tracker back button | Bug | — |
 | ACDU1 | CRM upload filter audit | User Story | — |
+| ACDU2 | CRM Data Upload: delete or merge Retailers | Task | CS-1709 |
 | AD1 | Dashboard flags prototype | Prototype | — |
 | AAC1 | Report page icon controls | User Story | — |
 | AAC2 | CR brand report dropdown | User Story | — |
 | ANAWT1 | Single Trade Spend subscription | User Story | — |
 | ASR1 | Store report merge duplicates | User Story | — |
+| ASGE1 | System generated email sender address | Task | CS-1710 |
 
 ## Mapping notes
 - **Already in Jira (real CS-* tickets):** CS-1296, CS-1305, CS-1316, CS-1318, CS-1324, CS-1361, CS-1403, CS-1424, CS-1543, CS-1072 — these spec files ARE their real tickets; do **not** re-post.
