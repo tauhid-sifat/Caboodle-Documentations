@@ -16,7 +16,7 @@
 | `specs/**` (74 spec files: broker-dashboard/, category-review/, market-overview/, promo-management/, trade-spend/, brand/, reports/, talking-points/) | BA-written ticket specifications | Deliverables (client-reviewed subset); proposals unless marked approved |
 | `docs/onboarding/backend/*`, `docs/onboarding/frontend/*` (incl. `modules/*`) | AI-generated AS-IS codebase analysis | Evidence about the system as built |
 | `docs/architecture/` (Analysis_Part1, Backend Architecture Review, Frontend Architectural Review), `docs/qa/` (Testing Checklist, docs/qa/TSS Feature – QA Test Checklist.md), `docs/handover/` (Product_Reconstruction_Handover) | Reviews, handover, QA baselines | Evidence / assessment |
-| `jira/tickets/` (1,780 files, CS-1…1777 + GTMS-*) | Live Jira export (2026-10-14) | **Authoritative backlog.** Represented here via aggregate stats (AGENTS §16) + the active tickets covered by `specs/`; not read raw individually |
+| `jira/tickets/` (1,784 files, CS-1…1781 + GTMS-*) | Live Jira export (2026-10-14) | **Authoritative backlog.** Represented here via aggregate stats (AGENTS §16) + the active tickets covered by `specs/`; not read raw individually |
 | `design/prototypes/Daily Delight Calendar/`, `design/wireframes/index.html`, `scripts/check-descriptions.js` | Lovable prototype, deployed wireframe, backlog-audit script | Reference |
 
 ---

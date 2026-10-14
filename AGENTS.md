@@ -6,7 +6,7 @@
 ## Rules
 
 - **Terminology:** brands are *assigned to* brokers; a broker *represents* brands. Never write "broker assigned to/under a brand" (`wiki/broker-brand-terminology.md`).
-- **Evidence hierarchy:** `jira/tickets/` (1,780 live tickets) beats `data/Jira (3).csv` (legacy, superseded). `meetings/` transcripts are raw truth; `wiki/client-decisions-open-questions.md` is the tagged extract.
+- **Evidence hierarchy:** `jira/tickets/` (1,784 live tickets) beats `data/Jira (3).csv` (legacy, superseded). `meetings/` transcripts are raw truth; `wiki/client-decisions-open-questions.md` is the tagged extract.
 - **`specs/` are deliverables:** curated, client-reviewed subset (~40 tickets). Never treat them as the whole backlog.
 - **Statuses:** Discontinued is terminal; Market Overview cannot overwrite it. "Submitted" is a parallel `IsSubmitted` flag question, still open.
 - **Scope:** `Store` module is unimplemented; "ASK Cab" AI is placeholder-only. Do not spec against them as live systems.
@@ -30,7 +30,7 @@
 | Tech debt, security risks, EOL items | `wiki/technical-debt-risks.md` |
 | Spec-file inventory, wireframe links | `wiki/deliverables-index.md` |
 | SKU/UPC/Banner/APL/EDLP/TPR and 15 more terms | `wiki/glossary.md` |
-| Live backlog stats (1,780 tickets), priority skew | `wiki/jira-backlog-intelligence.md` + `CONTEXT.md` |
+| Live backlog stats (1,784 tickets), priority skew | `wiki/jira-backlog-intelligence.md` + `CONTEXT.md` |
 | Client decisions D1–D15, consolidated open questions | `wiki/client-decisions-open-questions.md` |
 
 ## Root docs (stay at root, linked from wiki)
@@ -39,7 +39,7 @@
 
 ## Evidence sources (read-only, never rewrite)
 
-- `jira/tickets/` — authoritative live backlog (CS-1…CS-1777 + GTMS-*).
+- `jira/tickets/` — authoritative live backlog (CS-1…CS-1781 + GTMS-*).
 - `meetings/` — 16 raw transcripts (Jul 13 – Sep 3, 2026).
 - `design/prototypes/Daily Delight Calendar/` — Lovable Category Review prototype.
 - `design/wireframes/index.html` — live at https://caboodle-broker-dashboard.vercel.app
