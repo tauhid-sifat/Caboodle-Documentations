@@ -31,7 +31,7 @@ last_verified: 2026-10-14
 | D13 | **"Simple Entries"** for non-calculated promos (bypass TSS stepper); template = banner+UPC+event+dates | [2026-07-13-broker-promo-entry](../meetings/notes/2026-07-13-broker-promo-entry.md) | APPROVED |
 | D14 | Brand Report / Calendar stay in sync; remove from either removes from both | [2026-07-16-caboodle-daily](../meetings/notes/2026-07-16-caboodle-daily.md) | VALIDATED |
 | D15 | "Submission due date" → **"review start date"** (60-day notice) | [2026-07-15-daily-caboodle](../meetings/notes/2026-07-15-daily-caboodle.md) | VALIDATED |
-| D16 | **Ask Caboodle**: info-type (query builder) vs reporting-type questions; no RAG, multi-agent; answer-first UX; permission-gated | [2026-09-03-ask-caboodle](../meetings/notes/2026-09-03-ask-caboodle.md) | APPROVED |
+| D16 | **Ask Caboodle**: info-type (query builder) vs reporting-type questions; no RAG (deterministic data), multi-agent per module; answer-first UX; permission-gated | [2026-09-03-ask-caboodle](../meetings/notes/2026-09-03-ask-caboodle.md) | APPROVED |
 | D17 | **Retail APL pushed live** for Jade Street demo; prod **duplicate-store dedupe run** + admin merge tool | [2026-08-24-ticket-call](../meetings/notes/2026-08-24-ticket-call.md) | APPROVED |
 | D18 | Category calendar: **no compose section**, no contact/assignee info (email from list/Brand Report) | [2026-08-24-ticket-call](../meetings/notes/2026-08-24-ticket-call.md) | APPROVED |
 | D19 | Notification email: remove "assigned to" row; notes **override** (no history); rejected red / submitted purple | [2026-07-27-ticket-call](../meetings/notes/2026-07-27-ticket-call.md) | APPROVED |
