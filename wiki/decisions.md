@@ -35,7 +35,7 @@ last_verified: 2026-10-14
 | D17 | **Retail APL pushed live** for Jade Street demo; prod **duplicate-store dedupe run** + admin merge tool | [2026-08-24-ticket-call](../meetings/notes/2026-08-24-ticket-call.md) | APPROVED |
 | D18 | Category calendar: **no compose section**, no contact/assignee info (email from list/Brand Report) | [2026-08-24-ticket-call](../meetings/notes/2026-08-24-ticket-call.md) | APPROVED |
 | D19 | Notification email: remove "assigned to" row; notes **override** (no history); rejected red / submitted purple | [2026-07-27-ticket-call](../meetings/notes/2026-07-27-ticket-call.md) | APPROVED |
-| D20 | **Generic corrupt-data report** for all uploads (not per-section); email resend-for-selected; retail APL export | [2026-07-20-ticket-call](../meetings/notes/2026-07-20-ticket-call.md), [2026-08-17-ticket-call](../meetings/notes/2026-08-17-ticket-call.md) | APPROVED |
+| D20 | **Generic corrupt-data report** for all uploads (not per-section) — CLARIFIED; email resend-for-selected — APPROVED; retail APL export — APPROVED | [2026-07-20-ticket-call](../meetings/notes/2026-07-20-ticket-call.md), [2026-08-17-ticket-call](../meetings/notes/2026-08-17-ticket-call.md) | APPROVED |
 
 ## Open Questions
 
