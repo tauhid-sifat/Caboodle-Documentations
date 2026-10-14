@@ -1,3 +1,11 @@
+---
+type: reference
+title: "Ask Caboodle: Feature Scope (Client Version)"
+module: ask-caboodle
+status: current
+last_verified: 2026-10-14
+---
+
 # Ask Caboodle: Feature Scope (Client Version)
 
 > Prepared for the Caboodle team. This is the plain-language companion to the Ask Caboodle presentation. It follows the same four-phase shape, and leaves the technical detail to the separate internal document.

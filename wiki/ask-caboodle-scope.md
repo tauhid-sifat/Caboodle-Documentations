@@ -1,3 +1,11 @@
+---
+type: reference
+title: Ask Caboodle Feature Scope
+module: ask-caboodle
+status: current
+last_verified: 2026-10-14
+---
+
 # Ask Caboodle Feature Scope
 
 > **Goal:** An AI-powered query/chat feature built into Caboodle that lets users ask natural-language questions and get answers pulled directly from their own Caboodle data — an AI assistant layered on top of the existing reports and dashboards.

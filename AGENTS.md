@@ -40,7 +40,7 @@
 ## Evidence sources (read-only, never rewrite)
 
 - `jira/tickets/` — authoritative live backlog (CS-1…CS-1777 + GTMS-*).
-- `meetings/` — 14 raw transcripts (Jul 15 – Aug 19, 2026).
+- `meetings/` — 16 raw transcripts (Jul 13 – Sep 3, 2026).
 - `design/prototypes/Daily Delight Calendar/` — Lovable Category Review prototype.
 - `design/wireframes/index.html` — live at https://caboodle-broker-dashboard.vercel.app
 - `data/Jira (3).csv` — legacy; superseded by `jira/tickets/`.

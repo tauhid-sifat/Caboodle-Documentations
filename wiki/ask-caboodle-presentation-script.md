@@ -1,3 +1,11 @@
+---
+type: reference
+title: Ask Caboodle - Presentation Script
+module: ask-caboodle
+status: current
+last_verified: 2026-10-14
+---
+
 # Ask Caboodle - Presentation Script
 
 **Before you start.** This is not a pitch. You have worked with Constance for years, and this is *her* idea. You are the one who finally put shape around it. So the tone is peer to peer, warm, direct, collaborative. Say "we." Give her credit. Push back openly where you disagree. If she interrupts, let her. This works better as a conversation than a presentation.

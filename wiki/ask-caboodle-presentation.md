@@ -3,6 +3,11 @@ marp: true
 theme: default
 paginate: true
 size: 16:9
+type: reference
+title: Ask Caboodle Presentation
+module: ask-caboodle
+status: current
+last_verified: 2026-10-14
 style: |
   section {
     font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;

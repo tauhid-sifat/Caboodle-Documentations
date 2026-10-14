@@ -1,3 +1,11 @@
+---
+type: primer
+title: Caboodle Business Overview
+module: general
+status: current
+last_verified: 2026-10-14
+---
+
 # Caboodle — Business Overview
 
 > A guide for developers new to the CPG (Consumer Packaged Goods) industry.
