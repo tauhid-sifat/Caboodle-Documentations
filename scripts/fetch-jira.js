@@ -129,7 +129,7 @@ async function fetchAll(base, auth, jql) {
   let nextPageToken = null;
   let page = 0;
   while (true) {
-    let url = `${base}/rest/api/3/search/jql?jql=${encodeURIComponent(jql)}&maxResults=100&fields=summary,issuetype,status,priority,assignee,reporter,created,updated,labels,description`;
+    let url = `${base}/rest/api/3/search/jql?jql=${encodeURIComponent(jql)}&maxResults=100&fields=summary,issuetype,status,priority,assignee,reporter,created,updated,labels,description,comment,issuelinks,parent`;
     if (nextPageToken) url += `&nextPageToken=${encodeURIComponent(nextPageToken)}`;
     console.log(`Fetching page ${++page}...`);
     const r = await fetch(url, { headers: { Authorization: auth, Accept: 'application/json' } });
@@ -193,6 +193,34 @@ async function main() {
       descMd = 'No description provided.';
     }
 
+    let commentsMd = '';
+    const comments = (f.comment && f.comment.comments) || [];
+    for (const c of comments) {
+      const author = c.author?.displayName || 'unknown';
+      const createdC = formatDate(c.created);
+      const cbody = adfToMarkdown(c.body).trim();
+      if (cbody) commentsMd += `### ${author} (${createdC})\n\n${cbody}\n\n`;
+    }
+    commentsMd = commentsMd.trim() || 'No comments.';
+
+    let linksMd = '';
+    const links = f.issuelinks || [];
+    for (const l of links) {
+      const dir = l.outwardIssue ? 'outward' : 'inward';
+      const lt = l.type?.outward && dir === 'outward' ? l.type.outward
+        : l.type?.inward && dir === 'inward' ? l.type.inward : (l.type?.name || 'links');
+      const other = l.outwardIssue || l.inwardIssue;
+      if (other) linksMd += `* ${lt} ${other.key}: ${(other.fields?.summary || '').replace(/\n/g, ' ')} (${other.fields?.status?.name || ''})\n`;
+    }
+    linksMd = linksMd.trim() || 'No issue links.';
+
+    let parentMd = '';
+    if (f.parent) {
+      parentMd = `${f.parent.key}: ${(f.parent.fields?.summary || '').replace(/\n/g, ' ')} (${f.parent.fields?.issuetype?.name || ''})`;
+    } else {
+      parentMd = 'No parent.';
+    }
+
     const md = `# ${key} - ${summary}
 
 | Field | Value |
@@ -209,6 +237,18 @@ async function main() {
 ## Description
 
 ${descMd}
+
+## Comments
+
+${commentsMd}
+
+## Issue Links
+
+${linksMd}
+
+## Parent
+
+${parentMd}
 `;
 
     const outPath = path.join(OUT_DIR, `${key}.md`);

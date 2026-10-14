@@ -14,3 +14,15 @@
 ## Description
 
 No description provided.
+
+## Comments
+
+No comments.
+
+## Issue Links
+
+* is duplicated by CS-71: [FE] Add Banner Name filter in Admin CRM banners section (Closed)
+
+## Parent
+
+CS-4: Add sku name and banner filter in admin CRM Banner SKu section. (Task)

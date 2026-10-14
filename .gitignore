@@ -3,7 +3,7 @@
 
 # Generated / large / local-only data - never commit (tracked files stay tracked)
 data/
-jira/
+jira/tickets/
 .openknowledge/
 site/
 *.db

@@ -16,3 +16,15 @@
 Address UNFI Report Issue
 
 * Confidential (WFM + 35 other chains) All data collects in the state of WY in sales by store. It’s because the upload is comes in as confidential for all rows. Not sure how to resolve. See attached.
+
+## Comments
+
+No comments.
+
+## Issue Links
+
+No issue links.
+
+## Parent
+
+No parent.
