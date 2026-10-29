@@ -3,7 +3,7 @@ type: reference
 title: Category review three distinct features (CS-1361 vs CS-1296)
 module: category-review
 status: current
-last_verified: 2026-10-14
+last_verified: 2026-10-29
 ---
 
 # CATEGORY REVIEW — THREE DISTINCT FEATURES (CS-1361 vs CS-1296)
@@ -38,3 +38,8 @@ From the Lovable prototype (prompts 1-17), the Category Review has **three separ
 CS-1296: Upload CSV → POST /category-reviews/import → CategoryReview table
 CS-1361: Grid loads → GET /api/category-reviews/calendar?year=YYYY → reads from CategoryReview table
 ```
+
+
+---
+
+> Code-verified detail for the modules behind these pages: `wiki/modules/` (2.7, 2.8, 2.9, etc.) and `wiki/traceability-matrix.md`. Source of truth: `docs/feature-context.md`.

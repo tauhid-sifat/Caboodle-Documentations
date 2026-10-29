@@ -3,7 +3,7 @@ type: reference
 title: Promotional management status life
 module: promo-management
 status: current
-last_verified: 2026-10-14
+last_verified: 2026-10-29
 ---
 
 # PROMOTIONAL MANAGEMENT — STATUS LIFE
@@ -28,3 +28,8 @@ last_verified: 2026-10-14
 
 ### Market Overview SkuStatus (separate enum)
 Active, Pending, NotActive, Declined, Discontinued, Approved, Commit
+
+
+---
+
+> Code-verified detail for the modules behind these pages: `wiki/modules/` (2.7, 2.8, 2.9, etc.) and `wiki/traceability-matrix.md`. Source of truth: `docs/feature-context.md`.

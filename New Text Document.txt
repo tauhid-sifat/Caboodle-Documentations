@@ -1,0 +1,2 @@
+python -m http.server --directory Wireframe
+http://localhost:8000/index.html

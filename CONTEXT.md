@@ -1,7 +1,7 @@
 # Project Context — Caboodle BA Deliverables
 
-**Last Updated:** 2026-10-14  
-**Session:** Knowledge-base sync from live Jira (1,784 tickets) + 16 meeting transcripts
+**Last Updated:** 2026-10-29  
+**Session:** Completed code-verified module reference pages for all 15 modules (2.1-2.15) under wiki/modules/, plus cross-cutting (§3), dependencies & recipes (§4-§5), and traceability-matrix.md. Knowledge-base sync from live Jira (1,784 tickets) + 16 meeting transcripts
 
 ---
 
@@ -23,8 +23,16 @@ Maintain the Caboodle BA knowledge base and ticket deliverables, keeping them sy
 | `jira/tickets/` | 1,784 tickets (CS-1…CS-1781 + GTMS-*) | Markdown (Jira export) | **Authoritative** live backlog — generated 2026-10-14 from `caboodleservices.atlassian.net` |
 | `meetings/` | 16 transcripts (Jul 13 – Sep 3, 2026) | Raw text | **Raw evidence** — structured knowledge extracted to `wiki/decisions.md` + `meetings/notes/`; transcripts kept intact |
 | `specs/` | 76 curated spec files | Markdown | BA deliverables (prioritized, client-reviewed subset; 2 drafts pending review) |
+| `data/IAM_Ticket_Impact_Report.xlsx` | 37 IAM + 31 closable tickets | XLSX (local only) | IAM coverage report (Ornov, modified 2026-10-18); extracted to `wiki/iam-impact-report.md` |
 | `docs/onboarding/`, `design/prototypes/` | docs + Lovable prototype | Mixed | Reference |
 | `data/Jira (3).csv` | legacy 130-issue export | CSV | **Legacy** — superseded by `jira/tickets/`; not source of truth |
+
+## This Session (Oct 22, 2026)
+
+- **IAM Ticket Impact Report ingested** (`data/IAM_Ticket_Impact_Report.xlsx`, compiled by Ornov): 37 tickets in the IAM scope, 31 marked closable. Extracted to `wiki/iam-impact-report.md`.
+- **Verdicts:** 26 done by IAM, 5 obsolete/superseded, 2 Ask Caboodle skipped, 2 need discussion, 1 partial (CS-1543), 1 still open (CS-701). Closable = 31.
+- **Not closed yet:** CS-1162 (delete permissions), CS-1592 (Basic tier cap), CS-701 (public view-only links) need business decisions; CS-1543 re-scope to saved filters + task roll-up; CS-1288 and CS-1362 skipped.
+- **Risk:** FE work (40 web + 21 admin items) does not block closing, so Jira "done" will run ahead of usable screens. Legacy retirement (CS-1473) is not executed and 4 promo-rule endpoints remain unguarded.
 
 ## This Session (Sep 02, 2026)
 

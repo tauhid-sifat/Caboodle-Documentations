@@ -294,7 +294,7 @@ into the brand environment from the broker side.
 
 ## How the Frontend Connects
 
-The frontend (separate Angular/React/Blazor apps) calls REST APIs:
+The frontend (two Next.js apps: `caboodle.web` Next.js 14 and `caboodle.admin` Next.js 16) calls REST APIs directly (no proxy):
 - All routes: `api/v{version}/[controller]`
 - Auth: JWT token from `POST /api/v1/Auth/login` or `POST /api/v1/Admin/login`
 - Brand-scoped: `Brand-ID` header on requests

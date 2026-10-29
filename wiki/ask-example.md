@@ -3,7 +3,7 @@ type: reference
 title: Ask example
 module: ask-caboodle
 status: current
-last_verified: 2026-10-14
+last_verified: 2026-10-29
 ---
 
 Hi Team,

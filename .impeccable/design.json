@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T00:00:00Z",
+  "title": "Design System: Caboodle Pipeline (dense ledger world)",
+  "extensions": {
+    "colorMeta": {
+      "accent": { "role": "primary", "displayName": "Ledger Indigo", "canonical": "#6366f1", "tonalRamp": ["#312e81", "#4338ca", "#4f46e5", "#6366f1", "#818cf8", "#a5b4fc", "#c7d2fe", "#eef2ff"] },
+      "ground": { "role": "neutral", "displayName": "Ledger Ground", "canonical": "#fbfbfc", "tonalRamp": ["#14161d", "#1a1d26", "#5c6470", "#6b7280", "#9aa1af", "#d0d4dd", "#e9ebf0", "#fbfbfc"] },
+      "due-overdue": { "role": "state", "displayName": "Overdue Red", "canonical": "#dc2626", "tonalRamp": ["#7f1d1d", "#991b1b", "#b91c1c", "#dc2626", "#ef4444", "#f87171", "#fca5a5", "#fee2e2"] },
+      "due-today": { "role": "state", "displayName": "Today Amber", "canonical": "#b45309", "tonalRamp": ["#78350f", "#92400e", "#b45309", "#d97706", "#f59e0b", "#fbbf24", "#fcd34d", "#fef3c7"] },
+      "status-done-dot": { "role": "state", "displayName": "Done Green", "canonical": "#15803d", "tonalRamp": ["#14532d", "#166534", "#15803d", "#16a34a", "#22c55e", "#4ade80", "#86efac", "#dcfce7"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Ledger Display", "purpose": "The view title only; Space Grotesk is banned elsewhere in this world." },
+      "meta": { "displayName": "Ledger Meta", "purpose": "Dates, counts, assignees; always tabular numerals." }
+    },
+    "shadows": [
+      { "name": "modal-quiet", "value": "0 4px 16px -4px rgba(15,23,42,0.18)", "purpose": "Pipeline modals; hairline border carries the edge, shadow stays tight." },
+      { "name": "focus-ring", "value": "0 0 0 3px rgba(99,102,241,0.12)", "purpose": "Input and control focus." },
+      { "name": "today-inset", "value": "inset 0 0 0 1.5px #6366f1", "purpose": "Today cell in the pipeline calendar." }
+    ],
+    "motion": [
+      { "name": "ease-quiet", "value": "ease-out 0.12s-0.18s", "purpose": "Hover fills and the single view-entrance moment; skipped under prefers-reduced-motion." }
+    ],
+    "breakpoints": []
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary action (Add Task); indigo, 8px radius, no pill.",
+      "html": "<button class=\"ds-btn-primary\">Add Task</button>",
+      "css": ".ds-btn-primary { background:#4f46e5; color:#fff; border:1px solid #4f46e5; border-radius:8px; padding:6px 12px; font:500 12px Inter, sans-serif; cursor:pointer; transition:background .15s; } .ds-btn-primary:hover { background:#4338ca; } .ds-btn-primary:focus-visible { outline:2px solid #6366f1; outline-offset:2px; } .ds-btn-primary:disabled { opacity:1; background:transparent; color:#9aa1af; border-color:#e5e7eb; cursor:not-allowed; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary actions and KPI pills; hairline border, flat active fill.",
+      "html": "<button class=\"ds-btn-ghost\">Due soon (11)</button><button class=\"ds-btn-ghost ds-btn-ghost-active\">Overdue (5)</button>",
+      "css": ".ds-btn-ghost { background:transparent; color:#51607a; border:1px solid #e5e7eb; border-radius:8px; padding:6px 12px; font:500 12px Inter, sans-serif; font-variant-numeric:tabular-nums; cursor:pointer; transition:background .12s; } .ds-btn-ghost:hover { background:#f4f5f8; color:#14161d; } .ds-btn-ghost-active { background:#eceef4; border-color:transparent; color:#14161d; font-weight:600; }"
+    },
+    {
+      "name": "Task Row",
+      "kind": "custom",
+      "refersTo": "task-row",
+      "description": "Dense contiguous list row with property dots; hover fill only.",
+      "html": "<div class=\"ds-task-row\"><span class=\"ds-task-check\" role=\"checkbox\" aria-checked=\"false\" tabindex=\"0\"></span><div class=\"ds-task-body\"><div class=\"ds-task-title\">Submit new item forms to Lucky</div><div class=\"ds-task-meta\"><span class=\"ds-dot ds-dot-red\"></span><span class=\"ds-task-urg\">Overdue · Oct 21</span><span class=\"ds-dot ds-dot-amber\"></span><span class=\"ds-task-prio\">High</span><select class=\"ds-status\"><option>To Do</option></select></div></div></div>",
+      "css": ".ds-task-row { display:flex; gap:12px; align-items:center; padding:7px 10px; border-radius:8px; font-family:Inter, sans-serif; } .ds-task-row:hover { background:#f4f5f8; } .ds-task-title { font-size:13.6px; font-weight:500; color:#1a1d26; } .ds-task-meta { display:flex; gap:10px; align-items:center; margin-top:2px; font-size:11.5px; font-variant-numeric:tabular-nums; } .ds-task-urg { color:#dc2626; font-weight:600; display:inline-flex; align-items:center; gap:5px; } .ds-task-prio { color:#b45309; font-weight:600; display:inline-flex; align-items:center; gap:5px; } .ds-dot { width:6px; height:6px; border-radius:50%; display:inline-block; } .ds-dot-red { background:#dc2626; } .ds-dot-amber { background:#b45309; } .ds-task-check { width:16px; height:16px; border-radius:4px; border:2px solid #d0d4dd; flex-shrink:0; cursor:pointer; } .ds-task-check:hover { border-color:#6366f1; background:#eef2ff; } .ds-status { appearance:none; -webkit-appearance:none; border:0; background:transparent url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='9' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='3'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E\") no-repeat right 3px center; padding:2px 18px 2px 14px; font:600 11.2px Inter, sans-serif; color:#51607a; cursor:pointer; border-radius:6px; } .ds-status:hover { background-color:#eceef4; }"
+    },
+    {
+      "name": "Project Row (sidebar)",
+      "kind": "nav",
+      "refersTo": "project-row",
+      "description": "Flat sidebar row; active = flat gray fill, color dot carries project identity.",
+      "html": "<div class=\"ds-plan-row ds-plan-row-active\"><span class=\"ds-plan-dot\" style=\"background:#6366f1\"></span><div><div class=\"ds-plan-name\">AIT</div><div class=\"ds-plan-meta\">2 open · 1 done</div></div><span class=\"ds-plan-cnt\">3</span></div>",
+      "css": ".ds-plan-row { display:flex; align-items:center; gap:8px; padding:5px 10px; margin:1px 8px; border-radius:6px; cursor:pointer; font-family:Inter, sans-serif; } .ds-plan-row:hover { background:#f4f5f8; } .ds-plan-row-active { background:#eceef4; } .ds-plan-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; } .ds-plan-name { font-size:13.4px; font-weight:500; color:#14161d; } .ds-plan-meta { font-size:11.5px; color:#6b7280; font-variant-numeric:tabular-nums; } .ds-plan-cnt { margin-left:auto; font-size:11.5px; color:#6b7280; font-variant-numeric:tabular-nums; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "modal-input",
+      "description": "Modal field: 8px radius, indigo focus ring, inline error state.",
+      "html": "<input class=\"ds-input\" placeholder=\"e.g., Follow up with Nugget buyer\"><div class=\"ds-input-error\">Title is required</div>",
+      "css": ".ds-input { width:100%; padding:9px 12px; border:1px solid #e5e7eb; border-radius:8px; font:400 13px Inter, sans-serif; outline:none; transition:border-color .12s, box-shadow .12s; } .ds-input:focus { border-color:#6366f1; box-shadow:0 0 0 3px rgba(99,102,241,.12); } .ds-input.ds-input-error-state { border-color:#ef4444; } .ds-input-error { color:#dc2626; font-size:12px; margin-top:6px; font-family:Inter, sans-serif; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Broker's Ledger",
+    "overview": "This world treats the Pipeline view as a working ledger, not a showcase. Structure is carried entirely by hairlines, rhythm, and the property-dot system; depth, decoration, and tinted pills are refused. Everything on screen is information: state reads through colored text and small dots on neutral ground, counts use tabular numerals, and the single accent (indigo) is spent only on selection, focus, and the primary action.",
+    "keyCharacteristics": [
+      "Full-bleed white panes split by a 1px hairline; no floating cards.",
+      "Contiguous dense rows; hover fills, no borders on rest.",
+      "Property dots: status, priority, and due urgency as colored text + small dots.",
+      "One accent rule: indigo on selection, focus rings, primary action only.",
+      "Keyboard-first: Enter adds, Space completes, Escape closes, / jumps to search."
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "Indigo appears on <=3 surface types per screen: selection, focus, primary action. Everything else is ink on hairlines.", "section": "colors" },
+      { "name": "The Dot-Not-Pill Rule", "body": "State is colored text and a small dot on neutral ground; tinted pill backgrounds are refused for status, priority, and due dates.", "section": "colors" },
+      { "name": "The Hairline Rule", "body": "Structure is 1px #e9ebf0; no colored border-left above 1px on any row or card.", "section": "colors" },
+      { "name": "The Tabular Rule", "body": "Every count, date, and number column uses tabular numerals.", "section": "typography" },
+      { "name": "The 11px Floor Rule", "body": "No functional text below 0.7rem; dense means tight, not small.", "section": "typography" }
+    ],
+    "dos": [
+      "Do carry state with colored text + dots on neutral ground.",
+      "Do keep all numerals tabular in counts and dates.",
+      "Do reserve indigo for selection, focus, and the primary action.",
+      "Do give disabled controls visible ink (#9aa1af) at full opacity."
+    ],
+    "donts": [
+      "Don't use tinted pill backgrounds for status, priority, or due dates.",
+      "Don't put colored borders (left/right >1px) on rows or cards.",
+      "Don't pair hairline borders with wide diffuse shadows; a defined edge or a tight shadow, never both.",
+      "Don't use Space Grotesk anywhere but the view title.",
+      "Don't drop functional text below 0.7rem."
+    ]
+  }
+}

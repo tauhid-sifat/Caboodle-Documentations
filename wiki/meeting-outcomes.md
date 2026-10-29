@@ -3,7 +3,7 @@ type: reference
 title: Meeting outcomes (client clarifications)
 module: general
 status: current
-last_verified: 2026-10-14
+last_verified: 2026-10-29
 ---
 
 # MEETING OUTCOMES (Client Clarifications)

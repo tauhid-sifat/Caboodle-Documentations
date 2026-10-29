@@ -3,7 +3,7 @@ type: reference
 title: Ask Caboodle Feature Scope
 module: ask-caboodle
 status: current
-last_verified: 2026-10-14
+last_verified: 2026-10-29
 ---
 
 # Ask Caboodle Feature Scope
@@ -30,7 +30,7 @@ Ask Caboodle puts a conversational AI assistant on top of Caboodle's existing re
 - **Distributor Report** (KeHE/UNFI mapped sales), and
 - **Internal Data** (CRM, ProductSpecs, TradeSpend + TradeSpendSandbox).
 
-Its hard limits: 100-character prompt cap, 20-message session cap, 100-row default / 1,000-row max result, 30-second timeout, no cost guard or rate limits, partial tenant filtering, and no permission gating. The Broker, Brand, DataHub, FileRepository, and SPINS datasets are **not** reachable. The frontend Ask bar is a placeholder stub.
+Its hard limits: 100-character prompt cap, 20-message session cap, 100-row default / 1,000-row max result, 30-second timeout, no cost guard or rate limits, partial tenant filtering, and no permission gating. The Broker, Brand, DataHub, FileRepository, and SPINS datasets are **not** reachable. The dashboard Ask box is feature-flagged in Production (see `docs/feature-context.md` §2.11.6.1 and §2.12.1); the `dashboard-ai` route is a placeholder stub (§2.12.6). Intelligence module status overall is unresolved (OQ-FC-1).
 
 **The ideation principle.** Ask Caboodle does not need new data screens — the reports and grids already exist. It needs three things: **(a) coverage** of the modules that already hold data, **(b) a joined semantic model** so cross-module questions are correct, and **(c) the save / pin / gating layers** so users can build and keep their own views. The capability catalogue below is organised as the layer itself: for each existing report or dashboard, what a user can now simply *ask*.
 

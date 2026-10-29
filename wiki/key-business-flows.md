@@ -3,7 +3,7 @@ type: reference
 title: Key business flows
 module: general
 status: current
-last_verified: 2026-10-14
+last_verified: 2026-10-29
 ---
 
 # KEY BUSINESS FLOWS
@@ -40,3 +40,8 @@ Distributor (KeHE/UNFI/SPINS) → CSV/Excel upload → DataHub → Unmapped reco
 - `MarketOverview.SKUID` ambiguous — unclear if it targets `BannerSKU` or `ProductSpecification`
 
 > End-to-end narrative versions of these flows: `wiki/business.md` ("Key Business Flows (End to End)").
+
+
+---
+
+> Code-verified detail for the modules behind these pages: `wiki/modules/` (2.7, 2.8, 2.9, etc.) and `wiki/traceability-matrix.md`. Source of truth: `docs/feature-context.md`.

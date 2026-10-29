@@ -40,6 +40,7 @@ last_verified: 2026-10-14
 | Full module list for user-based fixed filters (all or subset?) | UNKNOWN — Constance to decide | User Based Fixed Filter (Aug 18) |
 | MO6 sheet-view mockup — client has one, not yet obtained | UNKNOWN | Review Broker Questions (Aug 4) |
 | CS-1362 (Ask Caboodle AI) & CS-1406 (dashboard switching) — no deliverables yet | UNKNOWN | general |
+| OQ-FC-1: Intelligence / "Ask Caboodle" status — `docs/feature-context.md` §2.12 documents the module as Active (LLM-planned SQL chat over brand data, 6 endpoints, persisted sessions, audit, token cost), while older notes/AGENTS.md rule treated it as placeholder-only. Code-verified vs. business-agreement status unconfirmed; do not spec against either until resolved. | UNKNOWN — verify with client/dev | docs/feature-context.md §2.12 (2026-10-28) vs AGENTS.md scope rule |
 | Analytics (PostHog), Jira attachment-storage cleanup | PROPOSED | Caboodle Ticket Call (Aug 17) |
 
 > Outstanding-questions snapshot and session history: `CONTEXT.md` (Outstanding Issues, This Session).

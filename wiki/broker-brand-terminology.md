@@ -3,7 +3,7 @@ type: reference
 title: Critical terminology (broker-brand relationship)
 module: general
 status: validated
-last_verified: 2026-10-14
+last_verified: 2026-10-29
 ---
 
 # CRITICAL TERMINOLOGY (Broker-Brand Relationship)

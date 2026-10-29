@@ -3,7 +3,7 @@ type: reference
 title: Broker dashboard wireframe and features
 module: broker-dashboard
 status: current
-last_verified: 2026-10-14
+last_verified: 2026-10-29
 ---
 
 # BROKER DASHBOARD — WIREFRAME & FEATURES
@@ -22,3 +22,8 @@ A live wireframe is deployed at **https://caboodle-broker-dashboard.vercel.app**
 - Task Board is simple (To Do / In Progress / Done) — NOT the CRM Pipeline
 - Quick Actions are **under the header** (above KPI row)
 - Dark mode toggle removed from final wireframe
+
+
+---
+
+> Code-verified detail for the modules behind these pages: `wiki/modules/` (2.7, 2.8, 2.9, etc.) and `wiki/traceability-matrix.md`. Source of truth: `docs/feature-context.md`.

@@ -3,7 +3,7 @@ type: reference
 title: Jira issues description gaps
 module: general
 status: current
-last_verified: 2026-10-14
+last_verified: 2026-10-29
 ---
 
 # JIRA ISSUES — DESCRIPTION GAPS

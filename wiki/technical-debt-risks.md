@@ -3,7 +3,7 @@ type: reference
 title: Known technical debt and risks
 module: platform
 status: current
-last_verified: 2026-10-14
+last_verified: 2026-10-29
 ---
 
 # KNOWN TECHNICAL DEBT & RISKS
@@ -35,4 +35,4 @@ last_verified: 2026-10-14
 - **Cross-tenant data leak risk:** Brand-ID header trust-based, no server-side enforcement in many endpoints
 - **Authorization thin:** Many controllers lack `[Authorize]`; brand roles get empty permissions from server
 - **Store module is orphan:** Domain entities exist but no controller, service, or application layer
-- **Intelligence module is aspirational:** "ASK Cab" AI feature referenced but placeholder-only
+- **Intelligence module status unresolved (OQ-FC-1):** older notes treat "ASK Cab" as placeholder-only, but `docs/feature-context.md` §2.12 documents it as Active (LLM-planned SQL chat over brand data, 6 endpoints, persisted sessions, audit, token cost). Code-verified vs. business-agreement status unconfirmed; do not assume either way.

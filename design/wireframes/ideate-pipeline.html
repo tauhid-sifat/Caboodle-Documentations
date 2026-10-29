@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pipeline Ideation — Fellow-style</title>
+  <title>Pipeline — Caboodle</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,9 +35,7 @@
     .add-group-btn:hover { border-color:#6366f1; color:#6366f1; background:#eef2ff; }
     .group-item.sub-project { padding-left:36px; background:#f8fafc; }
     .group-item.sub-project.active { background:#eef2ff; border-left-color:#6366f1; }
-    .group-parent { display:flex; align-items:center; gap:6px; padding:8px 20px 4px; font-size:0.7rem; font-weight:600; color:#475569; text-transform:uppercase; letter-spacing:0.04em; cursor:pointer; }
-    .group-parent .chevron { transition:transform 0.15s; }
-    .group-parent.collapsed .chevron { transform:rotate(-90deg); }
+    .group-parent { display:flex; align-items:center; gap:6px; padding:8px 20px 4px; font-size:0.7rem; font-weight:600; color:#475569; text-transform:uppercase; letter-spacing:0.04em; }
     .group-children.collapsed { display:none; }
     .view-toggle { display:flex; background:#f1f5f9; border-radius:999px; padding:3px; gap:2px; }
     .view-toggle button { padding:5px 12px; font-size:0.7rem; font-weight:600; border-radius:999px; border:0; background:transparent; color:#64748b; cursor:pointer; }
@@ -49,10 +47,13 @@
     .pipeline-cal-cell { min-height:84px; padding:6px; border-right:1px solid #f1f5f9; border-bottom:1px solid #f1f5f9; }
     .pipeline-cal-cell.today { background:#eef2ff; }
     .pipeline-cal-date { font-size:0.7rem; font-weight:600; color:#475569; margin-bottom:4px; }
-    .pipeline-cal-task { font-size:0.65rem; padding:2px 6px; border-radius:6px; margin-bottom:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer; border-left:3px solid transparent; background:#f1f5f9; }
+    .pipeline-cal-task { font-size:0.65rem; padding:2px 6px; border-radius:6px; margin-bottom:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:grab; border-left:3px solid transparent; background:#f1f5f9; }
+    .pipeline-cal-task:active { cursor:grabbing; }
     .pipeline-cal-task.high { border-left-color:#ef4444; background:#fef2f2; color:#991b1b; }
     .pipeline-cal-task.med { border-left-color:#f59e0b; background:#fffbeb; color:#92400e; }
     .pipeline-cal-task.low { border-left-color:#10b981; background:#f0fdf4; color:#065f46; }
+    .pipeline-cal-task.done { opacity:0.5; text-decoration:line-through; }
+    .pipeline-cal-cell.drop { background:#eef2ff; box-shadow:inset 0 0 0 2px #6366f1; }
 
     /* ===== MAIN ===== */
     .main { flex:1; display:flex; flex-direction:column; min-width:0; }
@@ -101,12 +102,11 @@
     .priority.high { background:#fef2f2; color:#dc2626; }
     .priority.med { background:#fffbeb; color:#d97706; }
     .priority.low { background:#f0fdf4; color:#16a34a; }
-    .t-meta .status-badge { font-size:0.65rem; font-weight:500; padding:2px 8px; border-radius:999px; }
-    .status-badge.todo { background:#f1f5f9; color:#475569; }
-    .status-badge.in_progress { background:#dbeafe; color:#2563eb; }
-    .status-badge.done { background:#dcfce7; color:#16a34a; }
+    .t-meta .t-project { font-size:0.7rem; color:#94a3b8; font-weight:500; }
     .task-item .t-expand { color:#94a3b8; cursor:pointer; padding:4px; border-radius:4px; transition:all 0.15s; flex-shrink:0; }
     .task-item .t-expand:hover { background:#f1f5f9; color:#475569; }
+    .task-item .t-expand svg { transition:transform 0.15s; }
+    .task-item .t-expand.open svg { transform:rotate(90deg); }
 
     .task-notes { display:none; margin:0 14px 8px 44px; padding:10px 14px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; font-size:0.8rem; line-height:1.6; color:#475569; }
     .task-notes.open { display:block; }
@@ -116,6 +116,27 @@
     .empty-state svg { width:48px; height:48px; color:#cbd5e1; margin-bottom:12px; }
     .empty-state h3 { font-size:1rem; font-weight:600; color:#64748b; margin-bottom:4px; }
     .empty-state p { font-size:0.85rem; }
+
+    /* ===== UX ADDITIONS ===== */
+    button:disabled { opacity:0.45; cursor:not-allowed; }
+    :focus-visible { outline:2px solid #6366f1; outline-offset:2px; }
+    .p-chev { display:inline-flex; align-items:center; justify-content:center; padding:2px; border-radius:4px; color:#94a3b8; cursor:pointer; flex-shrink:0; }
+    .p-chev:hover { background:#f1f5f9; color:#475569; }
+    .p-chev svg { transition:transform 0.15s; }
+    .p-chev.collapsed svg { transform:rotate(-90deg); }
+    .task-hit { padding:8px 20px 8px 36px; }
+    .task-hit .g-name { font-weight:400; }
+    .search-empty { padding:14px 20px; font-size:0.8rem; color:#94a3b8; font-style:italic; }
+    .overdue-banner { display:flex; align-items:center; gap:8px; padding:10px 14px; margin-bottom:16px; background:#fef2f2; border:1px solid #fecaca; color:#991b1b; border-radius:8px; font-size:0.8rem; font-weight:600; }
+    .file-chip { font-size:0.7rem; color:#475569; background:#f1f5f9; border:1px solid #e2e8f0; border-radius:6px; padding:2px 8px; }
+    .modal-error { color:#dc2626; font-size:0.75rem; margin-top:6px; }
+    .modal-input.input-error { border-color:#ef4444; }
+    .btn-secondary { padding:8px 16px; border:1px solid #e2e8f0; border-radius:8px; background:#fff; cursor:pointer; font-size:0.85rem; }
+    .btn-secondary:hover { background:#f8fafc; border-color:#cbd5e1; }
+    .btn-primary { padding:8px 16px; border:0; border-radius:8px; background:#6366f1; color:#fff; cursor:pointer; font-size:0.85rem; font-weight:500; }
+    .btn-primary:hover { background:#4f46e5; }
+    .reset-btn { margin-top:6px; width:100%; padding:6px; background:none; border:0; color:#94a3b8; font-size:0.7rem; cursor:pointer; border-radius:6px; }
+    .reset-btn:hover { background:#fef2f2; color:#dc2626; }
 
     /* ===== MODAL ===== */
     .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.4); z-index:1000; align-items:center; justify-content:center; }
@@ -138,20 +159,25 @@
 </head>
 <body>
 
-  <!-- ===== SIDEBAR — Projects (renamed from Plans/Groups) ===== -->
+  <!-- ===== SIDEBAR — Projects + Sub-Projects ===== -->
   <div class="sidebar">
     <div class="sidebar-hdr">
       <h1>Pipeline</h1>
       <p>Projects organize your tasks</p>
     </div>
-    <div class="sidebar-body" id="groupList">
-      <!-- Rendered by JS — hierarchical Projects + Sub-Projects -->
+    <div class="sidebar-body">
+      <div class="search-wrap" style="margin:0 12px 12px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input class="group-search" id="groupSearch" placeholder="Search projects and tasks" aria-label="Search projects and tasks" oninput="renderGroups()">
+      </div>
+      <div id="groupList"><!-- Rendered by JS: All Tasks + Projects + Sub-Projects + task search hits --></div>
     </div>
     <div class="sidebar-foot">
       <button class="add-group-btn" onclick="openAddGroup()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
         New Project
       </button>
+      <button class="reset-btn" onclick="resetDemo()" title="Clears saved changes and restores the sample data">Reset demo data</button>
     </div>
   </div>
 
@@ -164,10 +190,10 @@
       </div>
       <div class="mh-actions" style="align-items:center;">
         <div class="view-toggle" title="Switch between list and calendar">
-          <button id="ideateListBtn" class="active" onclick="setIdeateView('list')">List</button>
-          <button id="ideateCalBtn" onclick="setIdeateView('calendar')">Calendar</button>
+          <button id="ideateListBtn" class="active" aria-pressed="true" onclick="setIdeateView('list')">List</button>
+          <button id="ideateCalBtn" aria-pressed="false" onclick="setIdeateView('calendar')">Calendar</button>
         </div>
-        <button onclick="openGroupNotes()" id="notesBtn" disabled title="Project notes — top near Add Task as requested">
+        <button onclick="openGroupNotes()" id="notesBtn" disabled title="Edit project notes">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
           Notes
         </button>
@@ -192,12 +218,13 @@
 
   <!-- ===== MODAL: Add/Edit Task ===== -->
   <div id="taskModal" class="modal-overlay">
-    <div class="modal-box">
-      <div class="modal-hdr"><h3 id="taskModalTitle">Add Task</h3><button class="modal-close" onclick="closeModal('taskModal')">✕</button></div>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="taskModalTitle">
+      <div class="modal-hdr"><h3 id="taskModalTitle">Add Task</h3><button class="modal-close" onclick="closeModal('taskModal')" aria-label="Close">✕</button></div>
       <div class="modal-body">
         <div class="modal-row">
           <label class="modal-label">Title</label>
           <input class="modal-input" id="taskTitleInput" placeholder="e.g., Follow up with Nugget buyer">
+          <div class="modal-error" id="taskError" hidden>Title is required</div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
           <div class="modal-row">
@@ -220,7 +247,7 @@
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
           <div class="modal-row">
             <label class="modal-label">Assignee</label>
-            <input class="modal-input" id="taskAssigneeInput" placeholder="Name">
+            <input class="modal-input" id="taskAssigneeInput" list="assigneeList" placeholder="Name">
           </div>
           <div class="modal-row">
             <label class="modal-label">Due Date</label>
@@ -236,22 +263,24 @@
           <input type="file" id="taskFileInput" multiple style="font-size:0.8rem;width:100%;">
           <div id="taskFilePreview" style="margin-top:6px;display:flex;flex-wrap:wrap;gap:4px;"></div>
         </div>
+        <datalist id="assigneeList"></datalist>
       </div>
       <div class="modal-foot">
-        <button style="padding:8px 16px;border:1px solid #e2e8f0;border-radius:8px;background:#fff;cursor:pointer;font-size:0.85rem;" onclick="closeModal('taskModal')">Cancel</button>
-        <button style="padding:8px 16px;border:0;border-radius:8px;background:#6366f1;color:#fff;cursor:pointer;font-size:0.85rem;font-weight:500;" id="taskModalSave" onclick="saveTask()">Add</button>
+        <button class="btn-secondary" onclick="closeModal('taskModal')">Cancel</button>
+        <button class="btn-primary" id="taskModalSave" onclick="saveTask()">Add</button>
       </div>
     </div>
   </div>
 
-  <!-- ===== MODAL: Add/Edit Project (renamed from Group) + Sub-Project ===== -->
+  <!-- ===== MODAL: Add/Edit Project + Sub-Project ===== -->
   <div id="groupModal" class="modal-overlay">
-    <div class="modal-box">
-      <div class="modal-hdr"><h3 id="groupModalTitle">New Project</h3><button class="modal-close" onclick="closeModal('groupModal')">✕</button></div>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="groupModalTitle">
+      <div class="modal-hdr"><h3 id="groupModalTitle">New Project</h3><button class="modal-close" onclick="closeModal('groupModal')" aria-label="Close">✕</button></div>
       <div class="modal-body">
         <div class="modal-row">
           <label class="modal-label">Project Name</label>
           <input class="modal-input" id="groupNameInput" placeholder="e.g., AIT, Q3 Category Reviews">
+          <div class="modal-error" id="groupError" hidden></div>
         </div>
         <div class="modal-row">
           <label class="modal-label">Parent Project (optional)</label>
@@ -264,27 +293,83 @@
         </div>
       </div>
       <div class="modal-foot">
-        <button style="padding:8px 16px;border:1px solid #e2e8f0;border-radius:8px;background:#fff;cursor:pointer;font-size:0.85rem;" onclick="closeModal('groupModal')">Cancel</button>
-        <button style="padding:8px 16px;border:0;border-radius:8px;background:#6366f1;color:#fff;cursor:pointer;font-size:0.85rem;font-weight:500;" id="groupModalSave" onclick="saveGroup()">Create</button>
+        <button class="btn-secondary" onclick="closeModal('groupModal')">Cancel</button>
+        <button class="btn-primary" id="groupModalSave" onclick="saveGroup()">Create</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL: Project Notes ===== -->
+  <div id="notesModal" class="modal-overlay">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="notesModalTitle">
+      <div class="modal-hdr"><h3 id="notesModalTitle">Project Notes</h3><button class="modal-close" onclick="closeModal('notesModal')" aria-label="Close">✕</button></div>
+      <div class="modal-body">
+        <textarea class="modal-input" id="notesModalInput" rows="6" placeholder="Add context, buyer contacts, links to decks..." style="resize:vertical;"></textarea>
+      </div>
+      <div class="modal-foot">
+        <button class="btn-secondary" onclick="closeModal('notesModal')">Cancel</button>
+        <button class="btn-primary" onclick="saveGroupNotes()">Save</button>
       </div>
     </div>
   </div>
 
   <script>
-    // ===== DATA — Projects + Sub-Projects + Calendar =====
+    // ===== STATE + PERSISTENCE =====
+    // ponytail: mockup persistence via localStorage; swap for an API when a backend exists
+    const STORE_KEY = 'pipeline.state.v2';
     let groupIdCounter = 0;
     let taskIdCounter = 0;
     let selectedGroupId = null;
     let editingTaskId = null;
     let editingGroupId = null;
     let ideateView = 'list'; // list | calendar
-    let ideateCalDate = new Date(2026,6,1);
+    let ideateCalDate = new Date(); // calendar opens on the current month
     let ideateCalHideDone = false;
     let expandedGroups = {};
 
+    function saveState() {
+      try {
+        localStorage.setItem(STORE_KEY, JSON.stringify({ groups, tasks, groupIdCounter, taskIdCounter, expandedGroups }));
+      } catch (e) { /* storage full or blocked: mockup keeps session-only state */ }
+    }
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORE_KEY);
+        if (!raw) return false;
+        const s = JSON.parse(raw);
+        if (!Array.isArray(s.groups) || !Array.isArray(s.tasks)) return false;
+        groups = s.groups;
+        tasks = s.tasks;
+        groupIdCounter = s.groupIdCounter || 0;
+        taskIdCounter = s.taskIdCounter || 0;
+        expandedGroups = s.expandedGroups || {};
+        groupIdCounter = Math.max(0, ...groups.map(g => g.id || 0));
+        taskIdCounter = Math.max(0, ...tasks.map(t => t.id || 0));
+        return true;
+      } catch (e) { return false; }
+    }
+    function resetDemo() {
+      try { localStorage.removeItem(STORE_KEY); } catch (e) {}
+      location.reload();
+    }
+
+    // ===== HELPERS =====
+    const PRIORITY_LABEL = { high: 'High', med: 'Medium', low: 'Low' };
+    function esc(s) { return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function byDue(a, b) { if (!a.due) return 1; if (!b.due) return -1; return a.due.localeCompare(b.due); }
+    function isOverdue(t) {
+      if (!t.due || t.status === 'done') return false;
+      const d = new Date(t.due + 'T00:00:00');
+      const today = new Date(); today.setHours(0,0,0,0);
+      return d < today;
+    }
+    function formatBytes(n) { return n > 1048576 ? (n / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(n / 1024)) + ' KB'; }
+    // Seed dates are offsets from today so the demo always shows a realistic overdue/upcoming mix
+    function D(n) { const d = new Date(); d.setDate(d.getDate() + n); const p = x => String(x).padStart(2, '0'); return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()); }
+
     const COLORS = ['#6366f1','#f59e0b','#10b981','#ef4444','#8b5cf6','#ec4899','#06b6d4','#14b8a6'];
 
-    const groups = [
+    let groups = [
       { id: ++groupIdCounter, name:'AIT', desc:'AIT parent — group sub-projects under one initiative (avoids duplicate AIT projects)', color:COLORS[0], parentId:null, notes:'AIT parent notes — overall timeline, buyer contacts, links to decks.' },
       { id: ++groupIdCounter, name:'AIT — Buyer Decks', desc:'Category review decks for AIT', color:COLORS[0], parentId:1, notes:'Sub-project of AIT — decks for Nugget, Raleys, Whole Foods.' },
       { id: ++groupIdCounter, name:'AIT — UNFI Setup', desc:'New item forms + warehouse assignments', color:COLORS[0], parentId:1, notes:'Sub-project of AIT — UNFI forms for 5 SKUs.' },
@@ -295,138 +380,227 @@
       { id: ++groupIdCounter, name:'Distributor APL Updates', desc:'Authorized price list management', color:COLORS[4], parentId:null },
       { id: ++groupIdCounter, name:'Marketing & Collateral', desc:'POS materials, digital assets, sell sheets', color:COLORS[5], parentId:null },
     ];
-    groups.filter(g=> !g.parentId).forEach(g=> expandedGroups[g.id]=true);
 
     let tasks = [
-      // Group 1: Q3 Category Reviews
-      { id: ++taskIdCounter, groupId:1, title:'Prep Nugget Specialty Asian review', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-25', notes:'Need to gather all SKU data and velocity reports from SPINS. Include category trends and competitive landscape.', files:[{name:'Nugget_Review_Template.xlsx',size:'245 KB'},{name:'SPINS_Category_Data_Q2.pdf',size:'1.2 MB'}] },
-      { id: ++taskIdCounter, groupId:1, title:'Submit new item forms to Lucky', status:'todo', priority:'high', assignee:'You', due:'2026-07-18', notes:'5 new SKUs for pasta sauce reset. Forms need: UPC, MSRP, case pack, Sage logo, ingredient statements.', files:[] },
-      { id: ++taskIdCounter, groupId:1, title:'Raleys reset paperwork — pushed to Sep', status:'todo', priority:'med', assignee:'Kate', due:'2026-08-01', notes:'Reset pushed from July to September per buyer request. Keep forms ready.', files:[] },
-      { id: ++taskIdCounter, groupId:1, title:'Gelsons Mac & Cheese review deck', status:'done', priority:'med', assignee:'You', due:'2026-06-30', notes:'Completed and submitted. Waiting for buyer feedback.', files:[{name:'Gelsons_Review_Deck.pptx',size:'4.7 MB'}] },
-      { id: ++taskIdCounter, groupId:1, title:'Whole Foods frozen dessert reset', status:'todo', priority:'low', assignee:'', due:'2026-09-15', notes:'Q4 reset. No rush but need to start gathering velocity data.', files:[] },
-      { id: ++taskIdCounter, groupId:1, title:'Sprouts organic reset paperwork', status:'todo', priority:'med', assignee:'John', due:'2026-08-20', notes:'New set expected Sep. Organic certifications needed.', files:[] },
-      { id: ++taskIdCounter, groupId:1, title:'Moms Market reset completed', status:'done', priority:'low', assignee:'Kate', due:'2026-06-10', notes:'All done. Reset went live June 8.', files:[] },
+      // Seed tasks use OLD group ids; migrated to current project ids below.
+      // Due dates are D(offset) from today so the demo stays evergreen.
+      { id: ++taskIdCounter, groupId:1, title:'Prep Nugget Specialty Asian review', status:'in_progress', priority:'high', assignee:'You', due:D(-3), notes:'Need to gather all SKU data and velocity reports from SPINS. Include category trends and competitive landscape.', files:[{name:'Nugget_Review_Template.xlsx',size:'245 KB'},{name:'SPINS_Category_Data_Q2.pdf',size:'1.2 MB'}] },
+      { id: ++taskIdCounter, groupId:1, title:'Submit new item forms to Lucky', status:'todo', priority:'high', assignee:'You', due:D(2), notes:'5 new SKUs for pasta sauce reset. Forms need: UPC, MSRP, case pack, Sage logo, ingredient statements.', files:[] },
+      { id: ++taskIdCounter, groupId:1, title:'Raleys reset paperwork — pushed to Sep', status:'todo', priority:'med', assignee:'Kate', due:D(12), notes:'Reset pushed from July to September per buyer request. Keep forms ready.', files:[] },
+      { id: ++taskIdCounter, groupId:1, title:'Gelsons Mac & Cheese review deck', status:'done', priority:'med', assignee:'You', due:D(-8), notes:'Completed and submitted. Waiting for buyer feedback.', files:[{name:'Gelsons_Review_Deck.pptx',size:'4.7 MB'}] },
+      { id: ++taskIdCounter, groupId:1, title:'Whole Foods frozen dessert reset', status:'todo', priority:'low', assignee:'', due:D(34), notes:'Q4 reset. No rush but need to start gathering velocity data.', files:[] },
+      { id: ++taskIdCounter, groupId:1, title:'Sprouts organic reset paperwork', status:'todo', priority:'med', assignee:'John', due:D(20), notes:'New set expected Sep. Organic certifications needed.', files:[] },
+      { id: ++taskIdCounter, groupId:1, title:'Moms Market reset completed', status:'done', priority:'low', assignee:'Kate', due:D(-45), notes:'All done. Reset went live June 8.', files:[] },
 
-      // Group 2: UNFI
-      { id: ++taskIdCounter, groupId:2, title:'Submit UNFI new item forms', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-20', notes:'5 new SKUs pending. Need spec sheets, ingredient decks, and margin analysis from marketing.', files:[{name:'UNFI_New_Item_Form.xlsx',size:'890 KB'},{name:'Product_Specs_v3.pdf',size:'3.4 MB'}] },
-      { id: ++taskIdCounter, groupId:2, title:'Confirm UNFI warehouse assignments', status:'todo', priority:'med', assignee:'John', due:'2026-07-28', notes:'Need to verify which warehouses for new SKUs. Sac, Atlanta, Harrisburg likely.', files:[] },
-      { id: ++taskIdCounter, groupId:2, title:'Resolve UNFI invoice discrepancy', status:'todo', priority:'high', assignee:'You', due:'2026-07-15', notes:'Credit memo being processed for Q2 chargebacks. $12,483 disputed. Attach supporting docs.', files:[{name:'Invoice_Dispute_Q2.pdf',size:'680 KB'},{name:'Credit_Memo_Request.xlsx',size:'120 KB'}] },
-      { id: ++taskIdCounter, groupId:2, title:'UNFI Q3 promotional calendar', status:'done', priority:'med', assignee:'Kate', due:'2026-06-28', notes:'Submitted for Jul-Sep. TPR slots confirmed for Aug and Sep.', files:[] },
-      { id: ++taskIdCounter, groupId:2, title:'Update UNFI pricing sheet', status:'todo', priority:'med', assignee:'', due:'2026-08-05', notes:'New MSRP effective Sep 1. Need to submit updated wholesale pricing.', files:[] },
+      { id: ++taskIdCounter, groupId:2, title:'Submit UNFI new item forms', status:'in_progress', priority:'high', assignee:'You', due:D(1), notes:'5 new SKUs pending. Need spec sheets, ingredient decks, and margin analysis from marketing.', files:[{name:'UNFI_New_Item_Form.xlsx',size:'890 KB'},{name:'Product_Specs_v3.pdf',size:'3.4 MB'}] },
+      { id: ++taskIdCounter, groupId:2, title:'Confirm UNFI warehouse assignments', status:'todo', priority:'med', assignee:'John', due:D(9), notes:'Need to verify which warehouses for new SKUs. Sac, Atlanta, Harrisburg likely.', files:[] },
+      { id: ++taskIdCounter, groupId:2, title:'Resolve UNFI invoice discrepancy', status:'todo', priority:'high', assignee:'You', due:D(-1), notes:'Credit memo being processed for Q2 chargebacks. $12,483 disputed. Attach supporting docs.', files:[{name:'Invoice_Dispute_Q2.pdf',size:'680 KB'},{name:'Credit_Memo_Request.xlsx',size:'120 KB'}] },
+      { id: ++taskIdCounter, groupId:2, title:'UNFI Q3 promotional calendar', status:'done', priority:'med', assignee:'Kate', due:D(-12), notes:'Submitted for Jul-Sep. TPR slots confirmed for Aug and Sep.', files:[] },
+      { id: ++taskIdCounter, groupId:2, title:'Update UNFI pricing sheet', status:'todo', priority:'med', assignee:'', due:D(16), notes:'New MSRP effective Sep 1. Need to submit updated wholesale pricing.', files:[] },
 
-      // Group 3: Broker Meetings
-      { id: ++taskIdCounter, groupId:3, title:'F/U with Gelsons buyer — Colin', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-22', notes:'Colin interested in new Mac & Cheese SKUs. Promised samples by July 15. Send pricing提案.', files:[{name:'Gelsons_Proposal.pdf',size:'1.1 MB'}] },
-      { id: ++taskIdCounter, groupId:3, title:'Schedule Nugget buyer meeting', status:'todo', priority:'med', assignee:'You', due:'2026-07-30', notes:'Need to present Asian category review. Buyer prefers Tues/Wed mornings.', files:[] },
-      { id: ++taskIdCounter, groupId:3, title:'Prep broker review deck (Q3)', status:'todo', priority:'med', assignee:'You', due:'2026-08-05', notes:'Include velocity, promo recaps, new item pipeline, and category trends.', files:[] },
-      { id: ++taskIdCounter, groupId:3, title:'Jimbos buyer meeting done', status:'done', priority:'med', assignee:'You', due:'2026-06-22', notes:'Good meeting. Approved 2 new items for fall reset.', files:[{name:'Jimbos_Meeting_Notes.docx',size:'85 KB'}] },
-      { id: ++taskIdCounter, groupId:3, title:'Lazy Acres coffee category review', status:'todo', priority:'high', assignee:'John', due:'2026-08-12', notes:'New coffee program. Need samples and pitch deck ready by Aug 1.', files:[] },
+      { id: ++taskIdCounter, groupId:3, title:'F/U with Gelsons buyer — Colin', status:'in_progress', priority:'high', assignee:'You', due:D(3), notes:'Colin interested in new Mac & Cheese SKUs. Promised samples by July 15. Send pricing proposal.', files:[{name:'Gelsons_Proposal.pdf',size:'1.1 MB'}] },
+      { id: ++taskIdCounter, groupId:3, title:'Schedule Nugget buyer meeting', status:'todo', priority:'med', assignee:'You', due:D(10), notes:'Need to present Asian category review. Buyer prefers Tues/Wed mornings.', files:[] },
+      { id: ++taskIdCounter, groupId:3, title:'Prep broker review deck (Q3)', status:'todo', priority:'med', assignee:'You', due:D(16), notes:'Include velocity, promo recaps, new item pipeline, and category trends.', files:[] },
+      { id: ++taskIdCounter, groupId:3, title:'Jimbos buyer meeting done', status:'done', priority:'med', assignee:'You', due:D(-32), notes:'Good meeting. Approved 2 new items for fall reset.', files:[{name:'Jimbos_Meeting_Notes.docx',size:'85 KB'}] },
+      { id: ++taskIdCounter, groupId:3, title:'Lazy Acres coffee category review', status:'todo', priority:'high', assignee:'John', due:D(23), notes:'New coffee program. Need samples and pitch deck ready by Aug 1.', files:[] },
 
-      // Group 4: KeHE EDLP
-      { id: ++taskIdCounter, groupId:4, title:'KeHE Jan-Mar EDLP pricing', status:'done', priority:'med', assignee:'Kate', due:'2026-06-15', notes:'Pricing submitted and approved for all 12 SKUs.', files:[{name:'KeHE_EDLP_Q1_Approved.pdf',size:'450 KB'}] },
-      { id: ++taskIdCounter, groupId:4, title:'KeHE Apr-Jun EDLP renewal', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-28', notes:'Need to review lift data from Q1 before renewing. Requesting 2% price increase.', files:[{name:'Q1_Lift_Analysis.xlsx',size:'2.3 MB'}] },
-      { id: ++taskIdCounter, groupId:4, title:'KeHE slotting fee negotiation', status:'todo', priority:'low', assignee:'', due:'2026-08-10', notes:'Negotiating slotting for 3 new items. Target: $500/sku.', files:[] },
-      { id: ++taskIdCounter, groupId:4, title:'KeHE display allowance Q3', status:'todo', priority:'med', assignee:'Kate', due:'2026-07-15', notes:'Q3 display program. Endcap opportunities at Sprouts and Natural Grocers.', files:[] },
+      { id: ++taskIdCounter, groupId:4, title:'KeHE Jan-Mar EDLP pricing', status:'done', priority:'med', assignee:'Kate', due:D(-60), notes:'Pricing submitted and approved for all 12 SKUs.', files:[{name:'KeHE_EDLP_Q1_Approved.pdf',size:'450 KB'}] },
+      { id: ++taskIdCounter, groupId:4, title:'KeHE Apr-Jun EDLP renewal', status:'in_progress', priority:'high', assignee:'You', due:D(9), notes:'Need to review lift data from Q1 before renewing. Requesting 2% price increase.', files:[{name:'Q1_Lift_Analysis.xlsx',size:'2.3 MB'}] },
+      { id: ++taskIdCounter, groupId:4, title:'KeHE slotting fee negotiation', status:'todo', priority:'low', assignee:'', due:D(21), notes:'Negotiating slotting for 3 new items. Target: $500/sku.', files:[] },
+      { id: ++taskIdCounter, groupId:4, title:'KeHE display allowance Q3', status:'todo', priority:'med', assignee:'Kate', due:D(-6), notes:'Q3 display program. Endcap opportunities at Sprouts and Natural Grocers.', files:[] },
 
-      // Group 5: Distributor APL
-      { id: ++taskIdCounter, groupId:5, title:'Upload KeHE Oct APL update', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-25', notes:'New pricing effective Aug 1. Check for UPC changes on 3 items.', files:[{name:'KeHE_APL_Oct.xlsx',size:'1.8 MB'}] },
-      { id: ++taskIdCounter, groupId:5, title:'UNFI APL — verify new item pricing', status:'todo', priority:'high', assignee:'John', due:'2026-07-20', notes:'5 new items need wholesale cost verified before upload.', files:[] },
-      { id: ++taskIdCounter, groupId:5, title:'SPINS APL reconciliation', status:'todo', priority:'med', assignee:'', due:'2026-08-15', notes:'Compare uploaded APL vs SPINS reported pricing. Flag discrepancies.', files:[] },
-      { id: ++taskIdCounter, groupId:5, title:'KeHE APL upload complete', status:'done', priority:'med', assignee:'You', due:'2026-06-20', notes:'Jun APL uploaded successfully. 45 SKUs confirmed.', files:[] },
+      { id: ++taskIdCounter, groupId:5, title:'Upload KeHE Oct APL update', status:'in_progress', priority:'high', assignee:'You', due:D(5), notes:'New pricing effective Aug 1. Check for UPC changes on 3 items.', files:[{name:'KeHE_APL_Oct.xlsx',size:'1.8 MB'}] },
+      { id: ++taskIdCounter, groupId:5, title:'UNFI APL — verify new item pricing', status:'todo', priority:'high', assignee:'John', due:D(1), notes:'5 new items need wholesale cost verified before upload.', files:[] },
+      { id: ++taskIdCounter, groupId:5, title:'SPINS APL reconciliation', status:'todo', priority:'med', assignee:'', due:D(26), notes:'Compare uploaded APL vs SPINS reported pricing. Flag discrepancies.', files:[] },
+      { id: ++taskIdCounter, groupId:5, title:'KeHE APL upload complete', status:'done', priority:'med', assignee:'You', due:D(-52), notes:'Jun APL uploaded successfully. 45 SKUs confirmed.', files:[] },
 
-      // Group 6: Marketing
-      { id: ++taskIdCounter, groupId:6, title:'New product sell sheets', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-30', notes:'Need updated sell sheets for 8 new items. Include nutrition claims, certifications, and pricing.', files:[{name:'Sell_Sheet_Template_v2.indd',size:'5.6 MB'}] },
-      { id: ++taskIdCounter, groupId:6, title:'Digital shelf analytics review', status:'todo', priority:'med', assignee:'', due:'2026-08-10', notes:'Review content compliance across Amazon, Thrive, and Vitacost.', files:[] },
-      { id: ++taskIdCounter, groupId:6, title:'POS materials — Nugget endcap', status:'todo', priority:'low', assignee:'Kate', due:'2026-08-01', notes:'Design shelf talkers and wobblers for Nugget Asian endcap display.', files:[] },
-      { id: ++taskIdCounter, groupId:6, title:'Brand style guide update done', status:'done', priority:'low', assignee:'You', due:'2026-06-05', notes:'Updated for 2026. New logo assets and packaging guidelines.', files:[{name:'Brand_Style_Guide_2026.pdf',size:'8.2 MB'}] },
+      { id: ++taskIdCounter, groupId:6, title:'New product sell sheets', status:'in_progress', priority:'high', assignee:'You', due:D(10), notes:'Need updated sell sheets for 8 new items. Include nutrition claims, certifications, and pricing.', files:[{name:'Sell_Sheet_Template_v2.indd',size:'5.6 MB'}] },
+      { id: ++taskIdCounter, groupId:6, title:'Digital shelf analytics review', status:'todo', priority:'med', assignee:'', due:D(21), notes:'Review content compliance across Amazon, Thrive, and Vitacost.', files:[] },
+      { id: ++taskIdCounter, groupId:6, title:'POS materials — Nugget endcap', status:'todo', priority:'low', assignee:'Kate', due:D(12), notes:'Design shelf talkers and wobblers for Nugget Asian endcap display.', files:[] },
+      { id: ++taskIdCounter, groupId:6, title:'Brand style guide update done', status:'done', priority:'low', assignee:'You', due:D(-73), notes:'Updated for 2026. New logo assets and packaging guidelines.', files:[{name:'Brand_Style_Guide_2026.pdf',size:'8.2 MB'}] },
     ];
-    // --- migrate old groupIds 1..6 -> new project ids (AIT hierarchy demo + seed preservation) ---
-    (function(){
-      const map={1:5,2:6,3:6,4:7,5:8,6:9}; // old1 Q3->5, old2 UNFI->6 etc — keeps seed visible
-      // more precise: move old2 UNFI tasks to AIT subproject demo? Keep mapping above for visibility; add explicit AIT tasks below
-      tasks.forEach(t=>{ if(map[t.groupId]) t.groupId=map[t.groupId]; });
-      tasks.push(
-        { id: ++taskIdCounter, groupId:2, title:'AIT — Nugget deck draft', status:'in_progress', priority:'high', assignee:'You', due:'2026-07-20', notes:'AIT buyer deck for Nugget — velocity + lift.', files:[] },
-        { id: ++taskIdCounter, groupId:3, title:'AIT — UNFI new item forms (5 SKUs)', status:'todo', priority:'high', assignee:'You', due:'2026-07-18', notes:'Spec sheets + ingredient decks for AIT SKUs.', files:[{name:'AIT_UNFI_Form.xlsx',size:'420 KB'}] },
-        { id: ++taskIdCounter, groupId:4, title:'AIT — Sell sheet + samples', status:'todo', priority:'med', assignee:'John', due:'2026-07-25', notes:'Samples and sell sheets for AIT launch.', files:[] },
-        { id: ++taskIdCounter, groupId:1, title:'AIT — Overall timeline & kickoff', status:'todo', priority:'high', assignee:'You', due:'2026-07-15', notes:'Parent-level milestone — AIT kickoff, links to sub-projects.', files:[] }
-      );
-    })();
 
-    // ===== PROJECTS (hierarchical) =====
-    function getChildren(pid){ return groups.filter(g=> g.parentId===pid); }
-    function toggleParent(pid){ expandedGroups[pid]=!expandedGroups[pid]; renderGroups(); }
-    function setIdeateView(mode){ ideateView=mode; document.getElementById('ideateListBtn').className=mode==='list'?'active':''; document.getElementById('ideateCalBtn').className=mode==='calendar'?'active':''; renderGroupContent(); }
+    const persisted = loadState();
+    if (!persisted) {
+      // Migrate old groupIds 1..6 -> current project ids (AIT hierarchy demo + seed preservation)
+      (function(){
+        const map = {1:5, 2:3, 3:6, 4:7, 5:8, 6:9}; // old1 Q3->5, old2 UNFI->3 (AIT — UNFI Setup), old3 Broker->6, old4 KeHE->7, old5 APL->8, old6 Marketing->9
+        tasks.forEach(t => { if (map[t.groupId]) t.groupId = map[t.groupId]; });
+        tasks.push(
+          { id: ++taskIdCounter, groupId:2, title:'AIT — Nugget deck draft', status:'in_progress', priority:'high', assignee:'You', due:D(1), notes:'AIT buyer deck for Nugget — velocity + lift.', files:[] },
+          { id: ++taskIdCounter, groupId:3, title:'AIT — UNFI new item forms (5 SKUs)', status:'todo', priority:'high', assignee:'You', due:D(2), notes:'Spec sheets + ingredient decks for AIT SKUs.', files:[{name:'AIT_UNFI_Form.xlsx',size:'420 KB'}] },
+          { id: ++taskIdCounter, groupId:4, title:'AIT — Sell sheet + samples', status:'todo', priority:'med', assignee:'John', due:D(6), notes:'Samples and sell sheets for AIT launch.', files:[] },
+          { id: ++taskIdCounter, groupId:1, title:'AIT — Overall timeline & kickoff', status:'todo', priority:'high', assignee:'You', due:D(-5), notes:'Parent-level milestone — AIT kickoff, links to sub-projects.', files:[] }
+        );
+        groups.filter(g => !g.parentId).forEach(g => { expandedGroups[g.id] = true; });
+        saveState();
+      })();
+    }
+
+    // ===== HIERARCHY =====
+    function getChildren(pid){ return groups.filter(g => g.parentId === pid); }
+    function toggleParent(pid){ expandedGroups[pid] = !expandedGroups[pid]; renderGroups(); }
+
+    function setIdeateView(mode){ ideateView = mode; renderGroupContent(); }
+
+    // ===== CALENDAR =====
     function renderIdeateCalendar(g, groupTasks){
       const y=ideateCalDate.getFullYear(), m=ideateCalDate.getMonth();
       const first=new Date(y,m,1), startDay=first.getDay(), daysInMonth=new Date(y,m+1,0).getDate();
       const prevDays=new Date(y,m,0).getDate();
       const monthName=ideateCalDate.toLocaleString('en-US',{month:'long',year:'numeric'});
       const doneCnt = groupTasks.filter(t=>t.status==='done').length;
-      let html='<div class=\"pipeline-cal\"><div class=\"pipeline-cal-hdr\"><span>'+monthName+' — '+g.name+'</span><span style=\"display:flex;align-items:center;gap:8px;\">' +
-        (doneCnt ? '<label style=\"display:flex;align-items:center;gap:4px;font-size:0.7rem;color:#64748b;cursor:pointer;\"><input type=\"checkbox\" '+(ideateCalHideDone?'checked':'')+' onchange=\"ideateCalHideDone=this.checked;renderGroupContent();\">Hide done ('+doneCnt+')</label>' : '') +
-        '<button onclick=\"ideateCalDate=new Date(ideateCalDate.getFullYear(),ideateCalDate.getMonth()-1,1);renderGroupContent();\" style=\"padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;\">‹</button><button onclick=\"ideateCalDate=new Date();renderGroupContent();\" style=\"padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;\">Today</button><button onclick=\"ideateCalDate=new Date(ideateCalDate.getFullYear(),ideateCalDate.getMonth()+1,1);renderGroupContent();\" style=\"padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;\">›</button></span></div>';
-      html+='<div class=\"pipeline-cal-grid\"><div class=\"pipeline-cal-dayname\">Sun</div><div class=\"pipeline-cal-dayname\">Mon</div><div class=\"pipeline-cal-dayname\">Tue</div><div class=\"pipeline-cal-dayname\">Wed</div><div class=\"pipeline-cal-dayname\">Thu</div><div class=\"pipeline-cal-dayname\">Fri</div><div class=\"pipeline-cal-dayname\">Sat</div>';
-      for(let i=0;i<startDay;i++) html+='<div class=\"pipeline-cal-cell\" style=\"background:#f8fafc;\"><div class=\"pipeline-cal-date\">'+(prevDays-startDay+1+i)+'</div></div>';
+      let html='<div class="pipeline-cal"><div class="pipeline-cal-hdr"><span>'+monthName+' — '+esc(g.name)+'</span><span style="display:flex;align-items:center;gap:8px;">' +
+        (doneCnt ? '<label style="display:flex;align-items:center;gap:4px;font-size:0.7rem;color:#64748b;cursor:pointer;"><input type="checkbox" '+(ideateCalHideDone?'checked':'')+' onchange="ideateCalHideDone=this.checked;renderGroupContent();">Hide done ('+doneCnt+')</label>' : '') +
+        '<button onclick="ideateCalDate=new Date(ideateCalDate.getFullYear(),ideateCalDate.getMonth()-1,1);renderGroupContent();" aria-label="Previous month" style="padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;">‹</button><button onclick="ideateCalDate=new Date();renderGroupContent();" style="padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;">Today</button><button onclick="ideateCalDate=new Date(ideateCalDate.getFullYear(),ideateCalDate.getMonth()+1,1);renderGroupContent();" aria-label="Next month" style="padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;">›</button></span></div>';
+      html+='<div class="pipeline-cal-grid"><div class="pipeline-cal-dayname">Sun</div><div class="pipeline-cal-dayname">Mon</div><div class="pipeline-cal-dayname">Tue</div><div class="pipeline-cal-dayname">Wed</div><div class="pipeline-cal-dayname">Thu</div><div class="pipeline-cal-dayname">Fri</div><div class="pipeline-cal-dayname">Sat</div>';
+      for(let i=0;i<startDay;i++) html+='<div class="pipeline-cal-cell" style="background:#f8fafc;"><div class="pipeline-cal-date">'+(prevDays-startDay+1+i)+'</div></div>';
       const todayStr=new Date().toISOString().slice(0,10);
       for(let d=1; d<=daysInMonth; d++){
         const dateStr=new Date(y,m,d).toISOString().slice(0,10);
         const isToday=dateStr===todayStr;
-        html+='<div class=\"pipeline-cal-cell'+(isToday?' today':'')+'\"><div class=\"pipeline-cal-date\">'+d+'</div>';
-        (ideateCalHideDone ? groupTasks.filter(t=>t.status!=='done') : groupTasks).filter(t=> t.due===dateStr).forEach(t=>{ html+='<div class=\"pipeline-cal-task '+t.priority+(t.status==='done'?' done':'')+'\" onclick=\"editTask('+t.id+')\">'+t.title+'</div>'; });
+        html+='<div class="pipeline-cal-cell'+(isToday?' today':'')+'" ondragover="calOver(event,this)" ondragleave="this.classList.remove(\'drop\')" ondrop="calDrop(event,this,\''+dateStr+'\')"><div class="pipeline-cal-date">'+d+'</div>';
+        (ideateCalHideDone ? groupTasks.filter(t=>t.status!=='done') : groupTasks).filter(t=> t.due===dateStr).forEach(t=>{ html+='<div class="pipeline-cal-task '+t.priority+(t.status==='done'?' done':'')+'" draggable="true" title="'+esc(t.title)+'" onclick="editTask('+t.id+')" ondragstart="calDrag(event,'+t.id+')">'+esc(t.title)+'</div>'; });
         html+='</div>';
       }
       const rem=(startDay+daysInMonth)%7;
-      if(rem!==0) for(let i=0;i<7-rem;i++) html+='<div class=\"pipeline-cal-cell\" style=\"background:#f8fafc;\"><div class=\"pipeline-cal-date\">'+(i+1)+'</div></div>';
+      if(rem!==0) for(let i=0;i<7-rem;i++) html+='<div class="pipeline-cal-cell" style="background:#f8fafc;"><div class="pipeline-cal-date">'+(i+1)+'</div></div>';
       html+='</div></div>';
       return html;
     }
+    function calDrag(ev, id){ ev.dataTransfer.setData('text/plain', String(id)); }
+    function calOver(ev, el){ ev.preventDefault(); el.classList.add('drop'); }
+    function calDrop(ev, el, dateStr){
+      ev.preventDefault(); el.classList.remove('drop');
+      const t = tasks.find(x => x.id === parseInt(ev.dataTransfer.getData('text/plain'), 10));
+      if (!t) return;
+      t.due = dateStr;
+      saveState();
+      renderGroupContent();
+      renderGroups();
+    }
+
+    // ===== SIDEBAR =====
     function renderGroups() {
       const list = document.getElementById('groupList');
-      const q = (document.getElementById('groupSearch')?.value || '').toLowerCase();
-      const parents = groups.filter(g=> !g.parentId);
-      let html = '<div class="search-wrap" style="padding:0 12px;"><svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input class="group-search" id="groupSearch" placeholder="Search projects" oninput="renderGroups()"></div>';
+      const q = (document.getElementById('groupSearch')?.value || '').toLowerCase().trim();
+      const parents = groups.filter(g => !g.parentId);
+      let html = '';
+      let anyProjectRow = false;
+
+      // All Tasks — cross-project view
+      const openAll = tasks.filter(t => t.status !== 'done').length;
+      const doneAll = tasks.length - openAll;
+      html += '<div class="group-item'+(selectedGroupId==='all'?' active':'')+'" role="button" tabindex="0" onclick="selectGroup(\'all\')" onkeydown="groupKey(event,\'all\')" style="margin-bottom:8px;">' +
+        '<div class="g-color" style="background:#0f172a"></div>' +
+        '<div class="g-info"><div class="g-name">All Tasks</div><div class="g-meta">'+openAll+' open · '+doneAll+' done</div></div>' +
+        '<span class="g-cnt">'+tasks.length+'</span></div>';
+
       parents.forEach(parent=>{
         const children = getChildren(parent.id);
         const childMatch = children.some(c=> c.name.toLowerCase().includes(q));
         const parentMatch = parent.name.toLowerCase().includes(q);
-        if(q && !parentMatch && !childMatch) return;
-        const expanded = expandedGroups[parent.id]!==false;
-        const hasChildren = children.length>0;
-        const open = tasks.filter(t=> t.groupId===parent.id && t.status!=='done').length + children.reduce((a,c)=> a + tasks.filter(t=>t.groupId===c.id && t.status!=='done').length,0);
-        const done = tasks.filter(t=> t.groupId===parent.id && t.status==='done').length + children.reduce((a,c)=> a + tasks.filter(t=>t.groupId===c.id && t.status==='done').length,0);
-        const active = parent.id===selectedGroupId?' active':'';
-        html += '<div class="group-parent'+(expanded?'':' collapsed')+'" onclick="toggleParent('+parent.id+')"><span class="chevron" style="display:'+(hasChildren?'inline':'none')+'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="m6 9 6 6 6-6"/></svg></span><span style="flex:1;">'+parent.name+'</span><span class="g-cnt">'+(open+done)+'</span></div>';
-        html += '<div class="group-item'+active+'" onclick="selectGroup('+parent.id+')" style="margin-left:8px;border-left:2px solid '+parent.color+'"><div class="g-color" style="background:'+parent.color+'"></div><div class="g-info"><div class="g-name">'+parent.name+'</div><div class="g-meta">'+open+' open · '+done+' done</div></div></div>';
-        if(hasChildren){
+        if (q && !parentMatch && !childMatch) return;
+        anyProjectRow = true;
+        const expanded = expandedGroups[parent.id] !== false;
+        const hasChildren = children.length > 0;
+        const open = tasks.filter(t=> t.groupId===parent.id && t.status!=='done').length + children.reduce((a,c)=> a + tasks.filter(t=>t.groupId===c.id && t.status!=='done').length, 0);
+        const done = tasks.filter(t=> t.groupId===parent.id && t.status==='done').length + children.reduce((a,c)=> a + tasks.filter(t=>t.groupId===c.id && t.status==='done').length, 0);
+        const active = parent.id === selectedGroupId ? ' active' : '';
+        const chevSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="m6 9 6 6 6-6"/></svg>';
+        const chev = hasChildren
+          ? '<span class="p-chev'+(expanded?'':' collapsed')+'" role="button" tabindex="0" aria-label="Toggle sub-projects" onclick="event.stopPropagation();toggleParent('+parent.id+')" onkeydown="groupKey(event,'+parent.id+',true)">'+chevSvg+'</span>'
+          : '<span class="p-chev" style="visibility:hidden">'+chevSvg+'</span>';
+        html += '<div class="group-item'+active+'" role="button" tabindex="0" onclick="selectGroup('+parent.id+')" onkeydown="groupKey(event,'+parent.id+')" style="margin-left:8px;border-left:2px solid '+parent.color+'">' + chev +
+          '<div class="g-color" style="background:'+parent.color+'"></div>' +
+          '<div class="g-info"><div class="g-name">'+esc(parent.name)+'</div><div class="g-meta">'+open+' open · '+done+' done</div></div>' +
+          '<span class="g-cnt">'+(open+done)+'</span></div>';
+        if (hasChildren) {
           html += '<div class="group-children'+(expanded?'':' collapsed')+'">';
           children.forEach(c=>{
-            if(q && !c.name.toLowerCase().includes(q) && !parentMatch) return;
-            const co=tasks.filter(t=>t.groupId===c.id && t.status!=='done').length;
-            const cd=tasks.filter(t=>t.groupId===c.id && t.status==='done').length;
-            const cActive=c.id===selectedGroupId?' active':'';
-            html += '<div class="group-item sub-project'+cActive+'" onclick="selectGroup('+c.id+')"><div class="g-color" style="background:'+c.color+'"></div><div class="g-info"><div class="g-name">'+c.name+'</div><div class="g-meta">'+co+' open · '+cd+' done</div></div><span class="g-cnt">'+(co+cd)+'</span></div>';
+            if (q && !c.name.toLowerCase().includes(q) && !parentMatch) return;
+            const co = tasks.filter(t=>t.groupId===c.id && t.status!=='done').length;
+            const cd = tasks.filter(t=>t.groupId===c.id && t.status==='done').length;
+            const cActive = c.id === selectedGroupId ? ' active' : '';
+            html += '<div class="group-item sub-project'+cActive+'" role="button" tabindex="0" onclick="selectGroup('+c.id+')" onkeydown="groupKey(event,'+c.id+')">' +
+              '<div class="g-color" style="background:'+c.color+'"></div>' +
+              '<div class="g-info"><div class="g-name">'+esc(c.name)+'</div><div class="g-meta">'+co+' open · '+cd+' done</div></div>' +
+              '<span class="g-cnt">'+(co+cd)+'</span></div>';
           });
-          html+='</div>';
+          html += '</div>';
         }
       });
+
+      // Task search hits (search covers task titles + notes, not just projects)
+      let hitCount = 0;
+      if (q) {
+        const hits = tasks.filter(t => (t.title||'').toLowerCase().includes(q) || (t.notes||'').toLowerCase().includes(q));
+        if (hits.length) {
+          html += '<div class="group-parent" style="cursor:default;margin-top:8px;">Tasks</div>';
+          hits.forEach(t=>{
+            hitCount++;
+            const g = groups.find(x => x.id === t.groupId);
+            html += '<div class="group-item task-hit" role="button" tabindex="0" onclick="editTask('+t.id+')" onkeydown="hitKey(event,'+t.id+')">' +
+              '<div class="g-info"><div class="g-name">'+esc(t.title)+'</div><div class="g-meta">'+(g ? esc(g.name) : '')+'</div></div></div>';
+          });
+        }
+        if (!anyProjectRow && !hitCount) html += '<div class="search-empty">No matches for "'+esc(q)+'"</div>';
+      }
+
       list.innerHTML = html;
     }
+    function groupKey(e, id, toggle){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (toggle) { toggleParent(id); } else { selectGroup(id); } } }
+    function hitKey(e, id){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); editTask(id); } }
 
     function selectGroup(id) {
       selectedGroupId = id;
-      ideateView='list';
       renderGroups();
       renderGroupContent();
-      document.getElementById('addTaskBtn').disabled = false;
-      document.getElementById('editGroupBtn').disabled = false;
-      document.getElementById('notesBtn').disabled = false;
+      const isAll = id === 'all';
+      document.getElementById('addTaskBtn').disabled = isAll;
+      document.getElementById('editGroupBtn').disabled = isAll;
+      document.getElementById('notesBtn').disabled = isAll;
     }
 
-    // ===== PROJECT CONTENT — Notes (top near Add Task) + List vs Calendar =====
+    // ===== MAIN CONTENT =====
     function getParentLabelIdeate(g){ if(!g.parentId) return ''; const par=groups.find(x=>x.id===g.parentId); return par? par.name+' / ':''; }
+
     function renderGroupContent() {
-      const g = groups.find(x => x.id === selectedGroupId);
       const container = document.getElementById('groupContent');
+      const mainBody = document.querySelector('.main-body');
+      const scrollTop = mainBody ? mainBody.scrollTop : 0;
+      const isAll = selectedGroupId === 'all';
+      document.getElementById('ideateListBtn').className = ideateView==='list' ? 'active' : '';
+      document.getElementById('ideateCalBtn').className = ideateView==='calendar' ? 'active' : '';
+      document.getElementById('ideateListBtn').setAttribute('aria-pressed', String(ideateView==='list'));
+      document.getElementById('ideateCalBtn').setAttribute('aria-pressed', String(ideateView==='calendar'));
+      let html = '';
+
+      if (isAll) {
+        document.getElementById('groupTitle').textContent = 'All Tasks';
+        document.getElementById('groupSub').textContent = 'Everything across your projects, sorted by due date';
+        if (ideateView === 'calendar') {
+          html += renderIdeateCalendar({ name:'All Projects' }, tasks);
+          container.innerHTML = html;
+          if (mainBody) mainBody.scrollTop = scrollTop;
+          return;
+        }
+        const overdue = tasks.filter(isOverdue).length;
+        if (overdue) html += '<div class="overdue-banner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>' + overdue + ' task' + (overdue===1?'':'s') + ' overdue</div>';
+        if (!tasks.length) {
+          html += '<div class="empty-state" style="padding:20px;"><h3>No tasks yet</h3><p>Select a project and add your first task</p></div>';
+        } else {
+          const sec = s => tasks.filter(t => t.status === s).sort(byDue);
+          html += renderTaskSection('To Do', sec('todo'), true, '#64748b');
+          html += renderTaskSection('In Progress', sec('in_progress'), true, '#2563eb');
+          html += renderTaskSection('Done', sec('done'), true, '#16a34a');
+        }
+        container.innerHTML = html;
+        if (mainBody) mainBody.scrollTop = scrollTop;
+        return;
+      }
+
+      const g = groups.find(x => x.id === selectedGroupId);
       if (!g) {
         container.innerHTML = '<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"></path></svg><h3>No project selected</h3><p>Pick a project from the sidebar or create a new one</p></div>';
         document.getElementById('groupTitle').textContent = 'Select a project';
@@ -435,77 +609,88 @@
       }
       document.getElementById('groupTitle').textContent = getParentLabelIdeate(g) + g.name;
       document.getElementById('groupSub').textContent = g.desc || 'No description';
-      document.getElementById('ideateListBtn').className = ideateView==='list'?'active':'';
-      document.getElementById('ideateCalBtn').className = ideateView==='calendar'?'active':'';
 
       const groupTasks = tasks.filter(t => t.groupId === g.id);
 
-      let html = '';
-
-      // Project Notes — top near Add Task, as requested
+      // Project Notes
       html += '<div class="notes-section">' +
         '<div class="ns-hdr" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display===\'none\'?\'block\':\'none\'">' +
         '<span><svg viewBox="0 0 24 24" fill="none" stroke="#92400e" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg> Project Notes</span>' +
         '<span style="font-size:0.7rem;color:#b45309;cursor:pointer;" onclick="event.stopPropagation();openGroupNotes()">Edit</span></div>' +
-        '<div class="ns-body" id="groupNotesBody">' + (g.notes ? g.notes.replace(/</g,'&lt;') : 'No notes yet — click Notes in the header (next to Add Task) or Edit here to add context.') + '</div></div>';
+        '<div class="ns-body" id="groupNotesBody">' + (g.notes ? esc(g.notes) : 'No notes yet. Click Edit to add project context.') + '</div></div>';
 
-      if(ideateView==='calendar'){
+      if (ideateView === 'calendar') {
         html += renderIdeateCalendar(g, groupTasks);
         container.innerHTML = html;
+        if (mainBody) mainBody.scrollTop = scrollTop;
         return;
       }
 
       // Quick-add bar (list view)
       html += '<div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;padding:10px 14px;background:#fff;border:1px dashed #cbd5e1;border-radius:8px;">' +
-        '<input id="quickTaskInput" placeholder="Quick add task — press Enter" style="flex:1;border:0;outline:none;font-size:0.85rem;background:transparent;" onkeydown="if(event.key===\'Enter\')quickAddTask()">' +
-        '<select id="quickPriority" style="padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;font-size:0.75rem;background:#fff;">' +
-        '<option value="high">High</option><option value="med" selected>Med</option><option value="low">Low</option></select>' +
+        '<input id="quickTaskInput" placeholder="Quick add task — press Enter" aria-label="Quick add task" style="flex:1;border:0;outline:none;font-size:0.85rem;background:transparent;" onkeydown="if(event.key===\'Enter\')quickAddTask()">' +
+        '<select id="quickPriority" aria-label="Priority for quick-added task" style="padding:4px 8px;border:1px solid #e2e8f0;border-radius:6px;font-size:0.75rem;background:#fff;">' +
+        '<option value="high">High</option><option value="med" selected>Medium</option><option value="low">Low</option></select>' +
         '<button onclick="quickAddTask()" style="padding:5px 12px;border:0;border-radius:6px;background:#6366f1;color:#fff;font-size:0.75rem;cursor:pointer;">Add</button></div>';
 
-      // Sections
+      // Sections sorted by due date (undated last)
       if (!groupTasks.length) {
         html += '<div class="empty-state" style="padding:20px;"><h3>No tasks yet</h3><p>Type above and press Enter to add your first task</p></div>';
       } else {
-        if (todos.length) html += renderTaskSection('To Do', 'todo', todos, '#64748b');
-        if (inProgress.length) html += renderTaskSection('In Progress', 'in_progress', inProgress, '#2563eb');
-        if (done.length) html += renderTaskSection('Done (' + done.length + ')', 'done', done, '#16a34a');
+        const todos = groupTasks.filter(t => t.status === 'todo').sort(byDue);
+        const inProgress = groupTasks.filter(t => t.status === 'in_progress').sort(byDue);
+        const done = groupTasks.filter(t => t.status === 'done').sort(byDue);
+        if (todos.length) html += renderTaskSection('To Do', todos, false, '#64748b');
+        if (inProgress.length) html += renderTaskSection('In Progress', inProgress, false, '#2563eb');
+        if (done.length) html += renderTaskSection('Done', done, false, '#16a34a');
       }
 
       container.innerHTML = html;
+      if (mainBody) mainBody.scrollTop = scrollTop;
     }
 
-    function renderTaskSection(label, status, items, color) {
+    function renderTaskSection(label, items, showProject, color) {
       let html = '<div class="task-list-header" style="margin-top:16px;"><span class="tlh-title" style="display:flex;align-items:center;gap:6px;"><span style="width:8px;height:8px;border-radius:50%;background:' + color + ';display:inline-block;"></span>' + label + ' (' + items.length + ')</span></div>';
       items.forEach(t => {
+        const proj = showProject ? groups.find(x => x.id === t.groupId) : null;
         const initials = t.assignee ? t.assignee.split(' ').map(w => w[0]).join('').substring(0,2).toUpperCase() : '';
         const dueObj = t.due ? new Date(t.due + 'T00:00:00') : null;
-        const now = new Date();
-        const isOverdue = dueObj && dueObj < now && t.status !== 'done';
+        const isOverdueT = isOverdue(t);
         const dueText = dueObj ? dueObj.toLocaleDateString('en-US',{month:'short',day:'numeric'}) : '';
         const isDone = t.status === 'done';
-        const files = t.files && t.files.length ? '<span class="file-indicator" title="' + t.files.map(f => f.name + ' (' + f.size + ')').join(' | ') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>' + t.files.length + '</span>' : '';
+        const files = t.files && t.files.length ? '<span class="file-indicator" title="' + esc(t.files.map(f => f.name + ' (' + f.size + ')').join(' | ')) + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>' + t.files.length + '</span>' : '';
         html += '<div class="task-item' + (isDone ? ' done' : '') + '">' +
-          '<div class="t-check' + (isDone ? ' checked' : '') + '" onclick="toggleTaskDone(' + t.id + ')"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>' +
-          '<div class="t-body" onclick="editTask(' + t.id + ')">' +
-          '<div class="t-title' + (isDone ? ' done' : '') + '">' + t.title + '</div>' +
+          '<div class="t-check' + (isDone ? ' checked' : '') + '" role="checkbox" aria-checked="' + isDone + '" aria-label="Mark task done" tabindex="0" onclick="toggleTaskDone(' + t.id + ')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();toggleTaskDone(' + t.id + ')}"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>' +
+          '<div class="t-body" role="button" tabindex="0" onclick="editTask(' + t.id + ')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();editTask(' + t.id + ')}">' +
+          '<div class="t-title' + (isDone ? ' done' : '') + '">' + esc(t.title) + '</div>' +
           '<div class="t-meta">' +
-          (t.assignee ? '<span class="assignee"><span class="avatar">' + initials + '</span>' + t.assignee + '</span>' : '') +
-          (t.due ? '<span class="due' + (isOverdue ? ' overdue' : '') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>' + dueText + '</span>' : '') +
-          (!isDone ? '<span class="priority ' + t.priority + '">' + t.priority + '</span>' : '') +
-          (!isDone ? '<span class="status-badge ' + t.status + '">' + (t.status === 'in_progress' ? 'In Progress' : 'To Do') + '</span>' : '') +
+          (proj ? '<span class="t-project">' + esc(proj.name) + '</span>' : '') +
+          (t.assignee ? '<span class="assignee"><span class="avatar">' + esc(initials) + '</span>' + esc(t.assignee) + '</span>' : '') +
+          (t.due ? '<span class="due' + (isOverdueT ? ' overdue' : '') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>' + dueText + '</span>' : '') +
+          (!isDone ? '<span class="priority ' + t.priority + '">' + PRIORITY_LABEL[t.priority] + '</span>' : '') +
           files +
           '</div></div>' +
-          '<div class="t-expand" onclick="event.stopPropagation();editTask(' + t.id + ')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"></polyline></svg></div>' +
+          '<div class="t-expand" role="button" tabindex="0" aria-label="Toggle task notes" onclick="event.stopPropagation();toggleTaskNotes(' + t.id + ')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();toggleTaskNotes(' + t.id + ')}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"></polyline></svg></div>' +
           '</div>' +
-          '<div class="task-notes" id="taskNotes-' + t.id + '">' + (t.notes || '<span class="tn-empty">No notes</span>') + '</div>';
+          '<div class="task-notes" id="taskNotes-' + t.id + '">' + (t.notes ? esc(t.notes) : '<span class="tn-empty">No notes</span>') + '</div>';
       });
       return html;
+    }
+
+    function toggleTaskNotes(id) {
+      const panel = document.getElementById('taskNotes-' + id);
+      if (!panel) return;
+      const open = panel.classList.toggle('open');
+      const prev = panel.previousElementSibling;
+      const btn = prev ? prev.querySelector('.t-expand') : null;
+      if (btn) btn.classList.toggle('open', open);
     }
 
     function toggleTaskDone(id) {
       const t = tasks.find(x => x.id === id);
       if (!t) return;
       t.status = t.status === 'done' ? 'todo' : 'done';
+      saveState();
       renderGroupContent();
       renderGroups();
     }
@@ -522,25 +707,36 @@
       document.getElementById('taskAssigneeInput').value = t.assignee || '';
       document.getElementById('taskDueInput').value = t.due || '';
       document.getElementById('taskNotesInput').value = t.notes || '';
+      document.getElementById('taskTitleInput').classList.remove('input-error');
+      document.getElementById('taskError').hidden = true;
+      document.getElementById('taskFileInput').value = '';
+      // ponytail: files are metadata only (name/size); file content is never uploaded
+      document.getElementById('taskFilePreview').innerHTML = (t.files || []).map(f => '<span class="file-chip">' + esc(f.name) + ' · ' + esc(f.size) + '</span>').join('');
+      refreshAssigneeList();
       showModal('taskModal');
     }
 
-    // ===== GROUP NOTES =====
+    // ===== PROJECT NOTES =====
     function openGroupNotes() {
       const g = groups.find(x => x.id === selectedGroupId);
       if (!g) return;
-      const text = prompt('Edit group notes:', g.notes || '');
-      if (text !== null) {
-        g.notes = text;
-        document.getElementById('groupNotesBody').textContent = text || 'No notes yet. Click "Edit" to add group-level notes.';
-      }
+      document.getElementById('notesModalInput').value = g.notes || '';
+      showModal('notesModal');
+    }
+    function saveGroupNotes() {
+      const g = groups.find(x => x.id === selectedGroupId);
+      if (!g) return;
+      g.notes = document.getElementById('notesModalInput').value.trim();
+      closeModal('notesModal');
+      saveState();
+      renderGroupContent();
     }
 
     // ===== QUICK ADD TASK =====
     function quickAddTask() {
       const input = document.getElementById('quickTaskInput');
       const title = input.value.trim();
-      if (!title || !selectedGroupId) return;
+      if (!title || !selectedGroupId || selectedGroupId === 'all') return;
       tasks.push({
         id: ++taskIdCounter,
         groupId: selectedGroupId,
@@ -553,11 +749,17 @@
         files: [],
       });
       input.value = '';
+      saveState();
       renderGroupContent();
       renderGroups();
     }
 
     // ===== ADD / EDIT TASK MODAL =====
+    function refreshAssigneeList() {
+      const names = [...new Set(tasks.map(t => t.assignee).filter(Boolean))];
+      document.getElementById('assigneeList').innerHTML = names.map(n => '<option value="' + esc(n) + '"></option>').join('');
+    }
+
     function openAddTask() {
       editingTaskId = null;
       document.getElementById('taskModalTitle').textContent = 'Add Task';
@@ -568,13 +770,25 @@
       document.getElementById('taskAssigneeInput').value = '';
       document.getElementById('taskDueInput').value = '';
       document.getElementById('taskNotesInput').value = '';
+      document.getElementById('taskTitleInput').classList.remove('input-error');
+      document.getElementById('taskError').hidden = true;
+      document.getElementById('taskFileInput').value = '';
       document.getElementById('taskFilePreview').innerHTML = '';
+      refreshAssigneeList();
       showModal('taskModal');
     }
 
     function saveTask() {
-      const title = document.getElementById('taskTitleInput').value.trim();
-      if (!title || !selectedGroupId) return;
+      const titleInput = document.getElementById('taskTitleInput');
+      const title = titleInput.value.trim();
+      if (!title) {
+        titleInput.classList.add('input-error');
+        document.getElementById('taskError').hidden = false;
+        titleInput.focus();
+        return;
+      }
+      // ponytail: files are metadata only (name/size); file content is never uploaded
+      const picked = [...document.getElementById('taskFileInput').files].map(f => ({ name: f.name, size: formatBytes(f.size) }));
       if (editingTaskId) {
         const t = tasks.find(x => x.id === editingTaskId);
         if (t) {
@@ -584,6 +798,7 @@
           t.assignee = document.getElementById('taskAssigneeInput').value.trim();
           t.due = document.getElementById('taskDueInput').value;
           t.notes = document.getElementById('taskNotesInput').value.trim();
+          t.files = [...(t.files || []), ...picked];
         }
       } else {
         tasks.push({
@@ -595,25 +810,25 @@
           assignee: document.getElementById('taskAssigneeInput').value.trim(),
           due: document.getElementById('taskDueInput').value,
           notes: document.getElementById('taskNotesInput').value.trim(),
-          files: [],
+          files: picked,
         });
       }
+      document.getElementById('taskFileInput').value = '';
+      document.getElementById('taskFilePreview').innerHTML = '';
       closeModal('taskModal');
+      saveState();
       renderGroupContent();
       renderGroups();
     }
 
     // ===== ADD / EDIT PROJECT (with Sub-Project) =====
-    function populateIdeateParent(selectedId){
-      const sel=document.getElementById('groupParentInput');
-      const parents=groups.filter(g=> !g.parentId);
-      let html='<option value=\"\">No parent — top-level project</option>';
-      parents.forEach(p=>{
-        if(selectedId && p.id===selectedId) return;
-        html+='<option value=\"'+p.id+'\">'+p.name+'</option>';
+    function populateIdeateParent(excludeIds) {
+      const sel = document.getElementById('groupParentInput');
+      let html = '<option value="">No parent — top-level project</option>';
+      groups.filter(g => !g.parentId && !excludeIds.includes(g.id)).forEach(p => {
+        html += '<option value="' + p.id + '">' + esc(p.name) + '</option>';
       });
-      sel.innerHTML=html;
-      if(selectedId) sel.value=String(selectedId);
+      sel.innerHTML = html;
     }
     function openAddGroup() {
       editingGroupId = null;
@@ -621,13 +836,11 @@
       document.getElementById('groupModalSave').textContent = 'Create';
       document.getElementById('groupNameInput').value = '';
       document.getElementById('groupDescInput').value = '';
-      populateIdeateParent(null);
-      const cur=groups.find(x=>x.id===selectedGroupId);
-      if(cur && !cur.parentId) document.getElementById('groupParentInput').value=String(cur.id);
-      else if(cur && cur.parentId) document.getElementById('groupParentInput').value=String(cur.parentId);
+      document.getElementById('groupNameInput').classList.remove('input-error');
+      document.getElementById('groupError').hidden = true;
+      populateIdeateParent([]);
       showModal('groupModal');
     }
-
     function openEditGroup() {
       const g = groups.find(x => x.id === selectedGroupId);
       if (!g) return;
@@ -636,39 +849,63 @@
       document.getElementById('groupModalSave').textContent = 'Save';
       document.getElementById('groupNameInput').value = g.name;
       document.getElementById('groupDescInput').value = g.desc || '';
-      populateIdeateParent(g.parentId||null);
-      if(g.parentId) document.getElementById('groupParentInput').value=String(g.parentId);
+      document.getElementById('groupNameInput').classList.remove('input-error');
+      document.getElementById('groupError').hidden = true;
+      // Exclude self + own children so reparenting can never create a cycle
+      populateIdeateParent([g.id, ...getChildren(g.id).map(c => c.id)]);
+      if (g.parentId) document.getElementById('groupParentInput').value = String(g.parentId);
       showModal('groupModal');
     }
-
     function saveGroup() {
-      const name = document.getElementById('groupNameInput').value.trim();
-      if (!name) return;
+      const nameInput = document.getElementById('groupNameInput');
+      const name = nameInput.value.trim();
+      const err = document.getElementById('groupError');
+      if (!name) {
+        nameInput.classList.add('input-error');
+        err.textContent = 'Project name is required';
+        err.hidden = false;
+        nameInput.focus();
+        return;
+      }
       const desc = document.getElementById('groupDescInput').value.trim();
-      const parentVal=document.getElementById('groupParentInput').value;
-      const parentId=parentVal?parseInt(parentVal,10):null;
-      if(parentId && groups.find(x=>x.id===parentId && x.parentId)){ alert('Sub-projects can only be 1 level deep.'); return; }
+      const parentVal = document.getElementById('groupParentInput').value;
+      const parentId = parentVal ? parseInt(parentVal, 10) : null;
+      if (parentId && groups.find(x => x.id === parentId && x.parentId)) {
+        err.textContent = 'Sub-projects can only be 1 level deep.';
+        err.hidden = false;
+        return;
+      }
       if (editingGroupId) {
         const g = groups.find(x => x.id === editingGroupId);
-        if (g) { g.name = name; g.desc = desc; g.parentId=parentId; }
+        if (g) { g.name = name; g.desc = desc; g.parentId = parentId; }
       } else {
-        const nid=++groupIdCounter;
-        groups.push({ id:nid, name, desc, color: COLORS[nid % COLORS.length], parentId });
-        if(parentId) expandedGroups[parentId]=true;
-        selectedGroupId=nid;
+        const nid = ++groupIdCounter;
+        groups.push({ id: nid, name, desc, color: COLORS[nid % COLORS.length], parentId });
+        if (parentId) expandedGroups[parentId] = true;
+        selectedGroupId = nid;
       }
       closeModal('groupModal');
+      saveState();
       renderGroups();
-      if (selectedGroupId) renderGroupContent();
+      renderGroupContent();
     }
 
-    // ===== HELPERS =====
-    function showModal(id) { document.getElementById(id).classList.add('show'); }
+    // ===== MODAL HELPERS =====
+    function showModal(id) {
+      const m = document.getElementById(id);
+      m.classList.add('show');
+      const f = m.querySelector('input, select, textarea');
+      if (f) setTimeout(() => f.focus(), 0);
+    }
     function closeModal(id) { document.getElementById(id).classList.remove('show'); }
 
     // ===== INIT =====
+    document.querySelectorAll('.modal-overlay').forEach(o => o.addEventListener('mousedown', e => { if (e.target === o) closeModal(o.id); }));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.show').forEach(m => closeModal(m.id)); });
+
+    refreshAssigneeList();
     renderGroups();
-    if (groups.length) selectGroup(groups[0].id);
+    selectGroup('all');
   </script>
 </body>
 </html>
