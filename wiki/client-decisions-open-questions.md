@@ -3,12 +3,12 @@ type: reference
 title: Consolidated client decisions and open questions
 module: general
 status: validated
-last_verified: 2026-10-14
+last_verified: 2026-11-04
 ---
 
 # CONSOLIDATED CLIENT DECISIONS & OPEN QUESTIONS
 
-> **Source:** `meetings/` — 14 raw transcripts (Jul 15 – Aug 19, 2026). Raw transcripts remain the **source of truth**; this section is the extracted, provenance-tagged knowledge. Each item carries a **knowledge status** (APPROVED / VALIDATED / CLARIFIED / PROPOSED / UNKNOWN) per the BA status model.
+> **Source:** `meetings/` — 26 transcripts and 7 meeting-notes files (Jul 13 – Nov 3, 2026). Raw transcripts remain the **source of truth**; this section is the extracted, provenance-tagged knowledge. Each item carries a **knowledge status** (APPROVED / VALIDATED / CLARIFIED / PROPOSED / UNKNOWN) per the BA status model.
 
 ### Validated / Approved Decisions
 | # | Decision | Provenance | Status |

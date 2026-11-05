@@ -1,0 +1,52 @@
+NOTE: This file is Fellow AI meeting notes, not a verbatim transcript.
+
+MEETING NOTES
+Bijoy Chandra Nath shared meeting notes with you:
+A IT | Caboodle Ticket Call
+Oct 19, 5:00 - 6:00 PM
+Action Items (8)
+constance@caboodleservices.com to reply to Arnab's email with the full list of category review data flow requirements (delete/re-upload behavior, brand report independence, calendar interactions) so the team can analyze and implement them after returning from vacation.
+28:41
+Bijoy Chandra Nath to schedule a post-vacation session with Constance to walk through the full category review data flow and confirm correct behavior across the category list, calendar, and brand report.
+37:13
+View (6) more Action Items
+Topics
+1. Ask Caboodle AI model: open weight vs. frontier model
+Constance raised whether an open weight model could be more cost-effective for Ask Caboodle given that most data is already in the database and users are not expected to do heavy computing.
+3:18
+Bijoy confirmed the team is currently using the Claude API (Opus and Sonnet), which are closed frontier models requiring per-use payment.
+3:49
+Open weight models are downloadable and can be self-hosted on private cloud infrastructure such as Azure or AWS, and can be fine-tuned on proprietary data.
+4:15
+Bijoy cautioned that self-hosting an open weight model requires ongoing cloud infrastructure maintenance including day-to-day fine-tuning, which adds operational overhead.
+5:29
+Bijoy noted that with well-built engineering around a frontier model (context, memory caching, tooling), the team can achieve equivalent output to a self-hosted model without the maintenance burden.
+6:00
+2. Category review data flow: intended relationships between list, calendar, and brand report
+The category review system has 3 modules: the category review list, the calendar, and the brand report, and a relational flaw between them caused data inconsistencies.
+19:07
+Arnab's fix adds a deletion guard: if a category list row is referenced by the calendar, the system blocks deletion and notifies the user to remove it from the calendar first.
+19:39
+Constance confirmed that the brand report must retain all history permanently; users will never want to lose brand report entries, so deletion should only be possible from within the brand report itself.
+21:53
+Bijoy clarified the intended behavior: brand report data flows from the category view list, but deleting from the list should not cascade to the brand report.
+23:51
+Constance noted the calendar is year-agnostic (no year filter) and that clearing out 2025 dates from the category list should not remove corresponding entries from the brand report.
+27:55
+3. Category review data flow bug and deployment hold
+4. Sub-broker user assignment bug and staging deployment
+5. Delete and re-upload workflow and duplicate row risk
+6. Noble broker category review remediation
+7. Broker data visibility bug and production hotfix
+8. User-organization relationships and IAM migration prep
+9. Askaboodle AI query tool: demo and query accuracy
+10. Askaboodle credit system and pricing plan
+11. Askaboodle features: pinned reports, prompt gallery, saved names, verified examples, and web search
+12. IAM service progress and production readiness
+13. IAM admin panel demo, user management, and ticket triage
+Decisions (10)
+Arnab's fix (staged but not yet deployed to production) will block deletion of a category list row if it is referenced by the calendar, prompting the user to remove it from the calendar first.
+20:28
+Deleting from the category view list should not affect the brand report; the two datasets must remain independent, with brand report data persisting even when category list rows are removed.
+24:01
+Review (8) more Decisions

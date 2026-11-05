@@ -1,14 +1,14 @@
 # Project Context — Caboodle BA Deliverables
 
-**Last Updated:** 2026-10-29  
-**Session:** Completed code-verified module reference pages for all 15 modules (2.1-2.15) under wiki/modules/, plus cross-cutting (§3), dependencies & recipes (§4-§5), and traceability-matrix.md. Knowledge-base sync from live Jira (1,784 tickets) + 16 meeting transcripts
+**Last Updated:** 2026-11-04  
+**Session:** Completed code-verified module reference pages for all 15 modules (2.1-2.15) under wiki/modules/, plus cross-cutting (§3), dependencies & recipes (§4-§5), and traceability-matrix.md. Knowledge-base sync from live Jira (1,784 tickets) + 26 transcripts and 7 meeting-notes files (Jul 13 - Nov 3, 2026)
 
 ---
 
 ## Current Objective
 Maintain the Caboodle BA knowledge base and ticket deliverables, keeping them synchronized with **live evidence**:
 - Live Jira export (`jira/tickets/` — 1,784 tickets, **authoritative**; supersedes the legacy `data/Jira (3).csv`)
-- 16 client meeting transcripts (`meetings/` — raw evidence)
+- 26 client meeting transcripts + 7 meeting-notes files (`meetings/` - raw evidence, Jul 13 - Nov 3, 2026)
 - Lovable prototype (`design/prototypes/Daily Delight Calendar/`) — Category Review patterns
 - Curated ticket specs in `specs/` (client-reviewed subset)
 
@@ -21,11 +21,16 @@ Maintain the Caboodle BA knowledge base and ticket deliverables, keeping them sy
 | Source | Count | Format | Status as evidence |
 |--------|-------|--------|--------------------|
 | `jira/tickets/` | 1,784 tickets (CS-1…CS-1781 + GTMS-*) | Markdown (Jira export) | **Authoritative** live backlog — generated 2026-10-14 from `caboodleservices.atlassian.net` |
-| `meetings/` | 16 transcripts (Jul 13 – Sep 3, 2026) | Raw text | **Raw evidence** — structured knowledge extracted to `wiki/decisions.md` + `meetings/notes/`; transcripts kept intact |
+| `meetings/` | 26 transcripts + 7 meeting-notes files (Jul 13 - Nov 3, 2026) | Raw text | **Raw evidence** — structured knowledge extracted to `wiki/decisions.md` + `meetings/notes/`; transcripts kept intact |
 | `specs/` | 76 curated spec files | Markdown | BA deliverables (prioritized, client-reviewed subset; 2 drafts pending review) |
 | `data/IAM_Ticket_Impact_Report.xlsx` | 37 IAM + 31 closable tickets | XLSX (local only) | IAM coverage report (Ornov, modified 2026-10-18); extracted to `wiki/iam-impact-report.md` |
 | `docs/onboarding/`, `design/prototypes/` | docs + Lovable prototype | Mixed | Reference |
 | `data/Jira (3).csv` | legacy 130-issue export | CSV | **Legacy** — superseded by `jira/tickets/`; not source of truth |
+
+## This Session (Nov 04, 2026)
+
+- **Meeting sync:** added 17 new meeting files to `meetings/transcripts/` (10 transcripts, 7 meeting-notes), created structured notes in `meetings/notes/` and mirrored them to `kb/Notes/imported/`, and imported the 10 transcripts to `kb/Transcripts/imported/`. Coverage now runs Jul 13 - Nov 3, 2026.
+- **Gap:** Oct 7 (Caboodle Dashboard & Pipeline Review) has no transcript or Fellow notes; only a TIME SENSITIVE pipeline email from Constance.
 
 ## This Session (Oct 22, 2026)
 

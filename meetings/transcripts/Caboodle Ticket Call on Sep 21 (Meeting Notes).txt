@@ -1,0 +1,80 @@
+NOTE: This file is Fellow AI meeting notes, not a verbatim transcript.
+
+Meeting: A IT | Caboodle Ticket Call  | AI Notes by Fellow
+
+Summary
+This weekly sync covered active development tickets across several Caboodle modules, with Mashiul demoing the simple promotion entry workflow and Constance providing UX feedback on filtering, month display, and calendar integration. The team aligned on showing both simple and calculated promotions in the same promotional calendar, with a visual flag to distinguish them, and discussed a future 'convert to calculation' button to upgrade simple entries. A data propagation bug was identified: retailer and banner name changes are not cascading to connected modules (distributor sales, promotional management, monthly reports), which Bijoy flagged as the highest priority fix.
+
+Looking ahead, Constance has back-to-back client presentations on Tuesday September 29 (Nobles) and Wednesday September 30 (Bubbies), making the trade spend roll-up and modification of approved promotions the top priorities for live deployment this week. Tauhidur also raised progress on the roadmap sheet and Ask Caboodle Phase 1 planning, and offered to build a mock demo of the Ask Caboodle experience for Constance's presentations.
+
+Action items
+- : ma.chowdhury@asthait.com to add month filter checkboxes to the simple promotion entry grid so users can isolate specific months without scrolling across the full year. 02:31
+- : ma.chowdhury@asthait.com to add a button in the simple promotion stepper for items without pricing that redirects the user to the product pricing setup page or opens a pricing modal. 05:14
+- : ma.chowdhury@asthait.com to implement alternating month row colors in the simple promotion entry grid to improve horizontal navigation. 15:12
+- : bc.nath@asthait.com to add the 'remove from approved' button to the approved promotion modification flow. 18:59
+- : ma.chowdhury@asthait.com to follow up with Kea on the testing status of the approved promotion modification and the export/TradeSpin sandbox integration, and send Constance an update. 20:20
+- : ma.chowdhury@asthait.com to create a ticket and implement pre-population of the logged-in user's email in the CC field of the brand notification compose modal in the category review tracker. 27:23
+- : bc.nath@asthait.com to implement propagation of retailer and banner name changes across all connected modules (distributor sales records, store data, monthly report, promotional management) and provide an update by end of day Tuesday on whether it is ready for production. 37:54
+- : ma.chowdhury@asthait.com and bc.nath@asthait.com to coordinate with Kea to complete testing on the trade spend roll-up and approved promotion modification so they can be pushed to the live environment before Constance's presentations on September 29-30. 46:00
+- : mt.rahman@asthait.com to send Constance an email with the completed roadmap sheet review, flagging any missed or mis-estimated items. 47:25
+- : mt.rahman@asthait.com to review the IAM service demo and evaluate integration feasibility and feature completeness within the existing system. 48:07
+- : mt.rahman@asthait.com to coordinate with Bijoy to build a mock Ask Caboodle demo using dummy data from staging to simulate the experience for Constance's September 29-30 presentations. 49:28
+
+Decisions
+- Both simple and calculated promotions will appear in the same promotional calendar, with a visual flag to distinguish entry type. 10:18
+- A 'convert to calculation' button will be added to the simple entry detail page to step users through entering the fields needed for full promotion calculation. 11:45
+- The retailer/banner name propagation fix is the highest-priority item for the week, to be completed by Bijoy by end of day Tuesday September 22. 37:50
+
+Topics
+Simple promotion entry: UX review and feedback
+- Mashiul demoed the simple promotion entry grid showing 23 events ready, with validation flagging items that lack pricing; the submission flow is not yet complete and requires Bijoy's backend work.
+- Constance requested a month filter (e.g. checkboxes for January and April only) in addition to category filtering, to avoid users scrolling across all 12 months when only a few are relevant. 01:21
+- For items without pricing, the team discussed adding a button in the stepper that redirects the user to the product pricing setup or opens a modal, rather than blocking submission outright, because promotions are typically submitted 6 months in advance and items may be activated later. 04:43
+- Constance confirmed her preference that both simple and calculated promotions appear in the same promotional calendar, with some kind of visual flag to distinguish entry type. 10:21
+- The team discussed adding a 'convert to calculation' button on the simple entry detail page that would step the user through entering the missing fields needed for full calculation, rather than requiring a separate workflow. 11:43
+- Constance asked for filters on at least 4 columns plus item status and month; Mashiul confirmed these are feasible. 12:19
+- Constance suggested alternating row colors by month (e.g. green/blue) to help users keep their place when scrolling horizontally across the grid; Mashiul agreed to implement this. 14:55
+- The data grid supports copy-paste from Excel directly into cells and includes undo/redo; export first generates a template that users can fill and re-import. 13:17
+- Mashiul estimated ~4 hours of front-end work to implement all of Constance's feedback; Bijoy estimated 2 days of back-end work, noting the complexity comes from inter-module dependencies (simple entries must reflect in promotional management and be upgradeable to calculated ones). 15:30
+
+Modifying approved promotions and tradesman roll-up status
+- The tradesman roll-up on the monthly filter is visible in staging and the UI alignment looks correct; Kea is still verifying the calculation portion. 17:25
+- The 'remove from approved' button still needs to be added to the modification flow; Bijoy had not yet worked on it but committed to doing it the following morning, estimating 15-20 minutes of work. 18:21
+- The modification of approved promotions is in sandbox; Mashiul had not received a testing update from Kea and planned to follow up with her the next day. 20:03
+- The export and TradeSpin sandbox integration had not been confirmed as tested; Mashiul noted Kea may have completed it but had not updated the Jira ticket. 20:40
+
+Notes tab sorting issue in promotional planning
+- Kea flagged an issue where a note entered in the first row is repositioned to the last row after a page refresh, because the backend is sorting by created-on date in descending order by default. 21:23
+- Bijoy explained that without an explicit sort applied from the front end, the back end has no mechanism to maintain the user's original row position, and that preserving row order would require tracking row numbers. 23:20
+- Bijoy and Kea had already discussed a resolution offline; Bijoy said he would share the outcome with the team. 24:23
+
+Category review: sender email and CC pre-population
+- The team discussed replacing the no-reply sender address with info@caboodleservices.com on brand notification emails from the category review tracker to prevent bounce-back; a ticket exists and Bijoy is testing this internally before handing it to Kelsey(?). 24:42
+- Bijoy asked for and received the info@caboodleservices.com password via chat to verify inbound reply receipt during testing. 25:50
+- No ticket exists yet for pre-populating the logged-in user's email in CC on the compose notification modal; Mashiul confirmed it is a front-end task and agreed to look into it. 27:08
+
+Image URL preview and supported file types
+- The image URL preview feature is working for JPEG and PNG files in the Brand section; the Broker file section is private and intentionally excluded from preview link generation. 27:43
+- Bijoy confirmed that WebP files are not currently generating preview links; the team agreed the priority file types are JPG, JPEG, PNG, and TIFF, with GIF as a lower priority. 28:55
+- The team tested a GIF URL in the product image URL field and confirmed that animated GIFs render correctly as a preview, which the group considered a bonus. 30:46
+
+Banner and retailer name propagation bug
+- Constance surfaced a data-mapping issue where changing a retailer or banner name in the CRM does not propagate to connected modules such as distributor sales records, store data, the monthly report, and promotional management, causing mapping failures for Kea. 36:17
+- Bijoy explained that changes in the entity resolution section (master entities and aliases) do flow through to reports correctly, but retailer/banner-level changes are not yet being propagated across modules. 43:07
+- Bijoy confirmed a fix is feasible and committed to completing it by end of day Tuesday, providing an update on whether it is ready for production. 43:54
+- Bijoy flagged this as the highest priority item for the week given the upcoming client presentations. 37:54
+
+Upcoming client presentations and weekly priorities
+- Constance has a half-day session with the Nobles on Tuesday September 29 covering utilization of the category review tracker, selling the enhanced trade spend module to their brands, and introductions to other broker partners across the US. 33:41
+- A full-afternoon presentation to Bubbies on Wednesday September 30 will focus on the trade spend roll-up and modification of approved promotions as the two key features. 34:14
+- Constance asked the team to get the trade spend roll-up and approved promotion modification into the live environment this week so she has time to test them before the presentations. 34:54
+- For the Nobles presentation, the simple promotion feature is the key priority, as they need to start entering their promotions into the system. 35:27
+- Constance asked the team to have Kea complete testing on all issues discussed today so features can be pushed to the live environment within a couple of days. 46:00
+
+Ask Caboodle Phase 1 planning and roadmap
+- Tauhidur noted the roadmap sheet with estimates is complete but needs a review pass to check for missed or mis-estimated items; a summary email will be sent to Constance the next day. 47:01
+- Bijoy and Tauhidur began a Phase 1 planning session for Ask Caboodle but could not complete the required R&D because Bijoy was occupied with the IAM service work demonstrated earlier that day. 47:32
+- Tauhidur committed to reviewing the IAM service demo from today and evaluating how it integrates with the existing system and whether all features would work as expected. 48:07
+- Tauhidur offered to build a mock demo of the Ask Caboodle experience using dummy data from staging to simulate the interaction without live AI, targeting the Tuesday and Wednesday presentations. 49:31
+- The team tentatively agreed to a mid-week check-in on Wednesday or Thursday to sync on demo readiness before Constance's travel; Constance said she would reach out if needed. 50:03
+

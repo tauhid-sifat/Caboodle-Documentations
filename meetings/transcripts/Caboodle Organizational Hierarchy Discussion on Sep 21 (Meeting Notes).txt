@@ -1,0 +1,44 @@
+NOTE: This file is Fellow AI meeting notes, not a verbatim transcript.
+
+MEETING NOTES
+Constance Wolfe shared meeting notes with you:
+Caboodle Organizational Hierarchy Discussion
+Sep 21, 5:30 - 6:00 AM
+Action Items (3)
+* Constance Wolfe to schedule follow-up work sessions to work through the organizational hierarchy design in detail before implementation begins.
+32:27
+* bc.nath@asthait.com to refine the Claude artifact to add retailer and region scoping steps for broker and brand organizations, and produce a complete end-to-end visualization of the proposed IAM hierarchy for review.
+32:51
+* View (1) more Action Item
+Topics
+1. Current system limitations driving the redesign
+* The platform currently supports only one broker-role user per broker entity; all others are sub-brokers, which does not reflect real-world structures where multiple people hold broker-level authority in the same firm.
+5:01
+* The multi-broker limitation has already surfaced in production (Bates Street was cited as an example), confirming it is not a theoretical edge case.
+6:36
+* The system also lacks broker-specific and branch-specific role creation and permission assignment, further limiting access control flexibility.
+6:51
+* The relationship between broker and brand entities is described as 'not that much integrated,' meaning broker-brand linkage and access management are handled through ad hoc flows rather than a structured hierarchy.
+5:44
+2. Proposed IAM-based organization model
+* Bijoy proposed adopting an IAM (Identity and Access Management) service pattern, citing Atlassian, Anthropic (Claude), and ChatGPT as examples of companies already using hierarchical role/permission systems of this kind.
+7:14
+* The proposal introduces 'organizations' as a top-level entity, with two subtypes: broker organizations and brand organizations, replacing the current loosely coupled broker/brand model.
+8:28
+* Each organization would have domain verification (similar to Anthropic's workspace domain restriction), ensuring only users with a matching work email domain can join or be invited to an organization, protecting data integrity and partition.
+9:08
+* During signup, the system would auto-detect the domain, match it to an existing organization if one exists, and queue the new user for review by the organization admin rather than granting access automatically.
+17:13
+* If no organization exists for a domain, the signup flow prompts the user to self-identify as a brokerage or brand, and the system provisions the appropriate environment based on that selection.
+18:05
+* Bijoy noted that adding a plan/module selection step during signup would allow organizations to configure their own module access, potentially eliminating the need for super-admin manual setup entirely.
+19:14
+3. Module access, permissions, and super admin control
+4. Broker-brand access linkage and multi-broker support
+5. Regional vs. retailer-based broker scope definition
+Decisions (3)
+* Brands, not brokers, control which modules are enabled in their environment; brokers may request module activation but cannot enable modules directly.
+22:38
+* Brands will control per-broker data visibility, choosing which broker can see each piece of data they create, to address confidentiality concerns when multiple brokers serve the same brand.
+28:41
+* Review (1) more Decision

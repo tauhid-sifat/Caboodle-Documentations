@@ -1,0 +1,924 @@
+[0:00:00] Shahriar Hyder: Could contribute in any sense.
+[0:00:02] Shahriar Hyder: Just wanted to be a silent observer maybe for a while, and then if need be, I could just chime in anytime.
+[0:00:10] Md Mashiul Azam Chowdhury: Okay.
+[0:00:10] Constance Wolfe: Yeah, that sounds great. I'm glad to have you. Thanks for joining.
+[0:00:14] Shahriar Hyder: Thank you.
+[0:00:15] Constance Wolfe: Yeah, yeah, anytime. Okay, let me just see if I've got all the recordings set.
+[0:00:22] Constance Wolfe: So we have— let me just see what's going on. Okay, it looks like that is recording.
+[0:00:34] Shahriar Hyder: Yes.
+[0:00:34] Constance Wolfe: Okay, I think we are in good shape. So, yeah, Vifty, I don't know if you want to start.
+[0:00:43] Constance Wolfe: I know that there's a lot going on on your end.
+[0:00:48] Md Mashiul Azam Chowdhury: Yeah.
+[0:00:48] Constance Wolfe: Bijoy did some work this weekend. So yeah, I didn't know if you wanted to get started or— yeah.
+[0:00:56] Md Mashiul Azam Chowdhury: Well, yeah, actually, uh, Bijoy's work was done in backend, and, uh, during, uh, uh, these 2 days, uh, I've actually completed that, uh, I think.
+[0:01:09] Md Mashiul Azam Chowdhury: I, I don't know, uh, he gave me the store tool, uh, feature document, and another was The store filter, so those two are done and they are deployed in the staging.
+[0:01:25] Md Mashiul Azam Chowdhury: You can check, and also Arnold was working on the market overview and distributor APL filters, making them dynamic.
+[0:01:35] Md Mashiul Azam Chowdhury: So those are done as well, and they are in staging right now. And also.
+[0:01:45] Md Mashiul Azam Chowdhury: Kia is on leave right now, so we weren't able to do a QA on them.
+[0:01:53] Md Mashiul Azam Chowdhury: Fariha will be working on some of them, but maybe she won't be able to do all of them.
+[0:02:02] Md Mashiul Azam Chowdhury: So we are waiting for Kia on this, and after that we can push them to live.
+[0:02:07] Constance Wolfe: Okay.
+[0:02:08] Md Mashiul Azam Chowdhury: And also from Tawhid's side, I think he has done Some sort of a document or a presentation regarding the Ask Caboodle, and he can present that today.
+[0:02:28] Constance Wolfe: Awesome. Okay, so I just wanted to make sure I got this right.
+[0:02:31] Constance Wolfe: So you started off with the store filter.
+[0:02:34] Constance Wolfe: You're talking about the store list and the admin store list. Yeah. Okay.
+[0:02:42] Constance Wolfe: So the filter you're saying is— what did you do on the filter? Can you remind me?
+[0:02:49] Md Mashiul Azam Chowdhury: Made it dynamic.
+[0:02:51] Constance Wolfe: Okay. Dynamic. Okay. Okay.
+[0:02:53] Constance Wolfe: And then there was a merge function that we went through last year, last week.
+[0:02:59] Constance Wolfe: So you're saying, Kay, has she tested anything in the store filter or is that done in the store?
+[0:03:06] Md Mashiul Azam Chowdhury: That is done, but we haven't done QA yet. It's just On the staging right now.
+[0:03:14] Constance Wolfe: Okay, so stored list is in staging, but still needs to be tested.
+[0:03:21] Bijoy Nath: Yep.
+[0:03:21] Md Mashiul Azam Chowdhury: Okay.
+[0:03:22] Constance Wolfe: And then, and so you said Kaya is gone, Faria is going to be working on that?
+[0:03:34] Md Mashiul Azam Chowdhury: Sorry?
+[0:03:35] Constance Wolfe: You mentioned that Kaya was on leave.
+[0:03:37] Md Mashiul Azam Chowdhury: Yeah, yeah.
+[0:03:38] Constance Wolfe: Is Fariha working on testing that?
+[0:03:41] Md Mashiul Azam Chowdhury: Uh, Fariha mainly, uh, tests the TSS part, so, uh, we didn't actually bother her with this one.
+[0:03:51] Md Mashiul Azam Chowdhury: Okay, that's— and also this actually got finished today, so there wasn't time for her to test.
+[0:04:01] Constance Wolfe: Oh, no problem. So what's Fariha testing?
+[0:04:04] Md Mashiul Azam Chowdhury: Farina mainly tests the app side, the market overview, distributor, APL, and so on.
+[0:04:15] Constance Wolfe: Okay. Okay. So, and then I'm just trying to write notes here. So, okay.
+[0:04:22] Constance Wolfe: So store, and then how long is Kaya out for?
+[0:04:29] Md Mashiul Azam Chowdhury: She should be back tomorrow.
+[0:04:33] Constance Wolfe: Okay, great. Okay.
+[0:04:39] Md Mashiul Azam Chowdhury: Okay.
+[0:04:40] Constance Wolfe: And so I think Bijoy was working on the trade spend rollup offering a monthly opportunity, he said, to filter.
+[0:04:51] Constance Wolfe: I think he mentioned he did that. He completed that. I think that probably still needs front-end work.
+[0:05:00] Md Mashiul Azam Chowdhury: For the store, or which part?
+[0:05:03] Constance Wolfe: So this is for TradeSpin rollup report.
+[0:05:06] Md Mashiul Azam Chowdhury: Oh, the versioning.
+[0:05:08] Constance Wolfe: No, that's, that's something different. This is for the TradeSpin rollup report.
+[0:05:14] Constance Wolfe: We were at— we requested that we could filter by month.
+[0:05:19] Bijoy Nath: May I chime in here?
+[0:05:20] Constance Wolfe: Please.
+[0:05:21] Md Mashiul Azam Chowdhury: Yeah.
+[0:05:23] Bijoy Nath: Right. So about the trust fund rollup months, trust fund rollup report months filter, it's done.
+[0:05:29] Bijoy Nath: The whole backend and frontend is done.
+[0:05:32] Bijoy Nath: So if we have to review the frontend work and Kay have to test the whole functionalities, filtering and things.
+[0:05:41] Constance Wolfe: OK, great.
+[0:05:43] Bijoy Nath: So that's about monthly filter.
+[0:05:46] Constance Wolfe: Frontend and backend is done, but we need to test it. Is that what you're saying?
+[0:05:50] Bijoy Nath: Right. Exactly.
+[0:05:51] Md Mashiul Azam Chowdhury: Okay.
+[0:05:52] Constance Wolfe: I don't see it in staging. Is that just because maybe it hasn't been pushed there yet?
+[0:05:57] Bijoy Nath: No, it's not been pushed there, but we had in— we have in our agenda to just show you how it works.
+[0:06:04] Constance Wolfe: Okay.
+[0:06:04] Bijoy Nath: Because there's some calculation thing involved. So. Okay.
+[0:06:08] Constance Wolfe: And then I think, were you able to add to combine the TPR spend and the ad fee on that as well?
+[0:06:17] Bijoy Nath: Total spend column you're talking about, right?
+[0:06:19] Constance Wolfe: Correct. Yeah.
+[0:06:20] Bijoy Nath: Yeah, yeah, that's, that's done as well.
+[0:06:22] Constance Wolfe: Okay, great.
+[0:06:23] Md. Tauhidur Rahman: Okay.
+[0:06:24] Constance Wolfe: And then, um, and I think you were working on, as Ifti was saying, provision— redoing the, uh, allowing modifications to approved promotions or that whole process.
+[0:06:36] Bijoy Nath: Right, versioning. That's— yeah, right. We have a kind of demo type thing ready to show you.
+[0:06:44] Constance Wolfe: OK, great. OK. OK, awesome. OK, so—
+[0:06:51] Bijoy Nath: Oh, there's another thing we did, though.
+[0:06:54] Bijoy Nath: In the threads pane, in the promotional management notes section, you mentioned about tab functionalities in the notes, right?
+[0:07:04] Bijoy Nath: So that's done as well. So I can show it to you today.
+[0:07:09] Constance Wolfe: Yeah, can you say that again? What is it?
+[0:07:12] Bijoy Nath: In the promotional management of the broker dashboard, so you wanted to have tabs.
+[0:07:19] Shahriar Hyder: Oh yes.
+[0:07:19] Bijoy Nath: You know, that tab system where user can enter.
+[0:07:23] Constance Wolfe: Yeah, that's awesome.
+[0:07:25] Bijoy Nath: Own columns with different types and they can filter, sort, and these sorts of things.
+[0:07:30] Bijoy Nath: So that's done as well.
+[0:07:31] Constance Wolfe: Awesome.
+[0:07:33] Constance Wolfe: I was playing around in the promotional management on Friday and I was trying— I saw where we can add the different statuses in the event.
+[0:07:42] Constance Wolfe: But when I would change the status, all the data disappeared, but I figured maybe it was still in progress.
+[0:07:48] Bijoy Nath: Oh, yeah. We know why data disappeared. No worries about that. We'll show it to you.
+[0:07:53] Md Mashiul Azam Chowdhury: We can show you. Yeah.
+[0:07:54] Constance Wolfe: Okay, awesome. I figured, I figured you guys were in the middle of that.
+[0:07:59] Constance Wolfe: And then also in the trade spend, back to trade spend sandbox, I think you were gonna work on allowing the user to export that data.
+[0:08:11] Bijoy Nath: Right, in the sandbox promotional details section for separate details.
+[0:08:16] Bijoy Nath: Yes, we are allowing the user to export data of 3 different sections.
+[0:08:22] Bijoy Nath: So product summary, event summary, and the details.
+[0:08:25] Bijoy Nath: 2 of them are small, so you can do them as PDF, but the larger ones, you know, the event details one, so you have to do it in Excel because it's too long.
+[0:08:34] Constance Wolfe: OK.
+[0:08:35] Md. Tauhidur Rahman: Okay, awesome.
+[0:08:37] Constance Wolfe: Alright. So did you guys want to show that to me?
+[0:08:39] Constance Wolfe: Or— and I know, Talheed, you said he had some stuff, and we have some Askaboodle stuff.
+[0:08:43] Constance Wolfe: So we have a lot of exciting things going on.
+[0:08:44] Constance Wolfe: We also have the— I think the main goal here is to get the roadmap going.
+[0:08:50] Constance Wolfe: I think we're super, super close on the roadmap. Talheed, I sent you— so he and I met last week.
+[0:09:01] Constance Wolfe: And after that call, I sat with every single ticket.
+[0:09:07] Constance Wolfe: And then we had another— we have like a bug roadmap and then we have like a feature roadmap.
+[0:09:17] Constance Wolfe: The bug roadmap has grown since—
+[0:09:20] Md Mashiul Azam Chowdhury: Awesome.
+[0:09:20] Constance Wolfe: The last time just because we're doing so much testing.
+[0:09:23] Constance Wolfe: We did a system audit and so they're doing a great job of coming up with a bunch of stuff.
+[0:09:28] Constance Wolfe: So I isolated those on this document. So I'd be super keen to see where we are on that.
+[0:09:38] Constance Wolfe: And then also, I sent you a simplified promotion grid based on the conversation that you and I had, Ifti, about making promotional entries a little more simple.
+[0:09:53] Md Mashiul Azam Chowdhury: Right, right. The simple promotion.
+[0:09:55] Constance Wolfe: Exactly.
+[0:09:56] Constance Wolfe: So I don't know if you guys had a chance to take a look at that, but I sat with that for a couple hours last week as well and put that together.
+[0:10:04] Constance Wolfe: Right.
+[0:10:05] Bijoy Nath: So, um, Constance, before joining— I'm sorry, you were saying something?
+[0:10:09] Constance Wolfe: Nope, I'm done. We just— we have a lot to cover, that's all.
+[0:10:13] Bijoy Nath: Yeah, right, right. Yeah, we thought about that as well before joining the meeting.
+[0:10:16] Bijoy Nath: So we, we kind of decided that like, uh, we'll take 5— 15 to 10 minutes to give you our updates, what we are doing right now, to show you a couple of things and get feedback from you.
+[0:10:28] Bijoy Nath: So that, that would take Probably 15 minutes, and then we can talk about the Ask Caboodle and other roadmap things.
+[0:10:34] Constance Wolfe: OK, great.
+[0:10:35] Bijoy Nath: So shall I?
+[0:10:38] Constance Wolfe: Yeah. I think—
+[0:10:41] Bijoy Nath: yes, right.
+[0:10:42] Md Mashiul Azam Chowdhury: You need to request, Vijay.
+[0:10:44] Bijoy Nath: Yeah. Can you see my screen, Constance?
+[0:10:49] Constance Wolfe: Yes.
+[0:10:50] Md Mashiul Azam Chowdhury: OK.
+[0:10:51] Bijoy Nath: So this is about the versioning, where you can create multiple versions of a promotion in Sandbox.
+[0:10:58] Bijoy Nath: And you can push one version into the branded promotion.
+[0:11:05] Bijoy Nath: So as you can see here, it's the list page of our sandbox data.
+[0:11:13] Bijoy Nath: So from here, you can see we have a couple of updates.
+[0:11:15] Bijoy Nath: For example, the number of versions we have in each promotion.
+[0:11:18] Constance Wolfe: Oh, cool.
+[0:11:19] Bijoy Nath: Awesome. OK. And the name of the version that's been pushed into the brand approved.
+[0:11:26] Bijoy Nath: So if I go into the details of the promotion, right?
+[0:11:30] Bijoy Nath: So in here you have— we have a new button kind of thing which is indicating the versions.
+[0:11:36] Bijoy Nath: So if you click there, you will have this sort of UI where it tells you a couple of things.
+[0:11:42] Bijoy Nath: So first one is the list of the versions, right? So how many versions do you have? What's their name?
+[0:11:48] Bijoy Nath: When's they created? And how many events they have? Something. Like that.
+[0:11:52] Bijoy Nath: Also, it's saying which version you are currently viewing.
+[0:11:55] Bijoy Nath: For example, I'm currently viewing this version, EBSCO Denver 2026 DC.
+[0:12:00] Bijoy Nath: So it's saying it's on screen, and it's also in the brand approved, and also in the reporting.
+[0:12:05] Bijoy Nath: So what does this reporting? I'll tell you details about that.
+[0:12:09] Bijoy Nath: But for that, let me just walk you through the whole process.
+[0:12:12] Bijoy Nath: So if you want to create another version, then you have to click on the add version button, and then.
+[0:12:17] Bijoy Nath: It will give you an option to copy from, right? So currently for this promo, we have 2 versions.
+[0:12:23] Bijoy Nath: So version 1, version 2. So you have to choose from which version you want to create the new version.
+[0:12:29] Bijoy Nath: So after selecting the parent version, then you have to give it a new name.
+[0:12:32] Bijoy Nath: For example, I'm just giving random name.
+[0:12:37] Constance Wolfe: All right.
+[0:12:40] Bijoy Nath: OK. And then you have to click on the button. That create new version.
+[0:12:45] Bijoy Nath: So after that we have all 3 separate versions and currently you are viewing, you know, see on screen you are viewing the 3rd version we have created.
+[0:12:53] Constance Wolfe: Oh, cool.
+[0:12:54] Bijoy Nath: It's called randomly new version, this one.
+[0:12:56] Constance Wolfe: Awesome.
+[0:12:56] Bijoy Nath: So now if you want to push any one of them, then you have to just click on the push to app group.
+[0:13:02] Bijoy Nath: For example, right now for this promotion family, this promotional planning is being pushed into the brand app group.
+[0:13:09] Bijoy Nath: So if I want to, let's say that's our actual, that's our version where we actualized our event lift, right?
+[0:13:16] Bijoy Nath: And then you just have to click on the push to approve. Push to approve. That's it.
+[0:13:24] Bijoy Nath: So now on the brand-approved report, this version of the promotion has been approved.
+[0:13:29] Constance Wolfe: Oh, that's cool. So essentially it replaces what's already there. Is that what you're saying?
+[0:13:33] Constance Wolfe: That's great. That's perfect. Okay. I love it.
+[0:13:37] Bijoy Nath: All right, so you can delete the version.
+[0:13:38] Bijoy Nath: And by the way, the version you have pushed into the brand approve, you cannot delete it because there's some trace spend rollup calculation, monthly report data included in the whole brand approve section.
+[0:13:50] Bijoy Nath: So you cannot delete the version you pushed into the brand approve.
+[0:13:54] Bijoy Nath: But if you want to delete the version, then you have to select another version to push, and then you can select— you should be able to select the other version.
+[0:14:02] Constance Wolfe: You're saying if I wanted to delete random name for new version—
+[0:14:08] Bijoy Nath: Oh, you can.
+[0:14:08] Constance Wolfe: If I, for whatever reason, wanted to delete that, I would go to— I'd have to push something else to approved, essentially?
+[0:14:17] Bijoy Nath: Right.
+[0:14:18] Constance Wolfe: Okay.
+[0:14:18] Bijoy Nath: Right.
+[0:14:19] Constance Wolfe: So if you want to get something out of approved completely, like let's say we wanted just to say, for whatever reason, Denver, Absco Denver needs to come out of approved.
+[0:14:28] Constance Wolfe: We no longer— want that in there. Is there any way to get that out of there completely?
+[0:14:34] Bijoy Nath: So there's 2 options we can think of.
+[0:14:36] Bijoy Nath: One is doing the same thing in the approved promotion, but if we keep our system consistent, that we shouldn't allow the user to delete anything from here.
+[0:14:45] Bijoy Nath: Instead, we should allow user to delete that version or that promo from here.
+[0:14:50] Bijoy Nath: So anywhere in here, maybe we can have some button or something which we'll call which may be called, you know, remove this from brand approved.
+[0:14:59] Bijoy Nath: So then that promotion will be removed from the brand approved.
+[0:15:03] Constance Wolfe: Like remove all from brand approved or something like that.
+[0:15:06] Bijoy Nath: Yeah.
+[0:15:07] Constance Wolfe: OK. Yeah, I think we will need some way to remove.
+[0:15:12] Md Mashiul Azam Chowdhury: Well, Abhijit, wouldn't it be better if we— I mean, let's say someone is viewing in the promotional Sorry, pro approved promo section.
+[0:15:24] Md Mashiul Azam Chowdhury: So they would be see. Can you go to the approved promo section?
+[0:15:32] Constance Wolfe: Yeah.
+[0:15:35] Md Mashiul Azam Chowdhury: So and can you find the random one? The one you just created.
+[0:15:44] Bijoy Nath: Score ten by ten twenty sixty same. Okay, this one, this one.
+[0:15:50] Md Mashiul Azam Chowdhury: Okay, but let's say, uh, if you want to delete this one, then you would have to go to the Tristan, right?
+[0:16:01] Bijoy Nath: Right, you have to come in here.
+[0:16:02] Md Mashiul Azam Chowdhury: Tristan Sandbox. Yeah, right. And what if, uh, the name is— wait, uh, why didn't the—
+[0:16:12] Constance Wolfe: I don't think you— can I just chime in for a second?
+[0:16:14] Constance Wolfe: I don't think we want to delete I don't think we want to delete from approved, but we'd like to be able to remove it.
+[0:16:20] Md Mashiul Azam Chowdhury: Yeah, yeah, that's what I'm saying, actually. Yeah.
+[0:16:24] Constance Wolfe: Okay, great.
+[0:16:25] Shahriar Hyder: Okay.
+[0:16:25] Constance Wolfe: Delete just feels like you're getting rid of the entire record.
+[0:16:28] Constance Wolfe: So sometimes you are gonna want to remove promotion from approved.
+[0:16:35] Bijoy Nath: And just for your clarification, I know where you're going.
+[0:16:38] Bijoy Nath: So just for all of you watching, so The name of this one, right? This name, right?
+[0:16:45] Bijoy Nath: It's actually promotional family name. I'm, I'm saying it like this. So that's the family name.
+[0:16:50] Md Mashiul Azam Chowdhury: That's the root tag.
+[0:16:51] Bijoy Nath: And these are the version name, right? Right.
+[0:16:54] Bijoy Nath: So when you push into brand approved, it will get the family name. This one, Apps Code Denver.
+[0:16:59] Bijoy Nath: That's what you're saying here, Apps Code Denver 2010.
+[0:17:01] Md Mashiul Azam Chowdhury: Right.
+[0:17:02] Bijoy Nath: But if you want to know of which member of this family is being pushed, then you have to come in here.
+[0:17:08] Bijoy Nath: Then you have to look into the version, and you can see it from here.
+[0:17:10] Bijoy Nath: Like, for example, this one, live and brand approved.
+[0:17:15] Md Mashiul Azam Chowdhury: Yeah, I mean, that's what I'm saying. Let's say I want to remove that one from the approved promos.
+[0:17:25] Md Mashiul Azam Chowdhury: So it's like, in order to delete it, I have to go somewhere else. So that's a bit— I don't know.
+[0:17:32] Md Mashiul Azam Chowdhury: I mean, Maybe I'll try to do something like go to the version of this app to promote something and then remove that.
+[0:17:44] Md Mashiul Azam Chowdhury: I don't know. The user experience, I'll look into it.
+[0:17:51] Constance Wolfe: So I'm kind of following what you're saying.
+[0:17:53] Constance Wolfe: Like, I think intuitively, if you wanted to remove a promotion from approved, you'd probably go to approved.
+[0:18:01] Constance Wolfe: In my mind, go to the approved list first, and then you would try to, you would try to click it there and remove it.
+[0:18:07] Constance Wolfe: In my mind, that's right.
+[0:18:10] Md Mashiul Azam Chowdhury: Exactly.
+[0:18:10] Constance Wolfe: I would go to—
+[0:18:11] Md Mashiul Azam Chowdhury: yeah. In order to remove from approved, you're going to sandbox. So that's not—
+[0:18:19] Constance Wolfe: It's not super intuitive.
+[0:18:20] Constance Wolfe: So if I click, let's say you click there, like, go ahead and do that, and now go back to here, right?
+[0:18:24] Constance Wolfe: So now let's say I, let's say I say Remove from approved here. Now go back to sandbox.
+[0:18:36] Md. Tauhidur Rahman: Yeah, right.
+[0:18:38] Constance Wolfe: And that— yeah. And then here you would not have anyone that said live and brand approved.
+[0:18:44] Bijoy Nath: Right, right, exactly.
+[0:18:46] Constance Wolfe: They would all just not be there anymore. And then you could push a different one if you wanted to.
+[0:18:50] Constance Wolfe: It makes sense to come back here later, but I think intuitively for me as a user, I would If I'm thinking, okay, I need to get that out of approved, I would go to approved and hit remove, and then it would just show up blank here.
+[0:19:04] Bijoy Nath: Yeah.
+[0:19:05] Constance Wolfe: So if that's possible, I think that's, that is probably what the user— my guess is that that's, that's where my mind goes, at least.
+[0:19:14] Md. Tauhidur Rahman: Right.
+[0:19:14] Bijoy Nath: Yeah, right. That's what I mentioned. Like, there's 2 ways of doing this.
+[0:19:17] Bijoy Nath: So one's from— okay, from devs. Okay, we'll do it from here then.
+[0:19:22] Constance Wolfe: So from approved, I would just maybe put a little box on it that could say— and I wouldn't say delete, I'd say remove.
+[0:19:29] Constance Wolfe: I think delete makes me feel like the whole record's going away. Yeah.
+[0:19:36] Bijoy Nath: Okay.
+[0:19:37] Constance Wolfe: Just remove from approved or something like that.
+[0:19:39] Constance Wolfe: If you remove from approved, see sandbox or something like that.
+[0:19:42] Md Mashiul Azam Chowdhury: Yeah, I'm thinking the same. Yeah. Yeah.
+[0:19:45] Shahriar Hyder: Okay.
+[0:19:46] Constance Wolfe: Awesome. This looks great. This is a really elegant solution, you guys.
+[0:19:50] Constance Wolfe: This looks really Super professional.
+[0:19:54] Md Mashiul Azam Chowdhury: Yeah, actually on this part, mostly Bijoy worked on this. This is really nice.
+[0:20:00] Constance Wolfe: I like— I love that you can see who created it. Like, that's awesome. That's a deal for us.
+[0:20:08] Constance Wolfe: That's really good that we can see who created it. So well done. This looks really good.
+[0:20:15] Constance Wolfe: What does set as reporting mean?
+[0:20:17] Bijoy Nath: Yeah, that's— this is where I'm going right now. So we have a couple of reports in us, right?
+[0:20:23] Bijoy Nath: We have in our system on the brand side.
+[0:20:25] Bijoy Nath: So one of them is monthly report, and in the monthly report we have the data source, 2 data sources.
+[0:20:33] Bijoy Nath: One is brand approved and another one is samples.
+[0:20:36] Md Mashiul Azam Chowdhury: Yeah.
+[0:20:36] Bijoy Nath: So in, in a promotional family, if you have 3 versions, then that report needs, needs to know like which version to pull while reporting the data.
+[0:20:47] Bijoy Nath: So that's what this reporting is indicating.
+[0:20:50] Bijoy Nath: So if you want this version to be reporting, then it's already there.
+[0:20:53] Bijoy Nath: But if you want to set this version as reporting, then this version will report in the monthly report data.
+[0:21:00] Constance Wolfe: Okay, so let me get some clarity on that.
+[0:21:02] Constance Wolfe: Is that now required from the user if they want it to be in this report?
+[0:21:08] Constance Wolfe: Do they have to push it with that button, or is it just telling you that that's what it is?
+[0:21:12] Bijoy Nath: No, you have to push like— okay, so there's— it's exactly like brand approved.
+[0:21:17] Bijoy Nath: So between these 3 versions, you want one of them in the brand approved, exactly like that.
+[0:21:21] Bijoy Nath: You want one of them into the monthly report.
+[0:21:24] Bijoy Nath: So you have to choose which versions you want to— which version you want to see in the monthly report.
+[0:21:29] Bijoy Nath: That's it. Okay.
+[0:21:31] Constance Wolfe: And it's just the monthly report, or is it the roll-up as well?
+[0:21:41] Bijoy Nath: Oh, the rollup report is being built from the brand approved.
+[0:21:43] Bijoy Nath: So rollup report is being done by the brand approved section. Okay.
+[0:21:48] Constance Wolfe: So set as reporting only refers to the monthly report.
+[0:21:53] Bijoy Nath: Monthly report, right? It says, by the way, if you hold— Oh, good.
+[0:21:57] Constance Wolfe: Okay. Monthly report. Okay, perfect. Okay, awesome.
+[0:22:02] Bijoy Nath: So that's about the versioning.
+[0:22:04] Constance Wolfe: That looks amazing. Really, really nice work.
+[0:22:09] Bijoy Nath: Would you give me a moment?
+[0:22:10] Bijoy Nath: Because I need to— it is— everything is on my local computer, by the way, so I have to change a couple of things to show you other works.
+[0:22:18] Bijoy Nath: Just give me a moment.
+[0:22:27] Md Mashiul Azam Chowdhury: Which work are you going to show? Because, uh, The rest of them should be the staging.
+[0:22:35] Bijoy Nath: Oh, I'm I'm talking about promotion details branch. Oh, okay.
+[0:22:45] Md Mashiul Azam Chowdhury: So oh, okay.
+[0:22:47] Bijoy Nath: Yeah, right. You got it, right?
+[0:22:51] Md Mashiul Azam Chowdhury: Yeah. Promotion details branch.
+[0:24:27] Bijoy Nath: Constance, I'm kind of right now building the project.
+[0:24:30] Bijoy Nath: In the meantime, if we have to say something, we can continue.
+[0:24:34] Bijoy Nath: It will take half, maybe 2 or 3 minutes.
+[0:24:37] Constance Wolfe: Okay.
+[0:24:37] Md Mashiul Azam Chowdhury: So in the meantime, Constance, let me give you an update on the simple promotion.
+[0:24:42] Constance Wolfe: Okay, great.
+[0:24:44] Md Mashiul Azam Chowdhury: Yeah, I've been looking into sort of that Excel-like feature, and yeah, I got the gist of it and currently working on that.
+[0:25:01] Md Mashiul Azam Chowdhury: So, so DJ actually showed me the Excel, so it's going to Prepopulate the products and the other values.
+[0:25:15] Md Mashiul Azam Chowdhury: Only the events name without the metrics, only the events will be entered by the user.
+[0:25:22] Md Mashiul Azam Chowdhury: So we should be able to, like when you're writing something, you can just drag it and it will autofill those the event fields.
+[0:25:37] Md Mashiul Azam Chowdhury: So let me try to make it, uh, on this week, but I don't think we'll be able to finish that, at least not in a proper way.
+[0:25:50] Md Mashiul Azam Chowdhury: And even after we finish it, uh, we would need to do, uh, a lot of testing on that.
+[0:26:00] Shahriar Hyder: So—
+[0:26:01] Constance Wolfe: Did you have any questions on— I tried to be as detailed as possible on that sheet so you would understand.
+[0:26:05] Md Mashiul Azam Chowdhury: I don't I think so. I think I got the— yeah, uh, yeah, I think I got all of them.
+[0:26:13] Md Mashiul Azam Chowdhury: Uh, but during the development, if I, uh, uh, face any issues or anything, I'll let you know.
+[0:26:20] Md. Tauhidur Rahman: Okay.
+[0:26:21] Constance Wolfe: I, I feel like that, that would be a pretty easy way to get that in there.
+[0:26:26] Constance Wolfe: There's a couple little calculations, but nothing like revenue and, you know, projected promo cases or anything like that.
+[0:26:33] Constance Wolfe: Mostly just like You know, if we know the case cost, we can calculate, you know, a couple little things for them.
+[0:26:40] Constance Wolfe: I think that like the total case cost based on a few things.
+[0:26:43] Constance Wolfe: So I tried to keep it as simple as possible. Yeah.
+[0:26:49] Constance Wolfe: And then would we take that and they would upload it into the system somewhere? The user would?
+[0:26:54] Md Mashiul Azam Chowdhury: Well, yeah, I'm actually not doing it so that the user needs to upload.
+[0:27:00] Md Mashiul Azam Chowdhury: I'm actually Going to do that in the system.
+[0:27:04] Constance Wolfe: So they would be entering that data in the system. Okay.
+[0:27:08] Md Mashiul Azam Chowdhury: Yeah, yeah, exactly.
+[0:27:09] Constance Wolfe: Yes.
+[0:27:10] Constance Wolfe: Would it be kind of similar to step 5, or I think it's step 4, where they enter in the data in a grid?
+[0:27:18] Md Mashiul Azam Chowdhury: Sort of, but it will— I mean, I'll try to make it look as much as possible like Excel.
+[0:27:25] Constance Wolfe: Okay.
+[0:27:26] Md Mashiul Azam Chowdhury: Or Google Sheets. Yeah.
+[0:27:27] Constance Wolfe: Yeah, I think that'll be good for the brokers who— and then that way we can upsell the, you know, the actual trade spend and get revenue off of that because that's the value of it, right?
+[0:27:41] Constance Wolfe: So, okay, that sounds great. That's a great update. Thank you.
+[0:27:51] Md Mashiul Azam Chowdhury: By the way, Are you sure that you won't need the metrics calculation there?
+[0:27:59] Md Mashiul Azam Chowdhury: I mean, at least we know we don't need that right now, but what if we need it in the future?
+[0:28:07] Md Mashiul Azam Chowdhury: Do you have any idea on that?
+[0:28:09] Constance Wolfe: Which calculation?
+[0:28:11] Md Mashiul Azam Chowdhury: The metrics, like the revenues and other.
+[0:28:17] Constance Wolfe: Well, that's what this is for.
+[0:28:19] Md Mashiul Azam Chowdhury: Yeah, I mean, yeah, I know, but will it need the calculation for the— in the future?
+[0:28:30] Constance Wolfe: You're saying the simple entry, even though it's not calculating now, wouldn't we have to enter in additional information for it to calculate?
+[0:28:40] Md Mashiul Azam Chowdhury: Yeah, then in the future we would have to add the additional information, but I see what you're saying.
+[0:28:46] Constance Wolfe: Like, it's already in there.
+[0:28:48] Constance Wolfe: Do we want to make it to where if the— let's say the user does pay for an upgrade and they do want all of the calculations, could you take what's already in the system and add, you know, store count and velocities and all of that kind of stuff?
+[0:29:05] Constance Wolfe: Is that what you're saying? Yeah, that's a good point. I mean, that's a really good point.
+[0:29:11] Constance Wolfe: It's like, well, it's already in there. I don't want to have to read it.
+[0:29:15] Md Mashiul Azam Chowdhury: I'll try to make it future-proof so that we can extend on it.
+[0:29:20] Constance Wolfe: But yeah, I feel like that's a great idea.
+[0:29:23] Constance Wolfe: Yeah, because that makes a ton of sense if it's already in there.
+[0:29:27] Constance Wolfe: And then that makes my job to sell it a lot easier because I can be like, well, you know, all your promotions are already in there.
+[0:29:34] Constance Wolfe: We just need to add, you know, a few, some lifts and some, you know, projected velocities and you're, you're good to go.
+[0:29:41] Constance Wolfe: The other thing we need to figure out And I think this is— it's on the roadmap, and it's a bigger conversation.
+[0:29:48] Constance Wolfe: Just— I'm just putting it back in your ear. I don't want to have the big conversation now.
+[0:29:51] Constance Wolfe: But what is the— what is the best way to put in actuals, right?
+[0:29:56] Constance Wolfe: Like what— like right now what we're doing is we're going back into the sandbox and we're changing the event lift, you know, and stuff like that.
+[0:30:04] Constance Wolfe: But is there— Is there a different way in the future that we want to Actualized?
+[0:30:10] Constance Wolfe: Can we, can we import the data and have it actualized? That kind of thing.
+[0:30:13] Constance Wolfe: So it's a bigger conversation for later, but, um, right, another piece to it.
+[0:30:22] Md Mashiul Azam Chowdhury: Well, uh, yeah, we need to brainstorm on that as well.
+[0:30:46] Bijoy Nath: Hello again.
+[0:30:47] Constance Wolfe: Hello.
+[0:30:48] Md Mashiul Azam Chowdhury: Hello, sir. Yeah, are you done?
+[0:30:51] Bijoy Nath: Yes, I'm sort of done here. No worries. So let me show you the smallest one first.
+[0:30:57] Bijoy Nath: So smallest one I'm talking about. Exporting, you know.
+[0:31:05] Bijoy Nath: So in the product summary, in the event summary, we have added this export button.
+[0:31:11] Bijoy Nath: We have to work on export button, by the way, a bit because this button we have to implement export button in a way so that it looks like the way we have these buttons.
+[0:31:22] Constance Wolfe: Oh, sure.
+[0:31:23] Bijoy Nath: Okay. Here.
+[0:31:24] Shahriar Hyder: Yeah.
+[0:31:25] Bijoy Nath: So we have 2 options.
+[0:31:26] Constance Wolfe: Oh my gosh, that's awesome.
+[0:31:29] Bijoy Nath: So if you download it, yeah, PDF. So, so PDF will be like this.
+[0:31:35] Constance Wolfe: I love it.
+[0:31:37] Bijoy Nath: We have right this way, and same for this one as well, this one as well, uh, for the event summary as well.
+[0:31:45] Bijoy Nath: So you can download it either Excel or in PDF.
+[0:31:48] Constance Wolfe: That's amazing.
+[0:31:50] Bijoy Nath: Yeah, so this is how it does look really good.
+[0:31:54] Constance Wolfe: Yeah.
+[0:31:56] Bijoy Nath: And for the event details section, you have the export as well.
+[0:32:00] Bijoy Nath: And as I've already mentioned, the event details section is too large to properly fit in a PDF format.
+[0:32:08] Bijoy Nath: So for these sections export, we just kept it for this in XLS format, you know.
+[0:32:15] Md. Tauhidur Rahman: Yeah.
+[0:32:16] Shahriar Hyder: CSV.
+[0:32:17] Bijoy Nath: You can highly export it.
+[0:32:19] Constance Wolfe: Yeah, I think that's fine. That's totally fair.
+[0:32:22] Md Mashiul Azam Chowdhury: So that's one. Yeah, I actually had a question, Constance.
+[0:32:26] Constance Wolfe: Okay.
+[0:32:27] Md Mashiul Azam Chowdhury: So do you prefer Excel format or CSV format?
+[0:32:32] Constance Wolfe: I think it's— well, I mean, the difference between Excel and CSV for the product summary is just the file name, right?
+[0:32:46] Constance Wolfe: Because there's— this is flat already, isn't it? Well, oh, no.
+[0:32:51] Md Mashiul Azam Chowdhury: No, actually, CSV doesn't.
+[0:32:54] Constance Wolfe: Yeah, no, no, it's not.
+[0:32:55] Bijoy Nath: It has some—
+[0:32:56] Md Mashiul Azam Chowdhury: CSV doesn't.
+[0:32:57] Constance Wolfe: I mean, I think that for this purpose, Excel would be preferred by the user.
+[0:33:02] Constance Wolfe: I don't think the user is going to want to go in and format it. So I would suggest Excel.
+[0:33:07] Constance Wolfe: Understandably, though—
+[0:33:08] Shahriar Hyder: There's a formatting— sorry. Yeah.
+[0:33:11] Md Mashiul Azam Chowdhury: Right.
+[0:33:11] Constance Wolfe: What's that?
+[0:33:13] Md Mashiul Azam Chowdhury: Sorry.
+[0:33:13] Shahriar Hyder: Excel has the added advantage of styling and formatting.
+[0:33:17] Constance Wolfe: Yeah, I think the user is not gonna wanna have to format. So I think the Excel is preferred here.
+[0:33:24] Constance Wolfe: Understandably, below where it's more complex, it needs to be CSV.
+[0:33:28] Constance Wolfe: But for these 2 right here, Excel would be preferred. Or PDF. The PDF is an option.
+[0:33:36] Constance Wolfe: It was— is excellent.
+[0:33:39] Bijoy Nath: Yeah, we have PDF for the smaller sections, you know.
+[0:33:43] Bijoy Nath: Like product summary and event summary, which I wrote.
+[0:33:45] Constance Wolfe: Yeah, that's perfect.
+[0:33:47] Bijoy Nath: Yeah, I mean, for the biggest one, I would say keep it in an XLS format.
+[0:33:54] Constance Wolfe: Can you show me that Excel or the PDF again?
+[0:33:57] Constance Wolfe: I'm just gonna take a picture because I've got a call with those guys today.
+[0:34:01] Bijoy Nath: I can provide you the PDF if you want.
+[0:34:03] Constance Wolfe: Yeah, sure. Yeah, that'd be great.
+[0:34:05] Bijoy Nath: This is the whole PDF.
+[0:34:06] Constance Wolfe: So I'm gonna just take a pic really quick.
+[0:34:10] Md. Tauhidur Rahman: Got it.
+[0:34:11] Bijoy Nath: Okay. So that's—
+[0:34:13] Constance Wolfe: That's excellent. Thank you.
+[0:34:15] Constance Wolfe: That's been a, that's been a request of Bubby's since the beginning of time.
+[0:34:19] Constance Wolfe: So I'm glad to be able to. And I told you that I'm going there in a couple of weeks.
+[0:34:23] Constance Wolfe: So I wanted to be able to deliver a couple of things because they, they're our best customer.
+[0:34:30] Md Mashiul Azam Chowdhury: Okay.
+[0:34:31] Bijoy Nath: So the second one is this tab section. That you can see, Constance.
+[0:34:38] Bijoy Nath: So what I did is, so I kept the brand's notes fixed, right?
+[0:34:46] Constance Wolfe: Yeah, that's great.
+[0:34:47] Bijoy Nath: Brokers shouldn't be able to update them.
+[0:34:51] Constance Wolfe: Yeah.
+[0:34:52] Bijoy Nath: So right after that, we have the Brokers tab. So where you can create like multiple tabs into one.
+[0:35:00] Bijoy Nath: So you have to click in it and there will be new tab.
+[0:35:03] Bijoy Nath: If you click another one, then there will be new tab too.
+[0:35:06] Bijoy Nath: So the thing is, for each tab, you have mentioned that to keep the columns from January to December fixed, and then they should be able to add new columns on top of that.
+[0:35:18] Bijoy Nath: Excellent. For example, probably, I don't know, can you give me a column name?
+[0:35:23] Constance Wolfe: Yeah, retailer.
+[0:35:25] Bijoy Nath: Retailer. And it should be a text, right?
+[0:35:28] Constance Wolfe: A text, correct. Well, okay, so are you saying what is the text? The cells below it are text?
+[0:35:36] Md Mashiul Azam Chowdhury: Not just the column type.
+[0:35:39] Shahriar Hyder: Yeah.
+[0:35:39] Constance Wolfe: Okay. Yeah. Text. Yeah.
+[0:35:41] Bijoy Nath: All right. And then you have to click on the add column.
+[0:35:45] Bijoy Nath: It will be added at the last segment of the tab. But the thing is, you can move it. Yes.
+[0:35:51] Constance Wolfe: Okay.
+[0:35:52] Bijoy Nath: There you go.
+[0:35:52] Constance Wolfe: That's beautiful. Okay. Gorgeous.
+[0:35:55] Bijoy Nath: Gorgeous. And you can move it to the first column on your tab. And of course you can add row.
+[0:36:02] Bijoy Nath: If you click on the add row, then a row will be added, and you can have your return.
+[0:36:06] Bijoy Nath: And for example, let's go, and then you can add some sort of note like 15%.
+[0:36:13] Bijoy Nath: I'm just putting it randomly.
+[0:36:16] Constance Wolfe: Those would be like due dates. Like they would say, okay, the April promotion is due.
+[0:36:22] Constance Wolfe: So I would put maybe due date, you know, put December 31st or something in there. Yeah.
+[0:36:28] Constance Wolfe: So actually, for that row, are you choosing the type? Because that would be a date format.
+[0:36:35] Constance Wolfe: But so in the row, do you change that?
+[0:36:37] Md. Tauhidur Rahman: Yeah.
+[0:36:38] Constance Wolfe: Or do you change that in the column?
+[0:36:41] Bijoy Nath: Right. So by default, from January to December rows— sorry, columns— they are text columns.
+[0:36:48] Bijoy Nath: But you can always edit or update your columns.
+[0:36:52] Bijoy Nath: So
+[0:37:04] Bijoy Nath: Um, oh, sorry, it's not implemented yet where you can— oh, I omitted that because there is this problem I faced it, which is let's say, well, you created a column, let's say this one retailer, and you selected, let's say for example, a number, right?
+[0:37:23] Bijoy Nath: While creating it, let's say you selected a number, but later if you try to convert that column from number to text, it kind of won't work.
+[0:37:33] Bijoy Nath: And it's vice versa.
+[0:37:35] Bijoy Nath: So there's this text, for example, AppScore, but you, you shouldn't be able to convert this into number because what's a relevant numerical representation of AppScore?
+[0:37:43] Bijoy Nath: We don't know.
+[0:37:43] Md. Tauhidur Rahman: Mm-hmm.
+[0:37:44] Bijoy Nath: So that's why I kind of kept that column type update hidden for now.
+[0:37:51] Bijoy Nath: So that's why you're not seeing it in here.
+[0:37:54] Bijoy Nath: But these fields from January to December, they're strings.
+[0:38:00] Bijoy Nath: But if you want them to be calendar, then yes, we can do that.
+[0:38:06] Constance Wolfe: Well, I know that the column called retailer, all of the All of the rows in— let's just call that column A because it's easier for me to think about.
+[0:38:21] Constance Wolfe: So all of the rows in column A would be text, but from January to December, I think they're going to be entering in dates potentially.
+[0:38:32] Constance Wolfe: So would— if they— now they could do that with a text easy, like you just put it in April, it's not that big of a deal.
+[0:38:39] Shahriar Hyder: Okay.
+[0:38:40] Constance Wolfe: But if they did want to change it to a number, let's say, would they— they would then just adjust the column?
+[0:38:45] Constance Wolfe: column header for each month and call it a number, or you're saying no, I didn't implement that, or we're not going to implement that?
+[0:38:56] Bijoy Nath: So let's say right now you have, um, April column as a string, right? As a text field.
+[0:39:03] Bijoy Nath: So when you want— when you try to convert this text into datetime, you cannot be able to because, okay, it's text.
+[0:39:11] Bijoy Nath: So what's the numerical representation of due date for System don't know it.
+[0:39:16] Bijoy Nath: In fact, know what it is.
+[0:39:19] Bijoy Nath: So that's why we are kind of omitting that implementation where you can change the column type.
+[0:39:25] Bijoy Nath: But if you want a new column or something like that of the type datetime, then you can select the date in here and create new column.
+[0:39:35] Bijoy Nath: But yes, we can implement that column update thing.
+[0:39:39] Bijoy Nath: But you have to know that the existing values that won't match to the format will be gone.
+[0:39:45] Constance Wolfe: Mm-hmm.
+[0:39:48] Bijoy Nath: So let's say in the April cell, if we had something like this, then your system can easily convert this text field into the datetime field because it's proper datetime data.
+[0:40:01] Bijoy Nath: But if the data is like this one, then it cannot convert this into the datetime, as you already know, right?
+[0:40:07] Bijoy Nath: So when user change the column type of February, Then this data will be gone.
+[0:40:14] Bijoy Nath: So I had this confusion. That's why I kind of omitted that implementation for now.
+[0:40:19] Constance Wolfe: I don't know. Yeah, I, I think it's okay the way it is that you have it right now.
+[0:40:31] Constance Wolfe: You know, I think they can just use text for anything they want to put in there.
+[0:40:36] Constance Wolfe: Because you— it's in text in April now, isn't it?
+[0:40:40] Bijoy Nath: Right, it's in text, right? See, the T means text, by the way, if you can see properly.
+[0:40:48] Constance Wolfe: Can they filter by any of this once they put it in?
+[0:40:52] Bijoy Nath: Yes, of course they can filter. Right now we have only one data.
+[0:40:56] Constance Wolfe: Okay, so click in here.
+[0:40:59] Bijoy Nath: So let me add another row.
+[0:41:01] Md Mashiul Azam Chowdhury: Yeah.
+[0:41:02] Bijoy Nath: So let's call it parameter of health, probably.
+[0:41:08] Bijoy Nath: And let's think, let's enter, let's say, 12, 0, 3, 26.
+[0:41:16] Bijoy Nath: So now if you click in here, then you have those tables.
+[0:41:20] Bijoy Nath: So you can filter the data according to your selection. If you hit apply, then there it is.
+[0:41:26] Constance Wolfe: Okay, so they're gonna filter by column. Okay, so if you had Go ahead and put both of them back in.
+[0:41:34] Constance Wolfe: So in your retailer, you could filter by retailer.
+[0:41:37] Bijoy Nath: Yes. So you can filter by retailer. You can search values from here if you want.
+[0:41:43] Bijoy Nath: Then you can apply conditions like something. That's great.
+[0:41:47] Constance Wolfe: This will work. This is great. All right.
+[0:41:49] Bijoy Nath: And you can delete the columns as well if you want. So you have the delete columns.
+[0:41:54] Constance Wolfe: Okay.
+[0:41:56] Bijoy Nath: And also I have put an export functionalities in here. So you can export it out anytime.
+[0:42:01] Constance Wolfe: Yeah.
+[0:42:02] Bijoy Nath: And it's in CSV. You have retailer, date, and field exactly the way it was in the tab section. Yeah.
+[0:42:12] Bijoy Nath: So you can create multiple tabs for each product. So that's you.
+[0:42:17] Bijoy Nath: So you can create multiple tabs as well.
+[0:42:21] Constance Wolfe: Love it.
+[0:42:24] Bijoy Nath: Right. So that's about tab functionalities.
+[0:42:31] Constance Wolfe: And so this is not in staging yet?
+[0:42:33] Bijoy Nath: No, it's not in staging yet. So the thing is, I kind of did all the frontend work.
+[0:42:39] Bijoy Nath: So I'm not kind of sure of myself that it's ready to push into staging.
+[0:42:44] Constance Wolfe: So you can't do frontend work.
+[0:42:47] Bijoy Nath: So I'm trying, I'm practicing.
+[0:42:49] Bijoy Nath: So I informed Iftikhar to review all of my work, and after he's finished with his review, then we can put them into staging.
+[0:42:57] Md Mashiul Azam Chowdhury: Sounds good.
+[0:42:58] Constance Wolfe: Thank you, this looks great. Really, really good work.
+[0:43:04] Bijoy Nath: So, uh, is there something else, or these are the things?
+[0:43:08] Constance Wolfe: These are the things.
+[0:43:09] Md Mashiul Azam Chowdhury: Okay.
+[0:43:11] Bijoy Nath: And by the way, um, I actually forgot to mention that I did all the work in the weekend, I forgot to mail to our HR department and, you know, keeping in you in CC.
+[0:43:24] Bijoy Nath: So I will give everyone, including Ipsy and our HR, later today. Just saying.
+[0:43:34] Bijoy Nath: And Constance is aligned with that, by the way, just so that everything—
+[0:43:37] Md. Tauhidur Rahman: yeah.
+[0:43:39] Bijoy Nath: So I'm stopping my share.
+[0:43:41] Constance Wolfe: Great.
+[0:43:42] Constance Wolfe: So my only question on all of this is, for all of these things, Amazing things that you guys did.
+[0:43:49] Constance Wolfe: If— when do you think any of this will be in staging?
+[0:43:54] Md Mashiul Azam Chowdhury: Well, I need to review all of them, so I don't think it will take that much time.
+[0:44:01] Md Mashiul Azam Chowdhury: So maybe by end of tomorrow.
+[0:44:05] Constance Wolfe: Okay.
+[0:44:06] Md Mashiul Azam Chowdhury: So your tomorrow morning.
+[0:44:08] Constance Wolfe: My morning. My tomorrow morning.
+[0:44:10] Md Mashiul Azam Chowdhury: Yeah.
+[0:44:15] Constance Wolfe: That'd be great. Just keep me posted if you push it. Yeah, that's great.
+[0:44:19] Md Mashiul Azam Chowdhury: Yeah, I'll send you a mail.
+[0:44:21] Constance Wolfe: Okay, that'd be great.
+[0:44:24] Bijoy Nath: Oh, one thing I forgot, Constance. Sorry, sorry about that. About our rollup report month filter.
+[0:44:35] Bijoy Nath: So that's done as well. And it's—
+[0:44:38] Constance Wolfe: oh, the trade spend roll-up month, and that'll go to staging as well, hopefully.
+[0:44:43] Bijoy Nath: Yeah, exactly.
+[0:44:44] Constance Wolfe: Okay, okay.
+[0:44:45] Bijoy Nath: When— if he's finished with his review, then it will go staging.
+[0:44:50] Constance Wolfe: That is awesome. Thank you.
+[0:44:54] Md Mashiul Azam Chowdhury: Welcome.
+[0:44:59] Bijoy Nath: So yeah, that's about the updates, Constance. So we can now talk about the Astro goal and roadmap.
+[0:45:03] Md. Tauhidur Rahman: Okay.
+[0:45:04] Constance Wolfe: Sounds great. So yeah, we have Ask a Boodle, we have roadmap. So I'll let you guys decide what's next.
+[0:45:11] Md. Tauhidur Rahman: Yeah, yeah, Constance, regarding the roadmap, Iftiha and Bijoy haven't given their estimation yet, so I'm working with both of them to get the estimation.
+[0:45:21] Md. Tauhidur Rahman: Plus I have seen your email and I am— I have like— I'm— I have created the tickets on my local machine.
+[0:45:29] Md. Tauhidur Rahman: I'm reviewing it and after that, after this meeting, I will be sending you an email with the updated tickets, the 9 tickets that Those are left, one back ticket.
+[0:45:38] Constance Wolfe: Yeah, yeah, I think some of them are already done, honestly.
+[0:45:40] Md. Tauhidur Rahman: But yeah, yeah, I also think some of those done.
+[0:45:43] Md. Tauhidur Rahman: So I have to talk with if the— and Bijoy regarding those tickets, that if these are done or not. Yes.
+[0:45:49] Constance Wolfe: Okay, so on the, um, sheet that I sent to you, it's the same you had.
+[0:45:55] Constance Wolfe: I just put in a column called comments. Yeah, um, so yeah, that's that same, same one.
+[0:46:03] Md. Tauhidur Rahman: Yeah. And regarding ASCA model, I have done some ideations regarding the ASCA model.
+[0:46:09] Md. Tauhidur Rahman: So the ideation doc is really— is too long.
+[0:46:12] Md. Tauhidur Rahman: I'm gonna send you the ideation doc, but I have also created a short presentation so that we can talk about it, about the ASCA model, because like going through a documentation is really hard.
+[0:46:25] Constance Wolfe: You bet it is.
+[0:46:27] Md. Tauhidur Rahman: Yeah, so I'm sharing my screen.
+[0:46:32] Constance Wolfe: Okay, this one.
+[0:46:35] Md. Tauhidur Rahman: Can you see my screen?
+[0:46:37] Constance Wolfe: Yes, yes.
+[0:46:39] Md. Tauhidur Rahman: Yeah, okay. So basically what, like, we all know what would, what Ask a Buddle is.
+[0:46:48] Md. Tauhidur Rahman: It's basically, uh, sorry. Yeah, so basically you all know what Ask Caboodle is.
+[0:46:57] Md. Tauhidur Rahman: So it's the like what you currently do with Claude.
+[0:47:01] Md. Tauhidur Rahman: We are trying to implement that in our system and so that basically, basically this feature answers every question anybody asks, whether it's broker or whether it's brand owners.
+[0:47:15] Md. Tauhidur Rahman: They ask anything to Caboodle, it should be able to answer that if it's in their subscription plan or in our database, right?
+[0:47:25] Md. Tauhidur Rahman: So what it is, it's a natural language layer over Caboodle's own data.
+[0:47:30] Md. Tauhidur Rahman: So you type questions and, uh, it sits on the top of every report and dashboards and it's gonna answer everything.
+[0:47:37] Md. Tauhidur Rahman: So this is what we know.
+[0:47:38] Md. Tauhidur Rahman: So what we are going to do, so we are gonna replace the hunt for reports with asking questions and, uh, So we're also in this thing, we're gonna also respect the brand scope module subscription from the start.
+[0:47:52] Md. Tauhidur Rahman: So if they don't have any kind of like, if they have any kind of subscription restrictions, so we're gonna, we're not going to answer those questions and we'll let them know that you don't have subscription for that XYZ module, so you're not gonna get these answers.
+[0:48:09] Constance Wolfe: So this will be module based on a module you have. Yeah, you have a subscription for. That's great.
+[0:48:14] Md Mashiul Azam Chowdhury: Yeah.
+[0:48:15] Constance Wolfe: That makes a lot of sense. Okay, yeah, that's cool.
+[0:48:19] Md. Tauhidur Rahman: Yeah, so how it's going to work.
+[0:48:21] Md. Tauhidur Rahman: So if you ask in plain English that what you need after, and then it like it takes like it, it works out like what you mean, matching, matching those with the real records and finding which module data it lives in.
+[0:48:40] Md. Tauhidur Rahman: And It checks if you are allowed to see those data or not by the modules, your brand modules and your subscription.
+[0:48:49] Md. Tauhidur Rahman: It builds a structured plan and it will in at like in the phase 1, it will gonna only show you the read-only query.
+[0:48:57] Md. Tauhidur Rahman: So like you will be able to only read, you cannot do the edit, delete, or any kind of operation, update operations.
+[0:49:05] Md. Tauhidur Rahman: First, what I have thought that to minimize the cost.
+[0:49:08] Md. Tauhidur Rahman: So we were talking about like, like, like the one problem I, which I have with Claude, that sometimes I ask a question or tell it to generate a, like, for example, a LinkedIn status, right?
+[0:49:22] Constance Wolfe: Mm-hmm.
+[0:49:23] Md. Tauhidur Rahman: It directly writes into a doc file, right?
+[0:49:26] Md. Tauhidur Rahman: Similarly, if you ask them about some data, it like automatically generates Charts and graphs, but I don't need that because it burns my token.
+[0:49:36] Md. Tauhidur Rahman: So whenever any user asks any kind of questions, it's gonna first reply with the text because text is much cheaper.
+[0:49:44] Md. Tauhidur Rahman: If they really want the charts and graphs, then we're gonna show them the charts and graphs.
+[0:49:50] Md. Tauhidur Rahman: And, and whenever we are answering something, we have the, like, mostly we have the, like, uh, Source records, right?
+[0:49:59] Md. Tauhidur Rahman: We have we have created so many reports and tables and charts and graphs, right?
+[0:50:03] Md. Tauhidur Rahman: So we're gonna point them towards those tables after the answer.
+[0:50:07] Md. Tauhidur Rahman: There will be source associated with every answer so that user can go there on also can verify if it's true or not, right?
+[0:50:15] Md. Tauhidur Rahman: Then there will be like the referencing, and if it's not inside their like if it's if they ask something random or something that's not related to Kaboodle.
+[0:50:25] Md. Tauhidur Rahman: So Kaboodle is going to only answer, I can't answer that, and after that the reasoning why Kaboodle cannot answer that.
+[0:50:33] Md. Tauhidur Rahman: I think there will be 2 kinds of results. One is conversational.
+[0:50:38] Md. Tauhidur Rahman: So where you were gonna ask, so like, uh, so what's upcoming today?
+[0:50:42] Md. Tauhidur Rahman: If you ask that, it's gonna tell you that what's upcoming today.
+[0:50:46] Md. Tauhidur Rahman: But another thing, we are gonna— we had conversation in our meeting that there will be saved and pinned queries, right?
+[0:50:53] Md. Tauhidur Rahman: So we can save the queries and the pinned queries. So the conversation would be static.
+[0:50:59] Md. Tauhidur Rahman: So what's like, what's like, what we have, like what's scheduled for today?
+[0:51:04] Md. Tauhidur Rahman: If we ask Caboodle, it's going to say that what's, what's in there.
+[0:51:07] Md. Tauhidur Rahman: But if you want to generate any kind of charts and graphs and want to pin that in your dashboard, or if you like, if you like, you compare 2 data frequently and you save them in your system, then that would be dynamic.
+[0:51:21] Md. Tauhidur Rahman: So the charts and graphs and those data will be dynamically changed in those conversations.
+[0:51:28] Md. Tauhidur Rahman: But in simple conversation, it is going to give you the static information only.
+[0:51:34] Constance Wolfe: Okay, so the difference between— going back up.
+[0:51:37] Md. Tauhidur Rahman: Yeah, quick question.
+[0:51:38] Constance Wolfe: So let's say, um, I, I ask it a question, um, about Some sales.
+[0:51:50] Constance Wolfe: Yeah, you're saying what's the difference between static and— and let's say yes, I want that chart.
+[0:51:55] Constance Wolfe: So let's say give me a monthly chart of, you know, cases sold. Yeah, whatever.
+[0:52:02] Constance Wolfe: What's the difference between static and dynamic in that case?
+[0:52:05] Md. Tauhidur Rahman: The static and dynamic would be like, if it's static, it's gonna give you as it is data right now in your system, right?
+[0:52:12] Md. Tauhidur Rahman: Because like if If you give Claude access to your Google Drive and ask something based on a Google Sheet, it's going to give you the data, like give you a chart, right?
+[0:52:22] Md. Tauhidur Rahman: And if you then go to Google Sheet and update those data, the chart will not update, right?
+[0:52:29] Shahriar Hyder: Mm-hmm.
+[0:52:30] Md. Tauhidur Rahman: But for dynamic, we're thinking because we are going to pin those charts and graphs in our dashboard, right?
+[0:52:39] Md. Tauhidur Rahman: So if it's static, then the dashboard would be meaningless.
+[0:52:43] Constance Wolfe: Right, I see.
+[0:52:44] Md. Tauhidur Rahman: Yeah, okay, yeah, got you.
+[0:52:45] Bijoy Nath: Okay, I'm sorry.
+[0:52:46] Shahriar Hyder: Every time, if I may chime in, so every time there is this prompt is executed on the system, it will run on the data that is available at that point of time.
+[0:53:00] Md. Tauhidur Rahman: Yes, yes, that would be the very first instance this was run.
+[0:53:04] Shahriar Hyder: So it could very well be different reports presented on different times based on the change of data, right?
+[0:53:12] Constance Wolfe: Of the source data.
+[0:53:13] Md Mashiul Azam Chowdhury: I'm following.
+[0:53:14] Constance Wolfe: Okay, so if the source data changes, if they pin it to their dashboard and the source data changes, it's going to show the updated data.
+[0:53:22] Shahriar Hyder: Yeah, absolutely.
+[0:53:23] Bijoy Nath: Yeah, absolutely.
+[0:53:23] Constance Wolfe: Okay. Yep, that sounds great. That's awesome.
+[0:53:26] Md. Tauhidur Rahman: Yeah, yeah. And next, so what we are not going to do.
+[0:53:32] Md. Tauhidur Rahman: So we're not going to answer anything outside of Caboodle, and we are not going to make up any answer or any missing data.
+[0:53:41] Md Mashiul Azam Chowdhury: Yeah.
+[0:53:42] Md. Tauhidur Rahman: And on the phase 1, we are not gonna have any kind of create or change request.
+[0:53:48] Md. Tauhidur Rahman: Like if you tell them to change something or edit something, it will not gonna do.
+[0:53:53] Constance Wolfe: I agree.
+[0:53:53] Md. Tauhidur Rahman: And it, yeah, it won't replace any kind of tracker or email workflow.
+[0:53:58] Md. Tauhidur Rahman: It will be as it is and it will, it will not give brand access to the modules they don't pay for.
+[0:54:05] Constance Wolfe: That's great. That's awesome.
+[0:54:06] Md. Tauhidur Rahman: Yeah. Yeah, so what you will, you will able be able to ask.
+[0:54:12] Md. Tauhidur Rahman: So it's more like, like we will have all of the features and we'll be able to ask all the, all the modules like sales and distribution, promotion and spend, review status, assortment pricing, stores, geography, any kind of thing we want to ask them.
+[0:54:26] Md. Tauhidur Rahman: It like if we have in our database that if we have the information in our database, we will be able to ask those like Answer those questions.
+[0:54:34] Constance Wolfe: That's awesome.
+[0:54:36] Md. Tauhidur Rahman: So me, Ifti, and Bijoy, Ifti and me, like we, I am set for the phase plan.
+[0:54:45] Md. Tauhidur Rahman: So the main, the first phase would be the ask. There will be natural language question asking.
+[0:54:52] Md. Tauhidur Rahman: The caboodle is going to just reply back those question because like this is, this is the most important thing to retrieve those data.
+[0:55:00] Md. Tauhidur Rahman: If we can retrieve those data and we can make like Give answer from those data.
+[0:55:03] Md. Tauhidur Rahman: This is one of the most important thing, the foundation of Askaboodle.
+[0:55:07] Md. Tauhidur Rahman: So this is the phase one, and here you can save the questions.
+[0:55:11] Md. Tauhidur Rahman: You have you will have the conversation history and everything like ChatGPT and Cloud.
+[0:55:16] Md. Tauhidur Rahman: We have the conversation history.
+[0:55:17] Md. Tauhidur Rahman: We'll also have this conversation history here, and this will be only read only.
+[0:55:23] Md. Tauhidur Rahman: You cannot edit anything. After that, the phase two it would be the pin and saving things.
+[0:55:29] Md. Tauhidur Rahman: So after, after generation, we viewed everything and then we will have that option to pin those charts and graphs and responses on our dashboard.
+[0:55:40] Md. Tauhidur Rahman: That would be the phase 2. The phase 3 would be the act, one of the most crucial things.
+[0:55:44] Md. Tauhidur Rahman: So there would be create, update, and remove through Ask Caboodle.
+[0:55:48] Md. Tauhidur Rahman: So like you can ask Caboodle to draft a promotion, or you can ask Caboodle to draft a task for you.
+[0:55:54] Md. Tauhidur Rahman: or create a task for you or anything, those will be done in phase 3.
+[0:55:59] Constance Wolfe: Okay, that's amazing.
+[0:56:00] Md. Tauhidur Rahman: So like, yeah, there is an example that where build me a promo from 40% margin, and then after that it's gonna have a conversation with you what you need and not.
+[0:56:10] Md. Tauhidur Rahman: Then after that it's gonna create a draft promotion for you.
+[0:56:14] Constance Wolfe: That's amazing.
+[0:56:15] Md. Tauhidur Rahman: Yeah, and after that we are gonna do the extension, more data domains we're gonna add.
+[0:56:20] Md. Tauhidur Rahman: We are gonna— then it would be more like an idea like Phase 3, till Phase 3, it would be like what we have like imagined so far.
+[0:56:29] Md. Tauhidur Rahman: We are gonna do till Phase 3, and in in the meantime, you and I all are can like you and I can talk, and we can also think about what we can do.
+[0:56:37] Md. Tauhidur Rahman: That would be in the Phase 4.
+[0:56:41] Md. Tauhidur Rahman: Yeah, this is the phases at a glance, and what we need to figure out is more like for Bijoy and.
+[0:56:50] Md. Tauhidur Rahman: If the by that, that like the joint data model, then the results, data quality, and and we also have to think about the gating and billings, right?
+[0:57:00] Md. Tauhidur Rahman: So how much tokens we're gonna the tokens are gonna cost, what model we're gonna use, and everything we need to figure it those out.
+[0:57:06] Md. Tauhidur Rahman: So that's it. That's from my side.
+[0:57:09] Md. Tauhidur Rahman: And yeah, so I have a very long documentation about this Askaboodle. So I'm gonna send you that.
+[0:57:17] Md. Tauhidur Rahman: documentation after this meeting. So—
+[0:57:20] Constance Wolfe: Can you send me this as well?
+[0:57:21] Constance Wolfe: Because I have a call with, um, with my— the guy that I report to, Lincoln Webb.
+[0:57:26] Bijoy Nath: So I want to—
+[0:57:26] Constance Wolfe: I wanted to give him a status update of what we're doing, so I want to include this.
+[0:57:31] Md. Tauhidur Rahman: Okay, sure. So I'm going to send these.
+[0:57:34] Constance Wolfe: That's amazing.
+[0:57:35] Md. Tauhidur Rahman: Yeah.
+[0:57:35] Constance Wolfe: So, so in this situation, what would be the minimum that we could on the phases?
+[0:57:43] Constance Wolfe: What would be the minimum that we could go to market with?
+[0:57:47] Constance Wolfe: Phase 1, 2, and 3, probably, and then phase 4 would be— or would it just be phase— could we go to market with just phase 1?
+[0:57:57] Md. Tauhidur Rahman: Uh, like, correct me if I'm wrong, anybody.
+[0:57:59] Md. Tauhidur Rahman: So I think we can actually start giving demo with the phase 1 because phase 1 is more like that we— after we can retrieve anything, and if Ask a model can, uh, like reply every question based on your data, I think would be able to, uh, like you'd be able to give demos and start going to the market.
+[0:58:19] Shahriar Hyder: Yeah, acting as the foundation, uh, yeah, the system basically.
+[0:58:23] Shahriar Hyder: So once we, we have done this, uh, we kind of, uh, achieve the proof of concept, right?
+[0:58:29] Shahriar Hyder: So then we can extend it to phase 2 and 3, which is the essential crowd operations for the Write operations, right?
+[0:58:37] Shahriar Hyder: So that's, that should really be the next goal.
+[0:58:41] Shahriar Hyder: But achieving the foundation is of paramount importance, right, at the onset.
+[0:58:48] Constance Wolfe: So, so Ask Caboodle, the phase 1, we, we all, we kind of already have, and I think we need to do some work with it, but it's built, it's in staging at least.
+[0:58:59] Constance Wolfe: I can play around with this first phase.
+[0:59:03] Md. Tauhidur Rahman: Yeah. So if the—
+[0:59:05] Bijoy Nath: yeah, yeah.
+[0:59:05] Md. Tauhidur Rahman: If the way can you chime in? Like you are like.
+[0:59:10] Md Mashiul Azam Chowdhury: Yeah.
+[0:59:10] Constance Wolfe: So actually, I know it's not polished and ready to go yet, but exactly.
+[0:59:16] Md Mashiul Azam Chowdhury: We actually need to polish it and make it usable for.
+[0:59:21] Md Mashiul Azam Chowdhury: I mean, so that we can go to the market with that.
+[0:59:25] Constance Wolfe: So with what we have in there right now, like it'll.
+[0:59:29] Md Mashiul Azam Chowdhury: It'll—
+[0:59:30] Constance Wolfe: I think we've got restricted what modules it can access.
+[0:59:34] Constance Wolfe: It likes the distributor report or the KE report, I think.
+[0:59:39] Constance Wolfe: So do you have the current version restricted to a couple modules?
+[0:59:46] Md Mashiul Azam Chowdhury: Well, I was thinking actually we would restrict it based on the module enable/disable feature we have.
+[0:59:55] Md Mashiul Azam Chowdhury: So let's say for the bobbies, you have disabled maybe the market overview feature.
+[1:00:03] Md Mashiul Azam Chowdhury: Sorry, maybe a retail report feature.
+[1:00:06] Md Mashiul Azam Chowdhury: So then they won't be able to ask anything about the retail report or something like that.
+[1:00:17] Md Mashiul Azam Chowdhury: So I mean, the functionality is There, but it's not up to the mark right now.
+[1:00:25] Md Mashiul Azam Chowdhury: We would need to polish it then.
+[1:00:30] Constance Wolfe: Right. Got you. Okay.
+[1:00:33] Constance Wolfe: So, but I think the— yeah, like you said, it's there and it can— it is— it does— you can query it and it does produce a result.
+[1:00:47] Constance Wolfe: Yeah, so some of it's there, but yeah.
+[1:00:49] Constance Wolfe: Okay, so once we get some testing and some guardrails around the— this first model that we have, that would be phase 1 essentially.
+[1:00:58] Md Mashiul Azam Chowdhury: Yeah, right.
+[1:01:00] Md Mashiul Azam Chowdhury: So, uh, I'm thinking, uh, in my mind I'm thinking that phase 1, uh, in— and phase 2 could be the main sort of, uh, Ask Caboodle feature.
+[1:01:14] Md Mashiul Azam Chowdhury: Like, uh, Claude has the chat section, right? But, uh, there's also a section called Cowork.
+[1:01:22] Md Mashiul Azam Chowdhury: So something like the, uh, our phase 3 will be something like that, a separate section of Ask Caboodle for creating the promotions and other stuff.
+[1:01:32] Constance Wolfe: So, right. Yep, that makes a lot of sense.
+[1:01:37] Constance Wolfe: So, um, So what's going through my mind right now then is if we're restricting subscriptions and stuff that the admin right now, we now have configure, we now can configure models that are modules in admin.
+[1:01:56] Constance Wolfe: So that's gonna be a key piece to this, I think. Correct?
+[1:01:58] Constance Wolfe: So then we would kind of key off of those things. Yeah, that's great.
+[1:02:01] Constance Wolfe: I'm glad we got that in place now.
+[1:02:08] Shahriar Hyder: Yeah.
+[1:02:08] Constance Wolfe: Okay, that's exciting. This is great.
+[1:02:13] Md Mashiul Azam Chowdhury: Yeah.
+[1:02:13] Constance Wolfe: Okay, I don't have any questions.
+[1:02:15] Constance Wolfe: I think, I think I'm fully on board with your assessment, kind of where we are.
+[1:02:20] Constance Wolfe: And I like that we have these phases because then we can, you know, go to market little by little and kind of make it better and better as we go.
+[1:02:30] Constance Wolfe: So I think that's great.
+[1:02:32] Md. Tauhidur Rahman: Yeah, that was the main plan so that like we— if we try to like it, like I talked with Shahriar bhai and everyone that if we try to make everything at once, then we will not have any kind of visibility that what's going on, right?
+[1:02:45] Constance Wolfe: Right.
+[1:02:46] Md. Tauhidur Rahman: So that's why we broke it into piece by piece so that it's more like that the foundation should be the ask thing, then we're gonna pin things to the dashboard, then we're gonna do the CRUD operation, and after that if there is any kind of enhancement we need, we are gonna do those enhancements.
+[1:03:02] Shahriar Hyder: Yeah, move things on an incremental basis, so to speak.
+[1:03:08] Constance Wolfe: Yeah, because if we wait too long, I mean, everybody's getting so used to these interfaces right now, right?
+[1:03:13] Constance Wolfe: So if we don't have something now, we're gonna really miss out.
+[1:03:16] Shahriar Hyder: We're gonna fall behind.
+[1:03:17] Constance Wolfe: Yeah, yeah. So I'm glad that we've at least got a little bit of it going. So I think that's great.
+[1:03:24] Constance Wolfe: Yeah, cool. Okay, so we're at time.
+[1:03:28] Constance Wolfe: I know it's late for you guys and getting into the evening, so I've got this Recorded the roadmap.
+[1:03:35] Constance Wolfe: So you're saying you're still working on estimates, which I totally get.
+[1:03:41] Constance Wolfe: So I do have a call with my folks to give them a status update as far as where we are.
+[1:03:48] Constance Wolfe: So I'll let them know that we should have timing on that. What do you think would be?
+[1:03:54] Constance Wolfe: What do you think I could report to him confidently with?
+[1:03:58] Md. Tauhidur Rahman: If the bayan bicep, like how like how much time is gonna need?
+[1:04:02] Md. Tauhidur Rahman: Yeah, so like for the, for the estimations, like after you, like if you guys give the estimation, we can just make the roadmap.
+[1:04:10] Md. Tauhidur Rahman: So like how much time it's gonna take to give you, give those estimations?
+[1:04:15] Md Mashiul Azam Chowdhury: Uh, hopefully I'll be able to, from the front end, I'll be able to complete it by tomorrow.
+[1:04:22] Md Mashiul Azam Chowdhury: Okay, giving the estimation for the roadmap.
+[1:04:26] Md Mashiul Azam Chowdhury: Uh, but, uh, Some of them are sort of dependent on the backend as well.
+[1:04:32] Md Mashiul Azam Chowdhury: So Bijay and I need to collaborate on that one.
+[1:04:37] Md Mashiul Azam Chowdhury: So hopefully I'll— we'll have that completed by half day tomorrow.
+[1:04:44] Constance Wolfe: Okay.
+[1:04:45] Constance Wolfe: Can imagine that there's a few of those tickets that you're not gonna have total clarity on, like what we were talking about today.
+[1:04:52] Constance Wolfe: I think there's a ticket in there for We talked about the updating of approved promotions, but then there's the— what's the best process to actualize the promotions?
+[1:05:04] Constance Wolfe: So there's a couple tickets in there that I'm assuming might need a little bit of clarification.
+[1:05:09] Md. Tauhidur Rahman: Yes.
+[1:05:09] Constance Wolfe: So feel free to have me— reach out to me on those.
+[1:05:14] Md. Tauhidur Rahman: Yeah, sure.
+[1:05:15] Md Mashiul Azam Chowdhury: I mean, yeah, if we are able to give estimation, we will.
+[1:05:19] Md Mashiul Azam Chowdhury: And but if we have any questions, so we would just mark Sort of like I need to do—
+[1:05:24] Constance Wolfe: need more information. Yeah, let's do that. Yeah, okay, that sounds great.
+[1:05:28] Md. Tauhidur Rahman: And okay, Constance, Constance, I need to add a like a small thing that the like I originally I there like I like it was 80 hours for me, right?
+[1:05:42] Md. Tauhidur Rahman: So I think I only have, uh, 2 hours left.
+[1:05:46] Constance Wolfe: Okay.
+[1:05:47] Md. Tauhidur Rahman: Yeah, okay.
+[1:05:49] Md Mashiul Azam Chowdhury: On the initial 80 hours?
+[1:05:50] Md. Tauhidur Rahman: Yeah, from the initial 80 hours. Yeah.
+[1:05:52] Constance Wolfe: Right. Got you. Okay.
+[1:05:54] Constance Wolfe: So probably what we'll do is add— that will be another conversation I'll have with my guys internally I was telling you about.
+[1:06:03] Constance Wolfe: So I'm going to see if I can get you on for— I think we talked about 10 hours a week, right?
+[1:06:07] Md. Tauhidur Rahman: Yeah.
+[1:06:08] Constance Wolfe: Okay. So let me see if I can get that approved today.
+[1:06:14] Md. Tauhidur Rahman: Yeah.
+[1:06:15] Constance Wolfe: I mean, I don't want you to stop what you're doing.
+[1:06:17] Constance Wolfe: I can definitely get approved to at least complete what you're— I don't want you to stop because you're at 2 hours and you have 2 more hours to complete your roadmap.
+[1:06:25] Md. Tauhidur Rahman: Yeah.
+[1:06:26] Constance Wolfe: Don't worry about that.
+[1:06:27] Constance Wolfe: I'm just talking about moving forward for the rest of this year, at least, if not longer.
+[1:06:33] Md. Tauhidur Rahman: Yeah.
+[1:06:36] Constance Wolfe: I hate that we would give this up since you're just now starting to get your arms wrapped around this very complex process.
+[1:06:43] Constance Wolfe: So it'd be nice to have another person with their head around.
+[1:06:46] Constance Wolfe: So yeah, it'd be, it'd be good for all of us, I think, to keep you, to keep you going.
+[1:06:51] Constance Wolfe: And there's been indication internally that they would like me to get a little break and have you be able to handle a lot of the stuff that a lot of the, you know, like the ticket making and all that kind of thing.
+[1:07:03] Constance Wolfe: So, Shahir, while you're on here, I know I'm rambling a little bit, but we did talk about a new process for ticket creation and that would actually go to Kea.
+[1:07:14] Constance Wolfe: Because she's got her— she's probably the most— I guess, how did Bijoy kind of describe it?
+[1:07:21] Constance Wolfe: Like, she's kind of got her head in the technical piece of it.
+[1:07:25] Shahriar Hyder: Yeah, most knowledgeable person to do that.
+[1:07:27] Constance Wolfe: Exactly.
+[1:07:29] Constance Wolfe: So should— right now the process is for me to assign to Ifti, which I'm happy to do, and he can assign to her.
+[1:07:36] Constance Wolfe: But there was talk about really having it go to Keya because she probably could wrap her arms around it the quickest, or what do you think about that?
+[1:07:46] Shahriar Hyder: I think this is a very good idea because I think even in our company internally, QA team actually acts as a bridge between the developers and the client sometimes in terms of both taking on the requirement and also logging it into Jira and then coordinating with the developers.
+[1:08:09] Shahriar Hyder: So because they are fully aware of the functionalities and in a sense are the owners of the features from our side.
+[1:08:19] Shahriar Hyder: I know you are essentially the owner from the Caboodle side, but from our development side, she could act as a shadow for you in terms of the ownership of the features.
+[1:08:33] Shahriar Hyder: I think this could only augur well for the development team. So I totally second this.
+[1:08:37] Constance Wolfe: Especially with bug tickets. I think she would be— yeah, absolutely.
+[1:08:43] Constance Wolfe: So can you let her know that I'll be reaching out to her if there's issues and to have her help me with the ticket production and stuff like that?
+[1:08:53] Shahriar Hyder: Absolutely.
+[1:08:54] Constance Wolfe: I'll do that.
+[1:08:54] Shahriar Hyder: I'm sure she would be here tomorrow morning from her leave. She'll be joining work tomorrow.
+[1:09:01] Shahriar Hyder: So I'll have the conversation with her first time. So for sure.
+[1:09:04] Constance Wolfe: Okay, that would be great.
+[1:09:06] Constance Wolfe: And then the only other thing, like just kind of housekeeping is, and I'll share my screen.
+[1:09:11] Constance Wolfe: So our Jira, I'm not quite sure I can upgrade it, but I was having problems understanding if I need to upgrade.
+[1:09:21] Constance Wolfe: We have 9 members or 10 members, and I don't know how many members I have to update right now.
+[1:09:28] Constance Wolfe: We can't see how this says storage is full.
+[1:09:33] Constance Wolfe: So we created a— sorry, we created a new Jira ticket list so we can create links.
+[1:09:45] Constance Wolfe: I didn't know if everybody on the team knew about this spreadsheet where I'm putting like more like pictures and stuff like that.
+[1:09:53] Constance Wolfe: So I'm calling each tab that ticket if there needs to be Screenshots, right?
+[1:10:00] Constance Wolfe: So are you guys using one internally?
+[1:10:02] Constance Wolfe: I've been using this, and so I've been putting this link into Jira.
+[1:10:09] Constance Wolfe: So if I've created— I can't— I don't know if I created one lately.
+[1:10:12] Md Mashiul Azam Chowdhury: Oh boy.
+[1:10:13] Md Mashiul Azam Chowdhury: Well, what Kea was doing is she was uploading those attachments in Google Drive and just sharing the link in the tickets.
+[1:10:26] Md Mashiul Azam Chowdhury: But yeah, I don't know, it's not actually that intuitive.
+[1:10:30] Md Mashiul Azam Chowdhury: So it'd be better if we resolve the Jira attachment issue.
+[1:10:37] Constance Wolfe: Okay, because like right here, I was gonna show you.
+[1:10:41] Constance Wolfe: So if you see, let's just look at this one really quick. See image and Google link.
+[1:10:49] Constance Wolfe: And then you click that, and then that takes you to here, and then the ticket numbers are in here.
+[1:10:56] Constance Wolfe: But it's a little clunky, to your point. So is there? I reached out to them to see. I'm not sure.
+[1:11:06] Constance Wolfe: Do I just upgrade one member? Because I'm not the owner.
+[1:11:12] Md Mashiul Azam Chowdhury: No, no, no.
+[1:11:12] Constance Wolfe: I think Riz is the owner of this.
+[1:11:14] Md Mashiul Azam Chowdhury: Yeah, exactly. I think yeah, Toidhai. Remember that you wanted to reach out.
+[1:11:20] Md Mashiul Azam Chowdhury: to receive high about this.
+[1:11:23] Md. Tauhidur Rahman: Yeah, yeah, yeah, yeah. So I was doing some research regarding that.
+[1:11:27] Md. Tauhidur Rahman: So, so, uh, for everybody, like, if, if we want to update this, like, the storage for this, uh, for this one, we have to update it like per user per month.
+[1:11:43] Md. Tauhidur Rahman: The billing is for per user per month.
+[1:11:45] Md. Tauhidur Rahman: So we have to If we want to upgrade, we have to upgrade everyone.
+[1:11:50] Constance Wolfe: And that gets expensive, I think.
+[1:11:52] Md. Tauhidur Rahman: Yeah, yeah, it's more to $8 to $9 per month.
+[1:11:58] Md. Tauhidur Rahman: It's like you're gonna— you get per user $8 to $9 per month.
+[1:12:02] Md. Tauhidur Rahman: So you have to essentially pay almost $75 per month.
+[1:12:07] Constance Wolfe: Yeah, because I think we have— don't we have 10 users in here? I think we have 10 users.
+[1:12:11] Constance Wolfe: So it'd be about $100 a month. For $10 a month each.
+[1:12:15] Md. Tauhidur Rahman: Yeah.
+[1:12:17] Constance Wolfe: So there's no way to just do an upgrade. Yeah. So that, I mean, I, it is what it is.
+[1:12:22] Constance Wolfe: We might have to just do that.
+[1:12:23] Constance Wolfe: But I wasn't sure because I know Riz owns, owns the, I think he's the main user on that. So yeah.
+[1:12:33] Constance Wolfe: So I wasn't sure what needed to be done.
+[1:12:37] Md. Tauhidur Rahman: So we had only 2 GB storage. For the attachment.
+[1:12:41] Md. Tauhidur Rahman: So if we, uh, if like, uh, let me share my screen again. Uh, screen 1.
+[1:12:49] Md. Tauhidur Rahman: Yeah, so as you can see, the, that for it's forever free for 10 users, but the problem is the cap is 2 GB of storage.
+[1:12:58] Constance Wolfe: Okay.
+[1:12:59] Md. Tauhidur Rahman: So like, yeah, so for the standard one, $7.91.
+[1:13:03] Constance Wolfe: Okay.
+[1:13:04] Md. Tauhidur Rahman: Per user, it's per user per month.
+[1:13:06] Constance Wolfe: Okay, got you. Okay. And right now I think we have 10, don't we? So it'd be $79.
+[1:13:11] Constance Wolfe: That's what you were saying, $79 a month.
+[1:13:13] Md. Tauhidur Rahman: Yeah, yeah.
+[1:13:14] Constance Wolfe: Okay, okay. We might just have to get that upgraded. I'll talk to the guys internally.
+[1:13:21] Md. Tauhidur Rahman: Yeah.
+[1:13:22] Bijoy Nath: So we have—
+[1:13:29] Constance Wolfe: Is there anybody in there that we don't need?
+[1:13:33] Md Mashiul Azam Chowdhury: Apparently we don't need to. Yeah, I think.
+[1:13:38] Constance Wolfe: Yeah.
+[1:13:39] Md. Tauhidur Rahman: Abdullah Mahmood.
+[1:13:41] Md Mashiul Azam Chowdhury: I don't think we need Sheikh right now. Yeah.
+[1:13:44] Constance Wolfe: Yeah, we can add people later if they need to. But yeah.
+[1:13:47] Md. Tauhidur Rahman: Yeah.
+[1:13:50] Constance Wolfe: Okay.
+[1:13:51] Constance Wolfe: So, so does, do you guys have to do that on your end since you're the— I don't think, I don't think I can.
+[1:13:58] Constance Wolfe: Oh, great.
+[1:13:59] Md. Tauhidur Rahman: Shahriar, do you have the access of Kaboodle?
+[1:14:02] Shahriar Hyder: No, I think only Rizvi has. I do have— I'm not even sure, do I have access?
+[1:14:09] Shahriar Hyder: I think I have access to the internal Jira only.
+[1:14:13] Md. Tauhidur Rahman: Okay.
+[1:14:13] Constance Wolfe: And I don't think Riz really needs to be in there either as a user, does he?
+[1:14:17] Constance Wolfe: Or do you have to be if you own it? Do you have to?
+[1:14:20] Shahriar Hyder: No, I don't think he needs to be a user there. No.
+[1:14:23] Md Mashiul Azam Chowdhury: Yeah.
+[1:14:24] Shahriar Hyder: शरीफ़ भाई, रिज़वी भाई इस डी स्पेस ओनर। या एक्जैक्टली।
+[1:14:29] Shahriar Hyder: सो आई थिंक ओनली रिज़वी भाई कैन एक्चुअली डू इट, राइट?
+[1:14:34] Constance Wolfe: या। सो लेट मी नो हाउ मेनी यूज़र्स देन एंड या देर इट इज़ राइट देर।
+[1:14:41] Constance Wolfe: एंड आईल गेट अप्रूवल फॉर फॉर दैट सो वी कैन ऐड आर स्टोरेज। ओके।
+[1:14:48] Constance Wolfe: सो डू यू डू वी नीड एनएड भाई No, I don't think we need an IAT anymore, right, Ifti?
+[1:14:57] Md Mashiul Azam Chowdhury: Right.
+[1:14:57] Constance Wolfe: Yes. So who is it then would be in there? It would be the— let's see.
+[1:15:02] Shahriar Hyder: So we can remove a couple of the— couple of users from here, Constance.
+[1:15:08] Constance Wolfe: And then we need Kaya and Faria, right?
+[1:15:11] Md Mashiul Azam Chowdhury: I think they are added.
+[1:15:14] Md. Tauhidur Rahman: I think Kaya is in there, but I cannot see Faria.
+[1:15:18] Md Mashiul Azam Chowdhury: She should be also.
+[1:15:23] Shahriar Hyder: Okay.
+[1:15:24] Md Mashiul Azam Chowdhury: So yeah, she is able to create tickets. So she's—
+[1:15:28] Md. Tauhidur Rahman: oh yeah, she's okay.
+[1:15:31] Constance Wolfe: So it'd be 1, 2, 3, 4, 5, 6 of us.
+[1:15:40] Md. Tauhidur Rahman: Yes. I know I don't have the access to see all the users.
+[1:15:46] Constance Wolfe: I think we just need 6. What do you think, Ifti? It'd be the 4 of us plus Kaya and Fariha.
+[1:15:58] Md Mashiul Azam Chowdhury: He, uh, yeah, I think so. Yes.
+[1:16:04] Constance Wolfe: Yeah.
+[1:16:05] Bijoy Nath: Okay.
+[1:16:06] Constance Wolfe: I'd say let's just go ahead and if he can make that adjustment, let's make that adjustment.
+[1:16:12] Md. Tauhidur Rahman: Yeah, so, so I'm gonna text Rizvi to remove them.
+[1:16:16] Md. Tauhidur Rahman: Do you have the access, Constance, to remove anyone?
+[1:16:20] Constance Wolfe: I don't know.
+[1:16:22] Md. Tauhidur Rahman: Um, okay, so I'm gonna text Rizvi to remove, like, only keep us in the space.
+[1:16:32] Constance Wolfe: Yeah, and then tell him to upgrade.
+[1:16:36] Md Mashiul Azam Chowdhury: Yeah.
+[1:16:37] Constance Wolfe: So is that— then would that come on your bill and then you bill us, Shahir?
+[1:16:43] Constance Wolfe: We have to figure that part out.
+[1:16:44] Shahriar Hyder: Yeah, we have to figure it out. Let me talk to Riz about this.
+[1:16:48] Md Mashiul Azam Chowdhury: Okay.
+[1:16:49] Shahriar Hyder: So, Tawhid, please, you may provide the requirement to me as well if you like.
+[1:16:55] Shahriar Hyder: Maybe I could forward that to Rizvi and then also inquire about the billing As well.
+[1:17:05] Md. Tauhidur Rahman: Okay. Awesome.
+[1:17:07] Constance Wolfe: Thank you guys.
+[1:17:09] Md. Tauhidur Rahman: Sending you the recording. Yeah.
+[1:17:11] Shahriar Hyder: Thank you.
+[1:17:12] Constance Wolfe: Yay, we're getting there. Yeah. So, Bijoy, I don't know.
+[1:17:21] Constance Wolfe: Yeah, just work with them on your timing as well.
+[1:17:23] Constance Wolfe: And if we can get that this week, then we can hunker down and figure out what our priorities are going to be.
+[1:17:30] Constance Wolfe: You know, I think Tawheed and I talked about, like, must-have, would be nice, and maybe later.
+[1:17:37] Constance Wolfe: So we can take all of the— everything that we're working on right now and prioritize it and get it calendared and all that kind of stuff.
+[1:17:45] Constance Wolfe: So hopefully we can start on that by the end of this week.
+[1:17:49] Constance Wolfe: Do you think that's realistic, by the— getting that by the end of this week?
+[1:17:57] Md Mashiul Azam Chowdhury: All of them, the ones that we just showed.
+[1:18:02] Constance Wolfe: I'm just talking the roadmap, timing on the roadmap.
+[1:18:05] Md Mashiul Azam Chowdhury: Oh, yeah, yeah. The timing on— yes, of course.
+[1:18:09] Constance Wolfe: Okay. Okay. So I just need to report that to my call.
+[1:18:13] Constance Wolfe: So like I said, I have a call internally and I need to give them an update as far as where we are with everything.
+[1:18:17] Constance Wolfe: So I'll let them know that we'll get that this week.
+[1:18:23] Constance Wolfe: And if you could tell me, if you could send me that, that presentation you sent on Ask Google, that'd be great.
+[1:18:28] Md. Tauhidur Rahman: Yeah, yeah, yeah, yeah. I'm, I'm, I'm sending after this meeting.
+[1:18:32] Constance Wolfe: Okay. Okay. And are you pushing anything to staging on what you showed me?
+[1:18:37] Constance Wolfe: That's gonna be tomorrow too, I think we said, right? The, what Bijoy showed me today.
+[1:18:42] Md Mashiul Azam Chowdhury: Yeah, I'll try to review them.
+[1:18:44] Md Mashiul Azam Chowdhury: And if there's any improvement or anything, like the remove From approved feature.
+[1:18:52] Md Mashiul Azam Chowdhury: So after that, yeah, we would be able to.
+[1:18:56] Shahriar Hyder: Okay.
+[1:18:56] Constance Wolfe: Yeah, you might just ping me on WhatsApp or something and let me know that that's ready to go because I'd like to show them what what we're working on.
+[1:19:03] Md Mashiul Azam Chowdhury: Yes.
+[1:19:04] Constance Wolfe: Okay. All right, guys. Thank you so much. Appreciate all your help.
+[1:19:10] Md Mashiul Azam Chowdhury: Thank you.
+[1:19:10] Md. Tauhidur Rahman: Have a nice day.
+[1:19:12] Constance Wolfe: All right. You too. I'm around this week if you need to connect, and great to see you, Shahar.
+[1:19:15] Constance Wolfe: Thanks for joining.
+[1:19:16] Shahriar Hyder: Anytime, anytime. All right, take care, Constance.
+[1:19:19] Constance Wolfe: Bye, guys. Take, take care.

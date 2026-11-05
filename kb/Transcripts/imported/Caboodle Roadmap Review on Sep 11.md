@@ -1,0 +1,874 @@
+---
+type: Document
+title: "Caboodle Roadmap Review On Sep 11"
+---
+
+[0:02:57] Md. Tauhidur Rahman: Hello, Constance. Good morning.
+[0:02:59] Constance Wolfe: Good afternoon. Good evening. How are you?
+[0:03:03] Md. Tauhidur Rahman: I'm fine, Constance. How are you? I'm good.
+[0:03:05] Constance Wolfe: I was just—
+[0:03:07] Md. Tauhidur Rahman: yeah. So like, I'm like, I'm 2 minutes late. I'm sorry.
+[0:03:10] Md. Tauhidur Rahman: We are having a really bad time in Bangladesh about the electricity and gas. So like, yeah.
+[0:03:17] Md. Tauhidur Rahman: So for the last couple of months, we are having this issue because like I had to— like today, I like took my brother's car and had to refill the car with gas.
+[0:03:27] Md. Tauhidur Rahman: And it took me nearly 2 and a half hours to just get— like, I, I waited in the line for 2 and a half hours.
+[0:03:34] Constance Wolfe: What is going on? Are you guys restricted on your gasoline right now?
+[0:03:39] Md. Tauhidur Rahman: Not restricted. We don't have enough right now.
+[0:03:42] Md. Tauhidur Rahman: Like, we don't have enough electricity, enough gas, enough anything right now.
+[0:03:47] Md. Tauhidur Rahman: Like, we are having— like, uh, yesterday I didn't have electricity for almost, uh, 3 hours.
+[0:03:54] Constance Wolfe: Oh.
+[0:03:54] Md. Tauhidur Rahman: I have like, like my home have, uh, backup. Like we have backup for almost 1.5 hours.
+[0:04:00] Md. Tauhidur Rahman: Like if there is no electricity, we can survive almost for 1.5 hours.
+[0:04:04] Md. Tauhidur Rahman: But, uh, as it's a generator, it also requires like gas or petrol.
+[0:04:09] Md. Tauhidur Rahman: So it's also hard to afford those gas and petrol because like now we don't have any, uh, diesel in our stock.
+[0:04:16] Md. Tauhidur Rahman: So if the electricity goes, we don't— we'll not have any kind of electricity for, I don't know, for how, like how, how much long hours.
+[0:04:24] Constance Wolfe: So is there any end in sight for that?
+[0:04:28] Constance Wolfe: I mean, is there, or is that just, is that just the way it is now?
+[0:04:33] Md. Tauhidur Rahman: I think we have to live like this.
+[0:04:35] Md. Tauhidur Rahman: I don't, like, I don't see any kind of actions from the government or anyone.
+[0:04:40] Md. Tauhidur Rahman: Like, uh, they're saying that we'll solve it, but it's almost 3 months, but we— they haven't solved anything.
+[0:04:47] Md. Tauhidur Rahman: Because like, uh, as I have told you, I have went to my home the week before, right, for 4 days.
+[0:04:53] Md. Tauhidur Rahman: Like, took one leave and I was there for 4 days.
+[0:04:56] Md. Tauhidur Rahman: In 4 days, there was like— it is— it was in village in a remote area, uh, for 4 days.
+[0:05:02] Md. Tauhidur Rahman: It's like I stayed there for, uh, for almost 72 hours and there was electricity— like, I got electricity for 6 hours out of 24.
+[0:05:14] Constance Wolfe: Oh, wow.
+[0:05:16] Md. Tauhidur Rahman: Yeah.
+[0:05:17] Constance Wolfe: So I mean, how— like, if I think about AIT, I mean, there's— it's awful for your, you know, for everybody in general.
+[0:05:26] Constance Wolfe: But if you think about, you know, your, your organization, I mean, you're dead in the water if you don't have electricity.
+[0:05:33] Constance Wolfe: How does that work for companies that depend on electricity throughout the day?
+[0:05:38] Md. Tauhidur Rahman: Yeah, so what we do— because like AIT is in a place, it's like more like a commercial space.
+[0:05:44] Md. Tauhidur Rahman: They're like, government is ensuring that we get electricity, the commercial space gets electricity so that the business don't, uh, like, like if we don't really have electricity because our work is based on electricity.
+[0:05:58] Md. Tauhidur Rahman: So, and we also have huge generators.
+[0:06:01] Md. Tauhidur Rahman: So I think that's not problem for AIT, but for, uh, residential area, it's kind of a problem right now.
+[0:06:09] Md. Tauhidur Rahman: Wow.
+[0:06:10] Constance Wolfe: Golly, that's tough.
+[0:06:13] Md. Tauhidur Rahman: Yeah, because like we had, you know, that, uh, like the government changed and after that we had the interim government, then we got election and we got new government.
+[0:06:22] Md. Tauhidur Rahman: Like country, like in terms of, uh, security is nice, it's like okay right now, but the problem is like, uh, everything is scattered right now and like the guy, like, uh, how can I Put it in a good way, though.
+[0:06:37] Md. Tauhidur Rahman: So most of the things are like scattered right now. They cannot grab everything. Like they cannot.
+[0:06:43] Md. Tauhidur Rahman: They are not able to like maintain things because like the country had gone through ups and downs in last two years, and everything is a mess right now in terms of managing the country.
+[0:06:56] Md. Tauhidur Rahman: So I think they are gonna do it, but it will take time.
+[0:07:00] Constance Wolfe: Well, I remember a couple. Has it been 2 years since there was the takeover?
+[0:07:05] Md. Tauhidur Rahman: Yeah.
+[0:07:05] Constance Wolfe: When you guys ousted the— was it a— it was a woman, right?
+[0:07:10] Md. Tauhidur Rahman: Sorry?
+[0:07:11] Constance Wolfe: That the— you guys, they kind of stormed the Capitol and ousted the leader.
+[0:07:16] Md. Tauhidur Rahman: Yeah.
+[0:07:17] Constance Wolfe: Yeah.
+[0:07:18] Md. Tauhidur Rahman: So it was a— it was a horrific, like, event for, like, for East Los Angeles.
+[0:07:22] Constance Wolfe: Yeah, I watched it on the news from here.
+[0:07:24] Md. Tauhidur Rahman: Yeah. Yeah.
+[0:07:24] Md. Tauhidur Rahman: So because, like, uh, my little sister lost her friend during that time, like police shoot him dead and so many things.
+[0:07:34] Constance Wolfe: Oh my God. Um, so the new government I thought was a good— I thought most pretty popular, but no.
+[0:07:42] Md. Tauhidur Rahman: Yeah, they're, they're popular, but the problem is that the previous government ruled for almost 17 years.
+[0:07:47] Md. Tauhidur Rahman: So we don't know how— like they didn't disclose any kind of like— yeah, yeah, they ruled for almost 17 years.
+[0:07:53] Md. Tauhidur Rahman: So they hide what we have, like the resources we have or not, or anything that like they kept us in dark.
+[0:08:00] Md. Tauhidur Rahman: So that's why the problem is when the new government took over and they took over all those resources, they saw that we don't have enough.
+[0:08:08] Md. Tauhidur Rahman: But the previous government kept it hide from the, like, normal, like, people like us.
+[0:08:13] Md. Tauhidur Rahman: We didn't know that what, like, what, like, what we have, what, what we don't have, those kind of things.
+[0:08:21] Constance Wolfe: Wow. Wow.
+[0:08:22] Constance Wolfe: Well, I feel, I feel, yeah, because we're kind of going through a similar situation here where, yeah, yeah, government is really not in a good situation.
+[0:08:29] Constance Wolfe: And then I just read about Germany. Their Germany had a big election.
+[0:08:34] Md. Tauhidur Rahman: Oh my God!
+[0:08:35] Constance Wolfe: Yeah, they're heading in the wrong direction, and there's just if we talk, if we think about it too much, my head starts to explode because it's like I just I I'm not confident with where we're heading as a species.
+[0:08:49] Md. Tauhidur Rahman: Yeah, so like I used to I used to follow politics like geopolitics and the like world governments and everything a lot.
+[0:08:57] Md. Tauhidur Rahman: But nowadays I feel scared because like everybody's like divided between their religion or race or anything.
+[0:09:04] Md. Tauhidur Rahman: Like everybody's trying to capitalize something or the other.
+[0:09:08] Md. Tauhidur Rahman: Like somebody's— if you see in India, they're trying to capitalize the religion.
+[0:09:13] Md. Tauhidur Rahman: And if you see in your country, they're like— you guys are divided by right wings, left wings, everything.
+[0:09:18] Constance Wolfe: Yeah.
+[0:09:18] Md. Tauhidur Rahman: But this is not actually right. Like fundamentally, we are all human beings.
+[0:09:23] Md. Tauhidur Rahman: I believe that every human have their rights and okay, but still, I like the way the world is going right now.
+[0:09:31] Md. Tauhidur Rahman: I, I am not hopeful at all.
+[0:09:34] Constance Wolfe: Well, what's interesting is that to your point, the, the big majority of humans want a democratic, peaceful, cooperative environment.
+[0:09:46] Constance Wolfe: And it's these, the, it's these small 1% powerful people that are dividing, dividing us on purpose.
+[0:09:55] Md. Tauhidur Rahman: Yes.
+[0:09:56] Constance Wolfe: And it's really— we need to, we need to, we need to hold our power, you know.
+[0:10:02] Constance Wolfe: We need to— I'm with you, it's overwhelming because everything's happening so fast and so furious, and it's just relentless.
+[0:10:09] Constance Wolfe: It doesn't stop. But we have to, we have to figure out a way. There's more of us than them.
+[0:10:18] Constance Wolfe: But we have to figure out a way to get leadership on our side united.
+[0:10:25] Constance Wolfe: And it's like, I feel like we need a better messaging leadership coalition type thing.
+[0:10:33] Constance Wolfe: But it's, I can't do it. You know, it's a, it's a yes, yes. No.
+[0:10:39] Md. Tauhidur Rahman: Yeah. So like, my father died at, died on Like 2020. After that, I am trying to be a religious guy.
+[0:10:48] Md. Tauhidur Rahman: Like I was religious, but I am trying to be a more practicing Muslim.
+[0:10:51] Md. Tauhidur Rahman: But as I am going through this period, I have realized one thing that if everybody follows their own religion, there will be no war or anything because like fundamentally every religion supports peace.
+[0:11:04] Md. Tauhidur Rahman: Because like I have like as I have told you, I have great interest in besides technology.
+[0:11:11] Md. Tauhidur Rahman: I have great interest in politics and religion.
+[0:11:13] Md. Tauhidur Rahman: So I have read through like Hindu mythology, Hindu mythologies, and, uh, I also read my one and also like, uh, gone through Bible and everything.
+[0:11:23] Md. Tauhidur Rahman: So fundamentally everybody supports that this— that the one thing that every god and every religion supports only one thing, that's peace.
+[0:11:33] Md. Tauhidur Rahman: But I think some of our leaders, some of our religious leaders, some of our leaders, they like misguide people and Like they want us to go on war.
+[0:11:45] Constance Wolfe: Yeah, in the name of, in the name of religion, they misguide us.
+[0:11:48] Constance Wolfe: Yeah, yeah, it's like, yeah, I agree.
+[0:11:51] Md. Tauhidur Rahman: It's, I, you know, because I can show you, I can, I have evidence that, that I have so many Hindu friends, so I saw so many Christian friends from school, from college, because in Bangladesh, Bangladesh is mostly majority Muslim country, right?
+[0:12:09] Md. Tauhidur Rahman: So whenever we have Eid, Eid is the big— one of the biggest celebrations in Bangladesh.
+[0:12:14] Md. Tauhidur Rahman: Eid is mostly, mostly— it's, it's Islamic, uh, uh, festival Eid.
+[0:12:20] Md. Tauhidur Rahman: But our other religions friends, like who are Hindu or Christian or any other religions, they also like celebrate Eid like it's their own festival.
+[0:12:31] Constance Wolfe: Right.
+[0:12:31] Md. Tauhidur Rahman: So we don't have— like the common people like us don't have any kind of problem with each other, any kind of problem with any religion or anything, because like my next-door neighbor is From another region, religion, and anything.
+[0:12:43] Md. Tauhidur Rahman: We don't have any kind of problem. We talk every day. We share food.
+[0:12:46] Md. Tauhidur Rahman: Sometimes, like when when we like had the like in the government, there was problem in Bangladesh.
+[0:12:53] Md. Tauhidur Rahman: We didn't have like enough food.
+[0:12:55] Md. Tauhidur Rahman: Everybody didn't have enough food because like the supply chain was broken, right?
+[0:12:59] Md. Tauhidur Rahman: We didn't like the groceries were out. We didn't get groceries, but everybody shared.
+[0:13:03] Md. Tauhidur Rahman: Everybody shared food with everyone.
+[0:13:06] Md. Tauhidur Rahman: I think, uh, the thing you have said, that the majority people who are like us, we are on the same ground.
+[0:13:12] Md. Tauhidur Rahman: We want peace. But the powerful people, they want to capitalize their powers.
+[0:13:17] Md. Tauhidur Rahman: And I know that if there is a war, if there is something, uh, like if there is some massacres, then they are gonna get benefited because they can do business.
+[0:13:26] Md. Tauhidur Rahman: Because like whoever sells, uh, ammunitions, they will get benefit if there is a war.
+[0:13:32] Constance Wolfe: Yeah, yeah. And like you said, I mean, people have tolerance for each other.
+[0:13:37] Constance Wolfe: I mean, I think overall, like, you know, my whole thing is I don't care what anybody does, thinks, believes, as long as you're not hurting me personally.
+[0:13:47] Constance Wolfe: I don't care what you want to do. Like, I have tolerance for any religion or any belief you have.
+[0:13:53] Constance Wolfe: If, you know, if you come to me and start hurting me, then that's where I would draw the line, right?
+[0:13:57] Constance Wolfe: So yeah, yeah, let's just have tolerance for each other and know that the greater good is We want to support a healthy human, like, and our environments or Earth, or we of the people of this Earth, I think, are fairly united.
+[0:14:11] Constance Wolfe: It's too bad that we have— and I'm sure, you know, whoever's watching us right now is just like, I don't know about this human experience experiment.
+[0:14:24] Constance Wolfe: I don't know.
+[0:14:26] Constance Wolfe: When you see the bots doing the same thing, it, you know, yeah, these chatbots are organizing themselves in a very similar way that we are.
+[0:14:35] Constance Wolfe: Yeah, so it's just crazy. Yeah.
+[0:14:39] Md. Tauhidur Rahman: Yeah, so like, uh, growing up I moved a lot, like between, like inside the country I moved a lot.
+[0:14:46] Md. Tauhidur Rahman: So like I have grown up somewhere, some in some state, then I moved.
+[0:14:50] Md. Tauhidur Rahman: My, uh, hometown is another state, my, uh, grandparents' state lives in another state, so I moved a lot.
+[0:14:58] Md. Tauhidur Rahman: So I have like, uh I have talked— like, I have grown up with many people around me.
+[0:15:03] Md. Tauhidur Rahman: So that's why I think that broadened up my, like, views on people.
+[0:15:08] Md. Tauhidur Rahman: But most of the people around us actually lives in a bubble, right?
+[0:15:12] Constance Wolfe: Mm-hmm.
+[0:15:14] Md. Tauhidur Rahman: Because I know that you move a lot, you talk to people a lot, and that actually helps us to understand people a lot better.
+[0:15:21] Md. Tauhidur Rahman: But whenever somebody who's living in, suppose, in one X place, and he's— he or she is living there for almost Like most of their life, they are living in a bubble, and that's another problem.
+[0:15:34] Md. Tauhidur Rahman: And in Bangladesh, although we have a good amount of people who are educated, we have more than 80% people who are above the literacy rate.
+[0:15:45] Md. Tauhidur Rahman: But the thing is, for me, education is not something that— education doesn't make you a human being.
+[0:15:53] Md. Tauhidur Rahman: You need to learn so many things to be a human being. Education is just a part and parcel of life.
+[0:16:00] Constance Wolfe: Yeah, I agree.
+[0:16:01] Constance Wolfe: I know that there's some countries like Israel is one of them, although they've gone off the rails, that you right out of high school, you serve for 2 years, like kind of like in a Peace Corps.
+[0:16:12] Constance Wolfe: I don't know if there's this Peace Corps. I think there's more of an army.
+[0:16:15] Constance Wolfe: But I think, you know, if every teenager after their, you know, their secondary education serves 2 years in the Peace Corps and they, like you said, they see other communities and how they live and It expands their— broadens their knowledge of how other people live.
+[0:16:31] Constance Wolfe: It makes them more tolerant, right?
+[0:16:33] Md. Tauhidur Rahman: Yeah, yeah.
+[0:16:34] Constance Wolfe: And, um, so it's too bad we don't have something like that. I'd love to have something like that.
+[0:16:38] Constance Wolfe: Yeah, yeah.
+[0:16:40] Md. Tauhidur Rahman: The best example is, I think, Singapore.
+[0:16:43] Md. Tauhidur Rahman: In Singapore, after you graduate from, like, from secondary school, you have to go for 2 years in army for this kind, this kind of, uh, peace camp in Singapore.
+[0:16:53] Md. Tauhidur Rahman: And Singapore is one of the most neutral countries I have ever seen because, like, uh, for, uh, 5 years of my life, I had to go to Singapore, live there for 1 or 2 months because my father used to live in Singapore and we used to live here.
+[0:17:06] Md. Tauhidur Rahman: So he, he used to, he used to take us there and we, I like, uh, each year I, I lived there roughly around 2 to 3 months and it's a really peaceful country.
+[0:17:18] Md. Tauhidur Rahman: Yeah, yeah, yeah.
+[0:17:22] Constance Wolfe: Okay, so, um, Vajoy just texted me, so I was just gonna look.
+[0:17:26] Constance Wolfe: He's, he was gonna work this weekend, so let me just look at his text really quick.
+[0:17:31] Constance Wolfe: Okay, so I've reviewed all the emails with the subject Week in Work, and I'm working through them.
+[0:17:36] Constance Wolfe: Okay, so the roll-up report filter changes are done.
+[0:17:40] Constance Wolfe: I'm now working on exporting individual sections of the promo details.
+[0:17:47] Constance Wolfe: After that, I'm working on versioning for sandbox promotions and promotions and keeping track of which version Okay, okay.
+[0:18:00] Constance Wolfe: So okay, just read.
+[0:18:15] Md. Tauhidur Rahman: Yeah.
+[0:18:15] Constance Wolfe: About he's so funny. I want to recall this yesterday. He was like, ah.
+[0:18:23] Constance Wolfe: Do you mind if I work this weekend? And I'm like, uh, no.
+[0:18:29] Md. Tauhidur Rahman: Bjoy is a gem of a guy because like if you, uh, like Ifti is a calm person, he's really calm person.
+[0:18:35] Md. Tauhidur Rahman: Bjoy is a gem of a guy. Like on my first, first day, first week on AIT, it's like I bonded with Bjoy.
+[0:18:43] Md. Tauhidur Rahman: Like it was so easy to bond with him. He's like, he's the, he's, uh, one year junior to me.
+[0:18:49] Md. Tauhidur Rahman: At age, but he's and he's and if he's one year senior than me, like he's one year elder than me.
+[0:18:56] Md. Tauhidur Rahman: Yeah. Okay. So yeah. So if he just sits right across me, like I can see him every anytime I move.
+[0:19:03] Md. Tauhidur Rahman: I can see if he if he is also a senior from my my university.
+[0:19:08] Constance Wolfe: So oh okay. Did you guys know each other in school?
+[0:19:12] Md. Tauhidur Rahman: No no no.
+[0:19:13] Constance Wolfe: Okay.
+[0:19:13] Md. Tauhidur Rahman: We made we like like when he graduated, I joined like I. joined university, so I didn't see him.
+[0:19:20] Md. Tauhidur Rahman: And I was— I, I am not from CSE.
+[0:19:23] Md. Tauhidur Rahman: Like, he, he, he was in the C— like, he was in the computer science faculty of computer science, and I was in, uh, electronic— electrical and electronics engineering.
+[0:19:32] Md. Tauhidur Rahman: So our faculty was different.
+[0:19:34] Md. Tauhidur Rahman: But Ifti is a really calm and composed guy, and Bijoy is like— he's, he's a fun-loving guy.
+[0:19:41] Constance Wolfe: What did you say? That Ifti is a what guy?
+[0:19:44] Md. Tauhidur Rahman: He's a calm and composed guy. Like, he's calm and composed. Yeah, he's like an elder brother.
+[0:19:51] Constance Wolfe: He's like what?
+[0:19:52] Md. Tauhidur Rahman: He's like an elder brother.
+[0:19:54] Constance Wolfe: Oh, gotcha.
+[0:19:55] Md. Tauhidur Rahman: Okay. Yeah, Bijoy is a typical, uh, like, uh, he's not— he's like the younger child.
+[0:20:02] Md. Tauhidur Rahman: Bijoy is like this.
+[0:20:04] Md. Tauhidur Rahman: Like, if you like see in a household there are 3 children, then if you would be the If you'd be the, like, like elder son and you would be the younger one.
+[0:20:16] Constance Wolfe: How old are you guys, if you don't mind me asking?
+[0:20:19] Md. Tauhidur Rahman: I'm 28. I'm, uh, I'm 29. I think Vijay is 28 and Ifti might be around 30.
+[0:20:27] Constance Wolfe: Okay, I wondered about that. Just curious. Okay, um, so I think he was just giving me an update.
+[0:20:33] Constance Wolfe: So it looks like he's Making some great headway on some things, so that's good.
+[0:20:41] Constance Wolfe: So I, I thank you for your link. What I just did is I threw it.
+[0:20:48] Constance Wolfe: I'll show you what I did because I have to do it this way to wrap my arms around it.
+[0:20:56] Constance Wolfe: I, I took your roadmap and I threw it in Claude so we could group it by module.
+[0:21:03] Md. Tauhidur Rahman: Yeah, so I was able to do that.
+[0:21:05] Md. Tauhidur Rahman: I was able to do that because, because like it, it's easier for them to go through and just put their estimation in one form.
+[0:21:14] Md. Tauhidur Rahman: If I break them, then it looks more like, uh, in one sheet it looks much more cleaner for them to like give estimation.
+[0:21:23] Md. Tauhidur Rahman: After taking estimation, I would have make them group, like I would group them.
+[0:21:29] Constance Wolfe: Okay, so this is— so I— what I just did, if you see my— this is the link that you provided.
+[0:21:35] Constance Wolfe: So I just downloaded this and then had Claude sort it.
+[0:21:38] Constance Wolfe: And then, so this is— that's same for me because I— there's no way for me to know if we've caught— if we caught everything, you know, for that needs to be done for every module.
+[0:21:50] Constance Wolfe: So one thing I was gonna ask you is I tried So in my— in the app, in Caboodle, I have a project called AIT, and in AIT I have our ticket list for your— the links that you've provided.
+[0:22:13] Constance Wolfe: It looks like these links are— oh, not this one. These links are broken.
+[0:22:18] Constance Wolfe: It's this one, compute dashboard. So if I click This one. Okay, so this— okay, okay.
+[0:22:24] Md. Tauhidur Rahman: So, uh, sorry, I'm so sorry. Like, I have to like update my Vercel, so I'm gonna do that.
+[0:22:30] Md. Tauhidur Rahman: I was, I was working on it because like I thought that you have given me feedback on the pipeline, right?
+[0:22:37] Md. Tauhidur Rahman: The tasking pipeline.
+[0:22:38] Md. Tauhidur Rahman: So yeah, so I, I was working on— like, I completed my work on it, so I was about to just, uh, push it on live, and then I saw it's broken.
+[0:22:48] Md. Tauhidur Rahman: So I was like, it would— it will take me Roughly 15 minutes to fix that. So that's why I paused.
+[0:22:55] Constance Wolfe: And so I was looking for my notes about pipeline that I sent you, and I spent 10 minutes looking for them.
+[0:23:03] Constance Wolfe: I can't find them. How did I deliver those to you?
+[0:23:06] Md. Tauhidur Rahman: Yeah, let me show you.
+[0:23:09] Constance Wolfe: Okay, thank you.
+[0:23:10] Constance Wolfe: Because I was like, I wanted to review that with you since we're going to be in person today.
+[0:23:15] Md. Tauhidur Rahman: Yeah, yeah.
+[0:23:16] Md. Tauhidur Rahman: Today I wanted to review the things you have to like wanted to discuss and I in the roadmap I deliberately didn't include one thing that is brand dashboard because like yesterday when we talked about the last week when we talked about Ask a Model, some of the scope have changed for the brand module, right?
+[0:23:35] Md. Tauhidur Rahman: So what I thought and I also talked with Sharier about that. the Ask a Buddle.
+[0:23:43] Md. Tauhidur Rahman: He was really excited about Ask a Buddle.
+[0:23:45] Md. Tauhidur Rahman: Like, we have monthly meeting and we talked about Ask a Buddle in that meeting also, and he was so excited.
+[0:23:51] Md. Tauhidur Rahman: So he said that, he said that yes, if we implement that kind of thing that people can pin their KPIs, pin their charts and graphs in dashboard, then we should hold the dashboard because the scope will be changed, right?
+[0:24:08] Md. Tauhidur Rahman: So I deliberately didn't include in the roadmap. Let me share my screen.
+[0:24:14] Md. Tauhidur Rahman: OK, so I'm sorry I have only one screen right now because like this is my home PC and my, my, my, my sister took another monitor of mine because I don't, I don't now, I don't like sit.
+[0:24:29] Md. Tauhidur Rahman: Yeah, you just gave me the updates on here. So the, for the pipeline, where's the pipeline? Yeah.
+[0:24:39] Md. Tauhidur Rahman: Pipeline.
+[0:24:40] Constance Wolfe: Sorry.
+[0:24:40] Md. Tauhidur Rahman: Whoa, not in this pipeline. Yeah, this one.
+[0:24:43] Constance Wolfe: Yeah, I couldn't find it. Okay, okay, let me— so that is on the Jira ticket track.
+[0:24:50] Constance Wolfe: Okay, so Jira ticket track I have open. Let me just look at that for a second.
+[0:24:55] Md. Tauhidur Rahman: Um, so yeah, what number is it?
+[0:24:57] Constance Wolfe: It's 1601. Yeah, okay, okay, let me just read this for a second.
+[0:25:02] Constance Wolfe: I was playing around with this and wanted to document that we might want a notes option at the top.
+[0:25:08] Constance Wolfe: You're okay. So let's— let me do this. I see it.
+[0:25:13] Md. Tauhidur Rahman: Can I show you something? Yeah. So I have updated it.
+[0:25:16] Md. Tauhidur Rahman: Like, now if you create one project, you can give a project name. Then you have a parent.
+[0:25:22] Md. Tauhidur Rahman: You can add a parent project, or it should be the top project. You can add it.
+[0:25:27] Md. Tauhidur Rahman: As you can see in the left side, I have incorporated your feedback.
+[0:25:31] Constance Wolfe: So you understood what I was trying to say.
+[0:25:33] Constance Wolfe: Like, within AIT, there might be 3 or 4 different segments that we have.
+[0:25:37] Constance Wolfe: So just having one AIT Yeah, it was a little challenging. So, okay. Yeah.
+[0:25:43] Md. Tauhidur Rahman: And you can also, you can add notes.
+[0:25:46] Constance Wolfe: Okay.
+[0:25:47] Md. Tauhidur Rahman: Yeah, I, I just, and in here you can see the project notes.
+[0:25:51] Md. Tauhidur Rahman: I'll talk with Iftikhar because I'm not a front-end guy. I just do it all like as a hobby.
+[0:25:56] Md. Tauhidur Rahman: So I have to fix it. And another thing is the calendar mode. You can also see like what's coming. Yeah.
+[0:26:03] Md. Tauhidur Rahman: So I got your feedback. Like I got the idea of your feedback and like Kind of improvised.
+[0:26:11] Constance Wolfe: So if you see how some things are scratched out, probably because they're done.
+[0:26:16] Constance Wolfe: Is there a filter that you can say, you know, show me done, show me to do?
+[0:26:21] Md. Tauhidur Rahman: Let me, let me take a note. OK, filter out.
+[0:26:27] Constance Wolfe: So you can just filter either, like I would say, completed tasks or to-do tasks, I think would probably be—
+[0:26:34] Md. Tauhidur Rahman: I was thinking, I was thinking about the Google Calendar.
+[0:26:37] Md. Tauhidur Rahman: Because like whenever you are like done with any kind of task, it's— it shows like this.
+[0:26:42] Md. Tauhidur Rahman: So most of us is like— most of us are well known about the Google Calendar and Microsoft Calendar.
+[0:26:49] Md. Tauhidur Rahman: That's why I use this layout.
+[0:26:51] Constance Wolfe: I like that. I just think it's going to get really crowded with a bunch of—
+[0:26:54] Md. Tauhidur Rahman: Yeah, yeah, yeah, yeah. If, if, if I have 100 or 200 tasks, then, then it's gonna be crowded.
+[0:27:01] Md. Tauhidur Rahman: And also in the list view, we have the What's overdue, what's done, and you can see like everything in here.
+[0:27:08] Md. Tauhidur Rahman: What's in the next 7 days, what's done, everything you'll be able to see. Yeah, yeah, yeah.
+[0:27:13] Constance Wolfe: Okay, so let me read my notes really quick while you're looking at that. Okay, so notes at the top.
+[0:27:22] Constance Wolfe: Since we can't add images for now, I'll show you on the next call. Okay, so I also wanna They know.
+[0:27:30] Constance Wolfe: Also wanted to note that we're looking for calendar. Perfect. Okay, sorry. More insights.
+[0:27:35] Constance Wolfe: Can we change this sidebar currently called Plans to Projects? Yep. Allow the user to create sub. Yep.
+[0:27:43] Constance Wolfe: Parent. You did that. The insight is that I organize myself. I'm trying to use this wireframe. Yeah.
+[0:27:51] Constance Wolfe: So what I— yeah. So what I did is I have my own way.
+[0:27:55] Constance Wolfe: I Organize myself, and I was looking at your pipeline trying to say, okay, this is how I would manage it.
+[0:28:01] Constance Wolfe: So that's why I wasn't coming up with these ideas. Okay, so for us to call the IT.
+[0:28:08] Constance Wolfe: Okay, yeah, this you caught everything.
+[0:28:11] Md. Tauhidur Rahman: Yes, and now you also can be able add pictures. Sorry, yeah, you can add pictures.
+[0:28:20] Constance Wolfe: Amazing, amazing, amazing, amazing.
+[0:28:23] Md. Tauhidur Rahman: Okay, so more— so I got the idea of your feedback and like I kind of knew that what you are trying to tell.
+[0:28:31] Md. Tauhidur Rahman: And this is the project note, you will be able to see all the project notes here.
+[0:28:34] Md. Tauhidur Rahman: I am just thinking if we have more than 5 or 6 notes, how should I organize it?
+[0:28:40] Md. Tauhidur Rahman: I was thinking about that. So like, uh, I will go— I'm gonna fix it.
+[0:28:44] Md. Tauhidur Rahman: I think I am— me, if then if I talk, I can figure out something. for the project notes.
+[0:28:49] Constance Wolfe: Yeah, I mean, I think like you have it like you expand it or, you know, you could expand or hide, you know, just like expand.
+[0:28:55] Md. Tauhidur Rahman: I was thinking about like this, uh, don't judge me, my Google Keep is really messy.
+[0:29:03] Md. Tauhidur Rahman: So like, oh no, this one is kind of good.
+[0:29:06] Md. Tauhidur Rahman: So the— I was thinking about like this, so it would be like this, and if somebody drops it down, they will be able to see the notes.
+[0:29:13] Md. Tauhidur Rahman: If they Like, like expand it, they will be able to see.
+[0:29:17] Md. Tauhidur Rahman: If they collapse it, they will not be able to see that.
+[0:29:19] Constance Wolfe: I think that's perfect. I think that's perfect.
+[0:29:24] Constance Wolfe: So what happens when you click the chevron on the overdue project, the top one, prep?
+[0:29:29] Constance Wolfe: There's a chevron on the very far right.
+[0:29:32] Md. Tauhidur Rahman: This one?
+[0:29:33] Constance Wolfe: No. Yeah, but go to all the way right. There's an arrow down.
+[0:29:38] Md. Tauhidur Rahman: Yeah, yeah.
+[0:29:40] Constance Wolfe: Okay, got you. Okay, so that is— are there multiple? Is that— oh, that's the details of that.
+[0:29:47] Md. Tauhidur Rahman: Details. Yeah, yeah, that's the details.
+[0:29:49] Md. Tauhidur Rahman: And if there is an image, it will be shown in here because like I'm using a really low-level language, it cannot render any image.
+[0:29:57] Constance Wolfe: Okay, great.
+[0:29:57] Constance Wolfe: So one thing we have never talked about, but I have, um, well, I kind of mentioned it to you, Ifdi, is within the system I would want sometimes to be able to move.
+[0:30:09] Constance Wolfe: Okay, so if you go to projects, look at the line between the word projects and 3 Q3 category reviews.
+[0:30:18] Constance Wolfe: There's a faint line in between the 2.
+[0:30:21] Constance Wolfe: Go up one, put your cursor kind of right in front of it, above project notes, right above project notes.
+[0:30:28] Constance Wolfe: It says Q3. Yes, that, that right there. Should we be able to move and size That column.
+[0:30:38] Md. Tauhidur Rahman: Okay. So you want—
+[0:30:39] Constance Wolfe: we don't have that in the system. Yeah.
+[0:30:42] Md. Tauhidur Rahman: You want something like this, right?
+[0:30:45] Constance Wolfe: Yes.
+[0:30:46] Md. Tauhidur Rahman: Yeah.
+[0:30:47] Constance Wolfe: Well, exactly. You know how you always want to move?
+[0:30:49] Constance Wolfe: Like, I always am moving columns in any program I have. Like, I'm always moving around columns.
+[0:30:54] Md. Tauhidur Rahman: Yeah.
+[0:30:54] Constance Wolfe: Yeah.
+[0:30:55] Md. Tauhidur Rahman: I also—
+[0:30:56] Constance Wolfe: we don't have that in Caboodle.
+[0:30:58] Md. Tauhidur Rahman: I'm just wondering why. Like typically my AI just like that, it's like this.
+[0:31:03] Md. Tauhidur Rahman: Yes, but sometimes I want like this, sometimes I want this to be bigger. Yes, yeah, yes, I got it.
+[0:31:10] Md. Tauhidur Rahman: But we don't have this thing in our system as far as I remember, so we have to talk with IFTTT if it's possible and how.
+[0:31:19] Md. Tauhidur Rahman: Like we need to— I think in this time we need to think about the effort versus the time, right?
+[0:31:26] Constance Wolfe: Yeah, yeah, I know. I just wondered, it seems like a universal thing that in most programs.
+[0:31:34] Constance Wolfe: I was just curious why we never implemented that.
+[0:31:36] Constance Wolfe: We can do it in some places in our platform, like we have it in a couple areas, but not all of them.
+[0:31:44] Constance Wolfe: But to me, it seems like it should be universal. But whatever, it's fine. I was just curious.
+[0:31:49] Md. Tauhidur Rahman: Yeah.
+[0:31:51] Constance Wolfe: Okay, so this looks great. So very well done. I don't have any more comments.
+[0:31:57] Constance Wolfe: I just need that when you fix that URL, if you could just send it to me.
+[0:32:00] Md. Tauhidur Rahman: Yeah, yeah, I'm just gonna email you. OK, OK, so most like, mostly I use a free service.
+[0:32:08] Md. Tauhidur Rahman: It sometimes goes down. I don't know why. And so I'm gonna fix it.
+[0:32:12] Constance Wolfe: OK.
+[0:32:14] Md. Tauhidur Rahman: So next thing we wanted, OK, I incorporate that.
+[0:32:18] Md. Tauhidur Rahman: Yeah, you wanted to discuss about retailer CRM, add store-level listing from banner page.
+[0:32:26] Md. Tauhidur Rahman: Let me open it. Yeah, you wanted to discuss about this one.
+[0:32:33] Constance Wolfe: Yeah, can I— can you go to the top again? Okay, so yeah, right down, brand modules, retailer CRM.
+[0:32:41] Constance Wolfe: Okay, add store-level listing from banner page.
+[0:32:45] Md. Tauhidur Rahman: Okay, Constance, can we record this meeting?
+[0:32:48] Constance Wolfe: I think I am. Let me just double check.
+[0:32:58] Md. Tauhidur Rahman: And quick update today, I was working on like I work today, I was thinking about Ask Kaboodle.
+[0:33:05] Md. Tauhidur Rahman: So what I'm gonna do on Monday's call, I think I would be able to show you some like documentation, like I would prepare a project recommendation.
+[0:33:13] Md. Tauhidur Rahman: Because like, uh, Ifti and Bijo wanted the whole scenario at first.
+[0:33:17] Md. Tauhidur Rahman: So I'm gonna draft it and first Bijo and Ifti is gonna review it.
+[0:33:22] Md. Tauhidur Rahman: If it's— if it goes with the system or not, then I think I'll be able to present it to you on Monday.
+[0:33:29] Constance Wolfe: Okay, that sounds great. So did you see the email that I sent to you about how we use it now?
+[0:33:35] Md. Tauhidur Rahman: Yeah, I have seen it.
+[0:33:36] Constance Wolfe: I mean, how I use—
+[0:33:37] Md. Tauhidur Rahman: Yeah, yeah.
+[0:33:39] Constance Wolfe: And how it would be helpful to just—
+[0:33:41] Md. Tauhidur Rahman: Yeah, I've seen it. I mean, yeah, okay.
+[0:33:43] Constance Wolfe: So it was like, if we could do that within Caboodle, it makes more sense than have to go outside to Claude.
+[0:33:48] Md. Tauhidur Rahman: Yeah.
+[0:33:48] Constance Wolfe: Okay. Thank God. Excuse me. Okay. So, okay, now I'm wrapping my head around this.
+[0:33:57] Constance Wolfe: So, so you had a question on this. What, what am I talking about?
+[0:34:02] Md. Tauhidur Rahman: Yeah, you wanted to discuss about like, we could integrate this in the white space report.
+[0:34:07] Md. Tauhidur Rahman: May not be white space report needs to be confirmed. This one.
+[0:34:11] Constance Wolfe: Yeah. Okay. So remember the whitespace report that we looked at that I created in Lovable?
+[0:34:17] Md. Tauhidur Rahman: Let's go in there. But I—
+[0:34:21] Constance Wolfe: go ahead and open it, but we can—
+[0:34:24] Md. Tauhidur Rahman: yeah. Yeah. This one.
+[0:34:40] Constance Wolfe: Yeah, is there a link to the lovable?
+[0:34:46] Md. Tauhidur Rahman: Link to the lovable? Oh, I forgot to link up the lovable.
+[0:34:50] Constance Wolfe: Okay, that's okay. Okay, so let me just pull that up.
+[0:34:55] Constance Wolfe: But before I— well, Okay, go back to the original, if you would.
+[0:35:06] Constance Wolfe: Go back to the original ticket that you had a question about.
+[0:35:14] Md. Tauhidur Rahman: This one?
+[0:35:15] Constance Wolfe: Yeah. Okay, so let me just look at that for a second. So this one says, can we— I am a brand in CRM.
+[0:35:25] Constance Wolfe: I want to see store-level reporting.
+[0:35:26] Constance Wolfe: So what really all this is referring to Is if you go to the app, or I can go to the app, either one, to the actual live app.
+[0:35:37] Constance Wolfe: Let me actually— let me drive. I think it might be easier for me to drive real quick.
+[0:35:40] Md. Tauhidur Rahman: Yeah. Stop sharing. I'm stopping sharing.
+[0:35:43] Constance Wolfe: Okay. All right. So let's do this. Okay.
+[0:35:52] Constance Wolfe: Let's do So there are times when a brand just kind of wants to have a high-level understanding of their business.
+[0:36:17] Constance Wolfe: And so retail— so the hierarchy is retailer, banner, and then store. Retailer.
+[0:36:22] Constance Wolfe: Retailers can have multiple banners.
+[0:36:25] Md. Tauhidur Rahman: Yeah.
+[0:36:25] Constance Wolfe: Banners can have multiple stores. And I think you— yeah, I think you know that.
+[0:36:30] Constance Wolfe: Okay, so these are the retailers, but sometimes within Fresh Thyme Market, I want to know specifically store-level data, right?
+[0:36:41] Constance Wolfe: And I can do that here in this distributor report.
+[0:36:47] Constance Wolfe: So what I was referring to is when you're as a user in here and you see Safeway Denver, and we know how many stores they have, 130 stores, but that's how many there are in total.
+[0:37:12] Constance Wolfe: It doesn't necessarily mean That this brand is in 130 stores.
+[0:37:17] Constance Wolfe: So if they want to know how many stores they're in, they kind of have to flip around and go in here and take a look at like, okay, what?
+[0:37:26] Constance Wolfe: And then they have to run this report and then blah blah blah.
+[0:37:29] Constance Wolfe: So my thought was like, is there a way to think about?
+[0:37:36] Constance Wolfe: So each we have here, we have the retailer and we have the banner. Is there one more level down?
+[0:37:42] Constance Wolfe: that you can see, okay, these are the stores at that banner that, you know what I'm saying?
+[0:37:48] Md. Tauhidur Rahman: Yeah.
+[0:37:48] Constance Wolfe: So it would be like one more level. And so I don't like, what would be the use case for that?
+[0:38:02] Constance Wolfe: I don't think there's really all that much a user would do with that information besides just knowing these are the stores that we're actively shipping to.
+[0:38:17] Constance Wolfe: It's probably a bigger— it's probably just the number.
+[0:38:21] Constance Wolfe: Do they really need to know the address and every single store they're in at this level?
+[0:38:27] Constance Wolfe: Probably not. But yeah.
+[0:38:30] Md. Tauhidur Rahman: So I found the lovable link.
+[0:38:33] Constance Wolfe: Okay.
+[0:38:34] Md. Tauhidur Rahman: Yeah.
+[0:38:34] Constance Wolfe: Okay. We should—
+[0:38:34] Md. Tauhidur Rahman: this one.
+[0:38:37] Constance Wolfe: Yeah.
+[0:38:38] Md. Tauhidur Rahman: So you, you were talking about this one, right?
+[0:38:41] Constance Wolfe: Are you sharing, or did you just—
+[0:38:43] Md. Tauhidur Rahman: Yeah, yeah, I've shared. I've shared. Yes, I've shared.
+[0:38:46] Constance Wolfe: Hang on a second, let me stop so I can see yours. Okay, go ahead.
+[0:38:51] Md. Tauhidur Rahman: You're talking about this one?
+[0:38:53] Constance Wolfe: I am talking about this one.
+[0:38:54] Constance Wolfe: So, um, okay, so, so in this case What we're looking at is, see at the top it says distribution center.
+[0:39:08] Constance Wolfe: It says warehouses and distribution center.
+[0:39:10] Md. Tauhidur Rahman: Yes.
+[0:39:11] Constance Wolfe: Yep.
+[0:39:12] Constance Wolfe: So what that's saying is that that box right below that that says Lehigh Valley, it's saying that they— there are 35 stores that they ship to, that warehouse ships to, but we're only in 2 of them.
+[0:39:30] Constance Wolfe: So what are the other 33 stores that we could potentially ship to?
+[0:39:36] Constance Wolfe: So I don't know that you actually need the address.
+[0:39:39] Constance Wolfe: I think it's just a way for us to understand that would be our next target, right?
+[0:39:46] Constance Wolfe: That we would want to get our products into those other stores. So Questions?
+[0:39:55] Md. Tauhidur Rahman: Yeah, I was thinking another thing. Like, we have 3 KPI cards here about these 3 warehouses.
+[0:40:00] Md. Tauhidur Rahman: If we have more than 3, then how should we accommodate those kind of thing?
+[0:40:06] Constance Wolfe: I was thinking. I think, yeah, I think you could just filter by what you want to look at.
+[0:40:15] Constance Wolfe: Yeah, that's my thought. Like, you don't need a KPI card for every single one.
+[0:40:20] Constance Wolfe: Maybe So let's go down a little bit and look at what's in the under store detail by warehouse.
+[0:40:32] Constance Wolfe: Yeah, yeah, yeah, there. Okay. So can you collapse that for a minute or roll it up?
+[0:40:40] Constance Wolfe: Do you know what I mean?
+[0:40:43] Md. Tauhidur Rahman: So what do you know?
+[0:40:45] Constance Wolfe: Okay, so see where it says Lehigh Valley on the left? Go down one. That— go down that.
+[0:40:52] Md. Tauhidur Rahman: No, go this one.
+[0:40:53] Constance Wolfe: That, that's what I want you to do. See how it's collapsed, or is it?
+[0:40:56] Md. Tauhidur Rahman: Yeah, yeah, yeah.
+[0:40:57] Constance Wolfe: Okay, so what if the KPI card is actually inside of that?
+[0:41:10] Md. Tauhidur Rahman: Yeah, that would be better. Like, if we have this, yeah, in here, that would be better. Much better.
+[0:41:15] Constance Wolfe: Yeah.
+[0:41:15] Md. Tauhidur Rahman: Yeah, so we're gonna have the list of warehouses.
+[0:41:17] Md. Tauhidur Rahman: If we expand those, we will be able to see the progress and everything in here.
+[0:41:22] Md. Tauhidur Rahman: Yeah, that would be much better.
+[0:41:29] Constance Wolfe: So I don't know that— so when I was looking at the CRM, that probably wouldn't be a part of the CRM that we were just looking at, right?
+[0:41:41] Constance Wolfe: This would probably be separate because the CRM is dealing with the banner.
+[0:41:46] Md. Tauhidur Rahman: Yeah.
+[0:41:48] Constance Wolfe: So this, I think, is where we need to focus because this would give them all this information. Yeah.
+[0:42:01] Constance Wolfe: And so this is where I get like, I don't think this is an Ask a Caboodle function.
+[0:42:05] Constance Wolfe: I think this needs to be a report.
+[0:42:08] Md. Tauhidur Rahman: This is— yeah, this needs to be a report.
+[0:42:10] Constance Wolfe: Yeah.
+[0:42:10] Md. Tauhidur Rahman: Because like if you like you, if we use Ask a Woodle, we need to ask every time we want to see this kind of stats, right?
+[0:42:18] Constance Wolfe: Yeah, exactly.
+[0:42:19] Md. Tauhidur Rahman: So it should be something static. They just click and go in there and see all of those stuffs. Yeah.
+[0:42:26] Constance Wolfe: So go ahead and scroll up a little bit. Scroll up.
+[0:42:31] Constance Wolfe: And then click the regional targets at the very top right. Yeah.
+[0:42:38] Constance Wolfe: And then do you understand this, this part?
+[0:42:46] Md. Tauhidur Rahman: Yeah, so we can sort by all regions, the regions you can filter by them. We can see all regions, so.
+[0:42:57] Md. Tauhidur Rahman: So I can.
+[0:43:01] Constance Wolfe: So what you're doing here is you're assigning if this is a target for you or not.
+[0:43:06] Md. Tauhidur Rahman: Yeah. So how many—
+[0:43:09] Constance Wolfe: And then if it is a target, if we did this many products and had a likelihood, yeah, then what would be the revenue?
+[0:43:18] Constance Wolfe: What's the size of the prize here?
+[0:43:20] Md. Tauhidur Rahman: Yeah.
+[0:43:21] Constance Wolfe: Yeah.
+[0:43:22] Md. Tauhidur Rahman: So this is like what I have like figured that this is some kind of predictions that what we can achieve if we push this amount of products to this amount of stores, then how much we are going to get from this deal.
+[0:43:43] Constance Wolfe: Exactly. Exactly. Everybody wants one of these.
+[0:43:47] Constance Wolfe: Nobody— I don't think anybody's got an easy report like this in the marketplace here.
+[0:43:54] Md. Tauhidur Rahman: Yeah, just can you tell me, like, I, I got this one like this, but can you tell me about this table, these 2, this table and KPIs?
+[0:44:04] Constance Wolfe: Yeah, so the first one is telling you that you're active, um, in 18,124 doors on the left.
+[0:44:13] Constance Wolfe: Yeah, and then you've got 25 doors that are approved, you've got 8,000 that are pending.
+[0:44:20] Constance Wolfe: Now that Information. Okay, so yeah, so we need to talk about this.
+[0:44:25] Constance Wolfe: Okay, so right now, can I share for a second?
+[0:44:31] Md. Tauhidur Rahman: Sure.
+[0:44:39] Constance Wolfe: See how we have a status for every item?
+[0:44:46] Constance Wolfe: So in that KPI card that you were looking at, it would be pulling from It would be pulling essentially from here because every, every retailer.
+[0:44:57] Constance Wolfe: So if I— it's kind of like pulling from here. It's so if I go brand item status.
+[0:45:05] Constance Wolfe: So this report here lists every single brand, every single retailer, and every single item with a status.
+[0:45:15] Constance Wolfe: So that KPI card that you were looking at is Is this information.
+[0:45:25] Constance Wolfe: So you can go back to yours if you want.
+[0:45:27] Constance Wolfe: So I wanted you to understand what— does that now make more sense?
+[0:45:31] Md. Tauhidur Rahman: Yeah, yeah. Now it makes more sense.
+[0:45:35] Constance Wolfe: So let's look at it for a second because I do have a question about it. Yeah.
+[0:45:44] Constance Wolfe: So what's not on here Then is, oh, targeted. There's targeted. Yep, on the far right.
+[0:45:50] Constance Wolfe: Because then it's like, okay, here's the current status of everything.
+[0:45:54] Constance Wolfe: And then within each region, what are we targeting? And that's what's below.
+[0:46:00] Constance Wolfe: So this is then a KPI report of what is actual in the system.
+[0:46:05] Constance Wolfe: And then given this information, what are we going to target?
+[0:46:10] Md. Tauhidur Rahman: Yes.
+[0:46:11] Constance Wolfe: So it's like, okay, well, let's pick what we want to target. And then you do that below.
+[0:46:14] Md. Tauhidur Rahman: This is something We are currently having like these things we are currently have right now, and if the target is fulfilled, then we are gonna have these, right?
+[0:46:26] Constance Wolfe: Yeah, if we're targeting something. Yeah, exactly.
+[0:46:29] Md. Tauhidur Rahman: So like if if I change another target, I think yeah, he's showing right now. Yeah.
+[0:46:40] Md. Tauhidur Rahman: So the approved is doing.
+[0:46:44] Constance Wolfe: What is the 16? What does the 16 represent?
+[0:46:48] Md. Tauhidur Rahman: Yeah, that's what I'm trying to figure out. It's more like, yeah, this—
+[0:46:52] Constance Wolfe: they have 16 doors. Yeah, targeted doors.
+[0:46:55] Md. Tauhidur Rahman: Yeah, okay, targeted doors. Yes.
+[0:46:58] Md. Tauhidur Rahman: So if, if we increase it, then— but it will not— should not show 16 because like if the likelihood Like the total.
+[0:47:10] Md. Tauhidur Rahman: Yes, if I change this, if I change this, then, then the book is changed. Yeah, yeah, changed.
+[0:47:19] Md. Tauhidur Rahman: Yeah, Lovable is really a crazy thing.
+[0:47:23] Md. Tauhidur Rahman: Yeah, like this logic takes a lot to make, but somehow they figure— like Lovable figures it, figures every logic out.
+[0:47:36] Md. Tauhidur Rahman: Yeah.
+[0:47:36] Constance Wolfe: So go ahead.
+[0:47:38] Md. Tauhidur Rahman: Yeah, got it.
+[0:47:42] Constance Wolfe: So let's look at something. Okay, so keep this in your head and let me share something.
+[0:47:46] Md. Tauhidur Rahman: Yeah, yeah, sure.
+[0:47:49] Constance Wolfe: So with that in mind, right now as a brand, I have, um, a retail report.
+[0:48:02] Constance Wolfe: So this retail report is exactly what you were looking at.
+[0:48:05] Constance Wolfe: So I'm just zucchini, and these are all— this is again every item, every status, every store.
+[0:48:15] Constance Wolfe: So would this be a logical place to have that KPI that says active, pending, commit?
+[0:48:25] Constance Wolfe: Like That we were just looking at at the very top.
+[0:48:28] Md. Tauhidur Rahman: Yeah.
+[0:48:29] Constance Wolfe: Don't you think we need a KPI here? Like, this is tough to look at.
+[0:48:32] Md. Tauhidur Rahman: Like, yes, I think, I think for if you, if you ask me about, like, I think every, uh, this kind of report should have at least some KPI cards regarding this report.
+[0:48:44] Md. Tauhidur Rahman: Like, because, like, it's really hard to look at because, like, if you, if you're like, like, if you want a top-down view, like a really high-level view, what's going on, it's really hard to see this report and figure out what's happening.
+[0:48:58] Md. Tauhidur Rahman: Rather than if we have— if we have some KPI cards, they have to just go in there and see, okay, we are doing this like this.
+[0:49:04] Md. Tauhidur Rahman: It's much more easier because in like, uh, I was in another project and they also had this kind of, uh, reports about their products.
+[0:49:15] Md. Tauhidur Rahman: And now currently we are working on like giving KPI cards in all of those reports because like it's really hard for them.
+[0:49:22] Md. Tauhidur Rahman: Like they don't actually see these reports regularly.
+[0:49:26] Md. Tauhidur Rahman: They only download it in the month and check it.
+[0:49:28] Md. Tauhidur Rahman: But day to day, they just need some numbers that we— if we are achieving our targets or not.
+[0:49:33] Md. Tauhidur Rahman: And if they have the KPI card, it would be easier for them to see.
+[0:49:37] Md. Tauhidur Rahman: So I think for each of this kind of report, we need some KPI cards.
+[0:49:41] Constance Wolfe: So the one that we were just looking at in Lovable, I think would make the most sense here, right?
+[0:49:45] Constance Wolfe: Because that's what this is. Yes.
+[0:49:48] Constance Wolfe: So, and we kind of tried to do that a little bit like with this report, the sales tracker, but I don't really love it either.
+[0:49:56] Constance Wolfe: Like, this is kind of telling you that for all of the Submit Atlantic, these are all the stores.
+[0:50:03] Constance Wolfe: So this is telling you that, you know, at Mother's that you have some that are active, some that are pending, that kind of thing, and you can click it and see it.
+[0:50:14] Constance Wolfe: But I don't love this report because even with this, you still need the KPI at the top that shows you how many are active, how many are pending.
+[0:50:24] Md. Tauhidur Rahman: Yes.
+[0:50:25] Constance Wolfe: Like it tells you here, but so for that report that we just looked at, I think those KPIs on it work.
+[0:50:35] Constance Wolfe: And then the question is, do we create the that white space report, where does that go? So, um, yeah.
+[0:50:43] Md. Tauhidur Rahman: So, OK, so what I'm gonna do, so on that brand module retailer CRM, so we like, if we can incorporate the white space or not, we need to actually see that, right?
+[0:50:55] Md. Tauhidur Rahman: So I'm gonna discuss with Pjoy and how can we incorporate it, but I think we need to add some KPIs, KPI card, those kind of thing in here.
+[0:51:03] Constance Wolfe: Yeah, can you share your screen? Yes, you with the tickets that you have questions about.
+[0:51:10] Constance Wolfe: Back to that.
+[0:51:10] Constance Wolfe: So you're saying, do we need to do then an audit and look at the reports and provide KPI cards for all the reports in Kaboodle?
+[0:51:21] Md. Tauhidur Rahman: Yeah, but do we currently need that?
+[0:51:24] Md. Tauhidur Rahman: No, it's more like a, like if I think about like a, like Do you know about them?
+[0:51:31] Md. Tauhidur Rahman: Like Moscow prioritization. So what is Moscow prioritization? Prioritization.
+[0:51:38] Md. Tauhidur Rahman: Let me show you this thing. Must have, should have, could have, won't have.
+[0:51:50] Constance Wolfe: Okay. Yeah.
+[0:51:51] Md. Tauhidur Rahman: Yeah.
+[0:51:51] Constance Wolfe: Okay.
+[0:51:52] Md. Tauhidur Rahman: So like, is it must have right now?
+[0:51:56] Md. Tauhidur Rahman: So that, that though, that what I'm— I was thinking, because like we already have the report.
+[0:52:00] Md. Tauhidur Rahman: So the thing is, I think we should first focus on the must-haves right now.
+[0:52:07] Md. Tauhidur Rahman: So if we have the must-haves, then it would be easier for you to hook the clients.
+[0:52:10] Md. Tauhidur Rahman: Then you, you would say that we are going to add this, this, this.
+[0:52:13] Md. Tauhidur Rahman: Then after that, we are going to enhance this, like the reports with the KPI cards and everything.
+[0:52:19] Constance Wolfe: Okay.
+[0:52:20] Md. Tauhidur Rahman: I was thinking about that. It's, it's up to you.
+[0:52:23] Md. Tauhidur Rahman: And yes, but I— yes, I think that every report should Have KPI card.
+[0:52:29] Constance Wolfe: Like it would be easier for anyone. We should have a report without a KPI card.
+[0:52:32] Constance Wolfe: It just makes us look not good in comparison because everybody has it.
+[0:52:36] Md. Tauhidur Rahman: Yeah, yeah.
+[0:52:36] Constance Wolfe: So if we go to market without it, it's yeah, it's not good because they would have to take the data, export it, and format it themselves, right?
+[0:52:45] Constance Wolfe: And so then it's like, what's the point? Yes.
+[0:52:48] Constance Wolfe: But I have to tell you, but step one actually was getting all of the information in the same place because that still doesn't exist.
+[0:52:56] Constance Wolfe: We've still accomplished. the multiple spreadsheets in one place. Like, that has been done.
+[0:53:04] Constance Wolfe: Now that we have that, now we need to present the data in a way that consumers are used to consuming data.
+[0:53:10] Constance Wolfe: So anyway, go ahead. Yeah.
+[0:53:14] Md. Tauhidur Rahman: So in these—
+[0:53:15] Constance Wolfe: So do you have what you need on that? Then regarding the ticket, what are we going to do?
+[0:53:18] Constance Wolfe: So I don't think— yeah, I don't think we need to add store-level listing in the banner page in the retailer CRM.
+[0:53:26] Constance Wolfe: Honestly, after reviewing this, I think we just need some KPIs on the report.
+[0:53:45] Md. Tauhidur Rahman: Yeah.
+[0:53:45] Constance Wolfe: Okay.
+[0:53:50] Md. Tauhidur Rahman: So this is the dashboard one. We have also already talked about it. Yeah, this one, this one.
+[0:53:58] Md. Tauhidur Rahman: So and on the— so in here you have said that can we add calendar view? Think like Google Calendar.
+[0:54:07] Md. Tauhidur Rahman: So for this one, so I'm gonna update this one also. Like I was like currently working on that.
+[0:54:13] Md. Tauhidur Rahman: So after finishing it, I will also send you in the email like this total thing, this broker dashboard calendar view and plus this Task.
+[0:54:22] Md. Tauhidur Rahman: OK, so I'm on it.
+[0:54:23] Constance Wolfe: Just make that note that you're working on it. You just put it in the notes there.
+[0:54:27] Md. Tauhidur Rahman: Yeah. I'll be able to send you by tonight.
+[0:54:32] Constance Wolfe: OK, great.
+[0:54:33] Md. Tauhidur Rahman: Yeah, I was just, I was just waiting for my AI to like, I have exhausted my token.
+[0:54:40] Constance Wolfe: Yeah, yeah.
+[0:54:41] Md. Tauhidur Rahman: 8 PM. After that I will be able to do it.
+[0:54:43] Constance Wolfe: No problem.
+[0:54:44] Md. Tauhidur Rahman: Yeah.
+[0:54:46] Md. Tauhidur Rahman: So these are, this one if we have done and You have an example for this one, exported to— for this one.
+[0:54:55] Md. Tauhidur Rahman: Let me open.
+[0:54:58] Md. Tauhidur Rahman: Yeah, so you have said you have an example for this one, promotional management export to formatted report, this one.
+[0:55:04] Constance Wolfe: OK, let me pull it up.
+[0:55:08] Md. Tauhidur Rahman: Yeah, let me stop sharing my screen. OK.
+[0:55:14] Constance Wolfe: That is called What was it? A promo management export?
+[0:55:20] Md. Tauhidur Rahman: It was promotional management export to formatted report.
+[0:55:26] Constance Wolfe: There it is. Okay, let me just open it. So I'll share.
+[0:55:49] Constance Wolfe: So what happens now is if you go to the broker dashboard and go to promo management and you want to— oops, sorry— you want to export It looks like this.
+[0:56:18] Constance Wolfe: I'm just wondering if when we export it, it could look— so what I've done here is I've grouped everything like this is your retailer information.
+[0:56:30] Constance Wolfe: This is your brand lovely details, like all the event details. This is all about pricing here.
+[0:56:38] Constance Wolfe: And then this is all your distributor information.
+[0:56:40] Constance Wolfe: It's not that big of a deal, but when you export it now, it, it just, you gotta, I'd say you're gonna spend 10, 15 minutes getting it organized so you could actually use it.
+[0:56:54] Md. Tauhidur Rahman: Yeah.
+[0:56:55] Constance Wolfe: I don't know if that's a legitimate concern or not, but This is instantly easier to understand what's going on.
+[0:57:11] Constance Wolfe: What are your thoughts?
+[0:57:13] Md. Tauhidur Rahman: Yeah.
+[0:57:15] Constance Wolfe: It could be that this is when you're in here.
+[0:57:25] Constance Wolfe: So what happens is The users in here looking at all of this information, and they can't really use it until they export it, because if their job is to submit, like, let's say, let's say this is, this is how they use it.
+[0:57:51] Constance Wolfe: This is an administrative task, and this administrator is responsible for Taking the information here and actually submitting the paperwork to the retailer, which is Denver Safeway.
+[0:58:05] Constance Wolfe: So if they're like, okay, I need to submit all my brands to Denver Safeway, so I'm going to type in Denver.
+[0:58:19] Constance Wolfe: And so these are all my brands that have promotions for Denver.
+[0:58:26] Constance Wolfe: And I need to concentrate on the August. So these are all August.
+[0:58:32] Constance Wolfe: So this is not enough information to actually fill out the paperwork so that they could submit it.
+[0:58:39] Constance Wolfe: So if, but if they export it, they get all of this other information that they need right here.
+[0:58:49] Constance Wolfe: So they can just kind of copy and paste.
+[0:58:51] Constance Wolfe: So they're going to take the information here and copy and paste it.
+[0:58:54] Constance Wolfe: And put it on the retailer's submission form.
+[0:58:58] Md. Tauhidur Rahman: Yeah.
+[0:58:59] Constance Wolfe: But if they export it, this, this, they, they get the information they need, but it's still, they're still gonna have to mess around with it.
+[0:59:06] Constance Wolfe: So I guess the question is, yeah, I'm just trying to give them an easier way to look at this information.
+[0:59:20] Constance Wolfe: I don't know.
+[0:59:21] Md. Tauhidur Rahman: Can we, can we, can we export in this manner?
+[0:59:24] Md. Tauhidur Rahman: We have like, we need to check because like, I think of this formatted export, I have like, I have to check with them.
+[0:59:33] Md. Tauhidur Rahman: Like, can we do this or not?
+[0:59:36] Constance Wolfe: I'm not sure.
+[0:59:37] Constance Wolfe: Well, what I'm thinking, if they built the report, it's almost like they need to Like, instead of export, it's like you would click a button that would say build report, or there's somewhere in here that, that already builds it like this.
+[0:59:59] Constance Wolfe: I mean, we've got— obviously we have the data, right? It's right here.
+[1:00:03] Md. Tauhidur Rahman: Yeah.
+[1:00:03] Constance Wolfe: So does this then push within Caboodle?
+[1:00:08] Constance Wolfe: Like, is there— should we just have a report maybe Maybe it's a submission report.
+[1:00:14] Constance Wolfe: Like maybe from here, you you filter everything you need, and then you and then you click submission report.
+[1:00:23] Constance Wolfe: And then when you click that, it actually does this within Kaboodle.
+[1:00:30] Md. Tauhidur Rahman: Yeah.
+[1:00:31] Constance Wolfe: And then you could export it because then it would be. I don't know. I don't know. I'm just trying to.
+[1:00:40] Constance Wolfe: Make that a little more user-friendly. So back to your hierarchy, I guess it's not that high.
+[1:00:51] Constance Wolfe: I guess what the administrator would do is just have to take this information and filter it themselves because all the information's there.
+[1:01:02] Constance Wolfe: So in your Moscow, I guess this is probably a lower priority.
+[1:01:07] Constance Wolfe: Now that I— because at least you have the information, but it would be nice someday to have a report that's a little easier to look at.
+[1:01:14] Md. Tauhidur Rahman: Yeah, I, I think we have all the data, everything. We just have to accommodate it in one Excel.
+[1:01:22] Md. Tauhidur Rahman: But I think with the colorful formatting is kind of not possible, but we can put everything in one Excel.
+[1:01:28] Md. Tauhidur Rahman: But I still have to talk with Bijoy because it's mostly backend task.
+[1:01:32] Constance Wolfe: What we do, to be clear, that is the same report.
+[1:01:35] Md. Tauhidur Rahman: Yeah.
+[1:01:36] Constance Wolfe: So we, we already do it.
+[1:01:37] Constance Wolfe: So if what you're saying is like, hey, just make sure it's in that Excel, it is in the Excel.
+[1:01:42] Constance Wolfe: I just had to format it a little.
+[1:01:44] Constance Wolfe: I had to throw a table on it and do some color coding and stuff like that. So, um, yeah.
+[1:01:49] Md. Tauhidur Rahman: So then I just have to— I don't— I think then I don't have to talk with Bjoy.
+[1:01:53] Md. Tauhidur Rahman: Just, just I have to check that we— if we can export colored Excel or not, because like for Excel exporting we use some libraries.
+[1:02:04] Md. Tauhidur Rahman: If the library supports it or not, we have to— I have to check. That's it.
+[1:02:08] Constance Wolfe: Okay.
+[1:02:09] Md. Tauhidur Rahman: Yeah. So I'm sharing my screen again. Yeah. So this one is done. I got it. Just mark it.
+[1:02:24] Constance Wolfe: Do you want me to send you that? Or put it somewhere?
+[1:02:28] Md. Tauhidur Rahman: Yeah, yeah, yeah, yeah, the, the— you, you can send me the formatted report.
+[1:02:33] Constance Wolfe: Do you want me to just put it in that Caboodle collaboration file?
+[1:02:36] Md. Tauhidur Rahman: Yeah, sure. Okay, that would be great. Uh, reports, Brandi. Yeah, this one.
+[1:02:53] Constance Wolfe: OK, report. Which one? OK. Yeah, it's—
+[1:02:57] Md. Tauhidur Rahman: let me zoom in. Yeah, reports, brand broker market overview, short function, date time doesn't work.
+[1:03:06] Md. Tauhidur Rahman: It's more like an issue and you said if I don't know if we need this report anymore or not.
+[1:03:17] Constance Wolfe: Brand reports, brand. I'm just trying to figure out where it is.
+[1:03:20] Constance Wolfe: Brand broker market overview, brand broker market overview.
+[1:03:25] Constance Wolfe: Let me go to that brand broker market overview. Oh yeah, okay.
+[1:03:40] Constance Wolfe: Well, I think we said we were going to do something different with this report.
+[1:03:42] Constance Wolfe: That's why I'm asking. So can I share my screen?
+[1:03:53] Md. Tauhidur Rahman: Sure.
+[1:03:53] Constance Wolfe: This is the broker market overview. Remind me what my notes say.
+[1:04:00] Md. Tauhidur Rahman: You said that I don't know if we need this report anymore. Let's discuss.
+[1:04:09] Constance Wolfe: But what was the original? What's it— what's the original issue?
+[1:04:13] Md. Tauhidur Rahman: Uh, report, reports, brand broker market overview, sort function, datetime doesn't work.
+[1:04:21] Constance Wolfe: Okay, yeah, so what I'm saying is that in this report, it sounds like this doesn't work. Datetime. Oh.
+[1:04:37] Constance Wolfe: Probably because we don't have the date and the time on here.
+[1:04:40] Md. Tauhidur Rahman: Yeah.
+[1:04:42] Constance Wolfe: So that's the issue.
+[1:04:45] Constance Wolfe: But I think what I was saying is, don't we have a mockup somewhere of what we're going to do with this report?
+[1:04:57] Constance Wolfe: The market overview report.
+[1:04:59] Constance Wolfe: I thought we— the reason why I said I don't know if we need this anymore, because I think we're looking at So this is what Ornov worked on.
+[1:05:13] Constance Wolfe: So this would be a similar— because see how this says SKUs presented, active placements declined?
+[1:05:21] Md. Tauhidur Rahman: Yeah.
+[1:05:21] Constance Wolfe: If you look in the current one, that's what this is telling you.
+[1:05:26] Constance Wolfe: Active declined pending SKU status by By retailer.
+[1:05:32] Constance Wolfe: So I think what Ornov is trying to come up with is— so, so here's your brand, here's your, you know, your regions or what have you.
+[1:05:40] Constance Wolfe: And then he's come up with all of these KPI cards.
+[1:05:45] Constance Wolfe: He even came up with that retail performance scorecard.
+[1:05:48] Constance Wolfe: This looks a lot like what we just looked at in Lovable.
+[1:05:52] Md. Tauhidur Rahman: Yeah.
+[1:05:52] Constance Wolfe: Have you seen this?
+[1:05:58] Md. Tauhidur Rahman: Report? I think, yeah. Yes, I have seen this. Okay.
+[1:06:04] Constance Wolfe: So I think that's why I'm like, I'm not sure.
+[1:06:07] Constance Wolfe: It looks like we might be over— so if the issue is this, what I'm saying is, well, if we're overhauling the whole thing anyway, don't worry about it is what I'm saying.
+[1:06:18] Md. Tauhidur Rahman: So That's that.
+[1:06:26] Constance Wolfe: Yeah. I do think we need— it's the same scenario.
+[1:06:28] Constance Wolfe: We do need KPI cards here because it's too hard to do anything with.
+[1:06:33] Md. Tauhidur Rahman: I don't think we need KPI because there is not too many data for each because there are so many stores and the banners.
+[1:06:45] Md. Tauhidur Rahman: Yeah. It would be hard.
+[1:06:46] Constance Wolfe: Well, we need this. We do need this. I think we need this.
+[1:06:50] Md. Tauhidur Rahman: Yes, we need this. Capital market intelligence. Yeah.
+[1:06:58] Constance Wolfe: I don't know. So I'm supposed to study this and kind of— so I haven't done that yet.
+[1:07:02] Constance Wolfe: I was going to do that today. Yeah. But that's what that is.
+[1:07:11] Constance Wolfe: That's why I said I'm not sure if we need to, if we're going to change it, you know.
+[1:07:15] Md. Tauhidur Rahman: Yeah, so it was like if we implement this one, the one you're showing me right now, if we implement this one, so it actually— that's the question.
+[1:07:26] Md. Tauhidur Rahman: Do you need— do we need to implement that on the report or not?
+[1:07:29] Md. Tauhidur Rahman: Because like, although also that there is— as there is no dates or time, the SORT function will not work, right?
+[1:07:40] Constance Wolfe: Well, OK. I'm glad you said that. The date and the time.
+[1:07:43] Constance Wolfe: So what this needs to serve as— so maybe that's what I was going to think about the report.
+[1:07:51] Constance Wolfe: What's happening with this is that this is the broker summary of the activities that they're doing for Zucchini Beanie, right?
+[1:08:01] Constance Wolfe: Yeah. So Zucchini Beanie is the brand, and this is the broker telling the brand what they're doing.
+[1:08:06] Constance Wolfe: They went into AJ's and they presented these items. These items, this item was declined.
+[1:08:12] Constance Wolfe: This item is, they're thinking about it, right?
+[1:08:17] Constance Wolfe: So as a user, you want to know what happened last month. What did my brokers do last month?
+[1:08:26] Constance Wolfe: And so right here, there's no way to select. There used to be.
+[1:08:30] Constance Wolfe: I don't know what happened to it, but there used to be a time here that you could Say, okay, what happened last month?
+[1:08:38] Constance Wolfe: What happened in January? What happened in February? So that's, that's the time thing.
+[1:08:42] Constance Wolfe: See how the fact that it has it here?
+[1:08:45] Md. Tauhidur Rahman: Yeah.
+[1:08:46] Constance Wolfe: Tells you that it used to exist. I don't know where it went.
+[1:08:49] Constance Wolfe: But that's what we— so if you go back to this, then we still need to be able to say what happened last month, what happened, you know, there still needs to be a time element to this.
+[1:09:04] Constance Wolfe: That's what it's for.
+[1:09:05] Constance Wolfe: That's what this is for, is to tell the brand what the broker did in a given period of time.
+[1:09:15] Md. Tauhidur Rahman: Yeah.
+[1:09:18] Constance Wolfe: So worst case scenario, if we're not going to implement this, we at least need to put in a time here.
+[1:09:24] Constance Wolfe: So we do need that ticket. And I think that this is where it's like, well, let's get that fixed now.
+[1:09:30] Constance Wolfe: That's a must-have. And then maybe this is the nice have.
+[1:09:35] Md. Tauhidur Rahman: Yes.
+[1:09:35] Constance Wolfe: Yeah. So go ahead and keep that.
+[1:09:37] Constance Wolfe: I guess I was just thinking if you're— if we're gonna build this now, it's mute.
+[1:09:41] Constance Wolfe: But if it's gonna be a while before we can build that report, let's fix the time.
+[1:09:46] Md. Tauhidur Rahman: Yes.
+[1:09:47] Constance Wolfe: Okay.
+[1:09:53] Md. Tauhidur Rahman: This one. So this is done.
+[1:09:59] Md. Tauhidur Rahman: This one, reports, sales tracker, back button returns to international region.
+[1:10:06] Md. Tauhidur Rahman: This is kind of an issue. So we maybe, we maybe replace this report. Let's discuss.
+[1:10:14] Constance Wolfe: Yeah, so that's that one I'll share. Can you let me share?
+[1:10:22] Md. Tauhidur Rahman: Yeah.
+[1:10:32] Constance Wolfe: This is the sales tracker.
+[1:10:34] Constance Wolfe: I think what I'm saying is if I go here and look at this, like this is telling us what's active and not active, and I go back, I was in here and it takes you here.
+[1:10:48] Constance Wolfe: Oh, and there's nothing even in there. So that's what that issue is.
+[1:10:51] Constance Wolfe: So if I go to— if I go to National, click this, I see Amazon. I go back, um, it just goes here.
+[1:10:59] Constance Wolfe: It should go back to this. Yeah, what was opened last.
+[1:11:04] Md. Tauhidur Rahman: So I think we need to fix this issue. I think this is an issue.
+[1:11:08] Constance Wolfe: Yeah, right.
+[1:11:09] Md. Tauhidur Rahman: Yeah, yeah, that's that. Yeah, so now let's go to the next one screen.
+[1:11:21] Constance Wolfe: Yeah. But I guess what I'm saying is I don't like that sales report, so I do want to change it.
+[1:11:25] Constance Wolfe: Yeah, so yeah, go ahead.
+[1:11:29] Md. Tauhidur Rahman: So we're gonna have this one. Okay, and now this brand distributor report.
+[1:11:36] Md. Tauhidur Rahman: Should user be able to export data at least The admin should be able to, but we may be able to in the data mapping.
+[1:11:46] Md. Tauhidur Rahman: Let's review and discuss.
+[1:11:49] Md. Tauhidur Rahman: So I have seen this one, but yes, I think admin should export this data, should be able to export this data.
+[1:11:58] Constance Wolfe: Brand distributor report. Oh. We already have that. That's been fixed. Yeah, that's done.
+[1:12:07] Md. Tauhidur Rahman: Yeah, this has been done. It's done. Yeah, it's been done. So I'm gonna fix it.
+[1:12:14] Md. Tauhidur Rahman: So there's— and this one, store report management, STM house account direct to store program tracking.
+[1:12:21] Md. Tauhidur Rahman: This one was— we have discussed this one. If I—
+[1:12:26] Constance Wolfe: Let's hold on this one. We're gonna hold on this one.
+[1:12:31] Md. Tauhidur Rahman: We're gonna hold on this one. Yes, like last— as we last discussed on that meeting.
+[1:12:36] Md. Tauhidur Rahman: Like you have explained me and Nifty, and Nifty told that let's hold on this.
+[1:12:40] Md. Tauhidur Rahman: We have to do some R&D and check some things.
+[1:12:43] Constance Wolfe: Yeah.
+[1:12:45] Md. Tauhidur Rahman: And last, this one. Constance, can you give just 1 minute? I'm just having a call. Can I receive?
+[1:12:53] Constance Wolfe: Yeah, I'm gonna run. I'm gonna go get some more coffee. I'll be right back.
+[1:12:56] Md. Tauhidur Rahman: Okay, sure, sure.
+[1:15:33] Constance Wolfe: Hey, I'm back. I don't know if you are.
+[1:15:34] Md. Tauhidur Rahman: Yeah, I'm back.
+[1:15:38] Constance Wolfe: Okay, let me read what—
+[1:15:39] Md. Tauhidur Rahman: do you, do you brew coffee?
+[1:15:43] Constance Wolfe: I do, yeah. Wow, wow, that's easy. Yeah. Okay, let me just look at what he's saying really quick.
+[1:15:50] Constance Wolfe: Okay, so in our last meeting yesterday, we discussed actualizing promos.
+[1:15:54] Constance Wolfe: Currently, the process requires creating your copy. Oh, got you.
+[1:15:57] Md. Tauhidur Rahman: Okay, this one.
+[1:15:58] Constance Wolfe: Yes, yes, yes, yes. That's fine. Okay, sorry. Now I'm back. Yeah, actualized promos.
+[1:16:12] Constance Wolfe: Oh, well, I was just— that's what I was just talking to Bijoy about. So, but that's one thing.
+[1:16:17] Constance Wolfe: But here's— did I do a lovable link on that?
+[1:16:22] Md. Tauhidur Rahman: Let me check. Brand module. Sorry. This zoom bar. Yeah, band module. And sorry, this one.
+[1:16:40] Md. Tauhidur Rahman: This one is TSS actualized promotion. TSS actualized promotion. No, no, not available.
+[1:16:50] Constance Wolfe: Actualized promotions. It's row 93. What does that say? Okay. Okay, let me share my screen then.
+[1:17:00] Md. Tauhidur Rahman: Yeah, sure.
+[1:17:08] Constance Wolfe: I'm gonna pull it up first and make sure I got the right one. Yes. Okay.
+[1:17:25] Constance Wolfe: So there's 2 components to this.
+[1:17:30] Constance Wolfe: One is how to actually actualize, like, how do we get the information in the system?
+[1:17:48] Constance Wolfe: So right now we make these predictions, right?
+[1:17:56] Constance Wolfe: And we say that for this account, that down here, this promotion is going to generate a 20% lift, right?
+[1:18:10] Constance Wolfe: And it's going to produce 2.5 unit sales, you know, it's going to sell 2.5 units per store per week, average weekly sales.
+[1:18:23] Constance Wolfe: So then we actualize this information.
+[1:18:27] Constance Wolfe: So what's the best way to say this is what we thought was going to happen and what actually happened?
+[1:18:33] Constance Wolfe: So here you can kind of see, you know, this is The planned was $4,902. The actual was $6,307.
+[1:18:47] Constance Wolfe: What's the differential? You know, what's the difference between the 2?
+[1:18:50] Constance Wolfe: So this is not how you got the information in here.
+[1:18:54] Constance Wolfe: Like, how do you know that was what the actual was, right?
+[1:18:56] Constance Wolfe: So then you want to understand, like, how effective Was each promotion?
+[1:19:05] Constance Wolfe: So these are outputs of the data, but I'm kind of thinking, how do we even get the data in here in the first place?
+[1:19:13] Constance Wolfe: Here's the planned, here's the actual.
+[1:19:16] Constance Wolfe: So what's the best method to determine after the fact what actually happened?
+[1:19:29] Constance Wolfe: And I'm trying to figure out where that goes in the system. Like, how do you get that inputted?
+[1:19:34] Constance Wolfe: The data comes from here. So we have the data in the system. So let me show you what this looks like.
+[1:19:58] Constance Wolfe: Anyway, it's spinning. But what we know here is by week. So see how this red line is the price?
+[1:20:11] Constance Wolfe: It's the price. So it's saying that this sold for $10.51, right?
+[1:20:17] Constance Wolfe: But when it goes down, it's selling for $9.49. See how the units— these are the units. They go up.
+[1:20:27] Constance Wolfe: So, so this is the weekly unit sales. The green bar is the weekly unit sales.
+[1:20:32] Md. Tauhidur Rahman: Yeah.
+[1:20:33] Constance Wolfe: So if you see the price goes down, the units go up. That tells you that was a promotion.
+[1:20:39] Constance Wolfe: So with that information, we can compare this and from— because this is actual, this is the actual data.
+[1:20:47] Constance Wolfe: So we want to compare what really happened to what our predictions were.
+[1:20:52] Constance Wolfe: So my question is, we've got the data in the system. How do we connect those 2, right?
+[1:21:03] Constance Wolfe: So this is where that has been connected. This is what the output would look like.
+[1:21:07] Constance Wolfe: This is our plan versus our actual, and here's the variance. So we just, we have to do this.
+[1:21:18] Constance Wolfe: This is a must-have.
+[1:21:20] Constance Wolfe: But it would be a bigger conversation with everybody to figure out the best way to do this. Yeah.
+[1:21:29] Md. Tauhidur Rahman: So, yeah, so I think so then we're gonna discuss it on Monday.
+[1:21:42] Constance Wolfe: Okay. Can you share your screen?
+[1:21:45] Md. Tauhidur Rahman: Yeah, sure. This, this was, this was the last one.
+[1:21:49] Constance Wolfe: Okay.
+[1:21:49] Md. Tauhidur Rahman: On the discussion. Yeah. So I'm just marking it.
+[1:21:54] Constance Wolfe: So what do your grids, your colors mean? What's green and red?
+[1:22:00] Md. Tauhidur Rahman: It means that we will not do this.
+[1:22:03] Constance Wolfe: Okay.
+[1:22:04] Md. Tauhidur Rahman: I have to fix this like we have already discussed and we are gonna do this based on our discussion.
+[1:22:09] Md. Tauhidur Rahman: I'm gonna—
+[1:22:09] Constance Wolfe: Got you.
+[1:22:10] Md. Tauhidur Rahman: Okay. Okay. It's like, it's more like, like taking notes in a short time.
+[1:22:15] Constance Wolfe: Like, uh, yeah, green go, red don't do. Yeah.
+[1:22:22] Md. Tauhidur Rahman: This is yellow. Yeah, I think we are done with today's discussion.
+[1:22:30] Md. Tauhidur Rahman: So I'm gonna— what I'm gonna do today, I'm gonna send you, uh, after fixing the Vercel, I'm gonna send you the report.
+[1:22:37] Md. Tauhidur Rahman: Like the dashboard and the pipeline.
+[1:22:40] Md. Tauhidur Rahman: And also on Monday, I'll, I'll like, I'll try my level best to, to show you the requirement of Askaboodle.
+[1:22:49] Md. Tauhidur Rahman: And, uh, by Monday I'm gonna chase, because like this week I couldn't chase anyone, so I'm gonna chase Ifti and Vijay and get the timeline of the tickets.
+[1:23:00] Constance Wolfe: Great, that sounds great. Yes.
+[1:23:02] Md. Tauhidur Rahman: Okay. And thank you.
+[1:23:04] Constance Wolfe: Awesome.
+[1:23:04] Md. Tauhidur Rahman: Thank you for—
+[1:23:05] Constance Wolfe: thank you very much.
+[1:23:06] Md. Tauhidur Rahman: Yeah, yeah, for your support, because this week was a hell for me. And thank you. Thanks to everyone.
+[1:23:11] Md. Tauhidur Rahman: Like, uh, like everybody supported, supported way too much in this.
+[1:23:17] Constance Wolfe: Oh well, yeah, you deserve it. Yeah, I'm here going through—
+[1:23:20] Md. Tauhidur Rahman: yeah, like I didn't know that this many people missed me in office.
+[1:23:24] Md. Tauhidur Rahman: I got so many calls that where I am, how am I doing. and everything.
+[1:23:30] Constance Wolfe: Oh, I'm really glad to hear that. That's a great team you've got there at AIT.
+[1:23:35] Constance Wolfe: Everybody cares about each other.
+[1:23:37] Md. Tauhidur Rahman: Yeah, so if this is my third job, like, this is my third company I'm working, and I think that the culture and value and this value system is created by Iris because, like, he is this kind of guy.
+[1:23:50] Constance Wolfe: Yeah, yeah, yeah.
+[1:23:52] Md. Tauhidur Rahman: So I was like, when I first joined AIT and Uh, like previously when I worked on those organizations, CEO is kind of a big deal, right?
+[1:24:02] Md. Tauhidur Rahman: Like you, you don't go there and you don't talk to him directly or anything.
+[1:24:06] Constance Wolfe: Right.
+[1:24:06] Md. Tauhidur Rahman: Riz's door is always open.
+[1:24:08] Md. Tauhidur Rahman: You just go there and, uh, most of them, most of the CEOs I've worked with, they prefer them to call sir.
+[1:24:17] Md. Tauhidur Rahman: Oh wow.
+[1:24:17] Constance Wolfe: Yeah, yeah.
+[1:24:19] Md. Tauhidur Rahman: So, uh, Riz is totally different. Like on first day, HR have told me never call him sir.
+[1:24:24] Md. Tauhidur Rahman: So I said, what should I call him? You call him bhai. Bhai means brother in Bangla. Bhai means brother.
+[1:24:29] Md. Tauhidur Rahman: So you call him Riz Bhai, or like in English it would be like Riz brother.
+[1:24:36] Constance Wolfe: So I wonder, you guys, I noticed that when Ifti and Bajoy talk to each other, they'll say Ifti bro.
+[1:24:43] Constance Wolfe: Or so is bro, does that mean like—
+[1:24:46] Md. Tauhidur Rahman: yeah, yeah, bhai means brother.
+[1:24:47] Md. Tauhidur Rahman: Yes, like whenever in our culture, if It's more like you, uh, you know Japanese, they say sen or, uh, yeah, I call my sister-in-law, she's Japanese, I call her ryoko-san.
+[1:24:59] Constance Wolfe: And if you say san, that means like friendly, like, like, yeah, like sister.
+[1:25:04] Md. Tauhidur Rahman: Yeah, those kind of things.
+[1:25:05] Md. Tauhidur Rahman: Because like if somebody's elder to you, if you know that he is elder to you, or if you don't know, it's more like customary to call them like bhai or that bro, like, uh We call everyone like if he is bhai because he is elder than me.
+[1:25:19] Md. Tauhidur Rahman: So we call like it's customary in here to call like someone with something like after the name after the name yeah you add that that it I see elder than you and it's a it's a gesture of respect.
+[1:25:37] Constance Wolfe: I see yeah that's really cool I like that so do you say certain Is the word you say afterwards dependent on if they're an elder or somebody below you, or is it all just—
+[1:25:51] Md. Tauhidur Rahman: yeah, it's like if I, if I'm, if I'm walking on road and I'm— if I have to like, uh, talk to some, uh, like guy from the store, if I'm buying something, I will— I would also call him bhai.
+[1:26:04] Constance Wolfe: Or if you're just being friendly, it's a friendly— it's a, it's a friendly—
+[1:26:07] Md. Tauhidur Rahman: it's not friendly, it's is customer.
+[1:26:09] Md. Tauhidur Rahman: You don't know his name or anything, but how should you address him? It's like that.
+[1:26:14] Constance Wolfe: So, so here we say sir or ma'am, like, hey sir.
+[1:26:19] Md. Tauhidur Rahman: Yeah, if you don't know him, if you go in a really posh, posh departmental store, then they call you sir or ma'am.
+[1:26:26] Md. Tauhidur Rahman: Or if it's in a local store, we have so many local stores, like I just have one store like in front of my house, and we call him bhai also.
+[1:26:35] Md. Tauhidur Rahman: And if he's If he or she is more elder, like, like if I if we can, like you can guess somebody's age by looking at him, and if he is like more or less like age of my father or mother, then we we would call him uncle.
+[1:26:51] Constance Wolfe: I say that's cool. I like that. Okay.
+[1:26:56] Md. Tauhidur Rahman: Gives you it also gives you some advantage because whenever you create some bonding with them by calling that.
+[1:27:02] Md. Tauhidur Rahman: Then they also give you respect back.
+[1:27:05] Constance Wolfe: Yeah, yeah, exactly.
+[1:27:06] Md. Tauhidur Rahman: Because Bangla is— I like, the more I understand the other languages, I understand Bangla is really complex language.
+[1:27:14] Md. Tauhidur Rahman: Because in English, you, you have only like the word you.
+[1:27:18] Md. Tauhidur Rahman: You can call you the, the person who's younger than you, you will call them you.
+[1:27:24] Md. Tauhidur Rahman: The person, uh, elder than you, you're go— you're gonna also call them you.
+[1:27:28] Md. Tauhidur Rahman: But in Bangla, we have 3 things.
+[1:27:29] Constance Wolfe: Depending on their age or their rank.
+[1:27:33] Md. Tauhidur Rahman: Yeah, yeah. So there are 3 things you can call. In also in Japanese, I think they have almost 4 or 6.
+[1:27:41] Md. Tauhidur Rahman: So in Bangla, you like, if it's, if he's really close and like he's like a friend of yours, you can, you can call him like, what you are doing?
+[1:27:51] Md. Tauhidur Rahman: If I say it in Bangla, you would say that tui.
+[1:27:54] Md. Tauhidur Rahman: And if he's Somebody on your age, but or you have close relationship, but in your same age you're gonna call them तुम्ही and if he's if he's elder then you're gonna say अपनी so but in English these three things actually means you.
+[1:28:14] Constance Wolfe: You must be really good with languages.
+[1:28:17] Md. Tauhidur Rahman: No no no I my wife says I am the like I'm the worst person.
+[1:28:21] Md. Tauhidur Rahman: to— like, I'm in Bangla because, like, I, I don't know why.
+[1:28:27] Md. Tauhidur Rahman: Like, my, my wife is really good with language, uh, like, but, uh, I'm— I struggle with Bangla also because, uh, in, like, when I was a child, I had, uh, I had dyslexia and ADHD.
+[1:28:43] Md. Tauhidur Rahman: So I'm like, my brain rushes through things. Mm-hmm.
+[1:28:48] Constance Wolfe: My husband's really good at languages, much more than I am.
+[1:28:51] Constance Wolfe: He likes to do Duolingo at night before he goes to bed.
+[1:28:55] Constance Wolfe: So he works on French and Japanese and all sorts of different languages.
+[1:29:00] Md. Tauhidur Rahman: I, I also, I also go like, I am also trying to learn, uh, German somehow. I don't know why.
+[1:29:10] Constance Wolfe: In your spare time?
+[1:29:12] Md. Tauhidur Rahman: Yeah, in my spare time. Like, I have very little spare time because I know, that's why I'm joking.
+[1:29:17] Constance Wolfe: Yeah, that's what I figured, that you don't have much spare time. Oh, okay. Well, I will let you go.
+[1:29:23] Constance Wolfe: Um, yeah, shoot me your email and, um, I will upload that, um, uh, the spreadsheet, the report from the broker management right now.
+[1:29:33] Constance Wolfe: And then just reach— I'm around all day, so reach out if you have any questions.
+[1:29:36] Md. Tauhidur Rahman: Yeah.
+[1:29:37] Md. Tauhidur Rahman: Another thing, speaking on language, speaking of language, speaking of language, I am Like, I am really, really, uh, like, I want to pick something from your, uh, like, how you speak.
+[1:29:49] Md. Tauhidur Rahman: I want to pick something that you emphasize on words and you like, uh, like the tonality you speak in.
+[1:29:54] Md. Tauhidur Rahman: I really like it.
+[1:29:57] Md. Tauhidur Rahman: I want to pick that up from you because, like, English, mostly English is a second language to us, right?
+[1:30:02] Md. Tauhidur Rahman: So we are learning and learning.
+[1:30:04] Md. Tauhidur Rahman: So it's, it's like I always try to listen to other people so that I can pick up their tonality or how they emphasize on words.
+[1:30:15] Constance Wolfe: That's funny. I think I'm pretty monotone.
+[1:30:17] Constance Wolfe: I didn't think I had much influx in my speaking, but it's funny when you listen to yourself.
+[1:30:23] Constance Wolfe: When it's— sometimes when I listen to our recordings, I'm like, ooh, I don't like the way that sounds at all.
+[1:30:29] Md. Tauhidur Rahman: Because you're native, right? So the tonality and everything comes, comes, it's built in, right?
+[1:30:36] Md. Tauhidur Rahman: It's not a, it's not, it's not like if I say in coding terms, it's not some library you have, like you have integrated with yourself.
+[1:30:44] Md. Tauhidur Rahman: But for, for us, English is the second language, right?
+[1:30:48] Md. Tauhidur Rahman: We are learning it from like, you know, the accent we are having because, because this is our second language and our first language is Bangla.
+[1:30:56] Md. Tauhidur Rahman: That's why our tongue twists a bit.
+[1:30:59] Constance Wolfe: More than you guys, because I'm not even gonna try to speak what you speak because I'm terrible at pronunciation and other languages.
+[1:31:08] Constance Wolfe: Yeah, yeah, I'm not good. I'm proud of you for even trying because I, I can't speak another language.
+[1:31:14] Constance Wolfe: Yes, I can read it, but I can't speak it.
+[1:31:16] Md. Tauhidur Rahman: And, and if you read in Bangladesh and you— and if you are, if you are a Muslim, it's mandatory for you to take Arabic lessons also.
+[1:31:25] Constance Wolfe: Oh, okay. Yeah.

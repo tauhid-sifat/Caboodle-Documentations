@@ -1,0 +1,51 @@
+NOTE: This file is Fellow AI meeting notes, not a verbatim transcript.
+
+MEETING NOTES
+Bijoy Chandra Nath shared meeting notes with you:
+DC Tracking Prospect Tracking Report > Data Mapping Store Report
+Oct 6, 5:30 - 6:30 PM
+Action Items (12)
+Md. Tauhidur Rahman to identify which roadmap tickets become obsolete after IAM service implementation and share the ticket numbers and excluded hours.
+2:36
+Md. Tauhidur Rahman to send Constance the Ask Caboodle Phase 1 plan (once Bijoy finishes it) and the Bring Your Own Key market research findings.
+5:35
+View (10) more Action Items
+Topics
+1. Roadmap, IAM service, and outstanding tickets
+Constance noted the existing roadmap carries 870 hours of planned work and that the upcoming IAM service integration needs to be reconciled with it before finalizing the next 2-month plan.
+1:40
+Tauheed confirmed Bijoy has already delivered the IAM service plan and committed to cross-referencing it against open tickets to identify which ones become redundant post-implementation.
+2:21
+Constance flagged an unresolved broker dashboard ticket covering the required selection order (region > retailer > banner > store) when adding a new log record, noting it was expected to be completed in the last 3-month cycle but was not.
+3:00
+Bijoy indicated the backend work for the selection-order ticket is already done by Arnab; the remaining work is frontend, attributed to Ifti, and described as not a heavy lift.
+4:09
+Constance discovered a UI bug during testing (store selection box displaying 'waiting for mapping' as the store name) and sent a screenshot to Kaya(?) ahead of a broker call scheduled the same day.
+4:36
+Constance stressed that several small outstanding tickets still need to be resolved even as the team's focus shifts toward Ask Caboodle and the IAM service.
+5:10
+2. Ask Caboodle Phase 1 and Bring Your Own Key
+Bijoy has not yet finished the Ask Caboodle Phase 1 plan; Tauheed expected to send it to Constance within 30-45 minutes of the meeting.
+5:43
+The team is exploring a Bring Your Own Key model for Ask Caboodle, which would let customers plug in their own AI service credentials rather than consuming Caboodle-provisioned AI capacity.
+5:52
+Constance offered Fellow's pay-as-you-go credit model ($0.49 per meeting) as a reference example of a consumption-based billing approach worth considering alongside or in addition to the BYOK model.
+6:13
+Tauheed clarified that the primary direction discussed with Ifti the prior day was the BYOK approach, not per-use billing, though Constance noted the two models are not mutually exclusive.
+7:09
+3. DC Tracking report: concept, data sourcing, and hierarchy
+4. Regional Targets report: structure, door counts, and status logic
+5. Forecast discrepancy investigation
+6. Store identity matching fix (Hagen alias bug)
+7. New Store Issues tool and stale store name cleanup
+8. Store deduplication, shared addresses, and multi-retailer merge logic
+9. KEHE prior-year zero-quantity rows skewing reports
+10. Agnostic multi-distributor reporting architecture (MongoDB)
+11. Google Cloud geocoding API billing
+12. Sprint planning, roadmap visibility, and timeline concerns
+Decisions (7)
+The DC Tracking report will be built using existing distributor upload data already in the system, aggregated brand-agnostically to produce a global store list per DC, with the report itself remaining brand-specific.
+16:55
+The DC Tracking report will organize stores in a banner-then-store hierarchy (rolling up individual locations under their banner) to prevent the list from becoming unwieldy for large chains like Acme or Safeway East.
+22:00
+Review (5) more Decisions

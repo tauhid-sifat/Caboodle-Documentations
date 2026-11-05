@@ -1,0 +1,1005 @@
+---
+type: Document
+title: "A IT Ticket Review On Oct 12"
+---
+
+[0:00:00] Shahriar Hyder: Not 10-hour days, like working 4 days and getting weekend for 3 days.
+[0:00:06] Shahriar Hyder: And they were very happy with the output.
+[0:00:09] Constance Wolfe: Oh, where is this? In New Zealand? Where?
+[0:00:12] Shahriar Hyder: Yeah, yeah, New Zealand.
+[0:00:13] Constance Wolfe: Yeah, New Zealand.
+[0:00:14] Constance Wolfe: Oh, well, that's funny because I've worked for a company for 5 years in New Zealand.
+[0:00:18] Shahriar Hyder: So, um, wow.
+[0:00:19] Md. Tauhidur Rahman: Okay.
+[0:00:19] Shahriar Hyder: They are very good people, very nice people, the New Zealanders.
+[0:00:22] Constance Wolfe: Oh, they're— yeah, they're amazing.
+[0:00:25] Shahriar Hyder: Yeah, yeah. Very decent, very helpful.
+[0:00:26] Constance Wolfe: In fact, I just got done working with them. Yeah. I, so I, That was happening.
+[0:00:30] Constance Wolfe: What, did they just do that recently?
+[0:00:33] Shahriar Hyder: Uh, no, I guess it was about a year back when I, I guess, uh, Microsoft, uh, New Zealand, they tried it out and they were very happy with the outcome as far as the productivity is concerned.
+[0:00:46] Shahriar Hyder: Yeah, they're very happy.
+[0:00:48] Constance Wolfe: Interesting. Very, very, very cool.
+[0:00:50] Shahriar Hyder: Yeah, we are very envious. Why only them? Why not us?
+[0:00:54] Constance Wolfe: Well, you guys get a lot of good holidays, I will say. That's a lot more than we do in the US.
+[0:00:59] Shahriar Hyder: So that's true, at least as As the public holidays is concerned, yeah, we are.
+[0:01:04] Shahriar Hyder: We are very, very, very lucky in terms of yeah.
+[0:01:08] Constance Wolfe: Yeah, yeah. You guys like to have a good time.
+[0:01:11] Md Mashiul Azam Chowdhury: It's good.
+[0:01:13] Bijoy Nath: Cool.
+[0:01:13] Constance Wolfe: Well, I'm glad everybody's here. So Shahar, did you want to kick us off, or do you want to? I can.
+[0:01:18] Constance Wolfe: I've got a little agenda. I know there's you know some things we need to go over.
+[0:01:21] Constance Wolfe: So I didn't know if you wanted to kick us off, or because I don't want to keep you the whole time.
+[0:01:27] Taslima Keya: No, I yeah. I want—
+[0:01:28] Shahriar Hyder: I wanted to participate in the entire meeting today.
+[0:01:32] Shahriar Hyder: So I think it's fine if you, if you would like to kick it off and then I'd like to chime in as and when it's needed.
+[0:01:39] Shahriar Hyder: It's okay with you?
+[0:01:40] Constance Wolfe: Yeah, that's great. Yeah.
+[0:01:42] Constance Wolfe: So, so we have essentially what we're really working on is getting the Ask a Boodle, the IAM, and then the roadmap tickets.
+[0:01:53] Constance Wolfe: And so Tawheed and I have been working really closely together to try to coordinate the timing on all of that.
+[0:01:59] Constance Wolfe: Um, Tawheed, I sent you.
+[0:02:01] Constance Wolfe: So what I did is I took, um, I took our list of tickets and, and combed through them on Friday, and I was trying to weed out the hours that we had allocated for anything that, you know, may be now obsolete or that we put on hold.
+[0:02:20] Constance Wolfe: And then I segregated a bunch of tickets into needs discussion.
+[0:02:24] Constance Wolfe: There's probably 10 tickets that we need to all look at together, and I'm hoping to do that today.
+[0:02:31] Constance Wolfe: So there's that to do today, and then there's a couple minor tickets that I wanted to see if Leah and I had communicated about the simple promo.
+[0:02:44] Constance Wolfe: There's a couple little glitches on that, so I wanted to check on that specifically ticket.
+[0:02:50] Constance Wolfe: And then there's— there was a delivery for some of the things that we're doing in data mapping.
+[0:02:55] Constance Wolfe: So I think let's try to weed out those smaller issues first. So I'll start with the simple promo.
+[0:03:04] Constance Wolfe: Kaya, did you get a chance to take a look at that and talk with the guys about that?
+[0:03:09] Taslima Keya: Yeah. Hi, Constance.
+[0:03:10] Constance Wolfe: Hi.
+[0:03:10] Taslima Keya: Good morning. Yeah. Yeah, I have checked that issue, and I already assigned the issue to Bijoy.
+[0:03:19] Taslima Keya: That's a backend issue. So I already created a ticket and assigned it to Bijoy.
+[0:03:23] Taslima Keya: But Bijoy was saying that until we have completed the IAM service, Related tax, it will be better if we, after completing the IM service-related tax, then we work on the other portion.
+[0:03:36] Taslima Keya: So that's why we currently— that ticket is on hold.
+[0:03:41] Constance Wolfe: Okay, so there's 2 parts to that ticket. So I do— there is an urgency.
+[0:03:47] Constance Wolfe: I can understand that if you are entering in a date that spans the Months, why we would put that on hold.
+[0:03:57] Constance Wolfe: But right now, even if I put January 1st to January 15th, it enters the entire month.
+[0:04:03] Constance Wolfe: So that is— I do want to address that sooner versus later, because that's— because if we've got a bunch of brokers in there and they're trying to enter dates, it's going to enter them incorrectly.
+[0:04:13] Taslima Keya: Okay, in that case, I will talk with Bijoy and we'll try to fix this as soon as possible, hopefully by tomorrow.
+[0:04:20] Constance Wolfe: Okay, do you think that that's a— do you think that's a— do you think that's a separate issue?
+[0:04:27] Taslima Keya: Yeah, that's the separate issue because the simple promotion date you have asked that the user can create the simple promotion in any date, that task is already done.
+[0:04:37] Taslima Keya: I will— I am currently doing testing on this, but my testing is not still done.
+[0:04:42] Taslima Keya: I provide some feedback.
+[0:04:43] Taslima Keya: So that is a separate task and this is the issue and this is a separate task.
+[0:04:48] Taslima Keya: So I will actually ask DJ to solve this issue as soon as possible.
+[0:04:53] Constance Wolfe: Okay, that would be great. So there— so are you saying there's 2 different tickets for that?
+[0:04:57] Constance Wolfe: One is to span across the month.
+[0:05:00] Constance Wolfe: The other one is, hey, the user is trying to enter dates within the same month, and that's not working either.
+[0:05:05] Constance Wolfe: So that's the one we need to address because we are getting complaints on that from the brokers.
+[0:05:10] Taslima Keya: Yeah, I got your point. Okay, I will take care of this.
+[0:05:14] Constance Wolfe: Okay, great. Thank you so much.
+[0:05:16] Constance Wolfe: And then just let me know, give me an update maybe by tomorrow at the end of the day, because I told them I thought maybe that might be done today.
+[0:05:25] Constance Wolfe: So I'll tell them that it's probably going to be tomorrow.
+[0:05:27] Constance Wolfe: But if it's more complicated than that, let me know.
+[0:05:30] Shahriar Hyder: Yeah.
+[0:05:30] Taslima Keya: Yeah, yeah, yeah. I will let you know.
+[0:05:32] Constance Wolfe: Okay. Thank you so much. And then we've been working on a particular bug in the distributor reporting.
+[0:05:46] Constance Wolfe: There, Bijoy's the one where I think it's Hagen.
+[0:05:52] Md Mashiul Azam Chowdhury: Did—
+[0:05:52] Constance Wolfe: I think that was supposed to be delivered on Thursday.
+[0:05:57] Constance Wolfe: That's where the distributor report was only reporting one store, but the store report has multiple stores for the same banner.
+[0:06:10] Bijoy Nath: I was looking at those stores.
+[0:06:11] Constance Wolfe: Yes.
+[0:06:12] Bijoy Nath: Oh, yes. I pushed all the changes related to that specific issue into staging.
+[0:06:24] Bijoy Nath: So Kate is already working on that.
+[0:06:27] Bijoy Nath: And I think she mentioned you— she mentioned in the message that Kate should take a look at the staging environment.
+[0:06:38] Bijoy Nath: How everything's working out for her. If everything is okay, then you push the changes in production.
+[0:06:46] Constance Wolfe: Okay, perfect.
+[0:06:47] Constance Wolfe: So, Kaya, I think you mentioned something about putting together some— a user guide on that.
+[0:06:52] Taslima Keya: Yeah, I shared the user guide with Kate today.
+[0:06:56] Constance Wolfe: Okay, you did share it with her?
+[0:06:59] Taslima Keya: No, no, I didn't share it yet. I will share it. You can ask her.
+[0:07:04] Taslima Keya: To review, and I will share the document in the mail.
+[0:07:09] Constance Wolfe: Okay, great. So when do you plan on doing that?
+[0:07:14] Taslima Keya: Yeah, I can share by instantly now. I am writing the mail. Yeah.
+[0:07:20] Constance Wolfe: Oh, so it's ready to share. You just haven't shared it yet. Is that what you're saying?
+[0:07:25] Taslima Keya: Sorry.
+[0:07:26] Bijoy Nath: Yes. Yes.
+[0:07:27] Constance Wolfe: Okay, great. And will you include me on that too?
+[0:07:32] Bijoy Nath: So, क्या आप यू मेल डॉक टू केट, राइट? इन एन ईमेल। या। सो या। या। इंट्रोड कांस्टेंस एस वेल। या। या। या।
+[0:07:43] Bijoy Nath: आईज़ इन दैट मेल एस वेल।
+[0:07:44] Bijoy Nath: सो इफ़ देयर्स एनी क्वेश्चंस केट हैज़ देन, वी कैन प्रॉब्ली गिव प्रॉपर रिप्लाई टू हो। सो। ओके। ऑसम।
+[0:07:55] Bijoy Nath: Okay, so that's kind of those smaller items.
+[0:08:00] Constance Wolfe: And then I thought what we could do is look at some of these.
+[0:08:06] Constance Wolfe: I've segregated— let me, I'll share my screen on the spreadsheet.
+[0:08:10] Constance Wolfe: So, Taohi, did you understand the email when I sent it to you on Friday? What I was doing?
+[0:08:19] Constance Wolfe: Did that make sense, my email to you?
+[0:08:23] Md. Tauhidur Rahman: Yeah, like in your email I got the idea of that you have segregated everything, that which one needs discussion and which one is what.
+[0:08:30] Md. Tauhidur Rahman: So that was the plan, and you wanted to talk about that.
+[0:08:34] Constance Wolfe: Okay, perfect. Yes.
+[0:08:35] Constance Wolfe: Okay, so I will— I'll walk everybody kind of through what the process was, and then we'll jump back into the spreadsheet, this page here, this tab.
+[0:08:50] Constance Wolfe: So this is essentially a download of all of the tickets that were still in backlog or in progress.
+[0:09:02] Constance Wolfe: And this was a couple of weeks ago. This is fairly old. So a lot of it had been updated.
+[0:09:07] Constance Wolfe: And then Talheed worked with you guys to get an estimate of the hours. Then we sorted them.
+[0:09:14] Constance Wolfe: We tried to sort them. As best as possible into like modules.
+[0:09:22] Constance Wolfe: So when we first looked at this, I simply just added the front-end hours and the back-end hours and came up with this.
+[0:09:32] Constance Wolfe: So like the front-end hours was essentially 471, the back-end hours were 399.
+[0:09:41] Constance Wolfe: And so then the second thing I did Is I went through that list and there was a lot of like, you know, notes that would say like, you know, needs discussion.
+[0:09:55] Constance Wolfe: This is already done. These are absolute, absolute, obsolete, no longer needed, obsolete.
+[0:10:04] Constance Wolfe: So then I took, copied this, and then What you see highlighted in yellow, so I took this list that had hours.
+[0:10:17] Constance Wolfe: And then as I looked at them closer, so like the user management, user enrollment in this page, it had 16 to 12 hours, 16 front end, 12 back end.
+[0:10:29] Constance Wolfe: But my question was, when I said new hierarchy, I was actually talking about the new IAM.
+[0:10:36] Constance Wolfe: So I was assuming that some of these things could be resolved with the new AIM.
+[0:10:44] Constance Wolfe: So in this ticket, I took them out because what I'm trying to do is weed out some of these tickets that might already be covered.
+[0:10:53] Constance Wolfe: So everything that's highlighted in yellow, I think, is either complete or could potentially be covered With the new AIM, so I removed the hours on these.
+[0:11:11] Constance Wolfe: And so I think we need to just make sure that either my my my notes are correct.
+[0:11:19] Constance Wolfe: Like so, is this truly complete? I think it is. Is this truly obsolete?
+[0:11:25] Constance Wolfe: So then I took all of these, and then I copied and pasted and made another list.
+[0:11:29] Constance Wolfe: And so this is compiled list of. Essentially everything I took out, right?
+[0:11:37] Constance Wolfe: Except for a few of these like CRM data upload improvement. This is now on the discussion list.
+[0:11:47] Constance Wolfe: So essentially when I took out all of those hours, then this is where I think we are.
+[0:11:59] Constance Wolfe: For the roadmap.
+[0:12:00] Constance Wolfe: So if you take out Ask a Boodle and take out IAM for roadmap hours, I think this is what's left.
+[0:12:11] Constance Wolfe: And so Tauheed had sent me an email and said, after Ask a Boodle and after IAM, these are going to be the remaining hours that they have available.
+[0:12:23] Shahriar Hyder: Okay.
+[0:12:25] Constance Wolfe: And then, and this is just the timing.
+[0:12:30] Constance Wolfe: So then these are the hours that are now needed for the roadmap.
+[0:12:36] Constance Wolfe: So originally we thought we were going to need, you know, 471 and 399.
+[0:12:41] Constance Wolfe: After weeding everything out, I think this is what's left.
+[0:12:46] Constance Wolfe: And so now we have the You know, Ifty would still need an additional 25 hours, but there's a lot of excess hours on the back end side, it looks like.
+[0:13:00] Constance Wolfe: So this is what I did, but I don't know the best way for you guys to go in and verify that.
+[0:13:06] Constance Wolfe: So I'll stop right there, Tawheed, and see if that makes sense and see if you have any thoughts about any of this.
+[0:13:17] Md. Tauhidur Rahman: Thank you, Constance, for putting it like we wanted to discuss about these things, like because in this roadmap we have till we have till December 31st.
+[0:13:32] Md. Tauhidur Rahman: So that's why like we wanted to talk about this because we first we have to we wanted to do the IM service, then the Askaboodle, Askaboodle, and we also wanted to fix the bugs.
+[0:13:44] Md. Tauhidur Rahman: But for this part, for the For the roadmap part, we have like for the for the remaining time, we wanted to fit the things we wanted to make within the like like within this time frame, right?
+[0:14:00] Md. Tauhidur Rahman: So that's why I wanted the priority list so that I can check whether we can like what are the tasks we can incorporate during this time.
+[0:14:12] Md. Tauhidur Rahman: If I'm not wrong, Shahid bhai.
+[0:14:14] Md. Tauhidur Rahman: Like, I think I would like you to chime in in here because like, like you and I were discussing about this, that the why we were asking for the priority list.
+[0:14:28] Constance Wolfe: Yeah, no, I understand the priority list for sure.
+[0:14:31] Constance Wolfe: And, and, and so that's, again, I have, I've been working on that and this is our general priority list right here.
+[0:14:39] Constance Wolfe: In general, but I still, I think, I still think we need to get aligned on the hours and make sure that, that this, that, that we do have a bunch of redundancy in here, and the, the ones that are highlighted in yellow, are they in fact either done or redundant or completed?
+[0:14:57] Constance Wolfe: That's, I think, because otherwise, if we don't know what, what the number of hours that we're working on, it would be hard for me to prioritize because I don't know.
+[0:15:07] Constance Wolfe: What, how many hours we have to prioritize.
+[0:15:10] Md. Tauhidur Rahman: Okay, so, uh, as I can see, the pipelines, pipeline one, because like we have changed a lot of things in the pipeline.
+[0:15:16] Md. Tauhidur Rahman: I think I again need to sit with the team for the pipelines estimation because like, uh, in last day, like you and I had, I had a conversation in email and we have changed a lot of things in the wireframe and I have kind of shown it to the, uh, team, but we need to take the, like, estimation from them for the timeline.
+[0:15:38] Md. Tauhidur Rahman: And I, I kind of— I don't have access to the Excel you were, like, showing us.
+[0:15:44] Md. Tauhidur Rahman: So can you please send me the Excel?
+[0:15:47] Constance Wolfe: Yeah, I sent this to you on Friday.
+[0:15:50] Md. Tauhidur Rahman: Oh, yeah, yeah, yeah, this one. Sorry, I'm so sorry.
+[0:15:53] Constance Wolfe: That's okay. That's okay. Is this the one you're talking about?
+[0:15:59] Md. Tauhidur Rahman: Yeah. So for the— can you scroll up a little bit?
+[0:16:06] Shahriar Hyder: Sure.
+[0:16:06] Md. Tauhidur Rahman: In the list page.
+[0:16:08] Constance Wolfe: Which page?
+[0:16:10] Md. Tauhidur Rahman: So I like— just give me a moment. I'm downloading it again. I have lost it, I guess.
+[0:16:16] Constance Wolfe: Okay. I'm gonna in the meantime pull up the NAT chart that you put together.
+[0:16:20] Constance Wolfe: So let me go grab that really quick. Here it is.
+[0:16:39] Constance Wolfe: Okay. Oh, not that one. That chart.
+[0:16:51] Taslima Keya: Subscribe.
+[0:16:56] Constance Wolfe: Come on.
+[0:17:25] Md. Tauhidur Rahman: So, so I can do one thing for you.
+[0:17:28] Md. Tauhidur Rahman: So we can, like, the team and I can sit for the redundant list tomorrow first thing in the morning and see that what, like, what I am would cover and the tickets, like, we need discussion or like reprioritize, re-estimation kind of the the pipeline one or the other things we need to talk about, talk with the team.
+[0:17:50] Md. Tauhidur Rahman: And for the discussion tab, I think the whole team and you, like, it's something that the discussion is with you.
+[0:18:01] Md. Tauhidur Rahman: So I think we had the discussion about the DC reporting and retail portal.
+[0:18:07] Md. Tauhidur Rahman: Like, for the DC reporting, we had the discussion with Bijoy.
+[0:18:12] Md. Tauhidur Rahman: So I think it would be easier to just put on the estimation.
+[0:18:17] Md. Tauhidur Rahman: And for the rest of the part, I think we need to talk with you for that discussions.
+[0:18:21] Md. Tauhidur Rahman: And I can— and for the redundant list, I can help you with that because like tomorrow we are— I'm gonna sit with the team and see the redundant list again.
+[0:18:31] Md. Tauhidur Rahman: And like, what— then I can give you a list that, uh, that what we can— like what's redundant and what's not.
+[0:18:41] Constance Wolfe: Right. So if you— probably the easiest one to review.
+[0:18:44] Constance Wolfe: So this, this redundant all Just, I would just kind of look at the ones that are highlighted.
+[0:18:53] Constance Wolfe: I don't think, hopefully it won't take you long if you want them to be isolated.
+[0:18:57] Constance Wolfe: There was a bunch of stuff in here, like I didn't know what all of this was.
+[0:19:03] Constance Wolfe: I don't know if you know just by glancing at it.
+[0:19:06] Md. Tauhidur Rahman: Yeah, the, for, for the, for the admin screens, the, the, the task with the organization mark in the, as you can see in the left side for the organization thing, everything will be covered with the IAM service.
+[0:19:18] Constance Wolfe: Okay, great.
+[0:19:19] Constance Wolfe: Okay, so then, then really all that's left is to just look at these that are in yellow and just see if they truly are complete.
+[0:19:30] Constance Wolfe: I think they are. Hopefully this won't take long.
+[0:19:33] Md. Tauhidur Rahman: Yeah.
+[0:19:35] Constance Wolfe: But they're pretty isolated.
+[0:19:36] Constance Wolfe: So then on this discussion, so these are the Banner reports that, to your point, we've looked at.
+[0:19:45] Constance Wolfe: This sales tracking for prospects. I think Ornov put together a— he put together these.
+[0:19:57] Md. Tauhidur Rahman: Yeah, yeah. One wireframe. Yeah.
+[0:19:59] Shahriar Hyder: Yeah.
+[0:19:59] Md. Tauhidur Rahman: This one.
+[0:20:00] Constance Wolfe: Yep. Yes.
+[0:20:01] Constance Wolfe: So what I did is I created then— so the way I see this is that some of these KPI cards are— all of them are great.
+[0:20:16] Constance Wolfe: Some of them belong in— let me do this.
+[0:20:23] Constance Wolfe: I think what I tried to replicate was— I'm going to log out this one and use Heather.
+[0:20:55] Constance Wolfe: So I'm of the mindset, and you guys can advise me.
+[0:21:02] Constance Wolfe: I love a good Dashboard, but I do also believe when a user logs in that this could be overwhelming.
+[0:21:14] Constance Wolfe: So I do like a nice clean login.
+[0:21:16] Constance Wolfe: Like I like I like when you log in, it just kind of like the the latest one we have in staging, I think is really nice.
+[0:21:23] Constance Wolfe: I think it's this one. Yeah, just super clean, like even get rid of these potentially.
+[0:21:35] Constance Wolfe: Because I think this walking into this is, for me, it's, it could be a bit much.
+[0:21:44] Constance Wolfe: But I love a good KPI.
+[0:21:46] Constance Wolfe: So what I tried to do is take these cards and place them in the reports that they would pertain to.
+[0:21:56] Constance Wolfe: So If we've got— if you're a brand and you want to think about, okay, what are my brokers doing?
+[0:22:03] Constance Wolfe: And they would click that. This is good information, but it does need KPI cards.
+[0:22:10] Constance Wolfe: So what I tried to do here is in this sheet, and I'll bump this up a little bit, is to say, okay, when the user goes to the broker market activities, these are some great KPIs.
+[0:22:25] Constance Wolfe: Like, I love These.
+[0:22:28] Constance Wolfe: So basically, I was trying to say for the broker market overview, these would be the KPI cards I would recommend.
+[0:22:35] Constance Wolfe: I do still believe we need this basic information, like at some point they do just need to be able to filter and get certain information, but I love the insights.
+[0:22:47] Constance Wolfe: So in that spreadsheet, Where it says Google Drive link, that's what that is, and it's regarding these sales tracking reports.
+[0:22:58] Constance Wolfe: So, so the so the new recording, I kind of took what Ornov came up with and cut and paste these KPI cards and put them where I think they make the most sense.
+[0:23:17] Constance Wolfe: So that's what this is, and so I guess I would just ask if this.
+[0:23:22] Constance Wolfe: makes sense to you, if you want to spend more time.
+[0:23:25] Constance Wolfe: But I tried to kind of— that's what I was trying to do on this page here with these.
+[0:23:29] Md. Tauhidur Rahman: So last time when we spoke about these on/off, the KPI card on/off provided, like you told me that you want— like currently you have said that you like, you want to put them inside the report section for their respective— for the respective reports.
+[0:23:48] Md. Tauhidur Rahman: You want that KPI card in that report, right?
+[0:23:51] Md. Tauhidur Rahman: So if we do that, then essentially we are not gonna have any kind of cards or like any kind of cards, graphs, and charts in the dashboard, right?
+[0:24:03] Constance Wolfe: Correct.
+[0:24:04] Constance Wolfe: Unless in Phase 4, we talked about Phase 4, Phase 3 or 4, I can't remember which one it is where if they ask, it's Phase 3.
+[0:24:14] Constance Wolfe: Yeah, yeah, Phase 3 where they would ask and they would, they want to keep that report.
+[0:24:18] Constance Wolfe: And then they would pin that report as a— yeah, yeah, as a KPI card on the opening dashboard or wherever they wanted to put it, I suppose, right?
+[0:24:29] Md. Tauhidur Rahman: Yes.
+[0:24:31] Md Mashiul Azam Chowdhury: Constance, in this case, since you want it to be simple but also want it to be— I mean, the KPI some KPI cards could be here, or I don't know, maybe the user would want something to be shown here, some result or anything.
+[0:24:55] Md Mashiul Azam Chowdhury: So what we can do, I mean, it's sort of a common, a common practice.
+[0:25:01] Md Mashiul Azam Chowdhury: So when you're opening a landing page, on the first section, uh, it will show maybe just the Ask a Woodoo search bar.
+[0:25:11] Md Mashiul Azam Chowdhury: But after scrolling, it will— it might show small reports or charts, something like that.
+[0:25:22] Constance Wolfe: Do you have an example?
+[0:25:26] Md Mashiul Azam Chowdhury: Let me check if I can find it.
+[0:25:29] Md Mashiul Azam Chowdhury: But I agree with you that the dashboard should be clean and not overwhelming.
+[0:25:36] Md Mashiul Azam Chowdhury: So yeah, let me check if I can find any example. Okay.
+[0:25:45] Constance Wolfe: So that's— so this reporting here, do we have any questions about these?
+[0:25:53] Constance Wolfe: And it sounds like we haven't had a chance to kind of dive into how long these may take, but is there any more questions on these?
+[0:26:05] Md. Tauhidur Rahman: So one thing I need from you is that like where you want to put those charts.
+[0:26:13] Md. Tauhidur Rahman: I like last we spoke like you you told me that you are gonna brainstorm and tell us that where we are gonna put that those KPI cards that the ones if the like the ones on of every on of a Created.
+[0:26:29] Md. Tauhidur Rahman: So I want that list. So where should we—
+[0:26:31] Constance Wolfe: That's what this is. That's what I was trying to, to do here. So it just— I guess that's my question.
+[0:26:38] Constance Wolfe: And so if I have the screenshot that says these should be in the broker market activities, it's these screenshots from his list.
+[0:26:49] Constance Wolfe: Or like this one says in the retail reports. These are the KPIs, or these are the screenshots.
+[0:26:57] Constance Wolfe: And then in this one, the sales tracker. That's what I was trying to do here. So if I—
+[0:27:04] Shahriar Hyder: if—
+[0:27:05] Constance Wolfe: are you saying you want me to lay it out exactly how it should look on the screen?
+[0:27:09] Md. Tauhidur Rahman: No, no, no, no, I don't want to light it out.
+[0:27:11] Md. Tauhidur Rahman: I just wanted the map, like where we should put what KPI card, because like, like if we have to like make things like Every report should look the same, right?
+[0:27:25] Md. Tauhidur Rahman: They have same amount of KPI cards and same amount of list.
+[0:27:29] Md. Tauhidur Rahman: Because if we, if we give one KPI card to one report, it would look ugly.
+[0:27:34] Md. Tauhidur Rahman: If I land on that page, it— that page would look ugly.
+[0:27:38] Md. Tauhidur Rahman: So we need to specify that which KPI card goes where, and we need similar amount of KPI cards in every page, right?
+[0:27:46] Md. Tauhidur Rahman: So that it doesn't look ugly.
+[0:27:48] Constance Wolfe: Okay, great. So what can I do then on top of this? Do we need to do it together then and determine?
+[0:27:58] Constance Wolfe: Because I, I guess I was thinking that's what I was trying to do here, but I see what you're saying.
+[0:28:02] Constance Wolfe: There is some difference.
+[0:28:04] Constance Wolfe: But so what I guess what I'm saying is that there's pieces, parts of these KPIs that make sense with certain reports.
+[0:28:12] Md. Tauhidur Rahman: Yeah.
+[0:28:12] Constance Wolfe: You know, see what I'm saying? So that's what I was trying to do here.
+[0:28:15] Constance Wolfe: Like for broker market activities, these are the ones that make the most sense.
+[0:28:19] Shahriar Hyder: For retail.
+[0:28:22] Constance Wolfe: Yeah, yeah, yeah.
+[0:28:24] Md. Tauhidur Rahman: So if we want to put one KPI card, like, like as you have said that we have bits and parts of like different reports in here in this KPI cards.
+[0:28:35] Md. Tauhidur Rahman: So like if we start putting these on those reports, maybe say we are gonna have 2 KPI cards for one report and one KPI card for another report, so it would look ugly.
+[0:28:48] Md. Tauhidur Rahman: So we have to map, map it out where we want to put those KPI cards, right?
+[0:28:54] Md. Tauhidur Rahman: If like, if just for the sake of design, we might have to implement— we have to figure out more KPI cards to add in there.
+[0:29:04] Constance Wolfe: And the other thing is, is that I don't, I don't want to lose, um, like maybe this is at the bottom or somehow they, they do need to be able to drill down to— so there's, you know, the KPIs are like insights.
+[0:29:17] Constance Wolfe: But then at some point they are going to want to get the actual information or be able to export the actual information.
+[0:29:23] Constance Wolfe: So I don't know what that design looks like.
+[0:29:26] Constance Wolfe: At some point somewhere at the bottom, or maybe you click to get, you know, you know how sometimes you click to go deeper and deeper and deeper and more granular.
+[0:29:36] Md Mashiul Azam Chowdhury: Yeah.
+[0:29:36] Constance Wolfe: So I don't want to lose what's here.
+[0:29:39] Constance Wolfe: But so would— so do we need a dedicated session to go through that then?
+[0:29:44] Bijoy Nath: Or what can I do?
+[0:29:45] Md. Tauhidur Rahman: Yes, I think Yes, I think we needed a registration for that. Okay.
+[0:29:51] Constance Wolfe: So, so for, so for back here, then, so need, so brand reports need KPI cards.
+[0:30:00] Constance Wolfe: That's what this, this is kind of where we are right now.
+[0:30:03] Md Mashiul Azam Chowdhury: Yeah.
+[0:30:03] Constance Wolfe: So we would need to schedule, schedule.
+[0:30:09] Shahriar Hyder: Okay.
+[0:30:12] Constance Wolfe: So then back to these, what would be the process for these that we do have lovable links for?
+[0:30:24] Constance Wolfe: I think this is what you and Bijoy and I reviewed last week.
+[0:30:28] Md. Tauhidur Rahman: Yeah, yeah.
+[0:30:32] Constance Wolfe: What do I need to do for those, if anything?
+[0:30:37] Md. Tauhidur Rahman: I think Bijoy, and are you clear about the DC report? DC and R are like for these 2 reports.
+[0:30:47] Md. Tauhidur Rahman: Bijoy, can you chime in? So do you need further clarification for DC reports?
+[0:30:53] Bijoy Nath: And I didn't get the chance to look into it after our conversation, by the way.
+[0:31:00] Bijoy Nath: So for now, I think everything's good.
+[0:31:03] Bijoy Nath: But when I'll start working on them, then maybe if we— if I have any sort of questions, then yeah, we can.
+[0:31:09] Bijoy Nath: Discuss about them.
+[0:31:11] Constance Wolfe: Well, I think, yeah, that's fair. That's totally fair.
+[0:31:14] Constance Wolfe: I think we're still trying to— I think at the end of the day, we're trying to understand what can get accomplished by the end of the year.
+[0:31:25] Bijoy Nath: So, so estimation is kind of crucial.
+[0:31:30] Constance Wolfe: Yeah, I think we're just trying to figure out what— because it's hard for me to prioritize.
+[0:31:35] Constance Wolfe: You know, if I don't know how long something's— if you take— if you tell me something's going to take 6 months, I'm going to prioritize it different than, you know, 3 weeks or whatever.
+[0:31:44] Constance Wolfe: So it's just hard for me to prioritize unless I know that we— what the hours are, because what I'll do is I'll take each project with the hour and kind of plug it in and see what the priority is.
+[0:31:57] Bijoy Nath: Um, right.
+[0:31:59] Constance Wolfe: So I think that the— this is what's left as far as not knowing what the timing is.
+[0:32:05] Constance Wolfe: So that's what we're trying to get to.
+[0:32:10] Bijoy Nath: So I'm currently working on Ask Caboodle questions.
+[0:32:15] Bijoy Nath: So once I'm kind of reached at my phase 1 ending point, I'll look into this task where there's an estimation.
+[0:32:26] Bijoy Nath: Then me and Afti will try to give— enter the proper estimation here.
+[0:32:31] Constance Wolfe: Okay.
+[0:32:31] Bijoy Nath: And if we have any questions while reviewing each item, then yeah, we'll reach out to you.
+[0:32:37] Bijoy Nath: No worries about that. And honestly, you know, I, I was trying to skip all those discussions.
+[0:32:52] Bijoy Nath: So because it takes a lot of time and it honestly hampers our work in between. So, but it's okay.
+[0:33:04] Constance Wolfe: No, I understand. Yeah. Okay. So then there's— so that's these tickets.
+[0:33:13] Constance Wolfe: And then 1391, data mapping, banner SKU upload.
+[0:33:20] Constance Wolfe: So what we've tried to do with that, so we're The banner SKU upload, we're trying to utilize that data because— well, this is my question to you guys.
+[0:33:36] Constance Wolfe: The banner SKU uploads are produced with the information essentially from the distributors.
+[0:33:45] Constance Wolfe: And we're already uploading the distributor data, but We want to utilize— because it takes us a long time to piece parse that information out and re-upload it, but it's already in the system.
+[0:34:00] Constance Wolfe: So how do we utilize this data to produce a Banner SKU upload?
+[0:34:07] Constance Wolfe: Because right now we have to export it, format it in 3 or 4 or 5 different ways, and get it back into the system.
+[0:34:14] Constance Wolfe: So what we've done is we've created a CLOD project. and we put it into our team project. So it is—
+[0:34:26] Bijoy Nath: hold on, we—
+[0:34:30] Constance Wolfe: here. Oh, I'm in. I must be in our team project. Yeah, you're good.
+[0:34:34] Md Mashiul Azam Chowdhury: Yeah.
+[0:34:35] Constance Wolfe: So in projects, we have the new UNFI brand uploading, and we have KE.
+[0:34:43] Constance Wolfe: So basically what we've done is we've taken Claude And it's been helping us.
+[0:34:51] Constance Wolfe: So when I was talking to Tawheed about this, actually the other day, I was like, well, if we're gonna have Ask Caboodle and we're gonna have Claude integrated into the system, can we not pull in these projects into Ask Caboodle in the admin section?
+[0:35:12] Constance Wolfe: Because right now we're having to export the data from Caboodle and put it into Claude.
+[0:35:17] Constance Wolfe: But if we're building Claude in Caboodle, would we have to do that after Ask Claude?
+[0:35:24] Md. Tauhidur Rahman: Yeah, like, on Thursday I talked with Bijoy regarding Ask Caboodle in the admin side.
+[0:35:32] Md. Tauhidur Rahman: So Bijoy, can you— can we have the conversation right now? Like the ones you and I had? Yeah.
+[0:35:39] Bijoy Nath: Right, right. So, um, yeah, Constance, can you open the project? Let's see what it did actually.
+[0:35:49] Bijoy Nath: Where's the conversation?
+[0:35:50] Constance Wolfe: Do you want to see this or what do you want to see?
+[0:35:52] Md. Tauhidur Rahman: Right.
+[0:35:52] Bijoy Nath: The instructions and the files.
+[0:35:56] Constance Wolfe: So I don't know if you're going to sit here and read this, but it's, they're in here.
+[0:36:01] Bijoy Nath: You can summarize if you want. Okay.
+[0:36:03] Constance Wolfe: So, well, I don't know exactly off the top of my head. Let me see. I, I don't think I have a seat.
+[0:36:08] Constance Wolfe: So can you guys see this? Do you see this on your end?
+[0:36:13] Bijoy Nath: Let me check. Okay, it's Unify New Brand.
+[0:36:16] Constance Wolfe: Here's the, here's the Unify. So here's this right here, Unify DC Map.
+[0:36:23] Constance Wolfe: I don't think this is the only one. Let me look at mine really quick.
+[0:36:35] Bijoy Nath: Unify New Brand uploading project.
+[0:36:38] Constance Wolfe: Yeah. Do you see that?
+[0:36:39] Bijoy Nath: Yeah, I can see that.
+[0:36:41] Constance Wolfe: Okay. So how many— do you only see one upload, one file?
+[0:36:50] Bijoy Nath: I can only see one file in the context. Yes.
+[0:36:53] Constance Wolfe: Yeah, I thought there was more than that.
+[0:36:55] Constance Wolfe: What we're gonna work on is— so I think what we did is that we had to export the banner SKUs.
+[0:37:04] Constance Wolfe: Let's see, even if I New England. I've uploaded.
+[0:37:11] Constance Wolfe: Okay, so the goal is to distill the data from the sheet so I can eventually populate the upload template for new brand onboarding into Caboodle.
+[0:37:20] Constance Wolfe: The 3 sheets, which there's not 3 sheets there, so that's weird.
+[0:37:23] Constance Wolfe: The 3 sheets I'm uploading are UNFI mapped records export. So does that make sense to you?
+[0:37:30] Constance Wolfe: So UNFI mapped records. So it's the mapped records.
+[0:37:35] Bijoy Nath: Oh, from our system.
+[0:37:37] Constance Wolfe: From our system. That's what I'm saying.
+[0:37:39] Constance Wolfe: So we're going into Caboodle, we're going to admin, we're downloading or exporting UNFI mapped by brand because it's already— because again, we're pulling in distributor data and we're already mapping it.
+[0:37:56] Md Mashiul Azam Chowdhury: Right.
+[0:37:56] Constance Wolfe: Because if we don't map it, we're going to have to map it again, right?
+[0:38:00] Constance Wolfe: So This has already been mapped.
+[0:38:02] Md Mashiul Azam Chowdhury: Mm-hmm.
+[0:38:03] Constance Wolfe: So we're taking the map data, and then we're taking the UNFI active list, UNFI active list items.
+[0:38:10] Constance Wolfe: So then we're going into UNFI and we're pulling active list items for upload, UNFI active list, and then the distribution DC.
+[0:38:21] Constance Wolfe: So that is— so this is what we're doing. We are going into data mapping. We're going into mapped.
+[0:38:38] Constance Wolfe: We're taking Unify. We're selecting the brand.
+[0:38:42] Constance Wolfe: We're selecting the month, and we're pulling this, right? So we're going to pull that.
+[0:38:46] Md Mashiul Azam Chowdhury: Mm-hmm.
+[0:38:47] Constance Wolfe: Then we are pulling, um, This, we're pulling the— I think it's— well, I think we're pulling the distributor.
+[0:39:01] Constance Wolfe: What did it say? Distribution DC. Distribution DC. This list. This one. Because we need a map.
+[0:39:17] Constance Wolfe: We need to map that. So we're mapping that with the maps.
+[0:39:20] Taslima Keya: Okay.
+[0:39:21] Constance Wolfe: And then I'm not sure what the UNIFI active list for upload, active list for upload, active list for upload.
+[0:39:31] Bijoy Nath: Is it coming from the UNIFI environment?
+[0:39:37] Bijoy Nath: Because in the banner, it's due, so we're gonna have source like KBO distributed.
+[0:39:43] Constance Wolfe: Which one are you thinking?
+[0:39:45] Bijoy Nath: No, the UNIFI active list.
+[0:39:48] Bijoy Nath: The second file that you've mentioned, so that file is coming from the Unify environment, I mean the Unify website or from ours?
+[0:39:57] Constance Wolfe: Yeah, well, it should be, and we should already have that from this one, right?
+[0:40:01] Constance Wolfe: If it's, if it's an active item list, I'm not sure what that is because wouldn't that be the mapped?
+[0:40:07] Constance Wolfe: Because mapped is active item list, that's what it is. So I'm not sure, I need to think about that.
+[0:40:15] Constance Wolfe: Seems like a duplication. So after we run this test, we'll use it to create a project.
+[0:40:21] Constance Wolfe: The UNFI mapped records export and the UNFI active list for upload will be unique every time I run the chat with any project.
+[0:40:29] Constance Wolfe: So essentially, I'm getting them to create the banner SKU upload.
+[0:40:33] Constance Wolfe: But with the banner SKU upload, it's already gonna be mapped because we're using the mapped data.
+[0:40:40] Constance Wolfe: So my question is, I think we already have all of this in the system.
+[0:40:46] Constance Wolfe: We have, we have the mapped distribution centers and we have the mapped records.
+[0:40:54] Constance Wolfe: So with Ask Caboodle, so what else do we need? Yeah, so that's the question.
+[0:41:06] Bijoy Nath: You know, Let me tell you this first.
+[0:41:10] Bijoy Nath: When, when we are automating something, so if you have to make sure that the workflow is deterministic or non-deterministic, so the thing you are doing, it's kind of deterministic, right?
+[0:41:25] Bijoy Nath: You are taking 2 files and you are mapping them and you are getting some results depending on some conditions, right?
+[0:41:35] Bijoy Nath: In summary, that's what you are doing right now.
+[0:41:38] Bijoy Nath: So if that's— if the whole workflow is deterministic, then we don't need actually that Ask Caboodle feature for it.
+[0:41:47] Bijoy Nath: We don't need any source of AI for it, because in the end, what you would— what it's doing is it's kind of taking each row from the map data and it's somehow trying to Fill the banner SKU data from there.
+[0:42:02] Bijoy Nath: For example, for banner SKU, what we need? We need brand ID, right?
+[0:42:05] Bijoy Nath: We need product ID or product name. We need the UPC number.
+[0:42:10] Bijoy Nath: We probably need the dates, active date, and the status as well. So those information, right?
+[0:42:19] Bijoy Nath: So if they are deterministic, then we can do it in a regular flow in our system without having AI in it, and it doesn't make sense to have AI in it because I'm not sure what exactly the implementation of AI would be in here if everything's— we already know what to do.
+[0:42:38] Bijoy Nath: You understand, right, what I'm saying?
+[0:42:40] Constance Wolfe: Right, I do.
+[0:42:43] Constance Wolfe: So I guess that's kind of where I'm going with some of these, like, see how this says flagging these store reports for distributor report.
+[0:42:50] Constance Wolfe: Again, this is stuff that we're pulling out of Caboodle and putting in the cloud.
+[0:42:55] Constance Wolfe: So as we're developing this, are these things in our minds, right? I guess that's the question.
+[0:43:02] Constance Wolfe: And that's what we've been trying to like, like a lot of these tickets have to do with improving our on-brand onboarding, you know.
+[0:43:12] Shahriar Hyder: Yeah.
+[0:43:12] Constance Wolfe: So when we had Kaya helping us with the brand onboarding, you know, we were trying to expose her to, okay, this is the data that we need to get.
+[0:43:19] Constance Wolfe: We're pulling this in the system. How do we automate this whole process?
+[0:43:23] Constance Wolfe: So I just, I don't know if that is part of your thinking when we're doing the programming, or if you're saying, no, I just have to implement Ask Caboodle right now, and then we create these projects for it to do.
+[0:43:34] Bijoy Nath: Yeah, I, I, I would say, let me finish the Ask Caboodle first for the broker and the brand end.
+[0:43:40] Bijoy Nath: Let the user use them.
+[0:43:42] Bijoy Nath: And for the admin side, we have to decide which work are, you know, which workflow is deterministic and which workflow are non-deterministic.
+[0:43:51] Bijoy Nath: So for the deterministic workflows, we can program it in a way so that when data comes into the system, and those data will populate the other modules of the system as well.
+[0:44:02] Bijoy Nath: And for the non-deterministic workflows, maybe in there we can implement any sort of AI which will reduce the manual work.
+[0:44:13] Md. Tauhidur Rahman: OK.
+[0:44:17] Bijoy Nath: The banner SKU upload, which is more concerning because I know that's huge because you have to kind of get the data from the distributor report and it's too cumbersome to do.
+[0:44:28] Bijoy Nath: So if you can have the manual map of how you are doing this, then I think we can convert it into the programming in a very simple manner because you already have everything in the map data, right?
+[0:44:41] Bijoy Nath: We have the banner, we have the retailer, we have the product.
+[0:44:44] Bijoy Nath: And if any product exists in certain month, that means it's active.
+[0:44:49] Bijoy Nath: So using some conditions as well, so we can implement the whole workflow into our system without AI for the banner display upload specifically, I can say that now.
+[0:45:02] Constance Wolfe: OK, so regarding this ticket right here, I guess, I guess I'll just try to flush this one out a little bit so you can see exactly what the process is, because when I'm looking at it, it looks like there's some data that's missing.
+[0:45:20] Constance Wolfe: So I think Kate put that together. I'll talk to her.
+[0:45:23] Constance Wolfe: I don't know if this ticket had hours on it before. Let me just look really quick. 1391.
+[0:45:41] Constance Wolfe: That was just needs discussion. Okay.
+[0:45:51] Constance Wolfe: So what should I put on here then as far as like, so we just, this is gonna, sounds like it's gonna be on hold and we don't know because you're gonna, you're wanting to do Escalado first.
+[0:46:01] Bijoy Nath: Yeah, right. We have to discuss about this in several committees.
+[0:46:05] Bijoy Nath: And we have to spend a specific amount of time for this one.
+[0:46:10] Bijoy Nath: And it's, it's probably fully backend work, so there won't be any frontend work involved in here.
+[0:46:16] Bijoy Nath: So it's just me and Maono probably.
+[0:46:22] Constance Wolfe: Okay. So distributed report auto flags, we had created—
+[0:46:29] Bijoy Nath: Yeah, it's the same.
+[0:46:31] Constance Wolfe: Okay. Yeah.
+[0:46:32] Md Mashiul Azam Chowdhury: Okay.
+[0:46:32] Taslima Keya: Okay.
+[0:46:33] Bijoy Nath: This is the same.
+[0:46:34] Bijoy Nath: The whole thing will be in the same workflow because eventually we are doing the banner excluded, right?
+[0:46:40] Bijoy Nath: So that discontinued item and the new item. So they are part of that.
+[0:46:46] Md Mashiul Azam Chowdhury: Okay.
+[0:46:47] Constance Wolfe: 1628, brand modules, TSS, actualized promotion, best method and plan.
+[0:46:56] Constance Wolfe: On the roadmap, it said that that needed discussion.
+[0:47:01] Constance Wolfe: Do you use that discussion internally, or do you need me as part of that?
+[0:47:06] Bijoy Nath: So when you mentioned that— so, so the first thing is actualizing promotions.
+[0:47:11] Bijoy Nath: So actualizing promotions, you mean putting the actual lift in there?
+[0:47:16] Constance Wolfe: What, what's that?
+[0:47:18] Bijoy Nath: By actualizing promotions, uh, what do you exactly mean?
+[0:47:22] Constance Wolfe: So yeah, so I think editing the event lift for the actual— exactly.
+[0:47:26] Constance Wolfe: Yeah, right now what we're doing is I'll show you what the process is right now.
+[0:47:34] Constance Wolfe: We are— Where did that go? So I have a report that I create. Let's go to Bubbies.
+[0:48:03] Constance Wolfe: For the most part, it would be that the brand would have external data that can actualize it.
+[0:48:13] Constance Wolfe: So in this case, it's spins. And a lot of my brands have spins, not everybody does.
+[0:48:20] Constance Wolfe: So an actual would only Apply to the brands that do have spins, but I'll show you what I'm doing when this opens.
+[0:48:47] Bijoy Nath: And by the way, Constance, I have a little talk about the Ask a Voodle API usage, so we can do it maybe probably end of the meeting.
+[0:48:58] Constance Wolfe: Okay, we're almost done, I think, because we're almost done with these tickets.
+[0:49:04] Bijoy Nath: Because as I'm building this, I have to do some real testing, right?
+[0:49:08] Bijoy Nath: And they will cost a bit, like probably $5 or $10.
+[0:49:13] Constance Wolfe: Okay.
+[0:49:14] Bijoy Nath: Just making sure you are aware of that. And we have that amount of money in that account.
+[0:49:19] Md. Tauhidur Rahman: Okay.
+[0:49:20] Bijoy Nath: Because all the access is on your end.
+[0:49:25] Md. Tauhidur Rahman: Okay.
+[0:49:25] Bijoy Nath: Login and check.
+[0:49:27] Constance Wolfe: So what happens is, real quick, this won't take long. So we get the data from SPINs.
+[0:49:35] Constance Wolfe: I put it into Claude and I tell Claude to tell me these are the Weeks, and so I've programmed it to see how this says ARP is $7.
+[0:49:46] Constance Wolfe: So every day, this mango product.
+[0:49:51] Constance Wolfe: So what I do is I select the banner first, so I can select a banner.
+[0:49:58] Constance Wolfe: Then this is just that banner's information.
+[0:50:00] Constance Wolfe: There's 111 of them because it's NCG, and there's a lot of individual stores.
+[0:50:05] Constance Wolfe: So if this is This report is banner-specific, and then these are the items.
+[0:50:12] Constance Wolfe: And then it knows that every day it sells for $7.17. So if it's 5% below that, it'll flag it.
+[0:50:20] Constance Wolfe: It'll say, okay, this is on promo because it's less. It's at least 95— it's at least 5% less.
+[0:50:29] Constance Wolfe: And so this is the lift. So it's telling us how many stores it's in. On any given week.
+[0:50:35] Constance Wolfe: So here are the weeks.
+[0:50:36] Bijoy Nath: So they do this every same report layout, right? In the spin section?
+[0:50:42] Constance Wolfe: No, I created this.
+[0:50:44] Bijoy Nath: No, no, per week, let's do number the units, the ERP.
+[0:50:52] Constance Wolfe: What's your question?
+[0:50:54] Bijoy Nath: In our Kaboodle system, system, yes, spin section.
+[0:50:59] Constance Wolfe: Yeah.
+[0:50:59] Bijoy Nath: I think we have the same report just in a different layout.
+[0:51:04] Constance Wolfe: Yeah, we have the same information in a different layout.
+[0:51:08] Md Mashiul Azam Chowdhury: Yeah.
+[0:51:09] Constance Wolfe: Yep, we do. It's this one. It's—
+[0:51:13] Bijoy Nath: Stores Insight?
+[0:51:15] Constance Wolfe: Yes, that's what it is exactly. It's the Store Insights.
+[0:51:19] Constance Wolfe: So this says it's because it knows the base unit. So this is all your base information.
+[0:51:25] Constance Wolfe: So it's saying on any given week, you're normally selling 385 units, but this week you sold 1,200 units.
+[0:51:32] Constance Wolfe: So this is your lift, right? So this is our store count and our lift.
+[0:51:36] Constance Wolfe: So then what we're doing is we're going into Caboodle, and we were really excited about this, by the way.
+[0:51:44] Constance Wolfe: Now we've got versions, right? So then we go into— NCG was the banner. Oops, sorry.
+[0:51:56] Constance Wolfe: And we create a new version, and then we go down here and we look.
+[0:52:05] Constance Wolfe: There's 3 things that we might look at. It would be event lift and store count and the velocity.
+[0:52:11] Constance Wolfe: We've decided we're not going to change the velocity.
+[0:52:13] Constance Wolfe: This should be static throughout the entire year. Really, all we're going to do is update the Lift.
+[0:52:20] Constance Wolfe: So they're creating a new version and they're going in here and then they're changing the lift.
+[0:52:25] Constance Wolfe: It's what we're doing. Okay, so changing the—
+[0:52:28] Bijoy Nath: and the number of stores, they are not changing that as well?
+[0:52:31] Constance Wolfe: We're not going to change that. We might make some adjustments.
+[0:52:35] Constance Wolfe: The store count is interesting to think about because— and I don't think we change the store count.
+[0:52:42] Constance Wolfe: I think we match. See how they're different every week.
+[0:52:46] Constance Wolfe: The reason why they're different every week is because when you're on promo, you're gonna sell in more stores because there's just more activity.
+[0:52:57] Constance Wolfe: But see, when they're not on promo, they're not in all of these stores.
+[0:53:00] Constance Wolfe: So I programmed this version to say, give me the highest number of stores for your base.
+[0:53:06] Constance Wolfe: So if you look at these, this is the highest number. So that's what we're gonna do.
+[0:53:11] Constance Wolfe: But The distributor report also does that already when you're building the promo.
+[0:53:17] Constance Wolfe: If you recall, now when you're building the promo in the first place, it's pulling in the distributor store count.
+[0:53:23] Constance Wolfe: So I don't think that's a huge issue.
+[0:53:25] Constance Wolfe: I think the biggest thing we need to do is just pull in that lift.
+[0:53:32] Bijoy Nath: All right. So, okay.
+[0:53:38] Md. Tauhidur Rahman: So that's—
+[0:53:40] Bijoy Nath: Okay.
+[0:53:41] Constance Wolfe: That's what this conversation is about.
+[0:53:46] Bijoy Nath: So if this is the only way that you're following to populate the event list information, then it would be pretty straightforward, right?
+[0:54:00] Constance Wolfe: I would think so.
+[0:54:02] Constance Wolfe: I mean, eventually someday we're going to want different insights based on all of that.
+[0:54:06] Constance Wolfe: But for right now, we just need a quick way to Because right now they have to, you know, I have to go create this report and then I send it to them and then they have to go through each one individually.
+[0:54:16] Constance Wolfe: I would argue that that's not a bad exercise to do anyway, because if you don't do it and it's automated for you, will you really look at it?
+[0:54:25] Constance Wolfe: But we do need to automate it.
+[0:54:28] Bijoy Nath: Yeah, there are some, there's some things like, for example, when you calculated the base, how you calculated the base.
+[0:54:35] Bijoy Nath: Is it the same calculation that we, uh, we do in our system right now?
+[0:54:39] Constance Wolfe: Well, we had a heated conversation about that, a very heated conversation about that.
+[0:54:45] Constance Wolfe: It was interesting, it was fun, it was all in good fun. There's 2 ways you could think about it.
+[0:54:50] Constance Wolfe: You could say give me the 52-week average not on promo. That's one way to do it.
+[0:54:58] Constance Wolfe: So you know what's on promo and you know what's not, right?
+[0:55:00] Bijoy Nath: Right.
+[0:55:01] Constance Wolfe: So you could do the 52-week. They're saying no, no, no, no, no. So this was the heated argument I had.
+[0:55:07] Constance Wolfe: I suggested that's what we do. They said no, we're an ice cream brand in the summertime.
+[0:55:15] Constance Wolfe: We want the base from the summer months.
+[0:55:19] Constance Wolfe: Like we want the base from the months that we're on promo because You're gonna have inflated numbers in the summertime anyway.
+[0:55:30] Constance Wolfe: If you're selling ice cream in July, you're gonna naturally sell more ice cream.
+[0:55:34] Constance Wolfe: So I wanna understand what my lift is gonna be during the high season anyway.
+[0:55:41] Constance Wolfe: So I've created— I created 2 separate reports for that.
+[0:55:44] Constance Wolfe: So I have one version where it's a 52-week base.
+[0:55:49] Constance Wolfe: I have another version where it's the base Just the base, just the 12-week base that's included in this report.
+[0:55:59] Bijoy Nath: So all the work that you did using Claude, right? And you have a separate project for it, right?
+[0:56:04] Bijoy Nath: I'm not wrong?
+[0:56:06] Constance Wolfe: Yeah.
+[0:56:07] Bijoy Nath: Um, can you open that up? Do you have any other system right now?
+[0:56:10] Constance Wolfe: Yes, it's right here. It is, um, Promo Performance Review.
+[0:56:17] Bijoy Nath: Right?
+[0:56:19] Bijoy Nath: So Constance, when we pull the actual lift from this pins data into the— into our promotional planning section, so there's a couple of things that system will try to match.
+[0:56:32] Bijoy Nath: For example, the first one is the product, right? For which product it's getting the data.
+[0:56:38] Bijoy Nath: And the second one is probably banner name because every product is connected with separate banner and that banner have some kind of lift in there.
+[0:56:46] Bijoy Nath: with the distributor thing.
+[0:56:49] Bijoy Nath: So spins, in spins, do we have, should we need to do mapping for banner and products?
+[0:56:56] Bijoy Nath: Because as far as I can remember, Keren mentioned once that spins give us the proper data.
+[0:57:03] Constance Wolfe: They do.
+[0:57:06] Bijoy Nath: So in that case, right now we are doing the map, we're doing mapping only for Unify and Kiwi.
+[0:57:11] Bijoy Nath: So if any entity comes in from Unify, okay, then if that alias exists in the system, then system knows, okay, what does that mean.
+[0:57:20] Bijoy Nath: But the spins, we don't have that sort of system right now. So I think we should work on that first.
+[0:57:30] Shahriar Hyder: Okay.
+[0:57:30] Bijoy Nath: You know, that mapping thing.
+[0:57:31] Bijoy Nath: Once we are fixed with the mapping, then yeah, pulling the data from the spins report, it's pretty straightforward.
+[0:57:37] Bijoy Nath: I just need to Need the access of your project. You already have that in the— let me show you.
+[0:57:43] Constance Wolfe: That's in mine. I can pull it into the team. I don't know.
+[0:57:48] Constance Wolfe: I don't have a seat on the team, so I'm somewhat limited what I can pull in there.
+[0:57:53] Constance Wolfe: But I'll see what I can do or have Kate do it. I'm sure I can share it somehow.
+[0:57:58] Bijoy Nath: Yeah, sure. I'll figure that out.
+[0:58:00] Bijoy Nath: So from your project, we'll get all the you know, equations or the conditions or like, uh, logics that Claude are using right now.
+[0:58:10] Bijoy Nath: So I think, I, so I think if we use those logics and conditions, then yeah, we can build it in our system as well.
+[0:58:16] Bijoy Nath: And that would be pretty— it should be pretty straightforward after the mapping.
+[0:58:21] Md. Tauhidur Rahman: Okay.
+[0:58:22] Bijoy Nath: Because you just calculate the percentage and replace the, replace the percentage with the existing models.
+[0:58:28] Shahriar Hyder: Okay.
+[0:58:31] Taslima Keya: Okay.
+[0:58:31] Bijoy Nath: And that mapping step, that does make sense to you, right?
+[0:58:34] Constance Wolfe: Yeah, it does.
+[0:58:36] Shahriar Hyder: Great.
+[0:58:38] Constance Wolfe: Okay, so that's that one. And then pipeline, rebuild the fellow.
+[0:58:44] Constance Wolfe: So, Tahee, this is where we looked at this the other day.
+[0:58:51] Constance Wolfe: So you said this is significantly different than your Wireframe, and I just wanted to see.
+[0:58:59] Constance Wolfe: So this is— I think you updated your wireframe.
+[0:59:04] Md. Tauhidur Rahman: Yeah, yeah, I have updated my wireframe.
+[0:59:08] Constance Wolfe: So let's let this load here really quick.
+[0:59:23] Constance Wolfe: Okay, so here is first of all, and then here's your wireframe. Not that one.
+[0:59:36] Constance Wolfe: Maybe it's on another one I have. I think I have it. I'm sorry, I thought I had it up.
+[0:59:47] Constance Wolfe: Let me grab it really quick.
+[1:00:11] Constance Wolfe: Yeah, there it is. Okay, up here.
+[1:00:21] Constance Wolfe: So do you, do you think this is adding significantly more than what was originally allocated for it?
+[1:00:31] Md. Tauhidur Rahman: I think yes. Like, can you go to the tasks? Yeah, if I— if we go in tasks, so then we have projects.
+[1:00:42] Md. Tauhidur Rahman: After, under that we have child projects and everything.
+[1:00:46] Md. Tauhidur Rahman: And we also want to split those based on the brands, right? Like, like you can—
+[1:00:57] Constance Wolfe: Yeah, right.
+[1:00:59] Md. Tauhidur Rahman: And also we'd be able to share one specific project or subproject with somebody else, right?
+[1:01:06] Constance Wolfe: That's what this is. Yeah.
+[1:01:08] Md. Tauhidur Rahman: Yeah. So it would— it's kind of different from what we originally thought it was.
+[1:01:16] Constance Wolfe: So in the original one, was this thought of as being a group project, or was this going to be based on individual user?
+[1:01:27] Bijoy Nath: Okay.
+[1:01:27] Constance Wolfe: That's like that. I think that's where we got really off, maybe.
+[1:01:31] Md. Tauhidur Rahman: Yes.
+[1:01:32] Md. Tauhidur Rahman: So originally when we have created the pipeline, the, the first draft, I was thinking about the— like, I was thinking about like it's for one user.
+[1:01:43] Md. Tauhidur Rahman: If they are gonna log in, they are gonna create their own task, own pipeline, and if they assign something to someone, they would be able to see those tasks.
+[1:01:51] Constance Wolfe: Okay.
+[1:01:52] Md. Tauhidur Rahman: If they don't assign with— assign that task to anybody, then they— that person will not be able to see those tasks.
+[1:01:59] Md. Tauhidur Rahman: Like it would be a personal task.
+[1:02:01] Constance Wolfe: If it's assigned, then it would be That's the same as the new version, so that hasn't changed.
+[1:02:08] Md. Tauhidur Rahman: Yeah, but, uh, but when we are sharing a whole project with someone, it's kind of different.
+[1:02:16] Md. Tauhidur Rahman: For like, if I'm thinking, if I think about it, it's different because in that particular scenario we are just, uh, we were just, uh, sharing it, like assigning a task to someone.
+[1:02:29] Md. Tauhidur Rahman: But now we are, we are sharing every— now we are sharing The whole project with somebody else, right?
+[1:02:38] Constance Wolfe: Okay, so that's the difference between sharing projects and sharing tasks.
+[1:02:45] Md. Tauhidur Rahman: Yeah, so it's more like it's more like we have already like have a task and we have like I have a task and like it's like Jira.
+[1:02:52] Md. Tauhidur Rahman: We have a task and we are assigning that task with Ifti.
+[1:02:56] Md. Tauhidur Rahman: So Ifti will be able to see that task, but it's like Jira like.
+[1:03:00] Md. Tauhidur Rahman: Whenever, like, Jira, we have different, different projects, right?
+[1:03:04] Md. Tauhidur Rahman: So now we want to share one project with Ifti.
+[1:03:07] Md. Tauhidur Rahman: Then if I share that project with Ifti, Ifti would be able to see all of the tasks under that project.
+[1:03:15] Md Mashiul Azam Chowdhury: Mm-hmm.
+[1:03:16] Constance Wolfe: Mm-hmm.
+[1:03:16] Md. Tauhidur Rahman: So it's, it's kind of like, it's a bit different from what we currently have right now, because like, like when we initially planned the pipeline, me and Ifti were thinking that it would be some kind of cosmetic change.
+[1:03:29] Md. Tauhidur Rahman: with some additional features like adding someone to the— like, like adding, assigning someone to the task.
+[1:03:37] Md. Tauhidur Rahman: But when it comes to sharing the total project with someone, it's totally a different thing which we don't— which we currently don't have in our system yet.
+[1:03:47] Constance Wolfe: OK, is that the only— is that the only main difference, or are there others than that?
+[1:03:52] Md. Tauhidur Rahman: Yeah, and also the segregation with the personal and brands.
+[1:03:59] Md. Tauhidur Rahman: Like, we have also segregated the projects using the personal and brand thing, right?
+[1:04:07] Constance Wolfe: So can you guys think of any other way?
+[1:04:13] Constance Wolfe: So if you try to put yourself into the minds of the broker who is responsible for multiple brands, is there a different way that it can alert them That, because right now what they'll need to do is go into every single brand and check, because I don't think it makes sense.
+[1:04:34] Constance Wolfe: Well, I'll throw this up for discussion.
+[1:04:37] Md. Tauhidur Rahman: Yeah.
+[1:04:38] Constance Wolfe: So I don't know that it makes sense for a rep to create a pipeline for every single one of their brands in their own pipeline, like, or in their own task.
+[1:04:50] Constance Wolfe: Because there's already one in each brand.
+[1:04:55] Md. Tauhidur Rahman: Yeah. So can you, like, I'm asking a really basic question right now.
+[1:04:59] Md. Tauhidur Rahman: The thing is, can you segregate between, like, can you tell me the difference between personal and brands?
+[1:05:04] Md. Tauhidur Rahman: Like, like what I have, like what I, what I have assumed from your email that personal is something that they are gonna create in their own space and will be able to assign to their peers, right?
+[1:05:18] Md. Tauhidur Rahman: Like we have sub-brokers, they will, they will be able to assign those to the sub-brokers and it would be a personal, personal task.
+[1:05:26] Md. Tauhidur Rahman: But for brand task, it would be assigned, it would be binded with the brand they are working with and they would be able to assign those tasks to the sub-brokers also, right?
+[1:05:39] Constance Wolfe: Right.
+[1:05:40] Md. Tauhidur Rahman: Yeah.
+[1:05:40] Constance Wolfe: So the brand, when they're in the brand, they're working with the brand.
+[1:05:44] Constance Wolfe: So it's like they are in conjunction with the brand on these items that need to be taken care of.
+[1:05:49] Constance Wolfe: So it's a collaboration between them and the brand here.
+[1:05:55] Constance Wolfe: So if all of that is getting handled here, it wouldn't make sense for the rep to have all of this duplicated in their own private pipeline.
+[1:06:06] Md. Tauhidur Rahman: Yeah.
+[1:06:10] Constance Wolfe: So what's happening here is if there's things that are due, they wouldn't— the only way to do that is if they've got 50 brands, they would have to go into every single brand environment to check what do I need to do.
+[1:06:28] Constance Wolfe: Whereas that— so, so I guess what I'm asking is there an easier way to get some sort of notification or a roll-up?
+[1:06:35] Constance Wolfe: That tells them you've got stuff due for 5 brands right now.
+[1:06:40] Constance Wolfe: So maybe it doesn't need to be this implementation is what I'm getting at.
+[1:06:45] Constance Wolfe: We just need to be able to alert them that there are things that are due soon or overdue or that are high priority without having to go into each individual brand to go find that out.
+[1:07:01] Constance Wolfe: So maybe this is not the right implementation. Maybe it's something else that would be easier.
+[1:07:08] Constance Wolfe: That's all I'm trying to do with this.
+[1:07:10] Md. Tauhidur Rahman: Yeah. So if I do— if I do have any input on this, because like, uh, yeah, I'm thinking.
+[1:07:22] Md. Tauhidur Rahman: I think if we can think of like Jira, because like in Jira we have multiple projects, under those projects we have multiple tasks, right?
+[1:07:33] Md. Tauhidur Rahman: So if we think like that, that might be the only way out of this, like, problem.
+[1:07:41] Md. Tauhidur Rahman: And, uh, we also can create our own, uh, projects, like, own projects in Jira.
+[1:07:48] Md. Tauhidur Rahman: So I think we can think in that direction.
+[1:07:54] Md Mashiul Azam Chowdhury: Yeah, I was also thinking that, uh, should we Show them in a single pipeline, in a single pipeline task, or in different tasks based on the brands?
+[1:08:13] Md Mashiul Azam Chowdhury: Can you repeat that? Yeah. So currently what you're seeing here is all the tasks.
+[1:08:22] Constance Wolfe: So Well, we're not seeing all the tasks. We're just seeing that these brands have things going on.
+[1:08:35] Md Mashiul Azam Chowdhury: Right, right.
+[1:08:36] Md Mashiul Azam Chowdhury: So yeah, my question is, I mean, you're seeing all the brands' data combined here, right?
+[1:08:46] Md Mashiul Azam Chowdhury: But do you want it to be separated by the brands in here as well?
+[1:08:55] Md Mashiul Azam Chowdhury: I mean, I'm thinking about the user experience here.
+[1:09:00] Constance Wolfe: So if you look at this one, if you go to brands, so if I'm— if this is my personal, I'm like, okay, I've got, you know, I've got a couple things due soon.
+[1:09:08] Constance Wolfe: Okay, so they're dealing with that. And then they're like, okay, what's going on with my brands?
+[1:09:12] Md. Tauhidur Rahman: Right?
+[1:09:12] Constance Wolfe: Oh, okay, I've got 2 things that are due for Some brands here. Oh, it's Brand A and Brand B.
+[1:09:18] Constance Wolfe: Okay, I better go there. And I'm clicking that and that's taking me to their pipeline.
+[1:09:24] Md Mashiul Azam Chowdhury: But my question is, is it due for you or the brand itself? Would you be able to—
+[1:09:35] Constance Wolfe: Well, that's the question. So right now I'm a broker.
+[1:09:38] Constance Wolfe: But you're saying if I'm a brand like this same— that was my question too, is are we providing this same format?
+[1:09:45] Constance Wolfe: Is this what you're asking?
+[1:09:46] Taslima Keya: At the—
+[1:09:47] Constance Wolfe: on the brand side. So it replaces this, right?
+[1:09:51] Md Mashiul Azam Chowdhury: The brand has this one, right?
+[1:09:53] Constance Wolfe: Right, right.
+[1:09:54] Md Mashiul Azam Chowdhury: But the broker will have a sort of a personal one and, right, uh, one with the brand's one.
+[1:10:02] Md Mashiul Azam Chowdhury: But the brands would have something like to-do or, or, uh, those, uh, kind of things.
+[1:10:11] Constance Wolfe: Yeah.
+[1:10:12] Md Mashiul Azam Chowdhury: My question is, I mean, let's say there are 5 things to do.
+[1:10:18] Md Mashiul Azam Chowdhury: So is it to-do for— would that be to-do for the broker or to-do for the brand?
+[1:10:25] Constance Wolfe: Yeah, so when I wrote this out, I was— that was my question, is it seems like that it should be kind of the same way on the brand side, that the brand is going to have this broker-shared environment and then they would have their own personal As well.
+[1:10:39] Constance Wolfe: But we can, in a perfect world, that's what it would be, I think, right?
+[1:10:44] Constance Wolfe: Because I think that the brands would benefit from having their own personal pipeline as well.
+[1:10:51] Constance Wolfe: So it's like they have a personal pipeline and then they share it.
+[1:10:55] Constance Wolfe: And then they share, and then this is the one they share. And then that was my question for the IAM.
+[1:11:00] Constance Wolfe: Is that something that you would program in the IAM? Like, who has access to the pipelines?
+[1:11:08] Md Mashiul Azam Chowdhury: Right.
+[1:11:08] Constance Wolfe: So I think I wrote that. I wrote that actually. It's like, okay, I can't remember where I put that.
+[1:11:14] Constance Wolfe: I do have it in notes somewhere. So would that be something that you would assign? Okay, my broker.
+[1:11:19] Constance Wolfe: And what if there's more than one broker?
+[1:11:21] Constance Wolfe: So Broker A, Broker B, Broker C has access to this pipeline, or no broker has access to this pipeline.
+[1:11:31] Constance Wolfe: Or maybe it's not the pipeline, it's the project, I should say.
+[1:11:34] Constance Wolfe: And that's where I think That's where I'm coming with.
+[1:11:37] Constance Wolfe: Now it makes more sense to have projects that you would share with people and not— can I talk about this?
+[1:11:44] Constance Wolfe: Rather than the entire pipeline. Yes.
+[1:11:47] Bijoy Nath: Right. Yes.
+[1:11:49] Bijoy Nath: So, so, so the pipeline, the brand's pipeline is a module that, that organization will have access to, right?
+[1:12:02] Bijoy Nath: So all the brand user can access that pipeline thing.
+[1:12:06] Bijoy Nath: Now the question is, can the broker user use that or not? So that's what IAM service resolves now.
+[1:12:13] Bijoy Nath: So from the broker organization or from the platform organization, so you can let the user, let the broker user use some specific brand's pipeline or not.
+[1:12:23] Bijoy Nath: So that's question number 1. So yes, you can turn on and off the pipeline module for brokers as well.
+[1:12:30] Bijoy Nath: By individual user, I mean.
+[1:12:32] Bijoy Nath: And then second thing, when you mentioned about the projects, so what I would prefer is that both brand and both broker should be able to create projects in their own environment and they can share that project with the other brand users or other broker users as well.
+[1:12:51] Bijoy Nath: When they will share the whole project, then everything in that project has will be accessible by the shared person.
+[1:12:57] Bijoy Nath: So it should be as simple as that.
+[1:12:59] Constance Wolfe: That's what I was thinking.
+[1:13:00] Constance Wolfe: That's why I started going to the project, because they're not going to rebuild a whole nother pipeline.
+[1:13:05] Constance Wolfe: You need projects so you can share projects or keep them private. I agree.
+[1:13:11] Constance Wolfe: That's kind of why— that's what— that was my big aha moment when I was thinking about this, because otherwise you would have to create a whole nother pipeline.
+[1:13:22] Constance Wolfe: Like, so yeah.
+[1:13:26] Bijoy Nath: So it's, if let's say if there's 10 tasks that you want to share with the brokers, let's say brand have 10 tasks in Aqua and they want to share it with the brokers.
+[1:13:36] Bijoy Nath: So in that case, if we don't have the project, then for each item they have to do the shared thing 10 times.
+[1:13:44] Bijoy Nath: So let's say for example, the first task has been shared with the broker and then the second and then the third.
+[1:13:50] Bijoy Nath: But if we have the project concept and we can combine them into a project, And then we can just share the project, which will be able— which in turn lets the broker user access all the tasks inside a specific project.
+[1:14:05] Bijoy Nath: So I'm kind of aligned with project concept. It fits in here.
+[1:14:10] Constance Wolfe: It fits because what will happen then is that right now you do need— the broker needs a group project.
+[1:14:20] Constance Wolfe: There are going to be group projects that they need to work on.
+[1:14:22] Constance Wolfe: So how do you, to your point, how do you encapsulate just the focus of that project without a project?
+[1:14:31] Constance Wolfe: Like, there's, there's really, you can't do it with tasking.
+[1:14:34] Constance Wolfe: You can't really do it with just tasking.
+[1:14:36] Md. Tauhidur Rahman: Right.
+[1:14:37] Constance Wolfe: Um, so that's why I started really sitting with this and being like, oh, we're missing that step.
+[1:14:43] Constance Wolfe: Like, that's what it, that was what it was.
+[1:14:45] Constance Wolfe: Because now I can have my own private project, I can create a shared project, I can share it with my brand, my brands can share it with me.
+[1:14:53] Constance Wolfe: And so that's— anyway, go ahead. That's, that's why that came up.
+[1:14:57] Bijoy Nath: Yes. And in fact, while creating the project, you can assign users.
+[1:15:01] Bijoy Nath: Okay, this project is for— let's say a broker have 10 users, but all of them won't work on the same projects, right?
+[1:15:08] Bijoy Nath: Maybe 3 of them work in some— exit from project. 5 of them work in some other project.
+[1:15:14] Bijoy Nath: So while creating the project, you can choose the users.
+[1:15:17] Bijoy Nath: Okay, these 3 users will, like, will have the access to these projects only.
+[1:15:21] Bijoy Nath: And if you want to share the project with some other user, some brand user, then you can do it later.
+[1:15:25] Bijoy Nath: So we'll have that capability as well.
+[1:15:28] Bijoy Nath: So I think, yeah, when you are, you know, it's some sort of, uh, what, what should I say, some sort of collaborating platform.
+[1:15:36] Bijoy Nath: So when you have this collaboration thing, then a parent does make sense.
+[1:15:41] Bijoy Nath: In our case, the parent is projects, because under that we'll have all the tasks.
+[1:15:46] Constance Wolfe: So, well, in the original wireframe, we did have that. So we did have the parent and the child.
+[1:15:52] Constance Wolfe: So what is, what is it that's different now with this?
+[1:15:57] Bijoy Nath: Sorry?
+[1:15:57] Constance Wolfe: Because so we, before this last version, Tawhid, we did have a parent and child.
+[1:16:05] Constance Wolfe: But this, we couldn't share it. We just couldn't share it.
+[1:16:08] Md. Tauhidur Rahman: Yeah, yeah.
+[1:16:09] Constance Wolfe: With other people.
+[1:16:10] Md. Tauhidur Rahman: It was the share.
+[1:16:11] Constance Wolfe: Okay.
+[1:16:12] Md. Tauhidur Rahman: Can you click on the personal?
+[1:16:14] Constance Wolfe: Sure.
+[1:16:15] Md. Tauhidur Rahman: Yeah, I think, yeah, yeah, there you have the parent-child. Yeah, inside ID. Yes.
+[1:16:24] Constance Wolfe: I think the big difference is just that we were not allowing users to share projects.
+[1:16:29] Constance Wolfe: We weren't allowing the users to share projects. We were allowing them to share tasks.
+[1:16:35] Md. Tauhidur Rahman: Yeah.
+[1:16:37] Constance Wolfe: Yeah. Okay, so it sounds like that's a fairly— so, Bijoy, is that a backend?
+[1:16:42] Constance Wolfe: And is that a big lift compared to what's there now?
+[1:16:51] Bijoy Nath: Actually, I'm not quite sure because I have not had the chance to review the current Um, not the current, yeah, it's the Tawhid's proposed, you know, pipeline thing.
+[1:17:03] Md Mashiul Azam Chowdhury: Yeah, Constance.
+[1:17:04] Md Mashiul Azam Chowdhury: So yeah, BJ actually didn't, uh, know about that much because, uh, about the pipeline that much because, uh, Tawhid and I thought that, uh, it's going to be just a UI change.
+[1:17:17] Md Mashiul Azam Chowdhury: Yeah, yeah, but it changes. So, uh, but, uh, yeah, maybe, uh, BJ and I to sit and brainstorm on it.
+[1:17:27] Md Mashiul Azam Chowdhury: So in order to know how we should handle this.
+[1:17:31] Constance Wolfe: Okay, got you. Okay. And then the last one that's on here, I— this brand TSS, EDLP, stepper.
+[1:17:42] Constance Wolfe: I'm not sure what this is. I don't think I created this one.
+[1:17:45] Constance Wolfe: So I'm not sure what this is, but it was left blank. TSS, EDLP, and stepper.
+[1:17:51] Constance Wolfe: Clarify stepper versus edit. Promo details. Do you guys know what that is?
+[1:18:00] Bijoy Nath: In the description, there's these words, by the way, no build scope yet. So this is—
+[1:18:08] Constance Wolfe: I'm sorry, what's that?
+[1:18:10] Bijoy Nath: Oh, in the description, if you look at the description, then you can see that on the last section, there is this line which says no build scope yet.
+[1:18:20] Constance Wolfe: Mm-hmm.
+[1:18:21] Bijoy Nath: See?
+[1:18:22] Constance Wolfe: Yeah, I see that.
+[1:18:23] Bijoy Nath: I think it's for clarification purpose.
+[1:18:27] Constance Wolfe: Okay. Okay. And then margin calculator. This can— this is not a huge priority.
+[1:18:38] Constance Wolfe: We can, we can worry about that later. And then admin Siegel trade spend.
+[1:18:47] Constance Wolfe: I'm, I'm gonna hold off on that as well.
+[1:18:48] Constance Wolfe: My, my only question is, and is, I think we've had a discussion, is there a way to limit the number of promotions a user can create?
+[1:19:00] Md Mashiul Azam Chowdhury: Yes.
+[1:19:01] Constance Wolfe: That's what I am sorry, Constance.
+[1:19:05] Taslima Keya: Okay.
+[1:19:06] Constance Wolfe: Yes.
+[1:19:07] Bijoy Nath: Yes, we do control everything.
+[1:19:09] Constance Wolfe: That's all I care about. Yeah, that's right.
+[1:19:11] Bijoy Nath: Specific organization.
+[1:19:17] Constance Wolfe: Okay. Okay. So that's it for this discussion.
+[1:19:23] Constance Wolfe: So it sounds like for the most part, we won't have a time estimate till we get through Ask a Boodle.
+[1:19:30] Constance Wolfe: Ask a Boodle. Hey, Tahi, do you have the link to the natural handy? I thought I had it.
+[1:19:37] Constance Wolfe: If you've got it handy, I'll post it.
+[1:19:40] Md Mashiul Azam Chowdhury: Yeah, Tahi. Just went.
+[1:19:43] Constance Wolfe: Oh, yes.
+[1:19:44] Md Mashiul Azam Chowdhury: He went to the washroom.
+[1:19:45] Constance Wolfe: Yeah.
+[1:19:46] Md Mashiul Azam Chowdhury: He'll be back in two.
+[1:19:48] Constance Wolfe: Okay.
+[1:19:50] Constance Wolfe: So, I it sounds like we've got a pretty decent plan in place, but we just don't know about these last ones where they're gonna fit into the roadmap.
+[1:20:06] Constance Wolfe: Right? And I know you guys want. Me, because we're already starting.
+[1:20:10] Constance Wolfe: Like, we don't— we can't waste any time. So I don't know how to prioritize without having the timing.
+[1:20:18] Constance Wolfe: So I don't know if anybody has any suggestions.
+[1:20:23] Shahriar Hyder: Constance, may I chime in?
+[1:20:24] Constance Wolfe: Please.
+[1:20:25] Shahriar Hyder: Yeah.
+[1:20:26] Shahriar Hyder: So I suppose that you and Tawhid, you 2 are already scheduled for a call next time around, maybe tomorrow.
+[1:20:33] Shahriar Hyder: So maybe That's when we could discuss about the feasibility of cramming in the rest of the task or how much of it is a priority.
+[1:20:45] Shahriar Hyder: Maybe by this time, the developers can also engage within themselves and then try to understand whether these are feasible within the time frame that we are talking about.
+[1:20:56] Shahriar Hyder: What do you think?
+[1:20:58] Constance Wolfe: Yeah, and I hear them loud and clear.
+[1:21:00] Constance Wolfe: Like, it sounds like they are head deep into this Ask-a-Caboodle right now in IAE.
+[1:21:06] Constance Wolfe: So for them to take time out and to estimate these things is going to be challenging for them, especially if they don't really— it sounds like they don't have their arms wrapped around it.
+[1:21:19] Constance Wolfe: Once I get these done, then I can understand the scope better because then I'll understand how it behaves, right?
+[1:21:24] Constance Wolfe: So I understand. And I think that's what Bijoy is saying. That's what I'm hearing from him.
+[1:21:29] Shahriar Hyder: Otherwise, it would take their focus away from what they're doing.
+[1:21:33] Constance Wolfe: Exactly. And I want them to stay focused. So I respect that. So it still kind of leaves— yes, Bijoy.
+[1:21:44] Bijoy Nath: Yeah, I just wanted to add a little context in here, you know, about the whole roadmap thing that we've discussed with Shah right now.
+[1:21:53] Bijoy Nath: So right now, you know, the bottleneck that we have right now, it's exactly bottleneck, it's just that we have to complete the IAM service first.
+[1:22:00] Bijoy Nath: That's the very foundation thing that we have to finish as soon as possible.
+[1:22:05] Constance Wolfe: Yeah, the prerequisites.
+[1:22:07] Bijoy Nath: Right, exactly. Sorry for the words.
+[1:22:10] Bijoy Nath: Um, so when it— when that's done, then we can— everyone on the team, we can sit together and we can prioritize the task properly.
+[1:22:20] Bijoy Nath: But before that, it would be very kind of, you know, not exactly sure type of thing.
+[1:22:26] Shahriar Hyder: Yeah, not— not make sense and wouldn't be accurate either, right?
+[1:22:32] Bijoy Nath: Either, right? Sort of, right?
+[1:22:34] Bijoy Nath: So that's why we are kind of now focusing on the, you know, IAM service very— we're giving highest priority.
+[1:22:43] Bijoy Nath: But, and Arnab is working on that, but I should not say that I know.
+[1:22:47] Bijoy Nath: So that's why I'm working on the Aspergillus parallelly.
+[1:22:50] Bijoy Nath: So once that IAM service is fully done and deployed into staging at least, then we can work on all the tasks and bugs we have parallelly, like picking any one of them from anywhere.
+[1:23:03] Constance Wolfe: Yeah, that makes sense.
+[1:23:09] Md. Tauhidur Rahman: Thank you.
+[1:23:12] Constance Wolfe: I was just seeing if I have that Gantt chart, and I thought I did, but apparently I do not.
+[1:23:22] Taslima Keya: I—
+[1:23:22] Constance Wolfe: let me see if I can find it really Quick.
+[1:23:28] Constance Wolfe: One other question on the IAM, and I think you're going to say yes. I'll share my screen.
+[1:23:34] Constance Wolfe: We are still having some issues with— this is signing new— signing up new users.
+[1:23:51] Constance Wolfe: So we'll, you know, so, and I, you're, are you gonna say that yes, it will?
+[1:23:55] Constance Wolfe: Because we're, so what happens is—
+[1:23:57] Md Mashiul Azam Chowdhury: Whatever the question is, the answer is yes.
+[1:23:59] Constance Wolfe: Whatever the question is, the answer is yes. It will solve it.
+[1:24:02] Md Mashiul Azam Chowdhury: Yeah, because this user part will be removed and there will be a new user part based on the organization.
+[1:24:11] Constance Wolfe: Okay. Because, and it's really confused.
+[1:24:13] Constance Wolfe: It is a confusing process, like when you are in The admin right now, you've got these users and you can invite a user here.
+[1:24:24] Constance Wolfe: You can also invite a user from pending invited users.
+[1:24:29] Constance Wolfe: And so I think all of this is going to get cleaned up because—
+[1:24:32] Bijoy Nath: so confusing right now. In the new version, Constance, there will be no unassigned role.
+[1:24:39] Bijoy Nath: Every user that comes into the system will have specific role.
+[1:24:43] Bijoy Nath: He or she may not be a part of the organization, but he will be in some kind of role, and according to that role, he or she will have some specific permission.
+[1:24:52] Bijoy Nath: And other than that, he or she could not— cannot access any part of the system.
+[1:24:57] Bijoy Nath: So everything will be okay.
+[1:25:00] Constance Wolfe: And then like right now, when a new user signs up, there's 2 ways to do it.
+[1:25:04] Constance Wolfe: You can just go to, you know, ask, or you would go to like caboodle.com, and you know how you get— I'm signed in right now, so it's not going to work.
+[1:25:12] Constance Wolfe: So a user could go in there and fill out the form, and then we have to wait and then activate them, or we can send an invite.
+[1:25:20] Constance Wolfe: So are they gonna— is it gonna be the same way, or is there only going to be one way to sign up a user?
+[1:25:27] Constance Wolfe: So because that confuses us too, because Kate and I will go, we'll say, well, should we just send them the URL and they can fill out the form online, or should we invite them?
+[1:25:36] Constance Wolfe: And we know one works and the other one doesn't, we couldn't remember which one.
+[1:25:39] Constance Wolfe: So I just didn't know if there was only going to be one way to register a user.
+[1:25:46] Bijoy Nath: Right. So the only way that would be in here is by using our signup page. Okay. Which is fine.
+[1:25:55] Bijoy Nath: They will sign up using their email, right?
+[1:25:57] Bijoy Nath: And if the domain already exists in the system, then for an organization, then there will be a membership request under their organization.
+[1:26:05] Bijoy Nath: And if the organization doesn't exist with that domain, then there will be a new organization created, making him an admin of that organization.
+[1:26:13] Bijoy Nath: So once we give you the demo constants properly, then you will have the proper idea how it will work.
+[1:26:18] Bijoy Nath: So no worries about that. Okay.
+[1:26:20] Constance Wolfe: That sounds great. Is Tawheed back? Do we know? I kind of wanted to get that.
+[1:26:24] Bijoy Nath: Yes, he's back.
+[1:26:26] Md Mashiul Azam Chowdhury: Yeah, he's back.
+[1:26:27] Md. Tauhidur Rahman: Yes, I'm back.
+[1:26:28] Constance Wolfe: Can you chat me the NAT chart real quick and then we'll wrap up?
+[1:26:31] Constance Wolfe: Sorry, do you have that handy, the nap chart that you put together with the timing on everything?
+[1:26:36] Md. Tauhidur Rahman: Yeah, yeah, yeah.
+[1:26:37] Constance Wolfe: Can you chat that to me real quick?
+[1:26:40] Md. Tauhidur Rahman: Yeah, just give me a moment. Sure.
+[1:26:45] Taslima Keya: This one.
+[1:27:10] Md. Tauhidur Rahman: Okay.
+[1:27:10] Constance Wolfe: Can everybody do it?
+[1:27:12] Constance Wolfe: And you might check, and we can talk tomorrow, I guess, on that if we want to schedule a call soon.
+[1:27:17] Constance Wolfe: I was going to see if everybody has access to the lovable links.
+[1:27:20] Constance Wolfe: Well, we're not really worried about those right now.
+[1:27:23] Md. Tauhidur Rahman: Sorry, Constance, I cannot send it through Zoom, so I'm sending email again.
+[1:27:32] Constance Wolfe: Okay, great. Thank you. I'm sure I have it somewhere handy, but let's see.
+[1:27:42] Md. Tauhidur Rahman: Yeah.
+[1:27:42] Constance Wolfe: Oh, that's right, because I think you have to— yeah.
+[1:27:45] Md Mashiul Azam Chowdhury: Yeah.
+[1:28:16] Constance Wolfe: It's still— I'm still waiting for it to come through.
+[1:28:18] Md. Tauhidur Rahman: Yeah, I have sent— like, I have sent you an email on the same thread. Yeah.
+[1:28:25] Constance Wolfe: Thank you.
+[1:28:39] Constance Wolfe: Oh, that's why I couldn't save it, because you're right, it's a—
+[1:28:42] Md Mashiul Azam Chowdhury: here it is.
+[1:28:57] Taslima Keya: Okay. Okay.
+[1:29:05] Constance Wolfe: So we are Monday. Can everybody see my screen okay?
+[1:29:12] Md Mashiul Azam Chowdhury: Yes.
+[1:29:13] Constance Wolfe: Okay. So we're here. So we're starting here. So it looks like that we have one.
+[1:29:24] Constance Wolfe: So we're into early November. And then this is the testing of IAM, I think.
+[1:29:33] Constance Wolfe: So we're into like mid-November for IAM. And then, oh wait, what's Askaboodle? Askaboodle's the green.
+[1:29:47] Constance Wolfe: So, Tawheed, can you walk us through this really quick? So this is, oh, this is the QA right here.
+[1:29:52] Constance Wolfe: So early November, we should be done with IAM.
+[1:29:59] Bijoy Nath: Yes.
+[1:30:00] Constance Wolfe: Okay.
+[1:30:02] Constance Wolfe: So basically then for these that we were talking about, we're going to be in early November by the time we can start looking at those again.
+[1:30:15] Constance Wolfe: So then I need to— this is where you keep asking for priority.
+[1:30:23] Constance Wolfe: What can we be working on, these 3 people be working on while that's happening, right?
+[1:30:29] Md. Tauhidur Rahman: Yeah, yeah.
+[1:30:33] Constance Wolfe: Okay.
+[1:30:34] Md. Tauhidur Rahman: And so, um, for the time being, uh, I have shared one, uh, Jira filter link with you yesterday that, uh, that if you have shared with me So, so like that list of tasks, list of bugs they, they can solve, or tasks or bugs they can solve in the meantime.
+[1:30:58] Md. Tauhidur Rahman: So I have shared with you in here in the email yesterday.
+[1:31:02] Constance Wolfe: Uh, is that called time sensitive?
+[1:31:05] Md. Tauhidur Rahman: No, it's not time sensitive. It's, uh—
+[1:31:08] Constance Wolfe: That's not the name of it. Maybe that was what I said.
+[1:31:10] Md. Tauhidur Rahman: The name of it? Yeah. Yesterday.
+[1:31:12] Constance Wolfe: Here it is, revised ticket list.
+[1:31:15] Md. Tauhidur Rahman: Yeah, yeah.
+[1:31:16] Constance Wolfe: Okay, got you. Okay, this one.
+[1:31:18] Md. Tauhidur Rahman: Yeah.
+[1:31:19] Constance Wolfe: Okay.
+[1:31:20] Shahriar Hyder: Okay.
+[1:31:22] Constance Wolfe: So I'll go through this then and take a look. So this is your suggestion.
+[1:31:26] Constance Wolfe: So this is the suggestion from the team to be working on these while IAM is happening.
+[1:31:33] Md. Tauhidur Rahman: Yeah, the IAM is happening and your prioritization, like, see, like, yeah, but unless we have done, like, we have, we are done with the IAM service, we cannot do certain tasks.
+[1:31:46] Md. Tauhidur Rahman: So these were, these are the bugs and tasks. They have figured out.
+[1:31:50] Shahriar Hyder: Yes.
+[1:31:50] Constance Wolfe: Yeah. Okay. Got you. Okay, great.
+[1:31:52] Shahriar Hyder: Okay.
+[1:31:53] Constance Wolfe: So I'll take a look at these then this morning. Short 6-day.
+[1:31:58] Md Mashiul Azam Chowdhury: Okay.
+[1:31:59] Constance Wolfe: Got you. Okay. This is great. Thank you, Corey. It's a jigsaw puzzle, isn't it?
+[1:32:07] Constance Wolfe: It's not easy pulling all of this together.
+[1:32:11] Md Mashiul Azam Chowdhury: Okay.
+[1:32:15] Constance Wolfe: Well, so then I think we're in decent shape then, unless you guys have any other questions about if you need any clarification on anything.
+[1:32:32] Bijoy Nath: I need something Constance mentioned about the API users of our cloud account right now.
+[1:32:41] Bijoy Nath: So can you log into there?
+[1:32:43] Constance Wolfe: Yep. Hang on 1 second. I am trying to— you want me to log into our cloud? Is that what you're saying?
+[1:32:54] Bijoy Nath: You're right. Yes. And I want to see— it's not exactly the same website.
+[1:33:19] Constance Wolfe: You'll just have to direct me where you want me to go.
+[1:33:21] Bijoy Nath: Yeah, I'm, I'm figuring that out. Just give me a moment.
+[1:33:24] Constance Wolfe: Sure, no problem.
+[1:33:29] Md Mashiul Azam Chowdhury: Uh, do you want to see the usage or something like that?
+[1:33:33] Md Mashiul Azam Chowdhury: Uh, in that case, could you please Just click on the, uh, click on your name on the bottom left.
+[1:33:41] Md Mashiul Azam Chowdhury: Yeah, and click on—
+[1:33:46] Constance Wolfe: Click on which one? Uh, Settings. All right, yeah, so we have Account.
+[1:34:02] Md Mashiul Azam Chowdhury: Try, uh, use stage.
+[1:34:05] Bijoy Nath: Click on the API keys options.
+[1:34:07] Md Mashiul Azam Chowdhury: API keys. Oh yeah, last one.
+[1:34:10] Bijoy Nath: It will take you to the— yeah, login again with your name. Me? Yeah, yes, you.
+[1:34:19] Md Mashiul Azam Chowdhury: Yeah, yeah, you should be able to use the Google.
+[1:34:23] Constance Wolfe: Oh, this one.
+[1:34:27] Bijoy Nath: I hope this one.
+[1:34:27] Constance Wolfe: Yeah.
+[1:34:28] Md Mashiul Azam Chowdhury: Yeah, whichever you have plot on.
+[1:34:33] Constance Wolfe: Well, I have.
+[1:34:34] Md Mashiul Azam Chowdhury: I think I have.
+[1:34:37] Bijoy Nath: Let's continue with email. Probably send you a link.
+[1:34:50] Constance Wolfe: I'm gonna go on here and send. Sometimes this one's quicker.
+[1:35:36] Taslima Keya: Okay.
+[1:35:36] Constance Wolfe: Hello, Bijoy, or somebody?
+[1:35:39] Bijoy Nath: Yes. Yeah, let's go to the usage. Where the usage or billing anywhere? Probably click in there.
+[1:35:52] Md Mashiul Azam Chowdhury: Click on the keys.
+[1:35:53] Constance Wolfe: This one. What about this?
+[1:35:54] Bijoy Nath: Yeah, this one. Right, right, right. So click on the click, click there. Yeah, let's see.
+[1:36:02] Bijoy Nath: So, so workspace all. So can you go to the billing? I mean, the billing should be on the left side.
+[1:36:11] Bijoy Nath: Side menus in anywhere on the menu. So just scroll there. Let's see, users.
+[1:36:17] Bijoy Nath: Yeah, click on the first menus of the analytics under the analytics. Right, right.
+[1:36:24] Constance Wolfe: Yes.
+[1:36:30] Bijoy Nath: Let's see. So workspace only. Where's the rate of cashing?
+[1:36:43] Constance Wolfe: Rates, cost?
+[1:36:46] Bijoy Nath: No, we were in the cost. So click on the name of the organization on the left.
+[1:36:55] Md Mashiul Azam Chowdhury: Yeah, click in there.
+[1:36:56] Bijoy Nath: Do we have the billing? Go to the settings. I think we should have billing in there, right?
+[1:37:04] Bijoy Nath: Let's go to the billing. Do we? Ah, there is. So we still have $11.57 in the system.
+[1:37:14] Bijoy Nath: Can you buy $10 of credits for, for the testing purpose? So right now we have $11.
+[1:37:19] Bijoy Nath: Yeah, additional $10. Oh, they don't have $10. This $20.
+[1:37:27] Bijoy Nath: Other— yeah, this amount, $5 minimum, so you can do $10.
+[1:37:36] Bijoy Nath: And by the way, I'm doing— I'm right now I'm planning the, you know, what should I name it?
+[1:37:48] Bijoy Nath: The cost of each request in our system.
+[1:37:53] Constance Wolfe: Yeah, I'm following.
+[1:37:54] Bijoy Nath: So in which type of question, how many costs will be there and how you'll charge your users.
+[1:38:00] Constance Wolfe: So, okay, that's great.
+[1:38:01] Bijoy Nath: I'm working on that and I'll give you the proper planning on that.
+[1:38:07] Constance Wolfe: Okay.
+[1:38:07] Bijoy Nath: And yeah, I will have— so the whole ask will be something like this.
+[1:38:14] Bijoy Nath: I don't know if I should share this right now or not. Should I?
+[1:38:21] Constance Wolfe: Um, well, if I would say people want to stay on, They can maybe, or, or if you want to schedule another one, because I know we're—
+[1:38:29] Bijoy Nath: Yeah, I think, yeah, I think I'll show it to you later. I'll show it to you later.
+[1:38:33] Bijoy Nath: I mean, it will have every bit of, yeah, everything you need, like how many costs per organization and how many requests they can send.
+[1:38:41] Bijoy Nath: So you can configure everything from your platform admin side.
+[1:38:44] Md Mashiul Azam Chowdhury: So.
+[1:38:45] Constance Wolfe: That's great. That's awesome. Okay. Well, so you're set. Okay.
+[1:38:53] Taslima Keya: Thank you.
+[1:38:55] Constance Wolfe: Tell me, what do you think? What's— what do you think is best next steps?
+[1:39:00] Md. Tauhidur Rahman: So the best next steps would be I would sit with the team for the redundant works, redundant list, so that we can filter out what needs to be done and what's already done and what's redundant.
+[1:39:14] Md. Tauhidur Rahman: And in the meantime, I would also check, like, I would also try to take estimation for the The things we wanted to discuss about the lovable, the lovable links.
+[1:39:28] Md. Tauhidur Rahman: We're going to review the lovable links also.
+[1:39:30] Md. Tauhidur Rahman: And for we have other things in the discussion link, right?
+[1:39:36] Md. Tauhidur Rahman: So we need to like have a meeting about those things like data mapping, banner SKU upload and everything.
+[1:39:43] Md. Tauhidur Rahman: The those those things for those things.
+[1:39:47] Md. Tauhidur Rahman: And in the meantime, I think, uh, while IAM services— like, when— while the IAM services in still development, so we can work on the— work on the tick— work on the list of tickets that if they have provided.
+[1:40:04] Md. Tauhidur Rahman: And after, like, we are done with the redundant tickets, I think you would be able to give us the priority list.
+[1:40:12] Constance Wolfe: Yeah, I agree.
+[1:40:13] Constance Wolfe: So it sounded like though that most of this is going to be on hold until the IAM is done.
+[1:40:20] Constance Wolfe: Like, it sounded like to me that nobody really wanted to look at that, which is understandable, that it's like we need to put that on hold because we won't be able to get, uh, uh, we won't be able to give really decent estimates anyway until that's done.
+[1:40:34] Constance Wolfe: So it sounds like really if you guys have given the list of things you want to work on, the roadmap items that you want to work on while that's getting developed.
+[1:40:42] Constance Wolfe: It sounds like I just need to review that maybe, unless there's some further clarification, because I kind of— my takeaway is like we're kind of— we don't want to provide estimates on these other things until we get that complete, was kind of what my big takeaway was.
+[1:40:59] Md. Tauhidur Rahman: Yeah, that, that's kind of right.
+[1:41:02] Constance Wolfe: So, um, it feels like to me, I guess what needs to happen is that, um, I need to look at that email that you sent to me today and see what roadmap tickets there are and what we do know, maybe prioritize what we do know.
+[1:41:19] Md Mashiul Azam Chowdhury: Yeah.
+[1:41:20] Constance Wolfe: And that is not in question. So I can do that.
+[1:41:24] Constance Wolfe: And then these other things that we want to get done after IAM, I can— so it sounds like we need to get enough done to get us through early November.
+[1:41:36] Constance Wolfe: Because he's going to be done with IAM in early November. Does that seem right?
+[1:41:44] Md. Tauhidur Rahman: Yeah, that seems right. Okay.
+[1:41:47] Md Mashiul Azam Chowdhury: Okay.
+[1:41:48] Constance Wolfe: So then I think, I think that's the plan.
+[1:41:50] Constance Wolfe: So I'll take a look at the email that you sent today and see if I have any questions.
+[1:41:56] Constance Wolfe: And if so, I'll reach out.
+[1:41:57] Md. Tauhidur Rahman: Okay.
+[1:41:57] Constance Wolfe: Awesome. Uh, 30.
+[1:42:03] Md Mashiul Azam Chowdhury: By the way, Constance, uh, uh, I mean, uh, even though we are scheduled to have the IAM service, uh, ready in, uh, early November, uh, we might get it ready a bit earlier, maybe 2 or 3 days early, because, uh, the timing we gave was Based on if we get some worst-case scenarios or something like that.
+[1:42:33] Md Mashiul Azam Chowdhury: So if all goes well, then maybe we might get that the IM service earlier than expected.
+[1:42:43] Constance Wolfe: Okay, that's great. Okay, and if Ornov, that's great news.
+[1:42:47] Constance Wolfe: If Ornov could take a look at, or I don't know if this needs to be Bijoy, I really the simple promo that's not taking the current dates would be a big priority.
+[1:42:58] Constance Wolfe: So I'm hoping we can do that by tomorrow.
+[1:43:02] Bijoy Nath: Okay, so I will, I will hotfix in production for the simple—
+[1:43:07] Constance Wolfe: What's that?
+[1:43:09] Bijoy Nath: I mean, I'll do a hotfix in the production environment for the simple promo thing.
+[1:43:14] Constance Wolfe: Okay, just at this point, we need to at least allow it to take the dates that are in there.
+[1:43:21] Constance Wolfe: If it's not going to cross across months, then I'll just have to let them know that that's going to have to wait.
+[1:43:25] Bijoy Nath: I need to check exactly what's happening because it shouldn't be.
+[1:43:30] Bijoy Nath: But anyways, I'll look into tomorrow.
+[1:43:32] Constance Wolfe: Okay. So if you could let me know early tomorrow, that'd be great.
+[1:43:34] Constance Wolfe: And as far as Bubbies goes, I'm working with them internally.
+[1:43:37] Constance Wolfe: They need to figure out what they want to do internally.
+[1:43:39] Constance Wolfe: So I'll keep you posted on that, but hopefully we're in a good place.
+[1:43:43] Shahriar Hyder: Okay.
+[1:43:43] Constance Wolfe: Okay. All right, guys. Thank you so much. Reach out if you have any questions.
+[1:43:48] Shahriar Hyder: Thank you, Constance, for your time. Have a great rest of the day. Bye-bye.
+[1:43:52] Constance Wolfe: Thanks. Have a great evening. Bye-bye.
+[1:43:53] Kazi Towfiq Tasmin Ornov: Thank you, Constance.
+[1:43:54] Constance Wolfe: Bye-bye. Bye, Ornav. Bye-bye.

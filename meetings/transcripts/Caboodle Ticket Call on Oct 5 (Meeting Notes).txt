@@ -1,0 +1,45 @@
+NOTE: This file is Fellow AI meeting notes, not a verbatim transcript.
+
+MEETING NOTES
+Bijoy Chandra Nath shared meeting notes with you:
+A IT | Caboodle Ticket Call
+Oct 5, 5:00 - 6:00 PM
+Action Items (7)
+Md. Tauhidur Rahman to share the Ask Caboodle Phase 1 plan with Constance Wolfe today, or first thing tomorrow at the latest.
+26:23
+constance@caboodleservices.com to send a Wednesday meeting invite to Tawheed to finalize the broker dashboard and pipeline visual details.
+32:34
+View (5) more Action Items
+Topics
+1. Bubby's client visit and team appreciation
+Constance Wolfe returned Thursday from a visit to Bubby's headquarters in Phoenix, Arizona, a $70M company, where the afternoon was spent actualizing 2026 plans and beginning 2027 forecasting.
+2:34
+The Bubby's team expressed strong satisfaction with recent platform improvements, specifically calling out versioning updates and roll-up reports, and noted the platform is 'starting to grow up.'
+2:44
+Constance directly thanked Keya, Ornov, and Tawheed for the preparation work that underpinned the meeting's success, noting the client was 'very appreciative' of all the work done.
+6:16
+2. Year-end sprint planning and funding pressure
+Shahir was expected to join the call to discuss the roadmap but could not attend due to a conflicting meeting that ran long; Constance planned to connect with him separately after the call.
+3:47
+The team has an estimated 8 weeks of remaining work to complete before year-end, and Constance noted alignment with Shahir on a roadmap outline as the basis for this estimate.
+4:20
+Constance referenced last year's sprint, which was intended to wrap in late 2025 but ran significantly into 2026, as a motivating reason to set firm deadlines this cycle.
+4:32
+Planning accounts for one holiday week off for the team in December; Constance indicated she can remain available through the holidays to support delivery if needed.
+5:08
+Constance stated she will have no additional funding after year-end and will need to advocate internally for continued budget, making on-time delivery critical.
+5:46
+3. IAM service architecture, development workflow, and database performance
+4. Ask Caboodle phased roadmap
+5. 'Bring your own key' AI integration concept
+6. Pipeline, broker dashboard, simple promo, and DC report
+7. Category calendar and brand report removal behavior
+8. Brand email response flow
+9. UNFI AI agent demo and design patterns
+10. Caboodle AI data scope and implementation approach
+Decisions (7)
+IAM service work is split so that Bijoy handles the foundational architecture, then hands off to Arnab for module-by-module implementation while Bijoy shifts to the Ask Caboodle backend.
+11:44
+The ability to add a SKU to an already-approved simple promo entry is confirmed as a high-priority ticket to be completed in the near term.
+21:18
+Review (5) more Decisions

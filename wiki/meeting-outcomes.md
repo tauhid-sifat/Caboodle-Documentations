@@ -3,7 +3,7 @@ type: reference
 title: Meeting outcomes (client clarifications)
 module: general
 status: current
-last_verified: 2026-10-29
+last_verified: 2026-11-04
 ---
 
 # MEETING OUTCOMES (Client Clarifications)
@@ -27,4 +27,4 @@ last_verified: 2026-10-29
 | Is "Submitted" a new status value or parallel flag? | TBD |
 | PM6 scope (multi-month events) | Option A (read-only display) vs C (full drag) |
 
-> **Consolidated, provenance-tagged decisions & open questions** are in `client-decisions-open-questions.md` (synthesized from all 14 `meetings/` transcripts).
+> **Consolidated, provenance-tagged decisions & open questions** are in `client-decisions-open-questions.md` (synthesized from all 33 sessions in `meetings/`).

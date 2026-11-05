@@ -1,0 +1,57 @@
+NOTE: This file is Fellow AI meeting notes, not a verbatim transcript.
+
+MEETING NOTES
+Bijoy Chandra Nath shared meeting notes with you:
+A IT | Caboodle Ticket Call
+Sep 28, 5:00 - 6:00 PM
+Action Items (15)
+Bijoy Chandra Nath to update the 'set as reporting' button label to clarify it applies to sandbox data only (e.g., 'use this version's figures in the sandbox monthly report and rollups').
+22:04
+fariha.jabin@asthait.com to test and document what happens to version limits when a promotion is copied (i.e., whether each copy gets its own 5-version allowance).
+24:18
+View (13) more Action Items
+Topics
+1. Promotional management calendar tab feature
+Bijoy walked Constance through the promo tab feature in the promotional management calendar section, where broker users can create multiple tabs, define custom column types, filter, export, and add rows.
+4:16
+Constance noted confusion around the 'New Tab' button: clicking it repeatedly while trying to reorder tabs kept creating new tabs instead of moving existing ones.
+5:09
+Bijoy clarified that new tabs are named sequentially based on gaps in the existing tab numbering (e.g., if tabs 1, 2, and 4 exist, the next new tab is named 3); tabs can be renamed at any time.
+6:01
+Bijoy demonstrated that each tab supports column sorting, filtering with conditions, column deletion, and column type selection when adding new columns.
+8:06
+Constance confirmed that columns can be reordered by dragging using the box icon that appears on hover, which resolved another source of confusion she had experienced.
+9:01
+2. Versioning, sandbox, and 'set as reporting' behavior
+The current maximum version count per promotion is 5, a number set arbitrarily during development; the team confirmed it can be raised at any time.
+10:19
+Constance explained the business need: the Bubbies client plans to actualize plans quarterly (updating lift, store count, etc.), using up to 4 of the 5 version slots each year.
+10:52
+Bijoy clarified that the 'set as reporting' toggle applies to sandbox versions only, not to brand-approved promotions, because sandbox promotions can have multiple versions while approved promotions have only one.
+13:00
+Both the trade spend roll-up report and the monthly report pull from two sources: brand approved and sandbox; the 'set as reporting' flag tells those reports which sandbox version to use.
+17:08
+Constance and Bijoy agreed the current 'set as reporting' label is ambiguous and needs to be updated to explicitly reference sandbox (e.g., 'use this version's figures in the sandbox monthly report and rollups').
+21:49
+Taslima confirmed that copying a promotion carries over only the original version, not any additional versions that were subsequently created.
+25:03
+Constance observed that versions sometimes disappear when navigating away and back without a manual page refresh; Taslima identified this as a timing issue where the family ID is not yet present in the URL if the user navigates before the page fully loads.
+14:09
+Arnab (not on the call) is already investigating the family ID / version display bug; Bijoy and Taslima reproduced it live by navigating quickly before the list refresh completes.
+33:25
+3. Promotion year selection and filter usability
+4. Simple promotion creation flow and data entry UX
+5. Promotional calendar: copy-to-month and submission demo
+6. Roadmap hours, prioritization, and Kanban planning
+7. Team availability and working weeks through December
+8. IAM service priority and planning
+9. Ask Caboodle scoping and R&D
+10. Store mapping and entity resolution fix
+11. Bubby's Optimity data transfer and distributor mapping
+12. Production deployment and broker dashboard details
+Decisions (9)
+The 'New Tab' button label will remain as-is for now; no changes will be made unless users request it.
+7:50
+Only one sandbox version per promotion can be set as reporting at a time.
+24:03
+Review (7) more Decisions

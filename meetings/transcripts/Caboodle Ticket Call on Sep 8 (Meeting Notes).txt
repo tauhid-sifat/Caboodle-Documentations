@@ -1,0 +1,57 @@
+NOTE: This file is Fellow AI meeting notes, not a verbatim transcript.
+
+MEETING NOTES
+Bijoy Chandra Nath shared meeting notes with you:
+A IT | Caboodle Ticket Call
+Sep 8, 5:00 - 6:00 PM
+Action Items (13)
+constance@caboodleservices.com to reach out to Tauhidur to schedule a follow-up call this week once he is feeling better.
+2:56
+Bijoy Chandra Nath to push current promotional management and store module changes from staging to production after Kay's feedback is resolved.
+17:19
+View (11) more Action Items
+Topics
+1. Promotional management updates and broker-side parity
+Bijoy completed the broker-side promotional management module, which had not been worked on for some time; the brand side had already been addressed previously.
+3:20
+UI refinements to the promotional calendar included adding an event status indicator and aligning the broker and brand views to match each other.
+5:00
+3 to 4 additional filter properties were added to the promotional management module; Kay is currently testing the full module in staging.
+5:35
+Constance clarified that event statuses (active, canceled, pending) are view-only in the calendar because all edits are currently made through the sandbox section.
+9:00
+Constance noted that the canceled/pending statuses function more like submission statuses and should be actionable directly from the calendar view rather than requiring navigation to the sandbox planner.
+11:57
+Constance flagged that promotional calendar events spanning multiple months should visually cross month boundaries, similar to how the category review calendar currently handles them.
+15:06
+The team agreed to push current staging changes to production first, then revisit and brainstorm UX improvements to the promotional management module; Constance will bring broker feedback from a call this week to next Monday's call.
+16:43
+The notes section of promotional management, including the purpose of the 'submitted' status and what the notes are meant to serve, was flagged for a dedicated discussion in the near future.
+17:54
+2. Store module implementation and duplicate store issues
+The new stores implementation (including tools to merge stores and find nearby stores) has been deployed to staging and is currently being tested by Kay.
+7:31
+Kay provided feedback for both Bijoy and Efti; resolving that feedback and completing further testing is the remaining step before pushing the store module to production.
+8:03
+Constance confirmed that Kay is expected to complete testing of the store changes this week.
+33:02
+Duplicate store entries were spotted in the distributor report (same UPC, address, zip, city, and store number for multiple rows), with Bijoy noting there is an existing ticket for this issue.
+43:11
+Bijoy confirmed the duplicate store issue should be resolved by the upcoming production deployment of the new store module.
+44:00
+After the store module deployment, the team wants to sync with Kate on store data mapping, expected behavior for banners, and backfilling missing store data.
+44:28
+3. Date filter and time zone bugs in category review and activity log
+4. Image URL generation and S3 expiration issue
+5. Distributor report banners filter and minor UI updates
+6. Safari pipeline bug and Tauhidur's roadmap status
+7. Claude AI workflow for identifying reactivated items
+8. Claude team seat and chat-sharing exploration
+9. Market overview dashboard redesign demo (Kazi Towfiq Tasmin Ornov)
+10. Sprint planning, roadmap status, and upcoming priorities
+Decisions (3)
+The 'submitted' column in the promotional management notes section will be hidden for now, as its purpose is unclear.
+17:48
+Event status updates (active, canceled, pending, etc.) will be moved to be editable directly from the promotional calendar view rather than through the sandbox planner.
+13:37
+Review (1) more Decision
