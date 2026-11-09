@@ -1,0 +1,1877 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gantt Chart — Oct 11, 2026 to Mar 21, 2027</title>
+<style>
+:root{
+  --ground:#f6f5f1;
+  --panel:#ffffff;
+  --hairline:#e5e3da;
+  --hairline-soft:#efeee8;
+  --hairline-strong:#d6d3c6;
+  --ink:#1e1e1a;
+  --ink-2:#55544d;
+  --ink-3:#6b6a62;
+  --ink-4:#a3a197;
+  --iam:#dcd9f6; --iam-bd:#c6c0ee; --iam-tx:#2e2a63;
+  --ac:#a9e7d3;  --ac-bd:#8ad7c0;  --ac-tx:#0b3d33;
+  --tk:#dcdacf;  --tk-bd:#c8c5b7;  --tk-tx:#2b2b27;
+  --we:rgba(120,118,110,.085);
+  --hol:rgba(190,70,55,.10);
+  --hol-tx:#8f1f18;
+  --cw:64px;
+  --nd:162;
+  --label-w:168px;
+  --row-h:58px;
+  --bar-h:30px;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font-family:system-ui,ui-sans-serif,sans-serif;
+  color:var(--ink);
+  background:var(--ground);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+::selection{background:#dcd9f6;color:#231f52}
+.wrap{max-width:100%;margin:0 auto;padding:24px 24px 28px}
+header.top{display:flex;align-items:flex-end;justify-content:space-between;gap:18px 28px;flex-wrap:wrap;margin:0 0 16px}
+h1{font-size:19px;line-height:1.2;letter-spacing:-.015em;margin:0;font-weight:650}
+.sub{font-size:12px;line-height:1.55;color:var(--ink-3);margin:6px 0 0;font-variant-numeric:tabular-nums}
+.lg{display:flex;flex-wrap:wrap;gap:7px 16px;font-size:12px;color:var(--ink-3);margin:0}
+.lg span{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.lg i{width:10px;height:10px;border-radius:2.5px;display:inline-block;border:1px solid transparent}
+.scroller{
+  overflow:auto;
+  border:1px solid var(--hairline);
+  border-radius:10px;
+  background:var(--panel);
+  max-height:calc(100vh - 210px);
+  position:relative;
+}
+.scroller:focus-visible{outline:2px solid #8b86e8;outline-offset:2px}
+.scroller::-webkit-scrollbar{height:11px;width:11px}
+.scroller::-webkit-scrollbar-thumb{background:#cfccc0;border-radius:999px;border:3px solid #fff}
+.scroller::-webkit-scrollbar-thumb:hover{background:#b9b6a8}
+.scroller::-webkit-scrollbar-track{background:#f3f1ea}
+.grid{width:max-content;min-width:100%}
+.row{display:grid;grid-template-columns:var(--label-w) repeat(var(--nd),var(--cw));align-items:stretch}
+
+/* sticky header */
+.row.months{position:sticky;top:0;z-index:7;height:26px;background:var(--panel)}
+.row.days{position:sticky;top:26px;z-index:6;height:44px;background:var(--panel)}
+
+.corner{
+  position:sticky;left:0;z-index:2;
+  background:var(--panel);
+  border-right:1px solid var(--hairline);
+  border-bottom:1px solid var(--hairline);
+  display:flex;align-items:center;
+  padding:0 12px;
+  font-size:11px;font-weight:650;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--ink-3);
+}
+.mb{
+  border-bottom:1px solid var(--hairline);
+  border-left:1px solid var(--hairline-strong);
+  background:var(--panel);
+  display:flex;align-items:center;
+  padding:0 10px;
+  font-size:11px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-3);
+  font-variant-numeric:tabular-nums;
+}
+.mb.first{border-left:0}
+.mb span{position:sticky;left:calc(var(--label-w) + 10px)}
+
+.dy{
+  border-bottom:1px solid var(--hairline);
+  border-right:1px solid var(--hairline-soft);
+  text-align:center;
+  padding:5px 0 4px;
+  line-height:1.12;
+  font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--ink-3);
+  font-variant-numeric:tabular-nums;
+}
+.dy b{display:block;font-size:12.5px;font-weight:650;color:var(--ink);letter-spacing:0;text-transform:none;line-height:1.15}
+.dy.we,.cell.we{background:var(--we)}
+.dy.hol,.cell.hol{background:var(--hol)}
+.dy.hol{color:var(--hol-tx)}
+.dy.hol b{color:var(--hol-tx)}
+
+.nm{
+  position:sticky;left:0;z-index:2;
+  background:var(--panel);
+  border-right:1px solid var(--hairline);
+  border-bottom:1px solid var(--hairline);
+  padding:0 12px;
+  font-size:12.5px;font-weight:600;color:var(--ink);
+  display:flex;align-items:center;
+  white-space:nowrap;
+}
+.scroller.scrolled .nm,
+.scroller.scrolled .corner{box-shadow:8px 0 12px -10px rgba(20,18,10,.22)}
+
+.lane{
+  position:relative;
+  border-bottom:1px solid var(--hairline);
+  height:var(--row-h);
+  background:var(--panel);
+}
+.cell{
+  position:absolute;top:0;height:100%;
+  border-right:1px solid var(--hairline-soft);
+}
+
+.bar{
+  position:absolute;
+  top:calc((var(--row-h) - var(--bar-h)) / 2);
+  height:var(--bar-h);
+  line-height:calc(var(--bar-h) - 2px);
+  border-radius:4px;
+  font-size:11px;font-weight:650;letter-spacing:.01em;
+  text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  padding:0 5px;
+  border:1px solid transparent;
+  font-variant-numeric:tabular-nums;
+  cursor:default;
+}
+.bar:hover{filter:brightness(.975)}
+.iam{background:var(--iam);border-color:var(--iam-bd);color:var(--iam-tx)}
+.ac{background:var(--ac);border-color:var(--ac-bd);color:var(--ac-tx)}
+.tk{background:var(--tk);border-color:var(--tk-bd);color:var(--tk-tx)}
+
+.note{
+  font-size:12px;line-height:1.5;color:var(--ink-3);
+  margin:12px 0 0;
+}
+.note kbd{
+  font:inherit;font-variant-numeric:tabular-nums;color:var(--ink-2);
+  padding:0 4px;border:1px solid var(--hairline);border-radius:3px;background:#fbfaf7;
+}
+
+@media print{
+  body{background:#fff}
+  .wrap{padding:0}
+  header.top{margin-bottom:10px}
+  .scroller{max-height:none;border:0;border-radius:0;overflow:visible}
+  .grid{width:max-content;min-width:0}
+  .row.months,.row.days{position:static}
+  .nm,.corner{position:static;box-shadow:none!important}
+  .note{display:none}
+}
+@media (max-width:720px){
+  .wrap{padding:16px}
+  header.top{align-items:flex-start}
+  h1{font-size:17px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div>
+    <h1>Gantt Chart — Oct 11, 2026 → Mar 21, 2027</h1>
+    <p class="sub">162 calendar days · 112 working days · Weekends Fri/Sat shaded · Holidays Oct 20–22 and Dec 16 marked red · scheduled to Mar 21, 2027 for FE and QA capacity</p>
+  </div>
+  <div class="lg" aria-label="Legend">
+    <span><i style="background:var(--iam);border-color:var(--iam-bd)"></i>IAM Services</span>
+    <span><i style="background:var(--ac);border-color:var(--ac-bd)"></i>Ask Caboodle Phase 1</span>
+    <span><i style="background:var(--tk);border-color:var(--tk-bd)"></i>Individual tasks (by priority)</span>
+    <span><i style="background:var(--we);border:1px solid var(--hairline)"></i>Weekend (Fri/Sat)</span>
+    <span><i style="background:var(--hol)"></i>Holiday</span>
+  </div>
+</header>
+<div class="scroller" tabindex="0" aria-label="Gantt chart of Caboodle tasks by person and day">
+<div class="grid" id="g"></div>
+</div>
+<p class="note">Each bar shows the Jira ticket key (<kbd>CS-####</kbd>). Scroll horizontally to view all days. Hover a bar for its full summary.</p>
+</div>
+<script>
+var start = new Date(2026, 9, 11), ND = 162, CW = 64;
+var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var WD = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+var hol = {
+  '2026-10-20': 1, '2026-10-21': 1, '2026-10-22': 1, '2026-12-16': 1
+};
+function key(d) {
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+}
+var days = [];
+for (var i = 0; i < ND; i++) {
+  var d = new Date(start);
+  d.setDate(d.getDate() + i);
+  days.push(d);
+}
+
+var rows = [
+ [
+  "Bijoy (BE)",
+  [
+   [
+    0,
+    4,
+    "iam",
+    "IAM BE",
+    ""
+   ],
+   [
+    17,
+    18,
+    "ac",
+    "AC P1 BE",
+    ""
+   ],
+   [
+    21,
+    25,
+    "ac",
+    "AC P1 BE",
+    ""
+   ],
+   [
+    28,
+    29,
+    "tk",
+    "CS-1333",
+    "Fix Distributor Report Calculations and "
+   ],
+   [
+    30,
+    30,
+    "tk",
+    "CS-1708",
+    "Promotional Planning | Simple Entries (N"
+   ],
+   [
+    31,
+    31,
+    "tk",
+    "CS-1279",
+    "Distributor Report Discussion | Auto Upd"
+   ],
+   [
+    32,
+    32,
+    "tk",
+    "CS-1305",
+    "Broker Dashboard Update UI to match the "
+   ],
+   [
+    35,
+    35,
+    "tk",
+    "CS-1307",
+    "Home Page Banner Report > Add Scroll opt"
+   ],
+   [
+    36,
+    36,
+    "tk",
+    "CS-1352",
+    "Monthly Report | YOY Report Needs Date S"
+   ],
+   [
+    37,
+    37,
+    "tk",
+    "CS-1384",
+    "Admin Banner Sku Upload Failed Records |"
+   ],
+   [
+    38,
+    39,
+    "tk",
+    "CS-1391",
+    "Data Mapping | Banner Sku Upload"
+   ],
+   [
+    42,
+    42,
+    "tk",
+    "CS-1435",
+    "Data Mapping | Pulling in KeHE POD Curre"
+   ],
+   [
+    43,
+    43,
+    "tk",
+    "CS-1443",
+    "[BE] CRM Data Upload Improvements"
+   ],
+   [
+    44,
+    44,
+    "tk",
+    "CS-1505",
+    "Add a detailed calculation breakdown in "
+   ],
+   [
+    45,
+    45,
+    "tk",
+    "CS-1650",
+    "[BE] Pipeline | User should be able to r"
+   ],
+   [
+    46,
+    46,
+    "tk",
+    "CS-1150",
+    "CRM | Pipeline - Need Undo option in tas"
+   ],
+   [
+    49,
+    53,
+    "tk",
+    "CS-1276",
+    "Current UNFI & KeHE Reports > Determine "
+   ],
+   [
+    56,
+    56,
+    "tk",
+    "CS-1588",
+    "Admin | Admin Controls | Control Icons o"
+   ],
+   [
+    57,
+    57,
+    "tk",
+    "CS-1591",
+    "Broker | Dashboard | Prototype with Flag"
+   ],
+   [
+    58,
+    58,
+    "tk",
+    "CS-1596",
+    "Brand Modules | Product Spec | Add Produ"
+   ],
+   [
+    59,
+    59,
+    "tk",
+    "CS-1598",
+    "Broker Dashboard | Dashboard (from wiref"
+   ],
+   [
+    60,
+    60,
+    "tk",
+    "CS-1601",
+    "Broker Dashboard | Pipeline (Task) \u2014 fro"
+   ],
+   [
+    63,
+    63,
+    "tk",
+    "CS-1603",
+    "Distributor APL | Wholesale Case Cost Re"
+   ],
+   [
+    64,
+    64,
+    "tk",
+    "CS-1608",
+    "Market Overview | Allow Editing DC in Ed"
+   ],
+   [
+    65,
+    65,
+    "tk",
+    "CS-1610",
+    "Market Overview | Document and Define St"
+   ],
+   [
+    67,
+    67,
+    "tk",
+    "CS-1614",
+    "Promotional Management | Export to Forma"
+   ],
+   [
+    70,
+    70,
+    "tk",
+    "CS-1623",
+    "Reports | Brand Distributor Report | Rol"
+   ],
+   [
+    71,
+    71,
+    "tk",
+    "CS-1626",
+    "Brand Modules | TSS | Remove or Modify A"
+   ],
+   [
+    72,
+    72,
+    "tk",
+    "CS-1666",
+    "[BE] Caboodle App | Add option to export"
+   ],
+   [
+    73,
+    73,
+    "tk",
+    "CS-1672",
+    "Broker - Trade Spend Sandbox| Push butto"
+   ],
+   [
+    74,
+    74,
+    "tk",
+    "CS-1679",
+    "[BE] Brand - TSS | System allows creatin"
+   ],
+   [
+    77,
+    77,
+    "tk",
+    "CS-1710",
+    "Admin | System Generated Emails | Sender"
+   ],
+   [
+    78,
+    78,
+    "tk",
+    "CS-376",
+    "Product Specs - Add Chck Box for Manufac"
+   ],
+   [
+    79,
+    79,
+    "tk",
+    "CS-1112",
+    "product category change causes pricing t"
+   ],
+   [
+    80,
+    80,
+    "tk",
+    "CS-1388",
+    "Monthly Report | Add Month to Filter"
+   ],
+   [
+    81,
+    81,
+    "tk",
+    "CS-1409",
+    "[BE] Data Mapping | Allow user to cancel"
+   ],
+   [
+    84,
+    84,
+    "tk",
+    "CS-1570",
+    "Admin | Add validation for Phone Number "
+   ],
+   [
+    85,
+    85,
+    "tk",
+    "CS-1573",
+    "Admin - CRM | Filter/Column Standardizat"
+   ]
+  ]
+ ],
+ [
+  "Ornov (BE)",
+  [
+   [
+    7,
+    8,
+    "iam",
+    "IAM BE",
+    ""
+   ],
+   [
+    14,
+    16,
+    "iam",
+    "IAM BE",
+    ""
+   ],
+   [
+    28,
+    29,
+    "tk",
+    "CS-1424",
+    "Data Mapping | Broker Dashboard APL | Ne"
+   ],
+   [
+    30,
+    30,
+    "tk",
+    "CS-1077",
+    "Product Specs Add/Edit Product > Change "
+   ],
+   [
+    31,
+    31,
+    "tk",
+    "CS-1281",
+    "Distributor Report | Auto Flags for New "
+   ],
+   [
+    32,
+    32,
+    "tk",
+    "CS-1306",
+    "Report | Sales Tracking for Prospects"
+   ],
+   [
+    35,
+    35,
+    "tk",
+    "CS-1316",
+    "Category Review | Implement Scrolling vs"
+   ],
+   [
+    36,
+    36,
+    "tk",
+    "CS-1363",
+    "Broker Dashboard | APL Add Distributor &"
+   ],
+   [
+    37,
+    38,
+    "tk",
+    "CS-1390",
+    "Admin | Data Mapping | New Bot Implement"
+   ],
+   [
+    39,
+    39,
+    "tk",
+    "CS-1403",
+    "Broker Dashboard | APL Upload Adjust for"
+   ],
+   [
+    42,
+    44,
+    "tk",
+    "CS-1442",
+    "CRM Data Upload Improvement"
+   ],
+   [
+    45,
+    45,
+    "tk",
+    "CS-1444",
+    "[FE] CRM Data Upload Improvements"
+   ],
+   [
+    46,
+    46,
+    "tk",
+    "CS-1649",
+    "[FE] Pipeline | User should be able to r"
+   ],
+   [
+    49,
+    49,
+    "tk",
+    "CS-688",
+    "[BE] Implement read tables for Market Ov"
+   ],
+   [
+    50,
+    50,
+    "tk",
+    "CS-1202",
+    "Promotional Calendar: If Event stretches"
+   ],
+   [
+    51,
+    51,
+    "tk",
+    "CS-1504",
+    "Retailer APL | Long Loading Time Impacti"
+   ],
+   [
+    52,
+    52,
+    "tk",
+    "CS-1590",
+    "Admin | CRM Data Upload | Filter Audit -"
+   ],
+   [
+    53,
+    53,
+    "tk",
+    "CS-1595",
+    "Brand Modules | Pipeline | Option to Not"
+   ],
+   [
+    56,
+    56,
+    "tk",
+    "CS-1597",
+    "Brand Modules | Retailer CRM | Add Store"
+   ],
+   [
+    57,
+    57,
+    "tk",
+    "CS-1599",
+    "Broker Dashboard | Assign Time and Perso"
+   ],
+   [
+    58,
+    58,
+    "tk",
+    "CS-1602",
+    "Distributor APL | Infinite Scrolling"
+   ],
+   [
+    59,
+    59,
+    "tk",
+    "CS-1605",
+    "Category Review | Remove All Reviews at "
+   ],
+   [
+    60,
+    60,
+    "tk",
+    "CS-1609",
+    "Market Overview | Add Text Search to Lis"
+   ],
+   [
+    63,
+    63,
+    "tk",
+    "CS-1613",
+    "Market Overview | Allow One Retailer wit"
+   ],
+   [
+    64,
+    64,
+    "tk",
+    "CS-1616",
+    "Promotional Management | Pin/Freeze Filt"
+   ],
+   [
+    65,
+    65,
+    "tk",
+    "CS-1625",
+    "Brand Modules | TSS | Remove or Modify A"
+   ],
+   [
+    67,
+    67,
+    "tk",
+    "CS-1652",
+    "Brand Modules | Pipeline | Rebuild as Fe"
+   ],
+   [
+    70,
+    70,
+    "tk",
+    "CS-1669",
+    "[FE] Admin Panel & Caboodle App | Add Re"
+   ],
+   [
+    71,
+    71,
+    "tk",
+    "CS-1678",
+    "[FE] Brand - TSS | System allows creatin"
+   ],
+   [
+    72,
+    72,
+    "tk",
+    "CS-1709",
+    "Admin | CRM Data Upload | Delete or Merg"
+   ],
+   [
+    73,
+    73,
+    "tk",
+    "CS-1711",
+    "Broker Dashboard | Promotional Managemen"
+   ],
+   [
+    74,
+    74,
+    "tk",
+    "CS-487",
+    "[BE] Saving Banner SKU Failed Records an"
+   ],
+   [
+    77,
+    78,
+    "tk",
+    "CS-1292",
+    "Data Uploads | Implement Dynamic Data Up"
+   ],
+   [
+    79,
+    79,
+    "tk",
+    "CS-1405",
+    "[BE] Monthly Report | Add Month to Filte"
+   ],
+   [
+    80,
+    80,
+    "tk",
+    "CS-1483",
+    "Market Overview | Exported CSV Columns D"
+   ],
+   [
+    81,
+    81,
+    "tk",
+    "CS-1571",
+    "Admin - CRM Data Upload | Make all filte"
+   ]
+  ]
+ ],
+ [
+  "Efti (FE)",
+  [
+   [
+    7,
+    8,
+    "iam",
+    "IAM FE",
+    ""
+   ],
+   [
+    14,
+    18,
+    "iam",
+    "IAM FE",
+    ""
+   ],
+   [
+    21,
+    23,
+    "iam",
+    "IAM FE",
+    ""
+   ],
+   [
+    24,
+    25,
+    "ac",
+    "AC P1 FE",
+    ""
+   ],
+   [
+    28,
+    28,
+    "tk",
+    "CS-1333",
+    "Fix Distributor Report Calculations and "
+   ],
+   [
+    29,
+    29,
+    "tk",
+    "CS-1424",
+    "Data Mapping | Broker Dashboard APL | Ne"
+   ],
+   [
+    30,
+    31,
+    "tk",
+    "CS-1708",
+    "Promotional Planning | Simple Entries (N"
+   ],
+   [
+    32,
+    32,
+    "tk",
+    "CS-1077",
+    "Product Specs Add/Edit Product > Change "
+   ],
+   [
+    35,
+    35,
+    "tk",
+    "CS-1279",
+    "Distributor Report Discussion | Auto Upd"
+   ],
+   [
+    36,
+    36,
+    "tk",
+    "CS-1281",
+    "Distributor Report | Auto Flags for New "
+   ],
+   [
+    37,
+    37,
+    "tk",
+    "CS-1305",
+    "Broker Dashboard Update UI to match the "
+   ],
+   [
+    38,
+    39,
+    "tk",
+    "CS-1306",
+    "Report | Sales Tracking for Prospects"
+   ],
+   [
+    42,
+    42,
+    "tk",
+    "CS-1307",
+    "Home Page Banner Report > Add Scroll opt"
+   ],
+   [
+    43,
+    43,
+    "tk",
+    "CS-1316",
+    "Category Review | Implement Scrolling vs"
+   ],
+   [
+    44,
+    44,
+    "tk",
+    "CS-1352",
+    "Monthly Report | YOY Report Needs Date S"
+   ],
+   [
+    45,
+    45,
+    "tk",
+    "CS-1363",
+    "Broker Dashboard | APL Add Distributor &"
+   ],
+   [
+    46,
+    46,
+    "tk",
+    "CS-1384",
+    "Admin Banner Sku Upload Failed Records |"
+   ],
+   [
+    49,
+    53,
+    "tk",
+    "CS-1390",
+    "Admin | Data Mapping | New Bot Implement"
+   ],
+   [
+    56,
+    56,
+    "tk",
+    "CS-1403",
+    "Broker Dashboard | APL Upload Adjust for"
+   ],
+   [
+    57,
+    57,
+    "tk",
+    "CS-1435",
+    "Data Mapping | Pulling in KeHE POD Curre"
+   ],
+   [
+    58,
+    59,
+    "tk",
+    "CS-1442",
+    "CRM Data Upload Improvement"
+   ],
+   [
+    60,
+    60,
+    "tk",
+    "CS-1444",
+    "[FE] CRM Data Upload Improvements"
+   ],
+   [
+    63,
+    63,
+    "tk",
+    "CS-1505",
+    "Add a detailed calculation breakdown in "
+   ],
+   [
+    64,
+    64,
+    "tk",
+    "CS-1649",
+    "[FE] Pipeline | User should be able to r"
+   ],
+   [
+    65,
+    65,
+    "tk",
+    "CS-1676",
+    "Admin - Stores | Add multiple export opt"
+   ],
+   [
+    67,
+    67,
+    "tk",
+    "CS-1681",
+    "[FE] Dependent filter options should be "
+   ],
+   [
+    70,
+    70,
+    "tk",
+    "CS-688",
+    "[BE] Implement read tables for Market Ov"
+   ],
+   [
+    71,
+    72,
+    "tk",
+    "CS-1150",
+    "CRM | Pipeline - Need Undo option in tas"
+   ],
+   [
+    73,
+    73,
+    "tk",
+    "CS-1202",
+    "Promotional Calendar: If Event stretches"
+   ],
+   [
+    74,
+    74,
+    "tk",
+    "CS-1276",
+    "Current UNFI & KeHE Reports > Determine "
+   ],
+   [
+    77,
+    77,
+    "tk",
+    "CS-1504",
+    "Retailer APL | Long Loading Time Impacti"
+   ],
+   [
+    78,
+    78,
+    "tk",
+    "CS-1588",
+    "Admin | Admin Controls | Control Icons o"
+   ],
+   [
+    79,
+    80,
+    "tk",
+    "CS-1590",
+    "Admin | CRM Data Upload | Filter Audit -"
+   ],
+   [
+    81,
+    81,
+    "tk",
+    "CS-1591",
+    "Broker | Dashboard | Prototype with Flag"
+   ],
+   [
+    84,
+    84,
+    "tk",
+    "CS-1595",
+    "Brand Modules | Pipeline | Option to Not"
+   ],
+   [
+    85,
+    85,
+    "tk",
+    "CS-1596",
+    "Brand Modules | Product Spec | Add Produ"
+   ],
+   [
+    86,
+    86,
+    "tk",
+    "CS-1597",
+    "Brand Modules | Retailer CRM | Add Store"
+   ],
+   [
+    87,
+    88,
+    "tk",
+    "CS-1598",
+    "Broker Dashboard | Dashboard (from wiref"
+   ],
+   [
+    91,
+    91,
+    "tk",
+    "CS-1599",
+    "Broker Dashboard | Assign Time and Perso"
+   ],
+   [
+    92,
+    92,
+    "tk",
+    "CS-1600",
+    "Broker Dashboard | Dashboard Filter \u2014 My"
+   ],
+   [
+    93,
+    93,
+    "tk",
+    "CS-1601",
+    "Broker Dashboard | Pipeline (Task) \u2014 fro"
+   ],
+   [
+    94,
+    94,
+    "tk",
+    "CS-1602",
+    "Distributor APL | Infinite Scrolling"
+   ],
+   [
+    95,
+    95,
+    "tk",
+    "CS-1603",
+    "Distributor APL | Wholesale Case Cost Re"
+   ],
+   [
+    98,
+    98,
+    "tk",
+    "CS-1605",
+    "Category Review | Remove All Reviews at "
+   ],
+   [
+    99,
+    99,
+    "tk",
+    "CS-1608",
+    "Market Overview | Allow Editing DC in Ed"
+   ],
+   [
+    100,
+    100,
+    "tk",
+    "CS-1609",
+    "Market Overview | Add Text Search to Lis"
+   ],
+   [
+    101,
+    101,
+    "tk",
+    "CS-1613",
+    "Market Overview | Allow One Retailer wit"
+   ],
+   [
+    102,
+    102,
+    "tk",
+    "CS-1614",
+    "Promotional Management | Export to Forma"
+   ],
+   [
+    105,
+    105,
+    "tk",
+    "CS-1616",
+    "Promotional Management | Pin/Freeze Filt"
+   ],
+   [
+    106,
+    106,
+    "tk",
+    "CS-1617",
+    "Promotional Management | Format Grid Uni"
+   ],
+   [
+    107,
+    107,
+    "tk",
+    "CS-1618",
+    "Promotional Management | Allow Event to "
+   ],
+   [
+    108,
+    108,
+    "tk",
+    "CS-1620",
+    "Reports | SPINS | Hide Market Insights"
+   ],
+   [
+    109,
+    109,
+    "tk",
+    "CS-1621",
+    "Reports | Sales Tracker | Back Button Re"
+   ],
+   [
+    112,
+    112,
+    "tk",
+    "CS-1623",
+    "Reports | Brand Distributor Report | Rol"
+   ],
+   [
+    113,
+    113,
+    "tk",
+    "CS-1625",
+    "Brand Modules | TSS | Remove or Modify A"
+   ],
+   [
+    114,
+    114,
+    "tk",
+    "CS-1626",
+    "Brand Modules | TSS | Remove or Modify A"
+   ],
+   [
+    115,
+    115,
+    "tk",
+    "CS-1627",
+    "Brand Modules | TSS | EDLP in Stepper - "
+   ],
+   [
+    116,
+    116,
+    "tk",
+    "CS-1629",
+    "Brand Modules | TSS | Edit Promo Details"
+   ],
+   [
+    119,
+    120,
+    "tk",
+    "CS-1652",
+    "Brand Modules | Pipeline | Rebuild as Fe"
+   ],
+   [
+    121,
+    121,
+    "tk",
+    "CS-1666",
+    "[BE] Caboodle App | Add option to export"
+   ],
+   [
+    122,
+    122,
+    "tk",
+    "CS-1667",
+    "[FE] Caboodle App | Add option to export"
+   ],
+   [
+    123,
+    123,
+    "tk",
+    "CS-1668",
+    "Admin Panel & Caboodle App | Add Reset/C"
+   ],
+   [
+    126,
+    126,
+    "tk",
+    "CS-1672",
+    "Broker - Trade Spend Sandbox| Push butto"
+   ],
+   [
+    127,
+    127,
+    "tk",
+    "CS-1678",
+    "[FE] Brand - TSS | System allows creatin"
+   ],
+   [
+    128,
+    128,
+    "tk",
+    "CS-1709",
+    "Admin | CRM Data Upload | Delete or Merg"
+   ],
+   [
+    129,
+    129,
+    "tk",
+    "CS-1710",
+    "Admin | System Generated Emails | Sender"
+   ],
+   [
+    130,
+    130,
+    "tk",
+    "CS-1711",
+    "Broker Dashboard | Promotional Managemen"
+   ],
+   [
+    133,
+    133,
+    "tk",
+    "CS-376",
+    "Product Specs - Add Chck Box for Manufac"
+   ],
+   [
+    134,
+    134,
+    "tk",
+    "CS-1112",
+    "product category change causes pricing t"
+   ],
+   [
+    135,
+    135,
+    "tk",
+    "CS-1178",
+    "EDLP events look the same as other event"
+   ],
+   [
+    136,
+    137,
+    "tk",
+    "CS-1292",
+    "Data Uploads | Implement Dynamic Data Up"
+   ],
+   [
+    140,
+    140,
+    "tk",
+    "CS-1388",
+    "Monthly Report | Add Month to Filter"
+   ],
+   [
+    141,
+    141,
+    "tk",
+    "CS-1405",
+    "[BE] Monthly Report | Add Month to Filte"
+   ],
+   [
+    142,
+    142,
+    "tk",
+    "CS-1407",
+    "Distributor Report | Update DC Cases Sol"
+   ],
+   [
+    143,
+    143,
+    "tk",
+    "CS-1409",
+    "[BE] Data Mapping | Allow user to cancel"
+   ],
+   [
+    144,
+    144,
+    "tk",
+    "CS-1410",
+    "[FE] Data Mapping | Unmapped Filter: Ord"
+   ],
+   [
+    147,
+    147,
+    "tk",
+    "CS-1411",
+    "[FE] Data Mapping | Filter : Refresh pag"
+   ],
+   [
+    148,
+    148,
+    "tk",
+    "CS-1483",
+    "Market Overview | Exported CSV Columns D"
+   ],
+   [
+    149,
+    149,
+    "tk",
+    "CS-1484",
+    "Market Overview | Case Stack and Trainin"
+   ],
+   [
+    150,
+    150,
+    "tk",
+    "CS-1496",
+    "Broker Dashboard | Add Back Button to Al"
+   ],
+   [
+    151,
+    151,
+    "tk",
+    "CS-1509",
+    "Retail Report | Standardize naming for A"
+   ],
+   [
+    154,
+    154,
+    "tk",
+    "CS-1511",
+    "Brand Report | Add Back Button to All Br"
+   ],
+   [
+    155,
+    155,
+    "tk",
+    "CS-1540",
+    "Brand - Retailer | Remove redundant Sort"
+   ],
+   [
+    156,
+    156,
+    "tk",
+    "CS-1570",
+    "Admin | Add validation for Phone Number "
+   ],
+   [
+    157,
+    157,
+    "tk",
+    "CS-1571",
+    "Admin - CRM Data Upload | Make all filte"
+   ],
+   [
+    158,
+    158,
+    "tk",
+    "CS-1573",
+    "Admin - CRM | Filter/Column Standardizat"
+   ],
+   [
+    161,
+    161,
+    "tk",
+    "CS-1574",
+    "Admin - CRM | Rename \"Import\"/Upload Lab"
+   ]
+  ]
+ ],
+ [
+  "Keya (QA)",
+  [
+   [
+    7,
+    8,
+    "iam",
+    "IAM QA",
+    ""
+   ],
+   [
+    14,
+    18,
+    "iam",
+    "IAM QA",
+    ""
+   ],
+   [
+    21,
+    23,
+    "iam",
+    "IAM QA",
+    ""
+   ],
+   [
+    24,
+    25,
+    "ac",
+    "AC P1 QA",
+    ""
+   ],
+   [
+    28,
+    30,
+    "ac",
+    "AC P1 QA",
+    ""
+   ],
+   [
+    31,
+    31,
+    "tk",
+    "CS-1333",
+    "Fix Distributor Report Calculations and "
+   ],
+   [
+    32,
+    32,
+    "tk",
+    "CS-1424",
+    "Data Mapping | Broker Dashboard APL | Ne"
+   ],
+   [
+    35,
+    35,
+    "tk",
+    "CS-1708",
+    "Promotional Planning | Simple Entries (N"
+   ],
+   [
+    36,
+    36,
+    "tk",
+    "CS-1077",
+    "Product Specs Add/Edit Product > Change "
+   ],
+   [
+    37,
+    37,
+    "tk",
+    "CS-1279",
+    "Distributor Report Discussion | Auto Upd"
+   ],
+   [
+    38,
+    38,
+    "tk",
+    "CS-1281",
+    "Distributor Report | Auto Flags for New "
+   ],
+   [
+    39,
+    39,
+    "tk",
+    "CS-1305",
+    "Broker Dashboard Update UI to match the "
+   ],
+   [
+    42,
+    43,
+    "tk",
+    "CS-1306",
+    "Report | Sales Tracking for Prospects"
+   ],
+   [
+    44,
+    44,
+    "tk",
+    "CS-1307",
+    "Home Page Banner Report > Add Scroll opt"
+   ],
+   [
+    45,
+    45,
+    "tk",
+    "CS-1316",
+    "Category Review | Implement Scrolling vs"
+   ],
+   [
+    46,
+    46,
+    "tk",
+    "CS-1352",
+    "Monthly Report | YOY Report Needs Date S"
+   ],
+   [
+    49,
+    49,
+    "tk",
+    "CS-1363",
+    "Broker Dashboard | APL Add Distributor &"
+   ],
+   [
+    50,
+    50,
+    "tk",
+    "CS-1384",
+    "Admin Banner Sku Upload Failed Records |"
+   ],
+   [
+    51,
+    53,
+    "tk",
+    "CS-1390",
+    "Admin | Data Mapping | New Bot Implement"
+   ],
+   [
+    56,
+    56,
+    "tk",
+    "CS-1403",
+    "Broker Dashboard | APL Upload Adjust for"
+   ],
+   [
+    57,
+    57,
+    "tk",
+    "CS-1435",
+    "Data Mapping | Pulling in KeHE POD Curre"
+   ],
+   [
+    58,
+    59,
+    "tk",
+    "CS-1442",
+    "CRM Data Upload Improvement"
+   ],
+   [
+    60,
+    60,
+    "tk",
+    "CS-1444",
+    "[FE] CRM Data Upload Improvements"
+   ],
+   [
+    63,
+    63,
+    "tk",
+    "CS-1505",
+    "Add a detailed calculation breakdown in "
+   ],
+   [
+    64,
+    64,
+    "tk",
+    "CS-1649",
+    "[FE] Pipeline | User should be able to r"
+   ],
+   [
+    65,
+    65,
+    "tk",
+    "CS-688",
+    "[BE] Implement read tables for Market Ov"
+   ],
+   [
+    67,
+    67,
+    "tk",
+    "CS-1150",
+    "CRM | Pipeline - Need Undo option in tas"
+   ],
+   [
+    70,
+    70,
+    "tk",
+    "CS-1202",
+    "Promotional Calendar: If Event stretches"
+   ],
+   [
+    71,
+    72,
+    "tk",
+    "CS-1276",
+    "Current UNFI & KeHE Reports > Determine "
+   ],
+   [
+    73,
+    73,
+    "tk",
+    "CS-1504",
+    "Retailer APL | Long Loading Time Impacti"
+   ],
+   [
+    74,
+    74,
+    "tk",
+    "CS-1588",
+    "Admin | Admin Controls | Control Icons o"
+   ],
+   [
+    77,
+    77,
+    "tk",
+    "CS-1590",
+    "Admin | CRM Data Upload | Filter Audit -"
+   ],
+   [
+    78,
+    78,
+    "tk",
+    "CS-1591",
+    "Broker | Dashboard | Prototype with Flag"
+   ],
+   [
+    79,
+    79,
+    "tk",
+    "CS-1595",
+    "Brand Modules | Pipeline | Option to Not"
+   ],
+   [
+    80,
+    80,
+    "tk",
+    "CS-1596",
+    "Brand Modules | Product Spec | Add Produ"
+   ],
+   [
+    81,
+    81,
+    "tk",
+    "CS-1597",
+    "Brand Modules | Retailer CRM | Add Store"
+   ],
+   [
+    84,
+    84,
+    "tk",
+    "CS-1598",
+    "Broker Dashboard | Dashboard (from wiref"
+   ],
+   [
+    85,
+    85,
+    "tk",
+    "CS-1599",
+    "Broker Dashboard | Assign Time and Perso"
+   ],
+   [
+    86,
+    86,
+    "tk",
+    "CS-1601",
+    "Broker Dashboard | Pipeline (Task) \u2014 fro"
+   ],
+   [
+    87,
+    87,
+    "tk",
+    "CS-1602",
+    "Distributor APL | Infinite Scrolling"
+   ],
+   [
+    88,
+    88,
+    "tk",
+    "CS-1603",
+    "Distributor APL | Wholesale Case Cost Re"
+   ],
+   [
+    91,
+    91,
+    "tk",
+    "CS-1605",
+    "Category Review | Remove All Reviews at "
+   ],
+   [
+    92,
+    92,
+    "tk",
+    "CS-1608",
+    "Market Overview | Allow Editing DC in Ed"
+   ],
+   [
+    93,
+    93,
+    "tk",
+    "CS-1609",
+    "Market Overview | Add Text Search to Lis"
+   ],
+   [
+    94,
+    94,
+    "tk",
+    "CS-1613",
+    "Market Overview | Allow One Retailer wit"
+   ],
+   [
+    95,
+    95,
+    "tk",
+    "CS-1614",
+    "Promotional Management | Export to Forma"
+   ],
+   [
+    98,
+    98,
+    "tk",
+    "CS-1616",
+    "Promotional Management | Pin/Freeze Filt"
+   ],
+   [
+    99,
+    99,
+    "tk",
+    "CS-1623",
+    "Reports | Brand Distributor Report | Rol"
+   ],
+   [
+    100,
+    100,
+    "tk",
+    "CS-1625",
+    "Brand Modules | TSS | Remove or Modify A"
+   ],
+   [
+    101,
+    101,
+    "tk",
+    "CS-1626",
+    "Brand Modules | TSS | Remove or Modify A"
+   ],
+   [
+    102,
+    102,
+    "tk",
+    "CS-1652",
+    "Brand Modules | Pipeline | Rebuild as Fe"
+   ],
+   [
+    105,
+    105,
+    "tk",
+    "CS-1666",
+    "[BE] Caboodle App | Add option to export"
+   ],
+   [
+    106,
+    106,
+    "tk",
+    "CS-1672",
+    "Broker - Trade Spend Sandbox| Push butto"
+   ],
+   [
+    107,
+    107,
+    "tk",
+    "CS-1678",
+    "[FE] Brand - TSS | System allows creatin"
+   ],
+   [
+    108,
+    108,
+    "tk",
+    "CS-1709",
+    "Admin | CRM Data Upload | Delete or Merg"
+   ],
+   [
+    109,
+    109,
+    "tk",
+    "CS-1710",
+    "Admin | System Generated Emails | Sender"
+   ],
+   [
+    112,
+    112,
+    "tk",
+    "CS-1711",
+    "Broker Dashboard | Promotional Managemen"
+   ],
+   [
+    113,
+    113,
+    "tk",
+    "CS-376",
+    "Product Specs - Add Chck Box for Manufac"
+   ],
+   [
+    114,
+    114,
+    "tk",
+    "CS-1112",
+    "product category change causes pricing t"
+   ],
+   [
+    115,
+    115,
+    "tk",
+    "CS-1292",
+    "Data Uploads | Implement Dynamic Data Up"
+   ],
+   [
+    116,
+    116,
+    "tk",
+    "CS-1388",
+    "Monthly Report | Add Month to Filter"
+   ],
+   [
+    119,
+    119,
+    "tk",
+    "CS-1405",
+    "[BE] Monthly Report | Add Month to Filte"
+   ],
+   [
+    120,
+    120,
+    "tk",
+    "CS-1409",
+    "[BE] Data Mapping | Allow user to cancel"
+   ],
+   [
+    121,
+    121,
+    "tk",
+    "CS-1483",
+    "Market Overview | Exported CSV Columns D"
+   ],
+   [
+    122,
+    122,
+    "tk",
+    "CS-1570",
+    "Admin | Add validation for Phone Number "
+   ],
+   [
+    123,
+    123,
+    "tk",
+    "CS-1571",
+    "Admin - CRM Data Upload | Make all filte"
+   ],
+   [
+    126,
+    126,
+    "tk",
+    "CS-1573",
+    "Admin - CRM | Filter/Column Standardizat"
+   ]
+  ]
+ ]
+];
+
+var g = document.getElementById('g'), h = '';
+
+// Month band row (real spans, above the day row)
+h += '<div class="row months"><div class="corner">Month</div>';
+var ms = 0;
+for (var mi = 0; mi <= ND; mi++) {
+  if (mi === ND || days[mi].getMonth() !== days[ms].getMonth()) {
+    var lbl = MONTHS[days[ms].getMonth()] + ' ' + days[ms].getFullYear();
+    h += '<div class="mb' + (ms === 0 ? ' first' : '') + '" style="grid-column:' + (2 + ms) + ' / span ' + (mi - ms) + '"><span>' + lbl + '</span></div>';
+    ms = mi;
+  }
+}
+h += '</div>';
+
+// Day header row
+h += '<div class="row days"><div class="corner">Person / Day</div>';
+days.forEach(function(d) {
+  var k = key(d);
+  var c = 'dy' + (d.getDay() === 5 || d.getDay() === 6 ? ' we' : '') + (hol[k] ? ' hol' : '');
+  h += '<div class="' + c + '"><b>' + d.getDate() + '</b>' + WD[d.getDay()] + '</div>';
+});
+h += '</div>';
+
+// Lanes
+rows.forEach(function(r) {
+  h += '<div class="row"><div class="nm">' + r[0] + '</div><div class="lane" style="grid-column:2 / span ' + ND + '">';
+  for (var i = 0; i < ND; i++) {
+    var d = days[i], k = key(d);
+    h += '<div class="cell' + (d.getDay() === 5 || d.getDay() === 6 ? ' we' : '') + (hol[k] ? ' hol' : '') + '" style="left:' + (i * CW) + 'px;width:' + CW + 'px"></div>';
+  }
+  r[1].forEach(function(b) {
+    var l = b[0] * CW, w = (b[1] - b[0] + 1) * CW;
+    var kk = b[3], ss = b[4] || '';
+    var tt = ss ? kk + ' — ' + ss : kk;
+    h += '<div class="bar ' + b[2] + '" title="' + tt + '" aria-label="' + tt + '" style="left:' + l + 'px;width:' + Math.max(w - 3, 18) + 'px">' + kk + '</div>';
+  });
+  h += '</div></div>';
+});
+g.innerHTML = h;
+
+// Right-edge shadow on the sticky person column once the chart is scrolled
+var sc = document.querySelector('.scroller');
+sc.addEventListener('scroll', function() {
+  sc.classList.toggle('scrolled', sc.scrollLeft > 2);
+}, { passive: true });
+</script>
+</body>
+</html>
