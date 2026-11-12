@@ -1,0 +1,1146 @@
+{
+ "routes": 66,
+ "inspected": 61,
+ "blocked": 5,
+ "buttons": 1510,
+ "bpCounts": {
+  "BP-01": 288,
+  "BP-07": 378,
+  "BP-06": 400,
+  "BP-02": 74,
+  "BP-12": 57,
+  "BP-03": 43,
+  "BP-04": 174,
+  "BP-13": 75,
+  "BP-05": 21
+ },
+ "orderFindings": [
+  {
+   "id": "BR-02",
+   "route": "/market-overview",
+   "type": "Grid listing",
+   "seq": [
+    "Export",
+    "Add Log",
+    "Remove Log",
+    "Filter"
+   ],
+   "issues": [
+    "action before filter",
+    "export before filter"
+   ]
+  },
+  {
+   "id": "BR-03",
+   "route": "/market-overview-report",
+   "type": "Report",
+   "seq": [
+    "Export",
+    "Filter"
+   ],
+   "issues": [
+    "export before filter"
+   ]
+  },
+  {
+   "id": "BR-04",
+   "route": "/distributor-apl",
+   "type": "Grid listing",
+   "seq": [
+    "Remove",
+    "Export",
+    "Upload",
+    "Add",
+    "Filter"
+   ],
+   "issues": [
+    "action before filter",
+    "export before filter"
+   ]
+  },
+  {
+   "id": "BR-05",
+   "route": "/retail-apl",
+   "type": "Grid listing",
+   "seq": [
+    "Export",
+    "Filter"
+   ],
+   "issues": [
+    "export before filter"
+   ]
+  },
+  {
+   "id": "BR-06",
+   "route": "/promotional-management",
+   "type": "Calendar",
+   "seq": [
+    "Brand's Notes",
+    "Brand's Notes",
+    "Brand's Notes",
+    "Brand's Notes",
+    "Brand's Notes",
+    "RETAILER SUBMISSION DATES",
+    "RETAILER SUBMISSION DATES",
+    "RETAILER SUBMISSION DATES",
+    "RETAILER SUBMISSION DATES",
+    "RETAILER SUBMISSION DATES",
+    "New Tab 1",
+    "New Tab 1",
+    "New Tab 1",
+    "New Tab 1",
+    "New Tab 1",
+    "New Tab 2",
+    "New Tab 2",
+    "New Tab 2",
+    "New Tab 2",
+    "New Tab 2",
+    "New tab",
+    "New tab",
+    "New tab",
+    "New tab",
+    "New tab"
+   ],
+   "issues": []
+  },
+  {
+   "id": "BR-10",
+   "route": "/file-repository",
+   "type": "Listing",
+   "seq": [
+    "Expand My Drive",
+    "New folder",
+    "Upload"
+   ],
+   "issues": []
+  },
+  {
+   "id": "CR-01",
+   "route": "/contacts",
+   "type": "Listing",
+   "seq": [
+    "Delete",
+    "Add",
+    "Export"
+   ],
+   "issues": [
+    "action before export"
+   ]
+  },
+  {
+   "id": "CR-02",
+   "route": "/distributors",
+   "type": "Listing",
+   "seq": [
+    "Add"
+   ],
+   "issues": []
+  },
+  {
+   "id": "CR-06",
+   "route": "/retailers",
+   "type": "Listing",
+   "seq": [
+    "Sorted ascending. Switch sort direction",
+    "Sort by",
+    "Upload",
+    "Export"
+   ],
+   "issues": [
+    "action before export"
+   ]
+  },
+  {
+   "id": "CR-07",
+   "route": "/retailers/all",
+   "type": "Listing",
+   "seq": [
+    "Sorted ascending. Switch sort direction",
+    "Sort by",
+    "Upload",
+    "Export"
+   ],
+   "issues": [
+    "action before export"
+   ]
+  },
+  {
+   "id": "CR-14",
+   "route": "/pipeline",
+   "type": "Listing",
+   "seq": [
+    "Delete selected",
+    "Add"
+   ],
+   "issues": []
+  },
+  {
+   "id": "PS-01",
+   "route": "/categories",
+   "type": "Listing",
+   "seq": [
+    "Delete",
+    "Add"
+   ],
+   "issues": []
+  },
+  {
+   "id": "PS-03",
+   "route": "/products",
+   "type": "Listing",
+   "seq": [
+    "Force Delete",
+    "Upload",
+    "Delete",
+    "Add",
+    "Export"
+   ],
+   "issues": [
+    "action before export"
+   ]
+  },
+  {
+   "id": "PS-07",
+   "route": "/pricing",
+   "type": "Listing",
+   "seq": [
+    "Delete",
+    "Add",
+    "Export"
+   ],
+   "issues": [
+    "action before export"
+   ]
+  },
+  {
+   "id": "PS-08",
+   "route": "/file-upload",
+   "type": "Upload",
+   "seq": [
+    "Expand My Drive",
+    "New folder",
+    "Upload"
+   ],
+   "issues": []
+  },
+  {
+   "id": "PM-01",
+   "route": "/promo-planning",
+   "type": "Listing",
+   "seq": [
+    "Remove",
+    "Add Simple Promotion"
+   ],
+   "issues": []
+  },
+  {
+   "id": "PM-05",
+   "route": "/promotional-calendar",
+   "type": "Calendar",
+   "seq": [
+    "Submit",
+    "Revoke",
+    "Export",
+    "Filter"
+   ],
+   "issues": [
+    "export before filter"
+   ]
+  },
+  {
+   "id": "PM-06",
+   "route": "/promotional-notes",
+   "type": "Listing",
+   "seq": [
+    "Add New Note",
+    "Export",
+    "Filter"
+   ],
+   "issues": [
+    "action before filter",
+    "action before export",
+    "export before filter"
+   ]
+  },
+  {
+   "id": "PM-10",
+   "route": "/trade-spend-sandbox",
+   "type": "Listing",
+   "seq": [
+    "Delete",
+    "Add New Promotion",
+    "Resume"
+   ],
+   "issues": []
+  },
+  {
+   "id": "RP-03",
+   "route": "/monthly-report",
+   "type": "Report",
+   "seq": [
+    "Back",
+    "Refresh",
+    "Import Actuals"
+   ],
+   "issues": []
+  },
+  {
+   "id": "RP-08",
+   "route": "/apl-report",
+   "type": "Report",
+   "seq": [
+    "Export",
+    "Filter"
+   ],
+   "issues": [
+    "export before filter"
+   ]
+  },
+  {
+   "id": "RP-09",
+   "route": "/apl-activity",
+   "type": "Report",
+   "seq": [
+    "Export",
+    "Filter"
+   ],
+   "issues": [
+    "export before filter"
+   ]
+  },
+  {
+   "id": "DU-04",
+   "route": "/spins/item-ranking-report",
+   "type": "Report",
+   "seq": [
+    "Upload",
+    "Export",
+    "Remove"
+   ],
+   "issues": [
+    "action before export"
+   ]
+  },
+  {
+   "id": "DU-05",
+   "route": "/spins/stores-insight-report",
+   "type": "Report",
+   "seq": [
+    "Upload",
+    "Export",
+    "Remove",
+    "Filter"
+   ],
+   "issues": [
+    "action before filter",
+    "action before export",
+    "export before filter"
+   ]
+  }
+ ],
+ "pages": [
+  {
+   "id": "BR-01",
+   "area": "Broker",
+   "route": "/dashboard",
+   "type": "Dashboard",
+   "title": "Workspace dashboard (broker)",
+   "slug": "Broker/Dashboard",
+   "seq": [],
+   "counts": 4
+  },
+  {
+   "id": "BR-02",
+   "area": "Broker",
+   "route": "/market-overview",
+   "type": "Grid listing",
+   "title": "Market Overviews",
+   "slug": "Broker/Market-overview",
+   "seq": [
+    "Export",
+    "Add Log",
+    "Remove Log",
+    "Filter"
+   ],
+   "counts": 58
+  },
+  {
+   "id": "BR-03",
+   "area": "Broker",
+   "route": "/market-overview-report",
+   "type": "Report",
+   "title": "Market Overviews Report",
+   "slug": "Broker/Market-overview-report",
+   "seq": [
+    "Export",
+    "Filter"
+   ],
+   "counts": 25
+  },
+  {
+   "id": "BR-04",
+   "area": "Broker",
+   "route": "/distributor-apl",
+   "type": "Grid listing",
+   "title": "Distributor APL",
+   "slug": "Broker/Distributor-apl",
+   "seq": [
+    "Remove",
+    "Export",
+    "Upload",
+    "Add",
+    "Filter"
+   ],
+   "counts": 28
+  },
+  {
+   "id": "BR-05",
+   "area": "Broker",
+   "route": "/retail-apl",
+   "type": "Grid listing",
+   "title": "Brand Retail Item Status",
+   "slug": "Broker/Retail-apl",
+   "seq": [
+    "Export",
+    "Filter"
+   ],
+   "counts": 29
+  },
+  {
+   "id": "BR-06",
+   "area": "Broker",
+   "route": "/promotional-management",
+   "type": "Calendar",
+   "title": "Promotional Management",
+   "slug": "Broker/Promotional-management",
+   "seq": [
+    "Brand's Notes",
+    "Brand's Notes",
+    "Brand's Notes",
+    "Brand's Notes",
+    "Brand's Notes",
+    "RETAILER SUBMISSION DATES",
+    "RETAILER SUBMISSION DATES",
+    "RETAILER SUBMISSION DATES",
+    "RETAILER SUBMISSION DATES",
+    "RETAILER SUBMISSION DATES",
+    "New Tab 1",
+    "New Tab 1",
+    "New Tab 1",
+    "New Tab 1",
+    "New Tab 1",
+    "New Tab 2",
+    "New Tab 2",
+    "New Tab 2",
+    "New Tab 2",
+    "New Tab 2",
+    "New tab",
+    "New tab",
+    "New tab",
+    "New tab",
+    "New tab"
+   ],
+   "counts": 400
+  },
+  {
+   "id": "BR-07",
+   "area": "Broker",
+   "route": "/brand-report",
+   "type": "Report",
+   "title": "Brand Report",
+   "slug": "Broker/Brand-report",
+   "seq": [
+    "Go to Category Review"
+   ],
+   "counts": 32
+  },
+  {
+   "id": "BR-08",
+   "area": "Broker",
+   "route": "/category-review",
+   "type": "Listing",
+   "title": "Category Review",
+   "slug": "Broker/Category-review",
+   "seq": [
+    "Go to Brand Report"
+   ],
+   "counts": 13
+  },
+  {
+   "id": "BR-09",
+   "area": "Broker",
+   "route": "/category-review-calendar",
+   "type": "Calendar",
+   "title": "Category Review Calendar",
+   "slug": "Broker/Category-review-calendar",
+   "seq": [
+    "Go to Brand Report"
+   ],
+   "counts": 28
+  },
+  {
+   "id": "BR-10",
+   "area": "Broker",
+   "route": "/file-repository",
+   "type": "Listing",
+   "title": "File Repository",
+   "slug": "Broker/File-repository",
+   "seq": [
+    "Expand My Drive",
+    "New folder",
+    "Upload"
+   ],
+   "counts": 13
+  },
+  {
+   "id": "GD-02",
+   "area": "Brand / General",
+   "route": "/dashboard",
+   "type": "Dashboard",
+   "title": "Brand Dashboard",
+   "slug": "Brand/Dashboard",
+   "seq": [
+    "Ask Caboodle"
+   ],
+   "counts": 5
+  },
+  {
+   "id": "GD-03",
+   "area": "Brand / General",
+   "route": "/dashboard-ai",
+   "type": "Dashboard",
+   "title": "AI Assistant",
+   "slug": "Brand/Dashboard-ai",
+   "seq": [],
+   "counts": 11
+  },
+  {
+   "id": "GD-04",
+   "area": "Brand / General",
+   "route": "/ask-caboodle",
+   "type": "Chat",
+   "title": "Ask Caboodle",
+   "slug": "Brand/Ask-caboodle",
+   "seq": [
+    "Back"
+   ],
+   "counts": 12
+  },
+  {
+   "id": "CR-01",
+   "area": "Brand / CRM",
+   "route": "/contacts",
+   "type": "Listing",
+   "title": "Contacts",
+   "slug": "Brand/Contacts",
+   "seq": [
+    "Delete",
+    "Add",
+    "Export"
+   ],
+   "counts": 20
+  },
+  {
+   "id": "CR-02",
+   "area": "Brand / CRM",
+   "route": "/distributors",
+   "type": "Listing",
+   "title": "Distributors",
+   "slug": "Brand/Distributors",
+   "seq": [
+    "Add"
+   ],
+   "counts": 15
+  },
+  {
+   "id": "CR-03",
+   "area": "Brand / CRM",
+   "route": "/distributors/[distributorID]",
+   "type": "Detail",
+   "title": "Distributor detail",
+   "slug": "Brand/Distributors-Detail",
+   "seq": [
+    "Back"
+   ],
+   "counts": 13
+  },
+  {
+   "id": "CR-04",
+   "area": "Brand / CRM",
+   "route": "/distributors/[deliveryMethodID]/banners",
+   "type": "Detail",
+   "title": "Distributor banners (delivery method)",
+   "slug": "Brand/Distributors-DeliveryMethod-Banners",
+   "seq": [
+    "Back"
+   ],
+   "counts": 44
+  },
+  {
+   "id": "CR-05",
+   "area": "Brand / CRM",
+   "route": "/distributors/[distributorID]/banners",
+   "type": "Detail",
+   "title": "Distributor banners",
+   "slug": "Brand/Distributors-Detail-Banners",
+   "seq": [
+    "Back"
+   ],
+   "counts": 10
+  },
+  {
+   "id": "CR-06",
+   "area": "Brand / CRM",
+   "route": "/retailers",
+   "type": "Listing",
+   "title": "Retailers",
+   "slug": "Brand/Retailers",
+   "seq": [
+    "Sorted ascending. Switch sort direction",
+    "Sort by",
+    "Upload",
+    "Export"
+   ],
+   "counts": 17
+  },
+  {
+   "id": "CR-07",
+   "area": "Brand / CRM",
+   "route": "/retailers/all",
+   "type": "Listing",
+   "title": "Retailers (all)",
+   "slug": "Brand/Retailers-All",
+   "seq": [
+    "Sorted ascending. Switch sort direction",
+    "Sort by",
+    "Upload",
+    "Export"
+   ],
+   "counts": 20
+  },
+  {
+   "id": "CR-08",
+   "area": "Brand / CRM",
+   "route": "/retailers/[retailerID]/banners",
+   "type": "Detail",
+   "title": "Retailer banners",
+   "slug": "Brand/Retailers-Detail-Banners",
+   "seq": [
+    "Back"
+   ],
+   "counts": 43
+  },
+  {
+   "id": "CR-09",
+   "area": "Brand / CRM",
+   "route": "/retailers/all/[retailerID]/banners",
+   "type": "Detail",
+   "title": "Retailer banners (all)",
+   "slug": "Brand/Retailers-All-Detail-Banners",
+   "seq": [
+    "Back"
+   ],
+   "counts": 28
+  },
+  {
+   "id": "CR-12",
+   "area": "Brand / CRM",
+   "route": "/banners/products",
+   "type": "Listing",
+   "title": "Banners / Products",
+   "slug": "Brand/Banners-Products",
+   "seq": [],
+   "counts": 4
+  },
+  {
+   "id": "CR-13",
+   "area": "Brand / CRM",
+   "route": "/regions",
+   "type": "Listing",
+   "title": "Regions",
+   "slug": "Brand/Regions",
+   "seq": [],
+   "counts": 4
+  },
+  {
+   "id": "CR-14",
+   "area": "Brand / CRM",
+   "route": "/pipeline",
+   "type": "Listing",
+   "title": "Pipeline",
+   "slug": "Brand/Pipeline",
+   "seq": [
+    "Delete selected",
+    "Add"
+   ],
+   "counts": 6
+  },
+  {
+   "id": "PS-01",
+   "area": "Brand / Product specs",
+   "route": "/categories",
+   "type": "Listing",
+   "title": "Categories",
+   "slug": "Brand/Categories",
+   "seq": [
+    "Delete",
+    "Add"
+   ],
+   "counts": 18
+  },
+  {
+   "id": "PS-02",
+   "area": "Brand / Product specs",
+   "route": "/categories/[categoryID]",
+   "type": "Detail",
+   "title": "Category detail",
+   "slug": "Brand/Categories-Detail",
+   "seq": [
+    "Back"
+   ],
+   "counts": 25
+  },
+  {
+   "id": "PS-03",
+   "area": "Brand / Product specs",
+   "route": "/products",
+   "type": "Listing",
+   "title": "Products",
+   "slug": "Brand/Products",
+   "seq": [
+    "Force Delete",
+    "Upload",
+    "Delete",
+    "Add",
+    "Export"
+   ],
+   "counts": 30
+  },
+  {
+   "id": "PS-04",
+   "area": "Brand / Product specs",
+   "route": "/products/[productID]",
+   "type": "Detail",
+   "title": "Product detail",
+   "slug": "Brand/Products-Detail",
+   "seq": [
+    "Back",
+    "Go to Retail Report",
+    "Edit"
+   ],
+   "counts": 7
+  },
+  {
+   "id": "PS-05",
+   "area": "Brand / Product specs",
+   "route": "/products/[productID]/edit",
+   "type": "Form",
+   "title": "Edit product",
+   "slug": "Brand/Products-Edit",
+   "seq": [
+    "Back"
+   ],
+   "counts": 7
+  },
+  {
+   "id": "PS-06",
+   "area": "Brand / Product specs",
+   "route": "/products/add",
+   "type": "Form",
+   "title": "Add product",
+   "slug": "Brand/Products-Add",
+   "seq": [
+    "Back"
+   ],
+   "counts": 7
+  },
+  {
+   "id": "PS-07",
+   "area": "Brand / Product specs",
+   "route": "/pricing",
+   "type": "Listing",
+   "title": "Pricing",
+   "slug": "Brand/Pricing",
+   "seq": [
+    "Delete",
+    "Add",
+    "Export"
+   ],
+   "counts": 10
+  },
+  {
+   "id": "PS-08",
+   "area": "Brand / Product specs",
+   "route": "/file-upload",
+   "type": "Upload",
+   "title": "File upload",
+   "slug": "Brand/File-upload",
+   "seq": [
+    "Expand My Drive",
+    "New folder",
+    "Upload"
+   ],
+   "counts": 15
+  },
+  {
+   "id": "PM-01",
+   "area": "Brand / Promotions",
+   "route": "/promo-planning",
+   "type": "Listing",
+   "title": "Promo Planning",
+   "slug": "Brand/Promo-planning",
+   "seq": [
+    "Remove",
+    "Add Simple Promotion"
+   ],
+   "counts": 27
+  },
+  {
+   "id": "PM-02",
+   "area": "Brand / Promotions",
+   "route": "/promo-planning/create",
+   "type": "Form",
+   "title": "Create promotion",
+   "slug": "Brand/Promo-planning-Create",
+   "seq": [
+    "Edit promotion name and plan year"
+   ],
+   "counts": 11
+  },
+  {
+   "id": "PM-03",
+   "area": "Brand / Promotions",
+   "route": "/promo-planning/[id]",
+   "type": "Detail",
+   "title": "Promotion detail (instance A)",
+   "slug": "Brand/Promo-planning-Detail",
+   "seq": [
+    "Back",
+    "Remove",
+    "Select Promo Options"
+   ],
+   "counts": 13
+  },
+  {
+   "id": "PM-04",
+   "area": "Brand / Promotions",
+   "route": "/promo-planning/[promotionID]",
+   "type": "Detail",
+   "title": "Promotion detail (instance B)",
+   "slug": "Brand/Promo-planning-Detail-B",
+   "seq": [
+    "Back",
+    "Remove",
+    "Select Promo Options"
+   ],
+   "counts": 13
+  },
+  {
+   "id": "PM-05",
+   "area": "Brand / Promotions",
+   "route": "/promotional-calendar",
+   "type": "Calendar",
+   "title": "Promotional Calendar",
+   "slug": "Brand/Promotional-calendar",
+   "seq": [
+    "Submit",
+    "Revoke",
+    "Export",
+    "Filter"
+   ],
+   "counts": 43
+  },
+  {
+   "id": "PM-06",
+   "area": "Brand / Promotions",
+   "route": "/promotional-notes",
+   "type": "Listing",
+   "title": "Promo Notes",
+   "slug": "Brand/Promotional-notes",
+   "seq": [
+    "Add New Note",
+    "Export",
+    "Filter"
+   ],
+   "counts": 37
+  },
+  {
+   "id": "PM-07",
+   "area": "Brand / Promotions",
+   "route": "/simple-entries",
+   "type": "Listing",
+   "title": "Simple Entries",
+   "slug": "Brand/Simple-entries",
+   "seq": [],
+   "counts": 9
+  },
+  {
+   "id": "PM-08",
+   "area": "Brand / Promotions",
+   "route": "/simple-entries/create",
+   "type": "Form",
+   "title": "Create simple promotion",
+   "slug": "Brand/Simple-entries-Create",
+   "seq": [
+    "Back",
+    "Validate",
+    "Submit to Approved Promotions"
+   ],
+   "counts": 12
+  },
+  {
+   "id": "PM-09",
+   "area": "Brand / Promotions",
+   "route": "/simple-entries/[id]",
+   "type": "Detail",
+   "title": "Simple entry detail",
+   "slug": "Brand/Simple-entries-Detail",
+   "seq": [
+    "Rename promotion: a 2nd EDLP TEST edited 2 Edited by CW 11/10/26",
+    "About Simple Promotions"
+   ],
+   "counts": 11
+  },
+  {
+   "id": "PM-10",
+   "area": "Brand / Promotions",
+   "route": "/trade-spend-sandbox",
+   "type": "Listing",
+   "title": "Trade Spend Sandbox",
+   "slug": "Brand/Trade-spend-sandbox",
+   "seq": [
+    "Delete",
+    "Add New Promotion",
+    "Resume"
+   ],
+   "counts": 42
+  },
+  {
+   "id": "PM-11",
+   "area": "Brand / Promotions",
+   "route": "/trade-spend-sandbox/[promotionID]",
+   "type": "Detail",
+   "title": "Trade spend detail",
+   "slug": "Brand/Trade-spend-sandbox-Detail",
+   "seq": [
+    "Back",
+    "Edit version name",
+    "Versions",
+    "Push to Approved",
+    "Select Promo Options"
+   ],
+   "counts": 22
+  },
+  {
+   "id": "RP-01",
+   "area": "Brand / Reports",
+   "route": "/report",
+   "type": "Report hub",
+   "title": "Reports hub",
+   "slug": "Brand/Report",
+   "seq": [],
+   "counts": 4
+  },
+  {
+   "id": "RP-02",
+   "area": "Brand / Reports",
+   "route": "/banner-report",
+   "type": "Report",
+   "title": "Banner Report",
+   "slug": "Brand/Banner-report",
+   "seq": [
+    "Back"
+   ],
+   "counts": 19
+  },
+  {
+   "id": "RP-03",
+   "area": "Brand / Reports",
+   "route": "/monthly-report",
+   "type": "Report",
+   "title": "Item Monthly Report",
+   "slug": "Brand/Monthly-report",
+   "seq": [
+    "Back",
+    "Refresh",
+    "Import Actuals"
+   ],
+   "counts": 24
+  },
+  {
+   "id": "RP-04",
+   "area": "Brand / Reports",
+   "route": "/product-report",
+   "type": "Report",
+   "title": "Promoted Case Sales Analysis",
+   "slug": "Brand/Product-report",
+   "seq": [],
+   "counts": 5
+  },
+  {
+   "id": "RP-05",
+   "area": "Brand / Reports",
+   "route": "/retail-report",
+   "type": "Report",
+   "title": "Retail Reports",
+   "slug": "Brand/Retail-report",
+   "seq": [
+    "Back",
+    "Back",
+    "Back"
+   ],
+   "counts": 39
+  },
+  {
+   "id": "RP-06",
+   "area": "Brand / Reports",
+   "route": "/sales-tracker",
+   "type": "Report",
+   "title": "Sales Tracker",
+   "slug": "Brand/Sales-tracker",
+   "seq": [
+    "Back"
+   ],
+   "counts": 17
+  },
+  {
+   "id": "RP-07",
+   "area": "Brand / Reports",
+   "route": "/brand-market-overview-report",
+   "type": "Report",
+   "title": "Brand Market Overview Report",
+   "slug": "Brand/Brand-market-overview-report",
+   "seq": [
+    "Back"
+   ],
+   "counts": 67
+  },
+  {
+   "id": "RP-08",
+   "area": "Brand / Reports",
+   "route": "/apl-report",
+   "type": "Report",
+   "title": "APL Report",
+   "slug": "Brand/Apl-report",
+   "seq": [
+    "Export",
+    "Filter"
+   ],
+   "counts": 6
+  },
+  {
+   "id": "RP-09",
+   "area": "Brand / Reports",
+   "route": "/apl-activity",
+   "type": "Report",
+   "title": "APL Activity",
+   "slug": "Brand/Apl-activity",
+   "seq": [
+    "Export",
+    "Filter"
+   ],
+   "counts": 18
+  },
+  {
+   "id": "RP-10",
+   "area": "Brand / Reports",
+   "route": "/category-review-brand",
+   "type": "Listing",
+   "title": "Category Review (brand)",
+   "slug": "Brand/Category-review-brand",
+   "seq": [
+    "Back"
+   ],
+   "counts": 8
+  },
+  {
+   "id": "RP-11",
+   "area": "Brand / Reports",
+   "route": "/category-review-calendar-brand",
+   "type": "Calendar",
+   "title": "Category Review Calendar (brand)",
+   "slug": "Brand/Category-review-calendar-brand",
+   "seq": [
+    "Back"
+   ],
+   "counts": 29
+  },
+  {
+   "id": "DU-01",
+   "area": "Brand / Data upload",
+   "route": "/kehe",
+   "type": "Upload",
+   "title": "KeHE upload",
+   "slug": "Brand/Kehe",
+   "seq": [
+    "Back"
+   ],
+   "counts": 80
+  },
+  {
+   "id": "DU-02",
+   "area": "Brand / Data upload",
+   "route": "/unfi",
+   "type": "Upload",
+   "title": "UNFI upload",
+   "slug": "Brand/Unfi",
+   "seq": [
+    "Back"
+   ],
+   "counts": 80
+  },
+  {
+   "id": "DU-03",
+   "area": "Brand / Data upload",
+   "route": "/spins",
+   "type": "Upload",
+   "title": "SPINS upload",
+   "slug": "Brand/Spins",
+   "seq": [
+    "Back"
+   ],
+   "counts": 5
+  },
+  {
+   "id": "DU-04",
+   "area": "Brand / Data upload",
+   "route": "/spins/item-ranking-report",
+   "type": "Report",
+   "title": "Item Ranking Report",
+   "slug": "Brand/Spins-Item-ranking-report",
+   "seq": [
+    "Upload",
+    "Export",
+    "Remove"
+   ],
+   "counts": 43
+  },
+  {
+   "id": "DU-05",
+   "area": "Brand / Data upload",
+   "route": "/spins/stores-insight-report",
+   "type": "Report",
+   "title": "Stores Insight Report",
+   "slug": "Brand/Spins-Stores-insight-report",
+   "seq": [
+    "Upload",
+    "Export",
+    "Remove",
+    "Filter"
+   ],
+   "counts": 13
+  },
+  {
+   "id": "DU-06",
+   "area": "Brand / Data upload",
+   "route": "/distributor-sales-report",
+   "type": "Report",
+   "title": "Distributor Sales Report",
+   "slug": "Brand/Distributor-sales-report",
+   "seq": [
+    "Back"
+   ],
+   "counts": 80
+  }
+ ]
+}
